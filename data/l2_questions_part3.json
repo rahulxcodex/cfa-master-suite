@@ -537,7 +537,7 @@
       "C": "Adding the full PBO of 1,800 million USD to enterprise value while ignoring plan assets."
     },
     "answer": "A",
-    "explanation": "In enterprise valuation and credit rating analysis:\nA defined benefit pension deficit represents a contractual claim on corporate assets by employees that has economic priority similar to senior financial debt. Therefore, the net pension liability (Funded Status) is treated as a debt-equivalent:\n$$\\text{Adjusted Total Debt} = \\text{Financial Debt} + \\text{Net Pension Liability}$$\nUsing the reported deficit: 1,100 USD+ 300 = 1,400\\text{ million USD} $.\nUsing the benchmark-adjusted deficit: 1,100 USD+ 552 = 1,652\\text{ million USD} $.\nAdding the net pension deficit to Net Debt ensures that Enterprise Value and debt multiples (e.g., Debt/EBITDA) accurately reflect all financial obligations."
+    "explanation": "In enterprise valuation and credit rating analysis:\nA defined benefit pension deficit represents a contractual claim on corporate assets by employees that has economic priority similar to senior financial debt. Therefore, the net pension liability (Funded Status) is treated as a debt-equivalent:\n$$\\text{Adjusted Total Debt} = \\text{Financial Debt} + \\text{Net Pension Liability}$$\nUsing the reported deficit: $1,100 + 300 = 1,400\\text{ million USD}$.\nUsing the benchmark-adjusted deficit: $1,100 + 552 = 1,652\\text{ million USD}$.\nAdding the net pension deficit to Net Debt ensures that Enterprise Value and debt multiples (e.g., Debt/EBITDA) accurately reflect all financial obligations."
   },
   {
     "id": "L2-V37-Q1",
@@ -977,7 +977,7 @@
       "C": "Adjusted EBIT decreases; adjusted CFO increases."
     },
     "answer": "B",
-    "explanation": "When R&D is capitalized rather than expensed:\n1. EBIT effect: Current R&D expense (120 USD) is removed from operating costs, and replaced by lower R&D amortization expense (e.g., 100 USD). Because R&D spending is growing, annual CapEx exceeds current amortization, so adjusted EBIT increases.\n2. CFO effect: R&D spending of 120 USD is reclassified from an operating cash outflow (CFO) to an investing cash outflow (CFI). Consequently, adjusted Operating Cash Flow increases by 120 USD.",
+    "explanation": "When R&D is capitalized rather than expensed:\n1. EBIT effect: Current R&D expense (120 USD) is removed from operating costs, and replaced by lower R&D amortization expense (e.g., 100 USD). Because R&D spending is growing, annual CapEx exceeds current amortization, so adjusted EBIT increases.\n2. CFO effect: R&D spending of 120 USD is reclassified from an operating cash outflow (CFO) to an investing cash outflow (CFI). Consequently, adjusted Operating Cash Flow increases by 120. ",
     "distractor_analysis": {
       "A": "CFO does not remain unchanged; capitalizing an expense removes it from CFO and shifts it into CFI.",
       "C": "EBIT increases because new R&D spending exceeds historical amortization."
@@ -1065,7 +1065,7 @@
       "C": "1.80"
     },
     "answer": "B",
-    "explanation": "Reported Debt = 3,000 USD.\nNet Pension Deficit = $\\text{PBO} - \\text{Plan Assets} = 2{,}200 - 1{,}600 = 600\\text{ USD}$.\nAdjusted Total Debt = $3{,}000 + 600 = 3{,}600\\text{ USD}$.\nReported Equity = 2,500 USD.\nAdjusted Debt-to-Equity Ratio: $$\\frac{\\text{Adjusted Debt}}{\\text{Equity}} = \\frac{3{,}600}{2{,}500} = 1.44$$",
+    "explanation": "Reported Debt = 3,000. Net Pension Deficit = $\\text{PBO} - \\text{Plan Assets} = 2{,}200 - 1{,}600 = 600. Adjusted Total Debt = $3{,}000 + 600 = 3{,}600. Reported Equity = 2,500. Adjusted Debt-to-Equity Ratio: $$\\frac{\\text{Adjusted Debt}}{\\text{Equity}} = \\frac{3{,}600}{2{,}500} = 1.44$$",
     "distractor_analysis": {
       "A": "1.20 represents the unadjusted reported debt-to-equity ratio ($3{,}000 / 2{,}500 = 1.20$).",
       "C": "1.80 erroneously adds the gross PBO of 2,200 USD without netting off the 1,600 USD in plan assets."
@@ -1156,7 +1156,7 @@
     "explanation": "Reported Interest Coverage = $750 / 150 = 5.00\\times$.\nAdjusted Total Interest Expense = $150 + 88 = 238\\text{ million USD}$.\nAdjusted Economic Interest Coverage: $$\\text{Coverage}_{\\text{adj}} = \\frac{750}{238} = 3.15\\times$$ Incorporating pension interest reveals that true debt-service protection is substantially weaker than reported.",
     "distractor_analysis": {
       "B": "4.20x results from incorrectly deducting interest from EBIT.",
-      "C": "5.00x is the unadjusted reported interest coverage ($750 / 150 = 5.00$)."
+      "C": "5.00x is the unadjusted reported interest coverage ($750 / 150 = 5.00)."
     }
   },
   {
@@ -1178,7 +1178,7 @@
     "explanation": "Depreciation on existing PP&E: $$300 \\times 15\\% = 45.0\\text{ million USD}$$ Depreciation on new 2025 CapEx (half-year convention): $$80 \\times 7.5\\% = 6.0\\text{ million USD}$$ Total Projected Depreciation Expense: $$45.0 + 6.0 = 51.0\\text{ million USD}$$",
     "distractor_analysis": {
       "A": "45.0 million USD ignores depreciation on newly acquired 2025 CapEx.",
-      "C": "57.0 million USD applies a full year of depreciation (15%) to new CapEx instead of the half-year convention ($45 + 12 = 57$)."
+      "C": "57.0 million USD applies a full year of depreciation (15%) to new CapEx instead of the half-year convention (45 + 12 = 57)."
     }
   },
   {
@@ -1276,7 +1276,7 @@
     "topic": "Financial Statement Modeling and Multi-Year Forecasting",
     "vignette_id": "V44",
     "vignette_title": "Crestview Holdings: M&A Pro Forma Integration and Goodwill Impairment Sensitivity",
-    "vignette_text": "Crestview Holdings is a diversified health sciences enterprise. Senior M&A director Alicia Gomez, CFA, is modeling the pro forma financial impact of acquiring TargetPharma for 600 million USD in cash financed with 400 million USD in new term debt at 7.0% interest and 200 million USD from existing cash balances.\n\nExhibit 1: TargetPharma Fair Value Balance Sheet at Acquisition Date (in millions of USD)\n- Tangible Book Value of Net Assets = 180 USD\n- Fair Value Step-Up of PP&E = 50 USD (depreciated over 10 years straight-line)\n- Identifiable Intangible Assets (Patents) = 120 USD (amortized over 6 years straight-line)\n- Deferred Tax Liability created by step-ups (at 25% tax rate) = 42.5 USD ($25\\% \\times (50 + 120)$)\n- Net Identifiable Assets at Fair Value = 307.5 USD ($180 + 50 + 120 - 42.5$)\n- Purchase Price = 600 USD",
+    "vignette_text": "Crestview Holdings is a diversified health sciences enterprise. Senior M&A director Alicia Gomez, CFA, is modeling the pro forma financial impact of acquiring TargetPharma for 600 million USD in cash financed with 400 million USD in new term debt at 7.0% interest and 200 million USD from existing cash balances.\n\nExhibit 1: TargetPharma Fair Value Balance Sheet at Acquisition Date (in millions of USD)\n- Tangible Book Value of Net Assets = 180 USD\n- Fair Value Step-Up of PP&E = 50 USD (depreciated over 10 years straight-line)\n- Identifiable Intangible Assets (Patents) = 120 USD (amortized over 6 years straight-line)\n- Deferred Tax Liability created by step-ups (at 25% tax rate) = 42.5 USD ($25\\% \\times (50 + 120)$)\n- Net Identifiable Assets at Fair Value = 307.5 USD ($180 + 50 + 120 - 42.5 = 307.5$)\n- Purchase Price = 600 USD",
     "los": "Calculate goodwill arising from a business acquisition and model post-acquisition amortization.",
     "question": "The goodwill recognized by Crestview Holdings upon closing the acquisition of TargetPharma is closest to:",
     "options": {
@@ -1288,7 +1288,7 @@
     "explanation": "Goodwill is the excess of purchase consideration over the fair value of net identifiable assets acquired: $$\\text{Purchase Price} = 600.0\\text{ million USD}$$ $$\\text{Fair Value of Net Identifiable Assets} = 307.5\\text{ million USD}$$ $$\\text{Goodwill} = 600.0 - 307.5 = 292.5\\text{ million USD}$$",
     "distractor_analysis": {
       "A": "250.0 million USD results from omitting the deferred tax liability adjustment.",
-      "C": "420.0 million USD compares purchase price only to historical tangible book value ($600 - 180 = 420$), ignoring patent and PP&E step-ups."
+      "C": "420.0 million USD compares purchase price only to historical tangible book value ($600 - 180 = 420), ignoring patent and PP&E step-ups."
     }
   },
   {
@@ -1298,7 +1298,7 @@
     "topic": "Financial Statement Modeling and Multi-Year Forecasting",
     "vignette_id": "V44",
     "vignette_title": "Crestview Holdings: M&A Pro Forma Integration and Goodwill Impairment Sensitivity",
-    "vignette_text": "Crestview Holdings is a diversified health sciences enterprise. Senior M&A director Alicia Gomez, CFA, is modeling the pro forma financial impact of acquiring TargetPharma for 600 million USD in cash financed with 400 million USD in new term debt at 7.0% interest and 200 million USD from existing cash balances.\n\nExhibit 1: TargetPharma Fair Value Balance Sheet at Acquisition Date (in millions of USD)\n- Tangible Book Value of Net Assets = 180 USD\n- Fair Value Step-Up of PP&E = 50 USD (depreciated over 10 years straight-line)\n- Identifiable Intangible Assets (Patents) = 120 USD (amortized over 6 years straight-line)\n- Deferred Tax Liability created by step-ups (at 25% tax rate) = 42.5 USD ($25\\% \\times (50 + 120)$)\n- Net Identifiable Assets at Fair Value = 307.5 USD ($180 + 50 + 120 - 42.5$)\n- Purchase Price = 600 USD",
+    "vignette_text": "Crestview Holdings is a diversified health sciences enterprise. Senior M&A director Alicia Gomez, CFA, is modeling the pro forma financial impact of acquiring TargetPharma for 600 million USD in cash financed with 400 million USD in new term debt at 7.0% interest and 200 million USD from existing cash balances.\n\nExhibit 1: TargetPharma Fair Value Balance Sheet at Acquisition Date (in millions of USD)\n- Tangible Book Value of Net Assets = 180 USD\n- Fair Value Step-Up of PP&E = 50 USD (depreciated over 10 years straight-line)\n- Identifiable Intangible Assets (Patents) = 120 USD (amortized over 6 years straight-line)\n- Deferred Tax Liability created by step-ups (at 25% tax rate) = 42.5 USD ($25\\% \\times (50 + 120)$)\n- Net Identifiable Assets at Fair Value = 307.5 USD ($180 + 50 + 120 - 42.5 = 307.5$)\n- Purchase Price = 600 USD",
     "los": "Calculate post-acquisition incremental depreciation and amortization.",
     "question": "In the first full year following the acquisition, the incremental annual pre-tax depreciation and amortization expense resulting from fair value step-ups is:",
     "options": {
@@ -1307,9 +1307,9 @@
       "C": "35.0 million USD"
     },
     "answer": "B",
-    "explanation": "Incremental depreciation on PP&E step-up: $$\\frac{50\\text{ million USD}}{10\\text{ years}} = 5.0\\text{ million USD per year}$$ Incremental amortization on patent intangibles: $$\\frac{120\\text{ million USD}}{6\\text{ years}} = 20.0\\text{ million USD per year}$$ Total incremental annual pre-tax D&A: $$5.0 + 20.0 = 25.0\\text{ million USD}$$ Goodwill is not amortized under US GAAP/IFRS; it is tested annually for impairment.",
+    "explanation": "$$\\frac{50\\text{ million USD}}{10\\text{ years}} = 5.0\\text{ million USD per year}$$ Incremental amortization on patent intangibles: $$\\frac{120\\text{ million USD}}{6\\text{ years}} = 20.0\\text{ million USD per year}$$ Total incremental annual pre-tax D&A: $$\n5.0 + 20.0 = 25.0\\text{ million USD}$$ Goodwill is not amortized under US GAAP/IFRS; it is tested annually for impairment.",
     "distractor_analysis": {
-      "A": "15.0 million USD applies 10 years to both PP&E and patents ($5 + 12 = 17$).",
+      "A": "15.0 million USD applies 10 years to both PP&E and patents ($5 + 12 = 17).",
       "C": "35.0 million USD erroneously includes an amortized fraction of goodwill."
     }
   },
@@ -1320,7 +1320,7 @@
     "topic": "Financial Statement Modeling and Multi-Year Forecasting",
     "vignette_id": "V44",
     "vignette_title": "Crestview Holdings: M&A Pro Forma Integration and Goodwill Impairment Sensitivity",
-    "vignette_text": "Crestview Holdings is a diversified health sciences enterprise. Senior M&A director Alicia Gomez, CFA, is modeling the pro forma financial impact of acquiring TargetPharma for 600 million USD in cash financed with 400 million USD in new term debt at 7.0% interest and 200 million USD from existing cash balances.\n\nExhibit 1: TargetPharma Fair Value Balance Sheet at Acquisition Date (in millions of USD)\n- Tangible Book Value of Net Assets = 180 USD\n- Fair Value Step-Up of PP&E = 50 USD (depreciated over 10 years straight-line)\n- Identifiable Intangible Assets (Patents) = 120 USD (amortized over 6 years straight-line)\n- Deferred Tax Liability created by step-ups (at 25% tax rate) = 42.5 USD ($25\\% \\times (50 + 120)$)\n- Net Identifiable Assets at Fair Value = 307.5 USD ($180 + 50 + 120 - 42.5$)\n- Purchase Price = 600 USD",
+    "vignette_text": "Crestview Holdings is a diversified health sciences enterprise. Senior M&A director Alicia Gomez, CFA, is modeling the pro forma financial impact of acquiring TargetPharma for 600 million USD in cash financed with 400 million USD in new term debt at 7.0% interest and 200 million USD from existing cash balances.\n\nExhibit 1: TargetPharma Fair Value Balance Sheet at Acquisition Date (in millions of USD)\n- Tangible Book Value of Net Assets = 180 USD\n- Fair Value Step-Up of PP&E = 50 USD (depreciated over 10 years straight-line)\n- Identifiable Intangible Assets (Patents) = 120 USD (amortized over 6 years straight-line)\n- Deferred Tax Liability created by step-ups (at 25% tax rate) = 42.5 USD ($25\\% \\times (50 + 120)$)\n- Net Identifiable Assets at Fair Value = 307.5 USD ($180 + 50 + 120 - 42.5 = 307.5$)\n- Purchase Price = 600 USD",
     "los": "Describe the accounting and impairment testing for goodwill.",
     "question": "Two years after the acquisition, TargetPharma's patent fails clinical trials and expected cash flows collapse. When Crestview tests the reporting unit for impairment under US GAAP and finds the fair value of the reporting unit is 250 million USD below its carrying value, Crestview must:",
     "options": {
@@ -1342,7 +1342,7 @@
     "topic": "Financial Statement Modeling and Multi-Year Forecasting",
     "vignette_id": "V44",
     "vignette_title": "Crestview Holdings: M&A Pro Forma Integration and Goodwill Impairment Sensitivity",
-    "vignette_text": "Crestview Holdings is a diversified health sciences enterprise. Senior M&A director Alicia Gomez, CFA, is modeling the pro forma financial impact of acquiring TargetPharma for 600 million USD in cash financed with 400 million USD in new term debt at 7.0% interest and 200 million USD from existing cash balances.\n\nExhibit 1: TargetPharma Fair Value Balance Sheet at Acquisition Date (in millions of USD)\n- Tangible Book Value of Net Assets = 180 USD\n- Fair Value Step-Up of PP&E = 50 USD (depreciated over 10 years straight-line)\n- Identifiable Intangible Assets (Patents) = 120 USD (amortized over 6 years straight-line)\n- Deferred Tax Liability created by step-ups (at 25% tax rate) = 42.5 USD ($25\\% \\times (50 + 120)$)\n- Net Identifiable Assets at Fair Value = 307.5 USD ($180 + 50 + 120 - 42.5$)\n- Purchase Price = 600 USD",
+    "vignette_text": "Crestview Holdings is a diversified health sciences enterprise. Senior M&A director Alicia Gomez, CFA, is modeling the pro forma financial impact of acquiring TargetPharma for 600 million USD in cash financed with 400 million USD in new term debt at 7.0% interest and 200 million USD from existing cash balances.\n\nExhibit 1: TargetPharma Fair Value Balance Sheet at Acquisition Date (in millions of USD)\n- Tangible Book Value of Net Assets = 180 USD\n- Fair Value Step-Up of PP&E = 50 USD (depreciated over 10 years straight-line)\n- Identifiable Intangible Assets (Patents) = 120 USD (amortized over 6 years straight-line)\n- Deferred Tax Liability created by step-ups (at 25% tax rate) = 42.5 USD ($25\\% \\times (50 + 120)$)\n- Net Identifiable Assets at Fair Value = 307.5 USD ($180 + 50 + 120 - 42.5 = 307.5$)\n- Purchase Price = 600 USD",
     "los": "Demonstrate the effects of goodwill impairment on financial ratios.",
     "question": "What is the immediate effect of recognizing a 100 million USD goodwill impairment on Crestview's financial leverage (Total Assets / Equity) and Cash Flow from Operations (CFO)?",
     "options": {
@@ -1364,7 +1364,7 @@
     "topic": "Financial Statement Modeling and Multi-Year Forecasting",
     "vignette_id": "V44",
     "vignette_title": "Crestview Holdings: M&A Pro Forma Integration and Goodwill Impairment Sensitivity",
-    "vignette_text": "Crestview Holdings is a diversified health sciences enterprise. Senior M&A director Alicia Gomez, CFA, is modeling the pro forma financial impact of acquiring TargetPharma for 600 million USD in cash financed with 400 million USD in new term debt at 7.0% interest and 200 million USD from existing cash balances.\n\nExhibit 1: TargetPharma Fair Value Balance Sheet at Acquisition Date (in millions of USD)\n- Tangible Book Value of Net Assets = 180 USD\n- Fair Value Step-Up of PP&E = 50 USD (depreciated over 10 years straight-line)\n- Identifiable Intangible Assets (Patents) = 120 USD (amortized over 6 years straight-line)\n- Deferred Tax Liability created by step-ups (at 25% tax rate) = 42.5 USD ($25\\% \\times (50 + 120)$)\n- Net Identifiable Assets at Fair Value = 307.5 USD ($180 + 50 + 120 - 42.5$)\n- Purchase Price = 600 USD",
+    "vignette_text": "Crestview Holdings is a diversified health sciences enterprise. Senior M&A director Alicia Gomez, CFA, is modeling the pro forma financial impact of acquiring TargetPharma for 600 million USD in cash financed with 400 million USD in new term debt at 7.0% interest and 200 million USD from existing cash balances.\n\nExhibit 1: TargetPharma Fair Value Balance Sheet at Acquisition Date (in millions of USD)\n- Tangible Book Value of Net Assets = 180 USD\n- Fair Value Step-Up of PP&E = 50 USD (depreciated over 10 years straight-line)\n- Identifiable Intangible Assets (Patents) = 120 USD (amortized over 6 years straight-line)\n- Deferred Tax Liability created by step-ups (at 25% tax rate) = 42.5 USD ($25\\% \\times (50 + 120)$)\n- Net Identifiable Assets at Fair Value = 307.5 USD ($180 + 50 + 120 - 42.5 = 307.5$)\n- Purchase Price = 600 USD",
     "los": "Distinguish between IFRS and US GAAP goodwill impairment rules.",
     "question": "A fundamental difference between IFRS and US GAAP regarding goodwill impairment is that under IFRS:",
     "options": {

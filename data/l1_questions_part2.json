@@ -7,12 +7,12 @@
     "los": "Compare the costing methods used for inventory and calculate cost of goods sold and ending inventory under each method.",
     "question": "A company begins the year with 1,000 units of inventory costing 10 USD each. During the year, it purchases 2,000 units at 12 USD each and later 1,500 units at 15 USD each. During the period, 3,200 units are sold at 22 USD each. Assuming a periodic inventory system under FIFO, what are the cost of goods sold (COGS) and ending inventory?",
     "options": {
-      "A": "COGS is 37,400 USD; Ending inventory is 19,500 USD.",
-      "B": "COGS is 36,400 USD; Ending inventory is 20,500 USD.",
-      "C": "COGS is 42,500 USD; Ending inventory is 14,400 USD."
+      "A": "COGS is 37,400 USD; Ending inventory is 19,500. ",
+      "B": "COGS is 36,400 USD; Ending inventory is 20,500. ",
+      "C": "COGS is 42,500 USD; Ending inventory is 14,400. "
     },
     "answer": "A",
-    "explanation": "Under the First-In, First-Out (FIFO) method, the oldest inventory costs are allocated to cost of goods sold (COGS), and the most recent purchase costs remain in ending inventory. Total available units = 1,000 + 2,000 + 1,500 = 4,500 units. Total available cost = (1,000 \\times 10 USD) + (2,000 \\times 12 USD) + (1,500 \\times 15 USD) = 10,000 + 24,000 + 22,500 = 56,500 USD. Units sold = 3,200. Units remaining in ending inventory = 4,500 - 3,200 = 1,300 units. Under FIFO, ending inventory consists of the most recent purchases: 1,300 units \\times 15 USD = 19,500 USD. COGS is Total Cost minus Ending Inventory: 56,500 USD - 19,500 USD = 37,400 USD (or calculated directly: 1,000 \\times 10 USD + 2,000 \\times 12 USD + 200 \\times 15 USD = 10,000 + 24,000 + 3,000 = 37,400 USD). Option B incorrectly computes ending inventory. Option C reflects LIFO COGS and ending inventory."
+    "explanation": "Under the First-In, First-Out (FIFO) method, the oldest inventory costs are allocated to cost of goods sold (COGS), and the most recent purchase costs remain in ending inventory. Total available units = 1,000 + 2,000 + 1,500 = 4,500 units. Total available cost = (1,000 \\times 10 USD) + (2,000 \\times 12 USD) + (1,500 \\times 15 USD) = 10,000 + 24,000 + 22,500 = 56,500. Units sold = 3,200. Units remaining in ending inventory = 4,500 - 3,200 = 1,300 units. Under FIFO, ending inventory consists of the most recent purchases: 1,300 units \\times 15 USD = 19,500. COGS is Total Cost minus Ending Inventory: 56,500 USD - 19,500 USD = 37,400 USD (or calculated directly: 1,000 \\times 10 USD + 2,000 \\times 12 USD + 200 \\times 15 USD = 10,000 + 24,000 + 3,000 = 37,400 USD). Option B incorrectly computes ending inventory. Option C reflects LIFO COGS and ending inventory."
   },
   {
     "id": "L1-Q092",
@@ -42,7 +42,7 @@
       "C": "2,640 USD"
     },
     "answer": "A",
-    "explanation": "Under the perpetual moving average method, a new average cost per unit is calculated immediately after each purchase. Prior to the Day 10 sale, the retailer has: Beginning inventory of 100 \\times 20 USD = 2,000 USD plus Day 5 purchase of 150 \\times 22 USD = 3,300 USD. Total cost = 5,300 USD for 250 units. Moving average unit cost prior to Day 10 sale = 5,300 USD / 250 units = 21.20 USD per unit. The cost of goods sold for the 120 units sold on Day 10 is: $\\text{COGS} = 120 \\times 21.20\\text{ USD} = 2,544\\text{ USD}$. Option B uses FIFO cost (100 \\times 20 USD + 20 \\times 22 USD = 2,440 USD or strictly beginning cost). Option C uses the Day 5 purchase cost of 22 USD (120 \\times 22 USD = 2,640 USD)."
+    "explanation": "Under the perpetual moving average method, a new average cost per unit is calculated immediately after each purchase. Prior to the Day 10 sale, the retailer has: Beginning inventory of 100 \\times 20 USD = 2,000 USD plus Day 5 purchase of 150 \\times 22 USD = 3,300. Total cost = 5,300 USD for 250 units. Moving average unit cost prior to Day 10 sale = 5,300 USD / 250 units = 21.20 USD per unit. The cost of goods sold for the 120 units sold on Day 10 is: $\\text{COGS} = 120 \\times 21.20\\text{ USD} = 2,544\\text{ USD}$. Option B uses FIFO cost (100 \\times 20 USD + 20 \\times 22 USD = 2,440 USD or strictly beginning cost). Option C uses the Day 5 purchase cost of 22 USD (120 \\times 22 USD = 2,640 USD)."
   },
   {
     "id": "L1-Q094",
@@ -50,7 +50,7 @@
     "module": "m7-inventories",
     "topic": "Inventories",
     "los": "Describe the LIFO reserve and calculate the adjustments required to convert balance sheet inventory from LIFO to FIFO.",
-    "question": "An analyst is evaluating a US GAAP company that reports under LIFO. For the current fiscal year, the company reports ending inventory of 480,000 USD and discloses a LIFO reserve of 65,000 USD. In the prior year, the LIFO reserve was 50,000 USD. If the company had reported under FIFO, its ending inventory on the balance sheet for the current year would be:",
+    "question": "An analyst is evaluating a US GAAP company that reports under LIFO. For the current fiscal year, the company reports ending inventory of 480,000 USD and discloses a LIFO reserve of 65,000. In the prior year, the LIFO reserve was 50,000. If the company had reported under FIFO, its ending inventory on the balance sheet for the current year would be:",
     "options": {
       "A": "415,000 USD",
       "B": "545,000 USD",
@@ -65,14 +65,14 @@
     "module": "m7-inventories",
     "topic": "Inventories",
     "los": "Calculate and explain the adjustments required to convert cost of goods sold from LIFO to FIFO.",
-    "question": "A US manufacturing firm reports cost of goods sold of 1,850,000 USD for the year under LIFO. Footnotes reveal that the beginning LIFO reserve was 120,000 USD and the ending LIFO reserve was 155,000 USD. What would the firm's cost of goods sold be on a FIFO basis?",
+    "question": "A US manufacturing firm reports cost of goods sold of 1,850,000 USD for the year under LIFO. Footnotes reveal that the beginning LIFO reserve was 120,000 USD and the ending LIFO reserve was 155,000. What would the firm's cost of goods sold be on a FIFO basis?",
     "options": {
       "A": "1,885,000 USD",
       "B": "1,815,000 USD",
       "C": "1,695,000 USD"
     },
     "answer": "B",
-    "explanation": "To convert cost of goods sold from LIFO to FIFO, the change in the LIFO reserve is subtracted: $\\text{COGS}_{\\text{FIFO}} = \\text{COGS}_{\\text{LIFO}} - \\Delta\\text{LIFO Reserve}$. The change in the LIFO reserve is: $\\Delta\\text{LIFO Reserve} = \\text{Ending LIFO Reserve} - \\text{Beginning LIFO Reserve} = 155,000\\text{ USD} - 120,000\\text{ USD} = 35,000\\text{ USD}$. Therefore, $\\text{COGS}_{\\text{FIFO}} = 1,850,000\\text{ USD} - 35,000\\text{ USD} = 1,815,000\\text{ USD}$. Because the reserve increased, prices rose during the year, meaning FIFO COGS is lower than LIFO COGS. Option A incorrectly adds the change in LIFO reserve. Option C subtracts the entire ending LIFO reserve."
+    "explanation": "To convert cost of goods sold from LIFO to FIFO, the change in the LIFO reserve is subtracted: $\\text{COGS}_{\\text{FIFO}} = \\text{COGS}_{\\text{LIFO}} - \\Delta\\text{LIFO Reserve}$. The change in the LIFO reserve is: $\\Delta\\text{LIFO Reserve} = \\text{Ending LIFO Reserve} - \\text{Beginning LIFO Reserve} = 155,000\\text{ USD} - 120,000\\text{ USD} = 35,000. Therefore, $\\text{COGS}_{\\text{FIFO}} = 1,850,000\\text{ USD} - 35,000\\text{ USD} = 1,815,000. Because the reserve increased, prices rose during the year, meaning FIFO COGS is lower than LIFO COGS. Option A incorrectly adds the change in LIFO reserve. Option C subtracts the entire ending LIFO reserve."
   },
   {
     "id": "L1-Q096",
@@ -110,14 +110,14 @@
     "module": "m7-inventories",
     "topic": "Inventories",
     "los": "Calculate the carrying amount of inventory under US GAAP lower of cost or market rules.",
-    "question": "A US GAAP firm using LIFO has an inventory item with historical cost of 80 USD. Current replacement cost is 72 USD. Estimated selling price is 95 USD, disposal costs are 10 USD, and the normal profit margin is 18 USD. Under the lower of cost or market rule, what is the carrying value of the inventory item?",
+    "question": "A US GAAP firm using LIFO has an inventory item with historical cost of 80. Current replacement cost is 72. Estimated selling price is 95 USD, disposal costs are 10 USD, and the normal profit margin is 18. Under the lower of cost or market rule, what is the carrying value of the inventory item?",
     "options": {
       "A": "80 USD",
       "B": "72 USD",
       "C": "67 USD"
     },
     "answer": "B",
-    "explanation": "Under US GAAP for firms using LIFO (or retail inventory method), inventory is valued at the lower of cost or market. 'Market' is defined as replacement cost, subject to an upper ceiling and lower floor: Ceiling = Net Realizable Value $(\\text{NRV}) = \\text{Selling Price} - \\text{Disposal Costs} = 95 - 10 = 85\\text{ USD}$. Floor = $\\text{NRV} - \\text{Normal Profit Margin} = 85 - 18 = 67\\text{ USD}$. Replacement cost is 72 USD, which falls within the range $[67\\text{ USD}, 85\\text{ USD}]$. Therefore, market value equals replacement cost of 72 USD. Finally, compare historical cost (80 USD) to market (72 USD). The lower value is 72 USD. Option A is historical cost. Option C is the floor."
+    "explanation": "Under US GAAP for firms using LIFO (or retail inventory method), inventory is valued at the lower of cost or market. 'Market' is defined as replacement cost, subject to an upper ceiling and lower floor: Ceiling = Net Realizable Value $(\\text{NRV}) = \\text{Selling Price} - \\text{Disposal Costs} = 95 - 10 = 85. Floor = $\\text{NRV} - \\text{Normal Profit Margin} = 85 - 18 = 67. Replacement cost is 72 USD, which falls within the range $[67\\text{ USD}, 85\\text{ USD}]$. Therefore, market value equals replacement cost of 72. Finally, compare historical cost (80 USD) to market (72 USD). The lower value is 72. Option A is historical cost. Option C is the floor."
   },
   {
     "id": "L1-Q099",
@@ -140,14 +140,14 @@
     "module": "m7-inventories",
     "topic": "Inventories",
     "los": "Calculate the adjustments required to retained earnings and stockholders' equity when converting from LIFO to FIFO.",
-    "question": "A US GAAP firm reports ending LIFO inventory of 600,000 USD and shareholders' equity of 2,400,000 USD. The footnote discloses an ending LIFO reserve of 140,000 USD. The applicable corporate income tax rate is 25%. To restate the company's financial statements to FIFO, shareholders' equity should be adjusted to:",
+    "question": "A US GAAP firm reports ending LIFO inventory of 600,000 USD and shareholders' equity of 2,400,000. The footnote discloses an ending LIFO reserve of 140,000. The applicable corporate income tax rate is 25%. To restate the company's financial statements to FIFO, shareholders' equity should be adjusted to:",
     "options": {
       "A": "2,505,000 USD",
       "B": "2,540,000 USD",
       "C": "2,435,000 USD"
     },
     "answer": "A",
-    "explanation": "When converting from LIFO to FIFO, ending inventory increases by the LIFO reserve: $\\Delta\\text{Assets} = +140,000\\text{ USD}$. This cumulative pretax increase generates a deferred tax liability: $\\text{DTL} = \\text{LIFO Reserve} \\times t = 140,000\\text{ USD} \\times 0.25 = 35,000\\text{ USD}$. The cumulative after-tax effect increases retained earnings and total shareholders' equity by: $\\Delta\\text{Equity} = \\text{LIFO Reserve} \\times (1 - t) = 140,000\\text{ USD} \\times (1 - 0.25) = 105,000\\text{ USD}$. Adjusted shareholders' equity = 2,400,000 USD + 105,000 USD = 2,505,000 USD. Option B fails to adjust for taxes, adding the full 140,000 USD. Option C adds only the tax liability (35,000 USD)."
+    "explanation": "When converting from LIFO to FIFO, ending inventory increases by the LIFO reserve: $\\Delta\\text{Assets} = +140,000$. This cumulative pretax increase generates a deferred tax liability: $\\text{DTL} = \\text{LIFO Reserve} \\times t = 140,000\\text{ USD} \\times 0.25 = 35,000$. The cumulative after-tax effect increases retained earnings and total shareholders' equity by: $\\Delta\\text{Equity} = \\text{LIFO Reserve} \\times (1 - t) = 140,000\\text{ USD} \\times (1 - 0.25) = 105,000$. Adjusted shareholders' equity = 2,400,000 USD + 105,000 USD = 2,505,000. Option B fails to adjust for taxes, adding the full 140,000. Option C adds only the tax liability (35,000 USD)."
   },
   {
     "id": "L1-Q101",
@@ -170,7 +170,7 @@
     "module": "m7-inventories",
     "topic": "Inventories",
     "los": "Describe the financial statement impact of inventory write-downs to net realizable value.",
-    "question": "At year-end, a tech hardware company determines that the net realizable value of its finished goods inventory is 350,000 USD, whereas its carrying cost is 420,000 USD. The company records a 70,000 USD write-down. Which of the following financial statement impacts will occur in the period of the write-down?",
+    "question": "At year-end, a tech hardware company determines that the net realizable value of its finished goods inventory is 350,000 USD, whereas its carrying cost is 420,000. The company records a 70,000 USD write-down. Which of the following financial statement impacts will occur in the period of the write-down?",
     "options": {
       "A": "Total asset turnover increases and debt-to-equity ratio increases.",
       "B": "Gross profit margin increases and current ratio decreases.",
@@ -192,7 +192,7 @@
       "C": "35.0%"
     },
     "answer": "B",
-    "explanation": "First, calculate the change in the LIFO reserve: $\\Delta\\text{LIFO Reserve} = 230,000\\text{ USD} - 180,000\\text{ USD} = 50,000\\text{ USD}$. Next, calculate FIFO COGS: $\\text{COGS}_{\\text{FIFO}} = \\text{COGS}_{\\text{LIFO}} - \\Delta\\text{LIFO Reserve} = 3,200,000\\text{ USD} - 50,000\\text{ USD} = 3,150,000\\text{ USD}$. FIFO Gross Profit = 5,000,000 USD - 3,150,000 USD = 1,850,000 USD. FIFO Gross Profit Margin = 1,850,000 USD / 5,000,000 USD = 0.370 or 37.0%. Under LIFO, gross profit margin was: (5,000,000 - 3,200,000) / 5,000,000 = 36.0% (Option A). Option C incorrectly adds the change in LIFO reserve."
+    "explanation": "First, calculate the change in the LIFO reserve: $\\Delta\\text{LIFO Reserve} = 230,000\\text{ USD} - 180,000\\text{ USD} = 50,000. Next, calculate FIFO COGS: $\\text{COGS}_{\\text{FIFO}} = \\text{COGS}_{\\text{LIFO}} - \\Delta\\text{LIFO Reserve} = 3,200,000\\text{ USD} - 50,000\\text{ USD} = 3,150,000. FIFO Gross Profit = 5,000,000 USD - 3,150,000 USD = 1,850,000. FIFO Gross Profit Margin = 1,850,000 USD / 5,000,000 USD = 0.370 or 37.0%. Under LIFO, gross profit margin was: (5,000,000 - 3,200,000) / 5,000,000 = 36.0% (Option A). Option C incorrectly adds the change in LIFO reserve."
   },
   {
     "id": "L1-Q104",
@@ -237,7 +237,7 @@
       "C": "1,310,000 USD"
     },
     "answer": "A",
-    "explanation": "All expenditures necessary to acquire the asset and prepare it for its intended use are capitalized to the cost of the asset. This includes: Purchase price (1,200,000 USD) + Delivery & installation (80,000 USD) + Site preparation (30,000 USD) + Testing costs before commercial production (25,000 USD) = 1,335,000 USD. Staff training costs (40,000 USD) must be expensed as an operating expense in the period incurred because the company cannot control the future economic benefits embodied in trained employees. Option B includes training costs. Option C omits testing costs."
+    "explanation": "All expenditures necessary to acquire the asset and prepare it for its intended use are capitalized to the cost of the asset. This includes: Purchase price (1,200,000 USD) + Delivery & installation (80,000 USD) + Site preparation (30,000 USD) + Testing costs before commercial production (25,000 USD) = 1,335,000. Staff training costs (40,000 USD) must be expensed as an operating expense in the period incurred because the company cannot control the future economic benefits embodied in trained employees. Option B includes training costs. Option C omits testing costs."
   },
   {
     "id": "L1-Q107",
@@ -260,14 +260,14 @@
     "module": "m8-long-lived-assets",
     "topic": "Long-Lived Assets",
     "los": "Calculate depreciation expense under the straight-line method.",
-    "question": "An enterprise purchases heavy equipment on 1 January Year 1 for 250,000 USD. Estimated useful life is 8 years, and estimated salvage value is 30,000 USD. At the end of Year 3, what is the asset's accumulated depreciation and carrying book value using straight-line depreciation?",
+    "question": "An enterprise purchases heavy equipment on 1 January Year 1 for 250,000. Estimated useful life is 8 years, and estimated salvage value is 30,000. At the end of Year 3, what is the asset's accumulated depreciation and carrying book value using straight-line depreciation?",
     "options": {
-      "A": "Accumulated depreciation is 82,500 USD; Carrying value is 167,500 USD.",
-      "B": "Accumulated depreciation is 93,750 USD; Carrying value is 156,250 USD.",
-      "C": "Accumulated depreciation is 55,000 USD; Carrying value is 195,000 USD."
+      "A": "Accumulated depreciation is 82,500 USD; Carrying value is 167,500. ",
+      "B": "Accumulated depreciation is 93,750 USD; Carrying value is 156,250. ",
+      "C": "Accumulated depreciation is 55,000 USD; Carrying value is 195,000. "
     },
     "answer": "A",
-    "explanation": "Annual straight-line depreciation = $(\\text{Cost} - \\text{Salvage Value}) / \\text{Useful Life} = (250,000\\text{ USD} - 30,000\\text{ USD}) / 8 = 220,000\\text{ USD} / 8 = 27,500\\text{ USD}$ per year. For 3 full years (Years 1, 2, and 3), accumulated depreciation = $\\text{AccDep} = 3 \\times 27,500\\text{ USD} = 82,500\\text{ USD}$. Carrying book value at the end of Year 3 = $\\text{Cost} - \\text{Accumulated Depreciation} = 250,000\\text{ USD} - 82,500\\text{ USD} = 167,500\\text{ USD}$. Option B ignores salvage value: (250,000 / 8) \\times 3 = 93,750 USD. Option C calculates only 2 years of depreciation."
+    "explanation": "Annual straight-line depreciation = $(\\text{Cost} - \\text{Salvage Value}) / \\text{Useful Life} = (250,000\\text{ USD} - 30,000\\text{ USD}) / 8 = 220,000\\text{ USD} / 8 = 27,500\\text{ USD per year}$. For 3 full years (Years 1, 2, and 3), accumulated depreciation = $\\text{AccDep} = 3 \\times 27,500\\text{ USD} = 82,500$. Carrying book value at the end of Year 3 = $\\text{Cost} - \\text{Accumulated Depreciation} = 250,000\\text{ USD} - 82,500\\text{ USD} = 167,500$. Option B ignores salvage value: (250,000 / 8) \\times 3 = 93,750. Option C calculates only 2 years of depreciation."
   },
   {
     "id": "L1-Q109",
@@ -275,14 +275,14 @@
     "module": "m8-long-lived-assets",
     "topic": "Long-Lived Assets",
     "los": "Calculate depreciation expense under accelerated methods including double-declining balance.",
-    "question": "A company purchases machinery on 1 January for 100,000 USD with an estimated useful life of 5 years and a residual value of 10,000 USD. Using the double-declining balance (DDB) method, what is the depreciation expense for Year 2?",
+    "question": "A company purchases machinery on 1 January for 100,000 USD with an estimated useful life of 5 years and a residual value of 10,000. Using the double-declining balance (DDB) method, what is the depreciation expense for Year 2?",
     "options": {
       "A": "24,000 USD",
       "B": "36,000 USD",
       "C": "16,000 USD"
     },
     "answer": "A",
-    "explanation": "Under the double-declining balance method, the straight-line rate is $\\text{SL Rate} = 1 / 5 = 20\\%$. The DDB rate is $\\text{DDB Rate} = 2 \\times 20\\% = 40\\%$. The rate is applied to the beginning book value without subtracting residual value (though the asset is not depreciated below residual value). Year 1 Depreciation = $\\text{Dep}_{1} = 100,000\\text{ USD} \\times 40\\% = 40,000\\text{ USD}$. Book value at end of Year 1 = 100,000 USD - 40,000 USD = 60,000 USD. Year 2 Depreciation = Beginning Book Value $\\times 40\\% = 60,000\\text{ USD} \\times 40\\% = 24,000\\text{ USD}$. Book value at end of Year 2 is 60,000 USD - 24,000 USD = 36,000 USD (above the 10,000 USD floor). Option B is the ending book value. Option C applies the rate to (Cost - Residual) in Year 1."
+    "explanation": "Under the double-declining balance method, the straight-line rate is $\\text{SL Rate} = 1 / 5 = 20\\%$. The DDB rate is $\\text{DDB Rate} = 2 \\times 20\\% = 40\\%$. The rate is applied to the beginning book value without subtracting residual value (though the asset is not depreciated below residual value). Year 1 Depreciation = $\\text{Dep}_{1} = 100,000\\text{ USD} \\times 40\\% = 40,000. Book value at end of Year 1 = 100,000 USD - 40,000 USD = 60,000. Year 2 Depreciation = Beginning Book Value $\\times 40\\% = 60,000\\text{ USD} \\times 40\\% = 24,000. Book value at end of Year 2 is 60,000 USD - 24,000 USD = 36,000 USD (above the 10,000 USD floor). Option B is the ending book value. Option C applies the rate to (Cost - Residual) in Year 1."
   },
   {
     "id": "L1-Q110",
@@ -305,7 +305,7 @@
     "module": "m8-long-lived-assets",
     "topic": "Long-Lived Assets",
     "los": "Describe the revaluation model under IFRS and calculate the accounting entries.",
-    "question": "Under IFRS, an entity applies the revaluation model to land originally purchased for 500,000 USD. In Year 1, fair value rises to 560,000 USD. In Year 2, fair value drops to 470,000 USD. How should the Year 2 decrease in value of 90,000 USD be recognized?",
+    "question": "Under IFRS, an entity applies the revaluation model to land originally purchased for 500,000. In Year 1, fair value rises to 560,000. In Year 2, fair value drops to 470,000. How should the Year 2 decrease in value of 90,000 USD be recognized?",
     "options": {
       "A": "Entire 90,000 USD recognized as a loss on the income statement.",
       "B": "60,000 USD reduction of revaluation surplus in OCI, and 30,000 USD loss on the income statement.",
@@ -320,14 +320,14 @@
     "module": "m8-long-lived-assets",
     "topic": "Long-Lived Assets",
     "los": "Describe the impairment of long-lived assets under IFRS and calculate impairment loss.",
-    "question": "Under IFRS (IAS 36), an asset has a carrying value of 300,000 USD. Its fair value less costs to sell is 250,000 USD, and its value in use is 270,000 USD. The recoverable amount of the asset and the resulting impairment loss are:",
+    "question": "Under IFRS (IAS 36), an asset has a carrying value of 300,000. Its fair value less costs to sell is 250,000 USD, and its value in use is 270,000. The recoverable amount of the asset and the resulting impairment loss are:",
     "options": {
-      "A": "Recoverable amount is 270,000 USD; Impairment loss is 30,000 USD.",
-      "B": "Recoverable amount is 250,000 USD; Impairment loss is 50,000 USD.",
-      "C": "Recoverable amount is 260,000 USD; Impairment loss is 40,000 USD."
+      "A": "Recoverable amount is 270,000 USD; Impairment loss is 30,000. ",
+      "B": "Recoverable amount is 250,000 USD; Impairment loss is 50,000. ",
+      "C": "Recoverable amount is 260,000 USD; Impairment loss is 40,000. "
     },
     "answer": "A",
-    "explanation": "Under IFRS, an asset is impaired when its carrying value exceeds its recoverable amount. The recoverable amount is defined as the higher of: 1) Fair value less costs to sell (250,000 USD), and 2) Value in use (present value of expected future cash flows = 270,000 USD). The recoverable amount is $\\max(250,000\\text{ USD}, 270,000\\text{ USD}) = 270,000\\text{ USD}$. Carrying value is 300,000 USD. Because carrying value exceeds recoverable amount, an impairment loss is recognized: $\\text{Impairment Loss} = 300,000\\text{ USD} - 270,000\\text{ USD} = 30,000\\text{ USD}$. Option B erroneously takes the lower of the two figures. Option C takes the simple average."
+    "explanation": "Under IFRS, an asset is impaired when its carrying value exceeds its recoverable amount. The recoverable amount is defined as the higher of: 1) Fair value less costs to sell (250,000 USD), and 2) Value in use (present value of expected future cash flows = 270,000 USD). The recoverable amount is $\\max(250,000\\text{ USD}, 270,000\\text{ USD}) = 270,000. Carrying value is 300,000. Because carrying value exceeds recoverable amount, an impairment loss is recognized: $\\text{Impairment Loss} = 300,000\\text{ USD} - 270,000\\text{ USD} = 30,000. Option B erroneously takes the lower of the two figures. Option C takes the simple average."
   },
   {
     "id": "L1-Q113",
@@ -335,14 +335,14 @@
     "module": "m8-long-lived-assets",
     "topic": "Long-Lived Assets",
     "los": "Contrast the impairment testing procedures and reversal rules between IFRS and US GAAP.",
-    "question": "A manufacturing machine held for use has a carrying value of 140,000 USD. Estimated undiscounted future cash flows are 150,000 USD, while the discounted present value of future cash flows is 120,000 USD and fair value is 115,000 USD. Under US GAAP, what is the impairment loss?",
+    "question": "A manufacturing machine held for use has a carrying value of 140,000. Estimated undiscounted future cash flows are 150,000 USD, while the discounted present value of future cash flows is 120,000 USD and fair value is 115,000. Under US GAAP, what is the impairment loss?",
     "options": {
       "A": "0 USD",
       "B": "20,000 USD",
       "C": "25,000 USD"
     },
     "answer": "A",
-    "explanation": "Under US GAAP (ASC 360), impairment of long-lived assets held for use involves a two-step test: Step 1 (Recoverability test): The asset's carrying value is compared to the undiscounted future cash flows expected from its use and eventual disposition. If undiscounted cash flows $\\ge$ carrying value, the asset is NOT impaired, and Step 2 is not performed. Here, undiscounted cash flows (150,000 USD) exceed carrying value (140,000 USD). Thus, the asset is not impaired, and impairment loss is 0 USD. If Step 1 had failed, Step 2 would measure the impairment loss as carrying value minus fair value: $\\text{Loss} = 140,000\\text{ USD} - 115,000\\text{ USD} = 25,000\\text{ USD}$ (Option C). Option B reflects IFRS impairment."
+    "explanation": "Under US GAAP (ASC 360), impairment of long-lived assets held for use involves a two-step test: Step 1 (Recoverability test): The asset's carrying value is compared to the undiscounted future cash flows expected from its use and eventual disposition. If undiscounted cash flows $\\ge$ carrying value, the asset is NOT impaired, and Step 2 is not performed. Here, undiscounted cash flows (150,000 USD) exceed carrying value (140,000 USD). Thus, the asset is not impaired, and impairment loss is 0. If Step 1 had failed, Step 2 would measure the impairment loss as carrying value minus fair value: $\\text{Loss} = 140,000\\text{ USD} - 115,000\\text{ USD} = 25,000\\text{ USD}$ (Option C). Option B reflects IFRS impairment."
   },
   {
     "id": "L1-Q114",
@@ -367,12 +367,12 @@
     "los": "Calculate the gain or loss on derecognition/disposal of a long-lived asset.",
     "question": "A corporation sells a specialized packaging line for 95,000 USD cash. The machine originally cost 220,000 USD and had accumulated depreciation of 145,000 USD at the time of sale. The transaction results in:",
     "options": {
-      "A": "A gain of 20,000 USD reported in operating income, and an investing cash inflow of 95,000 USD.",
-      "B": "A loss of 50,000 USD reported in operating income, and a financing cash inflow of 95,000 USD.",
-      "C": "A gain of 20,000 USD reported in other income/expense, and an operating cash inflow of 95,000 USD."
+      "A": "A gain of 20,000 USD reported in operating income, and an investing cash inflow of 95,000. ",
+      "B": "A loss of 50,000 USD reported in operating income, and a financing cash inflow of 95,000. ",
+      "C": "A gain of 20,000 USD reported in other income/expense, and an operating cash inflow of 95,000. "
     },
     "answer": "A",
-    "explanation": "Carrying value at date of sale = $\\text{Original Cost} - \\text{Accumulated Depreciation} = 220,000\\text{ USD} - 145,000\\text{ USD} = 75,000\\text{ USD}$. Gain/Loss on disposal = $\\text{Proceeds} - \\text{Carrying Value} = 95,000\\text{ USD} - 75,000\\text{ USD} = +20,000\\text{ USD}$ (a gain). On the income statement, this gain is recognized in operating or other operating income. On the cash flow statement, the full cash proceed of 95,000 USD is classified as a cash inflow from investing activities (CFI). In the indirect CFO reconciliation, the 20,000 USD gain is deducted from net income to avoid double counting."
+    "explanation": "Carrying value at date of sale = $\\text{Original Cost} - \\text{Accumulated Depreciation} = 220,000\\text{ USD} - 145,000\\text{ USD} = 75,000. Gain/Loss on disposal = $\\text{Proceeds} - \\text{Carrying Value} = 95,000\\text{ USD} - 75,000\\text{ USD} = +20,000USD (a gain). On the income statement, this gain is recognized in operating or other operating income. On the cash flow statement, the full cash proceed of 95,000 USD is classified as a cash inflow from investing activities (CFI). In the indirect CFO reconciliation, the 20,000 USD gain is deducted from net income to avoid double counting."
   },
   {
     "id": "L1-Q116",
@@ -380,7 +380,7 @@
     "module": "m8-long-lived-assets",
     "topic": "Long-Lived Assets",
     "los": "Calculate and interpret financial ratios related to long-lived assets, including average age and remaining useful life.",
-    "question": "A company reports gross ending PPE of 1,500,000 USD, ending accumulated depreciation of 600,000 USD, and annual depreciation expense of 100,000 USD. Assuming straight-line depreciation with zero salvage value, the estimated average age and remaining useful life of the assets are closest to:",
+    "question": "A company reports gross ending PPE of 1,500,000 USD, ending accumulated depreciation of 600,000 USD, and annual depreciation expense of 100,000. Assuming straight-line depreciation with zero salvage value, the estimated average age and remaining useful life of the assets are closest to:",
     "options": {
       "A": "Average age = 6.0 years; Remaining life = 9.0 years.",
       "B": "Average age = 4.0 years; Remaining life = 11.0 years.",
@@ -472,12 +472,12 @@
     "los": "Calculate the tax base of an asset and determine whether a temporary difference creates a deferred tax asset or liability.",
     "question": "A company purchases equipment for 600,000 USD on 1 January. For financial accounting, the equipment is depreciated straight-line over 5 years with zero salvage value (120,000 USD per year). For tax purposes, accelerated tax depreciation is 200,000 USD in Year 1. At the end of Year 1, what are the carrying amount, tax base, and resulting deferred tax position at a 25% tax rate?",
     "options": {
-      "A": "Carrying amount = 480,000 USD; Tax base = 400,000 USD; Deferred Tax Liability of 20,000 USD.",
-      "B": "Carrying amount = 400,000 USD; Tax base = 480,000 USD; Deferred Tax Asset of 20,000 USD.",
-      "C": "Carrying amount = 480,000 USD; Tax base = 400,000 USD; Deferred Tax Asset of 80,000 USD."
+      "A": "Carrying amount = 480,000 USD; Tax base = 400,000 USD; Deferred Tax Liability of 20,000. ",
+      "B": "Carrying amount = 400,000 USD; Tax base = 480,000 USD; Deferred Tax Asset of 20,000. ",
+      "C": "Carrying amount = 480,000 USD; Tax base = 400,000 USD; Deferred Tax Asset of 80,000. "
     },
     "answer": "A",
-    "explanation": "Carrying amount (financial statements) = 600,000 USD - 120,000 USD = 480,000 USD. Tax base = Cost - Tax Depreciation = 600,000 USD - 200,000 USD = 400,000 USD. Because the carrying amount of the asset (480,000 USD) exceeds its tax base (400,000 USD), future taxable economic benefits will exceed deductible tax deductions. This taxable temporary difference is: 480,000 USD - 400,000 USD = 80,000 USD. The resulting Deferred Tax Liability (DTL) is: $\\text{DTL} = 80,000\\text{ USD} \\times 25\\% = 20,000\\text{ USD}$. Option A is correct."
+    "explanation": "Carrying amount (financial statements) = 600,000 USD - 120,000 USD = 480,000. Tax base = Cost - Tax Depreciation = 600,000 USD - 200,000 USD = 400,000. Because the carrying amount of the asset (480,000 USD) exceeds its tax base (400,000 USD), future taxable economic benefits will exceed deductible tax deductions. This taxable temporary difference is: 480,000 USD - 400,000 USD = 80,000. The resulting Deferred Tax Liability (DTL) is: $\\text{DTL} = 80,000\\text{ USD} \\times 25\\% = 20,000$. Option A is correct."
   },
   {
     "id": "L1-Q123",
@@ -488,11 +488,11 @@
     "question": "At year-end, a firm accrues warranty expense of 50,000 USD, creating a warranty liability of 50,000 USD on its balance sheet. Under local tax law, warranty costs are deductible only when paid in cash to service customer claims. At a 30% tax rate, what is the tax base of the warranty liability and the deferred tax effect?",
     "options": {
       "A": "Tax base is 50,000 USD; No deferred tax asset or liability arises.",
-      "B": "Tax base is 0 USD; Deferred Tax Asset of 15,000 USD.",
-      "C": "Tax base is 0 USD; Deferred Tax Liability of 15,000 USD."
+      "B": "Tax base is 0 USD; Deferred Tax Asset of 15,000. ",
+      "C": "Tax base is 0 USD; Deferred Tax Liability of 15,000. "
     },
     "answer": "B",
-    "explanation": "The tax base of a liability is defined as its carrying amount less any amounts that will be deductible for tax purposes in future periods: $\\text{Tax Base} = \\text{Carrying Amount} - \\text{Future Deductible Amount} = 50,000\\text{ USD} - 50,000\\text{ USD} = 0\\text{ USD}$. When the carrying amount of a liability exceeds its tax base (50,000 USD > 0), a deductible temporary difference arises because tax deductions will be recognized in the future when the warranty is paid. This creates a Deferred Tax Asset (DTA): $\\text{DTA} = 50,000\\text{ USD} \\times 30\\% = 15,000\\text{ USD}$. Option B is correct."
+    "explanation": "The tax base of a liability is defined as its carrying amount less any amounts that will be deductible for tax purposes in future periods: $\\text{Tax Base} = \\text{Carrying Amount} - \\text{Future Deductible Amount} = 50,000\\text{ USD} - 50,000\\text{ USD} = 0. When the carrying amount of a liability exceeds its tax base (50,000 USD > 0), a deductible temporary difference arises because tax deductions will be recognized in the future when the warranty is paid. This creates a Deferred Tax Asset (DTA): $\\text{DTA} = 50,000\\text{ USD} \\times 30\\% = 15,000. Option B is correct."
   },
   {
     "id": "L1-Q124",
@@ -515,14 +515,14 @@
     "module": "m9-taxes",
     "topic": "Income Taxes",
     "los": "Calculate income tax expense from taxes payable and changes in deferred tax assets and liabilities.",
-    "question": "During Year 2, a corporation reports taxable income resulting in current taxes payable of 180,000 USD. During the year, its deferred tax assets increased from 40,000 USD to 55,000 USD, and its deferred tax liabilities increased from 90,000 USD to 120,000 USD. The corporate tax rate remained constant at 25%. What is the income tax expense reported on the Year 2 income statement?",
+    "question": "During Year 2, a corporation reports taxable income resulting in current taxes payable of 180,000. During the year, its deferred tax assets increased from 40,000 USD to 55,000 USD, and its deferred tax liabilities increased from 90,000 USD to 120,000. The corporate tax rate remained constant at 25%. What is the income tax expense reported on the Year 2 income statement?",
     "options": {
       "A": "195,000 USD",
       "B": "165,000 USD",
       "C": "225,000 USD"
     },
     "answer": "A",
-    "explanation": "Income tax expense is calculated as: $\\text{Income Tax Expense} = \\text{Taxes Payable} + \\Delta\\text{DTL} - \\Delta\\text{DTA}$. We have: $\\Delta\\text{DTL} = 120,000\\text{ USD} - 90,000\\text{ USD} = +30,000\\text{ USD}$; $\\Delta\\text{DTA} = 55,000\\text{ USD} - 40,000\\text{ USD} = +15,000\\text{ USD}$. Therefore: $\\text{Income Tax Expense} = 180,000 + 30,000 - 15,000 = 195,000\\text{ USD}$. Option B incorrectly subtracts $\\Delta\\text{DTL}$ and adds $\\Delta\\text{DTA}$. Option C adds both increases without offsetting the DTA increase."
+    "explanation": "Income tax expense is calculated as: $\\text{Income Tax Expense} = \\text{Taxes Payable} + \\Delta\\text{DTL} - \\Delta\\text{DTA}$. We have: $\\Delta\\text{DTL} = 120,000\\text{ USD} - 90,000\\text{ USD} = +30,000\\text{ USD}$; $\\Delta\\text{DTA} = 55,000\\text{ USD} - 40,000\\text{ USD} = +15,000$. Therefore: $\\text{Income Tax Expense} = 180,000 + 30,000 - 15,000 = 195,000$. Option B incorrectly subtracts $\\Delta\\text{DTL}$ and adds $\\Delta\\text{DTA}$. Option C adds both increases without offsetting the DTA increase."
   },
   {
     "id": "L1-Q126",
@@ -532,12 +532,12 @@
     "los": "Explain the effect of changes in tax laws and rates on deferred tax assets, liabilities, and income tax expense.",
     "question": "At the start of the year, a company has a net deferred tax liability of 80,000 USD based on a statutory tax rate of 40% (taxable temporary difference of 200,000 USD). During the year, parliament enacts legislation reducing the corporate tax rate to 25%, effective immediately for all future periods. What is the impact of this tax rate decrease on the balance sheet and income tax expense?",
     "options": {
-      "A": "Net DTL decreases by 30,000 USD, and income tax expense decreases by 30,000 USD.",
-      "B": "Net DTL increases by 30,000 USD, and income tax expense increases by 30,000 USD.",
+      "A": "Net DTL decreases by 30,000 USD, and income tax expense decreases by 30,000. ",
+      "B": "Net DTL increases by 30,000 USD, and income tax expense increases by 30,000. ",
       "C": "Net DTL is unchanged, but future income taxes payable will decrease."
     },
     "answer": "A",
-    "explanation": "When tax rates change, deferred tax assets and liabilities must be remeasured using the newly enacted tax rate applicable to the periods in which the temporary differences are expected to reverse. Temporary difference = 80,000 USD / 0.40 = 200,000 USD. Under the new 25% tax rate: $\\text{New DTL} = 200,000\\text{ USD} \\times 25\\% = 50,000\\text{ USD}$. The reduction in DTL is: 80,000 USD - 50,000 USD = 30,000 USD. Under both IFRS and US GAAP, the effect of the tax rate change is recognized in profit or loss in the period of enactment: reducing DTL reduces income tax expense by 30,000 USD (boosting net income). Option A is correct."
+    "explanation": "When tax rates change, deferred tax assets and liabilities must be remeasured using the newly enacted tax rate applicable to the periods in which the temporary differences are expected to reverse. Temporary difference = 80,000 USD / 0.40 = 200,000. Under the new 25% tax rate: $\\text{New DTL} = 200,000\\text{ USD} \\times 25\\% = 50,000$. The reduction in DTL is: 80,000 USD - 50,000 USD = 30,000. Under both IFRS and US GAAP, the effect of the tax rate change is recognized in profit or loss in the period of enactment: reducing DTL reduces income tax expense by 30,000 USD (boosting net income). Option A is correct."
   },
   {
     "id": "L1-Q127",
@@ -607,12 +607,12 @@
     "los": "Calculate the deferred tax liability resulting from accelerated depreciation across multiple periods.",
     "question": "A firm buys an asset for 300,000 USD on 1 January Year 1. Straight-line depreciation for book purposes is 100,000 USD per year over 3 years. Tax depreciation is 150,000 USD in Year 1, 100,000 USD in Year 2, and 50,000 USD in Year 3. At a 30% tax rate, what is the change in the deferred tax liability during Year 3?",
     "options": {
-      "A": "Decrease of 15,000 USD.",
-      "B": "Increase of 15,000 USD.",
-      "C": "Decrease of 30,000 USD."
+      "A": "Decrease of 15,000. ",
+      "B": "Increase of 15,000. ",
+      "C": "Decrease of 30,000. "
     },
     "answer": "A",
-    "explanation": "Let us track carrying value and tax base across the 3 years:\n- Year 1: Book depreciation = 100,000 USD; Carrying Value = 200,000 USD. Tax depreciation = 150,000 USD; Tax Base = 150,000 USD. Cumulative temporary difference = 200,000 USD - 150,000 USD = 50,000 USD. DTL at end of Year 1 = $\\text{DTL} = 50,000\\text{ USD} \\times 30\\% = 15,000\\text{ USD}$.\n- Year 2: Book depreciation = 100,000 USD; Carrying Value = 100,000 USD. Tax depreciation = 100,000 USD; Tax Base = 50,000 USD. Cumulative difference = 100,000 USD - 50,000 USD = 50,000 USD. DTL at end of Year 2 = 15,000 USD (no change in Year 2).\n- Year 3: Book depreciation = 100,000 USD; Carrying Value = 0 USD. Tax depreciation = 50,000 USD; Tax Base = 0 USD. Cumulative difference = 0 USD. DTL at end of Year 3 = 0 USD.\nDuring Year 3, the DTL changes from 15,000 USD to 0 USD, representing a decrease (reversal) of 15,000 USD. Option A is correct."
+    "explanation": "Let us track carrying value and tax base across the 3 years:\n- Year 1: Book depreciation = 100,000 USD; Carrying Value = 200,000. Tax depreciation = 150,000 USD; Tax Base = 150,000. Cumulative temporary difference = 200,000 USD - 150,000 USD = 50,000. DTL at end of Year 1 = $\\text{DTL} = 50,000\\text{ USD} \\times 30\\% = 15,000$. - Year 2: Book depreciation = 100,000 USD; Carrying Value = 100,000. Tax depreciation = 100,000 USD; Tax Base = 50,000. Cumulative difference = 100,000 USD - 50,000 USD = 50,000. DTL at end of Year 2 = 15,000 USD (no change in Year 2).\n- Year 3: Book depreciation = 100,000 USD; Carrying Value = 0. Tax depreciation = 50,000 USD; Tax Base = 0. Cumulative difference = 0. DTL at end of Year 3 = 0. During Year 3, the DTL changes from 15,000 USD to 0 USD, representing a decrease (reversal) of 15,000. Option A is correct."
   },
   {
     "id": "L1-Q132",
@@ -672,7 +672,7 @@
       "C": "Debt-to-equity ratio decreases; ROE increases."
     },
     "answer": "A",
-    "explanation": "Reclassifying DTL to equity has the following effects: 1) Total liabilities decrease by 200,000 USD, and total shareholders' equity increases by 200,000 USD. 2) Debt-to-Equity Ratio = $\\text{Total Debt (or Liabilities)} / \\text{Total Equity}$. With lower debt and higher equity, the debt-to-equity ratio decreases significantly. 3) Return on Equity = $\\text{Net Income} / \\text{Shareholders' Equity}$. With net income unchanged and equity higher in the denominator, reported ROE decreases. Thus, Option A is correct."
+    "explanation": "Reclassifying DTL to equity has the following effects: 1) Total liabilities decrease by 200,000 USD, and total shareholders' equity increases by 200,000. 2) Debt-to-Equity Ratio = $\\text{Total Debt (or Liabilities)} / \\text{Total Equity}$. With lower debt and higher equity, the debt-to-equity ratio decreases significantly. 3) Return on Equity = $\\text{Net Income} / \\text{Shareholders' Equity}$. With net income unchanged and equity higher in the denominator, reported ROE decreases. Thus, Option A is correct."
   },
   {
     "id": "L1-Q136",
@@ -682,12 +682,12 @@
     "los": "Explain the initial measurement of bonds issued at par, at a discount, and at a premium.",
     "question": "A corporation issues a 5-year, 1,000,000 USD face value bond with an annual coupon rate of 6% when the prevailing market yield (effective interest rate) for similar risk debt is 7%. How is this bond initially recorded on the balance sheet?",
     "options": {
-      "A": "At a discount, with initial carrying value less than 1,000,000 USD.",
-      "B": "At a premium, with initial carrying value greater than 1,000,000 USD.",
+      "A": "At a discount, with initial carrying value less than 1,000,000. ",
+      "B": "At a premium, with initial carrying value greater than 1,000,000. ",
       "C": "At face value of 1,000,000 USD, with unamortized interest reported as a current liability."
     },
     "answer": "A",
-    "explanation": "When the coupon rate (6%) is less than the market yield at issuance (7%), investors require a higher return than the cash coupon payments provide. Therefore, the bond must be sold at a discount (price < 100% of par). The bond's initial carrying value equals the present value of future cash flows (annual coupons of 60,000 USD and par of 1,000,000 USD) discounted at 7%, which is approximately 958,998 USD, less than 1,000,000 USD. Option A is correct. A bond is issued at a premium only when coupon rate exceeds market yield."
+    "explanation": "When the coupon rate (6%) is less than the market yield at issuance (7%), investors require a higher return than the cash coupon payments provide. Therefore, the bond must be sold at a discount (price < 100% of par). The bond's initial carrying value equals the present value of future cash flows (annual coupons of 60,000 USD and par of 1,000,000 USD) discounted at 7%, which is approximately 958,998 USD, less than 1,000,000. Option A is correct. A bond is issued at a premium only when coupon rate exceeds market yield."
   },
   {
     "id": "L1-Q137",
@@ -755,7 +755,7 @@
     "module": "m10-debt",
     "topic": "Non-Current Liabilities",
     "los": "Describe the accounting treatment of zero-coupon bonds and their cash flow statement effects.",
-    "question": "A corporation issues 3-year zero-coupon bonds with a face value of 5,000,000 USD at an effective interest rate of 6%, receiving proceeds of 4,198,100 USD. During the bond's term, how is interest expense recognized and how are cash flows presented?",
+    "question": "A corporation issues 3-year zero-coupon bonds with a face value of 5,000,000 USD at an effective interest rate of 6%, receiving proceeds of 4,198,100. During the bond's term, how is interest expense recognized and how are cash flows presented?",
     "options": {
       "A": "Annual interest expense is recognized on the income statement with zero operating cash outflow; the entire maturity payment of 5,000,000 USD is a financing cash outflow.",
       "B": "No interest expense is recognized until maturity; the full 5,000,000 USD is an operating cash outflow at year 3.",
@@ -785,14 +785,14 @@
     "module": "m10-debt",
     "topic": "Non-Current Liabilities",
     "los": "Calculate the gain or loss on early debt extinguishment.",
-    "question": "A company retires bonds with a face value of 2,000,000 USD early by repurchasing them on the open market at 102% of par value. At the date of retirement, the bonds have unamortized discount of 60,000 USD and unamortized debt issuance costs of 15,000 USD. The gain or loss on debt extinguishment is:",
+    "question": "A company retires bonds with a face value of 2,000,000 USD early by repurchasing them on the open market at 102% of par value. At the date of retirement, the bonds have unamortized discount of 60,000 USD and unamortized debt issuance costs of 15,000. The gain or loss on debt extinguishment is:",
     "options": {
       "A": "Loss of 115,000 USD",
       "B": "Loss of 40,000 USD",
       "C": "Gain of 35,000 USD"
     },
     "answer": "A",
-    "explanation": "Reacquisition price = 2,000,000 USD \\times 1.02 = 2,040,000 USD. Carrying value of the debt = $\\text{Face Value} - \\text{Unamortized Discount} - \\text{Unamortized Issuance Costs} = 2,000,000\\text{ USD} - 60,000\\text{ USD} - 15,000\\text{ USD} = 1,925,000\\text{ USD}$. Gain/Loss on extinguishment = $\\text{Carrying Value} - \\text{Reacquisition Price} = 1,925,000\\text{ USD} - 2,040,000\\text{ USD} = -115,000\\text{ USD}$ (a loss of 115,000 USD). This extinguishment loss is reported on the income statement as part of continuing operations. Option B forgets the unamortized discount and issuance costs (2,000,000 USD - 2,040,000 USD = -40,000 USD). Option A is correct."
+    "explanation": "Reacquisition price = 2,000,000 USD \\times 1.02 = 2,040,000. Carrying value of the debt = $\\text{Face Value} - \\text{Unamortized Discount} - \\text{Unamortized Issuance Costs} = 2,000,000\\text{ USD} - 60,000\\text{ USD} - 15,000\\text{ USD} = 1,925,000. Gain/Loss on extinguishment = $\\text{Carrying Value} - \\text{Reacquisition Price} = 1,925,000\\text{ USD} - 2,040,000\\text{ USD} = -115,000USD (a loss of 115,000 USD). This extinguishment loss is reported on the income statement as part of continuing operations. Option B forgets the unamortized discount and issuance costs (2,000,000 USD - 2,040,000 USD = -40,000 USD). Option A is correct."
   },
   {
     "id": "L1-Q144",
@@ -860,14 +860,14 @@
     "module": "m10-debt",
     "topic": "Non-Current Liabilities",
     "los": "Calculate interest expense and ending carrying value using the effective interest method for a multi-year discount bond.",
-    "question": "On 1 January Year 1, a firm issues 1,000,000 USD face value of 3-year, 5% annual coupon bonds when the market yield is 8%. The issue price is 922,686 USD. What is the interest expense for Year 2 and the carrying value at the end of Year 2?",
+    "question": "On 1 January Year 1, a firm issues 1,000,000 USD face value of 3-year, 5% annual coupon bonds when the market yield is 8%. The issue price is 922,686. What is the interest expense for Year 2 and the carrying value at the end of Year 2?",
     "options": {
-      "A": "Year 2 Interest Expense is 75,719 USD; Ending Carrying Value is 972,176 USD.",
-      "B": "Year 2 Interest Expense is 73,815 USD; Ending Carrying Value is 946,501 USD.",
-      "C": "Year 2 Interest Expense is 50,000 USD; Ending Carrying Value is 948,895 USD."
+      "A": "Year 2 Interest Expense is 75,719 USD; Ending Carrying Value is 972,176. ",
+      "B": "Year 2 Interest Expense is 73,815 USD; Ending Carrying Value is 946,501. ",
+      "C": "Year 2 Interest Expense is 50,000 USD; Ending Carrying Value is 948,895. "
     },
     "answer": "A",
-    "explanation": "Annual cash coupon payment = 1,000,000 USD \\times 5% = 50,000 USD.\n- Year 1: Beginning carrying value = 922,686 USD. Interest expense = 922,686 USD \\times 8% = 73,815 USD. Amortization of discount = 73,815 USD - 50,000 USD = 23,815 USD. Ending Year 1 carrying value = 922,686 USD + 23,815 USD = 946,501 USD.\n- Year 2: Beginning carrying value = 946,501 USD. Interest expense = 946,501 USD \\times 8% = 75,720 USD (rounded to 75,719 USD). Amortization = 75,720 USD - 50,000 USD = 25,720 USD. Ending Year 2 carrying value = 946,501 USD + 25,720 USD = 972,221 USD (approximately 972,176 USD depending on exact rounding). Option B gives Year 1 interest expense and Year 1 ending carrying value. Option C uses the cash coupon payment. Option A is correct."
+    "explanation": "Annual cash coupon payment = 1,000,000 USD \\times 5% = 50,000. - Year 1: Beginning carrying value = 922,686. Interest expense = 922,686 USD \\times 8% = 73,815. Amortization of discount = 73,815 USD - 50,000 USD = 23,815. Ending Year 1 carrying value = 922,686 USD + 23,815 USD = 946,501. - Year 2: Beginning carrying value = 946,501. Interest expense = 946,501 USD \\times 8% = 75,720 USD (rounded to 75,719 USD). Amortization = 75,720 USD - 50,000 USD = 25,720. Ending Year 2 carrying value = 946,501 USD + 25,720 USD = 972,221 USD (approximately 972,176 USD depending on exact rounding). Option B gives Year 1 interest expense and Year 1 ending carrying value. Option C uses the cash coupon payment. Option A is correct."
   },
   {
     "id": "L1-Q149",
@@ -920,14 +920,14 @@
     "module": "m11-leases",
     "topic": "Leases",
     "los": "Explain the initial measurement of the right-of-use asset and lease liability for a lessee.",
-    "question": "A lessee enters into a 5-year lease requiring annual payments of 40,000 USD at the end of each year. The present value of the lease payments discounted at 6% is 168,495 USD. The lessee also incurs 5,000 USD in initial direct legal fees and receives a 3,000 USD lease incentive from the lessor prior to commencement. At lease commencement, the initial carrying amounts of the lease liability and the Right-of-Use (ROU) asset are:",
+    "question": "A lessee enters into a 5-year lease requiring annual payments of 40,000 USD at the end of each year. The present value of the lease payments discounted at 6% is 168,495. The lessee also incurs 5,000 USD in initial direct legal fees and receives a 3,000 USD lease incentive from the lessor prior to commencement. At lease commencement, the initial carrying amounts of the lease liability and the Right-of-Use (ROU) asset are:",
     "options": {
-      "A": "Lease Liability = 168,495 USD; ROU Asset = 170,495 USD.",
-      "B": "Lease Liability = 170,495 USD; ROU Asset = 170,495 USD.",
-      "C": "Lease Liability = 168,495 USD; ROU Asset = 168,495 USD."
+      "A": "Lease Liability = 168,495 USD; ROU Asset = 170,495$. ",
+      "B": "Lease Liability = 170,495 USD; ROU Asset = 170,495$. ",
+      "C": "Lease Liability = 168,495 USD; ROU Asset = 168,495. "
     },
     "answer": "A",
-    "explanation": "1) Initial Lease Liability = Present value of future lease payments = 168,495 USD. 2) Initial ROU Asset = Initial Lease Liability + Initial direct costs incurred by lessee - Lease incentives received from lessor + Prepaid lease payments + Estimated restoration costs. Here: $\\text{ROU Asset} = 168,495\\text{ USD} + 5,000\\text{ USD} - 3,000\\text{ USD} = 170,495\\text{ USD}$. Note that initial direct legal costs and lease incentives affect the initial ROU asset, but do NOT affect the initial lease liability (which strictly reflects future contractual payments). Option A is correct."
+    "explanation": "1) Initial Lease Liability = Present value of future lease payments = 168,495. 2) Initial ROU Asset = Initial Lease Liability + Initial direct costs incurred by lessee - Lease incentives received from lessor + Prepaid lease payments + Estimated restoration costs. Here: $\\text{ROU Asset} = 168,495\\text{ USD} + 5,000\\text{ USD} - 3,000\\text{ USD} = 170,495$. Note that initial direct legal costs and lease incentives affect the initial ROU asset, but do NOT affect the initial lease liability (which strictly reflects future contractual payments). Option A is correct."
   },
   {
     "id": "L1-Q153",
@@ -1025,14 +1025,14 @@
     "module": "m11-leases",
     "topic": "Leases",
     "los": "Compare the impact of lease accounting on EBITDA and EBIT between IFRS 16 and ASC 842 operating leases.",
-    "question": "Two identical companies enter into identical 5-year lease agreements with annual payments of 100,000 USD. Company X reports under IFRS 16. Company Y reports under US GAAP and classifies the lease as an operating lease. Relative to Company Y, Company X will report:",
+    "question": "Two identical companies enter into identical 5-year lease agreements with annual payments of 100,000. Company X reports under IFRS 16. Company Y reports under US GAAP and classifies the lease as an operating lease. Relative to Company Y, Company X will report:",
     "options": {
       "A": "Higher EBITDA and higher operating income (EBIT).",
       "B": "Lower EBITDA and higher operating income (EBIT).",
       "C": "Identical EBITDA and identical operating income (EBIT)."
     },
     "answer": "A",
-    "explanation": "For Company Y (US GAAP operating lease): The 100,000 USD is included in full within operating expenses, which reduces both EBITDA and EBIT by 100,000 USD. For Company X (IFRS 16): The lease is accounted for as a finance-type lease. The expense consists of ROU depreciation (operating expense) and interest expense (financing expense below EBIT). Because neither depreciation nor interest is in EBITDA, Company X's EBITDA is higher by 100,000 USD. Furthermore, because interest is excluded from EBIT, Company X's EBIT is only reduced by depreciation (e.g., ~80,000 USD), making its EBIT higher than Company Y's EBIT. Option A is correct."
+    "explanation": "For Company Y (US GAAP operating lease): The 100,000 USD is included in full within operating expenses, which reduces both EBITDA and EBIT by 100,000. For Company X (IFRS 16): The lease is accounted for as a finance-type lease. The expense consists of ROU depreciation (operating expense) and interest expense (financing expense below EBIT). Because neither depreciation nor interest is in EBITDA, Company X's EBITDA is higher by 100,000. Furthermore, because interest is excluded from EBIT, Company X's EBIT is only reduced by depreciation (e.g., ~80,000 USD), making its EBIT higher than Company Y's EBIT. Option A is correct."
   },
   {
     "id": "L1-Q160",
@@ -1040,14 +1040,14 @@
     "module": "m11-leases",
     "topic": "Leases",
     "los": "Calculate Year 1 interest expense, liability balance, and depreciation for a lessee under IFRS 16.",
-    "question": "On 1 January Year 1, a lessee enters into a 4-year lease with payments of 30,000 USD due at the end of each year (31 December). The present value of lease payments at an 8% discount rate is 99,364 USD. There are no initial direct costs. Using straight-line depreciation, what are Year 1 interest expense, Year 1 depreciation, and the lease liability balance at 31 December Year 1?",
+    "question": "On 1 January Year 1, a lessee enters into a 4-year lease with payments of 30,000 USD due at the end of each year (31 December). The present value of lease payments at an 8% discount rate is 99,364. There are no initial direct costs. Using straight-line depreciation, what are Year 1 interest expense, Year 1 depreciation, and the lease liability balance at 31 December Year 1?",
     "options": {
-      "A": "Interest Expense = 7,949 USD; Depreciation = 24,841 USD; Ending Liability = 77,313 USD.",
-      "B": "Interest Expense = 7,949 USD; Depreciation = 30,000 USD; Ending Liability = 69,364 USD.",
-      "C": "Interest Expense = 2,400 USD; Depreciation = 24,841 USD; Ending Liability = 71,764 USD."
+      "A": "Interest Expense = 7,949 USD; Depreciation = 24,841 USD; Ending Liability = 77,313. ",
+      "B": "Interest Expense = 7,949 USD; Depreciation = 30,000 USD; Ending Liability = 69,364. ",
+      "C": "Interest Expense = 2,400 USD; Depreciation = 24,841 USD; Ending Liability = 71,764. "
     },
     "answer": "A",
-    "explanation": "Initial Lease Liability and ROU Asset = 99,364 USD. 1) Year 1 Interest Expense = Beginning Liability \\times 8% = 99,364 USD \\times 0.08 = 7,949 USD. 2) Year 1 Lease Payment = 30,000 USD. Principal repayment = 30,000 USD - 7,949 USD = 22,051 USD. 3) Ending Lease Liability at 31 Dec Year 1 = 99,364 USD - 22,051 USD = 77,313 USD. 4) Annual straight-line depreciation of ROU Asset = 99,364 USD / 4 = 24,841 USD. Option A is correct."
+    "explanation": "Initial Lease Liability and ROU Asset = 99,364. 1) Year 1 Interest Expense = Beginning Liability \\times 8% = 99,364 USD \\times 0.08 = 7,949. 2) Year 1 Lease Payment = 30,000. Principal repayment = 30,000 USD - 7,949 USD = 22,051. 3) Ending Lease Liability at 31 Dec Year 1 = 99,364 USD - 22,051 USD = 77,313. 4) Annual straight-line depreciation of ROU Asset = 99,364 USD / 4 = 24,841. Option A is correct."
   },
   {
     "id": "L1-Q161",
@@ -1085,14 +1085,14 @@
     "module": "m11-leases",
     "topic": "Leases",
     "los": "Explain lessor accounting for a finance lease (sales-type lease).",
-    "question": "An industrial equipment manufacturer leases a crane to a construction client under a finance lease (sales-type lease). The fair value of the crane is 500,000 USD, and its carrying manufacturing cost is 380,000 USD. At lease commencement, the manufacturer-lessor recognizes:",
+    "question": "An industrial equipment manufacturer leases a crane to a construction client under a finance lease (sales-type lease). The fair value of the crane is 500,000 USD, and its carrying manufacturing cost is 380,000. At lease commencement, the manufacturer-lessor recognizes:",
     "options": {
       "A": "Revenue of 500,000 USD, COGS of 380,000 USD, selling profit of 120,000 USD, and derecognizes the inventory asset.",
       "B": "No upfront profit; the 120,000 USD profit is deferred and amortized as interest income over the lease term.",
-      "C": "A right-of-use asset of 500,000 USD and a lease liability of 380,000 USD."
+      "C": "A right-of-use asset of 500,000 USD and a lease liability of 380,000. "
     },
     "answer": "A",
-    "explanation": "In a finance lease where the lessor is a manufacturer or dealer (sales-type lease): At commencement, the transaction is treated as a sale of goods. The lessor recognizes: 1) Revenue equal to the fair value (or present value of lease payments), here 500,000 USD. 2) Cost of goods sold equal to the carrying inventory cost, here 380,000 USD. 3) Selling profit equal to 500,000 USD - 380,000 USD = 120,000 USD. 4) The crane is derecognized from inventory and replaced by a lease receivable (net investment in the lease). Over the lease term, the lessor also earns interest income on the lease receivable. Option A is correct."
+    "explanation": "In a finance lease where the lessor is a manufacturer or dealer (sales-type lease): At commencement, the transaction is treated as a sale of goods. The lessor recognizes: 1) Revenue equal to the fair value (or present value of lease payments), here 500,000. 2) Cost of goods sold equal to the carrying inventory cost, here 380,000. 3) Selling profit equal to 500,000 USD - 380,000 USD = 120,000. 4) The crane is derecognized from inventory and replaced by a lease receivable (net investment in the lease). Over the lease term, the lessor also earns interest income on the lease receivable. Option A is correct."
   },
   {
     "id": "L1-Q164",

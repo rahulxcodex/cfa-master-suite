@@ -23,11 +23,11 @@
     "question": "A corporation issues 100,000 USD of long-term bonds at face value. It immediately uses 60,000 USD of the proceeds to purchase manufacturing machinery and retains the remaining 40,000 USD in cash. What is the net impact of these transactions on the fundamental accounting equation?",
     "options": {
       "A": "Total assets increase by 100,000 USD, liabilities increase by 100,000 USD, and equity remains unchanged.",
-      "B": "Total assets increase by 40,000 USD, liabilities increase by 100,000 USD, and equity decreases by 60,000 USD.",
-      "C": "Total assets increase by 160,000 USD, liabilities increase by 100,000 USD, and equity increases by 60,000 USD."
+      "B": "Total assets increase by 40,000 USD, liabilities increase by 100,000 USD, and equity decreases by 60,000. ",
+      "C": "Total assets increase by 160,000 USD, liabilities increase by 100,000 USD, and equity increases by 60,000. "
     },
     "answer": "A",
-    "explanation": "The fundamental accounting equation is:\n$$\\text{Assets} = \\text{Liabilities} + \\text{Equity}$ 1. Issuance of bonds: Cash (Asset) increases by 100,000 USD, and Bonds Payable (Liability) increases by 100,000 USD.\n2. Purchase of machinery: Machinery (Asset) increases by 60,000 USD, and Cash (Asset) decreases by 60,000 USD (net asset change for step 2 is 0 USD).\n\nNet combined result:\n- Total Assets change = $+40,000\\text{ USD (Cash)} + 60,000\\text{ USD (Machinery)} = +100,000\\text{ USD}$.\n- Liabilities change = $+100,000\\text{ USD (Bonds Payable)}$.\n- Equity change = 0 USD\\text{ USD}$.\n\nDistractor Analysis:\n- B is incorrect because purchasing an asset with cash does not reduce equity; it is an asset exchange.\n- C is incorrect because the cash outflow of 60,000 USD is ignored, incorrectly double counting the total asset inflow."
+    "explanation": "The fundamental accounting equation is:\n$$\\text{Assets} = \\text{Liabilities} + \\text{Equity}$$\n1. Issuance of bonds: Cash (Asset) increases by 100,000 USD, and Bonds Payable (Liability) increases by 100,000. 2. Purchase of machinery: Machinery (Asset) increases by 60,000 USD, and Cash (Asset) decreases by 60,000 USD (net asset change for step 2 is 0 USD).\n\nNet combined result:\n- Total Assets change = $+40,000\\text{ USD (Cash)} + 60,000\\text{ USD (Machinery)} = +100,000\\text{ USD}$. - Liabilities change = $+100,000\\text{ USD (Bonds Payable)}$.\n- Equity change = 0 USDUSD.\n\nDistractor Analysis:\n- B is incorrect because purchasing an asset with cash does not reduce equity; it is an asset exchange.\n- C is incorrect because the cash outflow of 60,000 USD is ignored, incorrectly double counting the total asset inflow."
   },
   {
     "id": "L1-Q003",
@@ -42,7 +42,7 @@
       "C": "Recognize 0 USD of revenue on the income statement until the contract is fully fulfilled on 31 October Year 2."
     },
     "answer": "B",
-    "explanation": "Under accrual accounting, revenue is recognized when performance obligations are satisfied over time. \n- The total contract duration is 12 months for 36,000 USD, or 36,000 USD/ 12 = 3,000\\text{ USD}$ per month.\n- For Year 1 (November and December = 2 months), revenue recognized is:\n2 USD\\times 3,000\\text{ USD} = 6,000\\text{ USD}$$\n- The remaining 10 months represents an obligation to perform services in Year 2 and is recorded as unearned (deferred) revenue liability:\n10 USD\\times 3,000\\text{ USD} = 30,000\\text{ USD}$$\n\nDistractor Analysis:\n- A represents cash-basis accounting, which violates the accrual principle by recognizing revenue before performance.\n- C is incorrect because performance occurs ratably over the subscription period; deferring all revenue until contract completion is only appropriate under completed-contract treatment where progress cannot be measured."
+    "explanation": "Under accrual accounting, revenue is recognized when performance obligations are satisfied over time. \n- The total contract duration is 12 months for 36,000 USD, or 36,000 USD/ 12 = 3,000USD per month.\n- For Year 1 (November and December = 2 months), revenue recognized is:\n2 USD\\times 3,000\\text{ USD} = 6,000USD\n- The remaining 10 months represents an obligation to perform services in Year 2 and is recorded as unearned (deferred) revenue liability:\n10 USD\\times 3,000\\text{ USD} = 30,000USD\n\nDistractor Analysis:\n- A represents cash-basis accounting, which violates the accrual principle by recognizing revenue before performance.\n- C is incorrect because performance occurs ratably over the subscription period; deferring all revenue until contract completion is only appropriate under completed-contract treatment where progress cannot be measured."
   },
   {
     "id": "L1-Q004",
@@ -57,7 +57,7 @@
       "C": "Assets are overstated, and liabilities are understated."
     },
     "answer": "A",
-    "explanation": "The proper year-end adjusting entry requires:\n- Debit: Interest Expense (15,000 USD)\n- Credit: Interest Payable (Liability) (15,000 USD)\n\nOmitting this entry results in:\n- Expenses being understated by 15,000 USD, which overstates Net Income by 15,000 USD (and consequently overstates ending Retained Earnings / Equity).\n- Interest Payable (Liabilities) being understated by 15,000 USD.\n- Assets are unaffected because cash has not yet been disbursed.\n\nDistractor Analysis:\n- B is incorrect because liabilities are understated (the obligation was omitted) and net income is overstated.\n- C is incorrect because assets are not affected by an unrecorded accrued expense."
+    "explanation": "The proper year-end adjusting entry requires:\n- Debit: Interest Expense (15,000 USD)\n- Credit: Interest Payable (Liability) (15,000 USD)\n\nOmitting this entry results in:\n- Expenses being understated by 15,000 USD, which overstates Net Income by 15,000 USD (and consequently overstates ending Retained Earnings / Equity).\n- Interest Payable (Liabilities) being understated by 15,000. - Assets are unaffected because cash has not yet been disbursed.\n\nDistractor Analysis:\n- B is incorrect because liabilities are understated (the obligation was omitted) and net income is overstated.\n- C is incorrect because assets are not affected by an unrecorded accrued expense."
   },
   {
     "id": "L1-Q005",
@@ -67,12 +67,12 @@
     "los": "LOS 20.b: Describe the accounting equation and the process of recording business transactions.",
     "question": "On 1 October Year 1, Apex Corp. paid 24,000 USD cash for a two-year commercial property insurance policy effective immediately. What amounts should Apex report as insurance expense on its income statement for the year ended 31 December Year 1 and as prepaid insurance on its balance sheet as of 31 December Year 1?",
     "options": {
-      "A": "Insurance Expense: 3,000 USD; Prepaid Insurance: 21,000 USD.",
-      "B": "Insurance Expense: 6,000 USD; Prepaid Insurance: 18,000 USD.",
-      "C": "Insurance Expense: 12,000 USD; Prepaid Insurance: 12,000 USD."
+      "A": "Insurance Expense: 3,000 USD; Prepaid Insurance: 21,000. ",
+      "B": "Insurance Expense: 6,000 USD; Prepaid Insurance: 18,000. ",
+      "C": "Insurance Expense: 12,000 USD; Prepaid Insurance: 12,000. "
     },
     "answer": "A",
-    "explanation": "The policy duration is 24 months for 24,000 USD, which equals 1,000 USD\\text{ USD}$ per month.\n- From 1 October to 31 December Year 1, 3 months have expired:\n$$\\text{Insurance Expense} = 3 \\times 1,000\\text{ USD} = 3,000\\text{ USD}$$\n- The unexpired coverage as of 31 December Year 1 is 21 months:\n$$\\text{Prepaid Insurance (Asset)} = 21 \\times 1,000\\text{ USD} = 21,000\\text{ USD}$$\n\nDistractor Analysis:\n- B incorrectly assumes a 1-year policy expiring after 6 months or 3 months of a 1-year policy.\n- C incorrectly amortizes 1 full year of expense (12 months) instead of the 3 months that actually elapsed."
+    "explanation": "The policy duration is 24 months for 24,000 USD, which equals 1,000 USDUSD per month.\n- From 1 October to 31 December Year 1, 3 months have expired:\n$$\\text{Insurance Expense} = 3 \\times 1,000\\text{ USD} = 3,000USD\n- The unexpired coverage as of 31 December Year 1 is 21 months:\n$$\\text{Prepaid Insurance (Asset)} = 21 \\times 1,000\\text{ USD} = 21,000USD\n\nDistractor Analysis:\n- B incorrectly assumes a 1-year policy expiring after 6 months or 3 months of a 1-year policy.\n- C incorrectly amortizes 1 full year of expense (12 months) instead of the 3 months that actually elapsed."
   },
   {
     "id": "L1-Q006",
@@ -80,14 +80,14 @@
     "module": "m1-intro",
     "topic": "Introduction to Financial Statement Analysis",
     "los": "LOS 19.b: Describe the roles of the key financial statements and how they are interrelated.",
-    "question": "During Year 2, a company reported beginning retained earnings of 450,000 USD, ending retained earnings of 580,000 USD, and declared total dividends of 70,000 USD. What was the company's net income for Year 2?",
+    "question": "During Year 2, a company reported beginning retained earnings of 450,000 USD, ending retained earnings of 580,000 USD, and declared total dividends of 70,000. What was the company's net income for Year 2?",
     "options": {
       "A": "60,000 USD",
       "B": "130,000 USD",
       "C": "200,000 USD"
     },
     "answer": "C",
-    "explanation": "The statement of changes in retained earnings links the income statement to the balance sheet via the formula:\n$$\\text{Ending Retained Earnings} = \\text{Beginning Retained Earnings} + \\text{Net Income} - \\text{Dividends Declared}$$\nRearranging to solve for Net Income:\n$$\\text{Net Income} = \\text{Ending Retained Earnings} - \\text{Beginning Retained Earnings} + \\text{Dividends Declared}$$\n$$\\text{Net Income} = 580,000\\text{ USD} - 450,000\\text{ USD} + 70,000\\text{ USD} = 130,000\\text{ USD} + 70,000\\text{ USD} = 200,000\\text{ USD}$$\n\nDistractor Analysis:\n- A subtracts dividends from the change in retained earnings (130,000 USD- 70,000 = 60,000\\text{ USD}$), which incorrectly treats dividends as adding to retained earnings.\n- B equals the net change in retained earnings (580,000 USD- 450,000 = 130,000\\text{ USD}$), neglecting dividends declared."
+    "explanation": "The statement of changes in retained earnings links the income statement to the balance sheet via the formula:\n$$\\text{Ending Retained Earnings} = \\text{Beginning Retained Earnings} + \\text{Net Income} - \\text{Dividends Declared}$$\nRearranging to solve for Net Income:\n$$\\text{Net Income} = \\text{Ending Retained Earnings} - \\text{Beginning Retained Earnings} + \\text{Dividends Declared}$$\n$$\\text{Net Income} = 580,000\\text{ USD} - 450,000\\text{ USD} + 70,000\\text{ USD} = 130,000\\text{ USD} + 70,000\\text{ USD} = 200,000\\text{ USD}$$\n\nDistractor Analysis:\n- A subtracts dividends from the change in retained earnings (130,000 USD- 70,000 = 60,000USD), which incorrectly treats dividends as adding to retained earnings.\n- B equals the net change in retained earnings (580,000 USD- 450,000 = 130,000USD), neglecting dividends declared."
   },
   {
     "id": "L1-Q007",
@@ -170,14 +170,14 @@
     "module": "m1-intro",
     "topic": "Introduction to Financial Statement Analysis",
     "los": "LOS 20.b: Describe the accounting equation and the process of recording business transactions.",
-    "question": "A merchant sells merchandise inventory that originally cost 50,000 USD to a customer on credit for 85,000 USD. What is the immediate net impact on the merchant's total assets and shareholders' equity?",
+    "question": "A merchant sells merchandise inventory that originally cost 50,000 USD to a customer on credit for 85,000. What is the immediate net impact on the merchant's total assets and shareholders' equity?",
     "options": {
-      "A": "Total assets increase by 35,000 USD; Shareholders' equity increases by 35,000 USD.",
-      "B": "Total assets increase by 85,000 USD; Shareholders' equity increases by 85,000 USD.",
+      "A": "Total assets increase by 35,000 USD; Shareholders' equity increases by 35,000. ",
+      "B": "Total assets increase by 85,000 USD; Shareholders' equity increases by 85,000. ",
       "C": "Total assets increase by 35,000 USD; Shareholders' equity remains unchanged."
     },
     "answer": "A",
-    "explanation": "This transaction involves two simultaneous entries:\n1. Revenue recognition: Accounts Receivable increases by 85,000 USD; Revenue increases by 85,000 USD (increasing Equity via Net Income).\n2. Expense recognition: Inventory decreases by 50,000 USD; Cost of Goods Sold increases by 50,000 USD (reducing Equity via Net Income).\n\nNet effects:\n- Assets: $+85,000\\text{ USD (AR)} - 50,000\\text{ USD (Inventory)} = +35,000\\text{ USD}$.\n- Equity: $+85,000\\text{ USD (Revenue)} - 50,000\\text{ USD (COGS)} = +35,000\\text{ USD}$.\n\nDistractor Analysis:\n- B records the revenue side while ignoring the cost of inventory derecognition.\n- C recognizes the asset change but fails to reflect the gross profit of 35,000 USD flowing to retained earnings."
+    "explanation": "This transaction involves two simultaneous entries:\n1. Revenue recognition: Accounts Receivable increases by 85,000 USD; Revenue increases by 85,000 USD (increasing Equity via Net Income).\n2. Expense recognition: Inventory decreases by 50,000 USD; Cost of Goods Sold increases by 50,000 USD (reducing Equity via Net Income).\n\nNet effects:\n- Assets: $+85,000\\text{ USD (AR)} - 50,000\\text{ USD (Inventory)} = +35,000. - Equity: $+85,000\\text{ USD (Revenue)} - 50,000\\text{ USD (COGS)} = +35,000. Distractor Analysis:\n- B records the revenue side while ignoring the cost of inventory derecognition.\n- C recognizes the asset change but fails to reflect the gross profit of 35,000 USD flowing to retained earnings."
   },
   {
     "id": "L1-Q013",
@@ -192,7 +192,7 @@
       "C": "160,000 USD"
     },
     "answer": "B",
-    "explanation": "Using the expanded accounting equation:\n$$\\Delta\\text{Assets} = \\Delta\\text{Liabilities} + \\Delta\\text{Equity}$$\nGiven $\\Delta\\text{Assets} = +120,000\\text{ USD}$ and $\\Delta\\text{Liabilities} = -40,000\\text{ USD}$:\n$$+120,000\\text{ USD} = -40,000\\text{ USD} + \\Delta\\text{Equity} \\implies \\Delta\\text{Equity} = 160,000\\text{ USD}$$\nEquity changes via capital contributions, dividends, and net income:\n$$\\Delta\\text{Equity} = \\text{Stock Issued} - \\text{Dividends Paid} + \\text{Net Income}$$\n160,000 USD\\text{ USD} = 50,000\\text{ USD} - 30,000\\text{ USD} + \\text{Net Income}$$\n160,000 USD\\text{ USD} = 20,000\\text{ USD} + \\text{Net Income} \\implies \\text{Net Income} = 140,000\\text{ USD}$$\n\nDistractor Analysis:\n- A incorrectly calculates $\\Delta\\text{Equity} = 120,000 - 40,000 = 80,000\\text{ USD}$, leading to 80,000 USD- 20,000 = 60,000\\text{ USD}$ or similar missteps.\n- C represents the total change in equity (160,000 USD\\text{ USD}$) without subtracting net capital contributions (50,000 USD- 30,000 = 20,000\\text{ USD}$)."
+    "explanation": "Using the expanded accounting equation:\n$$\\Delta\\text{Assets} = \\Delta\\text{Liabilities} + \\Delta\\text{Equity}$$\nGiven $\\Delta\\text{Assets} = +120,000USD and $\\Delta\\text{Liabilities} = -40,000USD:\n$$+120,000\\text{ USD} = -40,000\\text{ USD} + \\Delta\\text{Equity} \\implies \\Delta\\text{Equity} = 160,000USD\nEquity changes via capital contributions, dividends, and net income:\n$$\\Delta\\text{Equity} = \\text{Stock Issued} - \\text{Dividends Paid} + \\text{Net Income}$$\n160,000 USD\\text{ USD} = 50,000\\text{ USD} - 30,000\\text{ USD} + \\text{Net Income}$$\n160,000 USD\\text{ USD} = 20,000\\text{ USD} + \\text{Net Income} \\implies \\text{Net Income} = 140,000USD\n\nDistractor Analysis:\n- A incorrectly calculates $\\Delta\\text{Equity} = 120,000 - 40,000 = 80,000\\text{ USD}$, leading to 80,000 USD - 20,000 = 60,000 USD or similar missteps.\n- C represents the total change in equity (160,000 USDUSD) without subtracting net capital contributions (50,000 USD- 30,000 = 20,000USD)."
   },
   {
     "id": "L1-Q014",
@@ -202,12 +202,12 @@
     "los": "LOS 20.c: Describe accrual accounting and the need for accruals and other adjustments.",
     "question": "A consulting company provides 75,000 USD of services to a client in December Year 1. The client will not be billed until January Year 2, and payment is expected in February Year 2. If the consulting company correctly applies accrual accounting, what adjusting entry is required on 31 December Year 1?",
     "options": {
-      "A": "Debit Cash 75,000 USD, Credit Service Revenue 75,000 USD.",
-      "B": "Debit Unbilled Receivables (Accrued Asset) 75,000 USD, Credit Service Revenue 75,000 USD.",
+      "A": "Debit Cash 75,000 USD, Credit Service Revenue 75,000. ",
+      "B": "Debit Unbilled Receivables (Accrued Asset) 75,000 USD, Credit Service Revenue 75,000. ",
       "C": "No entry is required until an official invoice is generated in January Year 2."
     },
     "answer": "B",
-    "explanation": "Because the service obligation was performed in December Year 1, revenue must be recognized in Year 1 to satisfy accrual accounting principles, even though no invoice has been sent.\n- Debit: Accrued (Unbilled) Receivables (an asset account) for 75,000 USD.\n- Credit: Service Revenue (an income statement account) for 75,000 USD.\n\nDistractor Analysis:\n- A is incorrect because no cash was received in December.\n- C is incorrect because waiting for billing violates accrual accounting and understates revenue and assets for Year 1."
+    "explanation": "Because the service obligation was performed in December Year 1, revenue must be recognized in Year 1 to satisfy accrual accounting principles, even though no invoice has been sent.\n- Debit: Accrued (Unbilled) Receivables (an asset account) for 75,000. - Credit: Service Revenue (an income statement account) for 75,000. Distractor Analysis:\n- A is incorrect because no cash was received in December.\n- C is incorrect because waiting for billing violates accrual accounting and understates revenue and assets for Year 1."
   },
   {
     "id": "L1-Q015",
@@ -470,14 +470,14 @@
     "module": "m3-income-statement",
     "topic": "Understanding Income Statements",
     "los": "LOS 22.b: Calculate revenue and gross profit under the percentage-of-completion (over time) method.",
-    "question": "A construction company enters into a fixed-price contract to build a commercial bridge for 12,000,000 USD. Total estimated construction costs are 9,000,000 USD. In Year 1, the company incurs 2,700,000 USD in construction costs and bills the client 3,500,000 USD, receiving 3,000,000 USD in cash. Using the percentage-of-completion input method (cost-to-cost), how much revenue and gross profit should the company recognize in Year 1?",
+    "question": "A construction company enters into a fixed-price contract to build a commercial bridge for 12,000,000. Total estimated construction costs are 9,000,000. In Year 1, the company incurs 2,700,000 USD in construction costs and bills the client 3,500,000 USD, receiving 3,000,000 USD in cash. Using the percentage-of-completion input method (cost-to-cost), how much revenue and gross profit should the company recognize in Year 1?",
     "options": {
-      "A": "Revenue: 3,600,000 USD; Gross Profit: 900,000 USD.",
-      "B": "Revenue: 3,500,000 USD; Gross Profit: 800,000 USD.",
-      "C": "Revenue: 3,000,000 USD; Gross Profit: 300,000 USD."
+      "A": "Revenue: 3,600,000 USD; Gross Profit: 900,000. ",
+      "B": "Revenue: 3,500,000 USD; Gross Profit: 800,000. ",
+      "C": "Revenue: 3,000,000 USD; Gross Profit: 300,000. "
     },
     "answer": "A",
-    "explanation": "Under the cost-to-cost input method, progress toward completion is measured as:\n$$\\text{Percentage of Completion} = \\frac{\\text{Cumulative Costs Incurred}}{\\text{Total Estimated Costs}} = \\frac{2,700,000\\text{ USD}}{9,000,000\\text{ USD}} = 30\\%$ 1. Revenue Recognized Year 1:\n$$\\text{Revenue} = 30\\% \\times 12,000,000\\text{ USD} = 3,600,000\\text{ USD}$ 2. Cost of Construction Recognized Year 1:\n$$\\text{Costs} = 2,700,000\\text{ USD}$ 3. Gross Profit Recognized Year 1:\n$$\\text{Gross Profit} = 3,600,000\\text{ USD} - 2,700,000\\text{ USD} = 900,000\\text{ USD}$$\nEquivalently, total expected profit is 12,000,000 USD- 9,000,000 = 3,000,000\\text{ USD}$, and 30 USD\\% \\times 3,000,000 = 900,000\\text{ USD}$.\nNote: Amounts billed (3,500,000 USD) and cash collected (3,000,000 USD) affect balance sheet accounts (accounts receivable and contract asset/liability) but do not dictate revenue recognition.\n\nDistractor Analysis:\n- B incorrectly uses the billed amount as revenue (3,500,000 USD- 2,700,000 = 800,000\\text{ USD}$).\n- C incorrectly uses the cash collected as revenue (3,000,000 USD- 2,700,000 = 300,000\\text{ USD}$)."
+    "explanation": "Under the cost-to-cost input method, progress toward completion is measured as:\n$$\\text{Percentage of Completion} = \\frac{\\text{Cumulative Costs Incurred}}{\\text{Total Estimated Costs}} = \\frac{2,700,000\\text{ USD}}{9,000,000\\text{ USD}} = 30\\%$$\n1. Revenue Recognized Year 1:\n$$\\text{Revenue} = 30\\% \\times 12,000,000\\text{ USD} = 3,600,000\\text{ USD}$$\n2. Cost of Construction Recognized Year 1:\n$$\\text{Costs} = 2,700,000\\text{ USD}$$\n3. Gross Profit Recognized Year 1:\n$$\\text{Gross Profit} = 3,600,000\\text{ USD} - 2,700,000\\text{ USD} = 900,000\\text{ USD}$$\nEquivalently, total expected profit is 12,000,000 USD- 9,000,000 = 3,000,000USD, and 30 USD\\% \\times 3,000,000 = 900,000. Note: Amounts billed (3,500,000 USD) and cash collected (3,000,000 USD) affect balance sheet accounts (accounts receivable and contract asset/liability) but do not dictate revenue recognition.\n\nDistractor Analysis:\n- B incorrectly uses the billed amount as revenue (3,500,000 USD- 2,700,000 = 800,000USD).\n- C incorrectly uses the cash collected as revenue (3,000,000 USD- 2,700,000 = 300,000USD)."
   },
   {
     "id": "L1-Q033",
@@ -530,14 +530,14 @@
     "module": "m3-income-statement",
     "topic": "Understanding Income Statements",
     "los": "LOS 22.e: Describe the financial reporting treatment and analysis of non-recurring items.",
-    "question": "In Year 2, a diversified conglomerate votes to dispose of its retail textile division, which represents a separate major line of business. The division incurred an operating loss of 4,000,000 USD during Year 2 and was sold at a pre-tax loss of 2,000,000 USD. If the applicable corporate income tax rate is 25%, how should these events be presented on the Year 2 income statement?",
+    "question": "In Year 2, a diversified conglomerate votes to dispose of its retail textile division, which represents a separate major line of business. The division incurred an operating loss of 4,000,000 USD during Year 2 and was sold at a pre-tax loss of 2,000,000. If the applicable corporate income tax rate is 25%, how should these events be presented on the Year 2 income statement?",
     "options": {
       "A": "Included in operating expenses within continuing operations as a 6,000,000 USD pre-tax charge.",
-      "B": "Reported separately below income from continuing operations as discontinued operations, net of tax at 4,500,000 USD.",
+      "B": "Reported separately below income from continuing operations as discontinued operations, net of tax at 4,500,000. ",
       "C": "Reported directly as a 4,500,000 USD deduction in other comprehensive income (OCI)."
     },
     "answer": "B",
-    "explanation": "A component of an entity that is disposed of and represents a separate major line of business or geographical area of operations qualifies for discontinued operations treatment. Discontinued operations are reported separately below income from continuing operations on a net-of-tax basis.\n- Total pre-tax loss = 4,000,000 USD\\text{ USD (operating loss)} + 2,000,000\\text{ USD (loss on sale)} = 6,000,000\\text{ USD}$.\n- Tax benefit = 25 USD\\% \\times 6,000,000\\text{ USD} = 1,500,000\\text{ USD}$.\n- Loss from discontinued operations (net of tax) = 6,000,000 USD\\text{ USD} \\times (1 - 0.25) = 4,500,000\\text{ USD}$.\n\nDistractor Analysis:\n- A is incorrect because discontinued operations must be segregated below income from continuing operations.\n- C is incorrect because discontinued operations flow through net income, not OCI."
+    "explanation": "A component of an entity that is disposed of and represents a separate major line of business or geographical area of operations qualifies for discontinued operations treatment. Discontinued operations are reported separately below income from continuing operations on a net-of-tax basis.\n- Total pre-tax loss = 4,000,000 USD\\text{ USD (operating loss)} + 2,000,000\\text{ USD (loss on sale)} = 6,000,000. - Tax benefit = 25 USD\\% \\times 6,000,000\\text{ USD} = 1,500,000. - Loss from discontinued operations (net of tax) = 6,000,000 USD\\text{ USD} \\times (1 - 0.25) = 4,500,000. Distractor Analysis:\n- A is incorrect because discontinued operations must be segregated below income from continuing operations.\n- C is incorrect because discontinued operations flow through net income, not OCI."
   },
   {
     "id": "L1-Q037",
@@ -567,7 +567,7 @@
       "C": "2.83 USD"
     },
     "answer": "A",
-    "explanation": "1. Preferred Dividends:\nBecause the preferred stock is cumulative, the preferred dividend must be subtracted from net income regardless of whether it was declared:\n$$\\text{Preferred Dividends} = 100,000\\text{ shares} \\times 100\\text{ USD} \\times 8\\% = 800,000\\text{ USD}$$\n$$\\text{Income Available to Common} = 7,500,000\\text{ USD} - 800,000\\text{ USD} = 6,700,000\\text{ USD}$ 2. Weighted Average Number of Common Shares (WANCS):\n- Jan 1 to May 1 (4 months): 2,000,000 USD\\times (4/12) = 666,667$\n- May 1 to Sept 1 (4 months): $(2,000,000 + 600,000) \\times (4/12) = 2,600,000 \\times (4/12) = 866,667$\n- Sept 1 to Dec 31 (4 months): $(2,600,000 - 300,000) \\times (4/12) = 2,300,000 \\times (4/12) = 766,667$\n$$\\text{WANCS} = 2,000,000 + 600,000 \\times \\left(\\frac{8}{12}\\right) - 300,000 \\times \\left(\\frac{4}{12}\\right) = 2,000,000 + 400,000 - 100,000 = 2,300,000\\text{ shares}$ 3. Basic EPS:\n$$\\text{Basic EPS} = \\frac{6,700,000\\text{ USD}}{2,300,000\\text{ shares}} = 2.913\\text{ USD} \\approx 2.91\\text{ USD}$$\n\nDistractor Analysis:\n- B fails to deduct cumulative preferred dividends: 7,500,000 USD/ 2,300,000 = 3.26\\text{ USD}$.\n- C uses end-of-year shares (2,300,000 USD$) or unweighted averages incorrectly."
+    "explanation": "1. Preferred Dividends:\nBecause the preferred stock is cumulative, the preferred dividend must be subtracted from net income regardless of whether it was declared:\n$$\\text{Preferred Dividends} = 100,000\\text{ shares} \\times 100\\text{ USD} \\times 8\\% = 800,000USD\n$$\\text{Income Available to Common} = 7,500,000\\text{ USD} - 800,000\\text{ USD} = 6,700,000USD\n2. Weighted Average Number of Common Shares (WANCS):\n- Jan 1 to May 1 (4 months): 2,000,000 USD\\times (4/12) = 666,667\n- May 1 to Sept 1 (4 months): $(2,000,000 + 600,000) \\times (4/12) = 2,600,000 \\times (4/12) = 866,667$\n- Sept 1 to Dec 31 (4 months): $(2,600,000 - 300,000) \\times (4/12) = 2,300,000 \\times (4/12) = 766,667$\n$$\\text{WANCS} = 2,000,000 + 600,000 \\times \\left(\\frac{8}{12}\\right) - 300,000 \\times \\left(\\frac{4}{12}\\right) = 2,000,000 + 400,000 - 100,000 = 2,300,000shares\n3. Basic EPS:\n$$\\text{Basic EPS} = \\frac{6,700,000\\text{ USD}}{2,300,000\\text{ shares}} = 2.913\\text{ USD} \\approx 2.91USD\n\nDistractor Analysis:\n- B fails to deduct cumulative preferred dividends: 7,500,000 USD/ 2,300,000 = 3.26. - C uses end-of-year shares (2,300,000 USD) or unweighted averages incorrectly."
   },
   {
     "id": "L1-Q039",
@@ -582,7 +582,7 @@
       "C": "1,480,000 shares"
     },
     "answer": "B",
-    "explanation": "Stock dividends and stock splits are treated as having occurred at the beginning of the earliest period presented. Therefore, all shares outstanding prior to the stock dividend must be multiplied by the factor $(1 + 0.20) = 1.20$:\n1. 1 Jan shares: 1,000,000 USD\\times 1.20 \\times (12/12) = 1,200,0002 USD. 1 Apr issuance: 200,000 USD\\times 1.20 \\times (9/12) = 180,0003 USD. 1 Oct issuance (after the stock dividend, so NOT adjusted): 100,000 USD\\times (3/12) = 25,000$\n\nSum of weighted shares:\n$$\\text{WANCS} = 1,200,000 + 180,000 + 25,000 = 1,405,000\\text{ shares}$$\n\nDistractor Analysis:\n- A fails to adjust the 1 April share issuance for the 20% stock dividend: 1,000,000 USD\\times 1.20 + 200,000 \\times (9/12) + 100,000 \\times (3/12) = 1,200,000 + 150,000 + 25,000 = 1,375,000$ or applies 1.20 without weighting.\n- C incorrectly applies the 1.20 stock dividend factor to the 1 October issuance as well: 1,405,000 USD+ 5,000 = 1,410,000$ or other calculation errors."
+    "explanation": "Stock dividends and stock splits are treated as having occurred at the beginning of the earliest period presented. Therefore, all shares outstanding prior to the stock dividend must be multiplied by the factor $(1 + 0.20) = 1.20$:\n1. 1 Jan shares: 1,000,000 USD\\times 1.20 \\times (12/12) = 1,200,0002. 1 Apr issuance: 200,000 USD\\times 1.20 \\times (9/12) = 180,0003. 1 Oct issuance (after the stock dividend, so NOT adjusted): 100,000 USD\\times (3/12) = 25,000\n\nSum of weighted shares:\n$$\\text{WANCS} = 1,200,000 + 180,000 + 25,000 = 1,405,000\\text{ shares}$$\n\nDistractor Analysis:\n- A fails to adjust the 1 April share issuance for the 20% stock dividend: 1,000,000 USD\\times 1.20 + 200,000 \\times (9/12) + 100,000 \\times (3/12) = 1,200,000 + 150,000 + 25,000 = 1,375,000 or applies 1.20 without weighting.\n- C incorrectly applies the 1.20 stock dividend factor to the 1 October issuance as well: 1,405,000 USD + 5,000 = 1,410,000 or other calculation errors."
   },
   {
     "id": "L1-Q040",
@@ -590,14 +590,14 @@
     "module": "m3-income-statement",
     "topic": "Understanding Income Statements",
     "los": "LOS 22.f: Calculate and interpret basic and diluted earnings per share.",
-    "question": "A firm has net income of 2,400,000 USD and 800,000 weighted average common shares outstanding. It has 100,000 stock options outstanding throughout the year with an exercise price of 30 USD. The average market price of the common shares during the year was 50 USD. Under the treasury stock method, what is the firm's diluted EPS?",
+    "question": "A firm has net income of 2,400,000 USD and 800,000 weighted average common shares outstanding. It has 100,000 stock options outstanding throughout the year with an exercise price of 30. The average market price of the common shares during the year was 50. Under the treasury stock method, what is the firm's diluted EPS?",
     "options": {
       "A": "2.67 USD",
       "B": "2.86 USD",
       "C": "3.00 USD"
     },
     "answer": "B",
-    "explanation": "Under the treasury stock method:\n1. Proceeds from option exercise:\n$$\\text{Proceeds} = 100,000 \\times 30\\text{ USD} = 3,000,000\\text{ USD}$ 2. Shares repurchased at average market price:\n$$\\text{Shares repurchased} = \\frac{3,000,000\\text{ USD}}{50\\text{ USD}} = 60,000\\text{ shares}$ 3. Net incremental shares issued:\n$$\\Delta\\text{Shares} = 100,000 - 60,000 = 40,000\\text{ shares}$$\nAlternatively:\n$$\\Delta\\text{Shares} = 100,000 \\times \\left(1 - \\frac{30}{50}\\right) = 40,000\\text{ shares}$ 4. Diluted EPS:\n$$\\text{Diluted WANCS} = 800,000 + 40,000 = 840,000\\text{ shares}$$\n$$\\text{Diluted EPS} = \\frac{2,400,000\\text{ USD}}{840,000\\text{ shares}} = 2.857\\text{ USD} \\approx 2.86\\text{ USD}$$\n(Basic EPS was 2,400,000 USD/ 800,000 = 3.00\\text{ USD}$; since 2.86 USD< 3.00$, the options are dilutive).\n\nDistractor Analysis:\n- A adds the entire 100,000 shares without assuming treasury stock buyback: 2,400,000 USD/ 900,000 = 2.67\\text{ USD}$.\n- C equals Basic EPS, ignoring the dilutive effect of in-the-money options."
+    "explanation": "Under the treasury stock method:\n1. Proceeds from option exercise:\n$$\\text{Proceeds} = 100,000 \\times 30\\text{ USD} = 3,000,000USD\n2. Shares repurchased at average market price:\n$$\\text{Shares repurchased} = \\frac{3,000,000\\text{ USD}}{50\\text{ USD}} = 60,000shares\n3. Net incremental shares issued:\n$$\\Delta\\text{Shares} = 100,000 - 60,000 = 40,000shares\nAlternatively:\n$$\\Delta\\text{Shares} = 100,000 \\times \\left(1 - \\frac{30}{50}\\right) = 40,000shares\n4. Diluted EPS:\n$$\\text{Diluted WANCS} = 800,000 + 40,000 = 840,000shares\n$$\\text{Diluted EPS} = \\frac{2,400,000\\text{ USD}}{840,000\\text{ shares}} = 2.857\\text{ USD} \\approx 2.86USD\n(Basic EPS was 2,400,000 USD/ 800,000 = 3.00USD; since 2.86 USD < 3.00 USD, the options are dilutive).\n\nDistractor Analysis:\n- A adds the entire 100,000 shares without assuming treasury stock buyback: 2,400,000 USD/ 900,000 = 2.67. - C equals Basic EPS, ignoring the dilutive effect of in-the-money options."
   },
   {
     "id": "L1-Q041",
@@ -612,7 +612,7 @@
       "C": "4.00 USD"
     },
     "answer": "A",
-    "explanation": "1. Preferred Dividend:\n$$\\text{Preferred Dividends} = 50,000 \\times 100\\text{ USD} \\times 6\\% = 300,000\\text{ USD}$ 2. Basic EPS:\n$$\\text{Basic EPS} = \\frac{4,000,000\\text{ USD} - 300,000\\text{ USD}}{1,000,000\\text{ shares}} = \\frac{3,700,000\\text{ USD}}{1,000,000} = 3.70\\text{ USD}$ 3. If-Converted Method for Diluted EPS:\n- Assume conversion at the beginning of the year.\n- Preferred dividends are avoided: add back 300,000 USD to numerator.\n- New common shares issued = 50,000 USD\\times 4 = 200,000\\text{ shares}$.\n$$\\text{Diluted EPS} = \\frac{3,700,000\\text{ USD} + 300,000\\text{ USD}}{1,000,000 + 200,000\\text{ shares}} = \\frac{4,000,000\\text{ USD}}{1,200,000\\text{ shares}} = 3.333\\text{ USD} \\approx 3.33\\text{ USD}$$\nSince 3.33 USD\\text{ USD} < 3.70\\text{ USD}$, the preferred shares are dilutive.\n\nDistractor Analysis:\n- B equals Basic EPS (3.70 USD).\n- C incorrectly keeps 4,000,000 USD numerator but divides by 1,000,000 shares."
+    "explanation": "1. Preferred Dividend:\n$$\\text{Preferred Dividends} = 50,000 \\times 100\\text{ USD} \\times 6\\% = 300,000\\text{ USD}$$\n2. Basic EPS:\n$$\\text{Basic EPS} = \\frac{4,000,000\\text{ USD} - 300,000\\text{ USD}}{1,000,000\\text{ shares}} = \\frac{3,700,000\\text{ USD}}{1,000,000} = 3.70\\text{ USD}$$\n3. If-Converted Method for Diluted EPS:\n- Assume conversion at the beginning of the year.\n- Preferred dividends are avoided: add back 300,000 USD to numerator.\n- New common shares issued = 50,000 USD\\times 4 = 200,000shares.\n$$\\text{Diluted EPS} = \\frac{3,700,000\\text{ USD} + 300,000\\text{ USD}}{1,000,000 + 200,000\\text{ shares}} = \\frac{4,000,000\\text{ USD}}{1,200,000\\text{ shares}} = 3.333\\text{ USD} \\approx 3.33\\text{ USD}$$\nSince 3.33 USD\\text{ USD} < 3.70USD, the preferred shares are dilutive.\n\nDistractor Analysis:\n- B equals Basic EPS (3.70 USD).\n- C incorrectly keeps 4,000,000 USD numerator but divides by 1,000,000 shares."
   },
   {
     "id": "L1-Q042",
@@ -627,7 +627,7 @@
       "C": "2.50 USD"
     },
     "answer": "A",
-    "explanation": "1. Basic EPS:\n$$\\text{Basic EPS} = \\frac{5,000,000\\text{ USD}}{2,000,000\\text{ shares}} = 2.50\\text{ USD}$ 2. If-Converted Method for Convertible Bonds:\n- Annual interest on bonds = 10,000,000 USD\\text{ USD} \\times 7\\% = 700,000\\text{ USD}$.\n- After-tax interest saved = 700,000 USD\\text{ USD} \\times (1 - 0.30) = 490,000\\text{ USD}$.\n- Number of bonds = 10,000,000 USD/ 1,000 = 10,000\\text{ bonds}$.\n- Incremental common shares = 10,000 USD\\times 40 = 400,000\\text{ shares}$.\n3. Diluted EPS Calculation:\n$$\\text{Diluted EPS} = \\frac{5,000,000\\text{ USD} + 490,000\\text{ USD}}{2,000,000 + 400,000\\text{ shares}} = \\frac{5,490,000\\text{ USD}}{2,400,000\\text{ shares}} = 2.2875\\text{ USD} \\approx 2.29\\text{ USD}$$\nSince 2.29 USD\\text{ USD} < 2.50\\text{ USD}$, the convertible bonds are dilutive.\n\nDistractor Analysis:\n- B fails to adjust interest for tax savings: $(5,000,000 + 700,000) / 2,400,000 = 5,700,000 / 2,400,000 = 2.375\\text{ USD}$.\n- C is Basic EPS (2.50 USD)."
+    "explanation": "1. Basic EPS:\n$$\\text{Basic EPS} = \\frac{5,000,000\\text{ USD}}{2,000,000\\text{ shares}} = 2.50USD\n2. If-Converted Method for Convertible Bonds:\n- Annual interest on bonds = 10,000,000 USD\\text{ USD} \\times 7\\% = 700,000. - After-tax interest saved = 700,000 USD\\text{ USD} \\times (1 - 0.30) = 490,000. - Number of bonds = 10,000,000 USD/ 1,000 = 10,000bonds.\n- Incremental common shares = 10,000 USD\\times 40 = 400,000shares.\n3. Diluted EPS Calculation:\n$$\\text{Diluted EPS} = \\frac{5,000,000\\text{ USD} + 490,000\\text{ USD}}{2,000,000 + 400,000\\text{ shares}} = \\frac{5,490,000\\text{ USD}}{2,400,000\\text{ shares}} = 2.2875\\text{ USD} \\approx 2.29USD\nSince 2.29 USD\\text{ USD} < 2.50USD, the convertible bonds are dilutive.\n\nDistractor Analysis:\n- B fails to adjust interest for tax savings: $(5,000,000 + 700,000) / 2,400,000 = 5,700,000 / 2,400,000 = 2.375$. - C is Basic EPS (2.50 USD)."
   },
   {
     "id": "L1-Q043",
@@ -635,14 +635,14 @@
     "module": "m3-income-statement",
     "topic": "Understanding Income Statements",
     "los": "LOS 22.f: Calculate and interpret basic and diluted earnings per share.",
-    "question": "A firm has basic EPS of 1.50 USD based on 1,000,000 common shares and net income of 1,500,000 USD. It has 2,000,000 USD of 10% convertible debt (convertible into 100,000 common shares). The tax rate is 20%. If converted, the per-share effect of the convertible debt is 1.60 USD. What is the diluted EPS reported by the company?",
+    "question": "A firm has basic EPS of 1.50 USD based on 1,000,000 common shares and net income of 1,500,000. It has 2,000,000 USD of 10% convertible debt (convertible into 100,000 common shares). The tax rate is 20%. If converted, the per-share effect of the convertible debt is 1.60. What is the diluted EPS reported by the company?",
     "options": {
       "A": "1.50 USD",
       "B": "1.51 USD",
       "C": "1.60 USD"
     },
     "answer": "A",
-    "explanation": "To determine whether a security is included in diluted EPS, we evaluate its per-share effect:\n- Interest saved net of tax = 2,000,000 USD\\times 10\\% \\times (1 - 0.20) = 160,000\\text{ USD}$.\n- Incremental shares = 100,000.\n- Per-share effect = 160,000 USD\\text{ USD} / 100,000\\text{ shares} = 1.60\\text{ USD}$.\nBecause the per-share effect (1.60 USD\\text{ USD}$) exceeds Basic EPS (1.50 USD\\text{ USD}$), the convertible debt is antidilutive. Including it would increase EPS to $(1,500,000 + 160,000) / (1,000,000 + 100,000) = 1,660,000 / 1,100,000 = 1.509\\text{ USD} \\approx 1.51\\text{ USD}$. Accounting standards require antidilutive securities to be excluded from diluted EPS calculations. Therefore, Diluted EPS equals Basic EPS = 1.50 USD.\n\nDistractor Analysis:\n- B includes the antidilutive security, violating GAAP/IFRS rules.\n- C is the incremental per-share effect of the convertible debt."
+    "explanation": "To determine whether a security is included in diluted EPS, we evaluate its per-share effect:\n- Interest saved net of tax = 2,000,000 USD\\times 10\\% \\times (1 - 0.20) = 160,000. - Incremental shares = 100,000.\n- Per-share effect = 160,000 USD\\text{ USD} / 100,000\\text{ shares} = 1.60. Because the per-share effect (1.60 USDUSD) exceeds Basic EPS (1.50 USDUSD), the convertible debt is antidilutive. Including it would increase EPS to $(1,500,000 + 160,000) / (1,000,000 + 100,000) = 1,660,000 / 1,100,000 = 1.509\\text{ USD} \\approx 1.51$. Accounting standards require antidilutive securities to be excluded from diluted EPS calculations. Therefore, Diluted EPS equals Basic EPS = 1.50. Distractor Analysis:\n- B includes the antidilutive security, violating GAAP/IFRS rules.\n- C is the incremental per-share effect of the convertible debt."
   },
   {
     "id": "L1-Q044",
@@ -710,14 +710,14 @@
     "module": "m4-balance-sheet",
     "topic": "Understanding Balance Sheets",
     "los": "LOS 23.b: Describe measurement bases for assets and liabilities.",
-    "question": "At year-end, a company reports gross accounts receivable of 800,000 USD. Based on historical default rates and aging analysis, management estimates that 5% of gross receivables will prove uncollectible. The beginning balance in the Allowance for Doubtful Accounts was 15,000 USD (credit), and 8,000 USD of bad debts were written off during the year. What bad debt expense should be recognized on the income statement, and what is the net realizable value of accounts receivable on the balance sheet?",
+    "question": "At year-end, a company reports gross accounts receivable of 800,000. Based on historical default rates and aging analysis, management estimates that 5% of gross receivables will prove uncollectible. The beginning balance in the Allowance for Doubtful Accounts was 15,000 USD (credit), and 8,000 USD of bad debts were written off during the year. What bad debt expense should be recognized on the income statement, and what is the net realizable value of accounts receivable on the balance sheet?",
     "options": {
-      "A": "Bad Debt Expense: 33,000 USD; Net Accounts Receivable: 760,000 USD.",
-      "B": "Bad Debt Expense: 40,000 USD; Net Accounts Receivable: 760,000 USD.",
-      "C": "Bad Debt Expense: 25,000 USD; Net Accounts Receivable: 775,000 USD."
+      "A": "Bad Debt Expense: 33,000 USD; Net Accounts Receivable: 760,000. ",
+      "B": "Bad Debt Expense: 40,000 USD; Net Accounts Receivable: 760,000. ",
+      "C": "Bad Debt Expense: 25,000 USD; Net Accounts Receivable: 775,000. "
     },
     "answer": "A",
-    "explanation": "1. Required ending balance in Allowance for Doubtful Accounts:\n$$\\text{Ending Allowance} = 5\\% \\times 800,000\\text{ USD} = 40,000\\text{ USD}$ 2. Net Realizable Value (NRV) on the balance sheet:\n$$\\text{Net AR} = \\text{Gross AR} - \\text{Ending Allowance} = 800,000\\text{ USD} - 40,000\\text{ USD} = 760,000\\text{ USD}$ 3. Analysis of the Allowance account to find Bad Debt Expense:\n$$\\text{Ending Allowance} = \\text{Beginning Allowance} - \\text{Write-offs} + \\text{Bad Debt Expense}$$\n40,000 USD\\text{ USD} = 15,000\\text{ USD} - 8,000\\text{ USD} + \\text{Bad Debt Expense}$$\n40,000 USD\\text{ USD} = 7,000\\text{ USD} + \\text{Bad Debt Expense} \\implies \\text{Bad Debt Expense} = 33,000\\text{ USD}$$\n\nDistractor Analysis:\n- B incorrectly sets bad debt expense equal to the desired ending allowance of 40,000 USD, ignoring the unadjusted existing balance in the allowance.\n- C makes errors in calculating the allowance progression."
+    "explanation": "1. Required ending balance in Allowance for Doubtful Accounts:\n$$\\text{Ending Allowance} = 5\\% \\times 800,000\\text{ USD} = 40,000\\text{ USD}$$\n2. Net Realizable Value (NRV) on the balance sheet:\n$$\\text{Net AR} = \\text{Gross AR} - \\text{Ending Allowance} = 800,000\\text{ USD} - 40,000\\text{ USD} = 760,000\\text{ USD}$$\n3. Analysis of the Allowance account to find Bad Debt Expense:\n$$\\text{Ending Allowance} = \\text{Beginning Allowance} - \\text{Write-offs} + \\text{Bad Debt Expense}$$\n$$\\text{Ending Allowance} = 40,000\\text{ USD} = 15,000\\text{ USD} - 8,000\\text{ USD} + \\text{Bad Debt Expense}$$\n$$\\text{Ending Allowance} = 40,000\\text{ USD} = 7,000\\text{ USD} + \\text{Bad Debt Expense} \\implies \\text{Bad Debt Expense} = 33,000\\text{ USD}$$\n\nDistractor Analysis:\n- B incorrectly sets bad debt expense equal to the desired ending allowance of 40,000 USD, ignoring the unadjusted existing balance in the allowance.\n- C makes errors in calculating the allowance progression."
   },
   {
     "id": "L1-Q049",
@@ -725,14 +725,14 @@
     "module": "m4-balance-sheet",
     "topic": "Understanding Balance Sheets",
     "los": "LOS 23.b: Describe measurement bases for assets and liabilities.",
-    "question": "A manufacturer holds inventory with an original cost of 120,000 USD. At year-end, the estimated selling price is 115,000 USD, with estimated selling costs of 5,000 USD and replacement cost of 105,000 USD. In the subsequent year, market conditions recover and the estimated selling price rises to 135,000 USD (selling costs 5,000 USD). Which statement correctly describes the accounting under IFRS versus US GAAP (assuming FIFO)?",
+    "question": "A manufacturer holds inventory with an original cost of 120,000. At year-end, the estimated selling price is 115,000 USD, with estimated selling costs of 5,000 USD and replacement cost of 105,000. In the subsequent year, market conditions recover and the estimated selling price rises to 135,000 USD (selling costs 5,000 USD). Which statement correctly describes the accounting under IFRS versus US GAAP (assuming FIFO)?",
     "options": {
       "A": "Under both IFRS and US GAAP, the inventory is written down to 110,000 USD in Year 1, and the write-down can be reversed up to original cost in Year 2.",
       "B": "Under both IFRS and US GAAP, the inventory is written down to 110,000 USD in Year 1, but IFRS permits reversing the write-down up to original cost in Year 2, whereas US GAAP strictly prohibits any reversal.",
       "C": "Under IFRS the inventory is written down to 105,000 USD, while under US GAAP it is written down to 110,000 USD, with neither permitting reversals."
     },
     "answer": "B",
-    "explanation": "Under IFRS, inventory is measured at the lower of cost and net realizable value (NRV):\n$$\\text{NRV} = \\text{Estimated Selling Price} - \\text{Estimated Selling Costs} = 115,000\\text{ USD} - 5,000\\text{ USD} = 110,000\\text{ USD}$$\nSince NRV (110,000 USD) < Cost (120,000 USD), a 10,000 USD write-down is recorded in Year 1 under IFRS. Under US GAAP (for FIFO/average cost), the lower of cost and NRV is also used, so it is also written down to 110,000 USD in Year 1.\nIn Year 2, new NRV is 135,000 USD- 5,000 = 130,000\\text{ USD}$:\n- Under IFRS: Write-downs must be reversed if NRV recovers, limited to the original cost basis (a 10,000 USD recovery is recognized).\n- Under US GAAP: Reversals of inventory write-downs are strictly prohibited once recorded; the written-down carrying value becomes the new cost basis.\n\nDistractor Analysis:\n- A is incorrect because US GAAP prohibits inventory write-down reversals.\n- C is incorrect because under FIFO, both standards evaluate NRV (110,000 USD), not replacement cost."
+    "explanation": "Under IFRS, inventory is measured at the lower of cost and net realizable value (NRV):\n$$\\text{NRV} = \\text{Estimated Selling Price} - \\text{Estimated Selling Costs} = 115,000\\text{ USD} - 5,000\\text{ USD} = 110,000\\text{ USD}$$\nSince NRV (110,000 USD) < Cost (120,000 USD), a 10,000 USD write-down is recorded in Year 1 under IFRS. Under US GAAP (for FIFO/average cost), the lower of cost and NRV is also used, so it is also written down to 110,000 USD in Year 1.\nIn Year 2, new NRV is 135,000 USD- 5,000 = 130,000USD:\n- Under IFRS: Write-downs must be reversed if NRV recovers, limited to the original cost basis (a 10,000 USD recovery is recognized).\n- Under US GAAP: Reversals of inventory write-downs are strictly prohibited once recorded; the written-down carrying value becomes the new cost basis.\n\nDistractor Analysis:\n- A is incorrect because US GAAP prohibits inventory write-down reversals.\n- C is incorrect because under FIFO, both standards evaluate NRV (110,000 USD), not replacement cost."
   },
   {
     "id": "L1-Q050",
@@ -862,12 +862,12 @@
     "los": "LOS 23.d: Describe the components of shareholders' equity.",
     "question": "A corporation repurchases 50,000 shares of its own 10 USD par common stock in the open market for 45 USD per share and holds them as treasury stock. What is the immediate effect of this transaction on the company's financial statements?",
     "options": {
-      "A": "An investment asset increases by 2,250,000 USD, and cash decreases by 2,250,000 USD.",
+      "A": "An investment asset increases by 2,250,000 USD, and cash decreases by 2,250,000. ",
       "B": "Total shareholders' equity decreases by 2,250,000 USD, and common shares outstanding decrease by 50,000.",
       "C": "Net income decreases by 2,250,000 USD due to an investment expense."
     },
     "answer": "B",
-    "explanation": "Treasury stock is a contra-equity account (not an asset). Repurchasing shares reduces cash (Asset) and increases Treasury Stock (a deduction from Equity), resulting in a net decrease in total shareholders' equity of:\n50,000 USD\\times 45\\text{ USD} = 2,250,000\\text{ USD}$$\nTreasury shares carry no voting rights, receive no dividends, and reduce the number of common shares outstanding (though shares issued remains unchanged).\n\nDistractor Analysis:\n- A is incorrect because a firm cannot own an investment asset in its own stock.\n- C is incorrect because repurchasing stock is a financing equity transaction and has zero impact on the income statement."
+    "explanation": "Treasury stock is a contra-equity account (not an asset). Repurchasing shares reduces cash (Asset) and increases Treasury Stock (a deduction from Equity), resulting in a net decrease in total shareholders' equity of:\n50,000 USD\\times 45\\text{ USD} = 2,250,000USD\nTreasury shares carry no voting rights, receive no dividends, and reduce the number of common shares outstanding (though shares issued remains unchanged).\n\nDistractor Analysis:\n- A is incorrect because a firm cannot own an investment asset in its own stock.\n- C is incorrect because repurchasing stock is a financing equity transaction and has zero impact on the income statement."
   },
   {
     "id": "L1-Q059",
@@ -920,14 +920,14 @@
     "module": "m5-cash-flow",
     "topic": "Understanding Cash Flow Statements",
     "los": "LOS 24.b: Demonstrate the indirect method of calculating cash flow from operating activities.",
-    "question": "A company reports net income of 1,200,000 USD for the year. The income statement includes depreciation expense of 250,000 USD and a gain on sale of equipment of 40,000 USD. Balance sheet working capital changes are:\n- Accounts receivable increased by 60,000 USD\n- Inventory decreased by 30,000 USD\n- Accounts payable decreased by 50,000 USD\nUsing the indirect method, what is the cash flow from operating activities (CFO)?",
+    "question": "A company reports net income of 1,200,000 USD for the year. The income statement includes depreciation expense of 250,000 USD and a gain on sale of equipment of 40,000. Balance sheet working capital changes are:\n- Accounts receivable increased by 60,000 USD\n- Inventory decreased by 30,000 USD\n- Accounts payable decreased by 50,000 USD\nUsing the indirect method, what is the cash flow from operating activities (CFO)?",
     "options": {
       "A": "1,330,000 USD",
       "B": "1,410,000 USD",
       "C": "1,450,000 USD"
     },
     "answer": "A",
-    "explanation": "Under the indirect method, CFO is calculated starting from Net Income:\n$$\\text{Net Income} = 1,200,000\\text{ USD}$$\nAdjustments for non-cash and non-operating items:\n- Add back Depreciation: $+250,000\\text{ USD}$\n- Subtract Gain on sale of equipment (investing activity): $-40,000\\text{ USD}$\nWorking capital adjustments:\n- Increase in Accounts Receivable (cash tied up): $-60,000\\text{ USD}$\n- Decrease in Inventory (cash released): $+30,000\\text{ USD}$\n- Decrease in Accounts Payable (cash paid to vendors): $-50,000\\text{ USD}$\n\nCalculation:\n$$\\text{CFO} = 1,200,000 + 250,000 - 40,000 - 60,000 + 30,000 - 50,000 = 1,330,000\\text{ USD}$$\n\nDistractor Analysis:\n- B mistakenly adds the gain on sale (+40,000 USD instead of -40,000 USD) and adds the decrease in accounts payable.\n- C adds back gain on sale and mismanages working capital directions."
+    "explanation": "Under the indirect method, CFO is calculated starting from Net Income:\n$$\\text{Net Income} = 1,200,000\\text{ USD}$$\nAdjustments for non-cash and non-operating items:\n- Add back Depreciation: +250,000 USD\n- Subtract Gain on sale of equipment (investing activity): -40,000 USD\nWorking capital adjustments:\n- Increase in Accounts Receivable (cash tied up): -60,000 USD\n- Decrease in Inventory (cash released): +30,000 USD\n- Decrease in Accounts Payable (cash paid to vendors): -50,000 USD\n\nCalculation:\n$$\\text{CFO} = 1,200,000 + 250,000 - 40,000 - 60,000 + 30,000 - 50,000 = 1,330,000\\text{ USD}$$\n\nDistractor Analysis:\n- B mistakenly adds the gain on sale (+40,000 USD instead of -40,000 USD) and adds the decrease in accounts payable.\n- C adds back gain on sale and mismanages working capital directions."
   },
   {
     "id": "L1-Q063",
@@ -935,14 +935,14 @@
     "module": "m5-cash-flow",
     "topic": "Understanding Cash Flow Statements",
     "los": "LOS 24.c: Demonstrate the direct method of calculating cash flow from operating activities.",
-    "question": "For the year ended 31 December, a retail corporation reported total sales revenue of 8,500,000 USD on its income statement. During the year, accounts receivable increased by 350,000 USD, and unearned revenue increased by 120,000 USD. How much cash did the company collect from customers during the year?",
+    "question": "For the year ended 31 December, a retail corporation reported total sales revenue of 8,500,000 USD on its income statement. During the year, accounts receivable increased by 350,000 USD, and unearned revenue increased by 120,000. How much cash did the company collect from customers during the year?",
     "options": {
       "A": "8,030,000 USD",
       "B": "8,270,000 USD",
       "C": "8,730,000 USD"
     },
     "answer": "B",
-    "explanation": "To determine cash collections from customers under the direct method:\n$$\\text{Cash Collected from Customers} = \\text{Sales Revenue} - \\Delta\\text{Accounts Receivable} + \\Delta\\text{Unearned Revenue}$$\n$$\\text{Cash Collected} = 8,500,000\\text{ USD} - 350,000\\text{ USD} + 120,000\\text{ USD} = 8,270,000\\text{ USD}$$\nAn increase in accounts receivable means sales exceeded cash collected. An increase in unearned revenue means cash was collected before goods were delivered.\n\nDistractor Analysis:\n- A subtracts both changes: 8,500,000 USD- 350,000 - 120,000 = 8,030,000\\text{ USD}$.\n- C adds both changes: 8,500,000 USD+ 350,000 - 120,000 = 8,730,000\\text{ USD}$."
+    "explanation": "To determine cash collections from customers under the direct method:\n$$\\text{Cash Collected from Customers} = \\text{Sales Revenue} - \\Delta\\text{Accounts Receivable} + \\Delta\\text{Unearned Revenue}$$\n$$\\text{Cash Collected} = 8,500,000\\text{ USD} - 350,000\\text{ USD} + 120,000\\text{ USD} = 8,270,000\\text{ USD}$$\nAn increase in accounts receivable means sales exceeded cash collected. An increase in unearned revenue means cash was collected before goods were delivered.\n\nDistractor Analysis:\n- A subtracts both changes: 8,500,000 USD- 350,000 - 120,000 = 8,030,000. - C adds both changes: 8,500,000 USD+ 350,000 - 120,000 = 8,730,000. "
   },
   {
     "id": "L1-Q064",
@@ -950,14 +950,14 @@
     "module": "m5-cash-flow",
     "topic": "Understanding Cash Flow Statements",
     "los": "LOS 24.c: Demonstrate the direct method of calculating cash flow from operating activities.",
-    "question": "A company reports Cost of Goods Sold (COGS) of 4,200,000 USD. During the fiscal year:\n- Inventory increased by 280,000 USD\n- Accounts payable to suppliers increased by 190,000 USD\nWhat was the total cash paid to suppliers during the year?",
+    "question": "A company reports Cost of Goods Sold (COGS) of 4,200,000. During the fiscal year:\n- Inventory increased by 280,000 USD\n- Accounts payable to suppliers increased by 190,000 USD\nWhat was the total cash paid to suppliers during the year?",
     "options": {
       "A": "3,730,000 USD",
       "B": "4,110,000 USD",
       "C": "4,290,000 USD"
     },
     "answer": "C",
-    "explanation": "Step 1: Compute total inventory purchases:\n$$\\text{Purchases} = \\text{COGS} + \\Delta\\text{Inventory} = 4,200,000\\text{ USD} + 280,000\\text{ USD} = 4,480,000\\text{ USD}$$\nStep 2: Compute cash paid to suppliers:\n$$\\text{Cash Paid to Suppliers} = \\text{Purchases} - \\Delta\\text{Accounts Payable}$$\n$$\\text{Cash Paid to Suppliers} = 4,480,000\\text{ USD} - 190,000\\text{ USD} = 4,290,000\\text{ USD}$$\n\nDistractor Analysis:\n- B incorrectly subtracts the inventory change and adds the AP change: 4,200,000 USD- 280,000 + 190,000 = 4,110,000\\text{ USD}$.\n- A reverses both signs: 4,200,000 USD- 280,000 - 190,000 = 3,730,000\\text{ USD}$."
+    "explanation": "Step 1: Compute total inventory purchases:\n$$\\text{Purchases} = \\text{COGS} + \\Delta\\text{Inventory} = 4,200,000\\text{ USD} + 280,000\\text{ USD} = 4,480,000USD\nStep 2: Compute cash paid to suppliers:\n$$\\text{Cash Paid to Suppliers} = \\text{Purchases} - \\Delta\\text{Accounts Payable}$$\n$$\\text{Cash Paid to Suppliers} = 4,480,000\\text{ USD} - 190,000\\text{ USD} = 4,290,000USD\n\nDistractor Analysis:\n- B incorrectly subtracts the inventory change and adds the AP change: 4,200,000 USD- 280,000 + 190,000 = 4,110,000. - A reverses both signs: 4,200,000 USD- 280,000 - 190,000 = 3,730,000. "
   },
   {
     "id": "L1-Q065",
@@ -965,14 +965,14 @@
     "module": "m5-cash-flow",
     "topic": "Understanding Cash Flow Statements",
     "los": "LOS 24.b: Demonstrate the indirect method of calculating cash flow from operating activities.",
-    "question": "During Year 2, a firm sold manufacturing equipment that originally cost 200,000 USD with accumulated depreciation of 130,000 USD for a cash gain on sale of 25,000 USD. What was the net cash flow from investing activities (CFI) generated from this transaction?",
+    "question": "During Year 2, a firm sold manufacturing equipment that originally cost 200,000 USD with accumulated depreciation of 130,000 USD for a cash gain on sale of 25,000. What was the net cash flow from investing activities (CFI) generated from this transaction?",
     "options": {
       "A": "25,000 USD cash inflow",
       "B": "70,000 USD cash inflow",
       "C": "95,000 USD cash inflow"
     },
     "answer": "C",
-    "explanation": "1. Book value (carrying value) of the equipment sold:\n$$\\text{Book Value} = \\text{Historical Cost} - \\text{Accumulated Depreciation} = 200,000\\text{ USD} - 130,000\\text{ USD} = 70,000\\text{ USD}$ 2. Cash proceeds from the sale:\n$$\\text{Cash Proceeds} = \\text{Book Value} + \\text{Gain on Sale} = 70,000\\text{ USD} + 25,000\\text{ USD} = 95,000\\text{ USD}$$\nCash flow from investing activities reflects the full cash proceeds received of 95,000 USD.\n(Note: The 25,000 USD gain is included in net income and must be subtracted in CFO to avoid double-counting).\n\nDistractor Analysis:\n- A reflects only the accounting gain, not the total cash proceeds.\n- B reflects only the book value, ignoring the cash premium received."
+    "explanation": "1. Book value (carrying value) of the equipment sold:\n$$\\text{Book Value} = \\text{Historical Cost} - \\text{Accumulated Depreciation} = 200,000\\text{ USD} - 130,000\\text{ USD} = 70,000USD\n2. Cash proceeds from the sale:\n$$\\text{Cash Proceeds} = \\text{Book Value} + \\text{Gain on Sale} = 70,000\\text{ USD} + 25,000\\text{ USD} = 95,000USD\nCash flow from investing activities reflects the full cash proceeds received of 95,000. (Note: The 25,000 USD gain is included in net income and must be subtracted in CFO to avoid double-counting).\n\nDistractor Analysis:\n- A reflects only the accounting gain, not the total cash proceeds.\n- B reflects only the book value, ignoring the cash premium received."
   },
   {
     "id": "L1-Q066",
@@ -987,7 +987,7 @@
       "C": "1,600,000 USD"
     },
     "answer": "B",
-    "explanation": "Under US GAAP, CFF includes transactions involving equity owners and long-term debt principal:\n- Stock issuance: $+5,000,000\\text{ USD}$\n- Share repurchase: $-1,200,000\\text{ USD}$\n- Dividends paid: $-600,000\\text{ USD}$\n- Debt principal repayment: $-2,000,000\\text{ USD}$\nNote: Under US GAAP, interest paid (400,000 USD) must be classified as CFO, NOT CFF.\n\nCalculation:\n$$\\text{CFF} = +5,000,000 - 1,200,000 - 600,000 - 2,000,000 = 1,200,000\\text{ USD}$$\n\nDistractor Analysis:\n- A incorrectly deducts interest paid of 400,000 USD from CFF (1,200,000 USD- 400,000 = 800,000\\text{ USD}$).\n- C fails to deduct dividends paid of 600,000 USD."
+    "explanation": "Under US GAAP, CFF includes transactions involving equity owners and long-term debt principal:\n- Stock issuance: +5,000,000 USD\n- Share repurchase: -1,200,000 USD\n- Dividends paid: -600,000 USD\n- Debt principal repayment: -2,000,000 USD\nNote: Under US GAAP, interest paid (400,000 USD) must be classified as CFO, NOT CFF.\n\nCalculation:\n$$\\text{CFF} = +5,000,000 - 1,200,000 - 600,000 - 2,000,000 = 1,200,000\\text{ USD}$$\n\nDistractor Analysis:\n- A incorrectly deducts interest paid of 400,000 USD from CFF (1,200,000 USD- 400,000 = 800,000USD).\n- C fails to deduct dividends paid of 600,000. "
   },
   {
     "id": "L1-Q067",
@@ -1017,7 +1017,7 @@
       "C": "2,300,000 USD"
     },
     "answer": "B",
-    "explanation": "Under US GAAP (where interest paid is deducted in CFO):\n$$\\text{FCFF} = \\text{CFO} + \\text{Interest Expense} \\times (1 - \\text{Tax Rate}) - \\text{FCInv}$$\nCalculation:\n- After-tax interest = 600,000 USD\\text{ USD} \\times (1 - 0.25) = 450,000\\text{ USD}$\n$$\\text{FCFF} = 3,500,000\\text{ USD} + 450,000\\text{ USD} - 1,800,000\\text{ USD} = 2,150,000\\text{ USD}$$\n\nDistractor Analysis:\n- A fails to add back after-tax interest: 3,500,000 USD- 1,800,000 = 1,700,000\\text{ USD}$.\n- C adds back pre-tax interest without tax adjustment: 3,500,000 USD+ 600,000 - 1,800,000 = 2,300,000\\text{ USD}$."
+    "explanation": "Under US GAAP (where interest paid is deducted in CFO):\n$$\\text{FCFF} = \\text{CFO} + \\text{Interest Expense} \\times (1 - \\text{Tax Rate}) - \\text{FCInv}$$\nCalculation:\n- After-tax interest = 600,000 USD\\text{ USD} \\times (1 - 0.25) = 450,000USD\n$$\\text{FCFF} = 3,500,000\\text{ USD} + 450,000\\text{ USD} - 1,800,000\\text{ USD} = 2,150,000\\text{ USD}$$\n\nDistractor Analysis:\n- A fails to add back after-tax interest: 3,500,000 USD- 1,800,000 = 1,700,000. - C adds back pre-tax interest without tax adjustment: 3,500,000 USD+ 600,000 - 1,800,000 = 2,300,000. "
   },
   {
     "id": "L1-Q069",
@@ -1032,7 +1032,7 @@
       "C": "2,000,000 USD"
     },
     "answer": "C",
-    "explanation": "Free Cash Flow to Equity (FCFE) is calculated as:\n$$\\text{FCFE} = \\text{CFO} - \\text{FCInv} + \\text{Net Borrowing}$ 1. Net Borrowing = $\\text{New Debt Issued} - \\text{Debt Repaid} = 900,000\\text{ USD} - 500,000\\text{ USD} = +400,000\\text{ USD}$.\n2. FCFE Calculation:\n$$\\text{FCFE} = 2,800,000\\text{ USD} - 1,200,000\\text{ USD} + 400,000\\text{ USD} = 2,000,000\\text{ USD}$$\n\nDistractor Analysis:\n- A subtracts net borrowing instead of adding it: 2,800,000 USD- 1,200,000 - 400,000 = 1,200,000\\text{ USD}$.\n- B ignores net borrowing altogether: 2,800,000 USD- 1,200,000 = 1,600,000\\text{ USD}$."
+    "explanation": "Free Cash Flow to Equity (FCFE) is calculated as:\n$$\\text{FCFE} = \\text{CFO} - \\text{FCInv} + \\text{Net Borrowing}$$\n1. Net Borrowing = $\\text{New Debt Issued} - \\text{Debt Repaid} = 900,000\\text{ USD} - 500,000\\text{ USD} = +400,000\\text{ USD}$. 2. FCFE Calculation:\n$$\\text{FCFE} = 2,800,000\\text{ USD} - 1,200,000\\text{ USD} + 400,000\\text{ USD} = 2,000,000\\text{ USD}$$\n\nDistractor Analysis:\n- A subtracts net borrowing instead of adding it: 2,800,000 USD- 1,200,000 - 400,000 = 1,200,000. - B ignores net borrowing altogether: 2,800,000 USD- 1,200,000 = 1,600,000. "
   },
   {
     "id": "L1-Q070",
@@ -1040,14 +1040,14 @@
     "module": "m5-cash-flow",
     "topic": "Understanding Cash Flow Statements",
     "los": "LOS 24.b: Demonstrate the indirect method of calculating cash flow from operating activities.",
-    "question": "A company's gross PP&E was 6,000,000 USD at the beginning of the year and 7,400,000 USD at the end of the year. During the year, the company sold machinery with an original cost of 500,000 USD. If all asset acquisitions were paid in cash, how much cash was paid for new PP&E (capital expenditures) during the year?",
+    "question": "A company's gross PP&E was 6,000,000 USD at the beginning of the year and 7,400,000 USD at the end of the year. During the year, the company sold machinery with an original cost of 500,000. If all asset acquisitions were paid in cash, how much cash was paid for new PP&E (capital expenditures) during the year?",
     "options": {
       "A": "1,400,000 USD",
       "B": "1,900,000 USD",
       "C": "2,400,000 USD"
     },
     "answer": "B",
-    "explanation": "Analyzing the Gross PP&E account balance:\n$$\\text{Ending Gross PP\\&E} = \\text{Beginning Gross PP\\&E} + \\text{Purchases of PP\\&E} - \\text{Gross Cost of PP\\&E Sold}$$\n7,400,000 USD\\text{ USD} = 6,000,000\\text{ USD} + \\text{Purchases} - 500,000\\text{ USD}$$\n7,400,000 USD\\text{ USD} = 5,500,000\\text{ USD} + \\text{Purchases} \\implies \\text{Purchases} = 1,900,000\\text{ USD}$$\nTherefore, cash capital expenditures were 1,900,000 USD.\n\nDistractor Analysis:\n- A looks only at the net change in gross PP&E (7,400,000 USD- 6,000,000 = 1,400,000\\text{ USD}$), failing to account for the retired equipment.\n- C adds the 500,000 USD to the ending balance incorrectly."
+    "explanation": "Analyzing the Gross PP&E account balance:\n$$\\text{Ending Gross PP\\&E} = \\text{Beginning Gross PP\\&E} + \\text{Purchases of PP\\&E} - \\text{Gross Cost of PP\\&E Sold}$$\n7,400,000 USD\\text{ USD} = 6,000,000\\text{ USD} + \\text{Purchases} - 500,000USD\n7,400,000 USD\\text{ USD} = 5,500,000\\text{ USD} + \\text{Purchases} \\implies \\text{Purchases} = 1,900,000USD\nTherefore, cash capital expenditures were 1,900,000. Distractor Analysis:\n- A looks only at the net change in gross PP&E (7,400,000 USD- 6,000,000 = 1,400,000USD), failing to account for the retired equipment.\n- C adds the 500,000 USD to the ending balance incorrectly."
   },
   {
     "id": "L1-Q071",
@@ -1062,7 +1062,7 @@
       "C": "Cash flow-to-revenue: 16%; Cash return on assets: 20%."
     },
     "answer": "A",
-    "explanation": "1. Cash flow-to-revenue ratio:\n$$\\frac{\\text{CFO}}{\\text{Total Revenue}} = \\frac{800,000\\text{ USD}}{4,000,000\\text{ USD}} = 20\\%$ 2. Cash return on assets ratio:\n$$\\frac{\\text{CFO}}{\\text{Average Total Assets}} = \\frac{800,000\\text{ USD}}{5,000,000\\text{ USD}} = 16\\%$$\n(Note: Cash return on equity would be 800,000 USD/ 2,500,000 = 32\\%$).\n\nDistractor Analysis:\n- B combines cash flow-to-revenue with cash return on equity (32%).\n- C reverses the two calculated values."
+    "explanation": "1. Cash flow-to-revenue ratio:\n$$\\frac{\\text{CFO}}{\\text{Total Revenue}} = \\frac{800,000\\text{ USD}}{4,000,000\\text{ USD}} = 20\\%$$\n2. Cash return on assets ratio:\n$$\\frac{\\text{CFO}}{\\text{Average Total Assets}} = \\frac{800,000\\text{ USD}}{5,000,000\\text{ USD}} = 16\\%$$\n(Note: Cash return on equity would be 800,000 USD / 2,500,000 = 32\\%).\n\nDistractor Analysis:\n- B combines cash flow-to-revenue with cash return on equity (32%).\n- C reverses the two calculated values."
   },
   {
     "id": "L1-Q072",
@@ -1070,14 +1070,14 @@
     "module": "m5-cash-flow",
     "topic": "Understanding Cash Flow Statements",
     "los": "LOS 24.f: Calculate and interpret cash flow performance and coverage ratios.",
-    "question": "A firm has CFO of 1,500,000 USD, interest paid of 250,000 USD, taxes paid of 350,000 USD, and total debt of 4,500,000 USD. What is the firm's debt coverage ratio and cash interest coverage ratio?",
+    "question": "A firm has CFO of 1,500,000 USD, interest paid of 250,000 USD, taxes paid of 350,000 USD, and total debt of 4,500,000. What is the firm's debt coverage ratio and cash interest coverage ratio?",
     "options": {
       "A": "Debt coverage: 0.33; Cash interest coverage: 6.00.",
       "B": "Debt coverage: 0.33; Cash interest coverage: 8.40.",
       "C": "Debt coverage: 0.40; Cash interest coverage: 6.00."
     },
     "answer": "B",
-    "explanation": "1. Debt Coverage Ratio:\n$$\\text{Debt Coverage} = \\frac{\\text{CFO}}{\\text{Total Debt}} = \\frac{1,500,000\\text{ USD}}{4,500,000\\text{ USD}} = 0.333 \\approx 0.33$ 2. Cash Interest Coverage Ratio:\n$$\\text{Cash Interest Coverage} = \\frac{\\text{CFO} + \\text{Interest Paid} + \\text{Taxes Paid}}{\\text{Interest Paid}}$$\n$$\\text{Cash Interest Coverage} = \\frac{1,500,000\\text{ USD} + 250,000\\text{ USD} + 350,000\\text{ USD}}{250,000\\text{ USD}} = \\frac{2,100,000\\text{ USD}}{250,000\\text{ USD}} = 8.40$$\n\nDistractor Analysis:\n- A calculates cash interest coverage as 1,500,000 USD/ 250,000 = 6.00$, failing to add back interest and taxes paid to measure total pre-tax/pre-interest cash generated.\n- C makes errors in both calculations."
+    "explanation": "1. Debt Coverage Ratio:\n$$\\text{Debt Coverage} = \\frac{\\text{CFO}}{\\text{Total Debt}} = \\frac{1,500,000\\text{ USD}}{4,500,000\\text{ USD}} = 0.333 \\approx 0.33$$\n2. Cash Interest Coverage Ratio:\n$$\\text{Cash Interest Coverage} = \\frac{\\text{CFO} + \\text{Interest Paid} + \\text{Taxes Paid}}{\\text{Interest Paid}}$$\n$$\\text{Cash Interest Coverage} = \\frac{1,500,000\\text{ USD} + 250,000\\text{ USD} + 350,000\\text{ USD}}{250,000\\text{ USD}} = \\frac{2,100,000\\text{ USD}}{250,000\\text{ USD}} = 8.40$$\n\nDistractor Analysis:\n- A calculates cash interest coverage as 1,500,000 USD / 250,000 = 6.00, failing to add back interest and taxes paid to measure total pre-tax/pre-interest cash generated.\n- C makes errors in both calculations."
   },
   {
     "id": "L1-Q073",
@@ -1115,14 +1115,14 @@
     "module": "m5-cash-flow",
     "topic": "Understanding Cash Flow Statements",
     "los": "LOS 24.b: Demonstrate the indirect method of calculating cash flow from operating activities.",
-    "question": "During the year, a company reported net income of 950,000 USD. Selected balance sheet and income statement items include:\n- Depreciation expense: 180,000 USD\n- Amortization of patents: 30,000 USD\n- Impairment of goodwill: 50,000 USD\n- Increase in accounts receivable: 70,000 USD\n- Increase in inventories: 45,000 USD\n- Increase in accounts payable: 60,000 USD\n- Increase in unearned revenue: 25,000 USD\nAssuming no other items, what is CFO under the indirect method?",
+    "question": "During the year, a company reported net income of 950,000. Selected balance sheet and income statement items include:\n- Depreciation expense: 180,000 USD\n- Amortization of patents: 30,000 USD\n- Impairment of goodwill: 50,000 USD\n- Increase in accounts receivable: 70,000 USD\n- Increase in inventories: 45,000 USD\n- Increase in accounts payable: 60,000 USD\n- Increase in unearned revenue: 25,000 USD\nAssuming no other items, what is CFO under the indirect method?",
     "options": {
       "A": "1,110,000 USD",
       "B": "1,180,000 USD",
       "C": "1,240,000 USD"
     },
     "answer": "B",
-    "explanation": "Indirect CFO calculation:\n$$\\text{Net Income} = 950,000\\text{ USD}$$\nAdd non-cash expenses:\n- Depreciation: $+180,000\\text{ USD}$\n- Amortization: $+30,000\\text{ USD}$\n- Goodwill impairment: $+50,000\\text{ USD}$\nSubtotal non-cash items = $+260,000\\text{ USD}$\n\nWorking capital adjustments:\n- Increase in Accounts Receivable: $-70,000\\text{ USD}$\n- Increase in Inventories: $-45,000\\text{ USD}$\n- Increase in Accounts Payable: $+60,000\\text{ USD}$\n- Increase in Unearned Revenue: $+25,000\\text{ USD}$\nNet working capital change = $-70,000 - 45,000 + 60,000 + 25,000 = -30,000\\text{ USD}$\n\nTotal CFO:\n$$\\text{CFO} = 950,000 + 260,000 - 30,000 = 1,180,000\\text{ USD}$$\n\nDistractor Analysis:\n- A fails to include the non-cash goodwill impairment add-back: 1,180,000 USD- 50,000 = 1,130,000$ or miscalculates working capital.\n- C treats the increase in accounts receivable as an addition instead of a deduction."
+    "explanation": "Indirect CFO calculation:\n$$\\text{Net Income} = 950,000\\text{ USD}$$\nAdd non-cash expenses:\n- Depreciation: +180,000 USD\n- Amortization: +30,000 USD\n- Goodwill impairment: +50,000 USD\nSubtotal non-cash items = +260,000 USD\n\nWorking capital adjustments:\n- Increase in Accounts Receivable: -70,000 USD\n- Increase in Inventories: -45,000 USD\n- Increase in Accounts Payable: +60,000 USD\n- Increase in Unearned Revenue: +25,000 USD\nNet working capital change = -70,000 - 45,000 + 60,000 + 25,000 = -30,000 USD\n\nTotal CFO:\n$$\\text{CFO} = 950,000 + 260,000 - 30,000 = 1,180,000\\text{ USD}$$\n\nDistractor Analysis:\n- A fails to include the non-cash goodwill impairment add-back: 1,180,000 USD - 50,000 = 1,130,000 or miscalculates working capital.\n- C treats the increase in accounts receivable as an addition instead of a deduction."
   },
   {
     "id": "L1-Q076",
@@ -1130,14 +1130,14 @@
     "module": "m6-ratios",
     "topic": "Financial Analysis Techniques",
     "los": "LOS 25.b: Calculate and interpret activity, liquidity, solvency, and profitability ratios.",
-    "question": "A wholesale distributor reports Cost of Goods Sold of 6,570,000 USD for the year. Beginning inventory was 710,000 USD and ending inventory was 750,000 USD. Assuming a 365-day year, what are the company's inventory turnover and days of inventory on hand (DOH)?",
+    "question": "A wholesale distributor reports Cost of Goods Sold of 6,570,000 USD for the year. Beginning inventory was 710,000 USD and ending inventory was 750,000. Assuming a 365-day year, what are the company's inventory turnover and days of inventory on hand (DOH)?",
     "options": {
       "A": "Inventory turnover: 8.76 times; DOH: 41.7 days.",
       "B": "Inventory turnover: 9.00 times; DOH: 40.6 days.",
       "C": "Inventory turnover: 9.25 times; DOH: 39.5 days."
     },
     "answer": "B",
-    "explanation": "1. Average Inventory:\n$$\\text{Average Inventory} = \\frac{710,000\\text{ USD} + 750,000\\text{ USD}}{2} = 730,000\\text{ USD}$ 2. Inventory Turnover:\n$$\\text{Inventory Turnover} = \\frac{\\text{COGS}}{\\text{Average Inventory}} = \\frac{6,570,000\\text{ USD}}{730,000\\text{ USD}} = 9.00\\text{ times}$ 3. Days of Inventory on Hand (DOH):\n$$\\text{DOH} = \\frac{365}{\\text{Inventory Turnover}} = \\frac{365}{9.00} \\approx 40.56 \\approx 40.6\\text{ days}$$\n\nDistractor Analysis:\n- A uses ending inventory (6,570,000 USD/ 750,000 = 8.76$ times; 365 USD/ 8.76 = 41.7$ days) instead of average inventory.\n- C uses beginning inventory (6,570,000 USD/ 710,000 = 9.25$ times; 365 USD/ 9.25 = 39.5$ days)."
+    "explanation": "1. Average Inventory:\n$$\\text{Average Inventory} = \\frac{710,000\\text{ USD} + 750,000\\text{ USD}}{2} = 730,000USD\n2. Inventory Turnover:\n$$\\text{Inventory Turnover} = \\frac{\\text{COGS}}{\\text{Average Inventory}} = \\frac{6,570,000\\text{ USD}}{730,000\\text{ USD}} = 9.00\\text{ times}$$\n3. Days of Inventory on Hand (DOH):\n$$\\text{DOH} = \\frac{365}{\\text{Inventory Turnover}} = \\frac{365}{9.00} \\approx 40.56 \\approx 40.6days\n\nDistractor Analysis:\n- A uses ending inventory (6,570,000 USD / 750,000 = 8.76 times; 365 USD / 8.76 = 41.7 days) instead of average inventory.\n- C uses beginning inventory (6,570,000 USD / 710,000 = 9.25 times; 365 USD / 9.25 = 39.5 days)."
   },
   {
     "id": "L1-Q077",
@@ -1145,14 +1145,14 @@
     "module": "m6-ratios",
     "topic": "Financial Analysis Techniques",
     "los": "LOS 25.b: Calculate and interpret activity, liquidity, solvency, and profitability ratios.",
-    "question": "A company reports annual credit sales revenue of 10,950,000 USD. Beginning accounts receivable was 850,000 USD and ending accounts receivable was 950,000 USD. Assuming a 365-day year, what is the receivables turnover and days sales outstanding (DSO)?",
+    "question": "A company reports annual credit sales revenue of 10,950,000. Beginning accounts receivable was 850,000 USD and ending accounts receivable was 950,000. Assuming a 365-day year, what is the receivables turnover and days sales outstanding (DSO)?",
     "options": {
       "A": "Receivables turnover: 11.53 times; DSO: 31.7 days.",
       "B": "Receivables turnover: 12.17 times; DSO: 30.0 days.",
       "C": "Receivables turnover: 12.88 times; DSO: 28.3 days."
     },
     "answer": "B",
-    "explanation": "1. Average Accounts Receivable:\n$$\\text{Average AR} = \\frac{850,000\\text{ USD} + 950,000\\text{ USD}}{2} = 900,000\\text{ USD}$ 2. Receivables Turnover:\n$$\\text{Receivables Turnover} = \\frac{\\text{Revenue}}{\\text{Average AR}} = \\frac{10,950,000\\text{ USD}}{900,000\\text{ USD}} = 12.167 \\approx 12.17\\text{ times}$ 3. Days Sales Outstanding (DSO):\n$$\\text{DSO} = \\frac{365}{\\text{Receivables Turnover}} = \\frac{365}{12.167} \\approx 30.0\\text{ days}$$\n\nDistractor Analysis:\n- A uses ending receivables (10,950,000 USD/ 950,000 = 11.53$ times; 365 USD/ 11.53 = 31.7$ days).\n- C uses beginning receivables (10,950,000 USD/ 850,000 = 12.88$ times; 365 USD/ 12.88 = 28.3$ days)."
+    "explanation": "1. Average Accounts Receivable:\n$$\\text{Average AR} = \\frac{850,000\\text{ USD} + 950,000\\text{ USD}}{2} = 900,000USD\n2. Receivables Turnover:\n$$\\text{Receivables Turnover} = \\frac{\\text{Revenue}}{\\text{Average AR}} = \\frac{10,950,000\\text{ USD}}{900,000\\text{ USD}} = 12.167 \\approx 12.17\\text{ times}$$\n3. Days Sales Outstanding (DSO):\n$$\\text{DSO} = \\frac{365}{\\text{Receivables Turnover}} = \\frac{365}{12.167} \\approx 30.0days\n\nDistractor Analysis:\n- A uses ending receivables (10,950,000 USD / 950,000 = 11.53 times; 365 USD / 11.53 = 31.7 days).\n- C uses beginning receivables (10,950,000 USD / 850,000 = 12.88 times; 365 USD / 12.88 = 28.3 days)."
   },
   {
     "id": "L1-Q078",
@@ -1160,14 +1160,14 @@
     "module": "m6-ratios",
     "topic": "Financial Analysis Techniques",
     "los": "LOS 25.b: Calculate and interpret activity, liquidity, solvency, and profitability ratios.",
-    "question": "A manufacturing firm had total inventory purchases of 5,840,000 USD during the fiscal year. Beginning accounts payable was 700,000 USD and ending accounts payable was 760,000 USD. Using a 365-day year, what is the number of days of payables outstanding?",
+    "question": "A manufacturing firm had total inventory purchases of 5,840,000 USD during the fiscal year. Beginning accounts payable was 700,000 USD and ending accounts payable was 760,000. Using a 365-day year, what is the number of days of payables outstanding?",
     "options": {
       "A": "43.8 days",
       "B": "45.6 days",
       "C": "47.5 days"
     },
     "answer": "B",
-    "explanation": "1. Average Accounts Payable:\n$$\\text{Average AP} = \\frac{700,000\\text{ USD} + 760,000\\text{ USD}}{2} = 730,000\\text{ USD}$ 2. Payables Turnover:\n$$\\text{Payables Turnover} = \\frac{\\text{Purchases}}{\\text{Average AP}} = \\frac{5,840,000\\text{ USD}}{730,000\\text{ USD}} = 8.00\\text{ times}$ 3. Number of Days of Payables:\n$$\\text{Number of Days of Payables} = \\frac{365}{\\text{Payables Turnover}} = \\frac{365}{8.00} = 45.625 \\approx 45.6\\text{ days}$$\n\nDistractor Analysis:\n- A uses beginning AP (5,840,000 USD/ 700,000 = 8.34$ times; 365 USD/ 8.34 = 43.8$ days).\n- C uses ending AP (5,840,000 USD/ 760,000 = 7.68$ times; 365 USD/ 7.68 = 47.5$ days)."
+    "explanation": "1. Average Accounts Payable:\n$$\\text{Average AP} = \\frac{700,000\\text{ USD} + 760,000\\text{ USD}}{2} = 730,000USD\n2. Payables Turnover:\n$$\\text{Payables Turnover} = \\frac{\\text{Purchases}}{\\text{Average AP}} = \\frac{5,840,000\\text{ USD}}{730,000\\text{ USD}} = 8.00\\text{ times}$$\n3. Number of Days of Payables:\n$$\\text{Number of Days of Payables} = \\frac{365}{\\text{Payables Turnover}} = \\frac{365}{8.00} = 45.625 \\approx 45.6days\n\nDistractor Analysis:\n- A uses beginning AP (5,840,000 USD / 700,000 = 8.34 times; 365 USD / 8.34 = 43.8 days).\n- C uses ending AP (5,840,000 USD / 760,000 = 7.68 times; 365 USD / 7.68 = 47.5 days)."
   },
   {
     "id": "L1-Q079",
@@ -1182,7 +1182,7 @@
       "C": "CCC is +89 days, indicating substantial operational inefficiency in managing inventory and customer receivables."
     },
     "answer": "A",
-    "explanation": "The Cash Conversion Cycle (net operating cycle) is:\n$$\\text{CCC} = \\text{DOH} + \\text{DSO} - \\text{Number of Days of Payables}$$\n$$\\text{CCC} = 38\\text{ days} + 12\\text{ days} - 65\\text{ days} = -15\\text{ days}$$\nA negative cash conversion cycle indicates that the company collects receivables and sells inventory faster than it pays suppliers. The suppliers effectively finance the retailer's inventory and operating liquidity, which is characteristic of dominant retail models like supermarkets or hypermarkets.\n\nDistractor Analysis:\n- B incorrectly calculates a positive number (65 USD- 38 - 12 = +15$ days).\n- C adds all three components without subtracting payables: 38 USD+ 12 + 65 = 115$ or 89 USD$ days."
+    "explanation": "The Cash Conversion Cycle (net operating cycle) is:\n$$\\text{CCC} = \\text{DOH} + \\text{DSO} - \\text{Number of Days of Payables}$$\n$$\\text{CCC} = 38\\text{ days} + 12\\text{ days} - 65\\text{ days} = -15\\text{ days}$$\nA negative cash conversion cycle indicates that the company collects receivables and sells inventory faster than it pays suppliers. The suppliers effectively finance the retailer's inventory and operating liquidity, which is characteristic of dominant retail models like supermarkets or hypermarkets.\n\nDistractor Analysis:\n- B incorrectly calculates a positive number (65 - 38 - 12 = +15 days).\n- C adds all three components without subtracting payables: 38 USD+ 12 + 65 = 115$ or 89 USD$ days."
   },
   {
     "id": "L1-Q080",
@@ -1190,14 +1190,14 @@
     "module": "m6-ratios",
     "topic": "Financial Analysis Techniques",
     "los": "LOS 25.b: Calculate and interpret activity, liquidity, solvency, and profitability ratios.",
-    "question": "A firm reports total revenue of 12,000,000 USD. Current assets are 3,000,000 USD, current liabilities are 1,800,000 USD, and average net fixed assets are 4,000,000 USD. Assuming current assets and liabilities remained constant across the year, what are the firm's working capital turnover and fixed asset turnover ratios?",
+    "question": "A firm reports total revenue of 12,000,000. Current assets are 3,000,000 USD, current liabilities are 1,800,000 USD, and average net fixed assets are 4,000,000. Assuming current assets and liabilities remained constant across the year, what are the firm's working capital turnover and fixed asset turnover ratios?",
     "options": {
       "A": "Working capital turnover: 10.0 times; Fixed asset turnover: 3.0 times.",
       "B": "Working capital turnover: 4.0 times; Fixed asset turnover: 3.0 times.",
       "C": "Working capital turnover: 6.67 times; Fixed asset turnover: 2.5 times."
     },
     "answer": "A",
-    "explanation": "1. Working Capital:\n$$\\text{Working Capital} = \\text{Current Assets} - \\text{Current Liabilities} = 3,000,000\\text{ USD} - 1,800,000\\text{ USD} = 1,200,000\\text{ USD}$ 2. Working Capital Turnover:\n$$\\text{Working Capital Turnover} = \\frac{\\text{Revenue}}{\\text{Average Working Capital}} = \\frac{12,000,000\\text{ USD}}{1,200,000\\text{ USD}} = 10.0\\text{ times}$ 3. Fixed Asset Turnover:\n$$\\text{Fixed Asset Turnover} = \\frac{\\text{Revenue}}{\\text{Average Net Fixed Assets}} = \\frac{12,000,000\\text{ USD}}{4,000,000\\text{ USD}} = 3.0\\text{ times}$$\n\nDistractor Analysis:\n- B calculates working capital turnover using total current assets: 12,000,000 USD/ 3,000,000 = 4.0$ times.\n- C makes errors in denominator selection."
+    "explanation": "1. Working Capital:\n$$\\text{Working Capital} = \\text{Current Assets} - \\text{Current Liabilities} = 3,000,000\\text{ USD} - 1,800,000\\text{ USD} = 1,200,000\\text{ USD}$$\n2. Working Capital Turnover:\n$$\\text{Working Capital Turnover} = \\frac{\\text{Revenue}}{\\text{Average Working Capital}} = \\frac{12,000,000\\text{ USD}}{1,200,000\\text{ USD}} = 10.0\\text{ times}$$\n3. Fixed Asset Turnover:\n$$\\text{Fixed Asset Turnover} = \\frac{\\text{Revenue}}{\\text{Average Net Fixed Assets}} = \\frac{12,000,000\\text{ USD}}{4,000,000\\text{ USD}} = 3.0\\text{ times}$$\n\nDistractor Analysis:\n- B calculates working capital turnover using total current assets: 12,000,000 USD / 3,000,000 = 4.0 times.\n- C makes errors in denominator selection."
   },
   {
     "id": "L1-Q081",
@@ -1212,7 +1212,7 @@
       "C": "Quick ratio: 0.89; Cash ratio: 0.59."
     },
     "answer": "A",
-    "explanation": "1. Quick Ratio (Acid-Test Ratio):\n$$\\text{Quick Assets} = \\text{Cash} + \\text{Marketable Securities} + \\text{Receivables}$$\n$$\\text{Quick Assets} = 150,000\\text{ USD} + 250,000\\text{ USD} + 400,000\\text{ USD} = 800,000\\text{ USD}$$\n$$\\text{Quick Ratio} = \\frac{800,000\\text{ USD}}{675,000\\text{ USD}} = 1.185 \\approx 1.19$ 2. Cash Ratio:\n$$\\text{Cash Assets} = \\text{Cash} + \\text{Marketable Securities} = 150,000\\text{ USD} + 250,000\\text{ USD} = 400,000\\text{ USD}$$\n$$\\text{Cash Ratio} = \\frac{400,000\\text{ USD}}{675,000\\text{ USD}} = 0.5925 \\approx 0.59$$\n(Note: Total current assets = 1,350,000 USD; Current ratio = 1,350,000 USD/ 675,000 = 2.00$).\n\nDistractor Analysis:\n- B uses current ratio (or includes inventory in quick assets) and divides only cash (150,000 USD/ 675,000 = 0.22$).\n- C excludes receivables from quick assets (400,000 USD/ 675,000$ or similar error)."
+    "explanation": "1. Quick Ratio (Acid-Test Ratio):\n$$\\text{Quick Assets} = \\text{Cash} + \\text{Marketable Securities} + \\text{Receivables}$$\n$$\\text{Quick Assets} = 150,000\\text{ USD} + 250,000\\text{ USD} + 400,000\\text{ USD} = 800,000USD\n$$\\text{Quick Ratio} = \\frac{800,000\\text{ USD}}{675,000\\text{ USD}} = 1.185 \\approx 1.19$$\n2. Cash Ratio:\n$$\\text{Cash Assets} = \\text{Cash} + \\text{Marketable Securities} = 150,000\\text{ USD} + 250,000\\text{ USD} = 400,000USD\n$$\\text{Cash Ratio} = \\frac{400,000\\text{ USD}}{675,000\\text{ USD}} = 0.5925 \\approx 0.59$$\n(Note: Total current assets = 1,350,000 USD; Current ratio = 1,350,000 USD / 675,000 = 2.00).\n\nDistractor Analysis:\n- B uses current ratio (or includes inventory in quick assets) and divides only cash (150,000 USD / 675,000 = 0.22).\n- C excludes receivables from quick assets (400,000 USD / 675,000 or similar error)."
   },
   {
     "id": "L1-Q082",
@@ -1220,14 +1220,14 @@
     "module": "m6-ratios",
     "topic": "Financial Analysis Techniques",
     "los": "LOS 25.b: Calculate and interpret activity, liquidity, solvency, and profitability ratios.",
-    "question": "A firm has cash of 300,000 USD, marketable securities of 200,000 USD, and accounts receivable of 500,000 USD. Annual cash expenditures (projected operating costs excluding non-cash depreciation) are 7,300,000 USD. Assuming 365 days in a year, what is the firm's Defensive Interval Ratio (DIR)?",
+    "question": "A firm has cash of 300,000 USD, marketable securities of 200,000 USD, and accounts receivable of 500,000. Annual cash expenditures (projected operating costs excluding non-cash depreciation) are 7,300,000. Assuming 365 days in a year, what is the firm's Defensive Interval Ratio (DIR)?",
     "options": {
       "A": "25 days",
       "B": "50 days",
       "C": "75 days"
     },
     "answer": "B",
-    "explanation": "1. Daily Cash Expenditures:\n$$\\text{Daily Expenditures} = \\frac{\\text{Annual Cash Expenditures}}{365} = \\frac{7,300,000\\text{ USD}}{365} = 20,000\\text{ USD per day}$ 2. Defensive Assets:\n$$\\text{Defensive Assets} = \\text{Cash} + \\text{Marketable Securities} + \\text{Receivables}$$\n$$\\text{Defensive Assets} = 300,000\\text{ USD} + 200,000\\text{ USD} + 500,000\\text{ USD} = 1,000,000\\text{ USD}$ 3. Defensive Interval Ratio (DIR):\n$$\\text{DIR} = \\frac{\\text{Defensive Assets}}{\\text{Daily Cash Expenditures}} = \\frac{1,000,000\\text{ USD}}{20,000\\text{ USD/day}} = 50\\text{ days}$$\nThis indicates the company can cover its daily cash expenses for 50 days without any additional cash inflow.\n\nDistractor Analysis:\n- A considers only cash and marketable securities (500,000 USD/ 20,000 = 25$ days).\n- C uses incorrect expense assumptions or miscalculated daily burn rates."
+    "explanation": "1. Daily Cash Expenditures:\n$$\\text{Daily Expenditures} = \\frac{\\text{Annual Cash Expenditures}}{365} = \\frac{7,300,000\\text{ USD}}{365} = 20,000\\text{ USD per day}$$\n2. Defensive Assets:\n$$\\text{Defensive Assets} = \\text{Cash} + \\text{Marketable Securities} + \\text{Receivables}$$\n$$\\text{Defensive Assets} = 300,000\\text{ USD} + 200,000\\text{ USD} + 500,000\\text{ USD} = 1,000,000USD\n3. Defensive Interval Ratio (DIR):\n$$\\text{DIR} = \\frac{\\text{Defensive Assets}}{\\text{Daily Cash Expenditures}} = \\frac{1,000,000\\text{ USD}}{20,000\\text{ USD/day}} = 50days\nThis indicates the company can cover its daily cash expenses for 50 days without any additional cash inflow.\n\nDistractor Analysis:\n- A considers only cash and marketable securities (500,000 USD / 20,000 = 25 days).\n- C uses incorrect expense assumptions or miscalculated daily burn rates."
   },
   {
     "id": "L1-Q083",
@@ -1235,14 +1235,14 @@
     "module": "m6-ratios",
     "topic": "Financial Analysis Techniques",
     "los": "LOS 25.b: Calculate and interpret activity, liquidity, solvency, and profitability ratios.",
-    "question": "A company has short-term interest-bearing notes of 400,000 USD, long-term debt of 1,600,000 USD, total liabilities of 3,000,000 USD, and total shareholders' equity of 2,000,000 USD. Total assets are 5,000,000 USD. What are the company's debt-to-equity ratio (using total debt) and financial leverage ratio?",
+    "question": "A company has short-term interest-bearing notes of 400,000 USD, long-term debt of 1,600,000 USD, total liabilities of 3,000,000 USD, and total shareholders' equity of 2,000,000. Total assets are 5,000,000. What are the company's debt-to-equity ratio (using total debt) and financial leverage ratio?",
     "options": {
       "A": "Debt-to-equity: 1.00; Financial leverage: 2.50.",
       "B": "Debt-to-equity: 1.50; Financial leverage: 2.50.",
       "C": "Debt-to-equity: 1.00; Financial leverage: 1.50."
     },
     "answer": "A",
-    "explanation": "1. Total Debt (interest-bearing debt):\n$$\\text{Total Debt} = \\text{Short-Term Debt} + \\text{Long-Term Debt} = 400,000\\text{ USD} + 1,600,000\\text{ USD} = 2,000,000\\text{ USD}$ 2. Debt-to-Equity Ratio:\n$$\\text{Debt-to-Equity} = \\frac{\\text{Total Debt}}{\\text{Total Equity}} = \\frac{2,000,000\\text{ USD}}{2,000,000\\text{ USD}} = 1.00$ 3. Financial Leverage Ratio (Equity Multiplier):\n$$\\text{Financial Leverage} = \\frac{\\text{Total Assets}}{\\text{Total Equity}} = \\frac{5,000,000\\text{ USD}}{2,000,000\\text{ USD}} = 2.50$$\n\nDistractor Analysis:\n- B uses total liabilities (3,000,000 USD) instead of interest-bearing debt for the debt-to-equity ratio: 3,000,000 USD/ 2,000,000 = 1.50$.\n- C uses total liabilities divided by total equity for leverage."
+    "explanation": "1. Total Debt (interest-bearing debt):\n$$\\text{Total Debt} = \\text{Short-Term Debt} + \\text{Long-Term Debt} = 400,000\\text{ USD} + 1,600,000\\text{ USD} = 2,000,000\\text{ USD}$$\n2. Debt-to-Equity Ratio:\n$$\\text{Debt-to-Equity} = \\frac{\\text{Total Debt}}{\\text{Total Equity}} = \\frac{2,000,000\\text{ USD}}{2,000,000\\text{ USD}} = 1.00$$\n3. Financial Leverage Ratio (Equity Multiplier):\n$$\\text{Financial Leverage} = \\frac{\\text{Total Assets}}{\\text{Total Equity}} = \\frac{5,000,000\\text{ USD}}{2,000,000\\text{ USD}} = 2.50$$\n\nDistractor Analysis:\n- B uses total liabilities (3,000,000 USD) instead of interest-bearing debt for the debt-to-equity ratio: 3,000,000 USD / 2,000,000 = 1.50.\n- C uses total liabilities divided by total equity for leverage."
   },
   {
     "id": "L1-Q084",
@@ -1250,14 +1250,14 @@
     "module": "m6-ratios",
     "topic": "Financial Analysis Techniques",
     "los": "LOS 25.b: Calculate and interpret activity, liquidity, solvency, and profitability ratios.",
-    "question": "For the year ended 31 December, an industrial firm reports EBIT of 4,800,000 USD, interest expense of 800,000 USD, and operating lease payments of 400,000 USD. What are the company's interest coverage ratio (times interest earned) and fixed charge coverage ratio?",
+    "question": "For the year ended 31 December, an industrial firm reports EBIT of 4,800,000 USD, interest expense of 800,000 USD, and operating lease payments of 400,000. What are the company's interest coverage ratio (times interest earned) and fixed charge coverage ratio?",
     "options": {
       "A": "Interest coverage: 6.00 times; Fixed charge coverage: 4.33 times.",
       "B": "Interest coverage: 6.00 times; Fixed charge coverage: 4.00 times.",
       "C": "Interest coverage: 5.00 times; Fixed charge coverage: 3.75 times."
     },
     "answer": "A",
-    "explanation": "1. Interest Coverage Ratio (Times Interest Earned):\n$$\\text{Interest Coverage} = \\frac{\\text{EBIT}}{\\text{Interest Payments}} = \\frac{4,800,000\\text{ USD}}{800,000\\text{ USD}} = 6.00\\text{ times}$ 2. Fixed Charge Coverage Ratio:\n$$\\text{Fixed Charge Coverage} = \\frac{\\text{EBIT} + \\text{Lease Payments}}{\\text{Interest Payments} + \\text{Lease Payments}}$$\n$$\\text{Fixed Charge Coverage} = \\frac{4,800,000\\text{ USD} + 400,000\\text{ USD}}{800,000\\text{ USD} + 400,000\\text{ USD}} = \\frac{5,200,000\\text{ USD}}{1,200,000\\text{ USD}} = 4.333 \\approx 4.33\\text{ times}$$\n\nDistractor Analysis:\n- B fails to add back lease payments to the numerator: 4,800,000 USD/ 1,200,000 = 4.00$ times.\n- C makes calculation errors in EBIT."
+    "explanation": "1. Interest Coverage Ratio (Times Interest Earned):\n$$\\text{Interest Coverage} = \\frac{\\text{EBIT}}{\\text{Interest Payments}} = \\frac{4,800,000\\text{ USD}}{800,000\\text{ USD}} = 6.00\\text{ times}$$\n2. Fixed Charge Coverage Ratio:\n$$\\text{Fixed Charge Coverage} = \\frac{\\text{EBIT} + \\text{Lease Payments}}{\\text{Interest Payments} + \\text{Lease Payments}}$$\n$$\\text{Fixed Charge Coverage} = \\frac{4,800,000\\text{ USD} + 400,000\\text{ USD}}{800,000\\text{ USD} + 400,000\\text{ USD}} = \\frac{5,200,000\\text{ USD}}{1,200,000\\text{ USD}} = 4.333 \\approx 4.33\\text{ times}$$\n\nDistractor Analysis:\n- B fails to add back lease payments to the numerator: 4,800,000 USD / 1,200,000 = 4.00 times.\n- C makes calculation errors in EBIT."
   },
   {
     "id": "L1-Q085",
@@ -1265,14 +1265,14 @@
     "module": "m6-ratios",
     "topic": "Financial Analysis Techniques",
     "los": "LOS 25.b: Calculate and interpret activity, liquidity, solvency, and profitability ratios.",
-    "question": "A company reports revenue of 10,000,000 USD, gross profit of 4,500,000 USD, operating profit (EBIT) of 1,800,000 USD, and net income of 1,200,000 USD. Average total assets are 8,000,000 USD. What are the company's operating profit margin and return on assets (ROA)?",
+    "question": "A company reports revenue of 10,000,000 USD, gross profit of 4,500,000 USD, operating profit (EBIT) of 1,800,000 USD, and net income of 1,200,000. Average total assets are 8,000,000. What are the company's operating profit margin and return on assets (ROA)?",
     "options": {
       "A": "Operating profit margin: 45%; ROA: 15%.",
       "B": "Operating profit margin: 18%; ROA: 15%.",
       "C": "Operating profit margin: 18%; ROA: 22.5%."
     },
     "answer": "B",
-    "explanation": "1. Operating Profit Margin:\n$$\\text{Operating Margin} = \\frac{\\text{Operating Profit (EBIT)}}{\\text{Revenue}} = \\frac{1,800,000\\text{ USD}}{10,000,000\\text{ USD}} = 18.0\\%$ 2. Return on Assets (ROA):\n$$\\text{ROA} = \\frac{\\text{Net Income}}{\\text{Average Total Assets}} = \\frac{1,200,000\\text{ USD}}{8,000,000\\text{ USD}} = 15.0\\%$$\n(Note: Operating ROA would be $\\text{EBIT} / \\text{Assets} = 1,800,000 / 8,000,000 = 22.5\\%$).\n\nDistractor Analysis:\n- A quotes gross margin (4,500,000 USD/ 10,000,000 = 45\\%$).\n- C quotes operating ROA (22.5%) instead of standard net ROA (15%)."
+    "explanation": "1. Operating Profit Margin:\n$$\\text{Operating Margin} = \\frac{\\text{Operating Profit (EBIT)}}{\\text{Revenue}} = \\frac{1,800,000\\text{ USD}}{10,000,000\\text{ USD}} = 18.0\\%$$\n2. Return on Assets (ROA):\n$$\\text{ROA} = \\frac{\\text{Net Income}}{\\text{Average Total Assets}} = \\frac{1,200,000\\text{ USD}}{8,000,000\\text{ USD}} = 15.0\\%$$\n(Note: Operating ROA would be $\\text{EBIT} / \\text{Assets} = 1,800,000 / 8,000,000 = 22.5\\%$).\n\nDistractor Analysis:\n- A quotes gross margin (4,500,000 USD / 10,000,000 = 45\\%).\n- C quotes operating ROA (22.5%) instead of standard net ROA (15%)."
   },
   {
     "id": "L1-Q086",
@@ -1317,7 +1317,7 @@
       "C": "Interest burden: 0.75; ROE: 25.2%."
     },
     "answer": "A",
-    "explanation": "Calculating the 5 components of the five-stage DuPont system:\n1. Tax Burden = $\\frac{\\text{Net Income}}{\\text{EBT}} = \\frac{630,000\\text{ USD}}{900,000\\text{ USD}} = 0.702 USD. Interest Burden = $\\frac{\\text{EBT}}{\\text{EBIT}} = \\frac{900,000\\text{ USD}}{1,200,000\\text{ USD}} = 0.753 USD. EBIT Margin = $\\frac{\\text{EBIT}}{\\text{Revenue}} = \\frac{1,200,000\\text{ USD}}{8,000,000\\text{ USD}} = 0.15$ (15%)\n4. Asset Turnover = $\\frac{\\text{Revenue}}{\\text{Assets}} = \\frac{8,000,000\\text{ USD}}{5,000,000\\text{ USD}} = 1.605 USD. Financial Leverage = $\\frac{\\text{Assets}}{\\text{Equity}} = \\frac{5,000,000\\text{ USD}}{2,000,000\\text{ USD}} = 2.50$\n\nMultiplying all 5 components:\n$$\\text{ROE} = 0.70 \\times 0.75 \\times 0.15 \\times 1.60 \\times 2.50 = 0.315 = 31.5\\%$$\nDirect check: $\\text{ROE} = \\frac{\\text{Net Income}}{\\text{Equity}} = \\frac{630,000\\text{ USD}}{2,000,000\\text{ USD}} = 31.5\\%$.\n\nDistractor Analysis:\n- B confuses the Tax Burden (0.70) with the Interest Burden (0.75).\n- C uses incorrect leverage or turnover multiplications."
+    "explanation": "Calculating the 5 components of the five-stage DuPont system:\n1. Tax Burden = $\\frac{\\text{Net Income}}{\\text{EBT}} = \\frac{630,000\\text{ USD}}{900,000\\text{ USD}} = 0.702. Interest Burden = $\\frac{\\text{EBT}}{\\text{EBIT}} = \\frac{900,000\\text{ USD}}{1,200,000\\text{ USD}} = 0.753. EBIT Margin = $\\frac{\\text{EBIT}}{\\text{Revenue}} = \\frac{1,200,000\\text{ USD}}{8,000,000\\text{ USD}} = 0.15$ (15%)\n4. Asset Turnover = $\\frac{\\text{Revenue}}{\\text{Assets}} = \\frac{8,000,000\\text{ USD}}{5,000,000\\text{ USD}} = 1.605$. Financial Leverage = $\\frac{\\text{Assets}}{\\text{Equity}} = \\frac{5,000,000\\text{ USD}}{2,000,000\\text{ USD}} = 2.50$\n\nMultiplying all 5 components:\n$$\\text{ROE} = 0.70 \\times 0.75 \\times 0.15 \\times 1.60 \\times 2.50 = 0.315 = 31.5\\%$$\nDirect check: $\\text{ROE} = \\frac{\\text{Net Income}}{\\text{Equity}} = \\frac{630,000\\text{ USD}}{2,000,000\\text{ USD}} = 31.5\\%$.\n\nDistractor Analysis:\n- B confuses the Tax Burden (0.70) with the Interest Burden (0.75).\n- C uses incorrect leverage or turnover multiplications."
   },
   {
     "id": "L1-Q089",

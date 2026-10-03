@@ -1,17 +1,23 @@
-# Project Context: Finance Workspace
+# Project Context: Finance Workspace (CFA Master Suite)
 
 - **Workspace Path**: `c:\Users\Rahul\Documents\antigravity\Finance`
-- **Domain**: CFA Program Exam Prep (Level 1 & Level 2), covering Financial Statement Analysis (FSA), Fixed Income, and Equity Valuation.
-- **Total Questions**: **855 Certified Questions** across 2 comprehensive interactive suites:
-  - **FSA Master Suite**: 440 Questions (190 L1 MCQs + 250 L2 Questions across 50 vignettes) in `index.html` (1.09 MB).
-  - **Fixed Income & Equity Suite**: 415 Questions (120 L1 FI MCQs, 115 L1 Equity MCQs, 85 L2 FI across 17 vignettes, 95 L2 Equity across 19 vignettes) in `fi_eq_dashboard.html` (828 KB).
+- **Domain**: CFA Program Exam Prep (Level 1 & Level 2), covering Financial Statement Analysis (FSA), Fixed Income, and Equity Investments.
+- **Architecture**: Unified Single-Page Application (SPA) Portal at `index.html` (1.87 MB) with backward-compatibility redirect at `fi_eq_dashboard.html`.
+- **Total Questions**: **855 Certified Questions** across 3 modules:
+  - **Financial Statement Analysis**: 440 Questions (190 L1 MCQs + 250 L2 Questions across 44 vignettes)
+  - **Fixed Income**: 205 Questions (120 L1 MCQs + 85 L2 Questions across 17 vignettes)
+  - **Equity Investments**: 210 Questions (115 L1 MCQs + 95 L2 Questions across 19 vignettes)
+  - **Level Breakdown**: 425 Level 1 MCQs, 430 Level 2 Questions across 80 distinct vignettes.
 - **Core Deliverables**:
-  - `fi_eq_dashboard.html`: Fully interactive CFA study dashboard with KaTeX math, Chart.js simulations, dark/light themes, 415 exam questions, and 9 financial engines.
-  - `index.html`: Complete FSA study portal with 440 questions, interactive feedback, and multi-period financial analyses.
-  - `data/fi_eq/cfa_fi_eq_master.json`: 415 validated questions.
-  - `data/cfa_question_bank_master.json`: 440 validated questions.
-  - `data/fi_eq/`: Modular dataset files (`l1_fixed_income.json`, `l1_equity.json`, `l2_fixed_income.json`, `l2_equity.json`).
-  - `scripts/`: Compilation, simulation, and audit tools (`compile_master_suite.py`, `compile_qb.py`, `generate_full_dashboard.py`, `audit_suite.py`, `verify_final_suite.py`).
+  - `index.html`: Unified CFA Master Dashboard housing all 855 questions, 80 vignette item sets, 9 simulation engines, and full 20-chapter FSA reference library with KaTeX & Chart.js.
+  - `fi_eq_dashboard.html`: Zero-latency redirect page forwarding legacy bookmarks to `index.html`.
+  - `data/cfa_master_855.json`: Consolidated, normalized master JSON dataset (1.90 MB, 855 questions).
+  - `data/fsa_reference_extracted.html`: 65 KB extracted curriculum notes and formula sheets.
+  - `scripts/`:
+    - `compile_unified_suite.py`: Multi-source dataset compiler and validator.
+    - `extract_fsa_notes.py`: FSA reference notes extractor.
+    - `generate_unified_dashboard.py`: Unified HTML dashboard generation engine.
+    - `verify_unified_suite.py`: Strict schema, KaTeX parity, and stray dollar verifier.
 - **Interactive Simulations (9 Total)**:
   1. Yield Curve Shift, Twist & Butterfly Simulator.
   2. Binomial Interest Rate Tree & Embedded Option Backward Induction Engine.
@@ -19,14 +25,13 @@
   4. Key Rate Duration & Sensitivity Visualizer.
   5. Floating-Rate Note (FRN) Pricing & Discount Margin Engine.
   6. Residual Income Persistence Decay Explorer ($\omega \in [0, 1]$).
-  7. FCFF → FCFE Cash Flow Waterfall Bridge.
+  7. FCFF -> FCFE Cash Flow Waterfall Bridge.
   8. Multinational Currency Translation Engine (Current Rate vs. Temporal Method).
   9. MBS Prepayment Simulator & Contraction/Extension Risk Engine.
-- **Audit & Compliance**:
+- **Compliance & Auditing**:
   - Currency strictly formatted with `USD`, `EUR`, `GBP` or `\$`.
-  - KaTeX delimiters balanced and error-free: 0 schema errors, 0 distractor errors, 0 KaTeX errors.
+  - 100% KaTeX delimiter balance (0 unpaired delimiters, 0 stray dollars outside math blocks).
+  - 0 schema errors across all 855 questions and 80 item sets.
 - **Live Deployment & Repositories**:
   - **GitHub Repository**: https://github.com/rahulxcodex/cfa-master-suite (main branch)
-  - **Live GitHub Pages URL**: https://rahulxcodex.github.io/cfa-master-suite/
-  - **Live Fixed Income & Equity Dashboard**: https://rahulxcodex.github.io/cfa-master-suite/fi_eq_dashboard.html
-  - **Vercel Configuration**: `vercel.json` deployed to repository; production link ready for Vercel import/CLI sync.
+  - **Live Portal**: https://rahulxcodex.github.io/cfa-master-suite/
