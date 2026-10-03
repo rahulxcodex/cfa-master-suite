@@ -103,7 +103,7 @@ dashboard_template = r'''<!DOCTYPE html>
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", Helvetica, Arial, sans-serif, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji";
       background-color: var(--bg-primary);
       color: var(--text-primary);
       line-height: 1.6;
@@ -189,21 +189,26 @@ dashboard_template = r'''<!DOCTYPE html>
     main {
       margin-left: var(--sidebar-width);
       flex-grow: 1;
-      padding: 30px 45px;
+      padding: 0 45px 35px 45px;
       max-width: 1400px;
       overflow-y: auto;
       min-height: 100vh;
     }
 
     .top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: var(--bg-primary);
+      padding: 24px 0 16px 0;
+      margin-bottom: 25px;
+      border-bottom: 1px solid var(--border-color);
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 25px;
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 15px;
       gap: 15px;
       flex-wrap: wrap;
+      backdrop-filter: blur(8px);
     }
     .top-bar h2 {
       font-size: 22px;
@@ -518,10 +523,14 @@ dashboard_template = r'''<!DOCTYPE html>
     .badge-eq { background: rgba(63, 185, 80, 0.15); color: var(--accent-emerald); border: 1px solid rgba(63, 185, 80, 0.3); }
 
     .question-los {
-      font-size: 11px;
+      font-size: 11.5px;
       color: var(--text-secondary);
-      max-width: 65%;
-      text-align: right;
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      padding: 3px 8px;
+      display: inline-block;
+      max-width: 100%;
     }
     .question-text {
       font-size: 14.5px;
@@ -729,10 +738,25 @@ dashboard_template = r'''<!DOCTYPE html>
     .sidebar-backdrop.active {
       display: block;
     }
+    .sidebar-close-btn {
+      display: none;
+      padding: 4px 8px;
+      font-size: 11px;
+      margin-top: 2px;
+    }
+    .l2-filter-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1.8fr 1.1fr;
+      gap: 16px;
+    }
+    @media (max-width: 1000px) {
+      .l2-filter-grid { grid-template-columns: 1fr; }
+    }
 
     /* Responsive adjustments */
     @media (max-width: 900px) {
       .menu-toggle-btn { display: inline-flex; }
+      .sidebar-close-btn { display: inline-flex; }
       aside {
         position: fixed;
         top: 0;
@@ -747,7 +771,7 @@ dashboard_template = r'''<!DOCTYPE html>
       aside.mobile-open {
         transform: translateX(0);
       }
-      main { margin-left: 0; padding: 20px 16px; }
+      main { margin-left: 0; padding: 0 16px 25px 16px; }
       .grid-4, .grid-3, .grid-2 { grid-template-columns: 1fr; }
     }
   </style>
@@ -764,7 +788,7 @@ dashboard_template = r'''<!DOCTYPE html>
         <h1>🎓 CFA Master Platform</h1>
         <p>Unified Exam Suite (855 Questions)</p>
       </div>
-      <button class="btn-top" onclick="closeMobileNav()" style="padding: 4px 8px; font-size: 11px; margin-top: 2px;" title="Close Menu">✕</button>
+      <button class="btn-top sidebar-close-btn" onclick="closeMobileNav()" title="Close Menu">✕</button>
     </div>
     <ul class="nav-links">
       <li><a href="#overview" class="active" onclick="switchTab('overview')"><span>📊 Overview & Telemetry</span></a></li>
@@ -900,7 +924,7 @@ dashboard_template = r'''<!DOCTYPE html>
     <section id="l2-vignettes">
       <div class="card">
         <div class="card-title">Level 2 Vignette & Item-Set Explorer (80 Vignettes / 430 Questions)</div>
-        <div class="grid-3" style="margin-bottom: 16px;">
+        <div class="l2-filter-grid" style="margin-bottom: 16px;">
           <div class="control-group">
             <label>Filter Subject:</label>
             <select id="l2SubjectSelect" onchange="onL2SubjectChange()">
@@ -1456,6 +1480,8 @@ dashboard_template = r'''<!DOCTYPE html>
       if (window.location.hash !== '#' + tabId) {
         history.replaceState(null, '', '#' + tabId);
       }
+      const m = document.querySelector('main');
+      if (m) m.scrollTo({ top: 0, behavior: 'smooth' });
       window.scrollTo({ top: 0, behavior: 'smooth' });
       window.dispatchEvent(new Event('resize'));
       renderMath();
@@ -1795,7 +1821,8 @@ dashboard_template = r'''<!DOCTYPE html>
         const v = vignettesMap[vid];
         const opt = document.createElement('option');
         opt.value = vid;
-        opt.innerText = `[${v.subject.replace('Financial Statement Analysis', 'FSA')}] ${v.id}: ${v.title} (${v.questions.length} Qs)`;
+        const shortSubj = v.subject === 'Financial Statement Analysis' ? 'FSA' : (v.subject === 'Equity Investments' ? 'Equity' : (v.subject === 'Fixed Income' ? 'FI' : v.subject));
+        opt.innerText = `[${shortSubj}] ${v.id}: ${v.title} (${v.questions.length} Qs)`;
         select.appendChild(opt);
       });
 
