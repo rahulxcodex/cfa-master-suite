@@ -34,6 +34,7 @@
   - 0 schema errors across all 855 questions and 80 item sets.
   - Full 20-chapter FSA notes section restored with complete CSS class coverage and 6 interactive Chart.js visualizations.
   - Mobile drawer navigation with responsive sidebar, backdrop overlay, and hamburger toggle.
+  - Desktop UI refinements: sticky top-bar with backdrop-filter blur, Windows emoji font stack ("Segoe UI Emoji"), desktop sidebar close button hidden, wider L2 vignette dropdown (`1.1fr 1.8fr 1.1fr`), and pill-badged LOS question headers.
 - **Live Deployment & Repositories**:
   - **GitHub Repository**: https://github.com/rahulxcodex/cfa-master-suite (main branch)
   - **Live Portal**: https://rahulxcodex.github.io/cfa-master-suite/
