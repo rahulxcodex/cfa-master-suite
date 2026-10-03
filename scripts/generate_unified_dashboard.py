@@ -2,7 +2,7 @@
 """
 generate_unified_dashboard.py
 Compiles the complete, unified CFA Master Study Dashboard into index.html
-Housing all 855 questions (FSA, Fixed Income, Equity), 9 financial simulations,
+Housing all 875 questions (FSA, Fixed Income, Equity), 9 financial simulations,
 and the full 20-chapter FSA reference library with KaTeX math rendering and Chart.js telemetry.
 Also writes a backward-compatibility redirect at fi_eq_dashboard.html.
 """
@@ -24,11 +24,11 @@ dashboard_template = r'''<!DOCTYPE html>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CFA Master Study Platform: FSA, Fixed Income & Equity (L1 & L2)</title>
   
-  <meta name="description" content="Unified CFA Program Level 1 & Level 2 Master Exam Preparation Suite. 855 audited questions across Financial Statement Analysis, Fixed Income, and Equity Investments, with 80 case vignettes, 9 simulation engines, and complete 20-chapter reference library.">
+  <meta name="description" content="Unified CFA Program Level 1 & Level 2 Master Exam Preparation Suite. 875 audited questions across Financial Statement Analysis, Fixed Income, and Equity Investments, with 84 case vignettes, 9 simulation engines, and complete 20-chapter reference library.">
   <link rel="canonical" href="https://rahulxcodex.github.io/cfa-master-suite/">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
-  <meta property="og:title" content="CFA Master Study Platform (855 Questions, 9 Sims, 20 Chapters)">
-  <meta property="og:description" content="Comprehensive CFA L1 & L2 prep platform: 855 questions, 80 vignettes, 9 simulations, and full 20-chapter FSA notes with KaTeX & Chart.js.">
+  <meta property="og:title" content="CFA Master Study Platform (875 Questions, 9 Sims, 20 Chapters)">
+  <meta property="og:description" content="Comprehensive CFA L1 & L2 prep platform: 875 questions, 84 vignettes, 9 simulations, and full 20-chapter FSA notes with KaTeX & Chart.js.">
   <meta property="og:url" content="https://rahulxcodex.github.io/cfa-master-suite/">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
@@ -187,10 +187,10 @@ dashboard_template = r'''<!DOCTYPE html>
 
     /* Main Container */
     main {
-      margin-left: var(--sidebar-width);
-      flex-grow: 1;
+      flex: 1 1 auto;
+      min-width: 0;
       padding: 0 45px 35px 45px;
-      max-width: 1400px;
+      max-width: 1550px;
       overflow-y: auto;
       min-height: 100vh;
     }
@@ -822,14 +822,14 @@ dashboard_template = r'''<!DOCTYPE html>
     <div class="sidebar-header" style="display: flex; justify-content: space-between; align-items: flex-start;">
       <div>
         <h1>🎓 CFA Master Platform</h1>
-        <p>Unified Exam Suite (855 Questions)</p>
+        <p>Unified Exam Suite (875 Questions)</p>
       </div>
       <button class="btn-top sidebar-close-btn" onclick="closeMobileNav()" title="Close Menu">✕</button>
     </div>
     <ul class="nav-links">
       <li><a href="#overview" class="active" onclick="switchTab('overview')"><span>📊 Overview & Telemetry</span></a></li>
       <li><a href="#l1-practice" onclick="switchTab('l1-practice')"><span>📝 Level 1 Question Bank</span> <span class="nav-badge">425 Q</span></a></li>
-      <li><a href="#l2-vignettes" onclick="switchTab('l2-vignettes')"><span>📑 Level 2 Case Vignettes</span> <span class="nav-badge">80 V / 430 Q</span></a></li>
+      <li><a href="#l2-vignettes" onclick="switchTab('l2-vignettes')"><span>📑 Level 2 Case Vignettes</span> <span class="nav-badge">84 V / 450 Q</span></a></li>
       
       <li class="nav-divider"><span>FINANCIAL SIMULATIONS (9)</span></li>
       <li><a href="#sim-yield" onclick="switchTab('sim-yield')"><span>📈 Yield Curve Simulator</span></a></li>
@@ -860,7 +860,7 @@ dashboard_template = r'''<!DOCTYPE html>
         </div>
       </div>
       <div class="stats-pills">
-        <div class="stat-pill" style="color: var(--accent-blue);">Total: 855 Questions</div>
+        <div class="stat-pill" style="color: var(--accent-blue);">Total: 875 Questions</div>
         <div class="stat-pill" style="color: var(--accent-emerald);">Score: <span id="scoreDisplay">0 / 0 (0%)</span></div>
         <button class="btn-top" onclick="resetScores()">🔄 Reset Score</button>
         <button class="btn-top" onclick="toggleTheme()">🌓 Theme</button>
@@ -872,8 +872,8 @@ dashboard_template = r'''<!DOCTYPE html>
       <div class="grid-4" style="margin-bottom: 24px;">
         <div class="card" style="margin-bottom: 0;">
           <div style="font-size: 11px; color: var(--text-secondary); text-transform: uppercase; font-weight: 700;">Financial Statement Analysis</div>
-          <div style="font-size: 28px; font-weight: 700; color: var(--accent-amber); margin-top: 5px;">440 Qs</div>
-          <div style="font-size: 11.5px; color: var(--text-secondary); margin-top: 4px;">190 L1 MCQs + 250 L2 (44 Vignettes)</div>
+          <div style="font-size: 28px; font-weight: 700; color: var(--accent-amber); margin-top: 5px;">460 Qs</div>
+          <div style="font-size: 11.5px; color: var(--text-secondary); margin-top: 4px;">190 L1 MCQs + 270 L2 (48 Vignettes)</div>
         </div>
         <div class="card" style="margin-bottom: 0;">
           <div style="font-size: 11px; color: var(--text-secondary); text-transform: uppercase; font-weight: 700;">Fixed Income</div>
@@ -887,8 +887,8 @@ dashboard_template = r'''<!DOCTYPE html>
         </div>
         <div class="card" style="margin-bottom: 0;">
           <div style="font-size: 11px; color: var(--text-secondary); text-transform: uppercase; font-weight: 700;">Total Master Suite</div>
-          <div style="font-size: 28px; font-weight: 700; color: var(--accent-blue); margin-top: 5px;">855 Qs</div>
-          <div style="font-size: 11.5px; color: var(--text-secondary); margin-top: 4px;">425 L1 + 430 L2 (80 Vignettes) + 9 Sims</div>
+          <div style="font-size: 28px; font-weight: 700; color: var(--accent-blue); margin-top: 5px;">875 Qs</div>
+          <div style="font-size: 11.5px; color: var(--text-secondary); margin-top: 4px;">425 L1 + 450 L2 (84 Vignettes) + 9 Sims</div>
         </div>
       </div>
 
@@ -911,7 +911,7 @@ dashboard_template = r'''<!DOCTYPE html>
         <div class="card-title">Quick Launch Study Portals</div>
         <div class="grid-3" style="margin-bottom: 12px;">
           <button class="btn" onclick="switchTab('l1-practice')">📝 Level 1 Question Bank (425 Q)</button>
-          <button class="btn btn-secondary" onclick="switchTab('l2-vignettes')">📑 Level 2 Case Vignettes (80 V)</button>
+          <button class="btn btn-secondary" onclick="switchTab('l2-vignettes')">📑 Level 2 Case Vignettes (84 V)</button>
           <button class="btn btn-secondary" onclick="switchTab('sim-yield')">🔬 Financial Simulations Lab (9)</button>
         </div>
         <div class="grid-3">
@@ -969,13 +969,13 @@ dashboard_template = r'''<!DOCTYPE html>
     <!-- 3. LEVEL 2 CASE VIGNETTES -->
     <section id="l2-vignettes">
       <div class="card">
-        <div class="card-title">Level 2 Vignette & Item-Set Explorer (80 Vignettes / 430 Questions)</div>
+        <div class="card-title">Level 2 Vignette & Item-Set Explorer (84 Vignettes / 450 Questions)</div>
         <div class="l2-filter-grid" style="margin-bottom: 16px;">
           <div class="control-group">
             <label>Filter Subject:</label>
             <select id="l2SubjectSelect" onchange="onL2SubjectChange()">
-              <option value="ALL">All Subjects (80 Vignettes / 430 Qs)</option>
-              <option value="Financial Statement Analysis">Financial Statement Analysis (44 Vignettes / 250 Qs)</option>
+              <option value="ALL">All Subjects (84 Vignettes / 450 Qs)</option>
+              <option value="Financial Statement Analysis">Financial Statement Analysis (48 Vignettes / 270 Qs)</option>
               <option value="Fixed Income">Fixed Income (17 Vignettes / 85 Qs)</option>
               <option value="Equity Investments">Equity Investments (19 Vignettes / 95 Qs)</option>
             </select>
@@ -1508,7 +1508,7 @@ dashboard_template = r'''<!DOCTYPE html>
   </main>
 
   <script>
-    // Embedded Master Question Bank (855 Questions)
+    // Embedded Master Question Bank (875 Questions)
     const questionBank = __QUESTION_BANK_DATA__;
 
     // State
@@ -1637,9 +1637,9 @@ dashboard_template = r'''<!DOCTYPE html>
       overviewChart = new Chart(ctx, {
         type: 'doughnut',
         data: {
-          labels: ['FSA (440 Q)', 'Fixed Income (205 Q)', 'Equity Investments (210 Q)'],
+          labels: ['FSA (460 Q)', 'Fixed Income (205 Q)', 'Equity Investments (210 Q)'],
           datasets: [{
-            data: [440, 205, 210],
+            data: [460, 205, 210],
             backgroundColor: ['#d29922', '#39c5cf', '#3fb950'],
             borderColor: '#161b22',
             borderWidth: 2

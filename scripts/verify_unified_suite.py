@@ -2,9 +2,9 @@
 """
 verify_unified_suite.py
 Rigorous audit and assertion verification for the unified CFA Master Platform:
-- 855 total questions
+- 875 total questions
 - 425 Level 1 questions (190 FSA, 120 FI, 115 Equity)
-- 430 Level 2 questions across 80 distinct vignettes (250 FSA across 44 V, 85 FI across 17 V, 95 EQ across 19 V)
+- 450 Level 2 questions across 84 distinct vignettes (270 FSA across 48 V, 85 FI across 17 V, 95 EQ across 19 V)
 - 9 Financial simulation engines
 - KaTeX syntax balance and currency rule compliance
 """
@@ -28,7 +28,7 @@ with open(MASTER_JSON, "r", encoding="utf-8") as f:
 
 total_count = len(questions)
 print(f"Total questions loaded from {MASTER_JSON}: {total_count}")
-assert total_count == 855, f"Expected 855 questions, got {total_count}"
+assert total_count == 875, f"Expected 875 questions, got {total_count}"
 
 # Subject and level counters
 by_subj = {}
@@ -109,8 +109,8 @@ print(f"  Level 2 Item Sets: {total_vignettes} distinct vignettes (FSA: {len(vig
 
 # Assertions
 assert by_level[1] == 425, f"Expected 425 L1, got {by_level[1]}"
-assert by_level[2] == 430, f"Expected 430 L2, got {by_level[2]}"
-assert total_vignettes == 80, f"Expected 80 vignettes, got {total_vignettes}"
+assert by_level[2] == 450, f"Expected 450 L2, got {by_level[2]}"
+assert total_vignettes == 84, f"Expected 84 vignettes, got {total_vignettes}"
 
 # Check HTML size and content
 with open(INDEX_HTML, "r", encoding="utf-8") as f:

@@ -65,7 +65,7 @@ def compile_all():
 
     total = len(all_questions)
     print(f"Total consolidated questions: {total}")
-    assert total == 855, f"Expected 855 questions, found {total}"
+    assert total == 875, f"Expected 875 questions, found {total}"
 
     # Validation of fields
     for q in all_questions:
