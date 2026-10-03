@@ -1,0 +1,327 @@
+<div class="top-controls">
+  <button class="btn-ctrl" onclick="toggleTheme()">🌓 Switch Theme</button>
+  <button class="btn-ctrl" onclick="window.print()">🖨️ Print / Save as PDF</button>
+</div>
+
+<div class="doc-hero">
+  <h1>Equity Valuation & Analysis</h1>
+  <p>The curriculum-complete master study guide synthesized for CFA&reg; Level 1 and Level 2 candidates. Covering industry competitive strategy (Porter's Five Forces), multi-stage Dividend Discount Models (DDM & H-Model), Free Cash Flow valuation (FCFF & FCFE derivations), enterprise value multiples, residual income accounting, and private company normalization discounts.</p>
+  <div class="meta-tags">
+    <span class="badge badge-green">CFA Exam Syllabus (L1 & L2)</span>
+    <span class="badge badge-blue">Comprehensive Core Scope</span>
+    <span class="badge badge-purple">DCF & Multiplier Valuation</span>
+    <span class="badge badge-amber">Clean Surplus Accounting</span>
+  </div>
+</div>
+
+<div class="card" style="margin-top: 15px; margin-bottom: 25px;">
+  <div class="card-title">📊 Quick Navigation: Equity Investments Curriculum Modules</div>
+  <div class="fsa-nav-bar">
+    <a class="fsa-nav-btn" href="#eq-m1-markets">01. Market Structure & Indexes</a>
+    <a class="fsa-nav-btn" href="#eq-m2-industry">02. Industry & Strategy</a>
+    <a class="fsa-nav-btn" href="#eq-m3-ddm">03. Dividend Discount Models</a>
+    <a class="fsa-nav-btn" href="#eq-m4-fcf">04. Free Cash Flow (FCFF/FCFE)</a>
+    <a class="fsa-nav-btn" href="#eq-m5-multiples">05. Multipliers & Multiples</a>
+    <a class="fsa-nav-btn" href="#eq-m6-ri">06. Residual Income (RI)</a>
+    <a class="fsa-nav-btn" href="#eq-m7-private">07. Private Company Valuation</a>
+    <a class="fsa-nav-btn" href="#eq-formulas" style="color: var(--accent-emerald); font-weight: 700;">Master Formula Sheet</a>
+  </div>
+</div>
+
+<!-- ========================================================================================= -->
+<!-- MODULE 1: MARKET STRUCTURE & INDEXES -->
+<!-- ========================================================================================= -->
+<section id="eq-m1-markets" class="notes-chapter">
+  <h2 class="section-heading"><span class="num">01.</span> Market Organization, Security Trading & Indexes</h2>
+  <p>Financial markets channel capital from savers to productive investment. Analysts must evaluate market order execution mechanisms, leverage trading limits, and benchmark index construction.</p>
+
+  <h3 class="subheading">Margin Transactions & Margin Call Pricing</h3>
+  <p>When buying securities on margin, the investor borrows part of the purchase price from the broker. The <strong>Margin Call Price ($P$)</strong> is the stock price below which the broker requires additional equity collateral:</p>
+  <div class="formula-card">
+    <div class="formula-title">Margin Call Trigger Price Formula</div>
+    $$P = P_0 \times \left( \frac{1 - \text{Initial Margin}}{1 - \text{Maintenance Margin}} \right)$$
+    $$\text{Where: } P_0 = \text{Initial purchase price}, \quad IM = \text{Initial equity margin %}, \quad MM = \text{Maintenance margin %}$$
+  </div>
+
+  <h3 class="subheading">Equity Index Construction Methodologies</h3>
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Weighting Method</th>
+          <th>Weighting Basis</th>
+          <th>Stock Split Impact</th>
+          <th>Prominent Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Price-Weighted</strong></td>
+          <td>Price per share divided by index divisor: $w_i = P_i / \sum P_k$.</td>
+          <td>Requires divisor adjustment; high-priced stocks have disproportionate influence.</td>
+          <td>Dow Jones Industrial Average (DJIA), Nikkei 225.</td>
+        </tr>
+        <tr>
+          <td><strong>Value-Weighted (Market-Cap)</strong></td>
+          <td>Total market capitalization: $w_i = (P_i Q_i) / \sum (P_k Q_k)$. Often float-adjusted.</td>
+          <td>No divisor adjustment required for stock splits; mirrors true aggregate wealth.</td>
+          <td>S&P 500, MSCI World, FTSE 100.</td>
+        </tr>
+        <tr>
+          <td><strong>Equal-Weighted</strong></td>
+          <td>Each constituent stock receives identical weight: $w_i = 1 / N$.</td>
+          <td>Requires frequent rebalancing as stock prices diverge; small-cap tilt.</td>
+          <td>S&P 500 Equal Weight Index.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ========================================================================================= -->
+<!-- MODULE 2: INDUSTRY & COMPETITIVE ANALYSIS -->
+<!-- ========================================================================================= -->
+<section id="eq-m2-industry" class="notes-chapter">
+  <h2 class="section-heading"><span class="num">02.</span> Industry & Competitive Strategy Analysis</h2>
+  <p>Industry structure drives fundamental return on invested capital (ROIC). Michael Porter's Five Forces framework analyzes the competitive intensity and sustainable pricing power of an industry.</p>
+
+  <h3 class="subheading">Porter's Five Forces Framework</h3>
+  <ul>
+    <li><strong>Threat of New Entrants</strong>: High barriers to entry (economies of scale, patents, high switching costs) protect economic profits.</li>
+    <li><strong>Bargaining Power of Buyers</strong>: Concentrated buyers or standardized commodity products reduce pricing power.</li>
+    <li><strong>Bargaining Power of Suppliers</strong>: Fragmented buyers dealing with few specialized suppliers face high input costs.</li>
+    <li><strong>Threat of Substitute Products</strong>: Close substitutes cap pricing power and elastic demand.</li>
+    <li><strong>Rivalry Among Existing Competitors</strong>: Intense price competition occurs in fragmented industries with high exit barriers and slow growth.</li>
+  </ul>
+
+  <h3 class="subheading">Industry Life Cycle Stages</h3>
+  <ol>
+    <li><strong>Embryonic</strong>: Slow growth, high startup costs, unproven customer demand.</li>
+    <li><strong>Growth</strong>: Rapidly rising demand, improving profitability, falling production costs.</li>
+    <li><strong>Shakeout</strong>: Growth slows, overcapacity develops, price wars force weaker firms out.</li>
+    <li><strong>Mature</strong>: Slower growth matching GDP, consolidated oligopoly, focus on efficiency.</li>
+    <li><strong>Decline</strong>: Negative demand growth due to technological substitution.</li>
+  </ol>
+</section>
+
+<!-- ========================================================================================= -->
+<!-- MODULE 3: DIVIDEND DISCOUNT MODELS (DDM) -->
+<!-- ========================================================================================= -->
+<section id="eq-m3-ddm" class="notes-chapter">
+  <h2 class="section-heading"><span class="num">03.</span> Dividend Discount Models & Multi-Stage Valuation</h2>
+  <p>The Dividend Discount Model (DDM) values common stock as the present value of all expected future cash dividend payments discounted at the required return on equity ($r$).</p>
+
+  <h3 class="subheading">Gordon Growth Model & Sustainable Growth Rate</h3>
+  <div class="formula-card">
+    <div class="formula-title">Constant Growth DDM (Gordon Growth)</div>
+    $$V_0 = \frac{D_1}{r - g} = \frac{D_0 (1 + g)}{r - g} \quad (\text{Condition: } r > g)$$
+    $$g = b \times ROE = (1 - \text{Dividend Payout Ratio}) \times ROE$$
+  </div>
+
+  <h3 class="subheading">Present Value of Growth Opportunities (PVGO)</h3>
+  <p>A firm's stock value can be decomposed into the value of its current no-growth earnings stream plus the net present value of profitable growth investments:</p>
+  <div class="formula-card">
+    <div class="formula-title">PVGO Decomposition</div>
+    $$V_0 = \frac{E_1}{r} + PVGO \implies PVGO = V_0 - \frac{E_1}{r}$$
+  </div>
+
+  <h3 class="subheading">The H-Model for Linearly Transitioning Growth</h3>
+  <p>The H-Model values a firm experiencing high initial growth ($g_S$) that transitions linearly over half-life $H$ (years $= 2H$) to a sustainable long-term rate ($g_L$):</p>
+  <div class="formula-card">
+    <div class="formula-title">H-Model Valuation Equation</div>
+    $$V_0 = \frac{D_0 (1 + g_L)}{r - g_L} + \frac{D_0 \times H \times (g_S - g_L)}{r - g_L}$$
+  </div>
+
+  <div class="chart-box">
+    <div class="chart-header">
+      <div class="chart-title">Visual 1: DDM Valuation Sensitivity to Cost of Equity & Long-Term Growth</div>
+      <div class="chart-desc">Demonstrates asymptotic intrinsic value expansion as the required return $r$ approaches the perpetual growth rate $g$.</div>
+    </div>
+    <div class="chart-canvas-wrap" style="height: 280px;">
+      <canvas id="eqNotesDdmChart"></canvas>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================================================= -->
+<!-- MODULE 4: FREE CASH FLOW VALUATION (FCFF & FCFE) -->
+<!-- ========================================================================================= -->
+<section id="eq-m4-fcf" class="notes-chapter">
+  <h2 class="section-heading"><span class="num">04.</span> Free Cash Flow Valuation (FCFF & FCFE)</h2>
+  <p>Free cash flow models are superior when firms do not pay dividends, dividend policy does not reflect underlying profitability, or an acquiring firm seeks control of total operational cash flow.</p>
+
+  <h3 class="subheading">Free Cash Flow to Firm (FCFF) Derivations</h3>
+  <div class="formula-card">
+    <div class="formula-title">FCFF Multi-Source Accounting Identities</div>
+    $$\text{From Net Income: } FCFF = NI + NCC + \text{Interest}(1 - T) - FCInv - WCInv$$
+    $$\text{From CFO: } FCFF = CFO + \text{Interest}(1 - T) - FCInv$$
+    $$\text{From EBIT: } FCFF = EBIT(1 - T) + Dep - FCInv - WCInv$$
+    $$\text{From EBITDA: } FCFF = EBITDA(1 - T) + (Dep \times T) - FCInv - WCInv$$
+  </div>
+
+  <h3 class="subheading">Free Cash Flow to Equity (FCFE) Derivations</h3>
+  <div class="formula-card">
+    <div class="formula-title">FCFE Formulas & Net Borrowing Integration</div>
+    $$FCFE = FCFF - \text{Interest}(1 - T) + \text{Net Borrowing}$$
+    $$FCFE = NI + NCC - FCInv - WCInv + \text{Net Borrowing}$$
+    $$FCFE = CFO - FCInv + \text{Net Borrowing}$$
+    $$\text{Where: } \text{Net Borrowing} = \text{New Debt Issued} - \text{Principal Repayments}$$
+  </div>
+
+  <div class="chart-box">
+    <div class="chart-header">
+      <div class="chart-title">Visual 2: Cash Flow Waterfall Bridge from Operational Profit to Free Cash Flow</div>
+      <div class="chart-desc">Step-by-step conversion of EBITDA down to Free Cash Flow to Firm (FCFF) and Free Cash Flow to Equity (FCFE).</div>
+    </div>
+    <div class="chart-canvas-wrap" style="height: 280px;">
+      <canvas id="eqNotesFcfChart"></canvas>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================================================= -->
+<!-- MODULE 5: MARKET MULTIPLIERS (P/E, P/B, EV/EBITDA) -->
+<!-- ========================================================================================= -->
+<section id="eq-m5-multiples" class="notes-chapter">
+  <h2 class="section-heading"><span class="num">05.</span> Market Multiples & Valuation Ratios</h2>
+  <p>Relative valuation compares a company's market price multiplier against comparable peer benchmarks or historic averages. Justified multiples are derived directly from fundamental discounted cash flow economics.</p>
+
+  <h3 class="subheading">Justified Multipliers Derived from Fundamentals</h3>
+  <div class="formula-card">
+    <div class="formula-title">Core Fundamental Justified Multiplier Identities</div>
+    $$\text{Justified Leading P/E: } \frac{P_0}{E_1} = \frac{1 - b}{r - g}$$
+    $$\text{Justified Trailing P/E: } \frac{P_0}{E_0} = \frac{(1 - b)(1 + g)}{r - g}$$
+    $$\text{Justified Price-to-Book (P/B): } \frac{P_0}{B_0} = \frac{ROE - g}{r - g}$$
+    $$\text{Justified Price-to-Sales (P/S): } \frac{P_0}{S_0} = \frac{\text{Net Margin} \times (1 - b)(1 + g)}{r - g}$$
+  </div>
+
+  <h3 class="subheading">Enterprise Value Multipliers</h3>
+  <p><strong>Enterprise Value ($EV$)</strong> measures total market value of core operations independent of capital structure financing:</p>
+  <div class="formula-card">
+    <div class="formula-title">Enterprise Value Accounting Identity</div>
+    $$EV = \text{Market Value of Common Equity} + \text{Total Debt} + \text{Preferred Stock} + \text{Minority Interest} - \text{Cash & Equivalents}$$
+  </div>
+</section>
+
+<!-- ========================================================================================= -->
+<!-- MODULE 6: RESIDUAL INCOME (RI) & CLEAN SURPLUS -->
+<!-- ========================================================================================= -->
+<section id="eq-m6-ri" class="notes-chapter">
+  <h2 class="section-heading"><span class="num">06.</span> Residual Income Valuation & Clean Surplus Accounting</h2>
+  <p>Residual Income (Economic Profit) equals net income in excess of the accounting equity charge for the cost of equity capital ($r \times B_{t-1}$).</p>
+
+  <h3 class="subheading">Residual Income Valuation Equation</h3>
+  <div class="formula-card">
+    <div class="formula-title">Universal Residual Income Model</div>
+    $$V_0 = B_0 + \sum_{t=1}^\infty \frac{RI_t}{(1 + r)^t}$$
+    $$RI_t = NI_t - (r \times B_{t-1}) = (ROE_t - r) \times B_{t-1}$$
+  </div>
+
+  <div class="callout callout-info">
+    <strong>Clean Surplus Relation</strong>: The balance sheet book value must reconcile perfectly through earnings and dividends:
+    $$B_t = B_{t-1} + NI_t - Div_t$$
+    Items bypassing the income statement through Other Comprehensive Income (AOCI)—such as foreign currency translation adjustments or unrealized gains on OCI securities—violate clean surplus and require analyst normalization.
+  </div>
+
+  <h3 class="subheading">Continuing Residual Income & Persistence Factor ($\omega$)</h3>
+  <p>Under competitive market dynamics, supernormal returns decay over time to normal returns ($ROE \to r$):</p>
+  <div class="formula-card">
+    <div class="formula-title">Terminal Value with Persistence Decay ($\omega$)</div>
+    $$PV(\text{Continuing RI at } T-1) = \frac{RI_T}{1 + r - \omega}$$
+    $$\text{Where } \omega \in [0, 1]: \quad \omega = 1.0 \implies \text{Perpetual RI}, \quad \omega = 0.0 \implies \text{Instant Return to Cost of Equity}$$
+  </div>
+</section>
+
+<!-- ========================================================================================= -->
+<!-- MODULE 7: PRIVATE COMPANY VALUATION -->
+<!-- ========================================================================================= -->
+<section id="eq-m7-private" class="notes-chapter">
+  <h2 class="section-heading"><span class="num">07.</span> Private Company Valuation & Normalization Adjustments</h2>
+  <p>Private company valuation requires adjusting financial statements for non-market transactions and quantifying illiquidity and control differentials.</p>
+
+  <h3 class="subheading">Financial Statement Normalization</h3>
+  <ul>
+    <li><strong>Officer/Owner Compensation</strong>: Replace non-market excessive or below-market salaries with fair market executive compensation.</li>
+    <li><strong>Non-Operating Assets & Expenses</strong>: Segregate excess cash, corporate personal aircraft, or real estate assets held for speculation.</li>
+    <li><strong>Related-Party Transactions</strong>: Re-align intercompany lease agreements to market rents.</li>
+  </ul>
+
+  <h3 class="subheading">Valuation Discounts & Premiums</h3>
+  <div class="formula-card">
+    <div class="formula-title">Control and Marketability Discount Interaction</div>
+    $$\text{Total Combined Discount} = 1 - (1 - DLOC) \times (1 - DLOM)$$
+    $$DLOC = 1 - \left( \frac{1}{1 + \text{Control Premium}} \right)$$
+    $$\text{Where: } DLOC = \text{Discount for Lack of Control}, \quad DLOM = \text{Discount for Lack of Marketability}$$
+  </div>
+</section>
+
+<!-- ========================================================================================= -->
+<!-- MODULE 8: MASTER EQUITY FORMULA CHEAT SHEET -->
+<!-- ========================================================================================= -->
+<section id="eq-formulas" class="notes-chapter">
+  <h2 class="section-heading"><span class="num">08.</span> Master Equity Valuation Formula Cheat Sheet</h2>
+  <p>Direct reference formula cheat sheet for rapid multi-model valuation problem solving:</p>
+
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Model</th>
+          <th>Metric Name</th>
+          <th>KaTeX Mathematical Formulation</th>
+          <th>Primary Exam Usage</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>DDM</strong></td>
+          <td>Gordon Growth Value</td>
+          <td>$$V_0 = \frac{D_1}{r - g} = \frac{D_0 (1 + g)}{r - g}$$</td>
+          <td>Mature, steady dividend-paying corporations.</td>
+        </tr>
+        <tr>
+          <td><strong>DDM</strong></td>
+          <td>Sustainable Growth</td>
+          <td>$$g = b \times ROE = (1 - PR) \times ROE$$</td>
+          <td>Internal equity reinvestment rate.</td>
+        </tr>
+        <tr>
+          <td><strong>DDM</strong></td>
+          <td>H-Model Value</td>
+          <td>$$V_0 = \frac{D_0 (1 + g_L)}{r - g_L} + \frac{D_0 H (g_S - g_L)}{r - g_L}$$</td>
+          <td>High growth transitioning linearly to long-term rate.</td>
+        </tr>
+        <tr>
+          <td><strong>DCF</strong></td>
+          <td>FCFF from CFO</td>
+          <td>$$FCFF = CFO + \text{Interest}(1 - T) - FCInv$$</td>
+          <td>Fastest calculation when Cash Flow Statement is provided.</td>
+        </tr>
+        <tr>
+          <td><strong>DCF</strong></td>
+          <td>FCFE from FCFF</td>
+          <td>$$FCFE = FCFF - \text{Interest}(1 - T) + \text{Net Borrowing}$$</td>
+          <td>Direct equity cash flow valuation.</td>
+        </tr>
+        <tr>
+          <td><strong>Multipliers</strong></td>
+          <td>Justified P/B</td>
+          <td>$$\frac{P_0}{B_0} = \frac{ROE - g}{r - g}$$</td>
+          <td>Values capital-intensive financial and asset-heavy firms.</td>
+        </tr>
+        <tr>
+          <td><strong>Residual Income</strong></td>
+          <td>Residual Income Value</td>
+          <td>$$V_0 = B_0 + \sum_{t=1}^\infty \frac{(ROE_t - r) B_{t-1}}{(1 + r)^t}$$</td>
+          <td>Values firms with negative cash flows or non-dividend payers.</td>
+        </tr>
+        <tr>
+          <td><strong>Private</strong></td>
+          <td>Total Discount</td>
+          <td>$$\text{Total Disc} = 1 - (1 - DLOC)(1 - DLOM)$$</td>
+          <td>Multiplicative interaction of lack of control and marketability.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

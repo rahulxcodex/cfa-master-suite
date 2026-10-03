@@ -405,6 +405,42 @@ dashboard_template = r'''<!DOCTYPE html>
       color: var(--accent-blue);
     }
 
+    /* Reference Subject Switcher & Anchor Offsets */
+    .notes-subject-tabs {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+    .notes-tab-btn {
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-size: 13.5px;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid var(--border-color);
+      background: var(--bg-secondary);
+      color: var(--text-secondary);
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .notes-tab-btn:hover {
+      color: var(--text-primary);
+      border-color: var(--accent-blue);
+      background: var(--bg-tertiary);
+    }
+    .notes-tab-btn.active {
+      color: #ffffff;
+      background: var(--accent-blue);
+      border-color: var(--accent-blue);
+      box-shadow: 0 2px 8px rgba(88, 166, 255, 0.3);
+    }
+    .notes-chapter, section, [id^="m"], [id^="fi-"], [id^="eq-"], #master-gaap-ifrs, #master-formulas, #fi-formulas, #eq-formulas {
+      scroll-margin-top: 85px;
+    }
+
     /* Cards & Layout */
     .card {
       background: var(--bg-secondary);
@@ -806,8 +842,10 @@ dashboard_template = r'''<!DOCTYPE html>
       <li><a href="#sim-translation" onclick="switchTab('sim-translation')"><span>💱 Currency Translation</span></a></li>
       <li><a href="#sim-prepayment" onclick="switchTab('sim-prepayment')"><span>🏠 MBS Prepayment Simulator</span></a></li>
       
-      <li class="nav-divider"><span>MASTER REFERENCE</span></li>
+      <li class="nav-divider"><span>CURRICULUM REFERENCE NOTES</span></li>
       <li><a href="#fsa-reference" onclick="switchTab('fsa-reference')"><span>📖 FSA Reference Notes (Ch 1-20)</span></a></li>
+      <li><a href="#fi-reference" onclick="switchTab('fi-reference')"><span>📈 Fixed Income Master Notes</span></a></li>
+      <li><a href="#eq-reference" onclick="switchTab('eq-reference')"><span>📊 Equity Valuation Reference</span></a></li>
       <li><a href="#reference-diagrams" onclick="switchTab('reference-diagrams')"><span>📐 Visual Frameworks</span></a></li>
     </ul>
   </aside>
@@ -857,21 +895,29 @@ dashboard_template = r'''<!DOCTYPE html>
       <div class="grid-2" style="margin-bottom: 24px;">
         <div class="card" style="margin-bottom: 0;">
           <div class="card-title">Curriculum Distribution & Structure</div>
-          <canvas id="overviewChart" height="200"></canvas>
+          <div class="chart-canvas-wrap" style="height: 250px;">
+            <canvas id="overviewChart"></canvas>
+          </div>
         </div>
         <div class="card" style="margin-bottom: 0;">
           <div class="card-title">Candidate Performance Telemetry</div>
-          <canvas id="accuracyChart" height="200"></canvas>
+          <div class="chart-canvas-wrap" style="height: 250px;">
+            <canvas id="accuracyChart"></canvas>
+          </div>
         </div>
       </div>
 
       <div class="card">
         <div class="card-title">Quick Launch Study Portals</div>
-        <div class="grid-4">
-          <button class="btn" onclick="switchTab('l1-practice')">📝 Start Level 1 Bank (425 Q)</button>
-          <button class="btn btn-secondary" onclick="switchTab('l2-vignettes')">📑 Start Level 2 Cases (80 V)</button>
-          <button class="btn btn-secondary" onclick="switchTab('sim-yield')">🔬 Open Simulation Lab (9)</button>
-          <button class="btn btn-secondary" onclick="switchTab('fsa-reference')">📖 Read FSA Reference (Ch 1-20)</button>
+        <div class="grid-3" style="margin-bottom: 12px;">
+          <button class="btn" onclick="switchTab('l1-practice')">📝 Level 1 Question Bank (425 Q)</button>
+          <button class="btn btn-secondary" onclick="switchTab('l2-vignettes')">📑 Level 2 Case Vignettes (80 V)</button>
+          <button class="btn btn-secondary" onclick="switchTab('sim-yield')">🔬 Financial Simulations Lab (9)</button>
+        </div>
+        <div class="grid-3">
+          <button class="btn btn-secondary" onclick="switchTab('fsa-reference')">📖 FSA Reference Notes (Ch 1-20)</button>
+          <button class="btn btn-secondary" onclick="switchTab('fi-reference')">📈 Fixed Income Notes & Formulas</button>
+          <button class="btn btn-secondary" onclick="switchTab('eq-reference')">📊 Equity Valuation Reference</button>
         </div>
       </div>
     </section>
@@ -969,7 +1015,9 @@ dashboard_template = r'''<!DOCTYPE html>
         </p>
         <div class="grid-2">
           <div>
-            <canvas id="yieldChart" height="230"></canvas>
+            <div class="chart-canvas-wrap" style="height: 260px;">
+              <canvas id="yieldChart"></canvas>
+            </div>
           </div>
           <div>
             <div class="control-group">
@@ -1066,7 +1114,9 @@ dashboard_template = r'''<!DOCTYPE html>
           </div>
           <div>
             <div style="font-weight: 700; margin-bottom: 12px; color: var(--accent-emerald);">DuPont 5-Way ROE Decomposition:</div>
-            <canvas id="dupontChart" height="200"></canvas>
+            <div class="chart-canvas-wrap" style="height: 220px;">
+              <canvas id="dupontChart"></canvas>
+            </div>
             <div id="dupontResult" style="margin-top: 12px; padding: 12px; background: var(--bg-primary); border-radius: 6px; font-size: 13px;"></div>
           </div>
         </div>
@@ -1082,7 +1132,9 @@ dashboard_template = r'''<!DOCTYPE html>
         </p>
         <div class="grid-2">
           <div>
-            <canvas id="krdChart" height="220"></canvas>
+            <div class="chart-canvas-wrap" style="height: 240px;">
+              <canvas id="krdChart"></canvas>
+            </div>
           </div>
           <div>
             <div class="control-group">
@@ -1170,7 +1222,9 @@ dashboard_template = r'''<!DOCTYPE html>
         </p>
         <div class="grid-2">
           <div>
-            <canvas id="riChart" height="230"></canvas>
+            <div class="chart-canvas-wrap" style="height: 250px;">
+              <canvas id="riChart"></canvas>
+            </div>
           </div>
           <div>
             <div class="control-group">
@@ -1208,7 +1262,9 @@ dashboard_template = r'''<!DOCTYPE html>
         </p>
         <div class="grid-2">
           <div>
-            <canvas id="waterfallChart" height="240"></canvas>
+            <div class="chart-canvas-wrap" style="height: 280px;">
+              <canvas id="waterfallChart"></canvas>
+            </div>
           </div>
           <div>
             <div class="grid-2">
@@ -1285,7 +1341,9 @@ dashboard_template = r'''<!DOCTYPE html>
         </p>
         <div class="grid-2">
           <div>
-            <canvas id="prepaymentChart" height="230"></canvas>
+            <div class="chart-canvas-wrap" style="height: 250px;">
+              <canvas id="prepaymentChart"></canvas>
+            </div>
           </div>
           <div>
             <div class="control-group">
@@ -1306,6 +1364,12 @@ dashboard_template = r'''<!DOCTYPE html>
 
     <!-- 13. MASTER FSA REFERENCE NOTES -->
     <section id="fsa-reference">
+      <div class="notes-subject-tabs">
+        <button class="notes-tab-btn active" onclick="switchTab('fsa-reference')">📖 Financial Statement Analysis (20 Modules)</button>
+        <button class="notes-tab-btn" onclick="switchTab('fi-reference')">📈 Fixed Income Master Notes (8 Modules)</button>
+        <button class="notes-tab-btn" onclick="switchTab('eq-reference')">📊 Equity Valuation Reference (8 Modules)</button>
+      </div>
+
       <div class="card">
         <div class="card-title">📖 Comprehensive Financial Statement Analysis Reference Library</div>
         <p style="color: var(--text-secondary); margin-bottom: 16px;">
@@ -1337,6 +1401,32 @@ dashboard_template = r'''<!DOCTYPE html>
 
       <div class="fsa-ref-container">
         __FSA_REFERENCE_CONTENT__
+      </div>
+    </section>
+
+    <!-- 14. FIXED INCOME REFERENCE NOTES -->
+    <section id="fi-reference">
+      <div class="notes-subject-tabs">
+        <button class="notes-tab-btn" onclick="switchTab('fsa-reference')">📖 Financial Statement Analysis (20 Modules)</button>
+        <button class="notes-tab-btn active" onclick="switchTab('fi-reference')">📈 Fixed Income Master Notes (8 Modules)</button>
+        <button class="notes-tab-btn" onclick="switchTab('eq-reference')">📊 Equity Valuation Reference (8 Modules)</button>
+      </div>
+
+      <div class="fsa-ref-container">
+        __FI_REFERENCE_CONTENT__
+      </div>
+    </section>
+
+    <!-- 15. EQUITY INVESTMENTS REFERENCE NOTES -->
+    <section id="eq-reference">
+      <div class="notes-subject-tabs">
+        <button class="notes-tab-btn" onclick="switchTab('fsa-reference')">📖 Financial Statement Analysis (20 Modules)</button>
+        <button class="notes-tab-btn" onclick="switchTab('fi-reference')">📈 Fixed Income Master Notes (8 Modules)</button>
+        <button class="notes-tab-btn active" onclick="switchTab('eq-reference')">📊 Equity Valuation Reference (8 Modules)</button>
+      </div>
+
+      <div class="fsa-ref-container">
+        __EQ_REFERENCE_CONTENT__
       </div>
     </section>
 
@@ -1472,7 +1562,9 @@ dashboard_template = r'''<!DOCTYPE html>
         'sim-waterfall': 'FCFF → FCFE Cash Flow Waterfall',
         'sim-translation': 'Foreign Currency Translation Engine',
         'sim-prepayment': 'MBS Prepayment Simulator',
-        'fsa-reference': 'FSA Master Reference Library',
+        'fsa-reference': 'FSA Master Reference Library (20 Modules)',
+        'fi-reference': 'Fixed Income Master Reference & Formulas (8 Modules)',
+        'eq-reference': 'Equity Valuation Reference Library & Models (8 Modules)',
         'reference-diagrams': 'Visual Frameworks & Cheat Sheets'
       };
 
@@ -1484,6 +1576,9 @@ dashboard_template = r'''<!DOCTYPE html>
       if (m) m.scrollTo({ top: 0, behavior: 'smooth' });
       window.scrollTo({ top: 0, behavior: 'smooth' });
       window.dispatchEvent(new Event('resize'));
+      if (tabId === 'fsa-reference' || tabId === 'fi-reference' || tabId === 'eq-reference') {
+        initReferenceNotesCharts();
+      }
       renderMath();
     }
 
@@ -2535,9 +2630,13 @@ dashboard_template = r'''<!DOCTYPE html>
     }
 
     // ==========================================
-    // FSA REFERENCE NOTES CHARTS (6 CHARTS)
+    // CURRICULUM REFERENCE NOTES CHARTS (10 CHARTS)
     // ==========================================
     function initFsaNotesCharts() {
+      initReferenceNotesCharts();
+    }
+
+    function initReferenceNotesCharts() {
       // 1. Notes DuPont Multiplier Chart
       const ctxDuPont = document.getElementById('notesDupontChart');
       if (ctxDuPont && !Chart.getChart(ctxDuPont)) {
@@ -2729,6 +2828,130 @@ dashboard_template = r'''<!DOCTYPE html>
           }
         });
       }
+
+      // 7. Fixed Income Notes Curve Chart
+      const ctxFiCurve = document.getElementById('fiNotesCurveChart');
+      if (ctxFiCurve && !Chart.getChart(ctxFiCurve)) {
+        new Chart(ctxFiCurve, {
+          type: 'line',
+          data: {
+            labels: ['1Y', '2Y', '3Y', '5Y', '7Y', '10Y'],
+            datasets: [
+              {
+                label: 'Benchmark Spot Curve (%)',
+                data: [2.50, 2.80, 3.10, 3.60, 3.90, 4.20],
+                borderColor: '#58a6ff',
+                backgroundColor: 'rgba(88, 166, 255, 0.1)',
+                borderWidth: 2.5,
+                pointRadius: 4,
+                tension: 0.2
+              },
+              {
+                label: 'Implied 1-Year Forward Curve (%)',
+                data: [2.50, 3.10, 3.70, 4.35, 4.65, 4.90],
+                borderColor: '#3fb950',
+                backgroundColor: 'rgba(63, 185, 80, 0.1)',
+                borderWidth: 2,
+                borderDash: [5, 5],
+                pointRadius: 3,
+                tension: 0.2
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { position: 'top' } },
+            scales: { y: { title: { display: true, text: 'Yield (%)', color: '#8b949e' }, grid: { color: '#21262d' } }, x: { grid: { color: '#21262d' } } }
+          }
+        });
+      }
+
+      // 8. Fixed Income Notes Duration vs Convexity Chart
+      const ctxFiDur = document.getElementById('fiNotesDurationChart');
+      if (ctxFiDur && !Chart.getChart(ctxFiDur)) {
+        new Chart(ctxFiDur, {
+          type: 'line',
+          data: {
+            labels: ['-200 bps', '-100 bps', '0 bps', '+100 bps', '+200 bps'],
+            datasets: [
+              {
+                label: 'Actual Convex Price Path',
+                data: [119.8, 109.4, 100.0, 91.6, 84.1],
+                borderColor: '#3fb950',
+                borderWidth: 3,
+                tension: 0.3
+              },
+              {
+                label: 'Linear Duration Approximation',
+                data: [118.0, 109.0, 100.0, 91.0, 82.0],
+                borderColor: '#f85149',
+                borderWidth: 2,
+                borderDash: [4, 4],
+                tension: 0
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { position: 'top' } },
+            scales: { y: { title: { display: true, text: 'Bond Price (USD)', color: '#8b949e' }, grid: { color: '#21262d' } }, x: { grid: { color: '#21262d' } } }
+          }
+        });
+      }
+
+      // 9. Equity Notes DDM Sensitivity Chart
+      const ctxEqDdm = document.getElementById('eqNotesDdmChart');
+      if (ctxEqDdm && !Chart.getChart(ctxEqDdm)) {
+        new Chart(ctxEqDdm, {
+          type: 'bar',
+          data: {
+            labels: ['r = 7.0%', 'r = 8.0%', 'r = 9.0%', 'r = 10.0%', 'r = 11.0%'],
+            datasets: [
+              {
+                label: 'Intrinsic Value (USD) (D0 = 2.00 USD, g = 4%)',
+                data: [69.33, 52.00, 41.60, 34.67, 29.71],
+                backgroundColor: 'rgba(57, 197, 207, 0.7)',
+                borderColor: '#39c5cf',
+                borderWidth: 1.5
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { position: 'top' } },
+            scales: { y: { title: { display: true, text: 'Per Share Intrinsic Value (USD)', color: '#8b949e' }, grid: { color: '#21262d' } }, x: { grid: { color: '#21262d' } } }
+          }
+        });
+      }
+
+      // 10. Equity Notes Free Cash Flow Waterfall Chart
+      const ctxEqFcf = document.getElementById('eqNotesFcfChart');
+      if (ctxEqFcf && !Chart.getChart(ctxEqFcf)) {
+        new Chart(ctxEqFcf, {
+          type: 'bar',
+          data: {
+            labels: ['EBITDA', 'D&A', 'EBIT', 'Taxes', 'CapEx', 'ΔWC', 'FCFF', '+Net Borrowing', 'FCFE'],
+            datasets: [
+              {
+                label: 'Cash Flow Bridge (M USD)',
+                data: [150, -30, 120, -25, -40, -10, 75, 15, 65],
+                backgroundColor: [
+                  '#58a6ff', '#f85149', '#58a6ff', '#f85149', '#f85149', '#f85149', '#3fb950', '#d29922', '#3fb950'
+                ]
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { display: false } },
+            scales: { y: { title: { display: true, text: 'M USD', color: '#8b949e' }, grid: { color: '#21262d' } }, x: { grid: { color: '#21262d' } } }
+          }
+        });
+      }
     }
 
     // Initialization on window load
@@ -2757,7 +2980,13 @@ dashboard_template = r'''<!DOCTYPE html>
         if (sec && sec.tagName === 'SECTION' && sec.parentElement.tagName === 'MAIN') {
           switchTab(hash);
         } else if (sec) {
-          switchTab('fsa-reference');
+          if (hash.startsWith('fi-')) {
+            switchTab('fi-reference');
+          } else if (hash.startsWith('eq-')) {
+            switchTab('eq-reference');
+          } else {
+            switchTab('fsa-reference');
+          }
           setTimeout(() => {
             sec.scrollIntoView({ behavior: 'smooth' });
           }, 150);
@@ -2786,8 +3015,13 @@ dashboard_template = r'''<!DOCTYPE html>
 '''
 
 def generate():
+    FI_REF_HTML = os.path.join(DATA_DIR, "fi_reference_extracted.html")
+    EQ_REF_HTML = os.path.join(DATA_DIR, "eq_reference_extracted.html")
+
     assert os.path.exists(MASTER_JSON), f"Missing {MASTER_JSON}. Run compile_unified_suite.py first."
     assert os.path.exists(FSA_REF_HTML), f"Missing {FSA_REF_HTML}. Run extract_fsa_notes.py first."
+    assert os.path.exists(FI_REF_HTML), f"Missing {FI_REF_HTML}. Run generate_notes_libraries.py first."
+    assert os.path.exists(EQ_REF_HTML), f"Missing {EQ_REF_HTML}. Run generate_notes_libraries.py first."
 
     with open(MASTER_JSON, "r", encoding="utf-8") as f:
         questions = json.load(f)
@@ -2795,13 +3029,23 @@ def generate():
     with open(FSA_REF_HTML, "r", encoding="utf-8") as f:
         fsa_ref_content = f.read()
 
+    with open(FI_REF_HTML, "r", encoding="utf-8") as f:
+        fi_ref_content = f.read()
+
+    with open(EQ_REF_HTML, "r", encoding="utf-8") as f:
+        eq_ref_content = f.read()
+
     print(f"Loaded {len(questions)} questions from {MASTER_JSON}")
     print(f"Loaded {len(fsa_ref_content)} characters of FSA reference library")
+    print(f"Loaded {len(fi_ref_content)} characters of FI reference library")
+    print(f"Loaded {len(eq_ref_content)} characters of EQ reference library")
 
     questions_json_str = json.dumps(questions, ensure_ascii=False)
 
     dashboard_html = dashboard_template.replace("__QUESTION_BANK_DATA__", questions_json_str)
     dashboard_html = dashboard_html.replace("__FSA_REFERENCE_CONTENT__", fsa_ref_content)
+    dashboard_html = dashboard_html.replace("__FI_REFERENCE_CONTENT__", fi_ref_content)
+    dashboard_html = dashboard_html.replace("__EQ_REFERENCE_CONTENT__", eq_ref_content)
 
     with open(OUTPUT_INDEX, "w", encoding="utf-8") as f:
         f.write(dashboard_html)
