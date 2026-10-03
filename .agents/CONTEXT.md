@@ -32,9 +32,12 @@
   - Currency strictly formatted with `USD`, `EUR`, `GBP` or `\$`.
   - 100% KaTeX delimiter balance (0 unpaired delimiters, 0 stray dollars outside math blocks).
   - 0 schema errors across all 855 questions and 80 item sets.
-  - Full 20-chapter FSA notes section restored with complete CSS class coverage and 6 interactive Chart.js visualizations.
-  - Mobile drawer navigation with responsive sidebar, backdrop overlay, and hamburger toggle.
-  - Desktop UI refinements: sticky top-bar with backdrop-filter blur, Windows emoji font stack ("Segoe UI Emoji"), desktop sidebar close button hidden, wider L2 vignette dropdown (`1.1fr 1.8fr 1.1fr`), and pill-badged LOS question headers.
+  - Full 3-Subject Curriculum Reference Library:
+    - **FSA Reference Library**: 20 Chapters of accounting mechanics, IFRS vs GAAP matrix, master ratio formula sheet, and 6 Chart.js graphs.
+    - **Fixed Income Reference Library**: 8 Modules covering bond pricing, spot/forward curves, duration/convexity, credit models, embedded options, MBS/ABS, formula sheet, and 2 interactive Chart.js graphs.
+    - **Equity Valuation Reference Library**: 8 Modules covering market structure, Porter's Five Forces, DDM/H-Model, FCFF/FCFE, multipliers, residual income, private valuation, formula sheet, and 2 interactive Chart.js graphs.
+  - Eliminated Chart.js infinite downward expansion loop by wrapping all canvases inside `.chart-canvas-wrap` with fixed heights.
+  - Unified multi-subject switcher tab bar allowing instant navigation across FSA, Fixed Income, and Equity notes.
 - **Live Deployment & Repositories**:
   - **GitHub Repository**: https://github.com/rahulxcodex/cfa-master-suite (main branch)
   - **Live Portal**: https://rahulxcodex.github.io/cfa-master-suite/
