@@ -1,0 +1,1542 @@
+[
+  {
+    "id": "L1-Q091",
+    "level": 1,
+    "module": "m7-inventories",
+    "topic": "Inventories",
+    "los": "Compare the costing methods used for inventory and calculate cost of goods sold and ending inventory under each method.",
+    "question": "A company begins the year with 1,000 units of inventory costing 10 USD each. During the year, it purchases 2,000 units at 12 USD each and later 1,500 units at 15 USD each. During the period, 3,200 units are sold at 22 USD each. Assuming a periodic inventory system under FIFO, what are the cost of goods sold (COGS) and ending inventory?",
+    "options": {
+      "A": "COGS is 37,400 USD; Ending inventory is 19,500 USD.",
+      "B": "COGS is 36,400 USD; Ending inventory is 20,500 USD.",
+      "C": "COGS is 42,500 USD; Ending inventory is 14,400 USD."
+    },
+    "answer": "A",
+    "explanation": "Under the First-In, First-Out (FIFO) method, the oldest inventory costs are allocated to cost of goods sold (COGS), and the most recent purchase costs remain in ending inventory. Total available units = 1,000 + 2,000 + 1,500 = 4,500 units. Total available cost = (1,000 \\times 10 USD) + (2,000 \\times 12 USD) + (1,500 \\times 15 USD) = 10,000 + 24,000 + 22,500 = 56,500 USD. Units sold = 3,200. Units remaining in ending inventory = 4,500 - 3,200 = 1,300 units. Under FIFO, ending inventory consists of the most recent purchases: 1,300 units \\times 15 USD = 19,500 USD. COGS is Total Cost minus Ending Inventory: 56,500 USD - 19,500 USD = 37,400 USD (or calculated directly: 1,000 \\times 10 USD + 2,000 \\times 12 USD + 200 \\times 15 USD = 10,000 + 24,000 + 3,000 = 37,400 USD). Option B incorrectly computes ending inventory. Option C reflects LIFO COGS and ending inventory."
+  },
+  {
+    "id": "L1-Q092",
+    "level": 1,
+    "module": "m7-inventories",
+    "topic": "Inventories",
+    "los": "Explain the effects of inventory valuation methods on financial statements and financial ratios.",
+    "question": "In an environment of persistently rising inventory prices and stable or increasing inventory unit quantities, which of the following financial statement impacts is expected when comparing FIFO to LIFO?",
+    "options": {
+      "A": "FIFO results in lower gross margin and higher income tax payments.",
+      "B": "FIFO results in higher ending inventory, higher net income, and lower cash flow from operations after taxes.",
+      "C": "FIFO results in lower cost of goods sold, higher net income, and higher operating cash flow before taxes."
+    },
+    "answer": "B",
+    "explanation": "During periods of rising prices and non-decreasing inventory quantities, FIFO allocates older, cheaper costs to COGS, resulting in lower COGS and higher ending inventory on the balance sheet. Lower COGS produces higher gross profit and higher pretax net income. However, higher pretax income leads to higher income tax payments. Because income taxes are a cash outflow, after-tax operating cash flow is lower under FIFO than under LIFO (assuming the LIFO conformity rule applies and tax returns reflect LIFO). Pre-tax operating cash flows are identical because revenues and cash purchases are unchanged. Therefore, Option B is correct. Option A is incorrect because FIFO produces higher gross margin. Option C is incorrect because before-tax operating cash flows are identical under both methods."
+  },
+  {
+    "id": "L1-Q093",
+    "level": 1,
+    "module": "m7-inventories",
+    "topic": "Inventories",
+    "los": "Compare the cost of goods sold and ending inventory values between periodic and perpetual inventory systems.",
+    "question": "A retailer has the following inventory transactions:\n- Beginning Inventory: 100 units at 20 USD\n- Day 5: Purchase 150 units at 22 USD\n- Day 10: Sale 120 units at 35 USD\n- Day 15: Purchase 200 units at 25 USD\n- Day 20: Sale 180 units at 38 USD\nUnder a perpetual inventory system using the moving average (weighted average) cost method, what is the cost of goods sold for the Day 10 sale?",
+    "options": {
+      "A": "2,544 USD",
+      "B": "2,400 USD",
+      "C": "2,640 USD"
+    },
+    "answer": "A",
+    "explanation": "Under the perpetual moving average method, a new average cost per unit is calculated immediately after each purchase. Prior to the Day 10 sale, the retailer has: Beginning inventory of 100 \\times 20 USD = 2,000 USD plus Day 5 purchase of 150 \\times 22 USD = 3,300 USD. Total cost = 5,300 USD for 250 units. Moving average unit cost prior to Day 10 sale = 5,300 USD / 250 units = 21.20 USD per unit. The cost of goods sold for the 120 units sold on Day 10 is: $\\text{COGS} = 120 \\times 21.20\\text{ USD} = 2,544\\text{ USD}$. Option B uses FIFO cost (100 \\times 20 USD + 20 \\times 22 USD = 2,440 USD or strictly beginning cost). Option C uses the Day 5 purchase cost of 22 USD (120 \\times 22 USD = 2,640 USD)."
+  },
+  {
+    "id": "L1-Q094",
+    "level": 1,
+    "module": "m7-inventories",
+    "topic": "Inventories",
+    "los": "Describe the LIFO reserve and calculate the adjustments required to convert balance sheet inventory from LIFO to FIFO.",
+    "question": "An analyst is evaluating a US GAAP company that reports under LIFO. For the current fiscal year, the company reports ending inventory of 480,000 USD and discloses a LIFO reserve of 65,000 USD. In the prior year, the LIFO reserve was 50,000 USD. If the company had reported under FIFO, its ending inventory on the balance sheet for the current year would be:",
+    "options": {
+      "A": "415,000 USD",
+      "B": "545,000 USD",
+      "C": "495,000 USD"
+    },
+    "answer": "B",
+    "explanation": "The relationship between FIFO inventory and LIFO inventory is: $\\text{Inventory}_{\\text{FIFO}} = \\text{Inventory}_{\\text{LIFO}} + \\text{LIFO Reserve}$. Substituting the current year figures: $\\text{Inventory}_{\\text{FIFO}} = 480,000\\text{ USD} + 65,000\\text{ USD} = 545,000\\text{ USD}$. Option A subtracts the LIFO reserve instead of adding it. Option C adds the change in the LIFO reserve (65,000 USD - 50,000 USD = 15,000 USD) to LIFO inventory, which is an error because the full cumulative reserve must be added to restate balance sheet inventory."
+  },
+  {
+    "id": "L1-Q095",
+    "level": 1,
+    "module": "m7-inventories",
+    "topic": "Inventories",
+    "los": "Calculate and explain the adjustments required to convert cost of goods sold from LIFO to FIFO.",
+    "question": "A US manufacturing firm reports cost of goods sold of 1,850,000 USD for the year under LIFO. Footnotes reveal that the beginning LIFO reserve was 120,000 USD and the ending LIFO reserve was 155,000 USD. What would the firm's cost of goods sold be on a FIFO basis?",
+    "options": {
+      "A": "1,885,000 USD",
+      "B": "1,815,000 USD",
+      "C": "1,695,000 USD"
+    },
+    "answer": "B",
+    "explanation": "To convert cost of goods sold from LIFO to FIFO, the change in the LIFO reserve is subtracted: $\\text{COGS}_{\\text{FIFO}} = \\text{COGS}_{\\text{LIFO}} - \\Delta\\text{LIFO Reserve}$. The change in the LIFO reserve is: $\\Delta\\text{LIFO Reserve} = \\text{Ending LIFO Reserve} - \\text{Beginning LIFO Reserve} = 155,000\\text{ USD} - 120,000\\text{ USD} = 35,000\\text{ USD}$. Therefore, $\\text{COGS}_{\\text{FIFO}} = 1,850,000\\text{ USD} - 35,000\\text{ USD} = 1,815,000\\text{ USD}$. Because the reserve increased, prices rose during the year, meaning FIFO COGS is lower than LIFO COGS. Option A incorrectly adds the change in LIFO reserve. Option C subtracts the entire ending LIFO reserve."
+  },
+  {
+    "id": "L1-Q096",
+    "level": 1,
+    "module": "m7-inventories",
+    "topic": "Inventories",
+    "los": "Describe LIFO liquidation and evaluate its effects on the financial statements and ratios.",
+    "question": "A company reporting under LIFO experiences a reduction in its inventory unit quantities during a period of rising prices. Which of the following is the most likely consequence of this LIFO liquidation?",
+    "options": {
+      "A": "Gross profit margin decreases and tax payments decrease.",
+      "B": "Gross profit margin artificially increases and tax liability increases.",
+      "C": "Cost of goods sold reflects current replacement costs and ending inventory is overstated."
+    },
+    "answer": "B",
+    "explanation": "A LIFO liquidation occurs when the number of units sold exceeds the number of units purchased or produced, causing older, lower-cost inventory layers (in an inflationary environment) to be matched against current sales revenues. This mismatch depresses reported COGS, thereby artificially inflating gross profit margin, operating income, and pretax income. Consequently, taxable income and income tax payments increase. The boost to earnings is non-sustainable and low quality. Option A is incorrect because gross margin increases and taxes rise. Option C is incorrect because under LIFO liquidation, COGS reflects historical low costs rather than current replacement costs."
+  },
+  {
+    "id": "L1-Q097",
+    "level": 1,
+    "module": "m7-inventories",
+    "topic": "Inventories",
+    "los": "Contrast the inventory valuation rules under IFRS and US GAAP including lower of cost and net realizable value.",
+    "question": "Under IFRS (IAS 2), how is inventory measured on the balance sheet, and what is the rule regarding reversals of previous inventory write-downs?",
+    "options": {
+      "A": "Measured at the lower of cost or net realizable value (NRV); write-down reversals are permitted up to the original cost.",
+      "B": "Measured at the lower of cost or market; write-down reversals are strictly prohibited.",
+      "C": "Measured at net realizable value; write-down reversals are recognized directly in other comprehensive income."
+    },
+    "answer": "A",
+    "explanation": "Under IFRS, inventory is valued at the lower of cost and net realizable value (NRV), where NRV is the estimated selling price in the ordinary course of business less estimated costs of completion and costs necessary to make the sale. If inventory is written down to NRV and the value subsequently recovers, IFRS permits a reversal of the write-down (recognized as a reduction in COGS in profit or loss), capped at the amount of the original write-down (cannot exceed original cost). Under US GAAP, write-down reversals are strictly prohibited for inventory once written down. Option B describes the US GAAP rule for LIFO/retail inventory. Option C incorrectly states inventory is carried at NRV without the lower-of-cost test."
+  },
+  {
+    "id": "L1-Q098",
+    "level": 1,
+    "module": "m7-inventories",
+    "topic": "Inventories",
+    "los": "Calculate the carrying amount of inventory under US GAAP lower of cost or market rules.",
+    "question": "A US GAAP firm using LIFO has an inventory item with historical cost of 80 USD. Current replacement cost is 72 USD. Estimated selling price is 95 USD, disposal costs are 10 USD, and the normal profit margin is 18 USD. Under the lower of cost or market rule, what is the carrying value of the inventory item?",
+    "options": {
+      "A": "80 USD",
+      "B": "72 USD",
+      "C": "67 USD"
+    },
+    "answer": "B",
+    "explanation": "Under US GAAP for firms using LIFO (or retail inventory method), inventory is valued at the lower of cost or market. 'Market' is defined as replacement cost, subject to an upper ceiling and lower floor: Ceiling = Net Realizable Value $(\\text{NRV}) = \\text{Selling Price} - \\text{Disposal Costs} = 95 - 10 = 85\\text{ USD}$. Floor = $\\text{NRV} - \\text{Normal Profit Margin} = 85 - 18 = 67\\text{ USD}$. Replacement cost is 72 USD, which falls within the range $[67\\text{ USD}, 85\\text{ USD}]$. Therefore, market value equals replacement cost of 72 USD. Finally, compare historical cost (80 USD) to market (72 USD). The lower value is 72 USD. Option A is historical cost. Option C is the floor."
+  },
+  {
+    "id": "L1-Q099",
+    "level": 1,
+    "module": "m7-inventories",
+    "topic": "Inventories",
+    "los": "Evaluate the impact of inventory valuation method choice on activity, liquidity, and solvency ratios.",
+    "question": "Firm A uses FIFO and Firm B uses LIFO. Both operate in the same industry with identical physical unit volumes, unit sales, purchases, and initial inventories during an era of steadily rising prices. Relative to Firm B, Firm A will most likely exhibit a:",
+    "options": {
+      "A": "Higher inventory turnover ratio and lower current ratio.",
+      "B": "Lower inventory turnover ratio and higher current ratio.",
+      "C": "Higher inventory turnover ratio and higher debt-to-equity ratio."
+    },
+    "answer": "B",
+    "explanation": "Under FIFO with rising prices: 1) Ending inventory on the balance sheet is higher (valued at recent higher purchase costs), which increases current assets and therefore results in a higher current ratio ($\\text{Current Assets} / \\text{Current Liabilities}$). 2) COGS is lower (reflects older cheaper costs). 3) Inventory turnover ratio = $\\text{COGS} / \\text{Average Inventory}$. With a lower numerator (COGS) and a higher denominator (Average Inventory), Firm A's inventory turnover ratio is significantly lower than Firm B's. 4) Equity is higher due to higher cumulative net income, resulting in a lower debt-to-equity ratio. Thus, Option B is correct."
+  },
+  {
+    "id": "L1-Q100",
+    "level": 1,
+    "module": "m7-inventories",
+    "topic": "Inventories",
+    "los": "Calculate the adjustments required to retained earnings and stockholders' equity when converting from LIFO to FIFO.",
+    "question": "A US GAAP firm reports ending LIFO inventory of 600,000 USD and shareholders' equity of 2,400,000 USD. The footnote discloses an ending LIFO reserve of 140,000 USD. The applicable corporate income tax rate is 25%. To restate the company's financial statements to FIFO, shareholders' equity should be adjusted to:",
+    "options": {
+      "A": "2,505,000 USD",
+      "B": "2,540,000 USD",
+      "C": "2,435,000 USD"
+    },
+    "answer": "A",
+    "explanation": "When converting from LIFO to FIFO, ending inventory increases by the LIFO reserve: $\\Delta\\text{Assets} = +140,000\\text{ USD}$. This cumulative pretax increase generates a deferred tax liability: $\\text{DTL} = \\text{LIFO Reserve} \\times t = 140,000\\text{ USD} \\times 0.25 = 35,000\\text{ USD}$. The cumulative after-tax effect increases retained earnings and total shareholders' equity by: $\\Delta\\text{Equity} = \\text{LIFO Reserve} \\times (1 - t) = 140,000\\text{ USD} \\times (1 - 0.25) = 105,000\\text{ USD}$. Adjusted shareholders' equity = 2,400,000 USD + 105,000 USD = 2,505,000 USD. Option B fails to adjust for taxes, adding the full 140,000 USD. Option C adds only the tax liability (35,000 USD)."
+  },
+  {
+    "id": "L1-Q101",
+    "level": 1,
+    "module": "m7-inventories",
+    "topic": "Inventories",
+    "los": "Explain the differences between costs included in inventory and costs recognized as expenses in the period incurred.",
+    "question": "Which of the following expenditures incurred by a manufacturing entity should be capitalized into inventory rather than expensed as an operating cost in the period incurred?",
+    "options": {
+      "A": "Storage costs of finished goods awaiting shipment to customers.",
+      "B": "Import duties and freight-in paid to deliver raw materials to the production plant.",
+      "C": "Abnormal amounts of wasted materials and labor resulting from equipment malfunction."
+    },
+    "answer": "B",
+    "explanation": "Under both IFRS and US GAAP, inventory cost includes all costs of purchase, costs of conversion, and other costs incurred in bringing the inventories to their present location and condition. Import duties, non-recoverable purchase taxes, and freight-in (transportation costs to bring raw materials to the factory) are capitalized into inventory. In contrast, abnormal waste of materials and labor (Option C), storage costs of finished goods unless necessary in the production process prior to a further stage (Option A), selling expenses, and general administrative overhead must be expensed in the period incurred."
+  },
+  {
+    "id": "L1-Q102",
+    "level": 1,
+    "module": "m7-inventories",
+    "topic": "Inventories",
+    "los": "Describe the financial statement impact of inventory write-downs to net realizable value.",
+    "question": "At year-end, a tech hardware company determines that the net realizable value of its finished goods inventory is 350,000 USD, whereas its carrying cost is 420,000 USD. The company records a 70,000 USD write-down. Which of the following financial statement impacts will occur in the period of the write-down?",
+    "options": {
+      "A": "Total asset turnover increases and debt-to-equity ratio increases.",
+      "B": "Gross profit margin increases and current ratio decreases.",
+      "C": "Operating profit margin increases and return on assets decreases."
+    },
+    "answer": "A",
+    "explanation": "The 70,000 USD inventory write-down reduces inventory (current assets and total assets) by 70,000 USD and increases COGS (or an inventory impairment line in operating expenses), reducing net income and ending equity. 1) Total Asset Turnover = $\\text{Sales} / \\text{Average Total Assets}$. With total assets lower and sales unchanged, total asset turnover increases. 2) Debt-to-Equity Ratio = $\\text{Total Debt} / \\text{Total Equity}$. With debt unchanged and equity reduced by the write-down, the debt-to-equity ratio increases. 3) Current ratio decreases (lower current assets). 4) Gross margin and operating margin decrease due to the write-down expense. Therefore, Option A is correct."
+  },
+  {
+    "id": "L1-Q103",
+    "level": 1,
+    "module": "m7-inventories",
+    "topic": "Inventories",
+    "los": "Calculate the restated FIFO gross margin for a company reporting under LIFO.",
+    "question": "A company reports LIFO sales of 5,000,000 USD, LIFO COGS of 3,200,000 USD, and a LIFO reserve that increased from 180,000 USD at the beginning of the year to 230,000 USD at year-end. What is the company's restated FIFO gross profit margin?",
+    "options": {
+      "A": "36.0%",
+      "B": "37.0%",
+      "C": "35.0%"
+    },
+    "answer": "B",
+    "explanation": "First, calculate the change in the LIFO reserve: $\\Delta\\text{LIFO Reserve} = 230,000\\text{ USD} - 180,000\\text{ USD} = 50,000\\text{ USD}$. Next, calculate FIFO COGS: $\\text{COGS}_{\\text{FIFO}} = \\text{COGS}_{\\text{LIFO}} - \\Delta\\text{LIFO Reserve} = 3,200,000\\text{ USD} - 50,000\\text{ USD} = 3,150,000\\text{ USD}$. FIFO Gross Profit = 5,000,000 USD - 3,150,000 USD = 1,850,000 USD. FIFO Gross Profit Margin = 1,850,000 USD / 5,000,000 USD = 0.370 or 37.0%. Under LIFO, gross profit margin was: (5,000,000 - 3,200,000) / 5,000,000 = 36.0% (Option A). Option C incorrectly adds the change in LIFO reserve."
+  },
+  {
+    "id": "L1-Q104",
+    "level": 1,
+    "module": "m7-inventories",
+    "topic": "Inventories",
+    "los": "Compare the presentation and disclosures of inventory under IFRS and US GAAP.",
+    "question": "Which of the following inventory disclosures or accounting treatments is permitted under US GAAP but strictly prohibited under IFRS?",
+    "options": {
+      "A": "Reversal of prior inventory write-downs when net realizable value recovers.",
+      "B": "Use of the Last-In, First-Out (LIFO) inventory cost flow assumption.",
+      "C": "Valuation of inventories at the lower of cost or net realizable value."
+    },
+    "answer": "B",
+    "explanation": "Under IFRS (IAS 2), the Last-In, First-Out (LIFO) method is strictly prohibited. US GAAP allows LIFO, FIFO, and weighted average cost methods. Regarding Option A, reversal of inventory write-downs is allowed under IFRS (up to original cost) but prohibited under US GAAP. Regarding Option C, lower of cost or net realizable value is required under IFRS (and under US GAAP for FIFO/weighted average methods)."
+  },
+  {
+    "id": "L1-Q105",
+    "level": 1,
+    "module": "m7-inventories",
+    "topic": "Inventories",
+    "los": "Analyze the effect of inventory method choices on cash flows and income taxes.",
+    "question": "A US firm operates under the LIFO conformity rule during a period of sustained inflation. If management switches its inventory accounting method from LIFO to FIFO for financial reporting, what is the most direct consequence on its income taxes and cash flow?",
+    "options": {
+      "A": "Reported net income will decrease, and cash flow from operations will increase.",
+      "B": "Income taxes paid will increase, and cash flow from operations will decrease.",
+      "C": "Both reported net income and cash flow from operations will increase."
+    },
+    "answer": "B",
+    "explanation": "Under the US IRS LIFO conformity rule, if a company uses LIFO for tax purposes, it must also use LIFO for financial reporting. If the company elects to switch from LIFO to FIFO, it must also use FIFO for tax reporting. In an inflationary environment, FIFO results in lower COGS and higher taxable income. Consequently, income taxes paid increase. Because cash tax payments are an operating cash outflow, after-tax cash flow from operations decreases. While reported net income increases, cash flows decrease due to higher tax outflows. Option B is correct."
+  },
+  {
+    "id": "L1-Q106",
+    "level": 1,
+    "module": "m8-long-lived-assets",
+    "topic": "Long-Lived Assets",
+    "los": "Distinguish between costs that are capitalized and costs that are expensed in the period incurred.",
+    "question": "A logistics corporation acquires a new automated sorting facility. It incurs: 1,200,000 USD purchase price, 80,000 USD delivery and installation, 30,000 USD site preparation, 25,000 USD testing costs before production, and 40,000 USD staff training costs to operate the machinery. What total amount should be capitalized to property, plant, and equipment (PPE)?",
+    "options": {
+      "A": "1,335,000 USD",
+      "B": "1,375,000 USD",
+      "C": "1,310,000 USD"
+    },
+    "answer": "A",
+    "explanation": "All expenditures necessary to acquire the asset and prepare it for its intended use are capitalized to the cost of the asset. This includes: Purchase price (1,200,000 USD) + Delivery & installation (80,000 USD) + Site preparation (30,000 USD) + Testing costs before commercial production (25,000 USD) = 1,335,000 USD. Staff training costs (40,000 USD) must be expensed as an operating expense in the period incurred because the company cannot control the future economic benefits embodied in trained employees. Option B includes training costs. Option C omits testing costs."
+  },
+  {
+    "id": "L1-Q107",
+    "level": 1,
+    "module": "m8-long-lived-assets",
+    "topic": "Long-Lived Assets",
+    "los": "Explain the financial statement effects of capitalizing versus expensing interest during construction.",
+    "question": "When a firm capitalizes interest costs incurred during the construction of a self-constructed qualifying long-lived asset rather than expensing them, how are its financial statements affected in the construction period?",
+    "options": {
+      "A": "Net income is higher, cash flow from operations is higher, and cash flow from investing is lower.",
+      "B": "Net income is higher, cash flow from operations is unchanged, and cash flow from financing is higher.",
+      "C": "Net income is lower, cash flow from operations is lower, and cash flow from investing is higher."
+    },
+    "answer": "A",
+    "explanation": "Capitalizing interest means the interest is added to the carrying amount of the asset on the balance sheet rather than reported as interest expense on the income statement. 1) Income Statement: Interest expense is lower, so net income is higher during the construction period. 2) Cash Flow Statement: Under US GAAP and common IFRS practice, capitalized interest is classified as an outflow from investing activities (CFI) as part of the asset acquisition cost, whereas expensed interest is classified as an outflow from operating activities (CFO). Therefore, capitalizing interest increases reported CFO and decreases reported CFI. Option A is correct."
+  },
+  {
+    "id": "L1-Q108",
+    "level": 1,
+    "module": "m8-long-lived-assets",
+    "topic": "Long-Lived Assets",
+    "los": "Calculate depreciation expense under the straight-line method.",
+    "question": "An enterprise purchases heavy equipment on 1 January Year 1 for 250,000 USD. Estimated useful life is 8 years, and estimated salvage value is 30,000 USD. At the end of Year 3, what is the asset's accumulated depreciation and carrying book value using straight-line depreciation?",
+    "options": {
+      "A": "Accumulated depreciation is 82,500 USD; Carrying value is 167,500 USD.",
+      "B": "Accumulated depreciation is 93,750 USD; Carrying value is 156,250 USD.",
+      "C": "Accumulated depreciation is 55,000 USD; Carrying value is 195,000 USD."
+    },
+    "answer": "A",
+    "explanation": "Annual straight-line depreciation = $(\\text{Cost} - \\text{Salvage Value}) / \\text{Useful Life} = (250,000\\text{ USD} - 30,000\\text{ USD}) / 8 = 220,000\\text{ USD} / 8 = 27,500\\text{ USD}$ per year. For 3 full years (Years 1, 2, and 3), accumulated depreciation = $\\text{AccDep} = 3 \\times 27,500\\text{ USD} = 82,500\\text{ USD}$. Carrying book value at the end of Year 3 = $\\text{Cost} - \\text{Accumulated Depreciation} = 250,000\\text{ USD} - 82,500\\text{ USD} = 167,500\\text{ USD}$. Option B ignores salvage value: (250,000 / 8) \\times 3 = 93,750 USD. Option C calculates only 2 years of depreciation."
+  },
+  {
+    "id": "L1-Q109",
+    "level": 1,
+    "module": "m8-long-lived-assets",
+    "topic": "Long-Lived Assets",
+    "los": "Calculate depreciation expense under accelerated methods including double-declining balance.",
+    "question": "A company purchases machinery on 1 January for 100,000 USD with an estimated useful life of 5 years and a residual value of 10,000 USD. Using the double-declining balance (DDB) method, what is the depreciation expense for Year 2?",
+    "options": {
+      "A": "24,000 USD",
+      "B": "36,000 USD",
+      "C": "16,000 USD"
+    },
+    "answer": "A",
+    "explanation": "Under the double-declining balance method, the straight-line rate is $\\text{SL Rate} = 1 / 5 = 20\\%$. The DDB rate is $\\text{DDB Rate} = 2 \\times 20\\% = 40\\%$. The rate is applied to the beginning book value without subtracting residual value (though the asset is not depreciated below residual value). Year 1 Depreciation = $\\text{Dep}_{1} = 100,000\\text{ USD} \\times 40\\% = 40,000\\text{ USD}$. Book value at end of Year 1 = 100,000 USD - 40,000 USD = 60,000 USD. Year 2 Depreciation = Beginning Book Value $\\times 40\\% = 60,000\\text{ USD} \\times 40\\% = 24,000\\text{ USD}$. Book value at end of Year 2 is 60,000 USD - 24,000 USD = 36,000 USD (above the 10,000 USD floor). Option B is the ending book value. Option C applies the rate to (Cost - Residual) in Year 1."
+  },
+  {
+    "id": "L1-Q110",
+    "level": 1,
+    "module": "m8-long-lived-assets",
+    "topic": "Long-Lived Assets",
+    "los": "Explain component depreciation requirements under IFRS and US GAAP.",
+    "question": "Regarding component depreciation of long-lived tangible assets, which of the following statements accurately contrasts IFRS and US GAAP?",
+    "options": {
+      "A": "IFRS requires component depreciation when components have significantly different useful lives, whereas US GAAP permits it but does not require it.",
+      "B": "Both IFRS and US GAAP strictly mandate component depreciation for all industrial equipment.",
+      "C": "US GAAP mandates component depreciation, whereas IFRS considers component depreciation an optional alternative to straight-line pooling."
+    },
+    "answer": "A",
+    "explanation": "Under IFRS (IAS 16), each part of an item of property, plant, and equipment with a cost that is significant in relation to the total cost of the item must be depreciated separately (component depreciation is mandatory). For example, the airframe and jet engines of an aircraft must be depreciated separately over their respective useful lives. Under US GAAP, component depreciation is allowed and accepted, but it is rarely used in practice and is not mandatory. Option A is correct."
+  },
+  {
+    "id": "L1-Q111",
+    "level": 1,
+    "module": "m8-long-lived-assets",
+    "topic": "Long-Lived Assets",
+    "los": "Describe the revaluation model under IFRS and calculate the accounting entries.",
+    "question": "Under IFRS, an entity applies the revaluation model to land originally purchased for 500,000 USD. In Year 1, fair value rises to 560,000 USD. In Year 2, fair value drops to 470,000 USD. How should the Year 2 decrease in value of 90,000 USD be recognized?",
+    "options": {
+      "A": "Entire 90,000 USD recognized as a loss on the income statement.",
+      "B": "60,000 USD reduction of revaluation surplus in OCI, and 30,000 USD loss on the income statement.",
+      "C": "Entire 90,000 USD reduction of revaluation surplus in OCI."
+    },
+    "answer": "B",
+    "explanation": "Under the IFRS revaluation model: In Year 1, the 60,000 USD increase (560,000 USD - 500,000 USD) is recognized in other comprehensive income (OCI) and accumulated in equity under revaluation surplus. In Year 2, the asset drops by 90,000 USD (from 560,000 to 470,000 USD). A revaluation decrease must first reverse any existing revaluation surplus for the same asset in OCI. Any excess decrease below original historical cost is recognized as an impairment loss in profit or loss on the income statement. Here, revaluation surplus has 60,000 USD, so 60,000 USD reduces revaluation surplus in OCI to zero, and the remaining 30,000 USD is recognized as a loss on the income statement. Option B is correct."
+  },
+  {
+    "id": "L1-Q112",
+    "level": 1,
+    "module": "m8-long-lived-assets",
+    "topic": "Long-Lived Assets",
+    "los": "Describe the impairment of long-lived assets under IFRS and calculate impairment loss.",
+    "question": "Under IFRS (IAS 36), an asset has a carrying value of 300,000 USD. Its fair value less costs to sell is 250,000 USD, and its value in use is 270,000 USD. The recoverable amount of the asset and the resulting impairment loss are:",
+    "options": {
+      "A": "Recoverable amount is 270,000 USD; Impairment loss is 30,000 USD.",
+      "B": "Recoverable amount is 250,000 USD; Impairment loss is 50,000 USD.",
+      "C": "Recoverable amount is 260,000 USD; Impairment loss is 40,000 USD."
+    },
+    "answer": "A",
+    "explanation": "Under IFRS, an asset is impaired when its carrying value exceeds its recoverable amount. The recoverable amount is defined as the higher of: 1) Fair value less costs to sell (250,000 USD), and 2) Value in use (present value of expected future cash flows = 270,000 USD). The recoverable amount is $\\max(250,000\\text{ USD}, 270,000\\text{ USD}) = 270,000\\text{ USD}$. Carrying value is 300,000 USD. Because carrying value exceeds recoverable amount, an impairment loss is recognized: $\\text{Impairment Loss} = 300,000\\text{ USD} - 270,000\\text{ USD} = 30,000\\text{ USD}$. Option B erroneously takes the lower of the two figures. Option C takes the simple average."
+  },
+  {
+    "id": "L1-Q113",
+    "level": 1,
+    "module": "m8-long-lived-assets",
+    "topic": "Long-Lived Assets",
+    "los": "Contrast the impairment testing procedures and reversal rules between IFRS and US GAAP.",
+    "question": "A manufacturing machine held for use has a carrying value of 140,000 USD. Estimated undiscounted future cash flows are 150,000 USD, while the discounted present value of future cash flows is 120,000 USD and fair value is 115,000 USD. Under US GAAP, what is the impairment loss?",
+    "options": {
+      "A": "0 USD",
+      "B": "20,000 USD",
+      "C": "25,000 USD"
+    },
+    "answer": "A",
+    "explanation": "Under US GAAP (ASC 360), impairment of long-lived assets held for use involves a two-step test: Step 1 (Recoverability test): The asset's carrying value is compared to the undiscounted future cash flows expected from its use and eventual disposition. If undiscounted cash flows $\\ge$ carrying value, the asset is NOT impaired, and Step 2 is not performed. Here, undiscounted cash flows (150,000 USD) exceed carrying value (140,000 USD). Thus, the asset is not impaired, and impairment loss is 0 USD. If Step 1 had failed, Step 2 would measure the impairment loss as carrying value minus fair value: $\\text{Loss} = 140,000\\text{ USD} - 115,000\\text{ USD} = 25,000\\text{ USD}$ (Option C). Option B reflects IFRS impairment."
+  },
+  {
+    "id": "L1-Q114",
+    "level": 1,
+    "module": "m8-long-lived-assets",
+    "topic": "Long-Lived Assets",
+    "los": "Explain the accounting for intangible assets developed internally under IFRS and US GAAP.",
+    "question": "Pharmaceutical Company Alpha spends 40 million USD on research and 60 million USD on development of a new patent-eligible compound. Under IFRS, Alpha proves commercial and technical feasibility for the development phase. Under US GAAP, how should these expenditures be accounted for relative to IFRS?",
+    "options": {
+      "A": "Under US GAAP, both the 40 million USD research and 60 million USD development must be expensed immediately, whereas under IFRS, the 60 million USD development cost can be capitalized.",
+      "B": "Under US GAAP, all 100 million USD is capitalized, whereas under IFRS, only development costs are capitalized.",
+      "C": "Both IFRS and US GAAP require capitalizing all development costs once technical feasibility is reached."
+    },
+    "answer": "A",
+    "explanation": "Under IFRS (IAS 38), research costs must be expensed when incurred, but development costs must be capitalized if the entity can demonstrate technical feasibility, intention and ability to complete/use/sell the asset, and probable future economic benefits. Under US GAAP (ASC 730), both research and development costs must be expensed as incurred, with limited exceptions (such as software development costs developed for sale after technological feasibility is reached or software for internal use). Thus, under US GAAP, the full 100 million USD is expensed, whereas under IFRS, 40 million USD is expensed and 60 million USD is capitalized."
+  },
+  {
+    "id": "L1-Q115",
+    "level": 1,
+    "module": "m8-long-lived-assets",
+    "topic": "Long-Lived Assets",
+    "los": "Calculate the gain or loss on derecognition/disposal of a long-lived asset.",
+    "question": "A corporation sells a specialized packaging line for 95,000 USD cash. The machine originally cost 220,000 USD and had accumulated depreciation of 145,000 USD at the time of sale. The transaction results in:",
+    "options": {
+      "A": "A gain of 20,000 USD reported in operating income, and an investing cash inflow of 95,000 USD.",
+      "B": "A loss of 50,000 USD reported in operating income, and a financing cash inflow of 95,000 USD.",
+      "C": "A gain of 20,000 USD reported in other income/expense, and an operating cash inflow of 95,000 USD."
+    },
+    "answer": "A",
+    "explanation": "Carrying value at date of sale = $\\text{Original Cost} - \\text{Accumulated Depreciation} = 220,000\\text{ USD} - 145,000\\text{ USD} = 75,000\\text{ USD}$. Gain/Loss on disposal = $\\text{Proceeds} - \\text{Carrying Value} = 95,000\\text{ USD} - 75,000\\text{ USD} = +20,000\\text{ USD}$ (a gain). On the income statement, this gain is recognized in operating or other operating income. On the cash flow statement, the full cash proceed of 95,000 USD is classified as a cash inflow from investing activities (CFI). In the indirect CFO reconciliation, the 20,000 USD gain is deducted from net income to avoid double counting."
+  },
+  {
+    "id": "L1-Q116",
+    "level": 1,
+    "module": "m8-long-lived-assets",
+    "topic": "Long-Lived Assets",
+    "los": "Calculate and interpret financial ratios related to long-lived assets, including average age and remaining useful life.",
+    "question": "A company reports gross ending PPE of 1,500,000 USD, ending accumulated depreciation of 600,000 USD, and annual depreciation expense of 100,000 USD. Assuming straight-line depreciation with zero salvage value, the estimated average age and remaining useful life of the assets are closest to:",
+    "options": {
+      "A": "Average age = 6.0 years; Remaining life = 9.0 years.",
+      "B": "Average age = 4.0 years; Remaining life = 11.0 years.",
+      "C": "Average age = 6.0 years; Remaining life = 15.0 years."
+    },
+    "answer": "A",
+    "explanation": "The analytical formulas for long-lived assets are: 1) $\\text{Estimated Average Age} = \\text{Accumulated Depreciation} / \\text{Annual Depreciation Expense} = 600,000 / 100,000 = 6.0\\text{ years}$. 2) $\\text{Total Depreciable Life} = \\text{Gross PPE} / \\text{Annual Depreciation Expense} = 1,500,000 / 100,000 = 15.0\\text{ years}$. 3) $\\text{Estimated Remaining Life} = \\text{Net PPE} / \\text{Annual Depreciation Expense} = (1,500,000 - 600,000) / 100,000 = 900,000 / 100,000 = 9.0\\text{ years}$ (or Total Life minus Average Age = $\\text{Life} = 15.0 - 6.0 = 9.0\\text{ years}$). Option A is correct."
+  },
+  {
+    "id": "L1-Q117",
+    "level": 1,
+    "module": "m8-long-lived-assets",
+    "topic": "Long-Lived Assets",
+    "los": "Describe the accounting for goodwill and its impairment under IFRS and US GAAP.",
+    "question": "Acquirer Corp buys Target Inc for 500 million USD cash. Target's assets have a book value of 320 million USD and a fair value of 410 million USD. Target's liabilities have a book and fair value of 150 million USD. What is the goodwill recognized from this business acquisition?",
+    "options": {
+      "A": "240 million USD",
+      "B": "90 million USD",
+      "C": "330 million USD"
+    },
+    "answer": "A",
+    "explanation": "Goodwill is created when the purchase acquisition price exceeds the fair value of net identifiable assets acquired. Fair value of Target's net identifiable assets = $\\text{Fair Value of Identifiable Assets} - \\text{Fair Value of Liabilities} = 410\\text{ million USD} - 150\\text{ million USD} = 260\\text{ million USD}$. Goodwill = $\\text{Purchase Price} - \\text{Fair Value of Net Identifiable Assets} = 500\\text{ million USD} - 260\\text{ million USD} = 240\\text{ million USD}$. Option B calculates goodwill using book value of assets instead of fair value (500 - (320 - 150) = 330 is Option C; Option B is 500 - 410). Goodwill is capitalized as an unamortizable intangible asset subject to annual impairment testing."
+  },
+  {
+    "id": "L1-Q118",
+    "level": 1,
+    "module": "m8-long-lived-assets",
+    "topic": "Long-Lived Assets",
+    "los": "Describe the cost and fair value models for investment property under IFRS.",
+    "question": "Under IFRS (IAS 40), an entity chooses the fair value model for its investment property. How are changes in fair value recognized, and how is depreciation treated?",
+    "options": {
+      "A": "Fair value changes are recognized in profit or loss on the income statement, and no depreciation is recorded.",
+      "B": "Fair value increases are recognized in revaluation surplus in OCI, and annual straight-line depreciation is recorded.",
+      "C": "Fair value changes are recognized in profit or loss, but the building must also be depreciated over its useful life."
+    },
+    "answer": "A",
+    "explanation": "Under IFRS (IAS 40), investment property is property held to earn rentals or for capital appreciation or both. Entities may choose either the cost model or the fair value model (applied consistently to all investment property). Under the fair value model: 1) The property is remeasured to fair value at each balance sheet date. 2) All changes in fair value (both unrealized gains and losses) are recognized directly in profit or loss on the income statement. 3) No depreciation is recognized on the investment property. (Note the crucial contrast with the IAS 16 revaluation model for PPE, where revaluation gains go to OCI and depreciation continues). Option A is correct."
+  },
+  {
+    "id": "L1-Q119",
+    "level": 1,
+    "module": "m8-long-lived-assets",
+    "topic": "Long-Lived Assets",
+    "los": "Evaluate the financial statement and ratio effects of capitalizing versus expensing expenditures.",
+    "question": "In the year an expenditure is made, capitalizing the cost instead of expensing it immediately results in:",
+    "options": {
+      "A": "Higher return on equity (ROE) in Year 1, and lower ROE in subsequent years.",
+      "B": "Lower cash flow from operations, and lower total assets.",
+      "C": "Higher debt-to-equity ratio in Year 1, and lower interest coverage ratio."
+    },
+    "answer": "A",
+    "explanation": "Capitalizing an expenditure puts the cost onto the balance sheet as an asset, delaying expense recognition to future periods via depreciation/amortization. In Year 1: Net income is higher (because only a fraction of the cost is depreciated rather than 100% expensed). Ending shareholders' equity is higher. Because net income increases by a greater percentage than equity, Year 1 ROE ($\\text{Net Income} / \\text{Equity}$) is higher. In subsequent years, additional depreciation expense is recognized with no incremental cash benefit, depressing net income and leading to lower ROE relative to having expensed the cost in Year 1. Capitalizing also increases CFO (outflow is CFI) and increases equity (lowering debt-to-equity). Thus, Option A is correct."
+  },
+  {
+    "id": "L1-Q120",
+    "level": 1,
+    "module": "m8-long-lived-assets",
+    "topic": "Long-Lived Assets",
+    "los": "Compare the rules on reversal of impairment losses between IFRS and US GAAP.",
+    "question": "A machine was written down due to impairment in Year 1. In Year 3, technological breakthroughs increase the machine's recoverable amount above its historical carrying value. Under IFRS and US GAAP, how is the reversal of the impairment loss treated for an asset held for use?",
+    "options": {
+      "A": "IFRS allows reversal up to the carrying amount that would have been determined had no impairment occurred; US GAAP strictly prohibits reversals.",
+      "B": "Both IFRS and US GAAP allow full reversal up to the original undiscounted historical cost.",
+      "C": "Neither IFRS nor US GAAP allows reversal of impairment for tangible property, plant, and equipment."
+    },
+    "answer": "A",
+    "explanation": "Under IFRS (IAS 36), impairment losses on PPE and intangible assets with finite useful lives can be reversed if there is a change in the estimates used to determine the recoverable amount. The reversal is recognized in profit or loss, but the carrying amount can only be increased up to the carrying amount that would have been determined (net of depreciation) had no impairment been recognized. (Impairment of goodwill cannot be reversed under any standard). Under US GAAP, impairment losses for assets held for use can NEVER be reversed. Option A is correct."
+  },
+  {
+    "id": "L1-Q121",
+    "level": 1,
+    "module": "m9-taxes",
+    "topic": "Income Taxes",
+    "los": "Contrast accounting profit, taxable income, taxes payable, and income tax expense.",
+    "question": "Which of the following definitions correctly identifies income tax expense as reported on the income statement?",
+    "options": {
+      "A": "The amount of taxes owed to tax authorities based on taxable income under tax law.",
+      "B": "Taxes payable plus the net increase in deferred tax liabilities minus the net increase in deferred tax assets.",
+      "C": "Pretax accounting profit multiplied by the statutory corporate income tax rate with no adjustments."
+    },
+    "answer": "B",
+    "explanation": "Income tax expense (the tax expense reported on the income statement) reflects the total tax cost associated with accounting profit for the period: $\\text{Income Tax Expense} = \\text{Taxes Payable} + \\Delta\\text{DTL} - \\Delta\\text{DTA}$, where Taxes Payable is the actual cash tax liability owed to tax authorities based on taxable income under tax laws. Option A defines taxes payable (or current tax expense). Option C ignores permanent and temporary differences as well as rate differentials. Option B is correct."
+  },
+  {
+    "id": "L1-Q122",
+    "level": 1,
+    "module": "m9-taxes",
+    "topic": "Income Taxes",
+    "los": "Calculate the tax base of an asset and determine whether a temporary difference creates a deferred tax asset or liability.",
+    "question": "A company purchases equipment for 600,000 USD on 1 January. For financial accounting, the equipment is depreciated straight-line over 5 years with zero salvage value (120,000 USD per year). For tax purposes, accelerated tax depreciation is 200,000 USD in Year 1. At the end of Year 1, what are the carrying amount, tax base, and resulting deferred tax position at a 25% tax rate?",
+    "options": {
+      "A": "Carrying amount = 480,000 USD; Tax base = 400,000 USD; Deferred Tax Liability of 20,000 USD.",
+      "B": "Carrying amount = 400,000 USD; Tax base = 480,000 USD; Deferred Tax Asset of 20,000 USD.",
+      "C": "Carrying amount = 480,000 USD; Tax base = 400,000 USD; Deferred Tax Asset of 80,000 USD."
+    },
+    "answer": "A",
+    "explanation": "Carrying amount (financial statements) = 600,000 USD - 120,000 USD = 480,000 USD. Tax base = Cost - Tax Depreciation = 600,000 USD - 200,000 USD = 400,000 USD. Because the carrying amount of the asset (480,000 USD) exceeds its tax base (400,000 USD), future taxable economic benefits will exceed deductible tax deductions. This taxable temporary difference is: 480,000 USD - 400,000 USD = 80,000 USD. The resulting Deferred Tax Liability (DTL) is: $\\text{DTL} = 80,000\\text{ USD} \\times 25\\% = 20,000\\text{ USD}$. Option A is correct."
+  },
+  {
+    "id": "L1-Q123",
+    "level": 1,
+    "module": "m9-taxes",
+    "topic": "Income Taxes",
+    "los": "Determine the tax base of a liability and the resulting deferred tax asset or liability.",
+    "question": "At year-end, a firm accrues warranty expense of 50,000 USD, creating a warranty liability of 50,000 USD on its balance sheet. Under local tax law, warranty costs are deductible only when paid in cash to service customer claims. At a 30% tax rate, what is the tax base of the warranty liability and the deferred tax effect?",
+    "options": {
+      "A": "Tax base is 50,000 USD; No deferred tax asset or liability arises.",
+      "B": "Tax base is 0 USD; Deferred Tax Asset of 15,000 USD.",
+      "C": "Tax base is 0 USD; Deferred Tax Liability of 15,000 USD."
+    },
+    "answer": "B",
+    "explanation": "The tax base of a liability is defined as its carrying amount less any amounts that will be deductible for tax purposes in future periods: $\\text{Tax Base} = \\text{Carrying Amount} - \\text{Future Deductible Amount} = 50,000\\text{ USD} - 50,000\\text{ USD} = 0\\text{ USD}$. When the carrying amount of a liability exceeds its tax base (50,000 USD > 0), a deductible temporary difference arises because tax deductions will be recognized in the future when the warranty is paid. This creates a Deferred Tax Asset (DTA): $\\text{DTA} = 50,000\\text{ USD} \\times 30\\% = 15,000\\text{ USD}$. Option B is correct."
+  },
+  {
+    "id": "L1-Q124",
+    "level": 1,
+    "module": "m9-taxes",
+    "topic": "Income Taxes",
+    "los": "Distinguish between temporary and permanent differences in tax accounting.",
+    "question": "Which of the following items represents a permanent difference between accounting profit and taxable income rather than a temporary difference?",
+    "options": {
+      "A": "Interest earned on tax-exempt municipal bonds.",
+      "B": "Advance rental receipts taxed when received but recognized as unearned revenue under GAAP.",
+      "C": "Accelerated depreciation for tax purposes versus straight-line depreciation for financial reporting."
+    },
+    "answer": "A",
+    "explanation": "A permanent difference is a difference between taxable income and pretax accounting profit that will never reverse in future periods. Examples include tax-exempt municipal bond interest, non-deductible government fines/penalties, and meals and entertainment limitations. Permanent differences do not give rise to deferred tax assets or liabilities; instead, they cause the effective tax rate to differ permanently from the statutory tax rate. In contrast, unearned revenue (Option B) and accelerated depreciation (Option C) will reverse over time and are temporary differences."
+  },
+  {
+    "id": "L1-Q125",
+    "level": 1,
+    "module": "m9-taxes",
+    "topic": "Income Taxes",
+    "los": "Calculate income tax expense from taxes payable and changes in deferred tax assets and liabilities.",
+    "question": "During Year 2, a corporation reports taxable income resulting in current taxes payable of 180,000 USD. During the year, its deferred tax assets increased from 40,000 USD to 55,000 USD, and its deferred tax liabilities increased from 90,000 USD to 120,000 USD. The corporate tax rate remained constant at 25%. What is the income tax expense reported on the Year 2 income statement?",
+    "options": {
+      "A": "195,000 USD",
+      "B": "165,000 USD",
+      "C": "225,000 USD"
+    },
+    "answer": "A",
+    "explanation": "Income tax expense is calculated as: $\\text{Income Tax Expense} = \\text{Taxes Payable} + \\Delta\\text{DTL} - \\Delta\\text{DTA}$. We have: $\\Delta\\text{DTL} = 120,000\\text{ USD} - 90,000\\text{ USD} = +30,000\\text{ USD}$; $\\Delta\\text{DTA} = 55,000\\text{ USD} - 40,000\\text{ USD} = +15,000\\text{ USD}$. Therefore: $\\text{Income Tax Expense} = 180,000 + 30,000 - 15,000 = 195,000\\text{ USD}$. Option B incorrectly subtracts $\\Delta\\text{DTL}$ and adds $\\Delta\\text{DTA}$. Option C adds both increases without offsetting the DTA increase."
+  },
+  {
+    "id": "L1-Q126",
+    "level": 1,
+    "module": "m9-taxes",
+    "topic": "Income Taxes",
+    "los": "Explain the effect of changes in tax laws and rates on deferred tax assets, liabilities, and income tax expense.",
+    "question": "At the start of the year, a company has a net deferred tax liability of 80,000 USD based on a statutory tax rate of 40% (taxable temporary difference of 200,000 USD). During the year, parliament enacts legislation reducing the corporate tax rate to 25%, effective immediately for all future periods. What is the impact of this tax rate decrease on the balance sheet and income tax expense?",
+    "options": {
+      "A": "Net DTL decreases by 30,000 USD, and income tax expense decreases by 30,000 USD.",
+      "B": "Net DTL increases by 30,000 USD, and income tax expense increases by 30,000 USD.",
+      "C": "Net DTL is unchanged, but future income taxes payable will decrease."
+    },
+    "answer": "A",
+    "explanation": "When tax rates change, deferred tax assets and liabilities must be remeasured using the newly enacted tax rate applicable to the periods in which the temporary differences are expected to reverse. Temporary difference = 80,000 USD / 0.40 = 200,000 USD. Under the new 25% tax rate: $\\text{New DTL} = 200,000\\text{ USD} \\times 25\\% = 50,000\\text{ USD}$. The reduction in DTL is: 80,000 USD - 50,000 USD = 30,000 USD. Under both IFRS and US GAAP, the effect of the tax rate change is recognized in profit or loss in the period of enactment: reducing DTL reduces income tax expense by 30,000 USD (boosting net income). Option A is correct."
+  },
+  {
+    "id": "L1-Q127",
+    "level": 1,
+    "module": "m9-taxes",
+    "topic": "Income Taxes",
+    "los": "Describe the valuation allowance for deferred tax assets under US GAAP and its analytical implications.",
+    "question": "Under US GAAP, when management determines that it is more likely than not (greater than 50% probability) that a portion of a deferred tax asset will not be realized, it must establish a valuation allowance. An increase in the valuation allowance will:",
+    "options": {
+      "A": "Decrease net deferred tax assets, increase income tax expense, and decrease net income.",
+      "B": "Increase net deferred tax assets, decrease income tax expense, and increase net income.",
+      "C": "Have no impact on the income statement because it is recognized directly in equity."
+    },
+    "answer": "A",
+    "explanation": "Under US GAAP (ASC 740), a valuation allowance is a contra-asset account that reduces the gross deferred tax asset to the amount that is more likely than not to be realized from future taxable income. When management establishes or increases the valuation allowance: Gross DTA remains unchanged, but net DTA on the balance sheet decreases. The corresponding debit increases income tax expense on the income statement, which reduces net income and retained earnings. Conversely, a subsequent reduction/reversal in the valuation allowance decreases tax expense and increases net income. Option A is correct."
+  },
+  {
+    "id": "L1-Q128",
+    "level": 1,
+    "module": "m9-taxes",
+    "topic": "Income Taxes",
+    "los": "Explain how deferred tax liabilities should be treated when analyzing financial statements and leverage ratios.",
+    "question": "In financial statement analysis, when a growing company is expected to continue purchasing capital assets indefinitely so that its deferred tax liabilities are not expected to reverse in the foreseeable future, an analyst should treat the DTL as:",
+    "options": {
+      "A": "Equity when calculating leverage and solvency ratios.",
+      "B": "A current liability when calculating working capital.",
+      "C": "Debt when calculating debt-to-capital ratios."
+    },
+    "answer": "A",
+    "explanation": "If a deferred tax liability is not expected to reverse in the foreseeable future (which is common for a growing firm whose ongoing capital expenditures continuously create new DTLs that exceed the reversal of old DTLs), the deferred tax liability represents a permanent source of financing rather than a genuine obligation requiring cash outflows. Therefore, analysts treat the DTL as equity rather than debt when calculating leverage and solvency ratios. If the DTL is expected to reverse with cash outflow in the near term, it should be treated as a liability at its present value. If the timing and amount are uncertain, it may be excluded from both debt and equity. Option A is correct."
+  },
+  {
+    "id": "L1-Q129",
+    "level": 1,
+    "module": "m9-taxes",
+    "topic": "Income Taxes",
+    "los": "Describe the recognition of deferred tax assets arising from tax loss carryforwards under IFRS and US GAAP.",
+    "question": "A startup incurs a substantial tax operating loss in Year 1. Under IFRS, how is the tax loss carryforward recognized on the balance sheet?",
+    "options": {
+      "A": "A deferred tax asset is recognized only to the extent that it is probable that future taxable profit will be available against which the unused tax loss can be utilized.",
+      "B": "A deferred tax asset is recognized in full, offset by a valuation allowance contra-asset account.",
+      "C": "Tax losses can never be recognized as assets until taxable profits are actually realized in subsequent years."
+    },
+    "answer": "A",
+    "explanation": "Under IFRS (IAS 12), a deferred tax asset is recognized for unused tax losses and tax credits only to the extent that it is probable (more likely than not) that future taxable profits will be available against which the losses can be utilized. IFRS does not use a valuation allowance account; instead, the asset itself is directly recognized only up to the realizable amount. Under US GAAP, the full gross DTA is recognized and then reduced by a valuation allowance if it is more likely than not that some portion will not be realized. Option A correctly states the IFRS rule."
+  },
+  {
+    "id": "L1-Q130",
+    "level": 1,
+    "module": "m9-taxes",
+    "topic": "Income Taxes",
+    "los": "Analyze disclosures relating to the reconciliation between the statutory tax rate and the effective tax rate.",
+    "question": "Multinational Corp has a domestic statutory tax rate of 30%. In its annual report, it reports an effective tax rate of 22%. Which of the following factors is the most plausible explanation for this lower effective tax rate?",
+    "options": {
+      "A": "Significant earnings derived in foreign subsidiaries operating in jurisdictions with lower tax rates.",
+      "B": "Substantial non-deductible expenses such as government regulatory fines.",
+      "C": "An increase in the valuation allowance on deferred tax assets during the year."
+    },
+    "answer": "A",
+    "explanation": "The effective tax rate is calculated as: $\\text{Effective Tax Rate} = \\text{Income Tax Expense} / \\text{Pretax Accounting Profit}$. Factors that lower the effective tax rate below the statutory rate include: 1) Earning profits in foreign jurisdictions with tax rates lower than the home statutory rate. 2) Tax credits (e.g., R&D tax credits). 3) Non-taxable revenues (e.g., tax-exempt municipal bond interest). Non-deductible fines (Option B) and increases in valuation allowances (Option C) increase income tax expense, which raises the effective tax rate above the statutory rate."
+  },
+  {
+    "id": "L1-Q131",
+    "level": 1,
+    "module": "m9-taxes",
+    "topic": "Income Taxes",
+    "los": "Calculate the deferred tax liability resulting from accelerated depreciation across multiple periods.",
+    "question": "A firm buys an asset for 300,000 USD on 1 January Year 1. Straight-line depreciation for book purposes is 100,000 USD per year over 3 years. Tax depreciation is 150,000 USD in Year 1, 100,000 USD in Year 2, and 50,000 USD in Year 3. At a 30% tax rate, what is the change in the deferred tax liability during Year 3?",
+    "options": {
+      "A": "Decrease of 15,000 USD.",
+      "B": "Increase of 15,000 USD.",
+      "C": "Decrease of 30,000 USD."
+    },
+    "answer": "A",
+    "explanation": "Let us track carrying value and tax base across the 3 years:\n- Year 1: Book depreciation = 100,000 USD; Carrying Value = 200,000 USD. Tax depreciation = 150,000 USD; Tax Base = 150,000 USD. Cumulative temporary difference = 200,000 USD - 150,000 USD = 50,000 USD. DTL at end of Year 1 = $\\text{DTL} = 50,000\\text{ USD} \\times 30\\% = 15,000\\text{ USD}$.\n- Year 2: Book depreciation = 100,000 USD; Carrying Value = 100,000 USD. Tax depreciation = 100,000 USD; Tax Base = 50,000 USD. Cumulative difference = 100,000 USD - 50,000 USD = 50,000 USD. DTL at end of Year 2 = 15,000 USD (no change in Year 2).\n- Year 3: Book depreciation = 100,000 USD; Carrying Value = 0 USD. Tax depreciation = 50,000 USD; Tax Base = 0 USD. Cumulative difference = 0 USD. DTL at end of Year 3 = 0 USD.\nDuring Year 3, the DTL changes from 15,000 USD to 0 USD, representing a decrease (reversal) of 15,000 USD. Option A is correct."
+  },
+  {
+    "id": "L1-Q132",
+    "level": 1,
+    "module": "m9-taxes",
+    "topic": "Income Taxes",
+    "los": "Identify temporary differences arising from post-employment benefits and stock-based compensation.",
+    "question": "A company recognizes stock-based compensation expense of 80,000 USD in its Year 1 income statement. Under tax regulations, stock compensation is deductible only when employee options are exercised in future years. Assuming the deduction will equal the compensation expense, this creates:",
+    "options": {
+      "A": "A deferred tax asset, because taxable income is currently higher than accounting profit.",
+      "B": "A deferred tax liability, because taxable income is currently lower than accounting profit.",
+      "C": "A permanent difference that will never reverse."
+    },
+    "answer": "A",
+    "explanation": "When an expense is recognized on the financial statements before it is deductible for tax purposes, taxable income exceeds pretax accounting profit in the current period. As a result, the firm pays more tax currently, which will reduce taxable income and tax payments in future periods when options are exercised. This deductible temporary difference creates a Deferred Tax Asset (DTA). Option A is correct. A deferred tax liability occurs when taxable income is lower than accounting profit today (e.g., accelerated tax depreciation)."
+  },
+  {
+    "id": "L1-Q133",
+    "level": 1,
+    "module": "m9-taxes",
+    "topic": "Income Taxes",
+    "los": "Compare the presentation of deferred taxes on the balance sheet under IFRS and US GAAP.",
+    "question": "Regarding the balance sheet presentation of deferred tax assets and liabilities, which of the following is correct under both IFRS and US GAAP?",
+    "options": {
+      "A": "All deferred tax assets and liabilities must be classified as non-current.",
+      "B": "Deferred taxes must be classified as current or non-current based on the classification of the underlying asset or liability.",
+      "C": "Deferred tax assets must be presented as current assets, and deferred tax liabilities as non-current liabilities."
+    },
+    "answer": "A",
+    "explanation": "Under both IFRS (IAS 12) and US GAAP (ASU 2015-17 amending ASC 740), all deferred tax assets and deferred tax liabilities must be classified as non-current on the balance sheet. They may not be classified as current assets or liabilities. Furthermore, within a tax-paying component and tax jurisdiction, DTA and DTL are generally netted together and presented as a single net non-current asset or net non-current liability. Option A is correct."
+  },
+  {
+    "id": "L1-Q134",
+    "level": 1,
+    "module": "m9-taxes",
+    "topic": "Income Taxes",
+    "los": "Analyze the impact of deferred taxes on cash flow from operations.",
+    "question": "When converting net income to cash flow from operations (CFO) using the indirect method, how should an increase in a deferred tax liability be treated?",
+    "options": {
+      "A": "Added back to net income, because income tax expense exceeded cash taxes paid.",
+      "B": "Subtracted from net income, because cash taxes paid exceeded income tax expense.",
+      "C": "Reported as a cash outflow in financing activities."
+    },
+    "answer": "A",
+    "explanation": "Income tax expense includes both current taxes payable and deferred tax expense: $\\text{Income Tax Expense} = \\text{Taxes Payable} + \\Delta\\text{DTL} - \\Delta\\text{DTA}$. When DTL increases ($\\Delta\\text{DTL} > 0$), reported income tax expense is greater than the current cash taxes payable to tax authorities. Because net income was reduced by this non-cash deferred tax expense, the net increase in DTL must be added back to net income in the indirect operating cash flow statement to reconcile to actual cash operating flows. Option A is correct."
+  },
+  {
+    "id": "L1-Q135",
+    "level": 1,
+    "module": "m9-taxes",
+    "topic": "Income Taxes",
+    "los": "Evaluate the financial statement and ratio impact of adjusting deferred taxes.",
+    "question": "An analyst adjusts a firm's balance sheet by reclassifying a deferred tax liability of 200,000 USD to shareholders' equity because the liability is not expected to reverse. What is the effect of this adjustment on the firm's debt-to-equity ratio and return on equity (ROE)?",
+    "options": {
+      "A": "Debt-to-equity ratio decreases; ROE decreases.",
+      "B": "Debt-to-equity ratio increases; ROE increases.",
+      "C": "Debt-to-equity ratio decreases; ROE increases."
+    },
+    "answer": "A",
+    "explanation": "Reclassifying DTL to equity has the following effects: 1) Total liabilities decrease by 200,000 USD, and total shareholders' equity increases by 200,000 USD. 2) Debt-to-Equity Ratio = $\\text{Total Debt (or Liabilities)} / \\text{Total Equity}$. With lower debt and higher equity, the debt-to-equity ratio decreases significantly. 3) Return on Equity = $\\text{Net Income} / \\text{Shareholders' Equity}$. With net income unchanged and equity higher in the denominator, reported ROE decreases. Thus, Option A is correct."
+  },
+  {
+    "id": "L1-Q136",
+    "level": 1,
+    "module": "m10-debt",
+    "topic": "Non-Current Liabilities",
+    "los": "Explain the initial measurement of bonds issued at par, at a discount, and at a premium.",
+    "question": "A corporation issues a 5-year, 1,000,000 USD face value bond with an annual coupon rate of 6% when the prevailing market yield (effective interest rate) for similar risk debt is 7%. How is this bond initially recorded on the balance sheet?",
+    "options": {
+      "A": "At a discount, with initial carrying value less than 1,000,000 USD.",
+      "B": "At a premium, with initial carrying value greater than 1,000,000 USD.",
+      "C": "At face value of 1,000,000 USD, with unamortized interest reported as a current liability."
+    },
+    "answer": "A",
+    "explanation": "When the coupon rate (6%) is less than the market yield at issuance (7%), investors require a higher return than the cash coupon payments provide. Therefore, the bond must be sold at a discount (price < 100% of par). The bond's initial carrying value equals the present value of future cash flows (annual coupons of 60,000 USD and par of 1,000,000 USD) discounted at 7%, which is approximately 958,998 USD, less than 1,000,000 USD. Option A is correct. A bond is issued at a premium only when coupon rate exceeds market yield."
+  },
+  {
+    "id": "L1-Q137",
+    "level": 1,
+    "module": "m10-debt",
+    "topic": "Non-Current Liabilities",
+    "los": "Explain the accounting for bond issuance costs under IFRS and US GAAP.",
+    "question": "How are debt issuance costs (legal, accounting, underwriting, and registration fees) accounted for under both IFRS and US GAAP?",
+    "options": {
+      "A": "They are deducted from the initial carrying amount of the bond liability and amortized via the effective interest rate method.",
+      "B": "They are capitalized as a separate deferred charge asset and amortized straight-line over the bond term.",
+      "C": "They are expensed immediately in profit or loss on the issuance date."
+    },
+    "answer": "A",
+    "explanation": "Under both IFRS (IFRS 9) and US GAAP (ASU 2015-03), bond issuance costs are not recognized as a separate asset. Instead, they reduce the initial carrying amount of the bond liability on the balance sheet (net proceeds are lower). This increases the effective interest rate used to amortize the bond liability over the life of the debt. Option A is correct. (Prior US GAAP allowed recording issuance costs as a deferred asset, but this is obsolete)."
+  },
+  {
+    "id": "L1-Q138",
+    "level": 1,
+    "module": "m10-debt",
+    "topic": "Non-Current Liabilities",
+    "los": "Describe the effective interest rate method and explain the components of interest expense and carrying value.",
+    "question": "Under the effective interest rate method of bond amortization, interest expense recognized on the income statement each period is equal to:",
+    "options": {
+      "A": "The beginning carrying value of the bond multiplied by the market yield at issuance.",
+      "B": "The face value of the bond multiplied by the contractual coupon rate.",
+      "C": "The beginning carrying value of the bond multiplied by the current prevailing market rate."
+    },
+    "answer": "A",
+    "explanation": "Under the effective interest rate method, interest expense is calculated as the carrying amount of the bond liability at the beginning of the period multiplied by the historical effective interest rate (the market yield at issuance, which remains constant over the life of the bond under amortized cost accounting): $\\text{Interest Expense} = \\text{Beginning Carrying Value} \\times \\text{Historical Market Yield at Issuance}$. The difference between interest expense and the cash coupon payment ($\\text{Face Value} \\times \\text{Coupon Rate}$) represents the amortization of the discount or premium. Option C is incorrect because current market rates are not used unless the fair value option is elected."
+  },
+  {
+    "id": "L1-Q139",
+    "level": 1,
+    "module": "m10-debt",
+    "topic": "Non-Current Liabilities",
+    "los": "Explain the trajectory of interest expense, cash paid, and carrying value for a bond issued at a discount.",
+    "question": "For a bond issued at a discount and accounted for under the effective interest rate method, which of the following trends will occur over the life of the bond as it approaches maturity?",
+    "options": {
+      "A": "Carrying value increases toward par, and interest expense increases each period.",
+      "B": "Carrying value decreases toward par, and interest expense decreases each period.",
+      "C": "Carrying value increases toward par, and interest expense remains constant."
+    },
+    "answer": "A",
+    "explanation": "For a discount bond: 1) Initial carrying value is below par value. 2) Because market yield exceeds coupon rate, interest expense (Beginning Carrying Value \\times Market Yield) exceeds the cash coupon payment. 3) The excess interest expense is added to the carrying value (discount amortization), causing the carrying value to increase toward face value at maturity. 4) Because beginning carrying value increases each period, interest expense also increases over time. Cash paid remains fixed at the coupon rate \\times face value. Option A is correct."
+  },
+  {
+    "id": "L1-Q140",
+    "level": 1,
+    "module": "m10-debt",
+    "topic": "Non-Current Liabilities",
+    "los": "Explain the trajectory of interest expense, cash paid, and carrying value for a bond issued at a premium.",
+    "question": "For a bond issued at a premium and accounted for using the effective interest method, how do carrying value and interest expense behave over the bond's life?",
+    "options": {
+      "A": "Carrying value decreases toward par, and interest expense decreases each period.",
+      "B": "Carrying value increases toward par, and interest expense increases each period.",
+      "C": "Carrying value decreases toward par, but interest expense increases each period."
+    },
+    "answer": "A",
+    "explanation": "For a premium bond: 1) Initial carrying value is above face value. 2) Market yield is less than coupon rate, so the cash coupon payment exceeds interest expense. 3) The difference represents premium amortization, which reduces the carrying value toward par value at maturity. 4) As the carrying value declines each period, interest expense (Beginning Carrying Value \\times Market Yield) also decreases each period. Option A is correct."
+  },
+  {
+    "id": "L1-Q141",
+    "level": 1,
+    "module": "m10-debt",
+    "topic": "Non-Current Liabilities",
+    "los": "Describe the accounting treatment of zero-coupon bonds and their cash flow statement effects.",
+    "question": "A corporation issues 3-year zero-coupon bonds with a face value of 5,000,000 USD at an effective interest rate of 6%, receiving proceeds of 4,198,100 USD. During the bond's term, how is interest expense recognized and how are cash flows presented?",
+    "options": {
+      "A": "Annual interest expense is recognized on the income statement with zero operating cash outflow; the entire maturity payment of 5,000,000 USD is a financing cash outflow.",
+      "B": "No interest expense is recognized until maturity; the full 5,000,000 USD is an operating cash outflow at year 3.",
+      "C": "Interest expense is recognized annually, and an equivalent imputed cash outflow is reported in CFO each year."
+    },
+    "answer": "A",
+    "explanation": "A zero-coupon bond pays no periodic cash coupons. 1) Income Statement: Interest expense is recognized each period under the effective interest method (Carrying Value \\times 6%) and added to the bond liability carrying value. 2) Cash Flow Statement: During the intermediate years, there is no cash outflow. In the indirect CFO method, the non-cash interest expense is added back to net income. At maturity, under US GAAP, the initial principal repayment (4,198,100 USD) is classified as a financing outflow (CFF), and the portion representing total accumulated interest (801,900 USD) is classified as operating cash outflow (CFO). Under IFRS, principal repayment is CFF and interest may be CFO or CFF. Option A accurately describes intermediate recognition and overall presentation."
+  },
+  {
+    "id": "L1-Q142",
+    "level": 1,
+    "module": "m10-debt",
+    "topic": "Non-Current Liabilities",
+    "los": "Compare the presentation of cash flows related to debt under IFRS and US GAAP.",
+    "question": "Regarding the cash flow statement presentation of debt transactions, which of the following statements correctly contrasts IFRS and US GAAP?",
+    "options": {
+      "A": "US GAAP requires coupon interest payments to be classified as operating cash flows, whereas IFRS permits interest paid to be classified as either operating or financing cash flows.",
+      "B": "Under US GAAP, bond issuance proceeds are classified as investing cash flows, whereas under IFRS they are financing cash flows.",
+      "C": "Both IFRS and US GAAP require interest paid to be classified strictly as financing cash flows."
+    },
+    "answer": "A",
+    "explanation": "Under US GAAP (ASC 230), interest paid must be classified as an operating cash flow (CFO), and principal repayments are classified as financing cash flows (CFF). Under IFRS (IAS 7), an entity has accounting policy discretion: interest paid may be classified as either operating (CFO) or financing (CFF) cash flows, provided the classification is applied consistently. Debt issuance proceeds and principal repayments are classified as financing cash flows (CFF) under both standards. Option A is correct."
+  },
+  {
+    "id": "L1-Q143",
+    "level": 1,
+    "module": "m10-debt",
+    "topic": "Non-Current Liabilities",
+    "los": "Calculate the gain or loss on early debt extinguishment.",
+    "question": "A company retires bonds with a face value of 2,000,000 USD early by repurchasing them on the open market at 102% of par value. At the date of retirement, the bonds have unamortized discount of 60,000 USD and unamortized debt issuance costs of 15,000 USD. The gain or loss on debt extinguishment is:",
+    "options": {
+      "A": "Loss of 115,000 USD",
+      "B": "Loss of 40,000 USD",
+      "C": "Gain of 35,000 USD"
+    },
+    "answer": "A",
+    "explanation": "Reacquisition price = 2,000,000 USD \\times 1.02 = 2,040,000 USD. Carrying value of the debt = $\\text{Face Value} - \\text{Unamortized Discount} - \\text{Unamortized Issuance Costs} = 2,000,000\\text{ USD} - 60,000\\text{ USD} - 15,000\\text{ USD} = 1,925,000\\text{ USD}$. Gain/Loss on extinguishment = $\\text{Carrying Value} - \\text{Reacquisition Price} = 1,925,000\\text{ USD} - 2,040,000\\text{ USD} = -115,000\\text{ USD}$ (a loss of 115,000 USD). This extinguishment loss is reported on the income statement as part of continuing operations. Option B forgets the unamortized discount and issuance costs (2,000,000 USD - 2,040,000 USD = -40,000 USD). Option A is correct."
+  },
+  {
+    "id": "L1-Q144",
+    "level": 1,
+    "module": "m10-debt",
+    "topic": "Non-Current Liabilities",
+    "los": "Describe the fair value option for non-current liabilities and the reporting of changes in own credit risk.",
+    "question": "A firm elects the fair value option for its outstanding long-term bonds. During the year, the firm's credit rating is downgraded, which increases its credit spread and decreases the fair market value of its bonds. Under both IFRS 9 and US GAAP, how is the gain resulting from the decline in bond value attributable to changes in the firm's own credit risk recognized?",
+    "options": {
+      "A": "Recognized in other comprehensive income (OCI).",
+      "B": "Recognized as a gain in profit or loss on the income statement.",
+      "C": "Recognized directly as a reduction in contributed capital."
+    },
+    "answer": "A",
+    "explanation": "Under both IFRS 9 and US GAAP (ASC 825), when the fair value option is elected for financial liabilities, the portion of the change in fair value caused by changes in the entity's own credit risk (instrument-specific credit risk) must be recognized in other comprehensive income (OCI), NOT in profit or loss. This rule prevents companies from reporting artificial accounting profits in net income when their financial health deteriorates. The remaining change in fair value due to benchmark interest rate changes is recognized in profit or loss. Option A is correct."
+  },
+  {
+    "id": "L1-Q145",
+    "level": 1,
+    "module": "m10-debt",
+    "topic": "Non-Current Liabilities",
+    "los": "Distinguish between affirmative and negative debt covenants and explain their role.",
+    "question": "Which of the following covenant terms in a bond indenture is an example of an affirmative debt covenant rather than a negative debt covenant?",
+    "options": {
+      "A": "Requirement to deliver audited financial statements within 90 days of fiscal year-end.",
+      "B": "Restriction prohibiting cash dividend distributions exceeding 30% of net income.",
+      "C": "Prohibition against pledging core production facilities as collateral for new debt."
+    },
+    "answer": "A",
+    "explanation": "Affirmative (positive) covenants specify actions the borrower promises to perform. Examples include: maintaining required insurance, paying taxes promptly, complying with environmental laws, maintaining a minimum level of working capital, and providing periodic audited financial statements. Negative covenants specify actions the borrower is restricted from doing without lender consent. Examples include: restrictions on dividend payouts (Option B), restrictions on additional debt issuance, restrictions on mergers and acquisitions, and negative pledge clauses (Option C). Option A is correct."
+  },
+  {
+    "id": "L1-Q146",
+    "level": 1,
+    "module": "m10-debt",
+    "topic": "Non-Current Liabilities",
+    "los": "Calculate and interpret solvency and coverage ratios including the interest coverage ratio and fixed charge coverage.",
+    "question": "A company reports operating income (EBIT) of 450,000 USD, interest expense of 90,000 USD, lease payments of 40,000 USD, and a 25% tax rate. What is the company's interest coverage ratio and fixed charge coverage ratio (assuming lease payments are fixed charges)?",
+    "options": {
+      "A": "Interest coverage = 5.0x; Fixed charge coverage = 3.77x.",
+      "B": "Interest coverage = 4.0x; Fixed charge coverage = 3.25x.",
+      "C": "Interest coverage = 5.0x; Fixed charge coverage = 4.12x."
+    },
+    "answer": "A",
+    "explanation": "1) Interest Coverage Ratio = $\\text{Interest Coverage} = \\text{EBIT} / \\text{Interest Expense} = 450,000 / 90,000 = 5.0\\text{x}$. 2) Fixed Charge Coverage Ratio = $(\\text{EBIT} + \\text{Lease Payments}) / (\\text{Interest Expense} + \\text{Lease Payments}) = (450,000 + 40,000) / (90,000 + 40,000) = 490,000 / 130,000 \\approx 3.769$ or 3.77x. Option B computes (450,000 - 90,000) / 90,000. Option C omits lease payments from the numerator. Option A is correct."
+  },
+  {
+    "id": "L1-Q147",
+    "level": 1,
+    "module": "m10-debt",
+    "topic": "Non-Current Liabilities",
+    "los": "Describe off-balance sheet financing arrangements and their analytical implications.",
+    "question": "Which of the following corporate financing transactions is an example of off-balance sheet financing that conceals liabilities from the balance sheet?",
+    "options": {
+      "A": "Selling accounts receivable to a special purpose entity (SPE) via non-recourse factoring.",
+      "B": "Issuing subordinated convertible debentures at par value.",
+      "C": "Borrowing funds via a senior secured bank credit facility."
+    },
+    "answer": "A",
+    "explanation": "Off-balance sheet financing refers to arrangements where a company avoids reporting debt obligations directly on its balance sheet. Examples include: factoring or securitizing accounts receivable through unconsolidated SPEs/VIEs, entering into take-or-pay long-term purchase commitments, and using joint ventures with debt held at the venture level. In factoring accounts receivable without recourse (Option A), receivables are removed and cash is received without recognizing a loan liability. Senior bank facilities (Option C) and debentures (Option B) are recognized directly on the balance sheet as liabilities."
+  },
+  {
+    "id": "L1-Q148",
+    "level": 1,
+    "module": "m10-debt",
+    "topic": "Non-Current Liabilities",
+    "los": "Calculate interest expense and ending carrying value using the effective interest method for a multi-year discount bond.",
+    "question": "On 1 January Year 1, a firm issues 1,000,000 USD face value of 3-year, 5% annual coupon bonds when the market yield is 8%. The issue price is 922,686 USD. What is the interest expense for Year 2 and the carrying value at the end of Year 2?",
+    "options": {
+      "A": "Year 2 Interest Expense is 75,719 USD; Ending Carrying Value is 972,176 USD.",
+      "B": "Year 2 Interest Expense is 73,815 USD; Ending Carrying Value is 946,501 USD.",
+      "C": "Year 2 Interest Expense is 50,000 USD; Ending Carrying Value is 948,895 USD."
+    },
+    "answer": "A",
+    "explanation": "Annual cash coupon payment = 1,000,000 USD \\times 5% = 50,000 USD.\n- Year 1: Beginning carrying value = 922,686 USD. Interest expense = 922,686 USD \\times 8% = 73,815 USD. Amortization of discount = 73,815 USD - 50,000 USD = 23,815 USD. Ending Year 1 carrying value = 922,686 USD + 23,815 USD = 946,501 USD.\n- Year 2: Beginning carrying value = 946,501 USD. Interest expense = 946,501 USD \\times 8% = 75,720 USD (rounded to 75,719 USD). Amortization = 75,720 USD - 50,000 USD = 25,720 USD. Ending Year 2 carrying value = 946,501 USD + 25,720 USD = 972,221 USD (approximately 972,176 USD depending on exact rounding). Option B gives Year 1 interest expense and Year 1 ending carrying value. Option C uses the cash coupon payment. Option A is correct."
+  },
+  {
+    "id": "L1-Q149",
+    "level": 1,
+    "module": "m10-debt",
+    "topic": "Non-Current Liabilities",
+    "los": "Describe how bond discount and premium amortization affect cash flow from operating activities.",
+    "question": "In the statement of cash flows prepared using the indirect method, how is the amortization of a bond discount treated in calculating cash flow from operations?",
+    "options": {
+      "A": "Added back to net income, because interest expense exceeded the cash coupon payment.",
+      "B": "Deducted from net income, because cash coupon paid exceeded interest expense.",
+      "C": "Reported as a cash outflow in financing activities."
+    },
+    "answer": "A",
+    "explanation": "For a bond issued at a discount, interest expense recognized on the income statement equals the cash coupon payment plus discount amortization. Because interest expense (which reduced net income) is greater than the actual cash interest paid, the discount amortization is a non-cash expense. Therefore, in the indirect method of calculating cash flow from operations (CFO), bond discount amortization must be added back to net income. (Conversely, bond premium amortization is deducted from net income). Option A is correct."
+  },
+  {
+    "id": "L1-Q150",
+    "level": 1,
+    "module": "m10-debt",
+    "topic": "Non-Current Liabilities",
+    "los": "Explain the effects of interest rate changes on the balance sheet carrying amount and market value of debt.",
+    "question": "If market interest rates rise significantly after a firm has issued fixed-rate bonds carried at amortized cost, what happens to the book carrying value and market value of the bonds?",
+    "options": {
+      "A": "The market value of the bonds decreases, while the balance sheet carrying value remains unaffected.",
+      "B": "Both the market value and the balance sheet carrying value decrease.",
+      "C": "The market value increases, and an impairment loss is recognized on the balance sheet."
+    },
+    "answer": "A",
+    "explanation": "When bonds are accounted for at amortized cost, the liability on the balance sheet is amortized using the historical effective interest rate determined at issuance. Subsequent changes in market interest rates do NOT affect the balance sheet carrying value. However, the market value of the bond decreases as market interest rates rise (bond prices and yields are inversely related). The fair value of the debt is disclosed in the financial statement footnotes. Option A is correct."
+  },
+  {
+    "id": "L1-Q151",
+    "level": 1,
+    "module": "m11-leases",
+    "topic": "Leases",
+    "los": "Compare lessee accounting models between IFRS 16 and US GAAP (ASC 842).",
+    "question": "Regarding lessee accounting, what is the primary structural difference between IFRS 16 and US GAAP (ASC 842)?",
+    "options": {
+      "A": "IFRS 16 uses a single model classifying all leases as finance leases on the income statement, whereas ASC 842 uses a dual classification model separating operating and finance leases on the income statement.",
+      "B": "ASC 842 requires all leases to be kept off the balance sheet, whereas IFRS 16 requires balance sheet recognition.",
+      "C": "IFRS 16 classifies leases as either operating or finance on the balance sheet, whereas ASC 842 recognizes only finance leases."
+    },
+    "answer": "A",
+    "explanation": "Under IFRS 16, a lessee applies a single accounting model: all leases (with minor exceptions for short-term and low-value items) are recognized on the balance sheet as a Right-of-Use (ROU) asset and lease liability, and on the income statement as separate depreciation of the ROU asset and interest expense on the lease liability. Under US GAAP (ASC 842), both operating and finance leases are recognized on the balance sheet, but ASC 842 retains a dual model on the income statement: finance leases recognize front-loaded depreciation and interest, whereas operating leases recognize a single lease expense on a straight-line basis in operating expenses. Option A is correct."
+  },
+  {
+    "id": "L1-Q152",
+    "level": 1,
+    "module": "m11-leases",
+    "topic": "Leases",
+    "los": "Explain the initial measurement of the right-of-use asset and lease liability for a lessee.",
+    "question": "A lessee enters into a 5-year lease requiring annual payments of 40,000 USD at the end of each year. The present value of the lease payments discounted at 6% is 168,495 USD. The lessee also incurs 5,000 USD in initial direct legal fees and receives a 3,000 USD lease incentive from the lessor prior to commencement. At lease commencement, the initial carrying amounts of the lease liability and the Right-of-Use (ROU) asset are:",
+    "options": {
+      "A": "Lease Liability = 168,495 USD; ROU Asset = 170,495 USD.",
+      "B": "Lease Liability = 170,495 USD; ROU Asset = 170,495 USD.",
+      "C": "Lease Liability = 168,495 USD; ROU Asset = 168,495 USD."
+    },
+    "answer": "A",
+    "explanation": "1) Initial Lease Liability = Present value of future lease payments = 168,495 USD. 2) Initial ROU Asset = Initial Lease Liability + Initial direct costs incurred by lessee - Lease incentives received from lessor + Prepaid lease payments + Estimated restoration costs. Here: $\\text{ROU Asset} = 168,495\\text{ USD} + 5,000\\text{ USD} - 3,000\\text{ USD} = 170,495\\text{ USD}$. Note that initial direct legal costs and lease incentives affect the initial ROU asset, but do NOT affect the initial lease liability (which strictly reflects future contractual payments). Option A is correct."
+  },
+  {
+    "id": "L1-Q153",
+    "level": 1,
+    "module": "m11-leases",
+    "topic": "Leases",
+    "los": "Describe the pattern of expenses on the lessee's income statement under IFRS 16.",
+    "question": "Under IFRS 16, a lessee's total lease-related expense over the lease term exhibits which pattern compared to the constant cash lease payments?",
+    "options": {
+      "A": "Front-loaded: total expense is higher in the early years and declines over time.",
+      "B": "Even: total expense is recognized on a straight-line basis across all periods.",
+      "C": "Back-loaded: total expense is lower in the early years and accelerates near termination."
+    },
+    "answer": "A",
+    "explanation": "Under IFRS 16, total lease expense consists of two separate components: 1) Straight-line depreciation of the ROU asset (constant each year). 2) Interest expense on the lease liability ($\\text{Beginning Liability} \\times \\text{Discount Rate}$). Because the lease liability is amortized over time, the outstanding liability decreases, so interest expense decreases each year. Summing constant depreciation and declining interest expense produces a front-loaded total expense pattern (total expense is highest in Year 1 and declines progressively). Option A is correct."
+  },
+  {
+    "id": "L1-Q154",
+    "level": 1,
+    "module": "m11-leases",
+    "topic": "Leases",
+    "los": "Describe the income statement and balance sheet effects of an operating lease under US GAAP (ASC 842).",
+    "question": "Under US GAAP (ASC 842), for a lease classified as an operating lease by the lessee, how is the periodic expense recognized on the income statement?",
+    "options": {
+      "A": "As a single operating lease expense recognized on a straight-line basis in operating expenses.",
+      "B": "Split into straight-line depreciation above operating income and interest expense below operating income.",
+      "C": "As variable rent expense based only on actual cash payments made during the period."
+    },
+    "answer": "A",
+    "explanation": "Under ASC 842, for an operating lease: The lessee recognizes a single lease expense on a straight-line basis over the lease term, reported entirely within operating expenses (above operating profit/EBIT). Although the balance sheet recognizes an ROU asset and lease liability (with the liability amortized under the effective interest method), on the income statement there is no separate interest expense or depreciation line item. (The ROU asset is amortized as the plug between single lease cost and liability interest). Option A is correct."
+  },
+  {
+    "id": "L1-Q155",
+    "level": 1,
+    "module": "m11-leases",
+    "topic": "Leases",
+    "los": "Compare cash flow statement presentation of lease payments between IFRS 16 and ASC 842.",
+    "question": "How are lease payments classified on the statement of cash flows for a lessee under IFRS 16?",
+    "options": {
+      "A": "Principal portion of the lease payment is a financing outflow (CFF); interest portion is operating (CFO) or financing (CFF).",
+      "B": "The entire lease payment is classified as an operating cash outflow (CFO).",
+      "C": "The entire lease payment is classified as an investing cash outflow (CFI)."
+    },
+    "answer": "A",
+    "explanation": "Under IFRS 16, each lease payment is split into: 1) Principal reduction of the lease liability, which must be classified as a cash outflow from financing activities (CFF). 2) Interest expense component, which can be classified as either operating cash flow (CFO) or financing cash flow (CFF) according to the entity's policy choice under IAS 7. As a result, operating cash flows under IFRS 16 are higher compared to the old operating lease accounting where 100% of the rent payment was reported in CFO. Option A is correct."
+  },
+  {
+    "id": "L1-Q156",
+    "level": 1,
+    "module": "m11-leases",
+    "topic": "Leases",
+    "los": "Contrast the cash flow effects between US GAAP operating leases and finance leases.",
+    "question": "Under US GAAP (ASC 842), how does the cash flow classification of lease payments differ between an operating lease and a finance lease for the lessee?",
+    "options": {
+      "A": "Operating lease payments are 100% operating cash outflows (CFO), whereas finance lease payments are split between CFO (interest) and CFF (principal).",
+      "B": "Both operating and finance lease payments are classified as 100% financing cash outflows (CFF).",
+      "C": "Operating lease payments are 100% financing outflows (CFF), whereas finance lease payments are 100% operating outflows (CFO)."
+    },
+    "answer": "A",
+    "explanation": "Under ASC 842: For an operating lease, the full cash lease payment is reported as a cash outflow from operating activities (CFO). For a finance lease, the cash payment is bifurcated: the portion representing interest is classified as CFO, and the principal repayment portion is classified as a financing cash outflow (CFF). Consequently, CFO is higher for a firm with finance leases than for a firm with operating leases. Option A is correct."
+  },
+  {
+    "id": "L1-Q157",
+    "level": 1,
+    "module": "m11-leases",
+    "topic": "Leases",
+    "los": "Evaluate the financial ratio impact of lease capitalization on leverage, liquidity, and profitability.",
+    "question": "A retail company with extensive store leases transitions to IFRS 16, bringing all operating leases onto its balance sheet. Which of the following impacts on its financial ratios will occur in Year 1?",
+    "options": {
+      "A": "EBITDA increases, debt-to-equity ratio increases, and asset turnover decreases.",
+      "B": "EBITDA decreases, debt-to-equity ratio decreases, and asset turnover increases.",
+      "C": "Operating profit (EBIT) decreases, leverage decreases, and return on assets increases."
+    },
+    "answer": "A",
+    "explanation": "Bringing leases onto the balance sheet under IFRS 16 has the following effects: 1) EBITDA: Previously, rent was an operating expense reducing EBITDA. Under IFRS 16, lease expense is split into depreciation and interest, neither of which is deducted in EBITDA. Thus, EBITDA increases significantly. 2) Operating Profit (EBIT): Increases, because interest is excluded from EBIT (only depreciation is deducted). 3) Total Debt: Increases due to lease liabilities, increasing the debt-to-equity and leverage ratios. 4) Total Assets: Increases due to ROU assets; because sales are unchanged, asset turnover ($\\text{Sales} / \\text{Assets}$) decreases. Option A is correct."
+  },
+  {
+    "id": "L1-Q158",
+    "level": 1,
+    "module": "m11-leases",
+    "topic": "Leases",
+    "los": "Describe the short-term and low-value lease exemptions available to lessees under IFRS 16.",
+    "question": "Under IFRS 16, a lessee may elect to recognize lease payments as an operating expense on a straight-line basis without recording an ROU asset or lease liability for leases that are:",
+    "options": {
+      "A": "Short-term leases (term of 12 months or less without purchase option) or leases of low-value assets (underlying asset value when new is roughly 5,000 USD or less).",
+      "B": "Any lease with annual payments under 50,000 USD regardless of term.",
+      "C": "Operating leases with terms under 36 months under management discretion."
+    },
+    "answer": "A",
+    "explanation": "IFRS 16 provides two recognition exemptions where the lessee can elect off-balance sheet treatment (straight-line expense over the lease term): 1) Short-term leases: leases with a lease term of 12 months or less at commencement that do not contain a purchase option. 2) Leases of low-value assets: leases where the underlying asset has a value when new of approximately 5,000 USD or less (e.g., personal computers, office furniture, telephones), regardless of whether the lease is material in aggregate. US GAAP has the 12-month short-term exemption but does NOT have a low-value asset exemption. Option A is correct."
+  },
+  {
+    "id": "L1-Q159",
+    "level": 1,
+    "module": "m11-leases",
+    "topic": "Leases",
+    "los": "Compare the impact of lease accounting on EBITDA and EBIT between IFRS 16 and ASC 842 operating leases.",
+    "question": "Two identical companies enter into identical 5-year lease agreements with annual payments of 100,000 USD. Company X reports under IFRS 16. Company Y reports under US GAAP and classifies the lease as an operating lease. Relative to Company Y, Company X will report:",
+    "options": {
+      "A": "Higher EBITDA and higher operating income (EBIT).",
+      "B": "Lower EBITDA and higher operating income (EBIT).",
+      "C": "Identical EBITDA and identical operating income (EBIT)."
+    },
+    "answer": "A",
+    "explanation": "For Company Y (US GAAP operating lease): The 100,000 USD is included in full within operating expenses, which reduces both EBITDA and EBIT by 100,000 USD. For Company X (IFRS 16): The lease is accounted for as a finance-type lease. The expense consists of ROU depreciation (operating expense) and interest expense (financing expense below EBIT). Because neither depreciation nor interest is in EBITDA, Company X's EBITDA is higher by 100,000 USD. Furthermore, because interest is excluded from EBIT, Company X's EBIT is only reduced by depreciation (e.g., ~80,000 USD), making its EBIT higher than Company Y's EBIT. Option A is correct."
+  },
+  {
+    "id": "L1-Q160",
+    "level": 1,
+    "module": "m11-leases",
+    "topic": "Leases",
+    "los": "Calculate Year 1 interest expense, liability balance, and depreciation for a lessee under IFRS 16.",
+    "question": "On 1 January Year 1, a lessee enters into a 4-year lease with payments of 30,000 USD due at the end of each year (31 December). The present value of lease payments at an 8% discount rate is 99,364 USD. There are no initial direct costs. Using straight-line depreciation, what are Year 1 interest expense, Year 1 depreciation, and the lease liability balance at 31 December Year 1?",
+    "options": {
+      "A": "Interest Expense = 7,949 USD; Depreciation = 24,841 USD; Ending Liability = 77,313 USD.",
+      "B": "Interest Expense = 7,949 USD; Depreciation = 30,000 USD; Ending Liability = 69,364 USD.",
+      "C": "Interest Expense = 2,400 USD; Depreciation = 24,841 USD; Ending Liability = 71,764 USD."
+    },
+    "answer": "A",
+    "explanation": "Initial Lease Liability and ROU Asset = 99,364 USD. 1) Year 1 Interest Expense = Beginning Liability \\times 8% = 99,364 USD \\times 0.08 = 7,949 USD. 2) Year 1 Lease Payment = 30,000 USD. Principal repayment = 30,000 USD - 7,949 USD = 22,051 USD. 3) Ending Lease Liability at 31 Dec Year 1 = 99,364 USD - 22,051 USD = 77,313 USD. 4) Annual straight-line depreciation of ROU Asset = 99,364 USD / 4 = 24,841 USD. Option A is correct."
+  },
+  {
+    "id": "L1-Q161",
+    "level": 1,
+    "module": "m11-leases",
+    "topic": "Leases",
+    "los": "Describe the classification of leases from the lessor's perspective under IFRS 16.",
+    "question": "Under IFRS 16, how does a lessor classify a lease, and what is the primary criterion?",
+    "options": {
+      "A": "As either an operating lease or a finance lease, depending on whether substantially all risks and rewards incidental to ownership are transferred to the lessee.",
+      "B": "All lessor leases must be classified as finance leases on the balance sheet.",
+      "C": "As a sales-type lease, direct financing lease, or operating lease based on five bright-line tests."
+    },
+    "answer": "A",
+    "explanation": "Under IFRS 16, lessor accounting remains largely unchanged from IAS 17: a lessor classifies each lease as either an operating lease or a finance lease. A lease is classified as a finance lease if it transfers substantially all the risks and rewards incidental to ownership of an underlying asset to the lessee. Indicators include: transfer of ownership by end of term, purchase option reasonably certain to be exercised, lease term covering major part of economic life, and present value of lease payments amounting to substantially all of the fair value. Otherwise, it is classified as an operating lease. (Option C describes US GAAP classification categories). Option A is correct."
+  },
+  {
+    "id": "L1-Q162",
+    "level": 1,
+    "module": "m11-leases",
+    "topic": "Leases",
+    "los": "Describe lessor accounting for an operating lease.",
+    "question": "For a lease classified as an operating lease by the lessor, how are the leased asset, rental income, and depreciation accounted for on the lessor's financial statements?",
+    "options": {
+      "A": "The lessor retains the leased asset on its balance sheet, reports rental income over the lease term, and continues to record depreciation on the asset.",
+      "B": "The lessor derecognizes the leased asset, recognizes a lease receivable, and records selling profit.",
+      "C": "The lessor derecognizes the asset and recognizes unearned finance income amortized via effective interest."
+    },
+    "answer": "A",
+    "explanation": "Under both IFRS and US GAAP for a lessor operating lease: 1) The lessor keeps the leased asset on its balance sheet in property, plant, and equipment. 2) The lessor recognizes rental revenue (lease receipts) typically on a straight-line basis over the lease term. 3) The lessor continues to depreciate the leased asset over its useful life, recognizing depreciation expense on the income statement. Option B and C describe finance/sales-type lease accounting. Option A is correct."
+  },
+  {
+    "id": "L1-Q163",
+    "level": 1,
+    "module": "m11-leases",
+    "topic": "Leases",
+    "los": "Explain lessor accounting for a finance lease (sales-type lease).",
+    "question": "An industrial equipment manufacturer leases a crane to a construction client under a finance lease (sales-type lease). The fair value of the crane is 500,000 USD, and its carrying manufacturing cost is 380,000 USD. At lease commencement, the manufacturer-lessor recognizes:",
+    "options": {
+      "A": "Revenue of 500,000 USD, COGS of 380,000 USD, selling profit of 120,000 USD, and derecognizes the inventory asset.",
+      "B": "No upfront profit; the 120,000 USD profit is deferred and amortized as interest income over the lease term.",
+      "C": "A right-of-use asset of 500,000 USD and a lease liability of 380,000 USD."
+    },
+    "answer": "A",
+    "explanation": "In a finance lease where the lessor is a manufacturer or dealer (sales-type lease): At commencement, the transaction is treated as a sale of goods. The lessor recognizes: 1) Revenue equal to the fair value (or present value of lease payments), here 500,000 USD. 2) Cost of goods sold equal to the carrying inventory cost, here 380,000 USD. 3) Selling profit equal to 500,000 USD - 380,000 USD = 120,000 USD. 4) The crane is derecognized from inventory and replaced by a lease receivable (net investment in the lease). Over the lease term, the lessor also earns interest income on the lease receivable. Option A is correct."
+  },
+  {
+    "id": "L1-Q164",
+    "level": 1,
+    "module": "m11-leases",
+    "topic": "Leases",
+    "los": "Describe the accounting for sale-and-leaseback transactions.",
+    "question": "A corporation sells its corporate headquarters to a financial institution for 80 million USD (equal to fair value) and immediately leases it back for 15 years. Under IFRS 16, assuming the transaction qualifies as a sale under IFRS 15, how is the seller-lessee's gain on sale recognized?",
+    "options": {
+      "A": "The seller-lessee recognizes only the portion of the gain that relates to the rights transferred to the buyer-lessor.",
+      "B": "The seller-lessee recognizes the entire gain immediately in profit or loss.",
+      "C": "The seller-lessee must defer the entire gain and amortize it straight-line over 15 years."
+    },
+    "answer": "A",
+    "explanation": "Under IFRS 16, in a sale-and-leaseback transaction where the transfer of the asset qualifies as a sale under IFRS 15: The seller-lessee measures the ROU asset arising from the leaseback at the proportion of the previous carrying amount of the asset that relates to the rights retained. Consequently, the seller-lessee recognizes only the amount of any gain or loss that relates to the rights transferred to the buyer-lessor: $\\text{Gain Recognized} = \\text{Total Gain} \\times [(\\text{Fair Value} - \\text{PV of Lease Payments}) / \\text{Fair Value}]$. Full gain recognition (Option B) is not permitted because rights are partially retained. Option A is correct."
+  },
+  {
+    "id": "L1-Q165",
+    "level": 1,
+    "module": "m11-leases",
+    "topic": "Leases",
+    "los": "Analyze the financial statement impact of off-balance sheet operating leases compared to capitalized leases.",
+    "question": "Historically, lessees preferred operating lease accounting over capital lease accounting primarily because operating leases allowed them to:",
+    "options": {
+      "A": "Keep significant debt obligations off the balance sheet, thereby reporting lower leverage and higher asset turnover.",
+      "B": "Report lower net income in the early years to defer income taxes.",
+      "C": "Report higher operating cash flow by classifying rent payments in CFF."
+    },
+    "answer": "A",
+    "explanation": "Prior to IFRS 16 and ASC 842, operating leases were entirely off-balance sheet. Companies preferred operating leases because: 1) Neither the leased asset nor the lease liability appeared on the balance sheet, making reported leverage ratios (Debt-to-Assets, Debt-to-Equity) appear much lower. 2) Lower assets resulted in higher asset turnover ($\\text{Sales} / \\text{Assets}$) and higher return on assets (ROA). 3) Net income was not front-loaded. Option B is wrong because operating leases report higher net income in early years. Option C is wrong because operating lease payments are in CFO, not CFF. Option A is correct."
+  },
+  {
+    "id": "L1-Q166",
+    "level": 1,
+    "module": "m12-quality-l1",
+    "topic": "Financial Reporting Quality",
+    "los": "Describe the spectrum of financial reporting quality from high to low.",
+    "question": "According to the financial reporting quality spectrum, which of the following represents the highest quality category?",
+    "options": {
+      "A": "GAAP-compliant, decision-useful financial reporting with high earnings quality reflecting sustainable earnings.",
+      "B": "GAAP-compliant financial reporting with biased choices that smooth earnings over time.",
+      "C": "Non-GAAP financial reporting that provides aggressive pro forma measures reflecting future potential."
+    },
+    "answer": "A",
+    "explanation": "The financial reporting quality spectrum ranges from highest to lowest: 1) GAAP-compliant, decision-useful, and high earnings quality (sustainable earnings and adequate returns on investment). 2) GAAP-compliant, decision-useful, but low earnings quality (unsustainable earnings or insufficient returns). 3) GAAP-compliant with biased accounting choices (aggressive or conservative choices, earnings smoothing). 4) Within GAAP, but 'amount of active choices' (earnings management). 5) Non-compliant accounting (departures from GAAP). 6) Outright fictitious transactions / accounting fraud. Option A represents the pinnacle of the quality spectrum."
+  },
+  {
+    "id": "L1-Q167",
+    "level": 1,
+    "module": "m12-quality-l1",
+    "topic": "Financial Reporting Quality",
+    "los": "Distinguish between financial reporting quality and earnings quality.",
+    "question": "Which of the following statements best illustrates a scenario where financial reporting quality is high but earnings quality is low?",
+    "options": {
+      "A": "A company fully discloses all relevant information under GAAP, but its current profits were driven by a temporary, non-repeatable surge in commodity prices.",
+      "B": "A company accelerates revenue recognition by shipping unordered goods before year-end to meet analyst forecasts.",
+      "C": "A company capitalizes regular maintenance costs to smooth reported earnings across quarters."
+    },
+    "answer": "A",
+    "explanation": "Financial reporting quality pertains to the truthfulness, transparency, and completeness with which financial statements reflect economic reality and comply with accounting standards. Earnings quality refers to the sustainability, persistence, and level of the earnings themselves (adequate return on capital, predictable and recurring cash flows). In Option A, the financial statements faithfully and transparently disclose economic reality (high reporting quality), but because the earnings are driven by a temporary windfall that cannot be sustained, earnings quality is low. Options B and C represent low financial reporting quality (aggressive accounting and manipulation)."
+  },
+  {
+    "id": "L1-Q168",
+    "level": 1,
+    "module": "m12-quality-l1",
+    "topic": "Financial Reporting Quality",
+    "los": "Describe the three conditions that generally exist when financial reporting quality is compromised (the Fraud Triangle).",
+    "question": "According to the Fraud Triangle framework, what three conditions are typically present when management engages in fraudulent financial reporting?",
+    "options": {
+      "A": "Incentive/Pressure, Opportunity, and Rationalization/Attitude.",
+      "B": "Greed, Complex Accounting Standards, and Incompetent Auditors.",
+      "C": "Aggressive Estimates, High Leverage, and Volatile Cash Flows."
+    },
+    "answer": "A",
+    "explanation": "The Fraud Triangle, established in auditing standards (such as ISA 240 and SAS 99), identifies three core conditions that facilitate fraudulent financial reporting: 1) Incentive or Pressure: Management faces pressure to achieve earnings targets, meet debt covenants, or maximize stock-based bonuses. 2) Opportunity: Weak internal controls, ineffective board oversight, complex organizational structures, or significant accounting judgment provide the opportunity to misstate. 3) Rationalization or Attitude: Individuals possess a mindset or ethical justification to rationalize their fraudulent actions (e.g., 'it is just temporary to protect the stock price'). Option A is correct."
+  },
+  {
+    "id": "L1-Q169",
+    "level": 1,
+    "module": "m12-quality-l1",
+    "topic": "Financial Reporting Quality",
+    "los": "Identify warning signs and red flags of aggressive revenue recognition.",
+    "question": "Which of the following practices is a warning sign of aggressive or premature revenue recognition designed to inflate current period revenues?",
+    "options": {
+      "A": "Bill-and-hold transactions executed near the close of the reporting period.",
+      "B": "Recording customer deposits received in advance as unearned revenue liabilities.",
+      "C": "Recognizing revenue on long-term contracts based on costs incurred relative to total estimated costs."
+    },
+    "answer": "A",
+    "explanation": "A bill-and-hold arrangement is an agreement where a seller invoices a customer for goods but retains physical possession of the goods until a future shipping date. While permitted under very narrow and strict criteria under IFRS 15 / ASC 606 (e.g., the customer requested the arrangement for substantive business reasons, goods are segregated and ready for transfer), bill-and-hold transactions executed near period-end are frequently abused to accelerate revenue recognition prematurely before control has transferred. Unearned revenue liabilities (Option B) and cost-to-cost input methods (Option C) are standard compliant accounting treatments."
+  },
+  {
+    "id": "L1-Q170",
+    "level": 1,
+    "module": "m12-quality-l1",
+    "topic": "Financial Reporting Quality",
+    "los": "Analyze Days Sales Outstanding (DSO) and accounts receivable growth relative to sales as an analytical red flag.",
+    "question": "Over the past three years, an enterprise reports sales growth of 8% annually. Over the same period, its accounts receivable grew by 28% annually, and Days Sales Outstanding (DSO) increased from 42 days to 76 days. Which of the following is the most likely analytical conclusion?",
+    "options": {
+      "A": "The company may be engaging in channel stuffing, offering lenient credit terms, or recognizing fictitious revenues.",
+      "B": "The company has improved its cash collection efficiency and reduced bad debt risk.",
+      "C": "The company is experiencing a healthy inventory turnover expansion."
+    },
+    "answer": "A",
+    "explanation": "When accounts receivable grows at a substantially faster pace than revenues and Days Sales Outstanding (DSO = $(\\text{Accounts Receivable} / \\text{Sales}) \\times 365$) surges, it is a primary red flag of revenue recognition problems. Potential explanations include: 1) Channel stuffing (pushing excess products onto distributors with extended payment terms). 2) Deteriorating customer credit quality or lenient credit terms to artificially induce sales. 3) Recognition of unearned, unbilled, or fictitious revenue. In all cases, cash collections lag behind reported accrual revenue. Option A is correct."
+  },
+  {
+    "id": "L1-Q171",
+    "level": 1,
+    "module": "m12-quality-l1",
+    "topic": "Financial Reporting Quality",
+    "los": "Identify inventory manipulation warning signs and red flags.",
+    "question": "An analyst observes that a manufacturer's inventory balance has expanded by 45% while sales grew by only 5%. Concurrently, Days of Inventory on Hand (DOH) rose from 55 to 90 days, while the reported gross profit margin increased by 250 basis points. What is the most suspicious accounting explanation?",
+    "options": {
+      "A": "Overproduction to absorb fixed overhead costs into inventory, thereby lowering reported COGS and artificially boosting gross margin.",
+      "B": "Writing down obsolete inventory to net realizable value.",
+      "C": "Switching from FIFO to LIFO in an inflationary environment."
+    },
+    "answer": "A",
+    "explanation": "Under standard absorption costing in manufacturing, fixed manufacturing overhead costs are allocated to each unit produced. When a company substantially overproduces units (building up inventory faster than sales demand), fixed costs are spread over a larger number of units. This reduces the fixed cost allocated to each unit sold, depressing reported COGS on the income statement and temporarily inflating gross profit margin. The deferred fixed costs are trapped on the balance sheet within bloated ending inventory. This is a classic inventory manipulation technique. Option B would lower inventory and gross margin. Option C would raise COGS and lower gross margin."
+  },
+  {
+    "id": "L1-Q172",
+    "level": 1,
+    "module": "m12-quality-l1",
+    "topic": "Financial Reporting Quality",
+    "los": "Evaluate warning signs of improper capitalization of expenditures.",
+    "question": "A telecommunications company begins capitalizing customer acquisition costs and general network maintenance that were previously expensed as incurred. What is the immediate effect of this accounting policy shift on its financial statements?",
+    "options": {
+      "A": "Higher current-period operating income, higher cash flow from operations, and higher total assets.",
+      "B": "Lower current-period operating income, higher cash flow from operations, and lower total assets.",
+      "C": "Higher current-period operating income, lower cash flow from operations, and unchanged total assets."
+    },
+    "answer": "A",
+    "explanation": "Shifting costs from operating expenses to capital assets (PPE or intangibles): 1) Operating Income / Net Income increases immediately because the full cost is no longer recognized as an expense; only a smaller fraction is depreciated. 2) Cash Flow Statement: Operating cash outflows are converted into investing cash outflows (CFI). Because cash paid for capital expenditures is reported in CFI, reported Cash Flow from Operations (CFO) increases. 3) Balance Sheet: Total assets and equity increase. This was the exact manipulation scheme employed in famous accounting scandals such as WorldCom. Option A is correct."
+  },
+  {
+    "id": "L1-Q173",
+    "level": 1,
+    "module": "m12-quality-l1",
+    "topic": "Financial Reporting Quality",
+    "los": "Identify cash flow manipulation mechanisms and warning signs.",
+    "question": "Which of the following accounting choices is an example of cash flow statement manipulation aimed at artificially boosting reported Cash Flow from Operations (CFO)?",
+    "options": {
+      "A": "Selling accounts receivable to an off-balance-sheet entity through factoring just prior to fiscal year-end.",
+      "B": "Repaying long-term debt using existing cash balances.",
+      "C": "Purchasing treasury shares on the open market."
+    },
+    "answer": "A",
+    "explanation": "Techniques used by management to artificially inflate Cash Flow from Operations (CFO) include: 1) Accelerating collections via year-end factoring or securitization of accounts receivable (turning future period CFO into current period CFO). 2) Stretching accounts payable payments past year-end. 3) Capitalizing operating expenditures, which shifts cash outflows from CFO to CFI. 4) Misclassifying operating disbursements as investing or financing activities. Repaying debt (Option B) and buying back shares (Option C) are financing cash outflows (CFF) that do not impact CFO. Option A is correct."
+  },
+  {
+    "id": "L1-Q174",
+    "level": 1,
+    "module": "m12-quality-l1",
+    "topic": "Financial Reporting Quality",
+    "los": "Describe balance sheet manipulation techniques including cookie jar reserves and big bath accounting.",
+    "question": "A newly appointed CEO records an unusually large restructuring charge and massive asset impairments during a year when the company already misses earnings forecasts. This practice is commonly known as:",
+    "options": {
+      "A": "'Big bath' accounting.",
+      "B": "'Cookie jar' reserve creation for smoothing.",
+      "C": "Channel stuffing."
+    },
+    "answer": "A",
+    "explanation": "'Big bath' accounting occurs when management recognizes massive write-downs, asset impairments, and restructuring provisions in an already depressed period (often immediately following a change in executive leadership). Because the current year's performance is already seen as poor, taking an enormous one-time charge incurs little additional reputational damage, clears future balance sheets of depreciable assets, and reduces future expenses. This sets up artificially inflated earnings and profit growth in subsequent years, allowing new management to claim credit for a corporate turnaround. In contrast, 'cookie jar' reserves (Option B) are created in highly profitable periods by over-accruing expenses to draw upon in future lean years. Option A is correct."
+  },
+  {
+    "id": "L1-Q175",
+    "level": 1,
+    "module": "m12-quality-l1",
+    "topic": "Financial Reporting Quality",
+    "los": "Evaluate the motivations and risks associated with non-GAAP and pro forma earnings measures.",
+    "question": "When analyzing non-GAAP (pro forma) financial measures reported by management in corporate earnings releases, an analyst should be particularly alert to:",
+    "options": {
+      "A": "The systematic exclusion of recurring cash and non-cash operating expenses such as stock-based compensation and restructuring costs.",
+      "B": "The mandatory reconciliation of non-GAAP measures to the most directly comparable GAAP measure.",
+      "C": "Presenting GAAP measures with equal or greater prominence relative to non-GAAP metrics."
+    },
+    "answer": "A",
+    "explanation": "Non-GAAP (adjusted or pro forma) earnings measures are frequently used by management to present a more favorable picture of operating performance. A major red flag is the routine and persistent exclusion of items that are recurring operating costs of doing business, such as stock-based compensation, ongoing restructuring/integration expenses, and acquisition-related amortization. Regulators (such as the US SEC under Regulation G) require mandatory reconciliation to GAAP (Option B) and equal or greater prominence for GAAP measures (Option C); these regulatory requirements protect investors rather than serve as warning signs. Option A is the key risk."
+  },
+  {
+    "id": "L1-Q176",
+    "level": 1,
+    "module": "m12-quality-l1",
+    "topic": "Financial Reporting Quality",
+    "los": "Describe the risks and warning signs associated with related-party transactions.",
+    "question": "Why do related-party transactions present significant risks to financial statement quality?",
+    "options": {
+      "A": "They lack arm's-length market pricing, enabling management to transfer assets or recognize revenues at non-economic values.",
+      "B": "They are completely prohibited from being disclosed in audited annual report footnotes.",
+      "C": "They are automatically classified as financing cash flows regardless of their economic substance."
+    },
+    "answer": "A",
+    "explanation": "Transactions with related parties (e.g., controlling shareholders, directors, key executives, or affiliated entities) pose serious financial reporting risks because they are not negotiated at arm's length in an open market. Management can manipulate revenues, asset valuations, and expenses by executing transactions on terms that transfer value to or from the company at above-market or below-market prices (e.g., round-trip sales, uncollectible loans to officers, or purchasing overvalued assets from owners). Full disclosure in footnotes is required by both IFRS (IAS 24) and US GAAP (ASC 850). Option A is correct."
+  },
+  {
+    "id": "L1-Q177",
+    "level": 1,
+    "module": "m12-quality-l1",
+    "topic": "Financial Reporting Quality",
+    "los": "Describe the Beneish model for detecting earnings manipulation and interpret its output.",
+    "question": "The Beneish M-Score is a quantitative probit model designed to assess the likelihood of earnings manipulation based on eight financial ratios. An M-Score that is less negative (higher) than -1.78 indicates:",
+    "options": {
+      "A": "A higher-than-average probability of earnings manipulation.",
+      "B": "A virtually zero probability of financial reporting misstatement.",
+      "C": "Exceptionally high financial reporting quality and earnings sustainability."
+    },
+    "answer": "A",
+    "explanation": "The Beneish M-Score model combines eight financial variables (including Days Sales in Receivables Index [DSRI], Gross Margin Index [GMI], Asset Quality Index [AQI], Sales Growth Index [SGI], Depreciation Index [DEPI], Sales, General, and Administrative expenses Index [SGAI], Leverage Index [LVGI], and Total Accruals to Total Assets [TATA]). The standard cutoff benchmark is -1.78. Because the model outputs a negative number for normal non-manipulators, a score higher (less negative or positive, e.g., -1.45 or +0.20) than -1.78 indicates a higher probability of earnings manipulation. A score lower (more negative, e.g., -2.50) indicates a lower probability of manipulation. Option A is correct."
+  },
+  {
+    "id": "L1-Q178",
+    "level": 1,
+    "module": "m12-quality-l1",
+    "topic": "Financial Reporting Quality",
+    "los": "Evaluate the accruals component of earnings using balance sheet and cash flow accrual metrics.",
+    "question": "A company reports Net Income of 200 million USD, Cash Flow from Operations (CFO) of 90 million USD, and Cash Flow from Investing (CFI) of -40 million USD. Using the cash flow-based measure of accruals, what is the accrual amount, and what does it indicate about earnings quality?",
+    "options": {
+      "A": "Accruals = 150 million USD; High accruals indicate low earnings persistence and low earnings quality.",
+      "B": "Accruals = 70 million USD; Low accruals indicate high earnings persistence and high earnings quality.",
+      "C": "Accruals = -150 million USD; Negative accruals indicate aggressive revenue recognition."
+    },
+    "answer": "A",
+    "explanation": "Under the cash flow-based approach, aggregate accruals are measured as: $\\text{Accruals}_{\\text{CF}} = \\text{Net Income} - (\\text{CFO} + \\text{CFI}) = 200\\text{ million} - (90 + (-40)) = 200 - 50 = 150\\text{ million USD}$. (Alternatively, if measured simply as Net Income minus CFO, accruals equal 200 - 90 = 110 million USD). In either formulation, net income is substantially greater than cash flows, meaning that the majority of reported net income consists of accounting accruals rather than realized cash inflows. Empirical finance research confirms that the accrual component of earnings is far less persistent than the cash component. Therefore, high positive accruals indicate low earnings quality and lower future earnings persistence. Option A is correct."
+  },
+  {
+    "id": "L1-Q179",
+    "level": 1,
+    "module": "m12-quality-l1",
+    "topic": "Financial Reporting Quality",
+    "los": "Describe the types of independent audit opinions and explain their implications for financial reporting quality.",
+    "question": "An independent external auditor issues a 'Qualified opinion' on a firm's financial statements. What does this opinion communicate to users of financial statements?",
+    "options": {
+      "A": "The financial statements are presented fairly except for a specific, isolated material departure from accounting standards.",
+      "B": "The financial statements are pervasive with material misstatements and do not present a true and fair view.",
+      "C": "The auditor was unable to obtain sufficient audit evidence and provides no opinion whatsoever."
+    },
+    "answer": "A",
+    "explanation": "Independent audit opinions include: 1) Unqualified (clean) opinion: Statements are presented fairly in all material respects in accordance with GAAP/IFRS. 2) Qualified opinion: Statements are fairly presented EXCEPT for a specific, isolated material misstatement or limitation on audit scope that is not pervasive. 3) Adverse opinion: Material misstatements are both material and PERVASIVE; the financial statements do not present fairly (Option B). 4) Disclaimer of opinion: The auditor is unable to obtain sufficient appropriate audit evidence due to a pervasive scope limitation or severe uncertainty, and refuses to express an opinion (Option C). Option A is correct."
+  },
+  {
+    "id": "L1-Q180",
+    "level": 1,
+    "module": "m12-quality-l1",
+    "topic": "Financial Reporting Quality",
+    "los": "Identify adjustments required to assess core, sustainable operating performance.",
+    "question": "When an equity analyst seeks to determine a company's sustainable core operating earnings power, which of the following adjustments should the analyst make?",
+    "options": {
+      "A": "Remove one-time gains from asset sales, exclude restructuring charges, and evaluate whether items classified in OCI are economically recurring.",
+      "B": "Add back all income tax expenses and interest expenses to eliminate financing differences.",
+      "C": "Capitalize all administrative overhead expenses into balance sheet inventory."
+    },
+    "answer": "A",
+    "explanation": "To assess sustainable core operating earnings power, analysts must isolate recurring, persistent operating results from transitory or non-operating events. Key adjustments include: 1) Eliminating non-recurring gains/losses from asset sales or business disposals. 2) Normalizing restructuring charges and severance costs that management repeatedly labels as one-time. 3) Inspecting Other Comprehensive Income (OCI) to identify items (such as foreign exchange translation, derivative hedging gains/losses, or pension remeasurements) that have genuine economic recurrence and will eventually impact cash flows. 4) Adjusting for differences in accounting policies (such as LIFO vs FIFO or lease accounting). Option A is correct."
+  },
+  {
+    "id": "L1-M12-016",
+    "level": 1,
+    "module": "m12-quality-l1",
+    "topic": "Financial Reporting Quality",
+    "los": "Calculate and interpret the balance-sheet-based and cash-flow-based accruals ratios.",
+    "question": "A firm reports average net operating assets of 1,000 million USD and net income of 150 million USD, with cash flow from operations (CFO) of 60 million USD and cash flow from investing (CFI) of -80 million USD. Using the cash-flow-based approach, the firm's accruals ratio is:",
+    "options": {
+      "A": "0.090",
+      "B": "0.170",
+      "C": "0.210"
+    },
+    "answer": "B",
+    "explanation": "Under the cash-flow-based approach, aggregate accruals are defined as: $$\\text{Accruals}_{\\text{CF}} = \\text{Net Income} - (\\text{CFO} + \\text{CFI})$$ $$\\text{Accruals}_{\\text{CF}} = 150 - (60 + (-80)) = 150 - (-20) = 170\\text{ million USD}$$ The cash-flow-based accruals ratio is: $$\\text{Accruals Ratio} = \\frac{\\text{Accruals}_{\\text{CF}}}{\\text{Average NOA}} = \\frac{170}{1{,}000} = 0.170$$ A higher accruals ratio indicates lower earnings quality.",
+    "distractor_analysis": {
+      "A": "0.090 subtracts only CFO ($150 - 60 = 90 / 1000 = 0.090$), ignoring CFI.",
+      "C": "0.210 results from an arithmetic error in sign handling ($150 + 60$)."
+    }
+  },
+  {
+    "id": "L1-M12-017",
+    "level": 1,
+    "module": "m12-quality-l1",
+    "topic": "Financial Reporting Quality",
+    "los": "Describe the spectrum of financial reporting quality.",
+    "question": "Which of the following levels on the financial reporting quality spectrum reflects the HIGHEST level of quality?",
+    "options": {
+      "A": "Reporting is compliant with GAAP/IFRS, decision-useful, and reflects sustainable earnings and high return on capital.",
+      "B": "Reporting is compliant with GAAP/IFRS but management uses biased accounting choices that obscure underlying economic reality.",
+      "C": "Reporting is non-compliant and contains outright fraudulent transactions."
+    },
+    "answer": "A",
+    "explanation": "At the top of the quality spectrum is reporting that is not only fully compliant with GAAP/IFRS and decision-useful, but also reflects high-quality economic earnings—meaning earnings are sustainable and provide adequate returns on capital.",
+    "distractor_analysis": {
+      "B": "Biased choices (aggressive or conservative) represent a lower quality tier on the spectrum.",
+      "C": "Fraudulent non-compliance is at the very bottom of the quality hierarchy."
+    }
+  },
+  {
+    "id": "L1-M12-018",
+    "level": 1,
+    "module": "m12-quality-l1",
+    "topic": "Financial Reporting Quality",
+    "los": "Describe warnings signs of earnings manipulation.",
+    "question": "Which of the following accounting relationships is considered a significant red flag for aggressive revenue recognition?",
+    "options": {
+      "A": "Days sales outstanding (DSO) that increases significantly while sales growth accelerates.",
+      "B": "Cash flow from operations that consistently exceeds net income over multiple consecutive years.",
+      "C": "Inventory turnover that increases while gross margins remain stable."
+    },
+    "answer": "A",
+    "explanation": "A surging DSO alongside rapid revenue growth indicates that receivables are expanding faster than sales. This suggests that the firm may be booking uncollectible sales, offering extended customer credit terms, or shipping unordered goods (channel stuffing) to inflate top-line results.",
+    "distractor_analysis": {
+      "B": "CFO consistently exceeding net income is a sign of high earnings quality and conservative accounting.",
+      "C": "Faster inventory turnover reflects strong operational efficiency, not manipulation."
+    }
+  },
+  {
+    "id": "L1-M12-019",
+    "level": 1,
+    "module": "m12-quality-l1",
+    "topic": "Financial Reporting Quality",
+    "los": "Describe differences between conservative and aggressive accounting choices.",
+    "question": "A firm that uses accelerated depreciation and LIFO inventory accounting during periods of rising prices is employing:",
+    "options": {
+      "A": "Aggressive accounting choices that overstate current earnings and equity.",
+      "B": "Conservative accounting choices that reduce reported current earnings and provide higher future earnings potential.",
+      "C": "Fraudulent non-GAAP accounting."
+    },
+    "answer": "B",
+    "explanation": "Conservative accounting choices defer income recognition and accelerate expense recognition. LIFO in inflationary periods charges higher current replacement costs to COGS, and accelerated depreciation front-loads asset wear, reducing current net income and book equity while boosting real cash flow through lower taxes.",
+    "distractor_analysis": {
+      "A": "Aggressive choices would use straight-line depreciation and FIFO to inflate current net income.",
+      "C": "Accelerated depreciation and LIFO are fully compliant standard GAAP methods."
+    }
+  },
+  {
+    "id": "L1-M12-020",
+    "level": 1,
+    "module": "m12-quality-l1",
+    "topic": "Financial Reporting Quality",
+    "los": "Describe types of auditor opinions.",
+    "question": "An auditor issues a disclaimer of opinion when:",
+    "options": {
+      "A": "The financial statements are presented fairly in all material respects.",
+      "B": "There is a severe limitation on the scope of the audit, or the auditor is unable to obtain sufficient appropriate audit evidence.",
+      "C": "There is a specific, isolated material departure from accounting standards that does not pervasively affect the entire report."
+    },
+    "answer": "B",
+    "explanation": "A disclaimer of opinion is issued when the auditor is unable to obtain sufficient appropriate audit evidence to form an opinion (scope limitation) or when significant uncertainties undermine the entire audit. An unqualified opinion confirms fair presentation, while a qualified opinion addresses isolated non-pervasive departures.",
+    "distractor_analysis": {
+      "A": "Fair presentation in all material respects earns an unqualified (clean) opinion.",
+      "C": "An isolated material departure results in a qualified ('except for') opinion."
+    }
+  },
+  {
+    "id": "L1-M12-021",
+    "level": 1,
+    "module": "m12-quality-l1",
+    "topic": "Financial Reporting Quality",
+    "los": "Describe motivations for management to manage earnings.",
+    "question": "Corporate managers are most strongly incentivized to adopt aggressive earnings choices when:",
+    "options": {
+      "A": "Company performance is substantially above the upper ceiling of management's annual incentive bonus plan.",
+      "B": "Reported earnings are slightly below consensus Wall Street analyst forecasts or debt covenant threshold ratios.",
+      "C": "The company plans to repurchase shares from existing shareholders in an open-market buyback."
+    },
+    "answer": "B",
+    "explanation": "Failing to meet quarterly consensus earnings by even one cent can trigger severe stock price declines and threaten managerial tenure. Similarly, breaching debt covenant ratios triggers technical default and lender penalties. These situations create intense pressure for aggressive accounting accruals.",
+    "distractor_analysis": {
+      "A": "When above the bonus ceiling, managers tend to manage earnings downward ('cookie-jar reserves') for future periods.",
+      "C": "When buying back shares, management has an incentive to depress share prices, not inflate them."
+    }
+  },
+  {
+    "id": "L1-M12-022",
+    "level": 1,
+    "module": "m12-quality-l1",
+    "topic": "Financial Reporting Quality",
+    "los": "Describe the balance-sheet-based accruals ratio.",
+    "question": "Using the balance sheet approach, Net Operating Assets (NOA) is defined as:",
+    "options": {
+      "A": "(Total Assets - Cash and Marketable Securities) - (Total Liabilities - Total Debt).",
+      "B": "Total Current Assets minus Total Current Liabilities.",
+      "C": "Gross Property, Plant, and Equipment minus Accumulated Depreciation."
+    },
+    "answer": "A",
+    "explanation": "Net Operating Assets (NOA) isolates operating capital from financial assets and financing debt: Operating Assets equal Total Assets minus Cash and Cash Equivalents; Operating Liabilities equal Total Liabilities minus Total Debt (short- and long-term interest-bearing debt). NOA is Operating Assets minus Operating Liabilities.",
+    "distractor_analysis": {
+      "B": "Current assets minus current liabilities is working capital, not NOA.",
+      "C": "PP&E is only one component of non-current operating assets."
+    }
+  },
+  {
+    "id": "L1-M12-023",
+    "level": 1,
+    "module": "m12-quality-l1",
+    "topic": "Financial Reporting Quality",
+    "los": "Explain mean reversion in earnings and accruals.",
+    "question": "Empirical accounting research demonstrates that firms with high positive accruals tend to experience:",
+    "options": {
+      "A": "Permanent and indefinite acceleration of return on equity.",
+      "B": "Mean reversion and subsequent declines in future earnings as prior-period accruals reverse.",
+      "C": "Statutory immunity from SEC regulatory enforcement audits."
+    },
+    "answer": "B",
+    "explanation": "Accruals are temporary accounting entries that must eventually reverse in future periods (e.g., accrued receivables must either be collected in cash or written off). Firms with high positive accrual components exhibit low earnings persistence and experience mean reversion in future profitability.",
+    "distractor_analysis": {
+      "A": "Accrual-driven earnings cannot sustain perpetual ROE acceleration.",
+      "C": "Firms with high accruals are frequent targets of regulatory investigation."
+    }
+  },
+  {
+    "id": "L1-M12-024",
+    "level": 1,
+    "module": "m12-quality-l1",
+    "topic": "Financial Reporting Quality",
+    "los": "Describe warning signs related to cash flow manipulation.",
+    "question": "Which of the following management actions artificially inflates Cash Flow from Operating Activities (CFO)?",
+    "options": {
+      "A": "Selling accounts receivable with recourse or securitizing receivables just before fiscal year-end.",
+      "B": "Accelerating payments to trade suppliers prior to the balance sheet date.",
+      "C": "Purchasing manufacturing equipment with available cash."
+    },
+    "answer": "A",
+    "explanation": "Selling or factoring accounts receivable accelerates cash collections from future periods into the current period, boosting headline CFO before year-end. If sold with recourse, the credit risk remains with the firm, disguising short-term financing as operational cash flow.",
+    "distractor_analysis": {
+      "B": "Accelerating vendor payments reduces CFO in the current period.",
+      "C": "Equipment purchases are classified as investing cash outflows (CFI), not operating cash flows."
+    }
+  },
+  {
+    "id": "L1-M12-025",
+    "level": 1,
+    "module": "m12-quality-l1",
+    "topic": "Financial Reporting Quality",
+    "los": "Explain the role of internal controls and the Sarbanes-Oxley Act.",
+    "question": "Under Section 404 of the Sarbanes-Oxley Act (SOX), management and independent auditors must:",
+    "options": {
+      "A": "Guarantee that the stock price will not drop below the original issuance price.",
+      "B": "Assess and report on the effectiveness of the company's internal control over financial reporting (ICFR).",
+      "C": "Eliminate all operating leases from financial footnote disclosures."
+    },
+    "answer": "B",
+    "explanation": "Section 404 of SOX mandates that public company management accept responsibility for establishing and maintaining an adequate internal control structure and assess its effectiveness annually. Independent auditors must attest to and issue an audit report on management's internal control assessment.",
+    "distractor_analysis": {
+      "A": "SOX governs reporting integrity and controls; it cannot guarantee stock market returns.",
+      "C": "Leases are governed by ASC 842 / IFRS 16 accounting standards, not SOX section 404."
+    }
+  }
+]

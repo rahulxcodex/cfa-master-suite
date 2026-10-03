@@ -1,0 +1,2282 @@
+[
+  {
+    "id": "L1-FI-001",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Defining Elements of Fixed Income Securities",
+    "los": "Describe basic features of a fixed-income security",
+    "question": "A fixed-income analyst examines a corporate bond with a par value of USD 1,000, an original maturity of 10 years, and a fixed annual coupon rate of 5.50%. If 3 years have elapsed since issuance, which statement correctly identifies the bond's tenor and current coupon payment?",
+    "options": {
+      "A": "The tenor is 7 years and the annual coupon payment is USD 55.00.",
+      "B": "The tenor is 10 years and the annual coupon payment is USD 55.00.",
+      "C": "The tenor is 7 years and the annual coupon payment is USD 550.00."
+    },
+    "answer": "A",
+    "explanation": "Tenor refers to the remaining time until the bond's maturity date. Since 3 years have elapsed on an original 10-year maturity bond, the tenor is: $$\\text{Tenor} = 10 - 3 = 7 \\text{ years}$$ The annual coupon payment is calculated as the coupon rate multiplied by par value: $$\\text{Coupon} = 5.50\\% \\times \\text{USD } 1{,}000 = \\text{USD } 55.00$$",
+    "distractor_analysis": {
+      "B": "Incorrect because 10 years represents the original maturity at issuance, not the remaining tenor.",
+      "C": "Incorrect because USD 550.00 represents 55% of par rather than 5.50% ($0.055 \\times 1{,}000 = 55$)."
+    }
+  },
+  {
+    "id": "L1-FI-002",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Defining Elements of Fixed Income Securities",
+    "los": "Describe affirmative and negative covenants and explain their purpose",
+    "question": "Which of the following provisions in a bond indenture is most likely classified as an affirmative covenant?",
+    "options": {
+      "A": "A restriction prohibiting the issuer from exceeding a debt-to-equity ratio of 1.50.",
+      "B": "A requirement to insure and maintain pledged collateral assets in good working order.",
+      "C": "A limitation on dividend distributions to common shareholders during the bond's life."
+    },
+    "answer": "B",
+    "explanation": "Affirmative covenants specify administrative actions that the borrower promises to perform during the life of the bond. Common examples include maintaining insurance on pledged assets, paying taxes on time, complying with environmental laws, and providing audited financial statements periodically. Negative covenants, by contrast, prohibit or restrict the borrower from engaging in specific actions that could impair creditworthiness, such as taking on additional debt (Option A) or paying excessive dividends (Option C).",
+    "distractor_analysis": {
+      "A": "Incorrect because debt incurrence restrictions and maximum leverage ceilings are classic negative covenants.",
+      "C": "Incorrect because restrictions on distributions or shareholder payouts represent negative covenants designed to preserve cash."
+    }
+  },
+  {
+    "id": "L1-FI-003",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Defining Elements of Fixed Income Securities",
+    "los": "Describe legal, regulatory, and tax considerations in fixed-income issuance",
+    "question": "A multinational corporation incorporated in Germany issues a USD-denominated bond in London that is distributed to investors across multiple jurisdictions outside both the United States and Germany. This security is best classified as a:",
+    "options": {
+      "A": "Foreign bond.",
+      "B": "Eurobond.",
+      "C": "Domestic bond."
+    },
+    "answer": "B",
+    "explanation": "A Eurobond is issued outside the jurisdiction of any single country and denominated in a currency other than the local currency of the country where it is issued. Here, a German issuer sells USD-denominated bonds in London to international investors, which is the definition of a Eurobond (specifically an offshore USD Eurodollar bond). Foreign bonds are issued by foreign entities in a local market in the local currency (e.g., a German firm issuing USD bonds in the US, known as a Yankee bond). Domestic bonds are issued by domestic entities in their home market and currency.",
+    "distractor_analysis": {
+      "A": "Incorrect because a foreign bond would be issued in the domestic market of the currency (e.g., German issuer issuing USD in the US domestic market).",
+      "C": "Incorrect because domestic bonds are issued by domestic borrowers in their local currency and local exchange."
+    }
+  },
+  {
+    "id": "L1-FI-004",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Defining Elements of Fixed Income Securities",
+    "los": "Describe how legal, regulatory, and tax constraints affect fixed-income securities",
+    "question": "An investor purchases a 5-year, fully amortizing loan of USD 100,000 with an annual fixed interest rate of 6.00% and equal annual year-end payments. The equal annual payment is USD 23,739.64. At the end of Year 1, the remaining principal balance is closest to:",
+    "options": {
+      "A": "USD 76,260.36.",
+      "B": "USD 82,260.36.",
+      "C": "USD 94,000.00."
+    },
+    "answer": "B",
+    "explanation": "In a fully amortizing bond or loan, each periodic payment consists of both interest and principal repayment. For Year 1: $$\\text{Interest}_1 = 6.00\\% \\times \\text{USD } 100{,}000 = \\text{USD } 6{,}000.00$$ The principal paid in Year 1 is: $$\\text{Principal}_1 = \\text{Payment} - \\text{Interest}_1 = \\text{USD } 23{,}739.64 - \\text{USD } 6{,}000.00 = \\text{USD } 17{,}739.64$$ The ending principal balance after Year 1 is: $$\\text{Balance}_1 = \\text{USD } 100{,}000 - \\text{USD } 17{,}739.64 = \\text{USD } 82{,}260.36$$",
+    "distractor_analysis": {
+      "A": "Incorrect because USD 76,260.36 subtracts the entire annual payment from the principal without accounting for the USD 6,000 interest component ($100{,}000 - 23{,}739.64$).",
+      "C": "Incorrect because USD 94,000.00 only accounts for subtracting the interest payment ($100{,}000 - 6{,}000$)."
+    }
+  },
+  {
+    "id": "L1-FI-005",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Defining Elements of Fixed Income Securities",
+    "los": "Describe basic features of a fixed-income security",
+    "question": "A corporate bond indenture includes a sinking fund provision requiring the issuer to retire 5% of the original principal each year starting in Year 5. If the bonds trade at a market price of 96% of par value, the issuer is most likely to fulfill its sinking fund obligation by:",
+    "options": {
+      "A": "Exercising its random lottery call to redeem bonds at par value.",
+      "B": "Purchasing bonds in the open market at the prevailing market price.",
+      "C": "Increasing the coupon rate to incentivize voluntary bond tenders."
+    },
+    "answer": "B",
+    "explanation": "Sinking fund arrangements often give the issuer the option to deliver either cash to the trustee (who retires bonds at par via random drawing) or bonds purchased directly in the secondary market at prevailing market prices (the delivery option). When market price is below par (trading at 96% of par), the issuer minimizes its cost by purchasing bonds in the open market at 96% of par rather than calling them at 100% of par.",
+    "distractor_analysis": {
+      "A": "Incorrect because redeeming bonds at par would cost 100% of par, which is more expensive than buying them in the market at 96%.",
+      "C": "Incorrect because sinking funds are structured mandatory obligations; the issuer does not increase the coupon to solicit voluntary tenders."
+    }
+  },
+  {
+    "id": "L1-FI-006",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Defining Elements of Fixed Income Securities",
+    "los": "Describe coupon payment structures",
+    "question": "A floating-rate note (FRN) pays a quarterly coupon based on 90-day Euribor plus a quoted margin of 80 bps. The FRN has a cap of 4.50% and a floor of 2.00%. If 90-day Euribor resets at 4.00% on a coupon reset date, the annualized coupon rate for the subsequent quarter is closest to:",
+    "options": {
+      "A": "4.00%.",
+      "B": "4.50%.",
+      "C": "4.80%."
+    },
+    "answer": "B",
+    "explanation": "The formula for the coupon rate of an FRN is: $$\\text{Coupon Rate} = \\text{Reference Rate} + \\text{Quoted Margin}$$ Without constraints: $$\\text{Uncapped Rate} = 4.00\\% + 0.80\\% = 4.80\\%$$ However, the bond features an interest rate cap of 4.50%. Because the calculated rate of 4.80% exceeds the cap, the cap is triggered, and the coupon rate for the upcoming quarter is limited to: $$\\text{Coupon Rate} = \\min(4.80\\%, 4.50\\%) = 4.50\\%$$",
+    "distractor_analysis": {
+      "A": "Incorrect because 4.00% ignores the quoted margin of 80 bps.",
+      "C": "Incorrect because 4.80% ignores the coupon rate cap of 4.50%."
+    }
+  },
+  {
+    "id": "L1-FI-007",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Defining Elements of Fixed Income Securities",
+    "los": "Describe coupon payment structures",
+    "question": "A credit-linked coupon bond is structured such that its coupon rate increases by 75 bps for every notch downgrade below investment grade (BBB-/Baa3). Which of the following statements best describes this bond structure?",
+    "options": {
+      "A": "It provides credit protection to the issuer by reducing debt service costs during financial distress.",
+      "B": "It exposes the issuer to increased debt service costs at the exact time its creditworthiness deteriorates.",
+      "C": "It is identical to an inverse floating-rate note tied to benchmark interbank offer rates."
+    },
+    "answer": "B",
+    "explanation": "A credit-linked coupon bond features a coupon that is inversely related to the issuer's credit rating. While this protects the investor against rating downgrades by offering higher yield compensation, it creates a potential liquidity strain for the issuer because debt service cash outflows increase precisely when the issuer faces financial stress and downgrades.",
+    "distractor_analysis": {
+      "A": "Incorrect because the coupon increases upon downgrade, which raises (not reduces) the issuer's debt service costs.",
+      "C": "Incorrect because an inverse floater coupon depends on a market benchmark interest rate (e.g., $K - L \\times \\text{Reference Rate}$), not credit rating migration."
+    }
+  },
+  {
+    "id": "L1-FI-008",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Defining Elements of Fixed Income Securities",
+    "los": "Describe coupon payment structures",
+    "question": "An investor purchases a 3-year capital-indexed bond (such as TIPS) with an initial par value of USD 1,000 and an annual real coupon rate of 2.50%. In Year 1, the annual inflation rate is 4.00%. The inflation-adjusted coupon payment received at the end of Year 1 is closest to:",
+    "options": {
+      "A": "USD 25.00.",
+      "B": "USD 26.00.",
+      "C": "USD 65.00."
+    },
+    "answer": "B",
+    "explanation": "In a capital-indexed bond (such as US TIPS), the coupon rate remains constant while the principal value is adjusted periodically for inflation: $$\\text{Adjusted Principal}_1 = \\text{USD } 1{,}000 \\times (1 + 0.04) = \\text{USD } 1{,}040$$ The coupon payment is calculated by multiplying the fixed real coupon rate by the adjusted principal: $$\\text{Coupon}_1 = 2.50\\% \\times \\text{USD } 1{,}040 = \\text{USD } 26.00$$",
+    "distractor_analysis": {
+      "A": "Incorrect because USD 25.00 is calculated on the unadjusted initial par value ($2.50\\% \\times 1{,}000$).",
+      "C": "Incorrect because USD 65.00 incorrectly adds the inflation rate to the coupon rate and applies it to par ($6.50\\% \\times 1{,}000$), which is the structure of an interest-indexed bond, not a capital-indexed bond."
+    }
+  },
+  {
+    "id": "L1-FI-009",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Defining Elements of Fixed Income Securities",
+    "los": "Describe bonds with embedded options",
+    "question": "A corporate bond indenture includes an embedded call option allowing the issuer to redeem the bond at par after 5 years. From the perspective of the bondholder, this embedded call option:",
+    "options": {
+      "A": "Caps the bond's potential price appreciation when market interest rates decline.",
+      "B": "Provides a floor on the bond's market price when interest rates rise.",
+      "C": "Lowers the bond's required yield to maturity relative to an identical straight bond."
+    },
+    "answer": "A",
+    "explanation": "An embedded call option gives the issuer the right, but not the obligation, to repurchase the bond at a specified call price. When interest rates fall significantly, the market price of a straight bond rises. However, the price of a callable bond is bounded near the call price because the issuer will likely call the bond and refinance at lower rates. This creates 'price compression' or capped price appreciation, exposing investors to reinvestment risk. Consequently, investors demand a higher yield (lower price) compared to an option-free bond.",
+    "distractor_analysis": {
+      "B": "Incorrect because a put option, not a call option, establishes a price floor when interest rates rise.",
+      "C": "Incorrect because callable bonds carry higher yields (not lower yields) to compensate investors for call risk."
+    }
+  },
+  {
+    "id": "L1-FI-010",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Defining Elements of Fixed Income Securities",
+    "los": "Describe bonds with embedded options",
+    "question": "Which of the following bonds will most likely exhibit the lowest yield to maturity at issuance, assuming identical coupon rates, maturities, and issuer credit risk?",
+    "options": {
+      "A": "A putable bond.",
+      "B": "A straight (option-free) bond.",
+      "C": "A callable bond."
+    },
+    "answer": "A",
+    "explanation": "A putable bond gives the investor the right to sell the bond back to the issuer at par on specified dates. Because this embedded option benefits the bondholder by providing downside price protection when interest rates rise, investors are willing to pay a higher price, resulting in a lower required yield to maturity: $$\\text{Price}_{\\text{putable}} = \\text{Price}_{\\text{straight}} + \\text{Price}_{\\text{put}}$$ $$\\text{Yield}_{\\text{putable}} < \\text{Yield}_{\\text{straight}} < \\text{Yield}_{\\text{callable}}$$ Callable bonds have the highest yield because the option benefits the issuer.",
+    "distractor_analysis": {
+      "B": "Incorrect because straight bonds offer higher yields than putable bonds due to the absence of the investor-friendly put option.",
+      "C": "Incorrect because callable bonds have the highest yield to maturity to compensate investors for the embedded call risk."
+    }
+  },
+  {
+    "id": "L1-FI-011",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Defining Elements of Fixed Income Securities",
+    "los": "Describe bonds with embedded options",
+    "question": "A convertible bond has a par value of USD 1,000, a conversion price of USD 40.00 per share, and trades at a market price of USD 1,080. If the issuer's common stock currently trades at USD 42.00 per share, the conversion value and conversion premium are closest to:",
+    "options": {
+      "A": "Conversion value = USD 1,050; Conversion premium = USD 30.",
+      "B": "Conversion value = USD 1,000; Conversion premium = USD 80.",
+      "C": "Conversion value = USD 1,050; Conversion premium = USD 80."
+    },
+    "answer": "A",
+    "explanation": "First, calculate the conversion ratio: $$\\text{Conversion Ratio} = \\frac{\\text{Par Value}}{\\text{Conversion Price}} = \\frac{\\text{USD } 1{,}000}{\\text{USD } 40.00} = 25 \\text{ shares}$$ Next, compute the conversion value: $$\\text{Conversion Value} = \\text{Conversion Ratio} \\times \\text{Stock Price} = 25 \\times \\text{USD } 42.00 = \\text{USD } 1{,}050$$ Finally, compute the market conversion premium: $$\\text{Conversion Premium} = \\text{Bond Price} - \\text{Conversion Value} = \\text{USD } 1{,}080 - \\text{USD } 1{,}050 = \\text{USD } 30$$",
+    "distractor_analysis": {
+      "B": "Incorrect because it compares market price to par value ($1{,}080 - 1{,}000 = 80$) instead of conversion value.",
+      "C": "Incorrect because it correctly calculates conversion value but calculates premium as bond price minus par ($1{,}080 - 1{,}000 = 80$)."
+    }
+  },
+  {
+    "id": "L1-FI-012",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Defining Elements of Fixed Income Securities",
+    "los": "Describe bonds with embedded options",
+    "question": "Contingent convertible bonds (CoCos) differ from traditional convertible bonds primarily because CoCos:",
+    "options": {
+      "A": "Allow the bondholder to convert the bond to common stock at any time prior to maturity.",
+      "B": "Convert into equity automatically or write down principal upon the occurrence of a pre-specified trigger event.",
+      "C": "Pay a variable coupon rate tied directly to the issuer's common stock dividend payout."
+    },
+    "answer": "B",
+    "explanation": "Contingent convertible bonds (CoCos) are hybrid capital instruments commonly issued by banks to meet regulatory Tier 1 capital requirements. Unlike traditional convertibles where the investor chooses whether and when to convert, CoCos convert into common equity automatically (or undergo an automatic principal write-down) if a pre-specified contractual event occurs, such as the bank's Common Equity Tier 1 (CET1) ratio falling below a regulatory threshold.",
+    "distractor_analysis": {
+      "A": "Incorrect because CoCo conversion is involuntary and triggered by capital distress, not initiated at the bondholder's discretion.",
+      "C": "Incorrect because CoCos pay contractual fixed or floating coupons; they do not pay coupons tied to equity dividends."
+    }
+  },
+  {
+    "id": "L1-FI-013",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Defining Elements of Fixed Income Securities",
+    "los": "Describe basic features of a fixed-income security",
+    "question": "A corporate bond is issued with detachable warrants that allow the holder to buy common stock at a stated strike price. The primary financial effect of attaching warrants to the bond is to:",
+    "options": {
+      "A": "Lower the coupon rate the issuer must offer to sell the bond.",
+      "B": "Require the bondholder to surrender the bond upon exercising the warrant.",
+      "C": "Increase the effective duration of the corporate debt."
+    },
+    "answer": "A",
+    "explanation": "Warrants are equity call options attached to a debt security as a 'sweetener'. Because the warrants provide upside equity participation and can typically be detached and traded separately, investors accept a lower coupon rate (and lower yield) on the host bond than they would require on an identical plain-vanilla straight bond. Unlike convertible bonds, exercising a warrant does not retire the bond; the bond remains outstanding.",
+    "distractor_analysis": {
+      "B": "Incorrect because warrants are separate instruments; exercising them requires paying cash for shares, leaving the debt outstanding.",
+      "C": "Incorrect because the warrant lowers the bond's coupon yield and does not inherently increase duration."
+    }
+  },
+  {
+    "id": "L1-FI-014",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Defining Elements of Fixed Income Securities",
+    "los": "Describe basic features of a fixed-income security",
+    "question": "A bond pays annual coupon payments in Japanese yen (JPY) but will repay its principal balance at maturity in US dollars (USD). This security is best classified as a:",
+    "options": {
+      "A": "Currency option bond.",
+      "B": "Dual-currency bond.",
+      "C": "Supranational bond."
+    },
+    "answer": "B",
+    "explanation": "A dual-currency bond makes coupon payments in one currency and principal repayment at maturity in a different currency. For example, a bond paying interest in JPY and returning principal in USD is a dual-currency bond. In contrast, a currency option bond gives the bondholder the choice to select which currency to receive payments in from two pre-agreed currencies.",
+    "distractor_analysis": {
+      "A": "Incorrect because currency option bonds give the investor the right to choose between two currencies for each payment, rather than fixing different currencies for coupon and principal.",
+      "C": "Incorrect because supranational bonds refer to bonds issued by multilateral institutions (e.g., World Bank), which is an issuer classification rather than a currency cash flow structure."
+    }
+  },
+  {
+    "id": "L1-FI-015",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Fixed-Income Markets: Issuance, Trading, and Funding",
+    "los": "Describe classifications of fixed-income markets",
+    "question": "A regional transportation authority with independent revenue-generating assets issues bonds that are not backed by the taxing power of the national government. These bonds are most accurately classified as:",
+    "options": {
+      "A": "Sovereign bonds.",
+      "B": "Non-sovereign government bonds.",
+      "C": "Quasi-government (agency) bonds."
+    },
+    "answer": "C",
+    "explanation": "Quasi-government or agency bonds are issued by entities established or sponsored by governments, such as postal agencies, power authorities, or transportation financing agencies. While established by the government, they typically rely on specific operational enterprise revenues rather than direct national taxing power. In contrast, sovereign bonds are issued by central national governments, and non-sovereign government bonds are issued by state, provincial, or municipal political subdivisions.",
+    "distractor_analysis": {
+      "A": "Incorrect because sovereign bonds are issued by the central national government backed by its full faith and credit and national taxing power.",
+      "B": "Incorrect because non-sovereign government bonds are issued by political subdivisions (provinces, states, municipalities) rather than standalone specialized authorities/agencies."
+    }
+  },
+  {
+    "id": "L1-FI-016",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Fixed-Income Markets: Issuance, Trading, and Funding",
+    "los": "Describe the issuance of fixed-income securities",
+    "question": "In an underwritten offering of corporate bonds (firm commitment), the primary underwriting risk is borne by:",
+    "options": {
+      "A": "The investment bank syndicate.",
+      "B": "The issuing corporation.",
+      "C": "The purchasing institutional investors."
+    },
+    "answer": "A",
+    "explanation": "In an underwritten offering (also called a firm commitment offering), the investment bank or syndicate guarantees the sale of the bond issue at an agreed-upon offering price. The syndicate buys the entire issue from the issuer and re-sells it to the public. If market conditions deteriorate and the bonds cannot be sold at the offering price, the syndicate must absorb the financial loss. In a best-efforts offering, by contrast, the issuer bears the risk of unsold securities.",
+    "distractor_analysis": {
+      "B": "Incorrect because the issuing corporation is guaranteed proceeds in an underwritten offering; the issuer bears unsold risk in a best-efforts offering.",
+      "C": "Incorrect because institutional investors only bear investment price risk after purchasing, not underwriting distribution risk."
+    }
+  },
+  {
+    "id": "L1-FI-017",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Fixed-Income Markets: Issuance, Trading, and Funding",
+    "los": "Describe the issuance of fixed-income securities",
+    "question": "A sovereign treasury conducts a single-price (Dutch) auction for USD 10 billion par value of 10-year bonds. Competitive bids are received as follows:\n- Bidder 1: USD 3 billion at 4.10%\n- Bidder 2: USD 4 billion at 4.15%\n- Bidder 3: USD 5 billion at 4.20%\n- Bidder 4: USD 2 billion at 4.25%\nWhich statement regarding the auction outcome is most accurate?",
+    "options": {
+      "A": "All winning bidders receive bonds at a clearing yield of 4.20%, with Bidder 3 receiving a partial allocation of USD 3 billion.",
+      "B": "Bidder 1 receives bonds at 4.10%, Bidder 2 at 4.15%, and Bidder 3 at 4.20%.",
+      "C": "The clearing yield is 4.25%, and all four bidders receive full allocations."
+    },
+    "answer": "A",
+    "explanation": "In a single-price auction, bids are ranked from lowest yield (highest price) to highest yield until cumulative demand fulfills the offering amount:\n- Bidder 1: USD 3 billion (cumulative USD 3 billion)\n- Bidder 2: USD 4 billion (cumulative USD 7 billion)\n- Bidder 3: needs USD 3 billion out of USD 5 billion to hit USD 10 billion.\nThe highest accepted yield that clears the USD 10 billion offering is 4.20% (the stop-out or clearing yield). In a single-price auction, all winning competitive bidders (Bidders 1, 2, and the allocated portion of 3) pay the same price corresponding to the stop-out yield of 4.20%.",
+    "distractor_analysis": {
+      "B": "Incorrect because charging each bidder their specific bid yield describes a multiple-price auction, not a single-price (Dutch) auction.",
+      "C": "Incorrect because the USD 10 billion offering is fully exhausted at 4.20%; Bidder 4 bid 4.25%, which is above the stop-out yield and receives zero allocation."
+    }
+  },
+  {
+    "id": "L1-FI-018",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Fixed-Income Markets: Issuance, Trading, and Funding",
+    "los": "Describe fixed-income trading and settlement",
+    "question": "Which of the following characteristics best describes the secondary market for most corporate and municipal bonds?",
+    "options": {
+      "A": "Continuous order-driven auctions on centralized public exchanges with tight bid-ask spreads.",
+      "B": "Over-the-counter (OTC) quote-driven dealer markets with principal trading and variable liquidity.",
+      "C": "Automated matching engines operating under strict T+0 instantaneous settlement."
+    },
+    "answer": "B",
+    "explanation": "Unlike major equity markets, the vast majority of fixed-income trading occurs over the counter (OTC) in quote-driven dealer markets. Dealers trade for their own accounts (as principals) rather than merely acting as brokers. They provide liquidity by committing capital and quoting bid and ask prices. Due to the high number of unique bond issues, secondary trading in most corporate and municipal bonds is infrequent, leading to wider bid-ask spreads and lower liquidity relative to equities.",
+    "distractor_analysis": {
+      "A": "Incorrect because order-driven centralized exchanges are typical of public equities and exchange-traded derivatives, not corporate bonds.",
+      "C": "Incorrect because standard bond settlement conventions are typically $T+1$ or $T+2$; instantaneous $T+0$ settlement is not standard practice."
+    }
+  },
+  {
+    "id": "L1-FI-019",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Fixed-Income Markets: Issuance, Trading, and Funding",
+    "los": "Describe fixed-income trading and settlement",
+    "question": "In government bond markets, an 'on-the-run' Treasury security typically trades at a lower yield than an otherwise identical 'off-the-run' Treasury security because the on-the-run security:",
+    "options": {
+      "A": "Possesses greater secondary market liquidity.",
+      "B": "Carries zero exposure to inflation risk.",
+      "C": "Has a significantly shorter remaining maturity."
+    },
+    "answer": "A",
+    "explanation": "On-the-run securities are the most recently auctioned sovereign benchmark bonds of a given maturity. They are heavily traded by primary dealers, repo counterparties, and institutional investors, giving them superior liquidity and narrower bid-ask spreads. Investors are willing to pay a premium (resulting in a slightly lower yield) for this superior liquidity. Older issues with similar maturities are termed off-the-run and trade at a liquidity discount (higher yield).",
+    "distractor_analysis": {
+      "B": "Incorrect because on-the-run nominal Treasuries carry standard purchasing power and inflation risk.",
+      "C": "Incorrect because an on-the-run 10-year Treasury has a slightly longer (full 10 years) maturity than off-the-run bonds issued earlier."
+    }
+  },
+  {
+    "id": "L1-FI-020",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Fixed-Income Markets: Issuance, Trading, and Funding",
+    "los": "Describe sovereign, non-sovereign, and agency debt",
+    "question": "Which of the following bonds typically carries an explicit guarantee of repayment from the national government?",
+    "options": {
+      "A": "A general obligation municipal bond issued by a city government.",
+      "B": "A bond issued by a sovereign-guaranteed export-import bank.",
+      "C": "A commercial paper note issued by a state-owned industrial enterprise without statutory backing."
+    },
+    "answer": "B",
+    "explanation": "Certain government agency or quasi-government bonds, such as official export-import banks or multilateral development agencies, are backed by an explicit statutory sovereign guarantee. This means the national treasury is legally obligated to service the debt if the issuer defaults. General obligation municipal bonds (Option A) are backed solely by the local tax revenue of the city, not the national government. State-owned enterprises without explicit backing (Option C) carry only implicit support.",
+    "distractor_analysis": {
+      "A": "Incorrect because municipal GO bonds are backed by local municipal taxing authority, not the national government.",
+      "C": "Incorrect because state-owned enterprises without statutory guarantees have only implicit government support, not an explicit legal guarantee."
+    }
+  },
+  {
+    "id": "L1-FI-021",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Fixed-Income Markets: Issuance, Trading, and Funding",
+    "los": "Describe supranational debt securities",
+    "question": "Which of the following institutions is most accurately classified as an issuer of supranational bonds?",
+    "options": {
+      "A": "The Federal National Mortgage Association (Fannie Mae).",
+      "B": "The International Bank for Reconstruction and Development (World Bank).",
+      "C": "The Bank of England."
+    },
+    "answer": "B",
+    "explanation": "Supranational organizations are international entities established by multi-country treaties, such as the World Bank (IBRD), European Investment Bank (EIB), and Asian Development Bank (ADB). Bonds issued by these multilateral development institutions are supranational bonds, typically carrying high credit quality (AAA) and strong liquidity. Fannie Mae (Option A) is a US government-sponsored enterprise (agency). The Bank of England (Option C) is a central bank.",
+    "distractor_analysis": {
+      "A": "Incorrect because Fannie Mae is a national government-sponsored enterprise (GSE/agency), not an international supranational entity.",
+      "C": "Incorrect because the Bank of England is a national central bank representing a single sovereign jurisdiction."
+    }
+  },
+  {
+    "id": "L1-FI-022",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Fixed-Income Markets: Issuance, Trading, and Funding",
+    "los": "Describe corporate debt securities",
+    "question": "Commercial paper (CP) issuers typically maintain a backup line of credit with commercial banks primarily to mitigate:",
+    "options": {
+      "A": "Interest rate duration risk.",
+      "B": "Rollover (refinancing) risk.",
+      "C": "Foreign exchange translation risk."
+    },
+    "answer": "B",
+    "explanation": "Commercial paper is an unsecured, short-term promissory note issued by highly rated corporations, typically maturing within 1 to 270 days. Because issuers rely on continuously issuing new CP notes to pay off maturing notes (rolling over the debt), they face rollover risk if market liquidity abruptly freezes. Rating agencies therefore require CP issuers to maintain backup bank credit facilities (standby lines of credit) to guarantee repayment if rollover fails.",
+    "distractor_analysis": {
+      "A": "Incorrect because commercial paper has very short maturities, making interest rate duration risk negligible.",
+      "C": "Incorrect because backup lines of credit provide immediate domestic cash liquidity, not foreign exchange currency hedging."
+    }
+  },
+  {
+    "id": "L1-FI-023",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Fixed-Income Markets: Issuance, Trading, and Funding",
+    "los": "Describe corporate debt securities",
+    "question": "A key distinction between a Medium-Term Note (MTN) program and a standard underwritten corporate bond issue is that MTNs:",
+    "options": {
+      "A": "Are offered continuously through dealers over time in customized maturities and sizes.",
+      "B": "Must have an original maturity strictly between 5 and 10 years.",
+      "C": "Are exempt from all securities registration and credit rating requirements."
+    },
+    "answer": "A",
+    "explanation": "Under an MTN shelf registration program, issuers continuously offer debt securities through designated dealers with maturities ranging from months to decades. This allows the issuer to tailor maturities and coupon structures (including structured notes) to match investor demand on a reverse-inquiry basis. In contrast, standard corporate bonds are discrete, large one-off syndicated offerings.",
+    "distractor_analysis": {
+      "B": "Incorrect because despite the name 'medium-term', MTNs can have maturities ranging from 9 months to 30 years or more.",
+      "C": "Incorrect because MTNs require shelf registration and are subject to securities regulation and rating agency scrutiny."
+    }
+  },
+  {
+    "id": "L1-FI-024",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Fixed-Income Markets: Issuance, Trading, and Funding",
+    "los": "Describe short-term funding alternatives available to banks",
+    "question": "A financial instrument created when a commercial bank guarantees payment on a commercial invoice or international trade draft is known as a:",
+    "options": {
+      "A": "Negotiable certificate of deposit.",
+      "B": "Banker's acceptance.",
+      "C": "Syndicated revolving credit facility."
+    },
+    "answer": "B",
+    "explanation": "A banker's acceptance (BA) is a short-term promissory note representing a promised future payment by a bank, commonly used in international trade to finance import/export transactions. When the bank stamps 'accepted' on the trade draft, it becomes an unconditional liability of the bank and can be traded as a money market discount instrument.",
+    "distractor_analysis": {
+      "A": "Incorrect because a negotiable CD is a deposit receipt issued by a bank to raise wholesale funding, not an international trade draft guarantee.",
+      "C": "Incorrect because a syndicated revolving facility is a committed credit line provided by a group of lenders to a corporate borrower."
+    }
+  },
+  {
+    "id": "L1-FI-025",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Fixed-Income Markets: Issuance, Trading, and Funding",
+    "los": "Describe repurchase agreements (repos) and their uses",
+    "question": "A securities dealer sells a government bond currently worth USD 10,000,000 to an institutional investor under a repurchase agreement with a 2.00% repo margin (haircut). The initial cash amount borrowed by the dealer is closest to:",
+    "options": {
+      "A": "USD 9,800,000.",
+      "B": "USD 10,000,000.",
+      "C": "USD 10,200,000."
+    },
+    "answer": "A",
+    "explanation": "The repo margin (or haircut) is the percentage difference between the market value of the collateral security and the cash amount loaned: $$\\text{Cash Loaned} = \\text{Collateral Value} \\times (1 - \\text{Haircut})$$ $$\\text{Cash Loaned} = \\text{USD } 10{,}000{,}000 \\times (1 - 0.02) = \\text{USD } 9{,}800{,}000$$ This protective cushion shields the cash lender against adverse price movements in the collateral security.",
+    "distractor_analysis": {
+      "B": "Incorrect because USD 10,000,000 provides zero margin (0% haircut) to protect the lender against collateral price drops.",
+      "C": "Incorrect because USD 10,200,000 mistakenly adds the haircut to the collateral value ($10{,}000{,}000 \\times 1.02$)."
+    }
+  },
+  {
+    "id": "L1-FI-026",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Fixed-Income Markets: Issuance, Trading, and Funding",
+    "los": "Describe repurchase agreements (repos) and their uses",
+    "question": "Which of the following factors will most likely result in a lower repurchase agreement (repo) rate for a borrower of funds?",
+    "options": {
+      "A": "The underlying collateral consists of low-liquidity corporate junk bonds.",
+      "B": "The underlying collateral is an on-the-run Treasury note that is in extremely high demand ('on special').",
+      "C": "The term of the repo agreement is extended from overnight to 90 days during a period of rising interest rates."
+    },
+    "answer": "B",
+    "explanation": "When a specific security is in exceptionally high demand in the borrowing/financing market (described as trading 'on special'), lenders of cash are willing to accept an unusually low repo rate to obtain that specific collateral security. High-quality sovereign collateral already lowers repo rates relative to riskier collateral, and 'special' status lowers it even further.",
+    "distractor_analysis": {
+      "A": "Incorrect because lower-quality, illiquid collateral increases credit and liquidity risk for the cash lender, driving the repo rate higher.",
+      "C": "Incorrect because longer terms generally carry higher repo rates due to greater term premium and rate uncertainty."
+    }
+  },
+  {
+    "id": "L1-FI-027",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Introduction to Fixed-Income Valuation",
+    "los": "Calculate a bond's price given a market discount rate",
+    "question": "A 3-year corporate bond has a par value of USD 1,000 and pays an annual coupon of 6.00%. If the market discount rate (YTM) is 5.00%, the price of the bond is closest to:",
+    "options": {
+      "A": "USD 973.27.",
+      "B": "USD 1,000.00.",
+      "C": "USD 1,027.23."
+    },
+    "answer": "C",
+    "explanation": "The price of an annual-pay bond is the present value of its future cash flows discounted at the market discount rate $y = 5.00\\%$: $$P = \\sum_{t=1}^{n} \\frac{C}{(1+y)^t} + \\frac{M}{(1+y)^n}$$ With $C = \\text{USD } 60$, $M = \\text{USD } 1{,}000$, and $n = 3$: $$P = \\frac{60}{1.05^1} + \\frac{60}{1.05^2} + \\frac{1{,}060}{1.05^3}$$ $$P = 57.1429 + 54.4218 + 915.6672 = \\text{USD } 1{,}027.23$$ Because the coupon rate (6.00%) exceeds the market discount rate (5.00%), the bond trades at a premium.",
+    "distractor_analysis": {
+      "A": "Incorrect because USD 973.27 discounts cash flows at 7.00% instead of 5.00% (discount instead of premium).",
+      "B": "Incorrect because USD 1,000.00 is par value, which only occurs when coupon rate equals the market discount rate."
+    }
+  },
+  {
+    "id": "L1-FI-028",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Introduction to Fixed-Income Valuation",
+    "los": "Calculate a bond's price given a market discount rate",
+    "question": "A 5-year, 7.00% semi-annual coupon bond has a par value of USD 1,000 and a yield-to-maturity of 8.00% on a semi-annual bond basis. The price of the bond per USD 100 of par value is closest to:",
+    "options": {
+      "A": "95.94.",
+      "B": "96.01.",
+      "C": "104.16."
+    },
+    "answer": "A",
+    "explanation": "For a semi-annual bond, the number of periods is $n = 5 \\times 2 = 10$, the periodic coupon is $PMT = \\frac{7.00}{2} = 3.50$, and the periodic discount rate is $r = \\frac{8.00\\%}{2} = 4.00\\%$: $$PV = \\sum_{t=1}^{10} \\frac{3.50}{(1.04)^t} + \\frac{100}{(1.04)^{10}}$$ Using the annuity formula: $$PV = 3.50 \\times \\left[ \\frac{1 - (1.04)^{-10}}{0.04} \\right] + \\frac{100}{(1.04)^{10}}$$ $$PV = 3.50 \\times 8.11090 + 100 \\times 0.67556 = 28.3881 + 67.5564 = 95.9445 \\approx 95.94$$",
+    "distractor_analysis": {
+      "B": "Incorrect because 96.01 uses annual compounding ($N=5, I/Y=8\\%, PMT=7, FV=100$) instead of semi-annual compounding.",
+      "C": "Incorrect because 104.16 inverts the relationship, pricing the bond as if YTM were 6.00% rather than 8.00%."
+    }
+  },
+  {
+    "id": "L1-FI-029",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Introduction to Fixed-Income Valuation",
+    "los": "Describe matrix pricing",
+    "question": "An analyst uses matrix pricing to estimate the required yield on a newly issued, illiquid 4-year corporate bond rated A. The market yields on actively traded comparable A-rated corporate bonds are:\n- 3-year bond: 4.80%\n- 6-year bond: 5.40%\nUsing linear interpolation, the estimated required yield for the 4-year bond is closest to:",
+    "options": {
+      "A": "4.95%.",
+      "B": "5.00%.",
+      "C": "5.10%."
+    },
+    "answer": "B",
+    "explanation": "Matrix pricing estimates the yield of an illiquid bond by interpolating between yields of traded bonds with similar credit ratings and adjacent maturities: $$\\text{Yield}_4 = \\text{Yield}_3 + \\left( \\frac{4 - 3}{6 - 3} \\right) \\times (\\text{Yield}_6 - \\text{Yield}_3)$$ $$\\text{Yield}_4 = 4.80\\% + \\left( \\frac{1}{3} \\right) \\times (5.40\\% - 4.80\\%) = 4.80\\% + 0.20\\% = 5.00\\%$$",
+    "distractor_analysis": {
+      "A": "Incorrect because 4.95% incorrectly applies a 1/4 weighting instead of 1/3 weighting ($4.80\\% + 0.25 \\times 0.60\\% = 4.95\\%$).",
+      "C": "Incorrect because 5.10% is the simple midpoint between 4.80% and 5.40%, corresponding to a 4.5-year bond rather than a 4-year bond."
+    }
+  },
+  {
+    "id": "L1-FI-030",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Introduction to Fixed-Income Valuation",
+    "los": "Calculate and interpret yield and price measures for money market instruments",
+    "question": "A 90-day US Treasury bill with a face value of USD 100,000 is quoted at a bank discount yield of 4.00%. The purchase price of the Treasury bill is closest to:",
+    "options": {
+      "A": "USD 96,000.",
+      "B": "USD 99,000.",
+      "C": "USD 99,014."
+    },
+    "answer": "B",
+    "explanation": "The bank discount yield ($r_{\\text{BD}}$) formula is based on face value and a 360-day year: $$r_{\\text{BD}} = \\frac{D}{F} \\times \\frac{360}{t}$$ Solving for the dollar discount $D$: $$D = F \\times r_{\\text{BD}} \\times \\frac{t}{360} = \\text{USD } 100{,}000 \\times 0.0400 \\times \\frac{90}{360} = \\text{USD } 1{,}000$$ The purchase price $P$ is: $$P = F - D = \\text{USD } 100{,}000 - \\text{USD } 1{,}000 = \\text{USD } 99{,}000$$",
+    "distractor_analysis": {
+      "A": "Incorrect because USD 96,000 calculates the discount without adjusting for the 90-day fraction ($100{,}000 \\times 0.04 = 4{,}000$).",
+      "C": "Incorrect because USD 99,014 uses a 365-day year convention ($100{,}000 - 100{,}000 \\times 0.04 \\times 90/365$) instead of the standard 360-day bank discount convention."
+    }
+  },
+  {
+    "id": "L1-FI-031",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Introduction to Fixed-Income Valuation",
+    "los": "Calculate and interpret yield and price measures for money market instruments",
+    "question": "A 180-day commercial paper note with a face value of USD 1,000,000 is purchased for USD 980,000. Assuming a 360-day year, the money market yield (CD-equivalent add-on yield) is closest to:",
+    "options": {
+      "A": "4.00%.",
+      "B": "4.08%.",
+      "C": "4.14%."
+    },
+    "answer": "B",
+    "explanation": "The money market yield (also known as CD equivalent yield) is an annualized add-on rate based on purchase price and a 360-day year: $$r_{\\text{MM}} = \\left( \\frac{F - P}{P} \\right) \\times \\frac{360}{t}$$ $$r_{\\text{MM}} = \\left( \\frac{\\text{USD } 1{,}000{,}000 - \\text{USD } 980{,}000}{\\text{USD } 980{,}000} \\right) \\times \\frac{360}{180} = \\left( \\frac{20{,}000}{980{,}000} \\right) \\times 2 = 0.020408 \\times 2 = 4.0816\\% \\approx 4.08\\%$$",
+    "distractor_analysis": {
+      "A": "Incorrect because 4.00% is the bank discount yield calculated using face value as the denominator: $(20{,}000 / 1{,}000{,}000) \\times (360 / 180) = 4.00\\%$.",
+      "C": "Incorrect because 4.14% is the bond equivalent yield (BEY) which annualizes using a 365-day year: $(20{,}000 / 980{,}000) \\times (365 / 180) = 4.138\\% \\approx 4.14\\%$."
+    }
+  },
+  {
+    "id": "L1-FI-032",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Introduction to Fixed-Income Valuation",
+    "los": "Calculate accrued interest, full price, and clean price",
+    "question": "A corporate bond with a par value of USD 1,000 pays a 6.00% semi-annual coupon on 30 June and 31 December. An investor buys the bond for settlement on 30 September at a flat (clean) price of USD 990.00. Assuming the 30/360 day-count convention, the accrued interest and the full (dirty) price are closest to:",
+    "options": {
+      "A": "Accrued interest = USD 15.00; Full price = USD 1,005.00.",
+      "B": "Accrued interest = USD 15.00; Full price = USD 975.00.",
+      "C": "Accrued interest = USD 30.00; Full price = USD 1,020.00."
+    },
+    "answer": "A",
+    "explanation": "Under the 30/360 convention, there are 30 days in each month. From 30 June to 30 September is 3 full months: $$\\text{Days elapsed} = 3 \\times 30 = 90 \\text{ days}$$ The semi-annual period contains 180 days. The semi-annual coupon payment is: $$PMT = \\frac{6.00\\% \\times \\text{USD } 1{,}000}{2} = \\text{USD } 30.00$$ The accrued interest is: $$AI = \\frac{t}{T} \\times PMT = \\frac{90}{180} \\times \\text{USD } 30.00 = \\text{USD } 15.00$$ The full (dirty) price paid by the buyer is: $$\\text{Full Price} = \\text{Flat Price} + AI = \\text{USD } 990.00 + \\text{USD } 15.00 = \\text{USD } 1{,}005.00$$",
+    "distractor_analysis": {
+      "B": "Incorrect because accrued interest is added to the flat price to determine the full price, not subtracted ($990 - 15 = 975$).",
+      "C": "Incorrect because USD 30.00 represents the full 6-month semi-annual coupon rather than the 3-month accrued interest portion."
+    }
+  },
+  {
+    "id": "L1-FI-033",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Introduction to Fixed-Income Valuation",
+    "los": "Describe the relationship among spot rates, forward rates, and yield to maturity",
+    "question": "A bond pays annual coupons and has an annual yield-to-maturity of 6.09% (periodicity $m=1$). Its annualized yield-to-maturity on a semi-annual bond basis (periodicity $m=2$) is closest to:",
+    "options": {
+      "A": "5.91%.",
+      "B": "6.00%.",
+      "C": "6.18%."
+    },
+    "answer": "B",
+    "explanation": "To convert an annual yield $APR_1 = 6.09\\%$ to an equivalent semi-annual basis $APR_2$, equate their compounding factors: $$\\left(1 + \\frac{APR_2}{2}\\right)^2 = (1 + APR_1)^1$$ $$\\left(1 + \\frac{APR_2}{2}\\right)^2 = 1.0609$$ $$1 + \\frac{APR_2}{2} = \\sqrt{1.0609} = 1.03$$ $$\\frac{APR_2}{2} = 0.03 \\implies APR_2 = 2 \\times 0.03 = 0.0600 = 6.00\\%$$",
+    "distractor_analysis": {
+      "A": "Incorrect due to misapplying compounding formulas or dividing $6.09\\%$ incorrectly.",
+      "C": "Incorrect because converting from an annual rate to a higher frequency rate must result in a lower nominal rate ($6.00\\% < 6.09\\%$), not a higher rate."
+    }
+  },
+  {
+    "id": "L1-FI-034",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Introduction to Fixed-Income Valuation",
+    "los": "Define and compare yield measures for fixed-rate bonds",
+    "question": "A callable bond trading at a premium above par value can be called by the issuer in 3 years at 102 or in 5 years at par (100). The bond matures in 10 years. An investor calculating the bond's Yield-to-Worst (YTW) will select the:",
+    "options": {
+      "A": "Highest calculated yield among yield-to-maturity and all possible yields-to-call.",
+      "B": "Lowest calculated yield among yield-to-maturity and all possible yields-to-call.",
+      "C": "Weighted average of yield-to-maturity and the respective yields-to-call."
+    },
+    "answer": "B",
+    "explanation": "Yield-to-Worst (YTW) is the most conservative yield metric for a callable bond. An analyst calculates the yield to maturity (YTM) as well as the yield to call (YTC) for every contractual call date. The minimum (lowest) of all these potential yields represents the Yield-to-Worst, reflecting the worst-case return scenario assuming the issuer behaves rationally.",
+    "distractor_analysis": {
+      "A": "Incorrect because Yield-to-Worst selects the lowest (most conservative) yield, not the highest.",
+      "C": "Incorrect because YTW is a discrete minimum selection, not a probability-weighted average."
+    }
+  },
+  {
+    "id": "L1-FI-035",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Introduction to Fixed-Income Valuation",
+    "los": "Calculate and interpret the discount margin for a floating-rate note",
+    "question": "A floating-rate note (FRN) pays a quarterly coupon of 90-day Euribor plus a quoted margin (QM) of 75 bps. If the market's required margin (discount margin, DM) for the issuer's credit risk rises to 100 bps on a reset date, the FRN will trade at:",
+    "options": {
+      "A": "A discount to par value.",
+      "B": "Par value.",
+      "C": "A premium to par value."
+    },
+    "answer": "A",
+    "explanation": "On a coupon reset date, an FRN trades at par value if and only if the quoted margin equals the discount margin ($QM = DM$). When the discount margin required by investors exceeds the quoted margin offered by the note ($DM > QM$), the coupon payments are insufficient relative to market requirements, causing the FRN to trade at a discount to par value. Conversely, if $QM > DM$, it trades at a premium.",
+    "distractor_analysis": {
+      "B": "Incorrect because an FRN resets to par on reset dates only if $QM = DM$; here $QM = 75$ bps while $DM = 100$ bps.",
+      "C": "Incorrect because the note would trade at a premium only if the quoted margin were higher than the required discount margin ($QM > DM$)."
+    }
+  },
+  {
+    "id": "L1-FI-036",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Introduction to Fixed-Income Valuation",
+    "los": "Calculate the arbitrage-free value of an option-free bond",
+    "question": "The annualized spot rates for zero-coupon government bonds are:\n- 1-year: $S_1 = 3.00\\%$\n- 2-year: $S_2 = 4.00\\%$\n- 3-year: $S_3 = 5.00\\%$\nA 3-year, 4.00% annual coupon government bond with par value USD 1,000 has an arbitrage-free price closest to:",
+    "options": {
+      "A": "USD 974.19.",
+      "B": "USD 976.22.",
+      "C": "USD 1,000.00."
+    },
+    "answer": "A",
+    "explanation": "Under arbitrage-free valuation, each individual cash flow is discounted at the corresponding spot rate for that specific maturity: $$P = \\frac{C}{1 + S_1} + \\frac{C}{(1 + S_2)^2} + \\frac{C + M}{(1 + S_3)^3}$$ For $C = \\text{USD } 40$ and $M = \\text{USD } 1{,}000$: $$P = \\frac{40}{1.03^1} + \\frac{40}{1.04^2} + \\frac{1{,}040}{1.05^3}$$ $$P = 38.8350 + 36.9822 + 898.3734 = \\text{USD } 974.1906 \\approx \\text{USD } 974.19$$",
+    "distractor_analysis": {
+      "B": "Incorrect due to rounding errors or discounting cash flows using an average spot rate of 4.00% ($40/1.04 + 40/1.04^2 + 1040/1.04^3 = 1000$).",
+      "C": "Incorrect because USD 1,000.00 assumes the yield equals the 4.00% coupon rate across all periods, ignoring the upward sloping spot curve."
+    }
+  },
+  {
+    "id": "L1-FI-037",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Introduction to Fixed-Income Valuation",
+    "los": "Calculate and interpret forward rates from spot rates",
+    "question": "Given 1-year spot rate $S_1 = 3.00\\%$ and 2-year spot rate $S_2 = 4.50\\%$, the 1-year implied forward rate one year from now, $f_{1,1}$ (or 1y1y), is closest to:",
+    "options": {
+      "A": "5.25%.",
+      "B": "6.02%.",
+      "C": "6.75%."
+    },
+    "answer": "B",
+    "explanation": "The relationship between spot rates and forward rates is governed by the no-arbitrage condition: $$(1 + S_2)^2 = (1 + S_1)^1 \\times (1 + f_{1,1})^1$$ Substituting the given spot rates: $$(1.045)^2 = (1.03) \\times (1 + f_{1,1})$$ $$1.092025 = 1.03 \\times (1 + f_{1,1})$$ $$1 + f_{1,1} = \\frac{1.092025}{1.03} = 1.060218$$ $$f_{1,1} = 6.0218\\% \\approx 6.02\\%$$",
+    "distractor_analysis": {
+      "A": "Incorrect because 5.25% incorrectly takes $(2 \\times 4.50\\% - 3.00\\%) / 1.5$ or simple linear subtraction without compounding.",
+      "C": "Incorrect because 6.75% incorrectly computes $2 \\times S_2 - S_1 / 2$ or similar linear approximation error."
+    }
+  },
+  {
+    "id": "L1-FI-038",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Introduction to Fixed-Income Valuation",
+    "los": "Calculate and interpret forward rates from spot rates",
+    "question": "A 2-year annual coupon bond pays a 5.00% coupon on a USD 1,000 par value. The current 1-year spot rate is $f_{0,1} = S_1 = 3.00\\%$, and the 1-year forward rate starting in Year 1 is $f_{1,1} = 5.00\\%$. The value of the bond using forward rates is closest to:",
+    "options": {
+      "A": "USD 990.48.",
+      "B": "USD 1,019.42.",
+      "C": "USD 1,038.83."
+    },
+    "answer": "B",
+    "explanation": "A bond can be valued by discounting each cash flow by the product of forward rates: $$P = \\frac{C}{1 + f_{0,1}} + \\frac{C + M}{(1 + f_{0,1})(1 + f_{1,1})}$$ Here $C = \\text{USD } 50$ and $M = \\text{USD } 1{,}000$: $$P = \\frac{50}{1.03} + \\frac{1{,}050}{(1.03)(1.05)}$$ $$P = 48.5437 + \\frac{1{,}050}{1.0815} = 48.5437 + 970.8738 = \\text{USD } 1{,}019.42$$ Thus, the value is closest to USD 1,019.42.",
+    "distractor_analysis": {
+      "A": "Incorrect because USD 990.48 discounts both periods at a higher rate (e.g., 5.50%).",
+      "C": "Incorrect because USD 1,038.83 double counts the benefit of lower early forward rates."
+    }
+  },
+  {
+    "id": "L1-FI-039",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Introduction to Fixed-Income Valuation",
+    "los": "Calculate and interpret yield spread measures",
+    "question": "A 5-year corporate bond yields 5.75%. The yield on a 5-year benchmark government bond is 4.15%, and the 5-year swap rate is 4.35%. The corporate bond's G-spread and I-spread are closest to:",
+    "options": {
+      "A": "G-spread = 140 bps; I-spread = 160 bps.",
+      "B": "G-spread = 160 bps; I-spread = 140 bps.",
+      "C": "G-spread = 160 bps; I-spread = 20 bps."
+    },
+    "answer": "B",
+    "explanation": "The G-spread is the yield spread over an interpolated government benchmark bond: $$\\text{G-spread} = \\text{Corporate Yield} - \\text{Government Yield} = 5.75\\% - 4.15\\% = 1.60\\% = 160 \\text{ bps}$$ The I-spread (interpolated spread) is the yield spread over the benchmark swap rate (such as the Euribor or SOFR interest rate swap curve): $$\\text{I-spread} = \\text{Corporate Yield} - \\text{Swap Rate} = 5.75\\% - 4.35\\% = 1.40\\% = 140 \\text{ bps}$$",
+    "distractor_analysis": {
+      "A": "Incorrect because it transposes the definitions of G-spread and I-spread.",
+      "C": "Incorrect because 20 bps is the swap spread (Swap Rate - Government Yield = $4.35\\% - 4.15\\% = 0.20\\%$), not the corporate bond's I-spread."
+    }
+  },
+  {
+    "id": "L1-FI-040",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Introduction to Fixed-Income Valuation",
+    "los": "Calculate and interpret yield spread measures",
+    "question": "The zero-volatility spread (Z-spread) of a bond is best defined as the constant basis point spread that must be added to:",
+    "options": {
+      "A": "The benchmark government bond's yield-to-maturity to match the bond's market price.",
+      "B": "Each zero-coupon spot rate along the benchmark yield curve to equate the present value of the bond's cash flows to its market price.",
+      "C": "The bond's coupon rate to equate its current yield to its yield-to-maturity."
+    },
+    "answer": "B",
+    "explanation": "The Z-spread (zero-volatility spread) is the single, constant credit/liquidity spread added to each spot rate along the entire default-free zero-coupon yield curve such that the discounted cash flows of the bond equal its current market price: $$P = \\sum_{t=1}^{n} \\frac{C_t}{(1 + S_t + Z)^t} + \\frac{M}{(1 + S_n + Z)^n}$$ It assumes zero interest rate volatility (i.e., that the spot curve is non-stochastic).",
+    "distractor_analysis": {
+      "A": "Incorrect because adding a spread to a single sovereign YTM defines the nominal G-spread, not the Z-spread.",
+      "C": "Incorrect because adding a spread to the coupon rate does not discount future cash flows against the spot curve."
+    }
+  },
+  {
+    "id": "L1-FI-041",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Introduction to Fixed-Income Valuation",
+    "los": "Calculate and interpret yield spread measures",
+    "question": "A callable corporate bond has a Z-spread of 185 bps. An analyst models the embedded call option and determines the option cost is 45 bps. The bond's Option-Adjusted Spread (OAS) is closest to:",
+    "options": {
+      "A": "140 bps.",
+      "B": "185 bps.",
+      "C": "230 bps."
+    },
+    "answer": "A",
+    "explanation": "For a callable bond, the embedded call option belongs to the issuer and disadvantages the investor, requiring extra yield compensation. Thus: $$\\text{Z-spread} = \\text{OAS} + \\text{Option Cost}$$ Solving for the Option-Adjusted Spread (OAS): $$\\text{OAS} = \\text{Z-spread} - \\text{Option Cost} = 185 \\text{ bps} - 45 \\text{ bps} = 140 \\text{ bps}$$ The OAS isolates the pure credit and liquidity spread after stripping out the option risk.",
+    "distractor_analysis": {
+      "B": "Incorrect because 185 bps represents the unadjusted Z-spread, which still includes the 45 bps premium for the embedded call option.",
+      "C": "Incorrect because 230 bps mistakenly adds the option cost to the Z-spread ($185 + 45 = 230$), which would be the formula for a putable bond, not a callable bond."
+    }
+  },
+  {
+    "id": "L1-FI-042",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Introduction to Fixed-Income Valuation",
+    "los": "Calculate and interpret yield spread measures",
+    "question": "For a putable corporate bond, which relationship between the zero-volatility spread (Z-spread) and the option-adjusted spread (OAS) is most accurate?",
+    "options": {
+      "A": "$\\text{OAS} < \\text{Z-spread}$.",
+      "B": "$\\text{OAS} = \\text{Z-spread}$.",
+      "C": "$\\text{OAS} > \\text{Z-spread}$."
+    },
+    "answer": "C",
+    "explanation": "For a putable bond, the embedded option benefits the investor. Because the investor receives downside protection from the put option, they accept a lower total yield spread (lower Z-spread). Stripping away the value of the put option reveals that the underlying credit/liquidity risk is wider than the observed Z-spread: $$\\text{Z-spread} = \\text{OAS} - \\text{Option Cost} \\implies \\text{OAS} = \\text{Z-spread} + \\text{Option Cost}$$ Since $\\text{Option Cost} > 0$, it follows that $\\text{OAS} > \\text{Z-spread}$.",
+    "distractor_analysis": {
+      "A": "Incorrect because $\\text{OAS} < \\text{Z-spread}$ applies to callable bonds, where the embedded option benefits the issuer.",
+      "B": "Incorrect because $\\text{OAS} = \\text{Z-spread}$ holds only for straight (option-free) bonds where the option cost is zero."
+    }
+  },
+  {
+    "id": "L1-FI-043",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Introduction to Fixed-Income Valuation",
+    "los": "Describe bonds with embedded options",
+    "question": "A 5-year corporate bond is callable at par after 2 years. If an otherwise identical straight bond is valued at USD 104.50 and the embedded call option is valued at USD 2.25, the theoretical market value of the callable bond is closest to:",
+    "options": {
+      "A": "USD 102.25.",
+      "B": "USD 104.50.",
+      "C": "USD 106.75."
+    },
+    "answer": "A",
+    "explanation": "Because the issuer holds the option to call back the bond, the value of the callable bond to the investor is reduced by the value of the call option: $$\\text{Price}_{\\text{callable}} = \\text{Price}_{\\text{straight}} - \\text{Value}_{\\text{call}}$$ $$\\text{Price}_{\\text{callable}} = \\text{USD } 104.50 - \\text{USD } 2.25 = \\text{USD } 102.25$$",
+    "distractor_analysis": {
+      "B": "Incorrect because USD 104.50 is the price of the straight bond, ignoring the value of the embedded call option.",
+      "C": "Incorrect because USD 106.75 erroneously adds the call option value ($104.50 + 2.25$), which would be the valuation formula for a putable bond."
+    }
+  },
+  {
+    "id": "L1-FI-044",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Introduction to Fixed-Income Valuation",
+    "los": "Describe bonds with embedded options",
+    "question": "An investor holds a 7-year putable bond with a put option exercisable at par in 3 years. If the value of an otherwise identical option-free straight bond is USD 96.00 and the embedded put option is valued at USD 3.50, the theoretical market value of the putable bond is closest to:",
+    "options": {
+      "A": "USD 92.50.",
+      "B": "USD 96.00.",
+      "C": "USD 99.50."
+    },
+    "answer": "C",
+    "explanation": "Because the embedded put option belongs to the investor, it enhances the bond's value relative to a straight bond: $$\\text{Price}_{\\text{putable}} = \\text{Price}_{\\text{straight}} + \\text{Value}_{\\text{put}}$$ $$\\text{Price}_{\\text{putable}} = \\text{USD } 96.00 + \\text{USD } 3.50 = \\text{USD } 99.50$$",
+    "distractor_analysis": {
+      "A": "Incorrect because USD 92.50 erroneously subtracts the put option value from the straight bond ($96.00 - 3.50 = 92.50$).",
+      "B": "Incorrect because USD 96.00 ignores the value of the embedded put option."
+    }
+  },
+  {
+    "id": "L1-FI-045",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Introduction to Asset-Backed Securities",
+    "los": "Explain benefits of securitization for the financial system and alternative structures",
+    "question": "In a typical securitization transaction, transferring loans from the originating bank to a Special Purpose Entity (SPE) achieves which of the following primary legal objectives?",
+    "options": {
+      "A": "It eliminates the need for credit rating agencies to assess the transaction.",
+      "B": "It establishes bankruptcy remoteness, isolating the collateral assets from the originator's financial distress.",
+      "C": "It removes the requirement to pay loan servicing and administrative fees."
+    },
+    "answer": "B",
+    "explanation": "The creation of an SPE (or SPV) achieves bankruptcy remoteness. When the originator sells loans to the SPE via a legally valid 'true sale', the assets are separated from the originator's balance sheet. If the originator enters bankruptcy or liquidation, creditors of the originator have no claim against the assets held by the SPE, allowing the issued securities to achieve higher credit ratings than the originator itself.",
+    "distractor_analysis": {
+      "A": "Incorrect because securitizations heavily rely on credit rating agencies to evaluate credit enhancements and assign tranche ratings.",
+      "C": "Incorrect because the servicer must still be compensated for collecting payments and administering the loans."
+    }
+  },
+  {
+    "id": "L1-FI-046",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Introduction to Asset-Backed Securities",
+    "los": "Describe types and characteristics of residential mortgage loans",
+    "question": "A homebuyer purchases a residential property appraised at USD 500,000 using a USD 100,000 cash down payment and taking out a USD 400,000 mortgage loan. The loan-to-value (LTV) ratio of this mortgage is closest to:",
+    "options": {
+      "A": "20.0%.",
+      "B": "25.0%.",
+      "C": "80.0%."
+    },
+    "answer": "C",
+    "explanation": "The loan-to-value (LTV) ratio measures the amount of the loan relative to the appraised value of the underlying collateral property: $$\\text{LTV} = \\frac{\\text{Loan Amount}}{\\text{Appraised Property Value}} = \\frac{\\text{USD } 400{,}000}{\\text{USD } 500{,}000} = 80.0\\%$$ A lower LTV ratio indicates greater homeowner equity and lower credit risk for the mortgage lender.",
+    "distractor_analysis": {
+      "A": "Incorrect because 20.0% is the down payment percentage ($100{,}000 / 500{,}000 = 0.20$), which equals $1 - \\text{LTV}$.",
+      "B": "Incorrect because 25.0% calculates the down payment relative to the loan amount ($100{,}000 / 400{,}000 = 0.25$)."
+    }
+  },
+  {
+    "id": "L1-FI-047",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Introduction to Asset-Backed Securities",
+    "los": "Describe characteristics and risks of mortgage-backed securities",
+    "question": "In an agency residential mortgage pass-through security, the pass-through coupon rate paid to investors is strictly less than the weighted average coupon (WAC) of the underlying mortgage pool because of:",
+    "options": {
+      "A": "Servicing, guarantee, and administrative fees deducted from cash flows.",
+      "B": "Scheduled principal prepayments retained by the government sponsor.",
+      "C": "Subordination losses absorbed by the senior pass-through tranche."
+    },
+    "answer": "A",
+    "explanation": "The pass-through rate (net interest rate received by investors) is lower than the mortgage coupon rate (WAC paid by homeowners) because servicing fees (paid to the loan servicer) and guarantee fees (paid to the agency guarantor like Fannie Mae or Freddie Mac) are subtracted from the gross interest collections before funds are distributed to investors.",
+    "distractor_analysis": {
+      "B": "Incorrect because all scheduled principal and prepayments are passed through to the investors, not retained by the agency.",
+      "C": "Incorrect because agency mortgage pass-through securities do not use subordination; they carry credit guarantees from the sponsoring agency."
+    }
+  },
+  {
+    "id": "L1-FI-048",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Introduction to Asset-Backed Securities",
+    "los": "Describe characteristics and risks of mortgage-backed securities",
+    "question": "When market mortgage rates decline sharply, holders of fixed-rate mortgage pass-through securities are most exposed to:",
+    "options": {
+      "A": "Extension risk.",
+      "B": "Contraction risk.",
+      "C": "Credit default risk."
+    },
+    "answer": "B",
+    "explanation": "When interest rates decline, homeowners have an economic incentive to refinance their mortgages at lower rates, resulting in a surge in prepayments. This shortens the effective life of the MBS, forcing investors to receive their principal back earlier than anticipated and reinvest it at prevailing lower market yields. This form of prepayment risk is termed contraction risk. Extension risk, conversely, occurs when interest rates rise and prepayments slow down.",
+    "distractor_analysis": {
+      "A": "Incorrect because extension risk occurs when interest rates rise and mortgage prepayments decelerate, extending bond life.",
+      "C": "Incorrect because agency pass-throughs carry negligible default risk due to explicit or implicit government guarantees."
+    }
+  },
+  {
+    "id": "L1-FI-049",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Introduction to Asset-Backed Securities",
+    "los": "Describe characteristics and risks of mortgage-backed securities",
+    "question": "An MBS collateral pool is projected to prepay at 150% PSA. If the standard 100% PSA benchmark specifies a conditional prepayment rate (CPR) of 4.00% at month 20, the projected CPR under 150% PSA for month 20 is closest to:",
+    "options": {
+      "A": "2.67%.",
+      "B": "4.00%.",
+      "C": "6.00%."
+    },
+    "answer": "C",
+    "explanation": "The Public Securities Association (PSA) benchmark scales the standard CPR curve proportionally: $$\\text{Projected CPR} = \\text{PSA Multiplier} \\times \\text{Benchmark CPR}$$ For 150% PSA: $$\\text{Projected CPR} = 1.50 \\times 4.00\\% = 6.00\\%$$ A PSA speed above 100% indicates prepayments faster than the historical baseline.",
+    "distractor_analysis": {
+      "A": "Incorrect because 2.67% divides the benchmark CPR by 1.50 ($4.00\\% / 1.50 = 2.67\\%$) instead of multiplying.",
+      "B": "Incorrect because 4.00% represents the baseline 100% PSA speed without scaling."
+    }
+  },
+  {
+    "id": "L1-FI-050",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Introduction to Asset-Backed Securities",
+    "los": "Describe characteristics and risks of collateralized mortgage obligations",
+    "question": "In a sequential-pay Collateralized Mortgage Obligation (CMO) with tranches A, B, and C, all principal payments (scheduled principal and prepayments) are initially directed entirely to:",
+    "options": {
+      "A": "Tranche A until it is completely retired.",
+      "B": "Tranches A, B, and C pro-rata according to their initial par values.",
+      "C": "Tranche C to insulate the senior tranches from prepayment risk."
+    },
+    "answer": "A",
+    "explanation": "In a sequential-pay CMO structure, tranches are retired in sequential order. All tranches receive interest periodically based on their outstanding principal balances, but all principal cash flows (both scheduled repayments and prepayments) are directed exclusively to the shortest tranche (Tranche A) until it is fully paid off. Only then does Tranche B begin receiving principal, followed by Tranche C. This structure redistributes contraction risk primarily to Tranche A and extension risk primarily to Tranche C.",
+    "distractor_analysis": {
+      "B": "Incorrect because pro-rata distribution describes a plain pass-through structure, not a sequential-pay CMO.",
+      "C": "Incorrect because Tranche C is the longest tranche and receives principal only after Tranches A and B have been retired."
+    }
+  },
+  {
+    "id": "L1-FI-051",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Introduction to Asset-Backed Securities",
+    "los": "Describe characteristics and risks of collateralized mortgage obligations",
+    "question": "In a CMO structure featuring Planned Amortization Class (PAC) tranches and support (companion) tranches, the support tranches protect the PAC tranches from prepayment risk by:",
+    "options": {
+      "A": "Absorbing excess prepayments when rates fall and forgoing principal when rates rise, as long as prepayments remain within the PAC collar.",
+      "B": "Guaranteeing credit default losses through third-party letters of credit.",
+      "C": "Receiving all interest payments before any interest is distributed to the PAC tranches."
+    },
+    "answer": "A",
+    "explanation": "PAC tranches offer predictable principal repayment schedules as long as actual prepayment speeds remain within a pre-specified initial collar (e.g., 100% to 250% PSA). The support (companion) tranches provide this stability by acting as shock absorbers: if prepayments accelerate, the support tranches absorb the extra principal (protecting PAC against contraction risk); if prepayments slow down, principal payments to support tranches are deferred to satisfy the PAC schedule (protecting PAC against extension risk).",
+    "distractor_analysis": {
+      "B": "Incorrect because support tranches redistribute prepayment risk, not credit default protection via letters of credit.",
+      "C": "Incorrect because interest is paid concurrently to all outstanding tranches based on their respective coupon rates; companion tranches do not take priority over PAC interest."
+    }
+  },
+  {
+    "id": "L1-FI-052",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Introduction to Asset-Backed Securities",
+    "los": "Describe types and characteristics of non-mortgage asset-backed securities",
+    "question": "Which of the following methods of credit enhancement in a non-agency asset-backed security is classified as an external credit enhancement?",
+    "options": {
+      "A": "Subordination (credit tranching).",
+      "B": "Overcollateralization.",
+      "C": "A financial guarantee from a monoline bond insurer."
+    },
+    "answer": "C",
+    "explanation": "External credit enhancements rely on third-party financial institutions to guarantee or reimburse losses, such as monoline insurance wrap policies, letters of credit from commercial banks, or corporate parent guarantees. In contrast, subordination (senior/subordinated credit tranching), overcollateralization (pledging more assets than the debt issued), and excess spread (interest margin) are internal credit enhancements built into the cash flow structure itself.",
+    "distractor_analysis": {
+      "A": "Incorrect because subordination is an internal credit enhancement mechanism established via the structural waterfall.",
+      "B": "Incorrect because overcollateralization is an internal credit enhancement created by issuing debt with face value lower than the underlying collateral."
+    }
+  },
+  {
+    "id": "L1-FI-053",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Introduction to Asset-Backed Securities",
+    "los": "Describe characteristics and risks of commercial mortgage-backed securities",
+    "question": "A commercial real estate property generates an annual net operating income (NOI) of USD 1,800,000. The annual debt service on the underlying commercial mortgage is USD 1,200,000, and the current property valuation is USD 15,000,000 with an outstanding mortgage balance of USD 9,000,000. The Debt Service Coverage Ratio (DSCR) and Loan-to-Value (LTV) ratio are closest to:",
+    "options": {
+      "A": "DSCR = 1.20; LTV = 80.0%.",
+      "B": "DSCR = 1.50; LTV = 60.0%.",
+      "C": "DSCR = 1.50; LTV = 80.0%."
+    },
+    "answer": "B",
+    "explanation": "The Debt Service Coverage Ratio (DSCR) is defined as: $$\\text{DSCR} = \\frac{\\text{Net Operating Income}}{\\text{Annual Debt Service}} = \\frac{\\text{USD } 1{,}800{,}000}{\\text{USD } 1{,}200{,}000} = 1.50$$ The Loan-to-Value (LTV) ratio is defined as: $$\\text{LTV} = \\frac{\\text{Mortgage Balance}}{\\text{Property Value}} = \\frac{\\text{USD } 9{,}000{,}000}{\\text{USD } 15{,}000{,}000} = 60.0\\%$$ A DSCR $> 1.0$ indicates that property cash flows are sufficient to service the debt.",
+    "distractor_analysis": {
+      "A": "Incorrect because DSCR is 1.50, not 1.20, and LTV is 60%, not 80%.",
+      "C": "Incorrect because LTV is computed as $9{,}000{,}000 / 15{,}000{,}000 = 0.60$ (60%), not 80%."
+    }
+  },
+  {
+    "id": "L1-FI-054",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Introduction to Asset-Backed Securities",
+    "los": "Describe characteristics and risks of commercial mortgage-backed securities",
+    "question": "In commercial mortgage-backed securities (CMBS), which loan-level call protection mechanism requires the borrower to replace the mortgaged commercial property with a portfolio of sovereign government bonds replicating the remaining mortgage cash flows?",
+    "options": {
+      "A": "Defeasance.",
+      "B": "Prepayment penalty points.",
+      "C": "Yield maintenance."
+    },
+    "answer": "A",
+    "explanation": "Defeasance is a common loan-level call protection clause in commercial mortgages. Instead of prepaying cash to retire the loan, the borrower purchases and pledges a dedicated portfolio of default-free government securities (such as US Treasuries) whose cash flows exactly replicate the remaining principal and interest payments of the mortgage. This eliminates prepayment disruption and elevates the credit quality of the underlying collateral.",
+    "distractor_analysis": {
+      "B": "Incorrect because prepayment penalty points are pre-agreed percentage fees (e.g., 2% of prepaid balance) charged directly to the borrower upon early repayment.",
+      "C": "Incorrect because yield maintenance requires the borrower to pay a penalty equal to the present value of the lost spread so the lender maintains their contractual yield."
+    }
+  },
+  {
+    "id": "L1-FI-055",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Introduction to Asset-Backed Securities",
+    "los": "Describe types and characteristics of non-mortgage asset-backed securities",
+    "question": "Auto loan-backed securities typically differ from residential mortgage-backed securities in that auto loan ABS:",
+    "options": {
+      "A": "Are backed by non-amortizing, revolving consumer receivables.",
+      "B": "Have substantially shorter collateral maturities and lower prepayment sensitivity to interest rates.",
+      "C": "Do not require internal credit enhancements such as reserve accounts or subordination."
+    },
+    "answer": "B",
+    "explanation": "Auto loans are fully amortizing loans with relatively short original maturities (typically 36 to 72 months). Because auto loan balances are smaller and vehicles depreciate rapidly, borrowers rarely refinance auto loans simply because market interest rates drop. Prepayments on auto loans occur primarily due to trade-ins, sales, wrecks, or payoffs, making them far less sensitive to interest rate fluctuations than home mortgages.",
+    "distractor_analysis": {
+      "A": "Incorrect because credit card receivables are non-amortizing and revolving; auto loans are fully amortizing installment contracts.",
+      "C": "Incorrect because auto loan ABS rely heavily on internal credit enhancement, including subordination, reserve funds, and excess spread."
+    }
+  },
+  {
+    "id": "L1-FI-056",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Introduction to Asset-Backed Securities",
+    "los": "Describe types and characteristics of non-mortgage asset-backed securities",
+    "question": "During the lockout (revolving) period of a credit card asset-backed security (ABS):",
+    "options": {
+      "A": "Principal payments made by cardholders are distributed sequentially to bondholders.",
+      "B": "Principal payments made by cardholders are reinvested by the trustee in new receivables.",
+      "C": "No interest payments are made to investors, with interest compounding until maturity."
+    },
+    "answer": "B",
+    "explanation": "Credit card ABS are backed by revolving debt. During the initial lockout or revolving period (which may last 1 to 5 years), no principal is returned to investors. Instead, principal collections from cardholders are used by the trust to purchase newly originated credit card receivables, keeping the pool balance stable. Investors receive only contractual interest. Principal repayment occurs only after the revolving period ends (during the accumulation or amortization period).",
+    "distractor_analysis": {
+      "A": "Incorrect because principal is not returned to investors during the revolving lockout phase.",
+      "C": "Incorrect because investors receive regular monthly or quarterly coupon interest throughout the lockout period."
+    }
+  },
+  {
+    "id": "L1-FI-057",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Understanding Fixed-Income Risk and Return",
+    "los": "Calculate and interpret the sources of return from investing in a fixed-rate bond",
+    "question": "An investor purchases a 10-year, 6.00% annual coupon bond at par value (USD 1,000) and holds it until maturity. If market interest rates immediately drop to 4.00% and stay there for the entire 10 years, the investor's realized annualized rate of return will be:",
+    "options": {
+      "A": "Strictly greater than 6.00%.",
+      "B": "Exactly equal to 6.00%.",
+      "C": "Strictly less than 6.00%."
+    },
+    "answer": "C",
+    "explanation": "The three sources of return for a fixed-rate bond held to maturity are: (1) coupon payments, (2) the return of principal at maturity, and (3) reinvestment income from coupons. To achieve a realized compound yield equal to the initial YTM ($6.00\\%$), all coupons must be reinvested at that initial YTM. Because market rates fell to $4.00\\%$, all coupon payments are reinvested at the lower rate, resulting in lower total coupon reinvestment income. Since the bond was held to maturity, there is no capital gain to offset this reinvestment loss, so the realized return is strictly less than 6.00%.",
+    "distractor_analysis": {
+      "A": "Incorrect because a drop in reinvestment rates reduces total compound return, not increases it.",
+      "B": "Incorrect because earning exactly 6.00% requires all coupons to be reinvested at 6.00%."
+    }
+  },
+  {
+    "id": "L1-FI-058",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Understanding Fixed-Income Risk and Return",
+    "los": "Calculate and interpret Macaulay, modified, and effective duration",
+    "question": "A fixed-income portfolio manager holds a bond portfolio with a Macaulay duration of 7.5 years. If the manager's target investment horizon is 5.0 years, the duration gap is:",
+    "options": {
+      "A": "+2.5 years, and the portfolio is dominated by market price risk.",
+      "B": "-2.5 years, and the portfolio is dominated by coupon reinvestment risk.",
+      "C": "+2.5 years, and the portfolio is immunized against interest rate risk."
+    },
+    "answer": "A",
+    "explanation": "The duration gap is defined as the Macaulay duration minus the investment horizon: $$\\text{Duration Gap} = \\text{Macaulay Duration} - \\text{Investment Horizon}$$ $$\\text{Duration Gap} = 7.5 - 5.0 = +2.5 \\text{ years}$$ When the duration gap is positive (Macaulay duration exceeds horizon), the investor must sell the bonds before maturity, meaning market price risk dominates coupon reinvestment risk. If rates rise, the capital loss upon sale exceeds the higher reinvestment income.",
+    "distractor_analysis": {
+      "B": "Incorrect because the duration gap is positive ($+2.5$, not $-2.5$). A negative duration gap occurs when the investment horizon exceeds duration.",
+      "C": "Incorrect because immunization occurs only when the duration gap is zero (Macaulay duration equals investment horizon)."
+    }
+  },
+  {
+    "id": "L1-FI-059",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Understanding Fixed-Income Risk and Return",
+    "los": "Calculate and interpret Macaulay, modified, and effective duration",
+    "question": "A 2-year, 5.00% annual coupon bond has a par value of USD 1,000 and trades at par (YTM = 5.00%). The Macaulay duration of the bond is closest to:",
+    "options": {
+      "A": "1.86 years.",
+      "B": "1.95 years.",
+      "C": "2.00 years."
+    },
+    "answer": "B",
+    "explanation": "Macaulay duration is the weighted average time to receipt of cash flows, where weights are the present value of each cash flow divided by bond price: $$\\text{MacDur} = \\sum_{t=1}^n \\frac{t \\times CF_t / (1 + y)^t}{P}$$ Cash flows: Year 1 = USD 50, Year 2 = USD 1,050. At $y = 5.00\\%$, $P = \\text{USD } 1{,}000$: $$PV(CF_1) = \\frac{50}{1.05^1} = \\text{USD } 47.6190$$ $$PV(CF_2) = \\frac{1{,}050}{1.05^2} = \\text{USD } 952.3810$$ Weights: $w_1 = \\frac{47.6190}{1{,}000} = 0.047619$, $w_2 = \\frac{952.3810}{1{,}000} = 0.952381$. $$\\text{MacDur} = (1 \\times 0.047619) + (2 \\times 0.952381) = 0.047619 + 1.904762 = 1.9524 \\text{ years} \\approx 1.95 \\text{ years}$$",
+    "distractor_analysis": {
+      "A": "Incorrect because 1.86 years represents the modified duration: $\\text{ModDur} = 1.9524 / 1.05 = 1.8594 \\approx 1.86$ years.",
+      "C": "Incorrect because 2.00 years is the maturity of the bond; Macaulay duration for a coupon-paying bond is strictly less than its maturity."
+    }
+  },
+  {
+    "id": "L1-FI-060",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Understanding Fixed-Income Risk and Return",
+    "los": "Calculate and interpret Macaulay, modified, and effective duration",
+    "question": "A corporate bond with a Macaulay duration of 6.30 years has an annual yield-to-maturity of 5.00%. If the market yield increases by 75 bps, the estimated percentage change in the bond's price based on modified duration is closest to:",
+    "options": {
+      "A": "-4.50%.",
+      "B": "-4.73%.",
+      "C": "+4.50%."
+    },
+    "answer": "A",
+    "explanation": "First, calculate Modified Duration: $$\\text{ModDur} = \\frac{\\text{MacDur}}{1 + y} = \\frac{6.30}{1 + 0.05} = \\frac{6.30}{1.05} = 6.00 \\text{ years}$$ Next, estimate the percentage price change: $$\\frac{\\Delta P}{P} \\approx -\\text{ModDur} \\times \\Delta y$$ $$\\frac{\\Delta P}{P} \\approx -6.00 \\times (+0.0075) = -0.0450 = -4.50\\%$$ Because yields increased, bond prices decline.",
+    "distractor_analysis": {
+      "B": "Incorrect because -4.73% incorrectly uses Macaulay duration directly without dividing by $1 + y$ ($-6.30 \\times 0.0075 = -4.725\\%$).",
+      "C": "Incorrect because bond price and yield are inversely related; a yield increase causes a price decline (-4.50%), not a price increase (+4.50%)."
+    }
+  },
+  {
+    "id": "L1-FI-061",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Understanding Fixed-Income Risk and Return",
+    "los": "Calculate and interpret Macaulay, modified, and effective duration",
+    "question": "A bond trades at a baseline price of USD 102.50. When its yield decreases by 25 bps, its price increases to USD 104.25. When its yield increases by 25 bps, its price decreases to USD 100.80. The bond's approximate modified duration is closest to:",
+    "options": {
+      "A": "3.37.",
+      "B": "6.73.",
+      "C": "13.46."
+    },
+    "answer": "B",
+    "explanation": "The formula for approximate modified duration is: $$\\text{ApproxModDur} = \\frac{P_- - P_+}{2 \\times P_0 \\times \\Delta y}$$ Given $P_0 = 102.50$, $P_- = 104.25$, $P_+ = 100.80$, and $\\Delta y = 0.0025$: $$\\text{ApproxModDur} = \\frac{104.25 - 100.80}{2 \\times 102.50 \\times 0.0025} = \\frac{3.45}{0.5125} = 6.7317 \\approx 6.73$$",
+    "distractor_analysis": {
+      "A": "Incorrect because 3.37 forgets to divide by 2 in the denominator or uses $2 \\times \\Delta y$ improperly ($3.45 / 1.025 = 3.37$).",
+      "C": "Incorrect because 13.46 uses $\\Delta y = 0.00125$ or multiplies by 2 rather than dividing by 2."
+    }
+  },
+  {
+    "id": "L1-FI-062",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Understanding Fixed-Income Risk and Return",
+    "los": "Calculate and interpret Macaulay, modified, and effective duration",
+    "question": "Why is effective duration, rather than modified duration, the appropriate measure of interest rate risk for bonds with embedded options?",
+    "options": {
+      "A": "Modified duration assumes that expected future cash flows do not change when interest rates change.",
+      "B": "Effective duration assumes that the benchmark yield curve undergoes non-parallel twists.",
+      "C": "Modified duration cannot be calculated for bonds paying semi-annual coupons."
+    },
+    "answer": "A",
+    "explanation": "Modified duration is a yield duration measure that assumes a bond's contractual cash flows are fixed and independent of interest rate movements. For bonds with embedded options (such as callable or putable bonds), interest rate changes alter the probability of option exercise, thereby changing the timing and amount of expected cash flows. Effective duration is a curve duration measure that dynamically re-estimates cash flows across interest rate shifts, making it essential for options-bearing bonds.",
+    "distractor_analysis": {
+      "B": "Incorrect because effective duration assumes a parallel shift in the benchmark yield curve, not non-parallel twists.",
+      "C": "Incorrect because modified duration is routinely computed for semi-annual bonds by dividing by $(1 + y/2)$."
+    }
+  },
+  {
+    "id": "L1-FI-063",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Understanding Fixed-Income Risk and Return",
+    "los": "Describe key rate duration and its use",
+    "question": "An institutional fixed-income portfolio manager wishing to evaluate the portfolio's sensitivity to a steepening of the yield curve should primarily examine the portfolio's:",
+    "options": {
+      "A": "Effective duration.",
+      "B": "Key rate durations.",
+      "C": "Macaulay duration."
+    },
+    "answer": "B",
+    "explanation": "Key rate duration (or partial duration) measures a portfolio's price sensitivity to a change in the benchmark yield at a specific maturity point along the yield curve, holding all other key rates constant. While aggregate effective duration and Macaulay duration assume parallel shifts across the entire curve, key rate durations isolate 'shaping risk' (such as steepening, flattening, or twists in the yield curve).",
+    "distractor_analysis": {
+      "A": "Incorrect because effective duration measures price sensitivity to a parallel shift across all maturities.",
+      "C": "Incorrect because Macaulay duration is a cash-flow weighted maturity measure that does not capture non-parallel yield curve reshaping."
+    }
+  },
+  {
+    "id": "L1-FI-064",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Understanding Fixed-Income Risk and Return",
+    "los": "Calculate the duration of a bond portfolio and describe its limitations",
+    "question": "A portfolio consists of two bonds:\n- Bond X: Market value USD 6,000,000; Modified duration = 4.0\n- Bond Y: Market value USD 4,000,000; Modified duration = 9.0\nThe weighted-average modified duration of the portfolio is closest to:",
+    "options": {
+      "A": "6.0.",
+      "B": "6.5.",
+      "C": "7.0."
+    },
+    "answer": "A",
+    "explanation": "Total portfolio market value is: $$\\text{Total Value} = \\text{USD } 6{,}000{,}000 + \\text{USD } 4{,}000{,}000 = \\text{USD } 10{,}000{,}000$$ The portfolio weights are $w_X = 60\\%$ and $w_Y = 40\\%$. The portfolio modified duration is: $$\\text{Portfolio Duration} = w_X \\text{ModDur}_X + w_Y \\text{ModDur}_Y$$ $$\\text{Portfolio Duration} = (0.60 \\times 4.0) + (0.40 \\times 9.0) = 2.40 + 3.60 = 6.00$$ A primary limitation of this measure is that it assumes a parallel shift in yields across all portfolio holdings.",
+    "distractor_analysis": {
+      "B": "Incorrect because 6.5 is the simple unweighted average of the two durations ($(4 + 9)/2 = 6.5$), ignoring portfolio weights.",
+      "C": "Incorrect because 7.0 reverses the portfolio weights ($0.40 \\times 4.0 + 0.60 \\times 9.0 = 1.6 + 5.4 = 7.0$)."
+    }
+  },
+  {
+    "id": "L1-FI-065",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Understanding Fixed-Income Risk and Return",
+    "los": "Calculate and interpret money duration and price value of a basis point",
+    "question": "A fixed-income portfolio has a market value of USD 50,000,000 and a modified duration of 5.60. The portfolio's Money Duration is closest to:",
+    "options": {
+      "A": "USD 28,000.",
+      "B": "USD 280,000.",
+      "C": "USD 280,000,000."
+    },
+    "answer": "C",
+    "explanation": "Money duration (also known as dollar duration in the US) measures the dollar price change per unit change in yield: $$\\text{Money Duration} = \\text{Modified Duration} \\times \\text{Portfolio Market Value}$$ $$\\text{Money Duration} = 5.60 \\times \\text{USD } 50{,}000{,}000 = \\text{USD } 280{,}000{,}000$$ For a 100 bps (1%) parallel shift in yield, the portfolio value changes by approximately: $$\\Delta PV \\approx -\\text{Money Duration} \\times \\Delta y = -\\text{USD } 280{,}000{,}000 \\times 0.01 = -\\text{USD } 2{,}800{,}000$$",
+    "distractor_analysis": {
+      "A": "Incorrect because USD 28,000 represents the price value of a basis point (PVBP), not the money duration ($280{,}000{,}000 \\times 0.0001 = 28{,}000$).",
+      "B": "Incorrect due to a factor of 1,000 magnitude calculation error."
+    }
+  },
+  {
+    "id": "L1-FI-066",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Understanding Fixed-Income Risk and Return",
+    "los": "Calculate and interpret money duration and price value of a basis point",
+    "question": "A bond trading at USD 100 has a modified duration of 7.20. Its Price Value of a Basis Point (PVBP, or DV01) per USD 1,000,000 of par value is closest to:",
+    "options": {
+      "A": "USD 72.00.",
+      "B": "USD 720.00.",
+      "C": "USD 7,200.00."
+    },
+    "answer": "B",
+    "explanation": "PVBP measures the absolute change in the price of a bond for a 1 basis point (0.01% = 0.0001) change in yield: $$\\text{PVBP} = \\text{Modified Duration} \\times \\text{Portfolio Value} \\times 0.0001$$ For a position value of USD 1,000,000: $$\\text{PVBP} = 7.20 \\times \\text{USD } 1{,}000{,}000 \\times 0.0001 = \\text{USD } 720.00$$",
+    "distractor_analysis": {
+      "A": "Incorrect because USD 72.00 corresponds to a position value of USD 100,000 rather than USD 1,000,000.",
+      "C": "Incorrect because USD 7,200.00 corresponds to a 10 basis point change rather than a 1 basis point change."
+    }
+  },
+  {
+    "id": "L1-FI-067",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Understanding Fixed-Income Risk and Return",
+    "los": "Calculate and interpret convexity",
+    "question": "A bond has a modified duration of 8.00 and an annual convexity of 80.0. If the bond's yield-to-maturity increases by 150 bps (+0.0150), the estimated percentage change in the bond's price incorporating both duration and convexity is closest to:",
+    "options": {
+      "A": "-12.00%.",
+      "B": "-11.10%.",
+      "C": "-10.20%."
+    },
+    "answer": "B",
+    "explanation": "The full Taylor series approximation for percentage price change including convexity is: $$\\frac{\\Delta P}{P} \\approx -\\text{ModDur} \\times \\Delta y + \\frac{1}{2} \\times \\text{Convexity} \\times (\\Delta y)^2$$ 1. Duration effect: $$-8.00 \\times (+0.0150) = -0.1200 = -12.00\\%$$ 2. Convexity adjustment: $$\\frac{1}{2} \\times 80.0 \\times (0.0150)^2 = 40.0 \\times 0.000225 = +0.0090 = +0.90\\%$$ 3. Combined price change: $$\\frac{\\Delta P}{P} \\approx -12.00\\% + 0.90\\% = -11.10\\%$$ Convexity always exerts a positive adjustment to price estimates for straight bonds.",
+    "distractor_analysis": {
+      "A": "Incorrect because -12.00% reflects the duration effect alone, omitting the positive convexity correction.",
+      "C": "Incorrect because -10.20% mistakenly omits the 1/2 factor in the convexity term, adding $1.80\\%$ instead of $0.90\\%$ ($-12.00\\% + 1.80\\% = -10.20\\%$)."
+    }
+  },
+  {
+    "id": "L1-FI-068",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Understanding Fixed-Income Risk and Return",
+    "los": "Calculate and interpret convexity",
+    "question": "A bond's price is USD 100.00 at baseline. If yields decrease by 20 bps ($\\Delta y = 0.0020$), its price rises to USD 101.55. If yields increase by 20 bps, its price falls to USD 98.51. The bond's approximate convexity is closest to:",
+    "options": {
+      "A": "76.0.",
+      "B": "150.0.",
+      "C": "300.0."
+    },
+    "answer": "B",
+    "explanation": "Approximate convexity is calculated using the formula: $$\\text{ApproxConvexity} = \\frac{P_- + P_+ - 2P_0}{P_0 \\times (\\Delta y)^2}$$ Given $P_0 = 100.00$, $P_- = 101.55$, $P_+ = 98.51$, and $\\Delta y = 0.0020$: $$\\text{Numerator} = 101.55 + 98.51 - 2(100.00) = 200.06 - 200.00 = 0.06$$ $$\\text{Denominator} = 100.00 \\times (0.0020)^2 = 100.00 \\times 0.000004 = 0.0004$$ $$\\text{ApproxConvexity} = \\frac{0.06}{0.0004} = 150.0$$",
+    "distractor_analysis": {
+      "A": "Incorrect because 76.0 divides by 2 in the formula incorrectly ($150 / 2 = 75$).",
+      "C": "Incorrect because 300.0 multiplies the convexity by 2 or uses $\\Delta y = 0.0040$ erroneously."
+    }
+  },
+  {
+    "id": "L1-FI-069",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Understanding Fixed-Income Risk and Return",
+    "los": "Calculate and interpret convexity",
+    "question": "When market yields fall to levels below the coupon rate of a callable bond, the bond is most likely to exhibit:",
+    "options": {
+      "A": "Negative convexity.",
+      "B": "Increased effective duration.",
+      "C": "Zero convexity."
+    },
+    "answer": "A",
+    "explanation": "For a callable bond at low yield levels, the price is compressed by the call price ceiling because the issuer is highly likely to exercise the call option. As yields fall, the price increases at a decreasing rate, and price appreciation is capped. On a price-yield graph, the curve bends concave downward, which is the definition of negative convexity. In this region, effective duration also drops sharply because the expected life contracts to the call date.",
+    "distractor_analysis": {
+      "B": "Incorrect because effective duration drops substantially (contracts toward the call date) as yields decline, rather than increasing.",
+      "C": "Incorrect because convexity becomes distinctly negative, not zero."
+    }
+  },
+  {
+    "id": "L1-FI-070",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Understanding Fixed-Income Risk and Return",
+    "los": "Calculate and interpret convexity",
+    "question": "The positive convexity property of an option-free bond implies that for an equal-sized upward and downward parallel shift in yield:",
+    "options": {
+      "A": "The price decrease when yields rise is greater in magnitude than the price increase when yields fall.",
+      "B": "The price increase when yields fall is greater in magnitude than the price decrease when yields rise.",
+      "C": "The price changes are symmetric and equal in magnitude."
+    },
+    "answer": "B",
+    "explanation": "The price-yield relationship for an option-free bond is convex to the origin. This positive curvature ensures that as yields fall, bond prices accelerate upward (at an increasing rate), whereas when yields rise, bond prices decline at a decreasing rate. Therefore, for equal changes in yield ($+\\Delta y$ and $-\\Delta y$), the percentage price increase from a yield drop exceeds the percentage price decrease from a yield rise.",
+    "distractor_analysis": {
+      "A": "Incorrect because this describes negative convexity, where downside price declines exceed upside appreciation.",
+      "C": "Incorrect because a linear symmetric relationship holds only under pure first-order duration approximations, ignoring convexity."
+    }
+  },
+  {
+    "id": "L1-FI-071",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Understanding Fixed-Income Risk and Return",
+    "los": "Calculate and interpret convexity",
+    "question": "As market yields rise toward and beyond the put strike yield for a putable bond, the bond's price sensitivity (effective duration):",
+    "options": {
+      "A": "Increases significantly toward that of a zero-coupon bond.",
+      "B": "Decreases as the put option establishes a floor on the bond's price.",
+      "C": "Becomes negative, causing bond prices to rise as yields rise."
+    },
+    "answer": "B",
+    "explanation": "A put option gives the investor the right to sell the bond back at par. As market interest rates rise, the value of this put option increases, creating an effective price floor near the put strike price. Because the bond's price cannot fall substantially below the put price, its price sensitivity to further yield increases diminishes sharply. Consequently, effective duration decreases and convexity remains strongly positive.",
+    "distractor_analysis": {
+      "A": "Incorrect because duration shortens toward the put date, rather than lengthening toward a zero-coupon bond.",
+      "C": "Incorrect because duration remains positive; fixed-income bonds do not exhibit negative duration merely from put features."
+    }
+  },
+  {
+    "id": "L1-FI-072",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Understanding Fixed-Income Risk and Return",
+    "los": "Describe how credit spread and liquidity affect duration and convexity",
+    "question": "An analyst observes that high-yield corporate bonds often exhibit an 'empirical duration' that is materially lower than their analytical (modified) duration. The most likely explanation is that:",
+    "options": {
+      "A": "High-yield bonds have zero exposure to benchmark government interest rate shifts.",
+      "B": "Credit spreads typically widen during economic expansions when benchmark interest rates are rising.",
+      "C": "Credit spreads often narrow during economic expansions when benchmark interest rates are rising, muting total yield increases."
+    },
+    "answer": "C",
+    "explanation": "Empirical duration measures interest rate sensitivity using historical regressions of actual bond price changes against benchmark yield changes. In economic expansions, benchmark interest rates typically rise as monetary policy tightens, but corporate default risk declines, causing credit spreads to narrow. Because the narrowing credit spread partially offsets the rising benchmark rate, the total yield on high-yield bonds increases by less than the benchmark rate, resulting in observed price declines that are smaller than analytical duration predicts (i.e., lower empirical duration).",
+    "distractor_analysis": {
+      "A": "Incorrect because high-yield bonds are still fixed-income instruments exposed to interest rate risk.",
+      "B": "Incorrect because credit spreads contract (narrow) during economic expansions due to improving corporate earnings and lower default rates."
+    }
+  },
+  {
+    "id": "L1-FI-073",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Fundamentals of Credit Analysis",
+    "los": "Describe credit risk and explain its components: probability of default and loss given default",
+    "question": "A portfolio manager holds a corporate bond with an estimated 1-year probability of default (PD) of 2.50%. If the anticipated recovery rate in default is 40.0%, the expected loss percentage for the coming year is closest to:",
+    "options": {
+      "A": "1.00%.",
+      "B": "1.50%.",
+      "C": "2.50%."
+    },
+    "answer": "B",
+    "explanation": "Expected loss is calculated as the probability of default (PD) multiplied by the loss severity (loss given default, LGD): $$\\text{LGD} = 1 - \\text{Recovery Rate} = 1 - 0.40 = 0.60 = 60.0\\%$$ $$\\text{Expected Loss} = \\text{PD} \\times \\text{LGD} = 2.50\\% \\times 60.0\\% = 1.50\\%$$",
+    "distractor_analysis": {
+      "A": "Incorrect because 1.00% is computed by multiplying PD by the recovery rate ($2.50\\% \\times 0.40 = 1.00\\%$), representing the expected recovery rather than expected loss.",
+      "C": "Incorrect because 2.50% is the probability of default, assuming 0% recovery (100% loss severity)."
+    }
+  },
+  {
+    "id": "L1-FI-074",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Fundamentals of Credit Analysis",
+    "los": "Describe seniority rankings and priority of claims in bankruptcy",
+    "question": "In a corporate liquidation bankruptcy proceeding governed by the absolute priority rule, which of the following creditor classes has the highest priority of claim?",
+    "options": {
+      "A": "Senior unsecured debt.",
+      "B": "First lien senior secured debt.",
+      "C": "Subordinated (junior) debt."
+    },
+    "answer": "B",
+    "explanation": "Under the absolute priority rule, claims are satisfied in order of seniority: (1) First lien secured debt (backed by specific pledged collateral assets), (2) Second lien secured debt, (3) Senior unsecured debt, (4) Subordinated debt, (5) Preferred equity, and (6) Common equity. Therefore, first lien senior secured debt holds the highest claim on the pledged collateral and bankruptcy proceeds.",
+    "distractor_analysis": {
+      "A": "Incorrect because senior unsecured debt ranks below secured debt claims up to the value of pledged collateral.",
+      "C": "Incorrect because subordinated debt is junior to both secured and senior unsecured debt."
+    }
+  },
+  {
+    "id": "L1-FI-075",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Fundamentals of Credit Analysis",
+    "los": "Describe seniority rankings and priority of claims in bankruptcy",
+    "question": "A holding company owns 100% of an operating company subsidiary. The operating subsidiary has its own outstanding senior debt. If the parent holding company issues senior unsecured debt, the parent debt is best described as being:",
+    "options": {
+      "A": "Structurally subordinated to the operating company debt.",
+      "B": "Senior in claim to all operating company debt under the pari passu doctrine.",
+      "C": "Fully collateralized by the operating company's tangible fixed assets."
+    },
+    "answer": "A",
+    "explanation": "Structural subordination arises when debt is issued by a parent holding company while debt is also issued by operating subsidiaries. Because the operating company owns the revenue-generating operating assets, its operating cash flows must first satisfy operating subsidiary creditors. The parent holding company's only claim is as an equity shareholder of the operating company (residual claim). Thus, parent debt is effectively subordinated to subsidiary debt, even if both are titled 'senior unsecured'.",
+    "distractor_analysis": {
+      "B": "Incorrect because pari passu applies only to debt at the same legal entity level; parent debt does not rank equally with operating company debt.",
+      "C": "Incorrect because parent unsecured debt has no direct lien or collateral claim on the subsidiary's physical assets."
+    }
+  },
+  {
+    "id": "L1-FI-076",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Fundamentals of Credit Analysis",
+    "los": "Describe rating agencies and credit ratings",
+    "question": "A corporate bond currently rated BBB- by S&P and Baa3 by Moody's is downgraded by one notch by both agencies. Following the downgrade, the bond is classified as:",
+    "options": {
+      "A": "Investment grade.",
+      "B": "High yield (non-investment grade).",
+      "C": "Defaulted debt."
+    },
+    "answer": "B",
+    "explanation": "The boundary between investment grade and high yield (speculative/junk) is BBB- (S&P/Fitch) and Baa3 (Moody's). A one-notch downgrade drops the rating to BB+ (S&P) and Ba1 (Moody's). This crosses the threshold into high yield (non-investment grade). Bonds that cross from investment grade down into high yield are termed 'fallen angels'.",
+    "distractor_analysis": {
+      "A": "Incorrect because BBB-/Baa3 was the lowest investment grade notch; any downgrade drops the security into speculative grade.",
+      "C": "Incorrect because default classification (D or C) only occurs upon non-payment or formal bankruptcy filing, not at BB+/Ba1."
+    }
+  },
+  {
+    "id": "L1-FI-077",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Fundamentals of Credit Analysis",
+    "los": "Describe rating agencies and credit ratings",
+    "question": "The risk that a bond's credit rating will be lowered, causing its credit spread to widen and its market price to decline prior to any actual default, is best termed:",
+    "options": {
+      "A": "Insolvency risk.",
+      "B": "Rating migration (downgrade) risk.",
+      "C": "Loss given default risk."
+    },
+    "answer": "B",
+    "explanation": "Credit rating migration risk (downgrade risk) is the probability that an issuer's credit rating will deteriorate (migrate downward) across credit rating categories over time. When an issuer is downgraded, market participants demand a wider credit spread to hold the debt, leading to an immediate decline in bond market value even if no cash flow default has occurred.",
+    "distractor_analysis": {
+      "A": "Incorrect because insolvency refers to total inability to service debt obligations or liabilities exceeding assets.",
+      "C": "Incorrect because loss given default (LGD) measures the percentage severity of loss realized only after a default occurs."
+    }
+  },
+  {
+    "id": "L1-FI-078",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Fundamentals of Credit Analysis",
+    "los": "Describe the 4 Cs of credit analysis",
+    "question": "An analyst reviewing a corporate issuer's indenture notes covenants requiring a minimum interest coverage ratio and restricting additional debt incurrence. Under the '4 Cs of Credit Analysis' framework, this examination relates to:",
+    "options": {
+      "A": "Capacity.",
+      "B": "Collateral.",
+      "C": "Covenants."
+    },
+    "answer": "C",
+    "explanation": "The 4 Cs of credit analysis are Capacity (ability of the borrower to service debt from cash flows), Collateral (quality and value of assets pledged), Covenants (contractual terms and legal protections in the indenture), and Character (management integrity, track record, and governance). Indenture terms restricting debt incurrence and establishing financial coverage thresholds belong strictly to Covenants.",
+    "distractor_analysis": {
+      "A": "Incorrect because capacity examines industry structure, operating margins, cash flow generation, and financial statement ratios.",
+      "B": "Incorrect because collateral evaluates the market value, liquidity, and depreciation of physical or financial assets pledged as security."
+    }
+  },
+  {
+    "id": "L1-FI-079",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Fundamentals of Credit Analysis",
+    "los": "Describe the 4 Cs of credit analysis",
+    "question": "When assessing the 'Capacity' of a corporate borrower, an industry characterized by high barriers to entry, low operating leverage, and stable pricing power is generally viewed by credit analysts as having:",
+    "options": {
+      "A": "Lower credit risk and higher business profile strength.",
+      "B": "Higher exposure to cyclical cash flow volatility.",
+      "C": "Greater threat of substitute products eroding operating margins."
+    },
+    "answer": "A",
+    "explanation": "In evaluating borrower capacity, industry fundamentals heavily influence business risk. High barriers to entry protect existing firms from new entrants; low operating leverage reduces sensitivity of operating income to sales fluctuations; and stable pricing power enables firms to pass cost increases to customers. These characteristics provide consistent, predictable cash flow generation, resulting in a stronger business profile and lower credit risk.",
+    "distractor_analysis": {
+      "B": "Incorrect because low operating leverage and high entry barriers dampen cyclical cash flow volatility.",
+      "C": "Incorrect because strong pricing power and entry barriers indicate low threat of substitutes and stable margins."
+    }
+  },
+  {
+    "id": "L1-FI-080",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Fundamentals of Credit Analysis",
+    "los": "Calculate and interpret financial ratios used in credit analysis",
+    "question": "A corporate borrower reports the following financial data for the most recent year:\n- Operating Income (EBIT): USD 120,000,000\n- Depreciation & Amortization: USD 30,000,000\n- Gross Interest Expense: USD 25,000,000\n- Total Debt: USD 450,000,000\nThe issuer's EBITDA interest coverage ratio and Debt-to-EBITDA ratio are closest to:",
+    "options": {
+      "A": "EBITDA Coverage = 4.8x; Debt/EBITDA = 3.75x.",
+      "B": "EBITDA Coverage = 6.0x; Debt/EBITDA = 3.00x.",
+      "C": "EBITDA Coverage = 6.0x; Debt/EBITDA = 3.75x."
+    },
+    "answer": "B",
+    "explanation": "First, calculate EBITDA: $$\\text{EBITDA} = \\text{EBIT} + \\text{D\\&A} = \\text{USD } 120{,}000{,}000 + \\text{USD } 30{,}000{,}000 = \\text{USD } 150{,}000{,}000$$ Next, compute the EBITDA interest coverage ratio: $$\\text{EBITDA Interest Coverage} = \\frac{\\text{EBITDA}}{\\text{Interest Expense}} = \\frac{\\text{USD } 150{,}000{,}000}{\\text{USD } 25{,}000{,}000} = 6.0\\text{x}$$ Finally, compute the Debt-to-EBITDA leverage ratio: $$\\frac{\\text{Total Debt}}{\\text{EBITDA}} = \\frac{\\text{USD } 450{,}000{,}000}{\\text{USD } 150{,}000{,}000} = 3.00\\text{x}$$",
+    "distractor_analysis": {
+      "A": "Incorrect because 4.8x is the EBIT interest coverage ($120 / 25 = 4.8\\text{x}$), and 3.75x is Debt/EBIT ($450 / 120 = 3.75\\text{x}$).",
+      "C": "Incorrect because Debt/EBITDA is 3.00x ($450 / 150 = 3.00\\text{x}$), not 3.75x."
+    }
+  },
+  {
+    "id": "L1-FI-081",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Fundamentals of Credit Analysis",
+    "los": "Describe factors that influence the level and volatility of yield spreads",
+    "question": "A corporate bond yield spread over benchmark government bonds primarily compensates investors for:",
+    "options": {
+      "A": "Default risk, liquidity risk, and tax differentials.",
+      "B": "Only the expected loss from default, with zero premium for secondary market illiquidity.",
+      "C": "Expected changes in the real risk-free rate of interest."
+    },
+    "answer": "A",
+    "explanation": "The yield spread on a corporate bond over a risk-free benchmark bond of matching maturity reflects three primary components: (1) credit risk (both expected loss and a risk premium for unexpected default loss), (2) liquidity risk premium (corporate bonds trade less frequently and carry higher transaction costs than sovereign debt), and (3) tax considerations (e.g., differential tax treatment between municipal, corporate, and sovereign issues).",
+    "distractor_analysis": {
+      "B": "Incorrect because credit spreads include substantial compensation for liquidity risk and unexpected default risk.",
+      "C": "Incorrect because changes in the benchmark real risk-free rate are already embedded within the underlying government benchmark yield, not the spread."
+    }
+  },
+  {
+    "id": "L1-FI-082",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Fundamentals of Credit Analysis",
+    "los": "Describe factors that influence the level and volatility of yield spreads",
+    "question": "During a severe macroeconomic recession accompanied by market-wide risk aversion and a contraction in dealer balance sheet capacity, corporate credit spreads will most likely:",
+    "options": {
+      "A": "Narrow due to falling benchmark interest rates.",
+      "B": "Widen due to rising default probabilities and increased liquidity premiums.",
+      "C": "Remain unchanged because duration offsets credit spread changes."
+    },
+    "answer": "B",
+    "explanation": "During economic downturns, corporate operating cash flows decline, increasing leverage and default risk. Simultaneously, market liquidity dries up and dealer risk appetite shrinks, driving liquidity risk premiums higher. Both effects compound to cause corporate credit spreads to widen significantly. High-yield spreads typically widen by substantially more than investment-grade spreads.",
+    "distractor_analysis": {
+      "A": "Incorrect because even though benchmark risk-free rates often decline during recessions due to central bank easing, credit spreads widen dramatically.",
+      "C": "Incorrect because duration measures price sensitivity to interest rate changes and does not prevent credit spreads from widening."
+    }
+  },
+  {
+    "id": "L1-FI-083",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Fundamentals of Credit Analysis",
+    "los": "Describe special considerations when analyzing high-yield bonds",
+    "question": "When conducting credit analysis on high-yield corporate issuers, an analyst must place disproportionate emphasis on:",
+    "options": {
+      "A": "Long-term macroeconomic cycles rather than short-term liquidity.",
+      "B": "Short-term liquidity, near-term debt maturity schedules, and covenant headroom.",
+      "C": "Accounting earnings (net income) rather than cash flow generation."
+    },
+    "answer": "B",
+    "explanation": "High-yield issuers carry speculative credit profiles with elevated default risk. In high-yield analysis, immediate survival is paramount; thus, analysts focus intensely on short-term liquidity (cash balances, working capital, undrawn revolving bank lines), upcoming debt maturities ('maturity walls' over the next 12-24 months), covenant cushion/headroom, and collateral values. Long-term forecasting is less reliable if the issuer cannot survive near-term refinancing pressures.",
+    "distractor_analysis": {
+      "A": "Incorrect because high-yield issuers frequently default due to short-term liquidity crunches rather than multi-decade macro cycles.",
+      "C": "Incorrect because non-cash accounting net income can easily obscure impending liquidity failure; free cash flow is far more critical."
+    }
+  },
+  {
+    "id": "L1-FI-084",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Fundamentals of Credit Analysis",
+    "los": "Describe sovereign credit analysis and non-sovereign credit analysis",
+    "question": "In sovereign credit analysis, which of the following characteristics provides the greatest flexibility for a government to service its sovereign debt during a fiscal crisis?",
+    "options": {
+      "A": "Denominating debt primarily in foreign currencies with short maturities.",
+      "B": "Having an independent central bank with the authority to issue the currency in which the debt is denominated.",
+      "C": "Relying heavily on foreign capital inflows to finance current account deficits."
+    },
+    "answer": "B",
+    "explanation": "A sovereign government that issues debt in its own domestic currency and possesses monetary independence (via its own central bank) has the theoretical ability to print currency to service its debt obligations. While monetary expansion carries inflation and currency depreciation risks, outright legal default is far less likely than for a sovereign that borrows in foreign currency (which cannot be printed by the domestic central bank).",
+    "distractor_analysis": {
+      "A": "Incorrect because foreign currency debt exposes the sovereign to foreign exchange risk and cannot be serviced by domestic money printing.",
+      "C": "Incorrect because dependence on external financing leaves the country vulnerable to sudden stops in foreign capital flows."
+    }
+  },
+  {
+    "id": "L1-FI-085",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Fundamentals of Credit Analysis",
+    "los": "Describe sovereign credit analysis and non-sovereign credit analysis",
+    "question": "A key difference between municipal General Obligation (GO) bonds and municipal Revenue bonds is that Revenue bonds are:",
+    "options": {
+      "A": "Backed by the full taxing authority of the issuing municipality.",
+      "B": "Serviced solely from cash flows generated by a designated public enterprise or project.",
+      "C": "Exempt from all credit rating analysis due to statutory sovereign immunity."
+    },
+    "answer": "B",
+    "explanation": "Municipal bonds generally fall into two broad categories: General Obligation (GO) bonds and Revenue bonds. GO bonds are backed by the 'full faith, credit, and taxing power' of the issuing municipality, giving them access to broad ad valorem property and income taxes. In contrast, Revenue bonds are backed exclusively by revenues generated by a specific commercial project (such as toll roads, airports, or water utilities). If project cash flows prove insufficient, the municipality is typically not legally obligated to draw on general tax revenues to service the debt.",
+    "distractor_analysis": {
+      "A": "Incorrect because full taxing authority backs General Obligation (GO) bonds, not project revenue bonds.",
+      "C": "Incorrect because Revenue bonds undergo rigorous credit ratings and financial analysis (e.g., debt service coverage ratios)."
+    }
+  },
+  {
+    "id": "L1-FI-086",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Floating-Rate Note Pricing and Yield Measures",
+    "los": "Calculate and interpret the discount margin for a floating-rate note.",
+    "question": "A 3-year floating-rate note (FRN) pays annual coupons of 1-year SOFR + 80 bps. If 1-year SOFR is currently 4.00% and the note is priced at 99.20 per 100 of par value, the discount margin (required margin) relative to the quoted margin is:",
+    "options": {
+      "A": "Greater than the quoted margin.",
+      "B": "Equal to the quoted margin.",
+      "C": "Less than the quoted margin."
+    },
+    "answer": "A",
+    "explanation": "When an FRN is priced at a discount to par ($P < 100$), the note's yield to maturity exceeds the coupon rate. Consequently, the discount margin (the margin required by investors over the reference rate to price the bond at market) must exceed the quoted margin ($DM > QM$). If $P = 100$, $DM = QM$; if $P > 100$, $DM < QM$.",
+    "distractor_analysis": {
+      "B": "The discount margin equals the quoted margin only when the FRN trades exactly at par value (100).",
+      "C": "The discount margin is less than the quoted margin when the FRN trades at a premium ($P > 100$)."
+    }
+  },
+  {
+    "id": "L1-FI-087",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Floating-Rate Note Pricing and Yield Measures",
+    "los": "Calculate and interpret the discount margin for a floating-rate note.",
+    "question": "A 1-year quarterly floating-rate note has a quoted margin of 100 bps over 90-day Euribor. The current 90-day Euribor is 3.00%. If an investor requires a discount margin of 140 bps, the estimated price of the FRN per 100 par value on a reset date is closest to:",
+    "options": {
+      "A": "98.85",
+      "B": "99.61",
+      "C": "100.39"
+    },
+    "answer": "B",
+    "explanation": "On a coupon reset date, each quarterly coupon payment is determined by the quoted margin: $$\\text{Coupon} = \\frac{3.00\\% + 1.00\\%}{4} \\times 100 = 1.00\\text{ EUR}$$ The required quarterly discount rate is based on Euribor plus discount margin: $$\\text{Discount rate per period} = \\frac{3.00\\% + 1.40\\%}{4} = \\frac{4.40\\%}{4} = 1.10\\%$$ Discounting the 4 quarterly cash flows: $$P = \\frac{1.00}{(1.0110)^1} + \\frac{1.00}{(1.0110)^2} + \\frac{1.00}{(1.0110)^3} + \\frac{101.00}{(1.0110)^4} = 0.9891 + 0.9784 + 0.9677 + 96.6749 = 99.61$$",
+    "distractor_analysis": {
+      "A": "98.85 results from erroneously applying an annual spread difference of 40 bps without quarterly compounding adjustments.",
+      "C": "100.39 occurs if the discount rate is incorrectly set below the coupon rate (treating required margin as less than quoted margin)."
+    }
+  },
+  {
+    "id": "L1-FI-088",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Floating-Rate Note Pricing and Yield Measures",
+    "los": "Describe the characteristics and risks of floating-rate notes.",
+    "question": "Between coupon reset dates, the primary driver of price fluctuations in a high-grade floating-rate note is changes in:",
+    "options": {
+      "A": "The benchmark reference rate.",
+      "B": "The issuer's credit risk and required margin.",
+      "C": "The quoted margin specified in the indenture."
+    },
+    "answer": "B",
+    "explanation": "The quoted margin is contractually fixed in the bond indenture. The coupon rate resets periodically to reflect changes in the benchmark reference rate, which insulates the FRN from benchmark interest rate duration risk. Therefore, between reset dates, price volatility is primarily driven by changes in the issuer's credit risk (or liquidity premium), which changes the discount margin required by the market.",
+    "distractor_analysis": {
+      "A": "Changes in the benchmark rate are passed through to the next coupon at reset, giving FRNs near-zero benchmark duration.",
+      "C": "The quoted margin is constant throughout the life of the instrument and does not fluctuate."
+    }
+  },
+  {
+    "id": "L1-FI-089",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Floating-Rate Note Pricing and Yield Measures",
+    "los": "Explain how caps and floors affect the price and interest rate risk of floating-rate notes.",
+    "question": "A floating-rate note with an embedded coupon cap will exhibit effective duration that:",
+    "options": {
+      "A": "Approaches zero as market interest rates rise significantly above the cap level.",
+      "B": "Increases significantly toward the duration of a fixed-rate bond as market interest rates rise above the cap rate.",
+      "C": "Remains constant across all interest rate environments."
+    },
+    "answer": "B",
+    "explanation": "When benchmark rates rise well above the cap rate, the coupon becomes fixed at the maximum capped rate. At that point, the FRN no longer resets higher with market rates, transforming it effectively into a fixed-rate bond with full interest rate duration until maturity.",
+    "distractor_analysis": {
+      "A": "Duration approaches zero when the cap is unconstrained, but rises substantially once the cap binds.",
+      "C": "The embedded option creates path-dependent duration that changes dynamically with rate levels."
+    }
+  },
+  {
+    "id": "L1-FI-090",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Floating-Rate Note Pricing and Yield Measures",
+    "los": "Calculate and interpret the discount margin for a floating-rate note.",
+    "question": "If an issuer experiences a credit rating upgrade after issuing an FRN, what is the expected impact on the required margin and the market price of the FRN on the reset date?",
+    "options": {
+      "A": "Required margin decreases, and the market price rises above par.",
+      "B": "Required margin increases, and the market price falls below par.",
+      "C": "Required margin decreases, and the market price remains exactly at par."
+    },
+    "answer": "A",
+    "explanation": "A credit upgrade reduces the credit spread demanded by investors, causing the required discount margin ($DM$) to decrease below the contractually fixed quoted margin ($QM$). Because $QM > DM$, the cash flow coupon rate exceeds the required discount rate, causing the market price to trade at a premium ($P > 100$).",
+    "distractor_analysis": {
+      "B": "Required margin increases during a credit downgrade, not an upgrade.",
+      "C": "The price only remains at par if $DM = QM$. Since $DM < QM$, the bond trades above par."
+    }
+  },
+  {
+    "id": "L1-FI-091",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Floating-Rate Note Pricing and Yield Measures",
+    "los": "Describe the mechanics of reference rates including SOFR and Euribor.",
+    "question": "Which of the following best describes the difference between term Euribor and compounded Secured Overnight Financing Rate (SOFR)?",
+    "options": {
+      "A": "Euribor is an unsecured, forward-looking rate based on bank quotes; SOFR is a secured, backward-looking overnight rate based on actual repo transactions.",
+      "B": "Euribor is backed by sovereign collateral; SOFR contains bank credit risk.",
+      "C": "SOFR includes an embedded term bank credit risk spread; Euribor is completely risk-free."
+    },
+    "answer": "A",
+    "explanation": "Euribor is an unsecured interbank lending rate determined forward-looking for specified tenors (e.g., 1-month, 3-month) and includes bank credit risk. In contrast, SOFR is a nearly risk-free secured rate reflecting actual overnight Treasury repurchase transactions, aggregated backward-looking over the interest period (in arrears).",
+    "distractor_analysis": {
+      "B": "Euribor is unsecured; SOFR is secured by US Treasury collateral.",
+      "C": "SOFR is nearly free of bank credit risk; Euribor contains term bank credit risk."
+    }
+  },
+  {
+    "id": "L1-FI-092",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Floating-Rate Note Pricing and Yield Measures",
+    "los": "Calculate and interpret the discount margin for a floating-rate note.",
+    "question": "An FRN has a face value of USD 1,000, 2 years to maturity, semi-annual coupons at 180-day SOFR + 60 bps. If the current 180-day SOFR is 3.50% and the note is purchased at 100.50 per 100 par, the required discount margin must be:",
+    "options": {
+      "A": "Greater than 60 bps.",
+      "B": "Equal to 60 bps.",
+      "C": "Less than 60 bps."
+    },
+    "answer": "C",
+    "explanation": "Because the FRN trades at a premium ($100.50 > 100$), the investor is willing to accept a discount margin lower than the contractual quoted margin of 60 bps ($DM < 60\\text{ bps}$).",
+    "distractor_analysis": {
+      "A": "If $DM > 60\\text{ bps}$, the note would trade at a discount ($P < 100$).",
+      "B": "If $DM = 60\\text{ bps}$, the note would trade exactly at par ($P = 100$)."
+    }
+  },
+  {
+    "id": "L1-FI-093",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Floating-Rate Note Pricing and Yield Measures",
+    "los": "Explain inverse floating-rate notes and their leverage characteristics.",
+    "question": "An inverse floating-rate note has a coupon formula of $12\\% - 1.5 \\times \\text{SOFR}$. If SOFR increases by 100 bps, the coupon rate will:",
+    "options": {
+      "A": "Decrease by 100 bps.",
+      "B": "Decrease by 150 bps.",
+      "C": "Increase by 150 bps."
+    },
+    "answer": "B",
+    "explanation": "The coupon has a leverage factor of $-1.5$. A 100 bps increase in the reference rate results in: $$\\Delta \\text{Coupon} = -1.5 \\times (+100\\text{ bps}) = -150\\text{ bps}$$ An inverse floater has higher duration than a standard fixed-rate bond because rising rates both decrease cash flows and increase discount rates.",
+    "distractor_analysis": {
+      "A": "100 bps ignores the multiplier coefficient of 1.5.",
+      "C": "The negative sign ensures that the coupon declines when the reference rate rises."
+    }
+  },
+  {
+    "id": "L1-FI-094",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Floating-Rate Note Pricing and Yield Measures",
+    "los": "Explain the concept of reset frequency and effective duration of floating-rate notes.",
+    "question": "A 5-year FRN with semi-annual coupon resets has an effective duration closest to:",
+    "options": {
+      "A": "0.25 years.",
+      "B": "2.50 years.",
+      "C": "4.50 years."
+    },
+    "answer": "A",
+    "explanation": "The effective duration of an unconstrained FRN with respect to benchmark interest rates is approximately half of the time remaining until the next coupon reset date. For a semi-annual reset bond, the maximum duration just after a reset is 0.50 years, and the average duration across the reset cycle is approximately $0.50 / 2 = 0.25$ years.",
+    "distractor_analysis": {
+      "B": "2.50 years corresponds to half the bond maturity, which applies to a 5-year zero coupon bond, not an FRN.",
+      "C": "4.50 years would be typical for a 5-year fixed-rate coupon bond."
+    }
+  },
+  {
+    "id": "L1-FI-095",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Floating-Rate Note Pricing and Yield Measures",
+    "los": "Describe payment conventions and coupon accrual for floating-rate debt.",
+    "question": "In an 'in-arrears' floating-rate note structure, the coupon rate for a payment period is determined at the:",
+    "options": {
+      "A": "Beginning of the coupon period and paid at the end of the period.",
+      "B": "End of the coupon period and paid at the end of the period.",
+      "C": "Beginning of the period and paid at the beginning of the period."
+    },
+    "answer": "A",
+    "explanation": "Under standard advanced-set in-arrears convention, the benchmark rate is observed and fixed at the start of the accrual period (reset date), and the resulting interest is paid at the end of the period (payment date).",
+    "distractor_analysis": {
+      "B": "Setting the rate at the end of the period is known as 'in-advance' or arrears-resetting, which is less common in traditional corporate FRNs.",
+      "C": "Coupons are paid at the end of accrual periods, not at the beginning."
+    }
+  },
+  {
+    "id": "L1-FI-096",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Floating-Rate Note Pricing and Yield Measures",
+    "los": "Calculate and interpret the discount margin for a floating-rate note.",
+    "question": "When computing the discount margin for an FRN using the simplified model, which assumption is typically made regarding future reference rates?",
+    "options": {
+      "A": "Reference rates will equal forward rates derived from the spot curve.",
+      "B": "Reference rates will remain constant at the current index rate over the life of the note.",
+      "C": "Reference rates will follow a lognormal interest rate tree."
+    },
+    "answer": "B",
+    "explanation": "The standard simplified discount margin calculation assumes that the reference rate remains constant at the current level for all future reset periods. Both future cash flows and the discount rate are projected using this constant rate, isolating the quoted margin versus discount margin relationship.",
+    "distractor_analysis": {
+      "A": "Forward rate modeling is used in complex OAS or swap-margin models, not the standard quoted discount margin calculation.",
+      "C": "Lognormal trees are used for pricing embedded options (caps and floors), not standard FRN discount margin."
+    }
+  },
+  {
+    "id": "L1-FI-097",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Floating-Rate Note Pricing and Yield Measures",
+    "los": "Explain how credit rating migration affects FRN pricing.",
+    "question": "If an investor purchases an FRN at par value (100) and the issuer subsequently experiences widened credit spreads across the market, the price of the FRN at the next reset date will:",
+    "options": {
+      "A": "Remain at 100 because the coupon resets to the new market reference rate.",
+      "B": "Drop below 100 because the quoted margin is now lower than the required discount margin.",
+      "C": "Rise above 100 to compensate the investor for higher credit risk."
+    },
+    "answer": "B",
+    "explanation": "While the reference rate resets, the quoted margin ($QM$) does not change. When the issuer's credit spread widens, investors demand a higher discount margin ($DM > QM$). With the coupon stream lower than required market returns, the price falls below par ($P < 100$).",
+    "distractor_analysis": {
+      "A": "The coupon resets to the benchmark index, but does not adjust for issuer-specific credit spread widening.",
+      "C": "Higher required return reduces bond market value, it does not increase it."
+    }
+  },
+  {
+    "id": "L1-FI-098",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Sovereign and Government Credit Analysis",
+    "los": "Describe factors evaluated in sovereign credit analysis.",
+    "question": "Which of the following institutional and political factors is considered most favorable in sovereign credit rating assessments?",
+    "options": {
+      "A": "High concentration of political power in the executive branch with minimal checks and balances.",
+      "B": "Strong rule of law, transparent public finances, and independent central banking institutions.",
+      "C": "A fixed currency peg backed by limited foreign exchange reserves."
+    },
+    "answer": "B",
+    "explanation": "Sovereign rating agencies (such as S&P, Moody's, and Fitch) place high weight on institutional effectiveness: strong rule of law, checks and balances, independent monetary authorities, and transparent fiscal governance enhance policy predictability and debt servicing commitment.",
+    "distractor_analysis": {
+      "A": "Concentration of power without institutional checks creates policy volatility and credit vulnerability.",
+      "C": "Fixed pegs with low reserves expose the sovereign to currency and balance of payments crises."
+    }
+  },
+  {
+    "id": "L1-FI-099",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Sovereign and Government Credit Analysis",
+    "los": "Distinguish between local currency and foreign currency sovereign debt ratings.",
+    "question": "Why is a sovereign government's foreign currency credit rating typically equal to or lower than its local currency credit rating?",
+    "options": {
+      "A": "Foreign currency debt cannot be serviced by printing domestic currency and requires foreign exchange reserves or export surpluses.",
+      "B": "Domestic currency debt carries higher legal priority in international court jurisdictions.",
+      "C": "Sovereigns have unlimited statutory ability to levy taxes on foreign creditors."
+    },
+    "answer": "A",
+    "explanation": "A sovereign possesses the sovereign prerogative to issue local currency, making outright default on local currency debt less common (though it can cause inflation). Foreign currency debt, however, requires earning or borrowing foreign exchange. If export receipts fall or reserves deplete, the sovereign cannot print foreign currency to repay debt, creating higher default risk.",
+    "distractor_analysis": {
+      "B": "Foreign currency debt often includes collective action clauses and foreign governing law that protects creditors more vigorously.",
+      "C": "Sovereigns cannot tax foreign citizens outside their territorial jurisdiction."
+    }
+  },
+  {
+    "id": "L1-FI-100",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Sovereign and Government Credit Analysis",
+    "los": "Calculate and interpret debt sustainability metrics for sovereign issuers.",
+    "question": "A sovereign country has an initial government debt-to-GDP ratio of 60%. If the real interest rate on government debt is 4.0% and the country's real GDP growth rate is 1.5%, which condition is necessary to prevent the debt-to-GDP ratio from rising?",
+    "options": {
+      "A": "The government must run a primary fiscal surplus.",
+      "B": "The government can run an unlimited primary fiscal deficit.",
+      "C": "The nominal GDP growth rate must equal zero."
+    },
+    "answer": "A",
+    "explanation": "The change in debt-to-GDP ratio is governed by: $$\\Delta d = (r - g) \\times d - pb$$ where $r$ is real interest rate, $g$ is real growth rate, and $pb$ is the primary balance as a % of GDP. Because $r > g$ ($4.0\\% > 1.5\\%$), the existing debt compounds faster than economic growth. To keep $\\Delta d \\le 0$, the government must generate a primary surplus ($pb > 0$) of at least: $$pb \\ge (0.04 - 0.015) \\times 0.60 = 0.015 = 1.50\\% \\text{ of GDP}$$",
+    "distractor_analysis": {
+      "B": "A primary deficit would accelerate debt accumulation when interest rate exceeds growth.",
+      "C": "Nominal GDP growth of zero would worsen debt sustainability."
+    }
+  },
+  {
+    "id": "L1-FI-101",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Sovereign and Government Credit Analysis",
+    "los": "Describe external accounts and reserve adequacy in sovereign credit assessment.",
+    "question": "In evaluating a sovereign's external vulnerability, which indicator provides the strongest signal of resilience against sudden capital flight?",
+    "options": {
+      "A": "High ratio of short-term external debt to central bank foreign exchange reserves.",
+      "B": "Foreign exchange reserves covering more than 100% of short-term external debt obligations (Greenspan-Guidotti rule).",
+      "C": "A persistent current account deficit exceeding 8% of GDP financed by portfolio flows."
+    },
+    "answer": "B",
+    "explanation": "The Greenspan-Guidotti benchmark requires usable foreign exchange reserves to cover at least 100% of external debt maturing within one year. This provides a critical liquidity cushion allowing the sovereign to service foreign liabilities during a balance-of-payments crisis without resorting to default.",
+    "distractor_analysis": {
+      "A": "High short-term debt relative to reserves indicates extreme rollover risk and vulnerability.",
+      "C": "Large current account deficits funded by volatile hot-money portfolio flows heighten default risk."
+    }
+  },
+  {
+    "id": "L1-FI-102",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Sovereign and Government Credit Analysis",
+    "los": "Describe the factors affecting municipal and non-sovereign government credit.",
+    "question": "Which of the following factors is most critical when evaluating the creditworthiness of a regional non-sovereign government (e.g., a province or state)?",
+    "options": {
+      "A": "Monetary printing authority and sovereign seigniorage revenues.",
+      "B": "Revenue generation autonomy, expenditure mandates, and intergovernmental transfer formulas.",
+      "C": "Ability to issue currency in the international Eurobond market."
+    },
+    "answer": "B",
+    "explanation": "Regional governments lack central banks and cannot print currency. Their credit strength depends on fiscal autonomy: the ability to raise local tax revenues independently, the flexibility of their public expenditure programs, and the stability of statutory transfer subsidies from the national central government.",
+    "distractor_analysis": {
+      "A": "Non-sovereign regional governments do not possess monetary authorities or currency printing rights.",
+      "C": "Non-sovereigns rarely issue in sovereign debt formats and do not have sovereign monetary status."
+    }
+  },
+  {
+    "id": "L1-FI-103",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Sovereign and Government Credit Analysis",
+    "los": "Explain sovereign default mechanisms and restructuring terms.",
+    "question": "Collective Action Clauses (CACs) in sovereign bond indentures are designed to:",
+    "options": {
+      "A": "Prevent a supermajority of bondholders from agreeing to debt restructuring.",
+      "B": "Enable a supermajority of bondholders to approve a restructuring that binds all bondholders, preventing holdout creditor litigation.",
+      "C": "Provide an automatic sovereign guarantee from the International Monetary Fund."
+    },
+    "answer": "B",
+    "explanation": "Collective Action Clauses (CACs) allow a specified supermajority of bondholders (e.g., 75%) to vote in favor of modifying repayment terms (haircuts, maturity extensions) and legally bind 100% of holders in the issue. This neutralizes minority 'holdout' creditors seeking full par recovery through court litigation.",
+    "distractor_analysis": {
+      "A": "CACs facilitate restructuring by enabling supermajority decisions, not preventing them.",
+      "C": "The IMF provides conditional adjustment lending, not automated guarantees."
+    }
+  },
+  {
+    "id": "L1-FI-104",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Sovereign and Government Credit Analysis",
+    "los": "Describe the economic structure and growth prospects in sovereign analysis.",
+    "question": "A sovereign economy whose fiscal revenues and export base are 80% dependent on crude oil exports is most vulnerable to which credit risk?",
+    "options": {
+      "A": "Terms-of-trade shocks and procyclical fiscal revenue volatility.",
+      "B": "Hyper-diversification drag on capital productivity.",
+      "C": "Inability to implement countercyclical capital controls."
+    },
+    "answer": "A",
+    "explanation": "Commodity-dependent sovereigns suffer from severe terms-of-trade volatility. A collapse in commodity prices sharply compresses export earnings, fiscal royalties, and tax receipts simultaneously, often forcing painful fiscal austerity or external debt restructuring.",
+    "distractor_analysis": {
+      "B": "The vulnerability is lack of diversification (monoline risk), not over-diversification.",
+      "C": "Capital controls are an administrative policy choice, not the primary economic vulnerability."
+    }
+  },
+  {
+    "id": "L1-FI-105",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Sovereign and Government Credit Analysis",
+    "los": "Describe non-economic factors in sovereign credit analysis.",
+    "question": "Which demographic trend poses the greatest long-term structural threat to sovereign fiscal sustainability and sovereign credit ratings?",
+    "options": {
+      "A": "A growing working-age population with low dependency ratios.",
+      "B": "An aging population with an increasing old-age dependency ratio that inflates public healthcare and pension obligations.",
+      "C": "High net immigration of skilled technical labor."
+    },
+    "answer": "B",
+    "explanation": "Rapid demographic aging increases entitlement spending (statutory pensions and healthcare) while simultaneously shrinking the active income-tax-paying labor base, leading to structural primary deficits unless offset by entitlement reform or productivity gains.",
+    "distractor_analysis": {
+      "A": "A growing workforce creates a demographic dividend that strengthens public finances.",
+      "C": "Skilled immigration expands the tax base and mitigates dependency pressures."
+    }
+  },
+  {
+    "id": "L1-FI-106",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Empirical Duration and Yield Curve Sensitivity",
+    "los": "Distinguish between analytical duration and empirical duration.",
+    "question": "Analytical duration is derived from a mathematical pricing formula assuming benchmark yield shifts occur with credit spreads held constant. In contrast, empirical duration is determined by:",
+    "options": {
+      "A": "Linear regression analysis of historical bond price returns against historical benchmark yield changes.",
+      "B": "Taking the second derivative of the price-yield curve with respect to convexity.",
+      "C": "Calculating the Macaulay duration divided by the annualized coupon frequency."
+    },
+    "answer": "A",
+    "explanation": "Empirical duration is an econometric measure estimated from statistical regressions of actual historical bond returns against changes in benchmark yields: $$\\Delta P/P = -D_{\\text{emp}} \\Delta y + \\epsilon$$ It captures real-world interactions where credit spreads often move inversely to benchmark government yields.",
+    "distractor_analysis": {
+      "B": "The second derivative measures convexity, not empirical duration.",
+      "C": "Macaulay duration divided by $(1+y/m)$ is analytical modified duration."
+    }
+  },
+  {
+    "id": "L1-FI-107",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Empirical Duration and Yield Curve Sensitivity",
+    "los": "Explain why empirical duration is lower than analytical duration for high-yield corporate bonds.",
+    "question": "For high-yield corporate bonds, empirical duration is generally lower than analytical duration because:",
+    "options": {
+      "A": "High-yield bond prices are immune to changes in credit spreads.",
+      "B": "Credit spreads typically compress during periods of economic expansion when benchmark yields are rising.",
+      "C": "High-yield coupon payments reset continuously with the interbank lending rate."
+    },
+    "answer": "B",
+    "explanation": "During economic expansions, central banks raise benchmark interest rates ($\\Delta y_{\\text{benchmark}} > 0$), but robust corporate earnings reduce default risk, causing credit spreads to narrow ($\\Delta \\text{Spread} < 0$). The tightening spread offsets part of the rise in benchmark yields, dampening bond price declines and resulting in empirical duration being noticeably lower than analytical duration.",
+    "distractor_analysis": {
+      "A": "High-yield bonds are heavily exposed to credit spreads; that correlation is precisely why duration differs.",
+      "C": "High-yield bonds are predominantly fixed-rate coupon instruments, not daily floaters."
+    }
+  },
+  {
+    "id": "L1-FI-108",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Empirical Duration and Yield Curve Sensitivity",
+    "los": "Compare interest rate sensitivity across rating categories.",
+    "question": "In which bond market sector is the divergence between analytical modified duration and empirical duration smallest?",
+    "options": {
+      "A": "Distressed high-yield corporate debt.",
+      "B": "High-grade AAA sovereign debt.",
+      "C": "Subordinated contingent convertible bank debt."
+    },
+    "answer": "B",
+    "explanation": "AAA sovereign debt carries zero or negligible credit spread risk. Because its price movements are driven almost entirely by changes in the benchmark yield curve itself, empirical regression estimates match mathematical analytical duration very closely.",
+    "distractor_analysis": {
+      "A": "Distressed debt is driven primarily by recovery expectations and equity-like credit risk, creating huge differences.",
+      "C": "Contingent convertibles have strong equity and conversion dynamics that distort analytical bond duration."
+    }
+  },
+  {
+    "id": "L1-FI-109",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Empirical Duration and Yield Curve Sensitivity",
+    "los": "Explain limitations of empirical duration.",
+    "question": "A major limitation of using empirical duration for portfolio hedging is that:",
+    "options": {
+      "A": "It assumes that bond prices have zero relationship to coupon payments.",
+      "B": "Historical statistical relationships between benchmark yields and credit spreads may break down during severe market crises.",
+      "C": "It cannot be calculated using computer regression packages."
+    },
+    "answer": "B",
+    "explanation": "Empirical duration depends on the historical covariance between benchmark yield shifts and credit spread adjustments. In periods of structural regime changes, liquidity freezes, or 'flight-to-safety' episodes (where benchmark yields collapse while credit spreads explode), the historical empirical correlation breaks down.",
+    "distractor_analysis": {
+      "A": "Empirical duration reflects actual total return price dynamics, which incorporate coupon effects.",
+      "C": "It is straightforward to calculate via standard ordinary least squares (OLS) regression."
+    }
+  },
+  {
+    "id": "L1-FI-110",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Empirical Duration and Yield Curve Sensitivity",
+    "los": "Calculate portfolio empirical price change under spread and benchmark shifts.",
+    "question": "A high-yield bond has an analytical modified duration of 5.0 years and an empirical duration of 3.2 years. If benchmark Treasury yields increase by 100 bps, the expected percentage price change based on empirical duration is:",
+    "options": {
+      "A": "-5.0%",
+      "B": "-3.2%",
+      "C": "+1.8%"
+    },
+    "answer": "B",
+    "explanation": "Using empirical duration: $$\\frac{\\Delta P}{P} \\approx -D_{\\text{emp}} \\times \\Delta y = -3.2 \\times (+1.00\\%) = -3.2\\%$$ This reflects the historical empirical fact that high-yield bonds suffer less price loss than pure analytical duration (-5.0%) predicts when interest rates rise.",
+    "distractor_analysis": {
+      "A": "-5.0% is based on analytical duration, which overstates price loss by ignoring spread tightening.",
+      "C": "+1.8% represents the difference between the two durations ($5.0 - 3.2$), not the bond's percentage price return."
+    }
+  },
+  {
+    "id": "L1-FI-111",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Empirical Duration and Yield Curve Sensitivity",
+    "los": "Describe key rate duration versus empirical duration.",
+    "question": "Key rate duration measures a bond's price sensitivity to:",
+    "options": {
+      "A": "A change in benchmark yield at a specific maturity point along the yield curve with other rates held constant.",
+      "B": "Changes in empirical credit spreads while holding the benchmark curve fixed.",
+      "C": "Parallel shifts in the discount margin of floating-rate notes."
+    },
+    "answer": "A",
+    "explanation": "Key rate duration (or partial duration) measures price sensitivity to a 100 bps change in the benchmark spot rate at a specific single key maturity point on the curve (e.g., 2-year, 5-year, 10-year, 30-year), holding yields at all other maturities constant. It allows portfolio managers to measure non-parallel yield curve risk.",
+    "distractor_analysis": {
+      "B": "Spread duration measures sensitivity to credit spread changes, not key rate curve shifts.",
+      "C": "FRN discount margin sensitivity is measured by DM duration."
+    }
+  },
+  {
+    "id": "L1-FI-112",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Empirical Duration and Yield Curve Sensitivity",
+    "los": "Describe effective duration for bonds with negative convexity.",
+    "question": "When mortgage-backed securities (MBS) trade at prices near par, falling interest rates often cause effective duration to:",
+    "options": {
+      "A": "Increase due to positive convexity.",
+      "B": "Decrease due to homeowners refinancing and prepaying mortgages (negative convexity).",
+      "C": "Remain constant because mortgage pool rates are fixed."
+    },
+    "answer": "B",
+    "explanation": "When mortgage rates drop, borrowers exercise prepayment options to refinance their loans. This accelerates cash flows returned to investors precisely when reinvestment rates are low. The expected maturity shortens, which compresses effective duration—the defining hallmark of negative convexity.",
+    "distractor_analysis": {
+      "A": "Positive convexity causes duration to increase as rates fall; MBS exhibit negative convexity.",
+      "C": "Prepayment variability makes MBS cash flows and duration highly dynamic."
+    }
+  },
+  {
+    "id": "L1-FI-113",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Fixed-Income Markets: Issuance and Trading",
+    "los": "Describe primary market issuance mechanisms for fixed-income securities.",
+    "question": "In an underwritten corporate bond offering, which party bears the price risk if the bonds cannot be sold at the offering price?",
+    "options": {
+      "A": "The investment bank (underwriting syndicate).",
+      "B": "The issuing corporation.",
+      "C": "The central securities depository."
+    },
+    "answer": "A",
+    "explanation": "In a firm-commitment underwritten offering, the investment bank or syndicate guarantees the purchase of the entire bond issue from the company at a negotiated price, subsequently reselling to investors. If market demand softens, the underwriters must absorb the price decline and inventory losses.",
+    "distractor_analysis": {
+      "B": "In a 'best-efforts' offering the issuer retains risk, but under firm underwriting the syndicate assumes it.",
+      "C": "The depository provides clearing and settlement infrastructure, never taking principal underwriting risk."
+    }
+  },
+  {
+    "id": "L1-FI-114",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Fixed-Income Markets: Issuance and Trading",
+    "los": "Describe sovereign bond auction mechanisms.",
+    "question": "In a single-price (Dutch) sovereign bond auction, all successful competitive bidders and non-competitive bidders pay:",
+    "options": {
+      "A": "The highest price submitted by any competitive bidder.",
+      "B": "The clearing price (stop-out yield) associated with the lowest winning bid.",
+      "C": "Each individual bidder's own submitted price."
+    },
+    "answer": "B",
+    "explanation": "In a single-price Dutch auction (such as US Treasury auctions), all accepted competitive bids and all non-competitive bids are awarded at a uniform single price—the stop-out price (highest yield) required to clear the total offering amount.",
+    "distractor_analysis": {
+      "A": "The highest price would fail to clear the total quantity offered.",
+      "C": "Paying each individual bid price describes a multiple-price (discriminatory) auction."
+    }
+  },
+  {
+    "id": "L1-FI-115",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Fixed-Income Markets: Issuance and Trading",
+    "los": "Describe shelf registration and private placements in corporate debt markets.",
+    "question": "A major advantage of a shelf registration (e.g., SEC Rule 415) for a corporate bond issuer is:",
+    "options": {
+      "A": "Exemption from all financial disclosure requirements in annual regulatory filings.",
+      "B": "The flexibility to issue debt securities in multiple tranches over time without filing a new prospectus for each issuance.",
+      "C": "An absolute statutory guarantee that secondary trading will occur without bid-ask spreads."
+    },
+    "answer": "B",
+    "explanation": "Shelf registration permits a qualified issuer to file a single master registration document covering a predetermined total volume of debt securities. The issuer can then 'take securities off the shelf' and sell tranches quickly when market conditions and interest rates are favorable.",
+    "distractor_analysis": {
+      "A": "Shelf issuers must maintain up-to-date regular disclosure filings (10-K, 10-Q).",
+      "C": "Secondary market liquidity and spreads are market-driven and cannot be statutorily eliminated."
+    }
+  },
+  {
+    "id": "L1-FI-116",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Fixed-Income Markets: Issuance and Trading",
+    "los": "Describe repurchase agreements (repos) and their funding mechanics.",
+    "question": "In a repurchase agreement (repo), the difference between the sale price and the repurchase price of the underlying collateral represents the:",
+    "options": {
+      "A": "Haircut margin.",
+      "B": "Repo interest cost.",
+      "C": "Underwriting commission."
+    },
+    "answer": "B",
+    "explanation": "A repo is economically a secured collateralized short-term loan. The cash borrower sells securities to the lender today and agrees to repurchase them at a higher price in the future. The dollar difference between the repurchase price and the initial sale price is the repo interest accrued at the repo rate.",
+    "distractor_analysis": {
+      "A": "The haircut is the percentage discount applied to the collateral's market value to determine loan principal.",
+      "C": "Underwriting commissions apply to primary security issuance, not money market repo financing."
+    }
+  },
+  {
+    "id": "L1-FI-117",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Fixed-Income Markets: Issuance and Trading",
+    "los": "Calculate repo interest and evaluate repo haircut factors.",
+    "question": "Which of the following collateral characteristics will result in a lender requiring a LARGER repo haircut?",
+    "options": {
+      "A": "High credit quality, low price volatility, and high trading liquidity.",
+      "B": "Low credit rating, high price volatility, and limited market liquidity.",
+      "C": "Shorter time to maturity on sovereign Treasury bills."
+    },
+    "answer": "B",
+    "explanation": "The repo haircut protects the cash lender against a decline in collateral value in the event that the borrower defaults. Lower credit quality, higher price volatility, and wider illiquidity increase the potential loss on collateral liquidation, necessitating a larger haircut buffer.",
+    "distractor_analysis": {
+      "A": "High credit and liquid collateral (like short Treasuries) command tiny haircuts (e.g., 0.5%–1%).",
+      "C": "Short-maturity sovereign bills carry minimal price volatility, warranting low haircuts."
+    }
+  },
+  {
+    "id": "L1-FI-118",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Fixed-Income Markets: Issuance and Trading",
+    "los": "Describe secondary market structures for fixed-income instruments.",
+    "question": "The vast majority of global fixed-income secondary market trading occurs in:",
+    "options": {
+      "A": "Continuous, centralized order-driven public stock exchanges.",
+      "B": "Over-the-counter (OTC) quote-driven dealer markets.",
+      "C": "Pure call auctions held once weekly."
+    },
+    "answer": "B",
+    "explanation": "Unlike equity markets, where trading is heavily concentrated on centralized order-driven electronic exchanges, fixed income is primarily traded in over-the-counter (OTC) dealer networks. Dealers hold inventory and post bid and ask quotes for institutional counterparties.",
+    "distractor_analysis": {
+      "A": "Exchange trading is rare for corporate and sovereign bonds due to the vast proliferation of individual CUSIPs.",
+      "C": "Call auctions are used for sovereign primary auctions, not general day-to-day secondary liquidity."
+    }
+  },
+  {
+    "id": "L1-FI-119",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Fixed-Income Markets: Issuance and Trading",
+    "los": "Describe settlement conventions and settlement cycles for bonds.",
+    "question": "For major sovereign government bonds (such as US Treasuries), standard secondary market settlement convention is typically:",
+    "options": {
+      "A": "T + 0 (same day).",
+      "B": "T + 1 (next business day).",
+      "C": "T + 5 (five business days)."
+    },
+    "answer": "B",
+    "explanation": "US government Treasuries settle on $T+1$ (the next business day following trade date). Corporate bonds and municipal bonds have also transitioned to a $T+1$ standard settlement cycle in modern US markets.",
+    "distractor_analysis": {
+      "A": "$T+0$ settlement is reserved for special cash trades or Fedwire money market operations.",
+      "C": "$T+5$ was an obsolete historical settlement cycle from prior decades."
+    }
+  },
+  {
+    "id": "L1-FI-120",
+    "level": 1,
+    "topic": "Fixed Income",
+    "subtopic": "Fixed-Income Markets: Issuance and Trading",
+    "los": "Describe green bonds and sustainability-linked debt structures.",
+    "question": "A fundamental difference between a 'Green Bond' and a 'Sustainability-Linked Bond' (SLB) is that a Green Bond:",
+    "options": {
+      "A": "Requires proceeds to be ring-fenced exclusively for eligible environmentally beneficial projects (use-of-proceeds).",
+      "B": "Adjusts its coupon rate upward if the issuer fails to achieve targeted greenhouse gas reductions.",
+      "C": "Is entirely unsecured while SLBs must be 100% asset-backed."
+    },
+    "answer": "A",
+    "explanation": "A traditional Green Bond is a 'use-of-proceeds' instrument where the issuer contractually covenants to deploy 100% of proceeds into designated eligible green projects (e.g., renewable energy). In contrast, a Sustainability-Linked Bond (SLB) allows proceeds for general corporate purposes, but its coupon rate steps up or down based on whether the firm meets predefined key performance indicator (KPI) sustainability targets.",
+    "distractor_analysis": {
+      "B": "Coupon step-ups based on company-wide ESG target attainment are the signature mechanism of Sustainability-Linked Bonds (SLBs), not traditional Green Bonds.",
+      "C": "Both Green Bonds and SLBs can be issued as senior unsecured corporate debentures."
+    }
+  }
+]
