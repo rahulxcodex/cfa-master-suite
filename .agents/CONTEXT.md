@@ -32,6 +32,8 @@
   - Currency strictly formatted with `USD`, `EUR`, `GBP` or `\$`.
   - 100% KaTeX delimiter balance (0 unpaired delimiters, 0 stray dollars outside math blocks).
   - 0 schema errors across all 855 questions and 80 item sets.
+  - Full 20-chapter FSA notes section restored with complete CSS class coverage and 6 interactive Chart.js visualizations.
+  - Mobile drawer navigation with responsive sidebar, backdrop overlay, and hamburger toggle.
 - **Live Deployment & Repositories**:
   - **GitHub Repository**: https://github.com/rahulxcodex/cfa-master-suite (main branch)
   - **Live Portal**: https://rahulxcodex.github.io/cfa-master-suite/

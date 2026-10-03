@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CFA Master Study Platform: FSA, Fixed Income & Equity (L1 & L2)</title>
   
+  <meta name="description" content="Unified CFA Program Level 1 & Level 2 Master Exam Preparation Suite. 855 audited questions across Financial Statement Analysis, Fixed Income, and Equity Investments, with 80 case vignettes, 9 simulation engines, and complete 20-chapter reference library.">
+  <link rel="canonical" href="https://rahulxcodex.github.io/cfa-master-suite/">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+  <meta property="og:title" content="CFA Master Study Platform (855 Questions, 9 Sims, 20 Chapters)">
+  <meta property="og:description" content="Comprehensive CFA L1 & L2 prep platform: 855 questions, 80 vignettes, 9 simulations, and full 20-chapter FSA notes with KaTeX & Chart.js.">
+  <meta property="og:url" content="https://rahulxcodex.github.io/cfa-master-suite/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  
   <!-- KaTeX for crisp LaTeX math rendering -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
@@ -14,6 +23,27 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    :focus-visible {
+      outline: 2px solid var(--accent-blue);
+      outline-offset: 2px;
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--bg-primary);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--border-color);
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--text-secondary);
+    }
     :root {
       --bg-primary: #0d1117;
       --bg-secondary: #161b22;
@@ -193,9 +223,163 @@
       background: var(--border-color);
     }
 
-    section { display: none; }
-    section.active { display: block; animation: fadeIn 0.2s ease-in-out; }
+    main > section { display: none; }
+    main > section.active { display: block; animation: fadeIn 0.2s ease-in-out; }
+    .fsa-ref-container section { display: block !important; margin-bottom: 3.5rem; scroll-margin-top: 80px; }
     @keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* Notes Library Classes & Rich Typography */
+    .doc-hero {
+      padding: 2.2rem 2rem;
+      background: linear-gradient(135deg, rgba(88, 166, 255, 0.08), rgba(57, 197, 207, 0.04));
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      margin-bottom: 2.5rem;
+    }
+    .doc-hero h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      letter-spacing: -0.02em;
+      margin-bottom: 0.6rem;
+    }
+    .doc-hero p {
+      font-size: 1.02rem;
+      color: var(--text-secondary);
+      max-width: 850px;
+      line-height: 1.6;
+    }
+    .meta-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 1.2rem;
+    }
+    .badge {
+      display: inline-block;
+      padding: 0.25rem 0.65rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .badge-blue { background: rgba(88, 166, 255, 0.15); color: var(--accent-blue); border: 1px solid rgba(88, 166, 255, 0.3); }
+    .badge-green { background: rgba(63, 185, 80, 0.15); color: var(--accent-emerald); border: 1px solid rgba(63, 185, 80, 0.3); }
+    .badge-purple { background: rgba(188, 140, 255, 0.15); color: var(--accent-purple); border: 1px solid rgba(188, 140, 255, 0.3); }
+    .badge-amber { background: rgba(210, 153, 34, 0.15); color: var(--accent-amber); border: 1px solid rgba(210, 153, 34, 0.3); }
+
+    h2.section-heading {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 0.6rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    h2.section-heading span.num {
+      color: var(--accent-blue);
+      font-size: 1.25rem;
+      font-weight: 800;
+    }
+    h3.subheading {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin: 1.75rem 0 0.75rem;
+    }
+
+    .callout {
+      padding: 1.25rem 1.5rem;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+      border-left: 4px solid var(--accent-blue);
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+      border-right: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+    }
+    .callout-tip { border-left-color: var(--accent-emerald); }
+    .callout-warning { border-left-color: var(--accent-amber); }
+    .callout-danger { border-left-color: var(--accent-rose); }
+    .callout-info { border-left-color: var(--accent-blue); }
+    .callout-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .callout-tip .callout-title { color: var(--accent-emerald); }
+    .callout-warning .callout-title { color: var(--accent-amber); }
+    .callout-danger .callout-title { color: var(--accent-rose); }
+    .callout-info .callout-title { color: var(--accent-blue); }
+
+    .table-container {
+      overflow-x: auto;
+      margin: 1.5rem 0;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+    }
+
+    .formula-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+      margin: 1.25rem 0;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .formula-title {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-secondary);
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .chart-box {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+    .chart-header { margin-bottom: 1rem; }
+    .chart-title { font-size: 1rem; font-weight: 600; color: var(--text-primary); }
+    .chart-desc { font-size: 0.82rem; color: var(--text-secondary); }
+    .chart-canvas-wrap { position: relative; width: 100%; height: 320px; }
+
+    .top-controls {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .btn-ctrl {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      color: var(--text-primary);
+      padding: 0.4rem 0.85rem;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: border-color 0.2s ease;
+    }
+    .btn-ctrl:hover {
+      border-color: var(--accent-blue);
+      color: var(--accent-blue);
+    }
 
     /* Cards & Layout */
     .card {
@@ -494,21 +678,74 @@
       color: var(--accent-blue);
     }
 
+    /* Mobile Drawer & Backdrop Navigation */
+    .menu-toggle-btn {
+      display: none;
+      background: var(--bg-tertiary);
+      color: var(--text-primary);
+      border: 1px solid var(--border-color);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 13px;
+      align-items: center;
+      gap: 6px;
+      transition: background 0.15s;
+    }
+    .menu-toggle-btn:hover {
+      background: var(--border-color);
+    }
+    .sidebar-backdrop {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(2px);
+      z-index: 99;
+    }
+    .sidebar-backdrop.active {
+      display: block;
+    }
+
     /* Responsive adjustments */
     @media (max-width: 900px) {
-      aside { display: none; }
-      main { margin-left: 0; padding: 20px; }
+      .menu-toggle-btn { display: inline-flex; }
+      aside {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 100;
+        transform: translateX(-100%);
+        transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        box-shadow: 4px 0 24px rgba(0, 0, 0, 0.5);
+        display: block !important;
+      }
+      aside.mobile-open {
+        transform: translateX(0);
+      }
+      main { margin-left: 0; padding: 20px 16px; }
       .grid-4, .grid-3, .grid-2 { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
+  <!-- Backdrop overlay for mobile drawer -->
+  <div class="sidebar-backdrop" id="sidebarBackdrop" onclick="closeMobileNav()"></div>
+
   <!-- Unified Sidebar Navigation -->
-  <aside>
-    <div class="sidebar-header">
-      <h1>🎓 CFA Master Platform</h1>
-      <p>Unified Exam Suite (855 Questions)</p>
+  <aside id="appSidebar">
+    <div class="sidebar-header" style="display: flex; justify-content: space-between; align-items: flex-start;">
+      <div>
+        <h1>🎓 CFA Master Platform</h1>
+        <p>Unified Exam Suite (855 Questions)</p>
+      </div>
+      <button class="btn-top" onclick="closeMobileNav()" style="padding: 4px 8px; font-size: 11px; margin-top: 2px;" title="Close Menu">✕</button>
     </div>
     <ul class="nav-links">
       <li><a href="#overview" class="active" onclick="switchTab('overview')"><span>📊 Overview & Telemetry</span></a></li>
@@ -535,8 +772,11 @@
   <!-- Main Content Container -->
   <main>
     <div class="top-bar">
-      <div id="topTitle">
-        <h2>Curriculum Overview & Analytics</h2>
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <button class="menu-toggle-btn" id="menuToggleBtn" onclick="toggleMobileNav()" aria-label="Toggle Navigation">☰ Menu</button>
+        <div id="topTitle">
+          <h2>Curriculum Overview & Analytics</h2>
+        </div>
       </div>
       <div class="stats-pills">
         <div class="stat-pill" style="color: var(--accent-blue);">Total: 855 Questions</div>
@@ -1029,26 +1269,26 @@
           20 Chapters of in-depth theoretical notes, comparative IFRS vs US GAAP matrices, and the master financial ratio formula sheet.
         </p>
         <div class="fsa-nav-bar">
-          <a class="fsa-nav-btn" href="#fsa-sec-01">01. Mechanics</a>
-          <a class="fsa-nav-btn" href="#fsa-sec-02">02. Standards</a>
-          <a class="fsa-nav-btn" href="#fsa-sec-03">03. Income Stmt</a>
-          <a class="fsa-nav-btn" href="#fsa-sec-04">04. Balance Sheet</a>
-          <a class="fsa-nav-btn" href="#fsa-sec-05">05. Cash Flow</a>
-          <a class="fsa-nav-btn" href="#fsa-sec-06">06. Techniques & Ratios</a>
-          <a class="fsa-nav-btn" href="#fsa-sec-07">07. Inventories</a>
-          <a class="fsa-nav-btn" href="#fsa-sec-08">08. Long-Lived Assets</a>
-          <a class="fsa-nav-btn" href="#fsa-sec-09">09. Taxes</a>
-          <a class="fsa-nav-btn" href="#fsa-sec-10">10. Liabilities</a>
-          <a class="fsa-nav-btn" href="#fsa-sec-11">11. Leases</a>
-          <a class="fsa-nav-btn" href="#fsa-sec-12">12. Reporting Quality</a>
-          <a class="fsa-nav-btn" href="#fsa-sec-13">13. Intercorporate</a>
-          <a class="fsa-nav-btn" href="#fsa-sec-14">14. Pensions</a>
-          <a class="fsa-nav-btn" href="#fsa-sec-15">15. Multinational FX</a>
-          <a class="fsa-nav-btn" href="#fsa-sec-16">16. Financial Inst.</a>
-          <a class="fsa-nav-btn" href="#fsa-sec-17">17. Quality Evaluation</a>
-          <a class="fsa-nav-btn" href="#fsa-sec-18">18. Integration</a>
-          <a class="fsa-nav-btn" href="#fsa-sec-matrix" style="color: var(--accent-amber); font-weight: 700;">GAAP vs IFRS Matrix</a>
-          <a class="fsa-nav-btn" href="#fsa-sec-formulas" style="color: var(--accent-emerald); font-weight: 700;">Formula Sheet</a>
+          <a class="fsa-nav-btn" href="#m1-intro">01. Mechanics</a>
+          <a class="fsa-nav-btn" href="#m2-standards">02. Standards</a>
+          <a class="fsa-nav-btn" href="#m3-income-statement">03. Income Stmt</a>
+          <a class="fsa-nav-btn" href="#m4-balance-sheet">04. Balance Sheet</a>
+          <a class="fsa-nav-btn" href="#m5-cash-flow">05. Cash Flow</a>
+          <a class="fsa-nav-btn" href="#m6-ratios">06. Techniques & Ratios</a>
+          <a class="fsa-nav-btn" href="#m7-inventories">07. Inventories</a>
+          <a class="fsa-nav-btn" href="#m8-long-lived-assets">08. Long-Lived Assets</a>
+          <a class="fsa-nav-btn" href="#m9-taxes">09. Taxes</a>
+          <a class="fsa-nav-btn" href="#m10-debt">10. Liabilities</a>
+          <a class="fsa-nav-btn" href="#m11-leases">11. Leases</a>
+          <a class="fsa-nav-btn" href="#m12-quality-l1">12. Reporting Quality</a>
+          <a class="fsa-nav-btn" href="#m13-intercorporate">13. Intercorporate</a>
+          <a class="fsa-nav-btn" href="#m14-pensions">14. Pensions</a>
+          <a class="fsa-nav-btn" href="#m15-multinational">15. Multinational FX</a>
+          <a class="fsa-nav-btn" href="#m16-financial-institutions">16. Financial Inst.</a>
+          <a class="fsa-nav-btn" href="#m17-quality-l2">17. Quality Evaluation</a>
+          <a class="fsa-nav-btn" href="#m18-integration">18. Integration</a>
+          <a class="fsa-nav-btn" href="#master-gaap-ifrs" style="color: var(--accent-amber); font-weight: 700;">GAAP vs IFRS Matrix</a>
+          <a class="fsa-nav-btn" href="#master-formulas" style="color: var(--accent-emerald); font-weight: 700;">Formula Sheet</a>
         </div>
       </div>
 
@@ -1358,7 +1598,7 @@
           <div class="chart-desc">Relative component contributions between an operational leader vs. a debt-leveraged firm.</div>
         </div>
         <div class="chart-canvas-wrap">
-          <canvas id="dupontChart"></canvas>
+          <canvas id="notesDupontChart"></canvas>
         </div>
       </div>
 
@@ -2242,7 +2482,7 @@
           <div class="card-title">Merton Structural Credit Model: Default Boundary</div>
           <p style="color: var(--text-secondary); font-size: 12px; margin-bottom: 12px;">Equity as a call option on corporate assets with strike = face value of debt $K$.</p>
           <div class="svg-container">
-            <svg width="450" height="220" viewBox="0 0 450 220">
+            <svg viewBox="0 0 450 220" style="width: 100%; max-width: 450px; height: auto; display: block; margin: 0 auto;">
               <line x1="40" y1="180" x2="420" y2="180" stroke="var(--text-secondary)" stroke-width="2"/>
               <line x1="40" y1="20" x2="40" y2="180" stroke="var(--text-secondary)" stroke-width="2"/>
               <text x="350" y="200" fill="var(--text-secondary)" font-size="11">Time to Maturity (T)</text>
@@ -2261,7 +2501,7 @@
           <div class="card-title">Bond Price-Yield Relationship: Convexity</div>
           <p style="color: var(--text-secondary); font-size: 12px; margin-bottom: 12px;">Option-free positive convexity vs. Callable bond negative convexity at lower yields.</p>
           <div class="svg-container">
-            <svg width="450" height="220" viewBox="0 0 450 220">
+            <svg viewBox="0 0 450 220" style="width: 100%; max-width: 450px; height: auto; display: block; margin: 0 auto;">
               <line x1="40" y1="180" x2="420" y2="180" stroke="var(--text-secondary)" stroke-width="2"/>
               <line x1="40" y1="20" x2="40" y2="180" stroke="var(--text-secondary)" stroke-width="2"/>
               <text x="360" y="200" fill="var(--text-secondary)" font-size="11">Yield to Maturity</text>
@@ -2280,7 +2520,7 @@
           <div class="card-title">Porter's Five Forces Framework</div>
           <p style="color: var(--text-secondary); font-size: 12px; margin-bottom: 12px;">Industry competitive structure analysis for equity analysts.</p>
           <div class="svg-container">
-            <svg width="450" height="220" viewBox="0 0 450 220">
+            <svg viewBox="0 0 450 220" style="width: 100%; max-width: 450px; height: auto; display: block; margin: 0 auto;">
               <rect x="150" y="80" width="150" height="60" rx="8" fill="var(--bg-secondary)" stroke="var(--accent-blue)" stroke-width="2"/>
               <text x="225" y="105" fill="var(--text-primary)" font-size="12" font-weight="700" text-anchor="middle">Industry Rivalry</text>
               <text x="225" y="125" fill="var(--text-secondary)" font-size="10" text-anchor="middle">Existing Competitors</text>
@@ -2328,9 +2568,25 @@
     let vignettesMap = {};
     let currentL2VignetteId = '';
 
+    // Mobile Navigation Controls
+    function toggleMobileNav() {
+      const sidebar = document.getElementById('appSidebar');
+      const backdrop = document.getElementById('sidebarBackdrop');
+      if (sidebar) sidebar.classList.toggle('mobile-open');
+      if (backdrop) backdrop.classList.toggle('active');
+    }
+
+    function closeMobileNav() {
+      const sidebar = document.getElementById('appSidebar');
+      const backdrop = document.getElementById('sidebarBackdrop');
+      if (sidebar) sidebar.classList.remove('mobile-open');
+      if (backdrop) backdrop.classList.remove('active');
+    }
+
     // Tab Navigation
     function switchTab(tabId) {
-      document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+      closeMobileNav();
+      document.querySelectorAll('main > section').forEach(s => s.classList.remove('active'));
       const activeSec = document.getElementById(tabId);
       if (activeSec) activeSec.classList.add('active');
 
@@ -2356,7 +2612,11 @@
       };
 
       document.getElementById('topTitle').innerHTML = `<h2>${titles[tabId] || 'CFA Master Suite'}</h2>`;
+      if (window.location.hash !== '#' + tabId) {
+        history.replaceState(null, '', '#' + tabId);
+      }
       window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.dispatchEvent(new Event('resize'));
       renderMath();
     }
 
@@ -2366,6 +2626,7 @@
       const next = current === 'dark' ? 'light' : 'dark';
       document.documentElement.setAttribute('data-theme', next);
       localStorage.setItem('cfa_theme', next);
+      window.dispatchEvent(new Event('resize'));
     }
 
     const savedTheme = localStorage.getItem('cfa_theme');
@@ -2956,6 +3217,7 @@
           </div>
         </div>
       `;
+      renderMath();
     }
 
     // ==========================================
@@ -3033,6 +3295,7 @@
         <strong>Calculated ROE:</strong> ${(roe * 100).toFixed(2)}% | 
         <em>Formula:</em> $\\text{Tax Burden} \\times \\text{Int Burden} \\times \\text{EBIT Margin} \\times \\text{Turnover} \\times \\text{Leverage}$
       `;
+      renderMath();
     }
 
     // ==========================================
@@ -3209,6 +3472,7 @@
           Intrinsic Value ($V_0$): ${intrinsicValue.toFixed(2)} USD
         </div>
       `;
+      renderMath();
     }
 
     // ==========================================
@@ -3399,6 +3663,204 @@
           ${riskType}
         </div>
       `;
+      renderMath();
+    }
+
+    // ==========================================
+    // FSA REFERENCE NOTES CHARTS (6 CHARTS)
+    // ==========================================
+    function initFsaNotesCharts() {
+      // 1. Notes DuPont Multiplier Chart
+      const ctxDuPont = document.getElementById('notesDupontChart');
+      if (ctxDuPont && !Chart.getChart(ctxDuPont)) {
+        new Chart(ctxDuPont, {
+          type: 'bar',
+          data: {
+            labels: ['Tax Burden (NI/EBT)', 'Interest Burden (EBT/EBIT)', 'Operating Margin (EBIT/Rev)', 'Asset Turnover (Rev/Assets)', 'Leverage (Assets/Equity)'],
+            datasets: [
+              {
+                label: 'High Margin / Low Debt Firm (ROE: 18%)',
+                data: [0.78, 0.95, 0.22, 0.85, 1.35],
+                backgroundColor: 'rgba(88, 166, 255, 0.7)'
+              },
+              {
+                label: 'Low Margin / High Debt Firm (ROE: 18%)',
+                data: [0.75, 0.65, 0.08, 1.60, 2.88],
+                backgroundColor: 'rgba(248, 81, 73, 0.7)'
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { position: 'top' } },
+            scales: { y: { beginAtZero: true, grid: { color: '#21262d' } }, x: { grid: { color: '#21262d' } } }
+          }
+        });
+      }
+
+      // 2. Inventory Chart (FIFO vs LIFO vs Weighted Average)
+      const ctxInv = document.getElementById('inventoryChart');
+      if (ctxInv && !Chart.getChart(ctxInv)) {
+        new Chart(ctxInv, {
+          type: 'bar',
+          data: {
+            labels: ['Ending Inventory', 'COGS', 'Gross Profit', 'Taxes Paid', 'Operating Cash Flow (CFO)'],
+            datasets: [
+              {
+                label: 'FIFO (Earliest Costs to COGS)',
+                data: [120, 80, 120, 24, 96],
+                backgroundColor: 'rgba(63, 185, 80, 0.7)'
+              },
+              {
+                label: 'Weighted Average',
+                data: [110, 90, 110, 22, 98],
+                backgroundColor: 'rgba(210, 153, 34, 0.7)'
+              },
+              {
+                label: 'LIFO (Latest Costs to COGS)',
+                data: [100, 100, 100, 20, 100],
+                backgroundColor: 'rgba(248, 81, 73, 0.7)'
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { position: 'top' } },
+            scales: { y: { beginAtZero: true, grid: { color: '#21262d' } }, x: { grid: { color: '#21262d' } } }
+          }
+        });
+      }
+
+      // 3. Depreciation Methods Chart
+      const ctxDep = document.getElementById('depreciationChart');
+      if (ctxDep && !Chart.getChart(ctxDep)) {
+        new Chart(ctxDep, {
+          type: 'line',
+          data: {
+            labels: ['Year 1', 'Year 2', 'Year 3', 'Year 4', 'Year 5'],
+            datasets: [
+              {
+                label: 'Straight-Line Depreciation (SLN)',
+                data: [18000, 18000, 18000, 18000, 18000],
+                borderColor: '#58a6ff',
+                backgroundColor: 'rgba(88, 166, 255, 0.1)',
+                tension: 0.1
+              },
+              {
+                label: 'Double Declining Balance (DDB 40%)',
+                data: [40000, 24000, 14400, 8640, 2960],
+                borderColor: '#f85149',
+                backgroundColor: 'rgba(248, 81, 73, 0.1)',
+                tension: 0.1
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { position: 'top' } },
+            scales: { y: { beginAtZero: true, grid: { color: '#21262d' } }, x: { grid: { color: '#21262d' } } }
+          }
+        });
+      }
+
+      // 4. Bond Amortization Chart
+      const ctxBond = document.getElementById('bondChart');
+      if (ctxBond && !Chart.getChart(ctxBond)) {
+        new Chart(ctxBond, {
+          type: 'line',
+          data: {
+            labels: ['Issue Date', 'Year 1', 'Year 2', 'Year 3', 'Year 4', 'Maturity (Yr 5)'],
+            datasets: [
+              {
+                label: 'Premium Bond (Carrying Value drops to Par)',
+                data: [1075.82, 1063.40, 1049.74, 1034.71, 1018.18, 1000.00],
+                borderColor: '#3fb950',
+                tension: 0.1
+              },
+              {
+                label: 'Par Bond (Constant at 1,000 USD)',
+                data: [1000, 1000, 1000, 1000, 1000, 1000],
+                borderColor: '#8b949e',
+                borderDash: [5, 5]
+              },
+              {
+                label: 'Discount Bond (Carrying Value pulls to Par)',
+                data: [924.18, 936.60, 950.26, 965.29, 981.82, 1000.00],
+                borderColor: '#bc8cff',
+                tension: 0.1
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { position: 'top' } },
+            scales: { y: { beginAtZero: true, grid: { color: '#21262d' } }, x: { grid: { color: '#21262d' } } }
+          }
+        });
+      }
+
+      // 5. Pension Chart
+      const ctxPen = document.getElementById('pensionChart');
+      if (ctxPen && !Chart.getChart(ctxPen)) {
+        new Chart(ctxPen, {
+          type: 'bar',
+          data: {
+            labels: ['Beg Balance', 'Service Cost', 'Interest / Return', 'Contributions', 'Benefits Paid', 'Ending Balance'],
+            datasets: [
+              {
+                label: 'PBO (Pension Obligation)',
+                data: [8000, 650, 480, 0, -450, 8680],
+                backgroundColor: 'rgba(248, 81, 73, 0.7)'
+              },
+              {
+                label: 'Plan Assets (FVPA)',
+                data: [7200, 0, 520, 600, -450, 7870],
+                backgroundColor: 'rgba(63, 185, 80, 0.7)'
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { position: 'top' } },
+            scales: { y: { beginAtZero: true, grid: { color: '#21262d' } }, x: { grid: { color: '#21262d' } } }
+          }
+        });
+      }
+
+      // 6. FX Translation Chart
+      const ctxFx = document.getElementById('fxChart');
+      if (ctxFx && !Chart.getChart(ctxFx)) {
+        new Chart(ctxFx, {
+          type: 'radar',
+          data: {
+            labels: ['Operating Margin', 'Net Margin', 'Current Ratio', 'Debt / Equity', 'Return on Equity (ROE)'],
+            datasets: [
+              {
+                label: 'Current Rate Method (Pure Translation)',
+                data: [85, 85, 90, 80, 88],
+                borderColor: '#58a6ff',
+                backgroundColor: 'rgba(88, 166, 255, 0.2)'
+              },
+              {
+                label: 'Temporal Method (Mixed Rates Impact)',
+                data: [70, 60, 95, 65, 72],
+                borderColor: '#f85149',
+                backgroundColor: 'rgba(248, 81, 73, 0.2)'
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { position: 'top' } }
+          }
+        });
+      }
     }
 
     // Initialization on window load
@@ -3416,14 +3878,39 @@
       initWaterfallSim();
       updateTranslationSim();
       initPrepaymentSim();
+      initFsaNotesCharts();
       updateScoreBadge();
       renderMath();
 
-      // Check URL hash for initial tab
+      // Check URL hash for initial tab or sub-section
       const hash = window.location.hash.replace('#', '');
-      if (hash && document.getElementById(hash)) {
-        switchTab(hash);
+      if (hash) {
+        const sec = document.getElementById(hash);
+        if (sec && sec.tagName === 'SECTION' && sec.parentElement.tagName === 'MAIN') {
+          switchTab(hash);
+        } else if (sec) {
+          switchTab('fsa-reference');
+          setTimeout(() => {
+            sec.scrollIntoView({ behavior: 'smooth' });
+          }, 150);
+        }
       }
+
+      // Hash change listener for browser navigation
+      window.addEventListener('hashchange', () => {
+        const h = window.location.hash.replace('#', '');
+        if (h) {
+          const target = document.getElementById(h);
+          if (target && target.tagName === 'SECTION' && target.parentElement.tagName === 'MAIN') {
+            switchTab(h);
+          } else if (target) {
+            switchTab('fsa-reference');
+            setTimeout(() => {
+              target.scrollIntoView({ behavior: 'smooth' });
+            }, 100);
+          }
+        }
+      });
     });
   </script>
 </body>
