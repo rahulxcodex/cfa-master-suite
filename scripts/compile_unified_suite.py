@@ -20,6 +20,8 @@ FI_EQ_FILES = [
     ("Equity Investments", os.path.join(FI_EQ_DIR, "l1_equity.json")),
     ("Fixed Income", os.path.join(FI_EQ_DIR, "l2_fixed_income.json")),
     ("Equity Investments", os.path.join(FI_EQ_DIR, "l2_equity.json")),
+    ("Portfolio Management", os.path.join(FI_EQ_DIR, "l1_portfolio_mgmt.json")),
+    ("Portfolio Management", os.path.join(FI_EQ_DIR, "l2_portfolio_mgmt.json")),
 ]
 
 def compile_all():
@@ -57,15 +59,15 @@ def compile_all():
             q["module_title"] = q.get("subtopic") or q.get("topic") or subj
             if q.get("level") == 2:
                 vid = q.get("vignette_id", "V00")
-                prefix = "FI" if subj == "Fixed Income" else "EQ"
+                prefix = "FI" if subj == "Fixed Income" else ("EQ" if subj == "Equity Investments" else "PM")
                 q["global_vignette_id"] = f"{prefix}-{vid}"
             all_questions.append(q)
             fi_eq_count += 1
-    print(f"Loaded {fi_eq_count} Fixed Income & Equity questions.")
+    print(f"Loaded {fi_eq_count} Fixed Income, Equity & PM questions.")
 
     total = len(all_questions)
     print(f"Total consolidated questions: {total}")
-    assert total == 875, f"Expected 875 questions, found {total}"
+    assert total == 1085, f"Expected 1085 questions, found {total}"
 
     # Validation of fields
     for q in all_questions:

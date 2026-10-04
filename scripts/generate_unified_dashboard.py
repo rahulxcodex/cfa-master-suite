@@ -473,6 +473,44 @@ dashboard_template = r'''<!DOCTYPE html>
       grid-template-columns: repeat(4, 1fr);
       gap: 16px;
     }
+    .grid-5 {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+    }
+    @media (max-width: 1200px) {
+      .grid-5 { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .grid-5 { grid-template-columns: 1fr; }
+    }
+    .filter-pills {
+      display: inline-flex;
+      gap: 4px;
+      background: var(--bg-tertiary);
+      padding: 3px;
+      border-radius: 6px;
+      border: 1px solid var(--border-color);
+    }
+    .filter-pill {
+      padding: 5px 12px;
+      border-radius: 4px;
+      border: none;
+      background: transparent;
+      color: var(--text-secondary);
+      font-size: 11.5px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .filter-pill:hover {
+      color: var(--text-primary);
+    }
+    .filter-pill.active {
+      background: var(--accent-blue);
+      color: #ffffff;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    }
 
     /* Controls & Forms */
     .control-group { margin-bottom: 14px; }
@@ -828,10 +866,10 @@ dashboard_template = r'''<!DOCTYPE html>
     </div>
     <ul class="nav-links">
       <li><a href="#overview" class="active" onclick="switchTab('overview')"><span>📊 Overview & Telemetry</span></a></li>
-      <li><a href="#l1-practice" onclick="switchTab('l1-practice')"><span>📝 Level 1 Question Bank</span> <span class="nav-badge">425 Q</span></a></li>
-      <li><a href="#l2-vignettes" onclick="switchTab('l2-vignettes')"><span>📑 Level 2 Case Vignettes</span> <span class="nav-badge">84 V / 450 Q</span></a></li>
+      <li><a href="#l1-practice" onclick="switchTab('l1-practice')"><span>📝 Level 1 Question Bank</span> <span class="nav-badge">545 Q</span></a></li>
+      <li><a href="#l2-vignettes" onclick="switchTab('l2-vignettes')"><span>📑 Level 2 Case Vignettes</span> <span class="nav-badge">102 V / 540 Q</span></a></li>
       
-      <li class="nav-divider"><span>FINANCIAL SIMULATIONS (9)</span></li>
+      <li class="nav-divider"><span>FINANCIAL SIMULATIONS (12)</span></li>
       <li><a href="#sim-yield" onclick="switchTab('sim-yield')"><span>📈 Yield Curve Simulator</span></a></li>
       <li><a href="#sim-tree" onclick="switchTab('sim-tree')"><span>🌳 Binomial Tree Engine</span></a></li>
       <li><a href="#sim-equity" onclick="switchTab('sim-equity')"><span>📊 DDM & DuPont Explorer</span></a></li>
@@ -841,11 +879,15 @@ dashboard_template = r'''<!DOCTYPE html>
       <li><a href="#sim-waterfall" onclick="switchTab('sim-waterfall')"><span>🌊 FCFF→FCFE Waterfall</span></a></li>
       <li><a href="#sim-translation" onclick="switchTab('sim-translation')"><span>💱 Currency Translation</span></a></li>
       <li><a href="#sim-prepayment" onclick="switchTab('sim-prepayment')"><span>🏠 MBS Prepayment Simulator</span></a></li>
+      <li><a href="#sim-frontier" onclick="switchTab('sim-frontier')"><span>🎯 Markowitz Frontier & CAL</span></a></li>
+      <li><a href="#sim-fundamental-law" onclick="switchTab('sim-fundamental-law')"><span>⚖️ Fundamental Law of Active Mgmt</span></a></li>
+      <li><a href="#sim-rebalancing" onclick="switchTab('sim-rebalancing')"><span>📐 Dynamic Rebalancing Corridors</span></a></li>
       
       <li class="nav-divider"><span>CURRICULUM REFERENCE NOTES</span></li>
       <li><a href="#fsa-reference" onclick="switchTab('fsa-reference')"><span>📖 FSA Reference Notes (Ch 1-20)</span></a></li>
       <li><a href="#fi-reference" onclick="switchTab('fi-reference')"><span>📈 Fixed Income Master Notes</span></a></li>
       <li><a href="#eq-reference" onclick="switchTab('eq-reference')"><span>📊 Equity Valuation Reference</span></a></li>
+      <li><a href="#pm-reference" onclick="switchTab('pm-reference')"><span>💼 Portfolio Management Notes</span></a></li>
       <li><a href="#reference-diagrams" onclick="switchTab('reference-diagrams')"><span>📐 Visual Frameworks</span></a></li>
     </ul>
   </aside>
@@ -860,7 +902,7 @@ dashboard_template = r'''<!DOCTYPE html>
         </div>
       </div>
       <div class="stats-pills">
-        <div class="stat-pill" style="color: var(--accent-blue);">Total: 875 Questions</div>
+        <div class="stat-pill" style="color: var(--accent-blue);">Total: 1,085 Questions</div>
         <div class="stat-pill" style="color: var(--accent-emerald);">Score: <span id="scoreDisplay">0 / 0 (0%)</span></div>
         <button class="btn-top" onclick="resetScores()">🔄 Reset Score</button>
         <button class="btn-top" onclick="toggleTheme()">🌓 Theme</button>
@@ -869,26 +911,31 @@ dashboard_template = r'''<!DOCTYPE html>
 
     <!-- 1. OVERVIEW & TELEMETRY -->
     <section id="overview" class="active">
-      <div class="grid-4" style="margin-bottom: 24px;">
+      <div class="grid-5" style="margin-bottom: 24px;">
         <div class="card" style="margin-bottom: 0;">
           <div style="font-size: 11px; color: var(--text-secondary); text-transform: uppercase; font-weight: 700;">Financial Statement Analysis</div>
-          <div style="font-size: 28px; font-weight: 700; color: var(--accent-amber); margin-top: 5px;">460 Qs</div>
-          <div style="font-size: 11.5px; color: var(--text-secondary); margin-top: 4px;">190 L1 MCQs + 270 L2 (48 Vignettes)</div>
+          <div style="font-size: 26px; font-weight: 700; color: var(--accent-amber); margin-top: 5px;">460 Qs</div>
+          <div style="font-size: 11px; color: var(--text-secondary); margin-top: 4px;">190 L1 + 270 L2 (48 Vignettes)</div>
         </div>
         <div class="card" style="margin-bottom: 0;">
           <div style="font-size: 11px; color: var(--text-secondary); text-transform: uppercase; font-weight: 700;">Fixed Income</div>
-          <div style="font-size: 28px; font-weight: 700; color: var(--accent-cyan); margin-top: 5px;">205 Qs</div>
-          <div style="font-size: 11.5px; color: var(--text-secondary); margin-top: 4px;">120 L1 MCQs + 85 L2 (17 Vignettes)</div>
+          <div style="font-size: 26px; font-weight: 700; color: var(--accent-cyan); margin-top: 5px;">205 Qs</div>
+          <div style="font-size: 11px; color: var(--text-secondary); margin-top: 4px;">120 L1 + 85 L2 (17 Vignettes)</div>
         </div>
         <div class="card" style="margin-bottom: 0;">
           <div style="font-size: 11px; color: var(--text-secondary); text-transform: uppercase; font-weight: 700;">Equity Investments</div>
-          <div style="font-size: 28px; font-weight: 700; color: var(--accent-emerald); margin-top: 5px;">210 Qs</div>
-          <div style="font-size: 11.5px; color: var(--text-secondary); margin-top: 4px;">115 L1 MCQs + 95 L2 (19 Vignettes)</div>
+          <div style="font-size: 26px; font-weight: 700; color: var(--accent-emerald); margin-top: 5px;">210 Qs</div>
+          <div style="font-size: 11px; color: var(--text-secondary); margin-top: 4px;">115 L1 + 95 L2 (19 Vignettes)</div>
+        </div>
+        <div class="card" style="margin-bottom: 0;">
+          <div style="font-size: 11px; color: var(--text-secondary); text-transform: uppercase; font-weight: 700;">Portfolio Management</div>
+          <div style="font-size: 26px; font-weight: 700; color: var(--accent-purple); margin-top: 5px;">210 Qs</div>
+          <div style="font-size: 11px; color: var(--text-secondary); margin-top: 4px;">120 L1 + 90 L2 (18 Vignettes)</div>
         </div>
         <div class="card" style="margin-bottom: 0;">
           <div style="font-size: 11px; color: var(--text-secondary); text-transform: uppercase; font-weight: 700;">Total Master Suite</div>
-          <div style="font-size: 28px; font-weight: 700; color: var(--accent-blue); margin-top: 5px;">875 Qs</div>
-          <div style="font-size: 11.5px; color: var(--text-secondary); margin-top: 4px;">425 L1 + 450 L2 (84 Vignettes) + 9 Sims</div>
+          <div style="font-size: 26px; font-weight: 700; color: var(--accent-blue); margin-top: 5px;">1,085 Qs</div>
+          <div style="font-size: 11px; color: var(--text-secondary); margin-top: 4px;">545 L1 + 540 L2 (102 V) + 12 Sims</div>
         </div>
       </div>
 
@@ -910,14 +957,15 @@ dashboard_template = r'''<!DOCTYPE html>
       <div class="card">
         <div class="card-title">Quick Launch Study Portals</div>
         <div class="grid-3" style="margin-bottom: 12px;">
-          <button class="btn" onclick="switchTab('l1-practice')">📝 Level 1 Question Bank (425 Q)</button>
-          <button class="btn btn-secondary" onclick="switchTab('l2-vignettes')">📑 Level 2 Case Vignettes (84 V)</button>
-          <button class="btn btn-secondary" onclick="switchTab('sim-yield')">🔬 Financial Simulations Lab (9)</button>
+          <button class="btn" onclick="switchTab('l1-practice')">📝 Level 1 Question Bank (545 Q)</button>
+          <button class="btn btn-secondary" onclick="switchTab('l2-vignettes')">📑 Level 2 Case Vignettes (102 V)</button>
+          <button class="btn btn-secondary" onclick="switchTab('sim-yield')">🔬 Financial Simulations Lab (12)</button>
         </div>
-        <div class="grid-3">
-          <button class="btn btn-secondary" onclick="switchTab('fsa-reference')">📖 FSA Reference Notes (Ch 1-20)</button>
-          <button class="btn btn-secondary" onclick="switchTab('fi-reference')">📈 Fixed Income Notes & Formulas</button>
-          <button class="btn btn-secondary" onclick="switchTab('eq-reference')">📊 Equity Valuation Reference</button>
+        <div class="grid-4">
+          <button class="btn btn-secondary" onclick="switchTab('fsa-reference')">📖 FSA Reference Notes</button>
+          <button class="btn btn-secondary" onclick="switchTab('fi-reference')">📈 Fixed Income Notes</button>
+          <button class="btn btn-secondary" onclick="switchTab('eq-reference')">📊 Equity Valuation Notes</button>
+          <button class="btn btn-secondary" onclick="switchTab('pm-reference')">💼 Portfolio Management</button>
         </div>
       </div>
     </section>
@@ -925,15 +973,16 @@ dashboard_template = r'''<!DOCTYPE html>
     <!-- 2. LEVEL 1 QUESTION BANK -->
     <section id="l1-practice">
       <div class="card">
-        <div class="card-title">Level 1 Multiple-Choice Question Bank (425 Questions)</div>
-        <div class="grid-3" style="margin-bottom: 16px;">
+        <div class="card-title">Level 1 Multiple-Choice Question Bank (545 Questions)</div>
+        <div class="grid-4" style="margin-bottom: 16px;">
           <div class="control-group">
             <label>Filter Subject:</label>
             <select id="l1SubjectSelect" onchange="onL1SubjectChange()">
-              <option value="ALL">All Subjects (425 Questions)</option>
+              <option value="ALL">All Subjects (545 Questions)</option>
               <option value="Financial Statement Analysis">Financial Statement Analysis (190 Qs)</option>
               <option value="Fixed Income">Fixed Income (120 Qs)</option>
               <option value="Equity Investments">Equity Investments (115 Qs)</option>
+              <option value="Portfolio Management">Portfolio Management (120 Qs)</option>
             </select>
           </div>
           <div class="control-group">
@@ -943,14 +992,22 @@ dashboard_template = r'''<!DOCTYPE html>
             </select>
           </div>
           <div class="control-group">
+            <label>Question Type Filter:</label>
+            <div class="filter-pills">
+              <button class="filter-pill active" id="l1TypeAll" onclick="setL1TypeFilter('ALL')">All</button>
+              <button class="filter-pill" id="l1TypeNum" onclick="setL1TypeFilter('NUMERICAL')">🧮 Numericals</button>
+              <button class="filter-pill" id="l1TypeTheory" onclick="setL1TypeFilter('THEORY')">📖 Theory</button>
+            </div>
+          </div>
+          <div class="control-group">
             <label>Search Keyword / LOS:</label>
-            <input type="text" id="l1SearchInput" placeholder="e.g. Duration, FIFO, Goodwill, DuPont..." oninput="onL1Search()">
+            <input type="text" id="l1SearchInput" placeholder="e.g. Duration, CAPM, Sharpe, Beta..." oninput="onL1Search()">
           </div>
         </div>
 
         <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); padding-top: 14px; flex-wrap: wrap; gap: 10px;">
           <div style="font-weight: 600; color: var(--accent-blue);" id="l1CountBadge">
-            Showing Question 1 of 425
+            Showing Question 1 of 545
           </div>
           <div class="btn-group">
             <button class="btn btn-secondary" onclick="prevL1Question()">← Previous</button>
@@ -969,20 +1026,29 @@ dashboard_template = r'''<!DOCTYPE html>
     <!-- 3. LEVEL 2 CASE VIGNETTES -->
     <section id="l2-vignettes">
       <div class="card">
-        <div class="card-title">Level 2 Vignette & Item-Set Explorer (84 Vignettes / 450 Questions)</div>
-        <div class="l2-filter-grid" style="margin-bottom: 16px;">
+        <div class="card-title">Level 2 Vignette & Item-Set Explorer (102 Vignettes / 540 Questions)</div>
+        <div class="grid-4" style="margin-bottom: 16px;">
           <div class="control-group">
             <label>Filter Subject:</label>
             <select id="l2SubjectSelect" onchange="onL2SubjectChange()">
-              <option value="ALL">All Subjects (84 Vignettes / 450 Qs)</option>
-              <option value="Financial Statement Analysis">Financial Statement Analysis (48 Vignettes / 270 Qs)</option>
-              <option value="Fixed Income">Fixed Income (17 Vignettes / 85 Qs)</option>
-              <option value="Equity Investments">Equity Investments (19 Vignettes / 95 Qs)</option>
+              <option value="ALL">All Subjects (102 Vignettes / 540 Qs)</option>
+              <option value="Financial Statement Analysis">Financial Statement Analysis (48 V / 270 Qs)</option>
+              <option value="Fixed Income">Fixed Income (17 V / 85 Qs)</option>
+              <option value="Equity Investments">Equity Investments (19 V / 95 Qs)</option>
+              <option value="Portfolio Management">Portfolio Management (18 V / 90 Qs)</option>
             </select>
           </div>
           <div class="control-group">
             <label>Select Case Vignette:</label>
             <select id="l2VignetteSelect" onchange="loadL2Vignette()"></select>
+          </div>
+          <div class="control-group">
+            <label>Question Type Filter:</label>
+            <div class="filter-pills">
+              <button class="filter-pill active" id="l2TypeAll" onclick="setL2TypeFilter('ALL')">All</button>
+              <button class="filter-pill" id="l2TypeNum" onclick="setL2TypeFilter('NUMERICAL')">🧮 Numericals</button>
+              <button class="filter-pill" id="l2TypeTheory" onclick="setL2TypeFilter('THEORY')">📖 Theory</button>
+            </div>
           </div>
           <div class="control-group">
             <label>Search Vignettes / Cases:</label>
@@ -1362,12 +1428,150 @@ dashboard_template = r'''<!DOCTYPE html>
       </div>
     </section>
 
+    <!-- 10. SIMULATION 10: MARKOWITZ MEAN-VARIANCE FRONTIER & CAL OPTIMIZER -->
+    <section id="sim-frontier">
+      <div class="card">
+        <div class="card-title">🎯 Simulation 10: Markowitz Mean-Variance Frontier & CAL Optimizer</div>
+        <p style="color: var(--text-secondary); margin-bottom: 15px;">
+          Explore Modern Portfolio Theory (MPT) dynamics. Adjust expected returns, asset volatilities, and cross-asset correlation \(\rho_{1,2}\) to observe the curvature of the risky investment opportunity set, the Global Minimum Variance (GMV) portfolio, and the tangency Capital Allocation Line (CAL). Calibrate investor risk aversion \(A\) to locate optimal capital allocation \(y^*\) on the indifference curve \(U = E(R) - \frac{1}{2}A\sigma^2\).
+        </p>
+        <div class="grid-2">
+          <div>
+            <div class="control-group">
+              <label>Asset 1 Expected Return \(E(R_1)\): <span id="valSim10R1" style="color: var(--accent-blue);">12.0%</span></label>
+              <input type="range" id="sim10R1" min="4" max="25" step="0.5" value="12" oninput="updateFrontierSim()">
+            </div>
+            <div class="control-group">
+              <label>Asset 1 Volatility \(\sigma_1\): <span id="valSim10Sig1" style="color: var(--accent-cyan);">20.0%</span></label>
+              <input type="range" id="sim10Sig1" min="5" max="35" step="0.5" value="20" oninput="updateFrontierSim()">
+            </div>
+            <div class="control-group">
+              <label>Asset 2 Expected Return \(E(R_2)\): <span id="valSim10R2" style="color: var(--accent-emerald);">7.0%</span></label>
+              <input type="range" id="sim10R2" min="2" max="15" step="0.5" value="7" oninput="updateFrontierSim()">
+            </div>
+            <div class="control-group">
+              <label>Asset 2 Volatility \(\sigma_2\): <span id="valSim10Sig2" style="color: var(--accent-amber);">12.0%</span></label>
+              <input type="range" id="sim10Sig2" min="4" max="25" step="0.5" value="12" oninput="updateFrontierSim()">
+            </div>
+            <div class="control-group">
+              <label>Correlation \(\rho_{1,2}\): <span id="valSim10Rho" style="color: var(--accent-purple);">0.20</span></label>
+              <input type="range" id="sim10Rho" min="-100" max="100" step="5" value="20" oninput="updateFrontierSim()">
+            </div>
+            <div class="control-group">
+              <label>Risk-Free Rate \(R_f\): <span id="valSim10Rf" style="color: var(--accent-rose);">3.50%</span></label>
+              <input type="range" id="sim10Rf" min="0" max="8" step="0.25" value="3.5" oninput="updateFrontierSim()">
+            </div>
+            <div class="control-group">
+              <label>Investor Risk Aversion (\(A\)): <span id="valSim10A" style="color: var(--text-primary);">4.0</span></label>
+              <input type="range" id="sim10A" min="1" max="10" step="0.5" value="4" oninput="updateFrontierSim()">
+            </div>
+          </div>
+          <div>
+            <div class="chart-canvas-wrap" style="height: 320px;">
+              <canvas id="frontierChart"></canvas>
+            </div>
+            <div class="callout callout-info" id="frontierMetricsBox" style="margin-top: 12px; font-size: 12.5px;">
+              <!-- Populated via JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. SIMULATION 11: FUNDAMENTAL LAW OF ACTIVE MANAGEMENT -->
+    <section id="sim-fundamental-law">
+      <div class="card">
+        <div class="card-title">⚖️ Simulation 11: Grinold's Fundamental Law of Active Management</div>
+        <p style="color: var(--text-secondary); margin-bottom: 15px;">
+          Simulate the drivers of the Information Ratio \(IR = TC \times IC \times \sqrt{BR}\) and active management performance. Examine how investment forecasting skill (\(IC\)), independent breadth of bets (\(BR\)), and real-world portfolio constraints (Transfer Coefficient \(TC \le 1.0\)) impact active return \(\alpha\) and portfolio Sharpe ratio expansion \(SR_P^2 = SR_B^2 + IR^2\).
+        </p>
+        <div class="grid-2">
+          <div>
+            <div class="control-group">
+              <label>Information Coefficient (\(IC\)): <span id="valSim11Ic" style="color: var(--accent-blue);">0.080</span></label>
+              <input type="range" id="sim11Ic" min="1" max="25" step="1" value="8" oninput="updateFundamentalLawSim()">
+            </div>
+            <div class="control-group">
+              <label>Breadth (\(BR\) Independent Bets/Yr): <span id="valSim11Br" style="color: var(--accent-cyan);">100 bets</span></label>
+              <input type="range" id="sim11Br" min="4" max="1000" step="10" value="100" oninput="updateFundamentalLawSim()">
+            </div>
+            <div class="control-group">
+              <label>Transfer Coefficient (\(TC\)): <span id="valSim11Tc" style="color: var(--accent-emerald);">0.70</span></label>
+              <input type="range" id="sim11Tc" min="10" max="100" step="5" value="70" oninput="updateFundamentalLawSim()">
+            </div>
+            <div class="control-group">
+              <label>Target Active Risk / Tracking Error (\(\sigma_A\)): <span id="valSim11SigmaA" style="color: var(--accent-amber);">4.0%</span></label>
+              <input type="range" id="sim11SigmaA" min="10" max="120" step="5" value="40" oninput="updateFundamentalLawSim()">
+            </div>
+            <div class="control-group">
+              <label>Benchmark Sharpe Ratio (\(SR_B\)): <span id="valSim11SrB" style="color: var(--accent-purple);">0.40</span></label>
+              <input type="range" id="sim11SrB" min="10" max="80" step="5" value="40" oninput="updateFundamentalLawSim()">
+            </div>
+          </div>
+          <div>
+            <div class="chart-canvas-wrap" style="height: 320px;">
+              <canvas id="fundamentalLawChart"></canvas>
+            </div>
+            <div class="callout callout-tip" id="fundamentalLawMetricsBox" style="margin-top: 12px; font-size: 12.5px;">
+              <!-- Populated via JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. SIMULATION 12: DYNAMIC REBALANCING CORRIDORS -->
+    <section id="sim-rebalancing">
+      <div class="card">
+        <div class="card-title">📐 Simulation 12: Dynamic Rebalancing Corridors & Tolerance Bands</div>
+        <p style="color: var(--text-secondary); margin-bottom: 15px;">
+          Analyze the optimal corridor width for asset class rebalancing. Calculate tolerance bounds \([w^* - \Delta w, w^* + \Delta w]\) as a function of transaction costs, investor risk aversion, asset class volatility, and correlation with the portfolio. Simulate price path drift, transaction costs, and tracking error trade-offs.
+        </p>
+        <div class="grid-2">
+          <div>
+            <div class="control-group">
+              <label>Target Asset Weight (\(w^*\)): <span id="valSim12Weight" style="color: var(--accent-blue);">50.0%</span></label>
+              <input type="range" id="sim12Weight" min="10" max="80" step="5" value="50" oninput="updateRebalancingSim()">
+            </div>
+            <div class="control-group">
+              <label>Transaction Costs (\(TC\) in bps): <span id="valSim12Costs" style="color: var(--accent-rose);">30 bps</span></label>
+              <input type="range" id="sim12Costs" min="5" max="100" step="5" value="30" oninput="updateRebalancingSim()">
+            </div>
+            <div class="control-group">
+              <label>Investor Risk Aversion (\(A\)): <span id="valSim12A" style="color: var(--accent-amber);">4.0</span></label>
+              <input type="range" id="sim12A" min="1" max="10" step="0.5" value="4" oninput="updateRebalancingSim()">
+            </div>
+            <div class="control-group">
+              <label>Asset Class Volatility (\(\sigma\)): <span id="valSim12Vol" style="color: var(--accent-cyan);">18.0%</span></label>
+              <input type="range" id="sim12Vol" min="5" max="40" step="1" value="18" oninput="updateRebalancingSim()">
+            </div>
+            <div class="control-group">
+              <label>Correlation with Portfolio (\(\rho\)): <span id="valSim12Corr" style="color: var(--accent-purple);">0.40</span></label>
+              <input type="range" id="sim12Corr" min="-40" max="90" step="5" value="40" oninput="updateRebalancingSim()">
+            </div>
+            <div style="margin-top: 10px;">
+              <button class="btn btn-secondary" onclick="simulateNewPath()">🎲 Re-run Random Walk Path</button>
+            </div>
+          </div>
+          <div>
+            <div class="chart-canvas-wrap" style="height: 320px;">
+              <canvas id="rebalanceChart"></canvas>
+            </div>
+            <div class="callout callout-warning" id="rebalanceMetricsBox" style="margin-top: 12px; font-size: 12.5px;">
+              <!-- Populated via JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- 13. MASTER FSA REFERENCE NOTES -->
     <section id="fsa-reference">
       <div class="notes-subject-tabs">
         <button class="notes-tab-btn active" onclick="switchTab('fsa-reference')">📖 Financial Statement Analysis (20 Modules)</button>
         <button class="notes-tab-btn" onclick="switchTab('fi-reference')">📈 Fixed Income Master Notes (8 Modules)</button>
         <button class="notes-tab-btn" onclick="switchTab('eq-reference')">📊 Equity Valuation Reference (8 Modules)</button>
+        <button class="notes-tab-btn" onclick="switchTab('pm-reference')">💼 Portfolio Management (8 Modules)</button>
       </div>
 
       <div class="card">
@@ -1410,6 +1614,7 @@ dashboard_template = r'''<!DOCTYPE html>
         <button class="notes-tab-btn" onclick="switchTab('fsa-reference')">📖 Financial Statement Analysis (20 Modules)</button>
         <button class="notes-tab-btn active" onclick="switchTab('fi-reference')">📈 Fixed Income Master Notes (8 Modules)</button>
         <button class="notes-tab-btn" onclick="switchTab('eq-reference')">📊 Equity Valuation Reference (8 Modules)</button>
+        <button class="notes-tab-btn" onclick="switchTab('pm-reference')">💼 Portfolio Management (8 Modules)</button>
       </div>
 
       <div class="fsa-ref-container">
@@ -1423,10 +1628,25 @@ dashboard_template = r'''<!DOCTYPE html>
         <button class="notes-tab-btn" onclick="switchTab('fsa-reference')">📖 Financial Statement Analysis (20 Modules)</button>
         <button class="notes-tab-btn" onclick="switchTab('fi-reference')">📈 Fixed Income Master Notes (8 Modules)</button>
         <button class="notes-tab-btn active" onclick="switchTab('eq-reference')">📊 Equity Valuation Reference (8 Modules)</button>
+        <button class="notes-tab-btn" onclick="switchTab('pm-reference')">💼 Portfolio Management (8 Modules)</button>
       </div>
 
       <div class="fsa-ref-container">
         __EQ_REFERENCE_CONTENT__
+      </div>
+    </section>
+
+    <!-- 16. PORTFOLIO MANAGEMENT REFERENCE NOTES -->
+    <section id="pm-reference">
+      <div class="notes-subject-tabs">
+        <button class="notes-tab-btn" onclick="switchTab('fsa-reference')">📖 Financial Statement Analysis (20 Modules)</button>
+        <button class="notes-tab-btn" onclick="switchTab('fi-reference')">📈 Fixed Income Master Notes (8 Modules)</button>
+        <button class="notes-tab-btn" onclick="switchTab('eq-reference')">📊 Equity Valuation Reference (8 Modules)</button>
+        <button class="notes-tab-btn active" onclick="switchTab('pm-reference')">💼 Portfolio Management (8 Modules)</button>
+      </div>
+
+      <div class="fsa-ref-container">
+        __PM_REFERENCE_CONTENT__
       </div>
     </section>
 
@@ -1560,11 +1780,17 @@ dashboard_template = r'''<!DOCTYPE html>
         'sim-frn': 'Floating-Rate Note Pricing Engine',
         'sim-ri-decay': 'Residual Income Persistence Decay',
         'sim-waterfall': 'FCFF → FCFE Cash Flow Waterfall',
+        'l1-practice': 'Level 1 Question Bank (545 Questions)',
+        'l2-vignettes': 'Level 2 Case Vignette Explorer (102 Item Sets)',
         'sim-translation': 'Foreign Currency Translation Engine',
         'sim-prepayment': 'MBS Prepayment Simulator',
+        'sim-frontier': 'Markowitz Mean-Variance Frontier & CAL Optimizer',
+        'sim-fundamental-law': 'Grinold\'s Fundamental Law of Active Management',
+        'sim-rebalancing': 'Dynamic Rebalancing Corridors & Tolerance Bands',
         'fsa-reference': 'FSA Master Reference Library (20 Modules)',
         'fi-reference': 'Fixed Income Master Reference & Formulas (8 Modules)',
         'eq-reference': 'Equity Valuation Reference Library & Models (8 Modules)',
+        'pm-reference': 'Portfolio Management Master Reference & Formulas (8 Modules)',
         'reference-diagrams': 'Visual Frameworks & Cheat Sheets'
       };
 
@@ -1576,7 +1802,7 @@ dashboard_template = r'''<!DOCTYPE html>
       if (m) m.scrollTo({ top: 0, behavior: 'smooth' });
       window.scrollTo({ top: 0, behavior: 'smooth' });
       window.dispatchEvent(new Event('resize'));
-      if (tabId === 'fsa-reference' || tabId === 'fi-reference' || tabId === 'eq-reference') {
+      if (tabId === 'fsa-reference' || tabId === 'fi-reference' || tabId === 'eq-reference' || tabId === 'pm-reference') {
         initReferenceNotesCharts();
       }
       renderMath();
@@ -1637,10 +1863,10 @@ dashboard_template = r'''<!DOCTYPE html>
       overviewChart = new Chart(ctx, {
         type: 'doughnut',
         data: {
-          labels: ['FSA (460 Q)', 'Fixed Income (205 Q)', 'Equity Investments (210 Q)'],
+          labels: ['FSA (460 Q)', 'Fixed Income (205 Q)', 'Equity Investments (210 Q)', 'Portfolio Management (210 Q)'],
           datasets: [{
-            data: [460, 205, 210],
-            backgroundColor: ['#d29922', '#39c5cf', '#3fb950'],
+            data: [460, 205, 210, 210],
+            backgroundColor: ['#d29922', '#39c5cf', '#3fb950', '#bc8cff'],
             borderColor: '#161b22',
             borderWidth: 2
           }]
@@ -1660,10 +1886,10 @@ dashboard_template = r'''<!DOCTYPE html>
       accuracyChart = new Chart(ctx, {
         type: 'bar',
         data: {
-          labels: ['FSA', 'Fixed Income', 'Equity'],
+          labels: ['FSA', 'Fixed Income', 'Equity', 'Portfolio Mgmt'],
           datasets: [
-            { label: 'Correct', data: [0, 0, 0], backgroundColor: '#3fb950' },
-            { label: 'Incorrect', data: [0, 0, 0], backgroundColor: '#f85149' }
+            { label: 'Correct', data: [0, 0, 0, 0], backgroundColor: '#3fb950' },
+            { label: 'Incorrect', data: [0, 0, 0, 0], backgroundColor: '#f85149' }
           ]
         },
         options: {
@@ -1683,9 +1909,9 @@ dashboard_template = r'''<!DOCTYPE html>
 
     function updateAccuracyChart() {
       if (!accuracyChart) return;
-      const subjects = ['Financial Statement Analysis', 'Fixed Income', 'Equity Investments'];
-      const correctBySubj = [0, 0, 0];
-      const incorrectBySubj = [0, 0, 0];
+      const subjects = ['Financial Statement Analysis', 'Fixed Income', 'Equity Investments', 'Portfolio Management'];
+      const correctBySubj = [0, 0, 0, 0];
+      const incorrectBySubj = [0, 0, 0, 0];
 
       for (const [qid, rec] of Object.entries(answeredQuestions)) {
         const q = questionBank.find(item => item.id === qid);
@@ -1740,6 +1966,32 @@ dashboard_template = r'''<!DOCTYPE html>
       filterL1Questions();
     }
 
+    let l1TypeFilter = 'ALL';
+    let l2TypeFilter = 'ALL';
+
+    function isNumericalQuestion(q) {
+      const text = (q.question + ' ' + (q.explanation || '')).toLowerCase();
+      return text.includes('$$') || text.includes('$$\\') ||
+             /\\(frac|sum|times|approx|pm|le|ge|sigma|mu|beta|alpha|rho)\\b/.test(text) ||
+             /\b(calculate|computed|compute|equals|equal to|closest to|approximate|percentage|basis points|ratio|variance|standard deviation|duration|sharpe|treynor|holding period)\b/i.test(q.question);
+    }
+
+    function setL1TypeFilter(type) {
+      l1TypeFilter = type;
+      document.getElementById('l1TypeAll').classList.toggle('active', type === 'ALL');
+      document.getElementById('l1TypeNum').classList.toggle('active', type === 'NUMERICAL');
+      document.getElementById('l1TypeTheory').classList.toggle('active', type === 'THEORY');
+      filterL1Questions();
+    }
+
+    function setL2TypeFilter(type) {
+      l2TypeFilter = type;
+      document.getElementById('l2TypeAll').classList.toggle('active', type === 'ALL');
+      document.getElementById('l2TypeNum').classList.toggle('active', type === 'NUMERICAL');
+      document.getElementById('l2TypeTheory').classList.toggle('active', type === 'THEORY');
+      loadL2Vignette();
+    }
+
     function filterL1Questions() {
       const subj = document.getElementById('l1SubjectSelect').value;
       const topic = document.getElementById('l1TopicSelect').value;
@@ -1749,9 +2001,11 @@ dashboard_template = r'''<!DOCTYPE html>
         if (q.level !== 1) return false;
         if (subj !== 'ALL' && q.subject !== subj) return false;
         if (topic !== 'ALL' && (q.module_title !== topic && q.topic !== topic)) return false;
+        if (l1TypeFilter === 'NUMERICAL' && !isNumericalQuestion(q)) return false;
+        if (l1TypeFilter === 'THEORY' && isNumericalQuestion(q)) return false;
         if (search) {
-          const fullText = (q.id + ' ' + q.question + ' ' + (q.los || '') + ' ' + (q.explanation || '')).toLowerCase();
-          if (!fullText.includes(search)) return false;
+          const full = (q.id + ' ' + q.question + ' ' + (q.los || '') + ' ' + (q.module_title || '')).toLowerCase();
+          if (!full.includes(search)) return false;
         }
         return true;
       });
@@ -1916,7 +2170,7 @@ dashboard_template = r'''<!DOCTYPE html>
         const v = vignettesMap[vid];
         const opt = document.createElement('option');
         opt.value = vid;
-        const shortSubj = v.subject === 'Financial Statement Analysis' ? 'FSA' : (v.subject === 'Equity Investments' ? 'Equity' : (v.subject === 'Fixed Income' ? 'FI' : v.subject));
+        const shortSubj = v.subject === 'Financial Statement Analysis' ? 'FSA' : (v.subject === 'Equity Investments' ? 'Equity' : (v.subject === 'Fixed Income' ? 'FI' : (v.subject === 'Portfolio Management' ? 'PM' : v.subject)));
         opt.innerText = `[${shortSubj}] ${v.id}: ${v.title} (${v.questions.length} Qs)`;
         select.appendChild(opt);
       });
@@ -1966,6 +2220,9 @@ dashboard_template = r'''<!DOCTYPE html>
 
       let qHtml = '';
       v.questions.forEach((q, idx) => {
+        const isNum = isNumericalQuestion(q);
+        if (l2TypeFilter === 'NUMERICAL' && !isNum) return;
+        if (l2TypeFilter === 'THEORY' && isNum) return;
         const isAnswered = answeredQuestions[q.id];
         let optsHtml = '';
         for (const [key, val] of Object.entries(q.options)) {
@@ -2632,6 +2889,371 @@ dashboard_template = r'''<!DOCTYPE html>
     // ==========================================
     // CURRICULUM REFERENCE NOTES CHARTS (10 CHARTS)
     // ==========================================
+    // ==========================================
+    // SIMULATION 10: MARKOWITZ MEAN-VARIANCE FRONTIER & CAL
+    // ==========================================
+    let frontierChart = null;
+
+    function initFrontierSim() {
+      const ctx = document.getElementById('frontierChart');
+      if (!ctx) return;
+      frontierChart = new Chart(ctx.getContext('2d'), {
+        type: 'scatter',
+        data: {
+          datasets: [
+            {
+              label: 'Risky Investment Frontier',
+              data: [],
+              showLine: true,
+              borderColor: '#58a6ff',
+              borderWidth: 2.5,
+              pointRadius: 0,
+              fill: false
+            },
+            {
+              label: 'Capital Allocation Line (CAL)',
+              data: [],
+              showLine: true,
+              borderColor: '#3fb950',
+              borderWidth: 2,
+              borderDash: [5, 4],
+              pointRadius: 0,
+              fill: false
+            },
+            {
+              label: 'Optimal Risky Tangency (P*)',
+              data: [],
+              backgroundColor: '#f85149',
+              borderColor: '#ffffff',
+              borderWidth: 2,
+              pointRadius: 6,
+              pointHoverRadius: 8
+            },
+            {
+              label: 'Global Min Variance (GMV)',
+              data: [],
+              backgroundColor: '#d29922',
+              borderColor: '#ffffff',
+              borderWidth: 2,
+              pointRadius: 6,
+              pointHoverRadius: 8
+            },
+            {
+              label: 'Optimal Investor Allocation (C*)',
+              data: [],
+              backgroundColor: '#bc8cff',
+              borderColor: '#ffffff',
+              borderWidth: 2,
+              pointRadius: 7,
+              pointHoverRadius: 9
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            x: {
+              title: { display: true, text: 'Portfolio Volatility σ (%)', color: '#8b949e' },
+              grid: { color: '#21262d' }
+            },
+            y: {
+              title: { display: true, text: 'Expected Return E(R) (%)', color: '#8b949e' },
+              grid: { color: '#21262d' }
+            }
+          },
+          plugins: {
+            legend: { position: 'bottom', labels: { color: '#8b949e', boxWidth: 10, font: { size: 10 } } }
+          }
+        }
+      });
+      updateFrontierSim();
+    }
+
+    function updateFrontierSim() {
+      const r1 = parseFloat(document.getElementById('sim10R1').value) / 100.0;
+      const s1 = parseFloat(document.getElementById('sim10Sig1').value) / 100.0;
+      const r2 = parseFloat(document.getElementById('sim10R2').value) / 100.0;
+      const s2 = parseFloat(document.getElementById('sim10Sig2').value) / 100.0;
+      const rho = parseFloat(document.getElementById('sim10Rho').value) / 100.0;
+      const rf = parseFloat(document.getElementById('sim10Rf').value) / 100.0;
+      const A = parseFloat(document.getElementById('sim10A').value);
+
+      document.getElementById('valSim10R1').innerText = (r1 * 100).toFixed(1) + '%';
+      document.getElementById('valSim10Sig1').innerText = (s1 * 100).toFixed(1) + '%';
+      document.getElementById('valSim10R2').innerText = (r2 * 100).toFixed(1) + '%';
+      document.getElementById('valSim10Sig2').innerText = (s2 * 100).toFixed(1) + '%';
+      document.getElementById('valSim10Rho').innerText = rho.toFixed(2);
+      document.getElementById('valSim10Rf').innerText = (rf * 100).toFixed(2) + '%';
+      document.getElementById('valSim10A').innerText = A.toFixed(1);
+
+      // 1. GMV weight
+      const denomGmv = (s1 * s1) + (s2 * s2) - (2 * rho * s1 * s2);
+      const w1Gmv = denomGmv !== 0 ? ((s2 * s2) - (rho * s1 * s2)) / denomGmv : 0.5;
+      const rGmv = (w1Gmv * r1) + ((1 - w1Gmv) * r2);
+      const varGmv = Math.max(0, (w1Gmv * w1Gmv * s1 * s1) + ((1 - w1Gmv) * (1 - w1Gmv) * s2 * s2) + (2 * w1Gmv * (1 - w1Gmv) * rho * s1 * s2));
+      const sGmv = Math.sqrt(varGmv);
+
+      // 2. Tangency portfolio weight
+      const er1 = r1 - rf;
+      const er2 = r2 - rf;
+      const numTang = (er1 * s2 * s2) - (er2 * rho * s1 * s2);
+      const denomTang = (er1 * s2 * s2) + (er2 * s1 * s1) - ((er1 + er2) * rho * s1 * s2);
+      const w1Tang = denomTang !== 0 ? numTang / denomTang : 0.5;
+      const w2Tang = 1.0 - w1Tang;
+      const rTang = (w1Tang * r1) + (w2Tang * r2);
+      const varTang = Math.max(0, (w1Tang * w1Tang * s1 * s1) + (w2Tang * w2Tang * s2 * s2) + (2 * w1Tang * w2Tang * rho * s1 * s2));
+      const sTang = Math.sqrt(varTang);
+      const sharpeTang = sTang > 0 ? (rTang - rf) / sTang : 0;
+
+      // 3. Optimal investor allocation y* on CAL
+      const yOpt = (A * sTang * sTang) > 0 ? (rTang - rf) / (A * sTang * sTang) : 1.0;
+      const rOpt = rf + yOpt * (rTang - rf);
+      const sOpt = yOpt * sTang;
+      const utilityOpt = rOpt - (0.5 * A * sOpt * sOpt);
+
+      // Frontier curve points
+      const frontierPts = [];
+      for (let w = -0.3; w <= 1.3; w += 0.04) {
+        const rp = (w * r1) + ((1 - w) * r2);
+        const vp = Math.max(0, (w * w * s1 * s1) + ((1 - w) * (1 - w) * s2 * s2) + (2 * w * (1 - w) * rho * s1 * s2));
+        frontierPts.push({ x: +(Math.sqrt(vp) * 100).toFixed(2), y: +(rp * 100).toFixed(2) });
+      }
+
+      // CAL line points
+      const calPts = [
+        { x: 0, y: +(rf * 100).toFixed(2) },
+        { x: +(sTang * 100).toFixed(2), y: +(rTang * 100).toFixed(2) },
+        { x: +(Math.max(sTang * 1.5, sOpt * 1.2) * 100).toFixed(2), y: +((rf + Math.max(sTang * 1.5, sOpt * 1.2) * sharpeTang) * 100).toFixed(2) }
+      ];
+
+      if (frontierChart) {
+        frontierChart.data.datasets[0].data = frontierPts;
+        frontierChart.data.datasets[1].data = calPts;
+        frontierChart.data.datasets[2].data = [{ x: +(sTang * 100).toFixed(2), y: +(rTang * 100).toFixed(2) }];
+        frontierChart.data.datasets[3].data = [{ x: +(sGmv * 100).toFixed(2), y: +(rGmv * 100).toFixed(2) }];
+        frontierChart.data.datasets[4].data = [{ x: +(sOpt * 100).toFixed(2), y: +(rOpt * 100).toFixed(2) }];
+        frontierChart.update();
+      }
+
+      document.getElementById('frontierMetricsBox').innerHTML = `
+        <div style="font-weight: 700; color: var(--accent-blue); margin-bottom: 6px;">Optimal Portfolio Solution Summary</div>
+        <div class="grid-2" style="font-size: 12px; gap: 8px;">
+          <div><strong>Tangency Risky Portfolio (P*):</strong><br>
+            • Weight Asset 1: ${(w1Tang * 100).toFixed(1)}% | Weight Asset 2: ${(w2Tang * 100).toFixed(1)}%<br>
+            • E(R*): ${(rTang * 100).toFixed(2)}% | σ*: ${(sTang * 100).toFixed(2)}%<br>
+            • Max Sharpe Ratio: <strong>${sharpeTang.toFixed(3)}</strong>
+          </div>
+          <div><strong>Investor Optimum on CAL (A = ${A.toFixed(1)}):</strong><br>
+            • Allocation to Risky: ${(yOpt * 100).toFixed(1)}% | Risk-Free: ${((1 - yOpt) * 100).toFixed(1)}%<br>
+            • Overall E(Rc): ${(rOpt * 100).toFixed(2)}% | σc: ${(sOpt * 100).toFixed(2)}%<br>
+            • Expected Utility U: <strong>${(utilityOpt * 100).toFixed(2)}%</strong>
+          </div>
+        </div>
+      `;
+      renderMath();
+    }
+
+    // ==========================================
+    // SIMULATION 11: FUNDAMENTAL LAW OF ACTIVE MGMT
+    // ==========================================
+    let fundamentalLawChart = null;
+
+    function initFundamentalLawSim() {
+      const ctx = document.getElementById('fundamentalLawChart');
+      if (!ctx) return;
+      fundamentalLawChart = new Chart(ctx.getContext('2d'), {
+        type: 'line',
+        data: {
+          labels: [10, 25, 50, 100, 200, 300, 500, 750, 1000],
+          datasets: [
+            {
+              label: 'Unconstrained IR (TC = 1.0)',
+              data: [],
+              borderColor: '#39c5cf',
+              borderWidth: 2,
+              fill: false
+            },
+            {
+              label: 'Constrained Realized IR',
+              data: [],
+              borderColor: '#f85149',
+              borderWidth: 2.5,
+              fill: false
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            x: { title: { display: true, text: 'Breadth (Number of Bets / Year)', color: '#8b949e' }, grid: { color: '#21262d' } },
+            y: { title: { display: true, text: 'Information Ratio (IR)', color: '#8b949e' }, grid: { color: '#21262d' } }
+          },
+          plugins: { legend: { position: 'bottom', labels: { color: '#8b949e', boxWidth: 10 } } }
+        }
+      });
+      updateFundamentalLawSim();
+    }
+
+    function updateFundamentalLawSim() {
+      const ic = parseFloat(document.getElementById('sim11Ic').value) / 100.0;
+      const br = parseFloat(document.getElementById('sim11Br').value);
+      const tc = parseFloat(document.getElementById('sim11Tc').value) / 100.0;
+      const sigmaA = parseFloat(document.getElementById('sim11SigmaA').value) / 1000.0;
+      const srB = parseFloat(document.getElementById('sim11SrB').value) / 100.0;
+      const sigmaB = 0.16;
+
+      document.getElementById('valSim11Ic').innerText = ic.toFixed(3);
+      document.getElementById('valSim11Br').innerText = Math.round(br) + ' bets';
+      document.getElementById('valSim11Tc').innerText = tc.toFixed(2);
+      document.getElementById('valSim11SigmaA').innerText = (sigmaA * 100).toFixed(1) + '%';
+      document.getElementById('valSim11SrB').innerText = srB.toFixed(2);
+
+      const irUnconstrained = ic * Math.sqrt(br);
+      const irConstrained = tc * ic * Math.sqrt(br);
+      const expectedAlpha = irConstrained * sigmaA;
+      const optSigmaA = (srB > 0) ? (tc * (ic * Math.sqrt(br) / srB) * sigmaB) : 0;
+      const srP = Math.sqrt((srB * srB) + (irConstrained * irConstrained));
+      const srUnconstrained = Math.sqrt((srB * srB) + (irUnconstrained * irUnconstrained));
+      const constraintLoss = srUnconstrained - srP;
+
+      const breadths = [10, 25, 50, 100, 200, 300, 500, 750, 1000];
+      const unconstrainedData = breadths.map(b => +(ic * Math.sqrt(b)).toFixed(3));
+      const constrainedData = breadths.map(b => +(tc * ic * Math.sqrt(b)).toFixed(3));
+
+      if (fundamentalLawChart) {
+        fundamentalLawChart.data.datasets[0].data = unconstrainedData;
+        fundamentalLawChart.data.datasets[1].data = constrainedData;
+        fundamentalLawChart.update();
+      }
+
+      document.getElementById('fundamentalLawMetricsBox').innerHTML = `
+        <div style="font-weight: 700; color: var(--accent-emerald); margin-bottom: 6px;">Fundamental Law Active Attribution</div>
+        <div class="grid-2" style="font-size: 12px; gap: 8px;">
+          <div><strong>Active Skill & Return:</strong><br>
+            • Unconstrained IR (TC=1.0): <strong>${irUnconstrained.toFixed(3)}</strong><br>
+            • Constrained Realized IR: <strong>${irConstrained.toFixed(3)}</strong><br>
+            • Expected Active Return (Alpha): <strong>${(expectedAlpha * 100).toFixed(2)}%</strong>
+          </div>
+          <div><strong>Total Performance & Risk Budget:</strong><br>
+            • Optimal Active Risk (σA*): ${(optSigmaA * 100).toFixed(2)}%<br>
+            • Total Portfolio Sharpe Ratio (SRP): <strong>${srP.toFixed(3)}</strong><br>
+            • Drag from Constraints (ΔSR): <span style="color: var(--accent-rose); font-weight: 600;">-${constraintLoss.toFixed(3)}</span>
+          </div>
+        </div>
+      `;
+      renderMath();
+    }
+
+    // ==========================================
+    // SIMULATION 12: DYNAMIC REBALANCING CORRIDORS
+    // ==========================================
+    let rebalanceChart = null;
+    let cachedWalkPath = null;
+
+    function initRebalancingSim() {
+      const ctx = document.getElementById('rebalanceChart');
+      if (!ctx) return;
+      rebalanceChart = new Chart(ctx.getContext('2d'), {
+        type: 'line',
+        data: {
+          labels: Array.from({length: 31}, (_, i) => 'Day ' + i),
+          datasets: [
+            { label: 'Upper Corridor', data: [], borderColor: '#f85149', borderDash: [6, 4], borderWidth: 1.5, pointRadius: 0, fill: false },
+            { label: 'Target Weight (w*)', data: [], borderColor: '#3fb950', borderDash: [4, 4], borderWidth: 1.5, pointRadius: 0, fill: false },
+            { label: 'Lower Corridor', data: [], borderColor: '#f85149', borderDash: [6, 4], borderWidth: 1.5, pointRadius: 0, fill: false },
+            { label: 'Actual Weight Drift', data: [], borderColor: '#58a6ff', borderWidth: 2, pointRadius: 3, pointBackgroundColor: '#58a6ff', fill: false }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            x: { title: { display: true, text: 'Trading Day', color: '#8b949e' }, grid: { color: '#21262d' } },
+            y: { title: { display: true, text: 'Portfolio Asset Weight (%)', color: '#8b949e' }, grid: { color: '#21262d' } }
+          },
+          plugins: { legend: { position: 'bottom', labels: { color: '#8b949e', boxWidth: 10 } } }
+        }
+      });
+      simulateNewPath();
+    }
+
+    function simulateNewPath() {
+      cachedWalkPath = null;
+      updateRebalancingSim();
+    }
+
+    function updateRebalancingSim() {
+      const wStar = parseFloat(document.getElementById('sim12Weight').value);
+      const tc = parseFloat(document.getElementById('sim12Costs').value);
+      const A = parseFloat(document.getElementById('sim12A').value);
+      const vol = parseFloat(document.getElementById('sim12Vol').value);
+      const rho = parseFloat(document.getElementById('sim12Corr').value) / 100.0;
+
+      document.getElementById('valSim12Weight').innerText = wStar.toFixed(1) + '%';
+      document.getElementById('valSim12Costs').innerText = Math.round(tc) + ' bps';
+      document.getElementById('valSim12A').innerText = A.toFixed(1);
+      document.getElementById('valSim12Vol').innerText = vol.toFixed(1) + '%';
+      document.getElementById('valSim12Corr').innerText = rho.toFixed(2);
+
+      // Optimal half-width deltaW calculation
+      const deltaW = 5.0 * Math.sqrt(tc / 30.0) * Math.pow(4.0 / A, 0.6) * Math.pow(18.0 / vol, 0.8) * Math.pow((1.0 + rho) / 1.4, 0.5);
+      const upperBand = wStar + deltaW;
+      const lowerBand = wStar - deltaW;
+
+      // Simulate 30-day drift
+      if (!cachedWalkPath) {
+        cachedWalkPath = [0];
+        let cum = 0;
+        for (let i = 1; i <= 30; i++) {
+          const step = (Math.random() - 0.49) * (vol / 5.0);
+          cum += step;
+          cachedWalkPath.push(cum);
+        }
+      }
+
+      const path = [];
+      let currentVal = wStar;
+      let rebalanceTriggers = 0;
+      for (let i = 0; i <= 30; i++) {
+        if (i > 0) {
+          const dailyStep = cachedWalkPath[i] - cachedWalkPath[i - 1];
+          currentVal += dailyStep;
+          if (currentVal > upperBand || currentVal < lowerBand) {
+            rebalanceTriggers++;
+            currentVal = wStar; // Rebalance trigger resets weight
+          }
+        }
+        path.push(+currentVal.toFixed(2));
+      }
+
+      if (rebalanceChart) {
+        rebalanceChart.data.datasets[0].data = Array(31).fill(+upperBand.toFixed(2));
+        rebalanceChart.data.datasets[1].data = Array(31).fill(+wStar.toFixed(2));
+        rebalanceChart.data.datasets[2].data = Array(31).fill(+lowerBand.toFixed(2));
+        rebalanceChart.data.datasets[3].data = path;
+        rebalanceChart.update();
+      }
+
+      document.getElementById('rebalanceMetricsBox').innerHTML = `
+        <div style="font-weight: 700; color: var(--accent-amber); margin-bottom: 6px;">Optimal Corridor Calibration</div>
+        <div class="grid-2" style="font-size: 12px; gap: 8px;">
+          <div><strong>Calibrated Tolerance Bounds:</strong><br>
+            • Half-Width (Δw): <strong>±${deltaW.toFixed(2)}%</strong><br>
+            • Upper Bound: <strong>${upperBand.toFixed(2)}%</strong> | Lower Bound: <strong>${lowerBand.toFixed(2)}%</strong><br>
+            • Target Weight (w*): <strong>${wStar.toFixed(1)}%</strong>
+          </div>
+          <div><strong>Simulation Behavior (30 Days):</strong><br>
+            • Rebalance Events Triggered: <strong>${rebalanceTriggers} times</strong><br>
+            • Est. Cost Drag: ${(rebalanceTriggers * tc * (deltaW / 100.0)).toFixed(1)} bps<br>
+            • Corridor Trade-off: Transaction costs widen bands; risk aversion & volatility narrow bands.
+          </div>
+        </div>
+      `;
+      renderMath();
+    }
+
     function initFsaNotesCharts() {
       initReferenceNotesCharts();
     }
@@ -2969,6 +3591,9 @@ dashboard_template = r'''<!DOCTYPE html>
       initWaterfallSim();
       updateTranslationSim();
       initPrepaymentSim();
+      initFrontierSim();
+      initFundamentalLawSim();
+      initRebalancingSim();
       initFsaNotesCharts();
       updateScoreBadge();
       renderMath();
@@ -2984,6 +3609,8 @@ dashboard_template = r'''<!DOCTYPE html>
             switchTab('fi-reference');
           } else if (hash.startsWith('eq-')) {
             switchTab('eq-reference');
+          } else if (hash.startsWith('pm-')) {
+            switchTab('pm-reference');
           } else {
             switchTab('fsa-reference');
           }
@@ -3017,11 +3644,13 @@ dashboard_template = r'''<!DOCTYPE html>
 def generate():
     FI_REF_HTML = os.path.join(DATA_DIR, "fi_reference_extracted.html")
     EQ_REF_HTML = os.path.join(DATA_DIR, "eq_reference_extracted.html")
+    PM_REF_HTML = os.path.join(DATA_DIR, "pm_reference_extracted.html")
 
     assert os.path.exists(MASTER_JSON), f"Missing {MASTER_JSON}. Run compile_unified_suite.py first."
     assert os.path.exists(FSA_REF_HTML), f"Missing {FSA_REF_HTML}. Run extract_fsa_notes.py first."
     assert os.path.exists(FI_REF_HTML), f"Missing {FI_REF_HTML}. Run generate_notes_libraries.py first."
     assert os.path.exists(EQ_REF_HTML), f"Missing {EQ_REF_HTML}. Run generate_notes_libraries.py first."
+    assert os.path.exists(PM_REF_HTML), f"Missing {PM_REF_HTML}. Run generate_notes_libraries.py first."
 
     with open(MASTER_JSON, "r", encoding="utf-8") as f:
         questions = json.load(f)
@@ -3035,10 +3664,14 @@ def generate():
     with open(EQ_REF_HTML, "r", encoding="utf-8") as f:
         eq_ref_content = f.read()
 
+    with open(PM_REF_HTML, "r", encoding="utf-8") as f:
+        pm_ref_content = f.read()
+
     print(f"Loaded {len(questions)} questions from {MASTER_JSON}")
     print(f"Loaded {len(fsa_ref_content)} characters of FSA reference library")
     print(f"Loaded {len(fi_ref_content)} characters of FI reference library")
     print(f"Loaded {len(eq_ref_content)} characters of EQ reference library")
+    print(f"Loaded {len(pm_ref_content)} characters of PM reference library")
 
     questions_json_str = json.dumps(questions, ensure_ascii=False)
 
@@ -3046,6 +3679,7 @@ def generate():
     dashboard_html = dashboard_html.replace("__FSA_REFERENCE_CONTENT__", fsa_ref_content)
     dashboard_html = dashboard_html.replace("__FI_REFERENCE_CONTENT__", fi_ref_content)
     dashboard_html = dashboard_html.replace("__EQ_REFERENCE_CONTENT__", eq_ref_content)
+    dashboard_html = dashboard_html.replace("__PM_REFERENCE_CONTENT__", pm_ref_content)
 
     with open(OUTPUT_INDEX, "w", encoding="utf-8") as f:
         f.write(dashboard_html)

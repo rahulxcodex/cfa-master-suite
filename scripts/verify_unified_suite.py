@@ -28,14 +28,19 @@ with open(MASTER_JSON, "r", encoding="utf-8") as f:
 
 total_count = len(questions)
 print(f"Total questions loaded from {MASTER_JSON}: {total_count}")
-assert total_count == 875, f"Expected 875 questions, got {total_count}"
+assert total_count == 1085, f"Expected 1085 questions, got {total_count}"
 
 # Subject and level counters
 by_subj = {}
 by_level = {1: 0, 2: 0}
 l1_by_subj = {}
 l2_by_subj = {}
-vignettes_by_subj = {"Financial Statement Analysis": set(), "Fixed Income": set(), "Equity Investments": set()}
+vignettes_by_subj = {
+    "Financial Statement Analysis": set(),
+    "Fixed Income": set(),
+    "Equity Investments": set(),
+    "Portfolio Management": set()
+}
 all_ids = set()
 
 # KaTeX delimiter and bare currency patterns
@@ -101,34 +106,38 @@ for s, c in sorted(by_subj.items()):
     print(f"  {s}: {c} Questions")
 
 print("--- Level Breakdown ---")
-print(f"  Level 1: {by_level[1]} MCQs (FSA: {l1_by_subj.get('Financial Statement Analysis', 0)}, FI: {l1_by_subj.get('Fixed Income', 0)}, Equity: {l1_by_subj.get('Equity Investments', 0)})")
-print(f"  Level 2: {by_level[2]} Questions (FSA: {l2_by_subj.get('Financial Statement Analysis', 0)}, FI: {l2_by_subj.get('Fixed Income', 0)}, Equity: {l2_by_subj.get('Equity Investments', 0)})")
+print(f"  Level 1: {by_level[1]} MCQs (FSA: {l1_by_subj.get('Financial Statement Analysis', 0)}, FI: {l1_by_subj.get('Fixed Income', 0)}, Equity: {l1_by_subj.get('Equity Investments', 0)}, PM: {l1_by_subj.get('Portfolio Management', 0)})")
+print(f"  Level 2: {by_level[2]} Questions (FSA: {l2_by_subj.get('Financial Statement Analysis', 0)}, FI: {l2_by_subj.get('Fixed Income', 0)}, Equity: {l2_by_subj.get('Equity Investments', 0)}, PM: {l2_by_subj.get('Portfolio Management', 0)})")
 
 total_vignettes = sum(len(v) for v in vignettes_by_subj.values())
-print(f"  Level 2 Item Sets: {total_vignettes} distinct vignettes (FSA: {len(vignettes_by_subj['Financial Statement Analysis'])}, FI: {len(vignettes_by_subj['Fixed Income'])}, Equity: {len(vignettes_by_subj['Equity Investments'])})")
+print(f"  Level 2 Item Sets: {total_vignettes} distinct vignettes (FSA: {len(vignettes_by_subj['Financial Statement Analysis'])}, FI: {len(vignettes_by_subj['Fixed Income'])}, Equity: {len(vignettes_by_subj['Equity Investments'])}, PM: {len(vignettes_by_subj['Portfolio Management'])})")
 
 # Assertions
-assert by_level[1] == 425, f"Expected 425 L1, got {by_level[1]}"
-assert by_level[2] == 450, f"Expected 450 L2, got {by_level[2]}"
-assert total_vignettes == 84, f"Expected 84 vignettes, got {total_vignettes}"
+assert by_level[1] == 545, f"Expected 545 L1, got {by_level[1]}"
+assert by_level[2] == 540, f"Expected 540 L2, got {by_level[2]}"
+assert total_vignettes == 102, f"Expected 102 vignettes, got {total_vignettes}"
 
 # Check HTML size and content
 with open(INDEX_HTML, "r", encoding="utf-8") as f:
     html_content = f.read()
 
 print(f"\nUnified index.html size: {len(html_content)} bytes ({len(html_content)/1024/1024:.2f} MB)")
-assert len(html_content) > 1_500_000, "index.html appears truncated"
+assert len(html_content) > 2_000_000, "index.html appears truncated"
 
-# Check that all 9 simulations exist in index.html
+# Check that all 12 simulations exist in index.html
 sim_ids = [
     "sim-yield", "sim-tree", "sim-equity", "sim-duration",
-    "sim-frn", "sim-ri-decay", "sim-waterfall", "sim-translation", "sim-prepayment"
+    "sim-frn", "sim-ri-decay", "sim-waterfall", "sim-translation", "sim-prepayment",
+    "sim-frontier", "sim-fundamental-law", "sim-rebalancing"
 ]
 for sid in sim_ids:
     assert f'id="{sid}"' in html_content, f"Simulation {sid} missing from index.html"
 
-# Check FSA Reference section
+# Check Reference sections
 assert 'id="fsa-reference"' in html_content, "FSA reference section missing from index.html"
+assert 'id="fi-reference"' in html_content, "FI reference section missing from index.html"
+assert 'id="eq-reference"' in html_content, "Equity reference section missing from index.html"
+assert 'id="pm-reference"' in html_content, "Portfolio Management reference section missing from index.html"
 assert 'GAAP vs IFRS Matrix' in html_content, "GAAP vs IFRS matrix missing from index.html"
 
 # Check redirect file

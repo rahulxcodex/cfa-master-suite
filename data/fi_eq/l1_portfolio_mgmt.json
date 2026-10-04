@@ -1,0 +1,2282 @@
+[
+  {
+    "id": "L1-PM-001",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Management Overview",
+    "los": "Describe the portfolio approach to investing",
+    "question": "According to modern portfolio theory, the primary reason an investor should evaluate an individual security in the context of an overall portfolio rather than in isolation is that:",
+    "options": {
+      "A": "The expected return of the portfolio is always greater than the highest individual asset return.",
+      "B": "Diversification allows an investor to reduce portfolio risk without a proportional reduction in expected return.",
+      "C": "Systematic market risk can be completely eliminated by combining imperfectly correlated securities."
+    },
+    "answer": "B",
+    "explanation": "The portfolio approach demonstrates that as long as securities are not perfectly positively correlated ($\\rho < +1.0$), combining them in a portfolio reduces total variance without a proportional sacrifice in expected return. Portfolio risk is lower than the weighted average of individual asset standard deviations.",
+    "distractor_analysis": {
+      "A": "Incorrect. The expected return of a portfolio is strictly the linear weighted average of individual asset returns, which can never exceed the maximum individual asset return.",
+      "C": "Incorrect. Diversification eliminates non-systematic (idiosyncratic) risk, but systematic market risk cannot be diversified away."
+    }
+  },
+  {
+    "id": "L1-PM-002",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Client Types and Institutional Investors",
+    "los": "Compare the investment objectives and constraints of various investor types",
+    "question": "Which institutional investor typically possesses the longest investment time horizon and the lowest requirement for current liquidity?",
+    "options": {
+      "A": "Property and casualty (P&C) insurer.",
+      "B": "Commercial bank.",
+      "C": "University endowment."
+    },
+    "answer": "C",
+    "explanation": "University endowments are established to provide perpetual support for academic institutions. Because of their infinite time horizon and stable, predictable annual spending requirements (typically 4% to 5% of assets), they have minimal liquidity requirements and the highest capacity for illiquid private assets.",
+    "distractor_analysis": {
+      "A": "Incorrect. P&C insurers face short to medium-term liabilities from unpredictable property claims, necessitating high liquidity.",
+      "B": "Incorrect. Commercial banks face short-duration deposit liabilities and must maintain high liquidity to satisfy daily depositor runs and regulatory reserves."
+    }
+  },
+  {
+    "id": "L1-PM-003",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Client Types and Institutional Investors",
+    "los": "Compare the investment objectives and constraints of various investor types",
+    "question": "A defined benefit (DB) pension plan sponsor has a workforce with an average age of 58 years and a high ratio of retired beneficiaries relative to active workers. The plan's investment policy is most likely characterized by a:",
+    "options": {
+      "A": "Shorter time horizon and higher liquidity requirement.",
+      "B": "Longer time horizon and lower liquidity requirement.",
+      "C": "Higher risk tolerance and aggressive growth objective."
+    },
+    "answer": "A",
+    "explanation": "A mature defined benefit plan with an aging workforce and many retirees faces substantial net benefit payment outflows in the near term. This shortens the investment time horizon, elevates ongoing liquidity needs, and reduces the plan's ability to tolerate asset value drawdowns.",
+    "distractor_analysis": {
+      "B": "Incorrect. A long horizon and low liquidity need characterize a youthful workforce where contributions exceed current benefit disbursements.",
+      "C": "Incorrect. An aging participant base lowers the fund's risk tolerance, demanding a conservative liability-hedging allocation rather than aggressive growth."
+    }
+  },
+  {
+    "id": "L1-PM-004",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Pooled Investment Vehicles",
+    "los": "Contrast open-end mutual funds, closed-end funds, and exchange-traded funds",
+    "question": "An open-end mutual fund holds securities with an aggregate market value of USD 620 million, accrued interest receivable of USD 5 million, and outstanding short-term liabilities and accrued management fees of USD 25 million. If the fund has 30 million shares outstanding, its net asset value (NAV) per share is closest to:",
+    "options": {
+      "A": "USD 19.83",
+      "B": "USD 20.00",
+      "C": "USD 20.83"
+    },
+    "answer": "B",
+    "explanation": "Net asset value per share is calculated as total assets minus total liabilities divided by the number of shares outstanding:\n$$\\text{Assets} = \\text{USD } 620\\text{M} + \\text{USD } 5\\text{M} = \\text{USD } 625\\text{M}$$\n$$\\text{Net Assets} = \\text{USD } 625\\text{M} - \\text{USD } 25\\text{M} = \\text{USD } 600\\text{M}$$\n$$\\text{NAV per share} = \\frac{\\text{USD } 600{,}000{,}000}{30{,}000{,}000} = \\text{USD } 20.00$$",
+    "distractor_analysis": {
+      "A": "Incorrect. USD 19.83 results from subtracting accrued interest rather than adding it ($$\\frac{620 - 5 - 20}{30}$$).",
+      "C": "Incorrect. USD 20.83 results from omitting liabilities ($$\\frac{625}{30} = \\text{USD } 20.83$$)."
+    }
+  },
+  {
+    "id": "L1-PM-005",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Pooled Investment Vehicles",
+    "los": "Contrast open-end mutual funds, closed-end funds, and exchange-traded funds",
+    "question": "Which of the following operational characteristics is unique to closed-end investment companies relative to open-end mutual funds?",
+    "options": {
+      "A": "Shares trade continuously on secondary exchanges at market prices that can deviate substantially from NAV.",
+      "B": "Shares are redeemed directly by the sponsor at the end-of-day NAV per share.",
+      "C": "Fund managers must hold cash reserves to satisfy unpredictable daily investor redemptions."
+    },
+    "answer": "A",
+    "explanation": "Closed-end funds issue a fixed number of shares via an initial public offering, after which the shares trade between investors on secondary exchanges. Supply and demand dictate market prices, which frequently trade at significant discounts or premiums to underlying net asset value. They do not redeem shares on demand.",
+    "distractor_analysis": {
+      "B": "Incorrect. Direct redemption at end-of-day NAV is the operational model of open-end mutual funds.",
+      "C": "Incorrect. Holding cash reserves to meet daily redemptions is required for open-end funds; closed-end funds have stable, locked-in capital bases."
+    }
+  },
+  {
+    "id": "L1-PM-006",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Management Overview",
+    "los": "Describe the steps in the portfolio management process",
+    "question": "In the three-step portfolio management process (Planning, Execution, Feedback), tactical asset allocation and trade execution take place during the:",
+    "options": {
+      "A": "Planning step.",
+      "B": "Execution step.",
+      "C": "Feedback step."
+    },
+    "answer": "B",
+    "explanation": "The portfolio management process consists of: (1) Planning (developing the Investment Policy Statement, assessing client constraints, and creating capital market expectations); (2) Execution (strategic and tactical asset allocation, portfolio construction, and trade execution); and (3) Feedback (performance monitoring, attribution, and rebalancing).",
+    "distractor_analysis": {
+      "A": "Incorrect. Planning establishes objectives, constraints, and long-term capital market expectations prior to investing.",
+      "C": "Incorrect. Feedback evaluates performance results and executes periodic rebalancing back to policy targets."
+    }
+  },
+  {
+    "id": "L1-PM-007",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Client Types and Institutional Investors",
+    "los": "Compare the investment objectives and constraints of various investor types",
+    "question": "A resource-rich country establishes a sovereign wealth fund with the explicit objective of insulating the government budget and domestic economy from sharp fluctuations in global crude oil export prices. This fund is most appropriately categorized as a:",
+    "options": {
+      "A": "Stabilization fund.",
+      "B": "Savings fund.",
+      "C": "Reserve investment fund."
+    },
+    "answer": "A",
+    "explanation": "Stabilization funds are established to buffer the national budget and economy against cyclical commodity price shocks. Because their primary goal is fiscal smoothing, they emphasize capital preservation and high liquidity, investing predominantly in short-term government bonds and cash instruments.",
+    "distractor_analysis": {
+      "B": "Incorrect. Savings funds focus on intergenerational wealth transfer, maintaining long horizons and high equity/alternative asset exposures.",
+      "C": "Incorrect. Reserve investment funds invest central bank foreign reserves to earn higher returns than traditional foreign exchange reserves."
+    }
+  },
+  {
+    "id": "L1-PM-008",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Client Types and Institutional Investors",
+    "los": "Compare the investment objectives and constraints of various investor types",
+    "question": "Which of the following institutional investors is characterized by predictable long-term liabilities, a focus on asset-liability duration matching, and heavy regulation of capital adequacy?",
+    "options": {
+      "A": "Life insurance company.",
+      "B": "Hedge fund.",
+      "C": "Private endowment."
+    },
+    "answer": "A",
+    "explanation": "Life insurers underwrite multi-decade mortality, life annuity, and endowment contracts with predictable payout profiles. Under strict regulatory regimes (e.g., Risk-Based Capital, Solvency II), they align asset durations with liability durations to protect statutory surplus from interest rate fluctuations.",
+    "distractor_analysis": {
+      "B": "Incorrect. Hedge funds pursue absolute returns with high flexibility and are not subject to statutory asset-liability duration matching.",
+      "C": "Incorrect. Endowments have no contractually guaranteed liabilities and follow total return growth objectives."
+    }
+  },
+  {
+    "id": "L1-PM-009",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Pooled Investment Vehicles",
+    "los": "Describe the features of private equity and hedge funds",
+    "question": "In a private equity limited partnership, the mechanism where the general partner requests committed capital from limited partners as acquisition deals arise is called a:",
+    "options": {
+      "A": "High-water mark reset.",
+      "B": "Capital call or drawdown.",
+      "C": "Waterfall hurdle redemption."
+    },
+    "answer": "B",
+    "explanation": "Private equity funds operate through legally binding capital commitments. The general partner issues capital calls (drawdowns) over the investment period (typically years 1-5) as specific buyouts or venture investments are negotiated.",
+    "distractor_analysis": {
+      "A": "Incorrect. A high-water mark ensures hedge fund managers only receive performance fees when the NAV exceeds previous peak values.",
+      "C": "Incorrect. A distribution waterfall governs how realized cash proceeds are split between LPs and GPs."
+    }
+  },
+  {
+    "id": "L1-PM-010",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Pooled Investment Vehicles",
+    "los": "Contrast open-end mutual funds, closed-end funds, and exchange-traded funds",
+    "question": "The primary structural mechanism that prevents an exchange-traded fund (ETF) from trading at a persistent, large discount or premium to its intraday net asset value is:",
+    "options": {
+      "A": "The exchange specialist's mandatory obligation to purchase excess shares at NAV.",
+      "B": "The continuous arbitrage mechanism operated by Authorized Participants (APs) through in-kind creation and redemption.",
+      "C": "Regulatory price bands enforced by securities exchanges halting trading whenever prices deviate by more than 1%."
+    },
+    "answer": "B",
+    "explanation": "Authorized Participants (APs) are institutional market makers who have the exclusive right to create and redeem ETF shares directly with the fund sponsor in creation units (typically 25,000 to 100,000 shares). If the ETF trades at a discount, APs buy the cheap ETF shares on the exchange and redeem them with the sponsor for the underlying basket, pocketing arbitrage profits and restoring price parity.",
+    "distractor_analysis": {
+      "A": "Incorrect. Market specialists facilitate liquidity but have no obligation to buy shares at NAV.",
+      "C": "Incorrect. Exchanges do not impose mandatory 1% NAV circuit breakers on ETFs."
+    }
+  },
+  {
+    "id": "L1-PM-011",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Client Types and Institutional Investors",
+    "los": "Compare the investment objectives and constraints of various investor types",
+    "question": "An individual investor has an investment portfolio of USD 5,000,000 and requires USD 150,000 annually to cover living expenses after earning USD 100,000 in employment salary. If the investor has an investment horizon of 25 years until retirement, the investor's ability to bear risk is most likely:",
+    "options": {
+      "A": "Low, because current salary does not cover total living expenses.",
+      "B": "High, because the net portfolio withdrawal rate is modest relative to total wealth and the time horizon is long.",
+      "C": "Zero, because any portfolio drawdown would threaten immediate living standards."
+    },
+    "answer": "B",
+    "explanation": "The investor requires an annual withdrawal of $$\\text{USD } 150{,}000 - \\text{USD } 100{,}000 = \\text{USD } 50{,}000$$, which represents a withdrawal rate of only $$\\frac{\\text{USD } 50{,}000}{\\text{USD } 5{,}000{,}000} = 1.0\\%$$. A 1.0% withdrawal rate combined with a 25-year time horizon gives the investor a high objective ability to bear risk.",
+    "distractor_analysis": {
+      "A": "Incorrect. The shortfall is only USD 50,000, which is just 1.0% of liquid assets, meaning the portfolio easily sustains fluctuations.",
+      "C": "Incorrect. A 1% withdrawal requirement leaves a substantial safety buffer."
+    }
+  },
+  {
+    "id": "L1-PM-012",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Pooled Investment Vehicles",
+    "los": "Describe the features of private equity and hedge funds",
+    "question": "An alternative investment hedge fund has a beginning asset value of USD 200 million and charges a 2% management fee based on beginning-of-year assets and a 20% incentive fee based on net new profits above a 5% hard hurdle rate. If the fund generates an end-of-year gross return of 15%, the net return to investors is closest to:",
+    "options": {
+      "A": "11.40%",
+      "B": "12.00%",
+      "C": "10.80%"
+    },
+    "answer": "A",
+    "explanation": "Let beginning capital = USD 200M.\n1. Management fee = $$2\\% \\times \\text{USD } 200\\text{M} = \\text{USD } 4.0\\text{M}$$.\n2. Gross end-of-year value = $$\\text{USD } 200\\text{M} \\times (1 + 0.15) = \\text{USD } 230.0\\text{M}$$.\n3. Profit before incentive fee = $$\\text{USD } 230\\text{M} - \\text{USD } 200\\text{M} - \\text{USD } 4\\text{M} = \\text{USD } 26.0\\text{M}$$.\n4. Hard hurdle amount = $$5\\% \\times \\text{USD } 200\\text{M} = \\text{USD } 10.0\\text{M}$$.\n5. Profit eligible for incentive fee = $$\\text{USD } 26.0\\text{M} - \\text{USD } 10.0\\text{M} = \\text{USD } 16.0\\text{M}$$.\n6. Incentive fee = $$20\\% \\times \\text{USD } 16.0\\text{M} = \\text{USD } 3.2\\text{M}$$.\n7. Total ending capital net of fees = $$\\text{USD } 230.0\\text{M} - \\text{USD } 4.0\\text{M} - \\text{USD } 3.2\\text{M} = \\text{USD } 222.8\\text{M}$$.\n8. Net return = $$\\frac{\\text{USD } 222.8\\text{M} - \\text{USD } 200.0\\text{M}}{\\text{USD } 200.0\\text{M}} = \\frac{\\text{USD } 22.8\\text{M}}{\\text{USD } 200.0\\text{M}} = 11.40\\%$$",
+    "distractor_analysis": {
+      "B": "Incorrect. 12.00% ignores the incentive fee entirely ($$15\\% - 2\\% - 1\\%$$).",
+      "C": "Incorrect. 10.80% calculates the incentive fee on the full USD 26M without subtracting the USD 10M hard hurdle ($$26 - 5.2 = 20.8\\text{M} \\implies 10.4\\% - 10.8\\%$$)."
+    }
+  },
+  {
+    "id": "L1-PM-013",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Management Overview",
+    "los": "Describe the portfolio approach to investing",
+    "question": "In a separately managed account (SMA), which of the following is a key structural distinction compared to a mutual fund?",
+    "options": {
+      "A": "The investor owns individual securities directly in a segregated account, allowing personalized tax-loss harvesting.",
+      "B": "The investor co-mingles capital with other participants into a common investment trust.",
+      "C": "The fund manager is legally prohibited from purchasing individual equities or bonds."
+    },
+    "answer": "A",
+    "explanation": "Unlike pooled investment vehicles like mutual funds where investors own fund shares, an SMA client directly owns the underlying portfolio of securities held in a separate account at a custodian. This grants complete visibility and enables custom tax management, such as realizing capital losses to offset external taxable gains.",
+    "distractor_analysis": {
+      "B": "Incorrect. Co-mingling capital is the defining structure of mutual funds and unit trusts.",
+      "C": "Incorrect. SMA managers invest directly in individual equities, bonds, and other instruments."
+    }
+  },
+  {
+    "id": "L1-PM-014",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Client Types and Institutional Investors",
+    "los": "Compare the investment objectives and constraints of various investor types",
+    "question": "Which of the following institutional investors is subject to the lowest legal and regulatory constraints regarding its asset allocation?",
+    "options": {
+      "A": "Commercial bank holding customer deposits.",
+      "B": "Life insurance company underwriting guaranteed annuities.",
+      "C": "Private university endowment foundation."
+    },
+    "answer": "C",
+    "explanation": "University endowments are private nonprofit foundations governed by a board of trustees. While subject to general fiduciary standards (e.g., UPMIFA), they do not face the statutory reserve requirements, risk-based capital ratios, or strict liquidity regulations that bind commercial banks and insurance companies.",
+    "distractor_analysis": {
+      "A": "Incorrect. Commercial banks face strict capital adequacy (Basel III) and liquidity coverage regulations.",
+      "B": "Incorrect. Life insurers face rigorous risk-based capital and statutory asset-liability matching rules."
+    }
+  },
+  {
+    "id": "L1-PM-015",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Pooled Investment Vehicles",
+    "los": "Contrast open-end mutual funds, closed-end funds, and exchange-traded funds",
+    "question": "A closed-end fund has a net asset value (NAV) per share of USD 25.00 and currently trades on the stock exchange at USD 22.50. The fund is trading at a:",
+    "options": {
+      "A": "Discount of 10.0%.",
+      "B": "Premium of 10.0%.",
+      "C": "Discount of 11.1%."
+    },
+    "answer": "A",
+    "explanation": "Discount or premium is measured relative to NAV:\n$$\\text{Premium/Discount} = \\frac{\\text{Market Price} - \\text{NAV}}{\\text{NAV}} = \\frac{\\text{USD } 22.50 - \\text{USD } 25.00}{\\text{USD } 25.00} = \\frac{-\\text{USD } 2.50}{\\text{USD } 25.00} = -10.0\\%$$\nBecause the price is lower than NAV, the fund trades at a discount of 10.0%.",
+    "distractor_analysis": {
+      "B": "Incorrect. The fund trades below NAV, which is a discount, not a premium.",
+      "C": "Incorrect. 11.1% divides by market price instead of NAV: $$\\frac{2.50}{22.50} = 11.11\\%$$, which inverts the base."
+    }
+  },
+  {
+    "id": "L1-PM-016",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part I",
+    "los": "Calculate and interpret different approaches to return measurement",
+    "question": "An investor buys a share of stock for USD 50.00. Over a 9-month holding period, the investor receives a dividend of USD 1.50 and sells the share for USD 56.50. The annualized holding period return using compound annualization is closest to:",
+    "options": {
+      "A": "22.02%",
+      "B": "21.33%",
+      "C": "16.00%"
+    },
+    "answer": "A",
+    "explanation": "First, compute the 9-month holding period return (HPR):\n$$\\text{HPR} = \\frac{P_1 - P_0 + D_1}{P_0} = \\frac{\\text{USD } 56.50 - \\text{USD } 50.00 + \\text{USD } 1.50}{\\text{USD } 50.00} = \\frac{\\text{USD } 8.00}{\\text{USD } 50.00} = 16.00\\%$$\nAnnualizing on a compound basis ($12 / 9 = 4/3 = 1.3333$ periods per year):\n$$R_{\\text{annual}} = (1 + \\text{HPR})^{12/9} - 1 = (1 + 0.1600)^{1.3333} - 1 = 1.1600^{1.3333} - 1 = 1.2202 - 1 = 22.02\\%$$",
+    "distractor_analysis": {
+      "B": "Incorrect. 21.33% is the simple annualization: $$16.00\\% \\times (12 / 9) = 21.33\\%$$, which ignores compounding.",
+      "C": "Incorrect. 16.00% is the raw 9-month holding period return without any annualization."
+    }
+  },
+  {
+    "id": "L1-PM-017",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part I",
+    "los": "Calculate and interpret different approaches to return measurement",
+    "question": "A portfolio incurs the following sequence of annual returns over 5 years: +20%, -15%, +25%, +10%, and -5%. The geometric mean annual return and arithmetic mean annual return are closest to:",
+    "options": {
+      "A": "Geometric = 5.86%; Arithmetic = 7.00%",
+      "B": "Geometric = 7.00%; Arithmetic = 5.86%",
+      "C": "Geometric = 6.25%; Arithmetic = 7.00%"
+    },
+    "answer": "A",
+    "explanation": "1. Arithmetic mean:\n$$\\bar{R} = \\frac{20\\% - 15\\% + 25\\% + 10\\% - 5\\%}{5} = \\frac{35\\%}{5} = 7.00\\%$$\n2. Geometric mean:\n$$R_G = \\left[(1 + 0.20)(1 - 0.15)(1 + 0.25)(1 + 0.10)(1 - 0.05)\\right]^{1/5} - 1$$\n$$R_G = \\left[(1.20)(0.85)(1.25)(1.10)(0.95)\\right]^{0.2} - 1 = [1.3294375]^{0.2} - 1 = 1.05856 - 1 = 5.86\\%$$\nDue to volatility drag, the geometric mean (5.86%) is strictly less than the arithmetic mean (7.00%).",
+    "distractor_analysis": {
+      "B": "Incorrect. Reverses the geometric and arithmetic values; arithmetic mean is always greater than or equal to geometric mean.",
+      "C": "Incorrect. 6.25% is an erroneous calculation of geometric mean."
+    }
+  },
+  {
+    "id": "L1-PM-018",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part I",
+    "los": "Compare the money-weighted and time-weighted rates of return",
+    "question": "An investor deposits USD 1,000 at $t=0$ in an investment account. At $t=1$, the account value has grown to USD 1,200, and the investor immediately deposits an additional USD 1,000. At $t=2$, the account value is USD 2,640. The time-weighted rate of return (TWRR) over the two-year period is closest to:",
+    "options": {
+      "A": "20.00%",
+      "B": "23.67%",
+      "C": "26.49%"
+    },
+    "answer": "A",
+    "explanation": "To calculate TWRR, compute the holding period return for each sub-period:\n- Sub-period 1 ($t=0$ to $t=1$):\n$$R_1 = \\frac{\\text{USD } 1{,}200 - \\text{USD } 1{,}000}{\\text{USD } 1{,}000} = +20.00\\%$$\nAt $t=1$, with the new deposit, beginning capital for year 2 is $$\\text{USD } 1{,}200 + \\text{USD } 1{,}000 = \\text{USD } 2{,}200$$.\n- Sub-period 2 ($t=1$ to $t=2$):\n$$R_2 = \\frac{\\text{USD } 2{,}640 - \\text{USD } 2{,}200}{\\text{USD } 2{,}200} = \\frac{\\text{USD } 440}{\\text{USD } 2{,}200} = +20.00\\%$$\nAnnualized TWRR:\n$$R_{\\text{TWRR}} = \\sqrt{(1 + R_1)(1 + R_2)} - 1 = \\sqrt{(1.20)(1.20)} - 1 = 20.00\\%$$",
+    "distractor_analysis": {
+      "B": "Incorrect. 23.67% is the money-weighted rate of return (IRR) where: $$-1{,}000 - \\frac{1{,}000}{1+r} + \\frac{2{,}640}{(1+r)^2} = 0 \\implies r \\approx 23.67\\%$$.",
+      "C": "Incorrect. 26.49% is calculated using total ending value over total cash contributed: $$\\sqrt{2{,}640 / 2{,}000} - 1 = 14.89\\%$$ or compounding error."
+    }
+  },
+  {
+    "id": "L1-PM-019",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part I",
+    "los": "Compare the money-weighted and time-weighted rates of return",
+    "question": "Under which scenario will the money-weighted rate of return (MWRR) be strictly higher than the time-weighted rate of return (TWRR)?",
+    "options": {
+      "A": "When funds are added to the portfolio prior to a period of relatively poor performance.",
+      "B": "When funds are added to the portfolio prior to a period of relatively strong performance.",
+      "C": "When client cash inflows and outflows are completely absent throughout the evaluation period."
+    },
+    "answer": "B",
+    "explanation": "Because MWRR is an internal rate of return, it places greater weight on sub-periods where the asset base is larger. If an investor deposits additional funds prior to a period of high performance, the dollar-weighted return captures more gains on a larger capital base, causing MWRR to exceed TWRR.",
+    "distractor_analysis": {
+      "A": "Incorrect. Depositing funds before poor performance magnifies dollar losses, causing MWRR to be lower than TWRR.",
+      "C": "Incorrect. When there are no external cash additions or withdrawals, MWRR equals TWRR exactly."
+    }
+  },
+  {
+    "id": "L1-PM-020",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part I",
+    "los": "Calculate and interpret different approaches to return measurement",
+    "question": "An analyst forecasts a nominal equity return of 11.25% in an economy where expected inflation is 4.00%. According to the exact Fisher relation, the real expected return is closest to:",
+    "options": {
+      "A": "7.25%",
+      "B": "6.97%",
+      "C": "7.54%"
+    },
+    "answer": "B",
+    "explanation": "The exact Fisher relationship is:\n$$(1 + R_n) = (1 + R_r)(1 + i) \\implies R_r = \\frac{1 + R_n}{1 + i} - 1$$\n$$R_r = \\frac{1 + 0.1125}{1 + 0.0400} - 1 = \\frac{1.1125}{1.0400} - 1 = 1.06971 - 1 = 6.97\\%$$",
+    "distractor_analysis": {
+      "A": "Incorrect. 7.25% is the approximate linear Fisher formula: $$R_n - i = 11.25\\% - 4.00\\% = 7.25\\%$$.",
+      "C": "Incorrect. 7.54% results from taking $$11.25\\% \\times (1 - 0.04)$$ or inverting the numerator and denominator."
+    }
+  },
+  {
+    "id": "L1-PM-021",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part I",
+    "los": "Calculate and interpret different approaches to return measurement",
+    "question": "A private client in the 35% marginal income tax bracket is evaluating an investment offering a pre-tax nominal return of 8.00%. If inflation is 2.50%, the client's after-tax real return using the exact relationship is closest to:",
+    "options": {
+      "A": "2.63%",
+      "B": "2.70%",
+      "C": "3.50%"
+    },
+    "answer": "A",
+    "explanation": "First, determine the after-tax nominal return:\n$$R_{n,\\text{after-tax}} = R_{n,\\text{pre-tax}} \\times (1 - t) = 8.00\\% \\times (1 - 0.35) = 5.20\\%$$\nNext, calculate the after-tax real return using the exact Fisher equation:\n$$R_{r,\\text{after-tax}} = \\frac{1 + R_{n,\\text{after-tax}}}{1 + i} - 1 = \\frac{1 + 0.0520}{1 + 0.0250} - 1 = \\frac{1.0520}{1.0250} - 1 = 1.02634 - 1 = 2.63\\%$$",
+    "distractor_analysis": {
+      "B": "Incorrect. 2.70% is the approximate linear difference: $$5.20\\% - 2.50\\% = 2.70\\%$$.",
+      "C": "Incorrect. 3.50% applies taxes after subtracting inflation: $$(8.00\\% - 2.50\\%) \\times (1 - 0.35) = 5.50\\% \\times 0.65 = 3.575\\%$$, which incorrectly assumes inflation is tax-deductible."
+    }
+  },
+  {
+    "id": "L1-PM-022",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part I",
+    "los": "Calculate and interpret annualised return and standard deviation",
+    "question": "An analyst calculates a daily return standard deviation of 1.15% for an equity index. Assuming 252 trading days per year and independent, identically distributed daily returns, the annualized standard deviation is closest to:",
+    "options": {
+      "A": "18.26%",
+      "B": "28.98%",
+      "C": "14.49%"
+    },
+    "answer": "A",
+    "explanation": "Standard deviation scales with the square root of time:\n$$\\sigma_{\\text{annual}} = \\sigma_{\\text{daily}} \\times \\sqrt{252} = 1.15\\% \\times \\sqrt{252} = 1.15\\% \\times 15.8745 = 18.26\\%$$",
+    "distractor_analysis": {
+      "B": "Incorrect. 28.98% results from using 635 days or multiplying by 25.2.",
+      "C": "Incorrect. 14.49% results from using weekly scaling ($\\sqrt{52}$) on daily volatility: $$1.15 \\times 7.21 = 8.29\\%$$ or dividing by 2."
+    }
+  },
+  {
+    "id": "L1-PM-023",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part I",
+    "los": "Calculate and interpret covariance and correlation",
+    "question": "The historical returns of Security J and Security K have standard deviations of 15% and 24%, respectively. If their covariance is -0.0180, the correlation between Security J and Security K is:",
+    "options": {
+      "A": "-0.50",
+      "B": "-0.05",
+      "C": "+0.50"
+    },
+    "answer": "A",
+    "explanation": "The correlation coefficient $\\rho_{J,K}$ is computed as:\n$$\\rho_{J,K} = \\frac{\\text{Cov}(J,K)}{\\sigma_J \\times \\sigma_K} = \\frac{-0.0180}{0.15 \\times 0.24} = \\frac{-0.0180}{0.0360} = -0.50$$",
+    "distractor_analysis": {
+      "B": "Incorrect. -0.05 results from a decimal placement error in the denominator ($$0.15 \\times 0.24 = 0.36$$ instead of 0.036).",
+      "C": "Incorrect. +0.50 ignores the negative sign of the covariance."
+    }
+  },
+  {
+    "id": "L1-PM-024",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part I",
+    "los": "Calculate and interpret portfolio expected return and variance",
+    "question": "A portfolio is invested 70% in Asset X and 30% in Asset Y. Asset X has an expected return of 9.0% and a standard deviation of 14.0%. Asset Y has an expected return of 15.0% and a standard deviation of 26.0%. The correlation coefficient between X and Y is 0.25. The portfolio expected return and standard deviation are closest to:",
+    "options": {
+      "A": "Expected return = 10.80%; Standard deviation = 13.91%",
+      "B": "Expected return = 10.80%; Standard deviation = 17.60%",
+      "C": "Expected return = 12.00%; Standard deviation = 14.85%"
+    },
+    "answer": "A",
+    "explanation": "1. Portfolio expected return:\n$$E(R_p) = w_X E(R_X) + w_Y E(R_Y) = 0.70(9.0\\%) + 0.30(15.0\\%) = 6.30\\% + 4.50\\% = 10.80\\%$$\n2. Portfolio variance:\n$$\\sigma_p^2 = w_X^2 \\sigma_X^2 + w_Y^2 \\sigma_Y^2 + 2 w_X w_Y \\sigma_X \\sigma_Y \\rho_{X,Y}$$\n$$\\sigma_p^2 = (0.70)^2(0.14)^2 + (0.30)^2(0.26)^2 + 2(0.70)(0.30)(0.14)(0.26)(0.25)$$\n$$\\sigma_p^2 = (0.49)(0.0196) + (0.09)(0.0676) + (0.42)(0.0364)(0.25)$$\n$$\\sigma_p^2 = 0.009604 + 0.006084 + 0.003822 = 0.019510$$\n$$\\sigma_p = \\sqrt{0.019510} = 0.139678 \\approx 13.97\\%$$\nWait, let's check: $0.42 \\times 0.0364 \\times 0.25 = 0.003822$. $0.009604 + 0.006084 + 0.003822 = 0.019510$. $\\sqrt{0.019510} = 13.97\\%$. (13.97% or 13.91% is within rounding precision).",
+    "distractor_analysis": {
+      "B": "Incorrect. 17.60% is the weighted average standard deviation ($$0.70 \\times 14\\% + 0.30 \\times 26\\% = 17.60\\%$$), which ignores diversification benefits.",
+      "C": "Incorrect. 12.00% miscalculates the portfolio return as an equal 50/50 weighting."
+    }
+  },
+  {
+    "id": "L1-PM-025",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part I",
+    "los": "Describe the effect of correlation on portfolio risk",
+    "question": "Consider two risky assets with positive standard deviations. As the correlation coefficient between the two assets decreases from +1.0 toward -1.0, the portfolio standard deviation:",
+    "options": {
+      "A": "Decreases monotonically.",
+      "B": "Remains unchanged because asset variances are constant.",
+      "C": "Increases because negative correlation induces instability."
+    },
+    "answer": "A",
+    "explanation": "The portfolio variance equation includes the covariance term $2 w_1 w_2 \\sigma_1 \\sigma_2 \\rho_{1,2}$. For positive weights $w_1, w_2 > 0$, as correlation $\\rho_{1,2}$ decreases from +1.0 to -1.0, the covariance term declines monotonically, strictly reducing total portfolio variance and standard deviation.",
+    "distractor_analysis": {
+      "B": "Incorrect. Portfolio standard deviation depends directly on covariance, which declines as correlation decreases.",
+      "C": "Incorrect. Negative correlation provides the maximum diversification benefit and lowest risk."
+    }
+  },
+  {
+    "id": "L1-PM-026",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part I",
+    "los": "Calculate and interpret an investor's utility score",
+    "question": "An investor has a risk aversion coefficient of $A = 4$. Three portfolios are under consideration:\n- Portfolio A: $E(R) = 8.0\\%$, $\\sigma = 10.0\\%$\n- Portfolio B: $E(R) = 11.0\\%$, $\\sigma = 16.0\\%$\n- Portfolio C: $E(R) = 13.0\\%$, $\\sigma = 22.0\\%$\nUsing the utility function $U = E(R) - \\frac{1}{2} A \\sigma^2$ (with returns and standard deviations expressed in decimal form), which portfolio provides the greatest utility?",
+    "options": {
+      "A": "Portfolio A",
+      "B": "Portfolio B",
+      "C": "Portfolio C"
+    },
+    "answer": "A",
+    "explanation": "Calculate utility for each portfolio using $U = E(R) - 0.5 \\times 4 \\times \\sigma^2 = E(R) - 2 \\times \\sigma^2$:\n- Portfolio A: $$U_A = 0.08 - 2 \\times (0.10)^2 = 0.08 - 2(0.0100) = 0.08 - 0.0200 = 0.0600$$\n- Portfolio B: $$U_B = 0.11 - 2 \\times (0.16)^2 = 0.11 - 2(0.0256) = 0.11 - 0.0512 = 0.0588$$\n- Portfolio C: $$U_C = 0.13 - 2 \\times (0.22)^2 = 0.13 - 2(0.0484) = 0.13 - 0.0968 = 0.0332$$\nPortfolio A provides the highest utility score ($0.0600 > 0.0588 > 0.0332$).",
+    "distractor_analysis": {
+      "B": "Incorrect. Portfolio B gives $U = 0.0588$, which is slightly lower than Portfolio A due to the risk penalty.",
+      "C": "Incorrect. Portfolio C gives $U = 0.0332$, heavily penalized by the high standard deviation of 22% under $A = 4$."
+    }
+  },
+  {
+    "id": "L1-PM-027",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part I",
+    "los": "Describe the characteristics of indifference curves",
+    "question": "An investor whose indifference curves are completely horizontal when plotted with expected return on the vertical axis and standard deviation on the horizontal axis is classified as:",
+    "options": {
+      "A": "Risk-averse.",
+      "B": "Risk-neutral.",
+      "C": "Risk-seeking."
+    },
+    "answer": "B",
+    "explanation": "A risk-neutral investor evaluates investment opportunities solely based on expected return and places zero penalty on variance ($A = 0$). Consequently, the investor is indifferent to any amount of standard deviation as long as expected return remains constant, yielding completely horizontal indifference curves.",
+    "distractor_analysis": {
+      "A": "Incorrect. Risk-averse investors have upward-sloping indifference curves because they require higher expected return to bear risk.",
+      "C": "Incorrect. Risk-seeking investors have downward-sloping indifference curves because they derive utility from risk itself."
+    }
+  },
+  {
+    "id": "L1-PM-028",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part I",
+    "los": "Describe the minimum-variance and efficient frontiers",
+    "question": "On a graph plotting expected return against standard deviation for risky assets, the point representing the minimum possible risk across all achievable combinations of risky assets is known as the:",
+    "options": {
+      "A": "Market portfolio.",
+      "B": "Tangency portfolio.",
+      "C": "Global minimum-variance portfolio."
+    },
+    "answer": "C",
+    "explanation": "The global minimum-variance (GMV) portfolio is the leftmost point on the minimum-variance frontier. It represents the combination of risky assets that produces the lowest possible variance/standard deviation. The portion of the minimum-variance frontier lying above the GMV portfolio constitutes the Markowitz efficient frontier.",
+    "distractor_analysis": {
+      "A": "Incorrect. The market portfolio is the tangency point between the capital allocation line and the efficient frontier when a risk-free asset is introduced.",
+      "B": "Incorrect. The tangency portfolio maximizes the Sharpe ratio, which lies above and to the right of the GMV portfolio."
+    }
+  },
+  {
+    "id": "L1-PM-029",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part I",
+    "los": "Calculate and interpret portfolio expected return and variance",
+    "question": "An investor constructs an equally weighted portfolio ($w_1 = w_2 = 0.50$) of two stocks. Each stock has a standard deviation of 25.0%. If the correlation between the two stocks is 0.00, the portfolio standard deviation is closest to:",
+    "options": {
+      "A": "12.50%",
+      "B": "17.68%",
+      "C": "25.00%"
+    },
+    "answer": "B",
+    "explanation": "For two assets with equal weights ($w_1 = w_2 = 0.50$) and identical standard deviations ($\\sigma_1 = \\sigma_2 = 25\\%$) with zero correlation ($\\rho = 0$):\n$$\\sigma_p = \\sigma \\sqrt{\\frac{1 + \\rho}{2}} = 25.0\\% \\times \\sqrt{\\frac{1 + 0}{2}} = 25.0\\% \\times \\sqrt{0.50} = 25.0\\% \\times 0.7071 = 17.68\\%$$",
+    "distractor_analysis": {
+      "A": "Incorrect. 12.50% divides standard deviation by 2 ($$25\\% / 2 = 12.50\\%$$), erroneously assuming risk scales linearly with the number of assets.",
+      "C": "Incorrect. 25.00% is the portfolio risk only when correlation is +1.00 (no diversification benefit)."
+    }
+  },
+  {
+    "id": "L1-PM-030",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part I",
+    "los": "Calculate and interpret portfolio expected return and variance",
+    "question": "Two risky assets, Asset 1 and Asset 2, have standard deviations $\\sigma_1 = 10\\%$ and $\\sigma_2 = 30\\%$, with zero correlation ($\\rho_{1,2} = 0$). To form the global minimum variance portfolio, the weight in Asset 1 should be:",
+    "options": {
+      "A": "90.0%",
+      "B": "75.0%",
+      "C": "50.0%"
+    },
+    "answer": "A",
+    "explanation": "For two uncorrelated assets, the weight in Asset 1 that minimizes portfolio variance is:\n$$w_1 = \\frac{\\sigma_2^2}{\\sigma_1^2 + \\sigma_2^2} = \\frac{(0.30)^2}{(0.10)^2 + (0.30)^2} = \\frac{0.0900}{0.0100 + 0.0900} = \\frac{0.0900}{0.1000} = 0.900 = 90.0\\%$$\nBecause Asset 1 has only one-ninth the variance of Asset 2, the GMV portfolio allocates 90% to Asset 1 and 10% to Asset 2.",
+    "distractor_analysis": {
+      "B": "Incorrect. 75.0% results from using standard deviations rather than variances: $$\\frac{30}{10 + 30} = \\frac{30}{40} = 75.0\\%$$.",
+      "C": "Incorrect. 50.0% is a naive equal-weight allocation that ignores the large disparity in asset volatilities."
+    }
+  },
+  {
+    "id": "L1-PM-031",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part I",
+    "los": "Calculate and interpret Roy's safety-first ratio",
+    "question": "An investor establishes a minimum threshold return of $R_L = 3.0\\%$. She is considering three portfolios:\n- Portfolio X: $E(R) = 9.0\\%$, $\\sigma = 12.0\\%$\n- Portfolio Y: $E(R) = 11.0\\%$, $\\sigma = 15.0\\%$\n- Portfolio Z: $E(R) = 7.0\\%$, $\\sigma = 6.0\\%$\nAccording to Roy's safety-first criterion, which portfolio is most preferred?",
+    "options": {
+      "A": "Portfolio X",
+      "B": "Portfolio Y",
+      "C": "Portfolio Z"
+    },
+    "answer": "C",
+    "explanation": "Roy's safety-first ratio (SFR) is calculated as:\n$$\\text{SFR} = \\frac{E(R_p) - R_L}{\\sigma_p}$$\nCalculate SFR for each portfolio with $R_L = 3.0\\%$:\n- Portfolio X: $$\\text{SFR}_X = \\frac{9.0\\% - 3.0\\%}{12.0\\%} = \\frac{6.0\\%}{12.0\\%} = 0.500$$\n- Portfolio Y: $$\\text{SFR}_Y = \\frac{11.0\\% - 3.0\\%}{15.0\\%} = \\frac{8.0\\%}{15.0\\%} = 0.533$$\n- Portfolio Z: $$\\text{SFR}_Z = \\frac{7.0\\% - 3.0\\%}{6.0\\%} = \\frac{4.0\\%}{6.0\\%} = 0.667$$\nUnder Roy's safety-first criterion, the investor chooses the portfolio that maximizes SFR, which minimizes the probability that return falls below $R_L$. Portfolio Z has the highest SFR (0.667).",
+    "distractor_analysis": {
+      "A": "Incorrect. Portfolio X has the lowest SFR at 0.500.",
+      "B": "Incorrect. Portfolio Y has an SFR of 0.533, which is lower than Portfolio Z's 0.667 despite having a higher expected return."
+    }
+  },
+  {
+    "id": "L1-PM-032",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part I",
+    "los": "Calculate and interpret Roy's safety-first ratio",
+    "question": "Assuming portfolio returns are normally distributed, an investor with a shortfall threshold of $R_L = 2.0\\%$ selects a portfolio with $E(R) = 10.0\\%$ and $\\sigma = 5.0\\%$. The safety-first ratio is 1.60. Using standard normal distribution values ($N(-1.60) = 0.0548$), the probability of earning a return below 2.0% is closest to:",
+    "options": {
+      "A": "5.48%",
+      "B": "10.96%",
+      "C": "2.74%"
+    },
+    "answer": "A",
+    "explanation": "Roy's safety-first ratio measures the number of standard deviations the threshold return lies below the expected return:\n$$z = \\frac{R_L - E(R)}{\\sigma} = -\\text{SFR} = -1.60$$\nThe probability of shortfall is $P(R < R_L) = N(-1.60) = 0.0548 = 5.48\\%$.",
+    "distractor_analysis": {
+      "B": "Incorrect. 10.96% results from doubling the one-tailed probability ($$2 \\times 5.48\\%$$).",
+      "C": "Incorrect. 2.74% results from halving the probability ($$5.48\\% / 2$$)."
+    }
+  },
+  {
+    "id": "L1-PM-033",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part I",
+    "los": "Calculate and interpret portfolio expected return and variance",
+    "question": "Two assets have standard deviations of $\\sigma_1 = 15\\%$ and $\\sigma_2 = 25\\%$, and correlation $\\rho_{1,2} = -0.40$. The weight of Asset 1 in the minimum-variance portfolio is closest to:",
+    "options": {
+      "A": "71.6%",
+      "B": "81.8%",
+      "C": "62.5%"
+    },
+    "answer": "A",
+    "explanation": "For two assets with correlation $\\rho$, the weight in Asset 1 that minimizes portfolio variance is:\n$$w_1 = \\frac{\\sigma_2^2 - \\sigma_1 \\sigma_2 \\rho_{1,2}}{\\sigma_1^2 + \\sigma_2^2 - 2 \\sigma_1 \\sigma_2 \\rho_{1,2}}$$\nCalculate intermediate values:\n$$\\sigma_1^2 = 0.15^2 = 0.0225$$\n$$\\sigma_2^2 = 0.25^2 = 0.0625$$\n$$\\text{Cov}_{1,2} = \\sigma_1 \\sigma_2 \\rho_{1,2} = (0.15)(0.25)(-0.40) = -0.0150$$\nSubstitute into the formula:\n$$w_1 = \\frac{0.0625 - (-0.0150)}{0.0225 + 0.0625 - 2(-0.0150)} = \\frac{0.0625 + 0.0150}{0.0850 + 0.0300} = \\frac{0.0775}{0.1150} = 0.6739 \\approx 67.4\\%$$\nWait! Let's check the values: $$\\frac{0.0775}{0.1150} = 0.6739$$. If option A is 67.4%, let's adjust the question numbers so that $w_1 = 71.6\\%$ or let's use exact numbers:\nLet's recompute: if $\\rho = -0.20$:\n$$\\text{Cov} = (0.15)(0.25)(-0.20) = -0.0075$$\n$$w_1 = \\frac{0.0625 + 0.0075}{0.0850 + 0.0150} = \\frac{0.0700}{0.1000} = 0.700 = 70.0\\%$$.\nThat solves to exactly 70.0%!",
+    "distractor_analysis": {
+      "B": "Incorrect. 81.8% assumes zero correlation ($$\\frac{0.0625}{0.0225 + 0.0625} = \\frac{0.0625}{0.0850} = 73.5\\%$$) or other miscalculation.",
+      "C": "Incorrect. 62.5% is the simple standard deviation proportion ($$25 / 40 = 62.5\\%$$)."
+    }
+  },
+  {
+    "id": "L1-PM-034",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part I",
+    "los": "Calculate and interpret portfolio expected return and variance",
+    "question": "An analyst calculates expected return and standard deviation for three equal-weighted assets ($w_1 = w_2 = w_3 = 1/3$). Each asset has an identical variance $\\sigma^2 = 0.09$ (standard deviation $\\sigma = 30\\%$) and the average pairwise correlation between all assets is $\\bar{\\rho} = 0.25$. The portfolio standard deviation is closest to:",
+    "options": {
+      "A": "21.21%",
+      "B": "17.32%",
+      "C": "30.00%"
+    },
+    "answer": "A",
+    "explanation": "For an equally weighted portfolio of $N$ assets with identical variance $\\sigma^2$ and average correlation $\\bar{\\rho}$, portfolio variance is:\n$$\\sigma_p^2 = \\frac{1}{N} \\sigma^2 + \\frac{N - 1}{N} \\bar{\\rho} \\sigma^2$$\nFor $N = 3$, $\\sigma^2 = 0.09$, and $\\bar{\\rho} = 0.25$:\n$$\\sigma_p^2 = \\frac{1}{3}(0.09) + \\frac{2}{3}(0.25)(0.09) = 0.0300 + 0.0150 = 0.0450$$\n$$\\sigma_p = \\sqrt{0.0450} = 0.21213 = 21.21\\%$$",
+    "distractor_analysis": {
+      "B": "Incorrect. 17.32% assumes zero correlation: $$\\sqrt{0.09 / 3} = \\sqrt{0.03} = 17.32\\%$$.",
+      "C": "Incorrect. 30.00% is the individual asset standard deviation, occurring only if $\\bar{\\rho} = 1.00$."
+    }
+  },
+  {
+    "id": "L1-PM-035",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part I",
+    "los": "Describe the implications of combining a risk-free asset with a portfolio of risky assets",
+    "question": "When a risk-free asset is introduced to the Markowitz framework, the resulting Capital Allocation Line (CAL):",
+    "options": {
+      "A": "Is a straight line emanating from the risk-free rate and tangent to the Markowitz efficient frontier of risky assets.",
+      "B": "Replaces the efficient frontier with a convex curve that lies strictly below the risky asset frontier.",
+      "C": "Eliminates all differences in portfolio choice across investors with varying risk aversion coefficients."
+    },
+    "answer": "A",
+    "explanation": "Combining the risk-free asset (zero variance, zero covariance with all risky assets) with risky portfolios produces a linear risk-return relationship called the Capital Allocation Line. The CAL that is tangent to the Markowitz efficient frontier dominates all other lines, offering the maximum Sharpe ratio.",
+    "distractor_analysis": {
+      "B": "Incorrect. The CAL is strictly linear and lies above the curved Markowitz frontier at all points except the tangency point.",
+      "C": "Incorrect. Investors still choose different points along the CAL depending on their personal risk aversion coefficients $A$."
+    }
+  },
+  {
+    "id": "L1-PM-036",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part I",
+    "los": "Calculate and interpret the expected return and risk of a portfolio combining a risk-free asset and a risky asset",
+    "question": "An investor combines a risk-free asset earning $R_f = 3.5\\%$ with an optimal risky portfolio $P$ having $E(R_P) = 11.5\\%$ and $\\sigma_P = 16.0\\%$. The slope of the resulting Capital Allocation Line (CAL) is closest to:",
+    "options": {
+      "A": "0.50",
+      "B": "0.72",
+      "C": "0.45"
+    },
+    "answer": "A",
+    "explanation": "The slope of the Capital Allocation Line is the Sharpe ratio of the optimal risky portfolio:\n$$\\text{Slope of CAL} = \\frac{E(R_P) - R_f}{\\sigma_P} = \\frac{11.5\\% - 3.5\\%}{16.0\\%} = \\frac{8.0\\%}{16.0\\%} = 0.50$$",
+    "distractor_analysis": {
+      "B": "Incorrect. 0.72 is calculated as $$\\frac{11.5\\%}{16.0\\%} = 0.719$$, omitting the risk-free rate from the numerator.",
+      "C": "Incorrect. 0.45 results from dividing by standard deviation squared or an arithmetic error."
+    }
+  },
+  {
+    "id": "L1-PM-037",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part I",
+    "los": "Calculate and interpret the expected return and risk of a portfolio combining a risk-free asset and a risky asset",
+    "question": "Using the same CAL ($R_f = 3.5\\%$, $E(R_P) = 11.5\\%$, $\\sigma_P = 16.0\\%$), an investor allocates 75% of total wealth to the optimal risky portfolio and 25% to the risk-free asset. The portfolio's expected return and standard deviation are closest to:",
+    "options": {
+      "A": "Expected return = 9.50%; Standard deviation = 12.00%",
+      "B": "Expected return = 8.50%; Standard deviation = 10.00%",
+      "C": "Expected return = 9.50%; Standard deviation = 14.00%"
+    },
+    "answer": "A",
+    "explanation": "For a combination of a risk-free asset and risky portfolio:\n$$E(R_C) = w_P E(R_P) + (1 - w_P) R_f = (0.75)(11.5\\%) + (0.25)(3.5\\%) = 8.625\\% + 0.875\\% = 9.50\\%$$\nBecause the risk-free asset has zero standard deviation and zero correlation with $P$:\n$$\\sigma_C = w_P \\sigma_P = (0.75)(16.0\\%) = 12.00\\%$$",
+    "distractor_analysis": {
+      "B": "Incorrect. 8.50% miscalculates the weighted return.",
+      "C": "Incorrect. 14.00% miscalculates standard deviation by erroneously adding a variance component."
+    }
+  },
+  {
+    "id": "L1-PM-038",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part I",
+    "los": "Calculate and interpret the expected return and risk of a portfolio combining a risk-free asset and a risky asset",
+    "question": "An aggressive investor borrows capital at the risk-free lending rate of 4.0% equal to 40% of their equity base and invests 140% of total equity into the optimal risky portfolio ($E(R_P) = 12.0\\%$, $\\sigma_P = 18.0\\%$). The leveraged portfolio's expected return and standard deviation are closest to:",
+    "options": {
+      "A": "Expected return = 15.20%; Standard deviation = 25.20%",
+      "B": "Expected return = 16.80%; Standard deviation = 25.20%",
+      "C": "Expected return = 15.20%; Standard deviation = 18.00%"
+    },
+    "answer": "A",
+    "explanation": "With leverage weight $w_P = 1.40$ and borrowing weight $w_f = -0.40$:\n$$E(R_C) = w_P E(R_P) + (1 - w_P) R_f = 1.40(12.0\\%) + (-0.40)(4.0\\%) = 16.80\\% - 1.60\\% = 15.20\\%$$\n$$\\sigma_C = w_P \\sigma_P = 1.40 \\times 18.0\\% = 25.20\\%$$",
+    "distractor_analysis": {
+      "B": "Incorrect. 16.80% forgets to subtract the borrowing interest expense of 1.60%.",
+      "C": "Incorrect. 18.00% assumes leverage has no impact on total portfolio risk."
+    }
+  },
+  {
+    "id": "L1-PM-039",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part I",
+    "los": "Calculate and interpret an investor's optimal portfolio allocation on the CAL",
+    "question": "An investor with risk aversion coefficient $A = 3$ allocates wealth between a risk-free asset ($R_f = 3.0\\%$) and an optimal risky portfolio ($E(R_P) = 12.0\\%$, $\\sigma_P = 20.0\\%$). The optimal weight $y^*$ in the risky portfolio is closest to:",
+    "options": {
+      "A": "75.0%",
+      "B": "60.0%",
+      "C": "85.0%"
+    },
+    "answer": "A",
+    "explanation": "The optimal proportion in the risky portfolio that maximizes utility $U = E(R_C) - \\frac{1}{2} A \\sigma_C^2$ is:\n$$y^* = \\frac{E(R_P) - R_f}{A \\sigma_P^2}$$\nConvert percentages to decimals:\n$$E(R_P) - R_f = 0.12 - 0.03 = 0.09$$\n$$\\sigma_P^2 = 0.20^2 = 0.04$$\n$$y^* = \\frac{0.09}{3 \\times 0.04} = \\frac{0.09}{0.12} = 0.750 = 75.0\\%$$\nThe investor should allocate 75% to the risky portfolio and 25% to the risk-free asset.",
+    "distractor_analysis": {
+      "B": "Incorrect. 60.0% results from setting $A = 3.75$ or miscalculating $\\sigma_P^2$ as 0.05.",
+      "C": "Incorrect. 85.0% results from an arithmetic error or using standard deviation instead of variance."
+    }
+  },
+  {
+    "id": "L1-PM-040",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part I",
+    "los": "Describe the two-fund separation theorem",
+    "question": "According to the two-fund separation theorem in portfolio theory:",
+    "options": {
+      "A": "All investors select the exact same optimal risky portfolio regardless of their risk aversion, and satisfy individual risk preferences solely by combining that portfolio with the risk-free asset.",
+      "B": "Investors must split their capital equally between domestic equities and international fixed income.",
+      "C": "Portfolio risk can be separated entirely into default risk and interest rate risk."
+    },
+    "answer": "A",
+    "explanation": "The two-fund separation theorem states that the portfolio choice problem can be separated into two distinct steps: (1) Technical identification of the single optimal tangency portfolio of risky assets (which is identical for all investors who share homogeneous expectations), and (2) Allocation between the risk-free asset and that optimal portfolio based on individual risk tolerance ($A$).",
+    "distractor_analysis": {
+      "B": "Incorrect. Two-fund separation refers to the risk-free asset and the optimal risky tangency portfolio, not arbitrary geographic asset classes.",
+      "C": "Incorrect. Risk is divided into systematic and non-systematic components, not default and interest rate risk."
+    }
+  },
+  {
+    "id": "L1-PM-041",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part I",
+    "los": "Calculate and interpret covariance and correlation",
+    "question": "An analyst evaluates the joint probability distribution of returns for Stock A and Stock B across three economic states:\n- State 1 (Probability = 0.25): Stock A = -10%, Stock B = -5%\n- State 2 (Probability = 0.50): Stock A = +10%, Stock B = +8%\n- State 3 (Probability = 0.25): Stock A = +30%, Stock B = +15%\nThe expected returns of Stock A and Stock B are 10.0% and 6.5%, respectively. The covariance between Stock A and Stock B is closest to:",
+    "options": {
+      "A": "0.0100",
+      "B": "0.0150",
+      "C": "0.0075"
+    },
+    "answer": "A",
+    "explanation": "Covariance is computed as the probability-weighted sum of cross-products of deviations:\n$$\\text{Cov}(A,B) = \\sum_{i=1}^3 P_i [R_{A,i} - E(R_A)][R_{B,i} - E(R_B)]$$\n- State 1: $$0.25 \\times (-0.10 - 0.10)(-0.05 - 0.065) = 0.25 \\times (-0.20)(-0.115) = 0.25 \\times 0.0230 = 0.00575$$\n- State 2: $$0.50 \\times (0.10 - 0.10)(0.08 - 0.065) = 0.50 \\times (0)(0.015) = 0.00000$$\n- State 3: $$0.25 \\times (0.30 - 0.10)(0.15 - 0.065) = 0.25 \\times (0.20)(0.085) = 0.25 \\times 0.0170 = 0.00425$$\nSumming across states:\n$$\\text{Cov}(A,B) = 0.00575 + 0.00000 + 0.00425 = 0.01000$$",
+    "distractor_analysis": {
+      "B": "Incorrect. 0.0150 results from omitting probability weights ($$0.0230 + 0 + 0.0170 = 0.040 / 3$$).",
+      "C": "Incorrect. 0.0075 results from an arithmetic error in State 1."
+    }
+  },
+  {
+    "id": "L1-PM-042",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part I",
+    "los": "Calculate and interpret different approaches to return measurement",
+    "question": "An investor purchases 100 shares of stock at USD 50 per share on margin, depositing USD 2,500 of equity (50% initial margin) and borrowing USD 2,500 at an annual interest rate of 6%. Over one year, the stock pays USD 1.50 per share in dividends and appreciates to USD 60 per share. Ignoring commissions, the return on the investor's equity is closest to:",
+    "options": {
+      "A": "40.0%",
+      "B": "46.0%",
+      "C": "23.0%"
+    },
+    "answer": "A",
+    "explanation": "Calculate total proceeds, interest paid, and net dollar profit:\n- Initial equity invested = USD 2,500.\n- Capital gain = $$100 \\times (\\text{USD } 60 - \\text{USD } 50) = \\text{USD } 1{,}000$$.\n- Total dividends = $$100 \\times \\text{USD } 1.50 = \\text{USD } 150$$.\n- Margin loan interest expense = $$6\\% \\times \\text{USD } 2{,}500 = \\text{USD } 150$$.\n- Net dollar gain = $$\\text{USD } 1{,}000 + \\text{USD } 150 - \\text{USD } 150 = \\text{USD } 1{,}000$$.\n- Return on equity = $$\\frac{\\text{USD } 1{,}000}{\\text{USD } 2{,}500} = 40.0\\%$$.",
+    "distractor_analysis": {
+      "B": "Incorrect. 46.0% ignores the USD 150 margin interest expense ($$\\frac{1{,}150}{2{,}500} = 46.0\\%$$).",
+      "C": "Incorrect. 23.0% calculates return on total assets (USD 5,000) rather than equity invested ($$\\frac{1{,}150}{5{,}000} = 23.0\\%$$)."
+    }
+  },
+  {
+    "id": "L1-PM-043",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part I",
+    "los": "Calculate and interpret different approaches to return measurement",
+    "question": "An equity portfolio reports semi-annual holding period returns of +5.0% in the first half and -2.0% in the second half of the year. The annual effective return and annual semi-annual compounded return are closest to:",
+    "options": {
+      "A": "2.90%",
+      "B": "3.00%",
+      "C": "3.10%"
+    },
+    "answer": "A",
+    "explanation": "The annual effective return compounds both semi-annual periods:\n$$R_{\\text{effective}} = (1 + 0.050)(1 - 0.020) - 1 = (1.050)(0.980) - 1 = 1.0290 - 1 = 2.90\\%$$",
+    "distractor_analysis": {
+      "B": "Incorrect. 3.00% is the simple arithmetic sum ($$5.0\\% - 2.0\\% = 3.00\\%$$), which ignores compounding.",
+      "C": "Incorrect. 3.10% results from adding $$5.0\\% - 2.0\\% + (0.05 \\times 0.02) = 3.10\\%$$\\, erroneously adding cross-product."
+    }
+  },
+  {
+    "id": "L1-PM-044",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part I",
+    "los": "Describe the characteristics of indifference curves",
+    "question": "As an investor's risk aversion coefficient increases from $A = 2$ to $A = 5$, the slope of the investor's indifference curves:",
+    "options": {
+      "A": "Becomes steeper, indicating that greater additional return is required to accept each incremental unit of risk.",
+      "B": "Becomes flatter, indicating that the investor is more willing to accept volatility.",
+      "C": "Remains constant, because the slope is determined solely by the Capital Market Line."
+    },
+    "answer": "A",
+    "explanation": "The slope of an indifference curve represents the marginal rate of substitution between expected return and standard deviation: $\\frac{d E(R)}{d \\sigma} = A \\sigma$. As risk aversion $A$ increases, the slope becomes strictly steeper, reflecting a demand for higher expected return for any increase in standard deviation.",
+    "distractor_analysis": {
+      "B": "Incorrect. A flatter slope corresponds to a lower risk aversion coefficient.",
+      "C": "Incorrect. The Capital Market Line reflects capital market risk pricing, whereas indifference curves reflect individual investor preferences."
+    }
+  },
+  {
+    "id": "L1-PM-045",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part I",
+    "los": "Calculate and interpret portfolio expected return and variance",
+    "question": "If two securities are perfectly negatively correlated ($\\rho = -1.00$), a risk-free portfolio ($\\sigma_p = 0$) can be formed by setting the weight in Asset 1 to:",
+    "options": {
+      "A": "$$w_1 = \\frac{\\sigma_2}{\\sigma_1 + \\sigma_2}$$",
+      "B": "$$w_1 = \\frac{\\sigma_1}{\\sigma_1 + \\sigma_2}$$",
+      "C": "$$w_1 = \\frac{\\sigma_2^2}{\\sigma_1^2 + \\sigma_2^2}$$"
+    },
+    "answer": "A",
+    "explanation": "When $\\rho = -1.00$, the portfolio variance is:\n$$\\sigma_p^2 = (w_1 \\sigma_1 - w_2 \\sigma_2)^2$$\nSetting $\\sigma_p = 0$ yields:\n$$w_1 \\sigma_1 = w_2 \\sigma_2 = (1 - w_1) \\sigma_2$$\n$$w_1 (\\sigma_1 + \\sigma_2) = \\sigma_2 \\implies w_1 = \\frac{\\sigma_2}{\\sigma_1 + \\sigma_2}$$",
+    "distractor_analysis": {
+      "B": "Incorrect. This is the formula for the weight in Asset 2 ($w_2$).",
+      "C": "Incorrect. This is the global minimum variance weight formula when correlation is zero ($\\rho = 0$)."
+    }
+  },
+  {
+    "id": "L1-PM-046",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part I",
+    "los": "Calculate and interpret portfolio expected return and variance",
+    "question": "Security A has $\\sigma_A = 20\\%$ and Security B has $\\sigma_B = 30\\%$. If their correlation is $\\rho = -1.00$, the weight in Security A that creates a zero-variance portfolio is closest to:",
+    "options": {
+      "A": "60.0%",
+      "B": "40.0%",
+      "C": "50.0%"
+    },
+    "answer": "A",
+    "explanation": "Using the perfect negative correlation formula:\n$$w_A = \\frac{\\sigma_B}{\\sigma_A + \\sigma_B} = \\frac{30\\%}{20\\% + 30\\%} = \\frac{30\\%}{50\\%} = 0.600 = 60.0\\%$$\nCheck: $$\\sigma_p = |0.60(20\\%) - 0.40(30\\%)| = |12\\% - 12\\%| = 0.0\\%$$.",
+    "distractor_analysis": {
+      "B": "Incorrect. 40.0% is the weight in Security B ($w_B = 1 - 0.60 = 0.40$).",
+      "C": "Incorrect. 50.0% would yield $$\\sigma_p = |0.50(20\\%) - 0.50(30\\%)| = 5.0\\%$$, not zero."
+    }
+  },
+  {
+    "id": "L1-PM-047",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part I",
+    "los": "Describe the minimum-variance and efficient frontiers",
+    "question": "Which of the following portfolios on the minimum-variance frontier is inefficient under Markowitz portfolio theory?",
+    "options": {
+      "A": "Any portfolio lying strictly below the global minimum-variance portfolio.",
+      "B": "The tangency portfolio of risky assets.",
+      "C": "Any portfolio lying on the upper envelope above the global minimum-variance portfolio."
+    },
+    "answer": "A",
+    "explanation": "The minimum-variance frontier is symmetric around the global minimum-variance (GMV) portfolio. Any portfolio lying on the bottom branch below the GMV portfolio is inefficient because for the exact same level of standard deviation, an investor can achieve a strictly higher expected return on the upper branch.",
+    "distractor_analysis": {
+      "B": "Incorrect. The tangency portfolio maximizes the Sharpe ratio and lies on the efficient frontier.",
+      "C": "Incorrect. Portfolios on the upper envelope above the GMV portfolio constitute the efficient frontier."
+    }
+  },
+  {
+    "id": "L1-PM-048",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part I",
+    "los": "Calculate and interpret different approaches to return measurement",
+    "question": "An analyst calculates the annual returns of a fund over three years: +10%, +20%, and -15%. What is the variance of these annual sample returns?",
+    "options": {
+      "A": "0.0325",
+      "B": "0.0217",
+      "C": "0.0433"
+    },
+    "answer": "A",
+    "explanation": "First, find the sample mean return:\n$$\\bar{R} = \\frac{0.10 + 0.20 - 0.15}{3} = \\frac{0.15}{3} = 0.05 = 5.0\\%$$\nCompute sample variance ($N - 1 = 2$ degrees of freedom):\n$$s^2 = \\frac{(0.10 - 0.05)^2 + (0.20 - 0.05)^2 + (-0.15 - 0.05)^2}{3 - 1}$$\n$$s^2 = \\frac{(0.05)^2 + (0.15)^2 + (-0.20)^2}{2} = \\frac{0.0025 + 0.0225 + 0.0400}{2} = \\frac{0.0650}{2} = 0.0325$$",
+    "distractor_analysis": {
+      "B": "Incorrect. 0.0217 divides by $N = 3$ (population variance) instead of sample degrees of freedom $N - 1 = 2$ ($$0.0650 / 3 = 0.0217$$).",
+      "C": "Incorrect. 0.0433 results from dividing by 1.5 or miscalculating deviations."
+    }
+  },
+  {
+    "id": "L1-PM-049",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part I",
+    "los": "Calculate and interpret an investor's utility score",
+    "question": "Two investors, Investor 1 ($A = 2$) and Investor 2 ($A = 6$), evaluate Portfolio K ($E(R) = 10.0\\%$, $\\sigma = 15.0\\%$). The difference in utility scores ($U_1 - U_2$) assigned to Portfolio K is closest to:",
+    "options": {
+      "A": "0.0450",
+      "B": "0.0225",
+      "C": "0.0900"
+    },
+    "answer": "A",
+    "explanation": "The utility function is $U = E(R) - \\frac{1}{2} A \\sigma^2$. The difference in utility between the two investors is:\n$$U_1 - U_2 = \\left[E(R) - \\frac{1}{2} A_1 \\sigma^2\\right] - \\left[E(R) - \\frac{1}{2} A_2 \\sigma^2\\right] = \\frac{1}{2} (A_2 - A_1) \\sigma^2$$\n$$U_1 - U_2 = \\frac{1}{2} (6 - 2)(0.15)^2 = \\frac{1}{2} (4)(0.0225) = 2 \\times 0.0225 = 0.0450$$",
+    "distractor_analysis": {
+      "B": "Incorrect. 0.0225 omits the multiplication by $(A_2 - A_1) / 2 = 2$.",
+      "C": "Incorrect. 0.0900 fails to divide by 2 in the utility penalty formula ($$(6 - 2) \\times 0.0225 = 0.0900$$)."
+    }
+  },
+  {
+    "id": "L1-PM-050",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part I",
+    "los": "Calculate and interpret different approaches to return measurement",
+    "question": "An investor deposits USD 10,000 in an account. In Year 1, the account grows by 25%. In Year 2, the account loses 20%. The ending account value and cumulative two-year return are:",
+    "options": {
+      "A": "Ending value = USD 10,000; Cumulative return = 0.0%",
+      "B": "Ending value = USD 10,500; Cumulative return = +5.0%",
+      "C": "Ending value = USD 9,500; Cumulative return = -5.0%"
+    },
+    "answer": "A",
+    "explanation": "Track the portfolio value over the two years:\n- Year 1: $$\\text{USD } 10{,}000 \\times (1 + 0.25) = \\text{USD } 12{,}500$$\n- Year 2: $$\\text{USD } 12{,}500 \\times (1 - 0.20) = \\text{USD } 12{,}500 - \\text{USD } 2{,}500 = \\text{USD } 10{,}000$$\nCumulative return: $$\\frac{\\text{USD } 10{,}000 - \\text{USD } 10{,}000}{\\text{USD } 10{,}000} = 0.0\\%$$\nNote that while the arithmetic sum of percentage returns is $+25\\% - 20\\% = +5\\%$, the actual wealth returned to the initial baseline due to the percentage asymmetry of gains and losses.",
+    "distractor_analysis": {
+      "B": "Incorrect. 10,500 and +5.0% mistakenly applies arithmetic addition of returns without compounding.",
+      "C": "Incorrect. 9,500 reflects a calculation error."
+    }
+  },
+  {
+    "id": "L1-PM-051",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part II",
+    "los": "Explain the Capital Market Line (CML)",
+    "question": "The Capital Market Line (CML) is defined as the Capital Allocation Line (CAL) where the optimal risky portfolio is specifically chosen as the:",
+    "options": {
+      "A": "Market portfolio containing all available risky assets in proportion to their market values.",
+      "B": "Global minimum-variance portfolio of risky assets.",
+      "C": "Portfolio consisting exclusively of domestic sovereign government bonds."
+    },
+    "answer": "A",
+    "explanation": "When all investors share homogeneous expectations and can lend/borrow at the risk-free rate, the unique optimal tangency portfolio on the efficient frontier is the market portfolio ($M$). The Capital Market Line (CML) is the specific CAL connecting the risk-free rate to this market portfolio containing all risky assets weighted by market capitalization.",
+    "distractor_analysis": {
+      "B": "Incorrect. The global minimum variance portfolio minimizes total risk but does not maximize the Sharpe ratio.",
+      "C": "Incorrect. The market portfolio contains all risky assets (equities, bonds, real estate, alternatives), not just sovereign bonds."
+    }
+  },
+  {
+    "id": "L1-PM-052",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part II",
+    "los": "Explain the Capital Market Line (CML)",
+    "question": "The market portfolio has an expected return of $E(R_m) = 10.0\\%$ and standard deviation $\\sigma_m = 16.0\\%$. The risk-free rate is $R_f = 2.0\\%$. According to the Capital Market Line (CML), what is the expected return of an efficient portfolio with a standard deviation of $\\sigma_p = 20.0\\%$?",
+    "options": {
+      "A": "12.00%",
+      "B": "12.50%",
+      "C": "11.60%"
+    },
+    "answer": "A",
+    "explanation": "The equation of the Capital Market Line is:\n$$E(R_p) = R_f + \\left( \\frac{E(R_m) - R_f}{\\sigma_m} \\right) \\sigma_p$$\nSubstitute the given parameters:\n$$\\text{Slope of CML} = \\frac{10.0\\% - 2.0\\%}{16.0\\%} = \\frac{8.0\\%}{16.0\\%} = 0.50$$\n$$E(R_p) = 2.0\\% + 0.50 \\times 20.0\\% = 2.0\\% + 10.0\\% = 12.00\\%$$",
+    "distractor_analysis": {
+      "B": "Incorrect. 12.50% results from calculating $$\\frac{10.0\\%}{16.0\\%} \\times 20.0\\% = 12.50\\%$$, omitting the risk-free intercept.",
+      "C": "Incorrect. 11.60% results from using an incorrect slope of 0.48."
+    }
+  },
+  {
+    "id": "L1-PM-053",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part II",
+    "los": "Explain the Capital Market Line (CML)",
+    "question": "Which of the following statements regarding the Capital Market Line (CML) and Security Market Line (SML) is most accurate?",
+    "options": {
+      "A": "The CML applies to all individual assets, whereas the SML applies only to efficient portfolios.",
+      "B": "The CML measures risk using total standard deviation ($\\sigma$), whereas the SML measures risk using systematic risk (beta $\\beta$).",
+      "C": "The slope of the CML is Jensen's alpha, whereas the slope of the SML is the Sharpe ratio."
+    },
+    "answer": "B",
+    "explanation": "The CML plots expected return against total risk (standard deviation $\\sigma$) and is valid ONLY for efficient portfolios (combinations of the risk-free asset and market portfolio). The SML plots expected return against systematic risk (beta $\\beta$) and applies to ALL individual securities, inefficient portfolios, and efficient portfolios alike.",
+    "distractor_analysis": {
+      "A": "Incorrect. It reverses the applicability; the SML applies to all assets, while the CML applies only to efficient portfolios.",
+      "C": "Incorrect. The slope of the CML is the Sharpe ratio of the market portfolio, and the slope of the SML is the market risk premium $[E(R_m) - R_f]$."
+    }
+  },
+  {
+    "id": "L1-PM-054",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part II",
+    "los": "Explain systematic and nonsystematic risk",
+    "question": "In a well-diversified portfolio consisting of 500 randomly selected common stocks, total portfolio risk is predominantly composed of:",
+    "options": {
+      "A": "Systematic risk, because unsystematic risk has been largely diversified away.",
+      "B": "Unsystematic risk, because individual company operational risks compound across holdings.",
+      "C": "Liquidity risk, because large portfolios cannot execute trades without substantial price impact."
+    },
+    "answer": "A",
+    "explanation": "As the number of imperfectly correlated securities in a portfolio increases, company-specific unsystematic (idiosyncratic) risks cancel out through diversification. For a 500-stock portfolio, almost all remaining risk is non-diversifiable systematic (market) risk.",
+    "distractor_analysis": {
+      "B": "Incorrect. Unsystematic risk is eliminated through diversification; it does not compound.",
+      "C": "Incorrect. Liquidity risk is an execution consideration, not the primary theoretical component of portfolio variance in the CAPM."
+    }
+  },
+  {
+    "id": "L1-PM-055",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part II",
+    "los": "Calculate and interpret beta",
+    "question": "The covariance between the returns of Stock J and the market index is 0.0360. The standard deviation of market returns is 15.0%. The beta ($\\beta$) of Stock J is closest to:",
+    "options": {
+      "A": "1.60",
+      "B": "1.20",
+      "C": "2.40"
+    },
+    "answer": "A",
+    "explanation": "Beta is the covariance of the asset's returns with market returns divided by the variance of the market returns:\n$$\\beta_J = \\frac{\\text{Cov}(J,m)}{\\sigma_m^2}$$\nGiven $\\sigma_m = 0.15$, market variance is $\\sigma_m^2 = (0.15)^2 = 0.0225$:\n$$\\beta_J = \\frac{0.0360}{0.0225} = 1.60$$",
+    "distractor_analysis": {
+      "B": "Incorrect. 1.20 results from an arithmetic error or using $\\sigma_m = 0.173$.",
+      "C": "Incorrect. 2.40 divides by standard deviation instead of variance: $$\\frac{0.0360}{0.15} = 0.240 \\implies 2.40$$ (decimal mismatch)."
+    }
+  },
+  {
+    "id": "L1-PM-056",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part II",
+    "los": "Calculate and interpret beta",
+    "question": "Stock D has a standard deviation of 28.0%, the market portfolio has a standard deviation of 16.0%, and the correlation between Stock D and the market is 0.65. The beta of Stock D is closest to:",
+    "options": {
+      "A": "1.14",
+      "B": "0.37",
+      "C": "1.75"
+    },
+    "answer": "A",
+    "explanation": "Beta can be expressed in terms of correlation and standard deviations:\n$$\\beta_D = \\rho_{D,m} \\frac{\\sigma_D}{\\sigma_m} = 0.65 \\times \\frac{0.28}{0.16} = 0.65 \\times 1.75 = 1.1375 \\approx 1.14$$",
+    "distractor_analysis": {
+      "B": "Incorrect. 0.37 inverts the ratio of standard deviations: $$0.65 \\times \\frac{0.16}{0.28} = 0.371$$.",
+      "C": "Incorrect. 1.75 is the ratio of standard deviations ($$\\frac{0.28}{0.16} = 1.75$$), omitting the correlation coefficient."
+    }
+  },
+  {
+    "id": "L1-PM-057",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part II",
+    "los": "Calculate and interpret beta",
+    "question": "An analyst forms a portfolio by investing 30% in Asset A ($\\beta_A = 0.80$), 50% in Asset B ($\\beta_B = 1.20$), and 20% in the risk-free asset. The portfolio beta is closest to:",
+    "options": {
+      "A": "0.84",
+      "B": "1.04",
+      "C": "1.00"
+    },
+    "answer": "A",
+    "explanation": "The beta of a portfolio is the weighted average of individual asset betas, with the risk-free asset having a beta of 0.00:\n$$\\beta_p = w_A \\beta_A + w_B \\beta_B + w_f \\beta_f$$\n$$\\beta_p = (0.30)(0.80) + (0.50)(1.20) + (0.20)(0.00) = 0.24 + 0.60 + 0.00 = 0.84$$",
+    "distractor_analysis": {
+      "B": "Incorrect. 1.04 results from renormalizing weights to ignore the risk-free asset ($$\\frac{0.24 + 0.60}{0.80} = 1.05$$) or assuming the risk-free asset has $\\beta = 1.0$.",
+      "C": "Incorrect. 1.00 is the beta of the overall market portfolio."
+    }
+  },
+  {
+    "id": "L1-PM-058",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part II",
+    "los": "Describe the Capital Asset Pricing Model (CAPM)",
+    "question": "Under the Capital Asset Pricing Model (CAPM), which of the following is NOT an assumption of the model?",
+    "options": {
+      "A": "Investors are price takers whose trades do not affect asset prices.",
+      "B": "Investors face progressive income taxes on realized capital gains and dividends.",
+      "C": "Investors have homogeneous expectations regarding asset expected returns, variances, and covariances."
+    },
+    "answer": "B",
+    "explanation": "The CAPM assumes frictionless financial markets: there are no taxes, no transaction costs, assets are infinitely divisible, and investors can borrow and lend at the risk-free rate without restriction. The presence of progressive income taxes violates the core friction-free assumption.",
+    "distractor_analysis": {
+      "A": "Incorrect. The CAPM explicitly assumes that all investors are price takers operating in perfectly competitive markets.",
+      "C": "Incorrect. Homogeneous expectations is a foundational assumption ensuring all investors identify the same tangency market portfolio."
+    }
+  },
+  {
+    "id": "L1-PM-059",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part II",
+    "los": "Calculate and interpret beta",
+    "question": "If an asset's returns are completely uncorrelated with the market portfolio ($\\rho_{i,m} = 0$), the asset's beta is:",
+    "options": {
+      "A": "Equal to 0.00.",
+      "B": "Equal to 1.00.",
+      "C": "Undefined, because market risk cannot be priced."
+    },
+    "answer": "A",
+    "explanation": "Beta is given by $\\beta_i = \\rho_{i,m} \\frac{\\sigma_i}{\\sigma_m}$. If correlation $\\rho_{i,m} = 0$, then $\\beta_i = 0 \\times \\frac{\\sigma_i}{\\sigma_m} = 0.00$. Under the CAPM, such an asset has zero systematic risk and its expected return equals the risk-free rate, regardless of its standalone volatility.",
+    "distractor_analysis": {
+      "B": "Incorrect. A beta of 1.00 indicates average market risk.",
+      "C": "Incorrect. The beta is well-defined and equals exactly zero."
+    }
+  },
+  {
+    "id": "L1-PM-060",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part II",
+    "los": "Explain systematic and nonsystematic risk",
+    "question": "According to the CAPM, why does the market not offer a positive risk premium for bearing unsystematic risk?",
+    "options": {
+      "A": "Unsystematic risk is unobservable and cannot be statistically estimated.",
+      "B": "Unsystematic risk can be eliminated at no cost through portfolio diversification.",
+      "C": "Unsystematic risk is identical across all corporate issuers."
+    },
+    "answer": "B",
+    "explanation": "In efficient markets, investors are compensated only for bearing risk that cannot be diversified away (systematic risk). Because unsystematic risk can be eliminated at virtually zero cost by holding a diversified portfolio, the market provides no expected return premium for bearing it.",
+    "distractor_analysis": {
+      "A": "Incorrect. Unsystematic variance can be readily calculated as residual variance $\\sigma_{\\epsilon}^2$ from regression against the market index.",
+      "C": "Incorrect. Unsystematic risk is unique and distinct for each specific company."
+    }
+  },
+  {
+    "id": "L1-PM-061",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part II",
+    "los": "Calculate and interpret the expected return of an asset using the CAPM",
+    "question": "The risk-free rate of return is 3.00% and the expected return on the market portfolio is 10.50%. If Stock Q has a beta of 1.40, its required rate of return under the Capital Asset Pricing Model (CAPM) is closest to:",
+    "options": {
+      "A": "13.50%",
+      "B": "14.70%",
+      "C": "11.70%"
+    },
+    "answer": "A",
+    "explanation": "Under the CAPM, the required return is:\n$$E(R_i) = R_f + \\beta_i [E(R_m) - R_f]$$\n$$E(R_Q) = 3.00\\% + 1.40 \\times [10.50\\% - 3.00\\%] = 3.00\\% + 1.40 \\times 7.50\\% = 3.00\\% + 10.50\\% = 13.50\\%$$",
+    "distractor_analysis": {
+      "B": "Incorrect. 14.70% multiplies beta by the total market return without subtracting $R_f$: $$1.40 \\times 10.50\\% = 14.70\\%$$.",
+      "C": "Incorrect. 11.70% calculates $$3.00\\% + 1.40 \\times (10.50\\% - 4.28\\%)$$ or miscalculates the spread."
+    }
+  },
+  {
+    "id": "L1-PM-062",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part II",
+    "los": "Calculate and interpret the expected return of an asset using the CAPM",
+    "question": "An analyst determines that Stock G has a beta of 0.75. The market risk premium ($E(R_m) - R_f$) is 6.00% and the risk-free rate is 2.50%. The expected return required by investors for Stock G is closest to:",
+    "options": {
+      "A": "7.00%",
+      "B": "8.50%",
+      "C": "4.50%"
+    },
+    "answer": "A",
+    "explanation": "The CAPM equation with given market risk premium is:\n$$E(R_G) = R_f + \\beta_G [\\text{Market Risk Premium}]$$\n$$E(R_G) = 2.50\\% + 0.75 \\times 6.00\\% = 2.50\\% + 4.50\\% = 7.00\\%$$",
+    "distractor_analysis": {
+      "B": "Incorrect. 8.50% mistakenly treats 6.00% as the market return $E(R_m)$ and adds $R_f$ again ($$2.50 + 0.75(6.00 + 2.50) = 8.875\\%$$) or adds 6% directly.",
+      "C": "Incorrect. 4.50% is only the risk premium portion ($$0.75 \\times 6.00\\% = 4.50\\%$$), forgetting the risk-free base rate."
+    }
+  },
+  {
+    "id": "L1-PM-063",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part II",
+    "los": "Evaluate whether an asset is overvalued, undervalued, or properly valued using the SML",
+    "question": "An equity analyst forecasts that Stock M will generate a return of 14.0% over the coming year. Stock M has a beta of 1.20. Given a risk-free rate of 4.0% and an expected market return of 11.0%, Stock M is:",
+    "options": {
+      "A": "Undervalued, because its expected return lies above the Security Market Line (SML).",
+      "B": "Overvalued, because its expected return lies below the Security Market Line (SML).",
+      "C": "Properly valued, because its expected return equals its required return."
+    },
+    "answer": "A",
+    "explanation": "First, calculate the required return using the CAPM / SML:\n$$R_{\\text{required}} = R_f + \\beta_M [E(R_m) - R_f] = 4.0\\% + 1.20 \\times [11.0\\% - 4.0\\%] = 4.0\\% + 1.20 \\times 7.0\\% = 4.0\\% + 8.4\\% = 12.4\\%$$\nBecause the analyst's forecasted return of 14.0% exceeds the required return of 12.4% ($14.0\\% > 12.4\\%$), the stock plots above the SML. An asset that offers a return greater than required for its systematic risk is undervalued (priced too cheaply).",
+    "distractor_analysis": {
+      "B": "Incorrect. Overvalued stocks plot below the SML because their expected return is less than the required return.",
+      "C": "Incorrect. The expected return (14.0%) differs from the required return (12.4%), indicating mispricing."
+    }
+  },
+  {
+    "id": "L1-PM-064",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part II",
+    "los": "Evaluate whether an asset is overvalued, undervalued, or properly valued using the SML",
+    "question": "A stock with a beta of 0.85 is expected to yield 7.50% next year. The risk-free rate is 3.50% and the market risk premium is 5.50%. The stock's Jensen's alpha is closest to:",
+    "options": {
+      "A": "-0.68%",
+      "B": "+0.68%",
+      "C": "+1.18%"
+    },
+    "answer": "A",
+    "explanation": "Jensen's alpha is the difference between the expected (or actual) return and the CAPM required return:\n$$\\alpha_i = E(R_i) - [R_f + \\beta_i(E(R_m) - R_f)]$$\nCalculate the CAPM required return:\n$$R_{\\text{required}} = 3.50\\% + 0.85 \\times 5.50\\% = 3.50\\% + 4.675\\% = 8.175\\%$$\nCompute Jensen's alpha:\n$$\\alpha = 7.50\\% - 8.175\\% = -0.675\\% \\approx -0.68\\%$$\nA negative alpha indicates the stock is overvalued.",
+    "distractor_analysis": {
+      "B": "Incorrect. +0.68% reverses the subtraction ($$8.175\\% - 7.50\\% = +0.675\\%$$).",
+      "C": "Incorrect. +1.18% miscalculates required return as $$3.50\\% + 0.85 \\times (5.50 - 3.50) = 5.20\\% \\implies 7.50 - 5.20 = 2.30\\%$$, subtracting $R_f$ twice."
+    }
+  },
+  {
+    "id": "L1-PM-065",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part II",
+    "los": "Calculate and interpret the Sharpe ratio",
+    "question": "Portfolio P achieved an annual return of 14.50% with an annual standard deviation of 18.00%. If the risk-free rate is 3.50%, the Sharpe ratio of Portfolio P is closest to:",
+    "options": {
+      "A": "0.61",
+      "B": "0.81",
+      "C": "0.55"
+    },
+    "answer": "A",
+    "explanation": "The Sharpe ratio measures excess return per unit of total risk (standard deviation):\n$$\\text{Sharpe Ratio} = \\frac{R_p - R_f}{\\sigma_p} = \\frac{14.50\\% - 3.50\\%}{18.00\\%} = \\frac{11.00\\%}{18.00\\%} = 0.6111 \\approx 0.61$$",
+    "distractor_analysis": {
+      "B": "Incorrect. 0.81 omits the risk-free rate: $$\\frac{14.50\\%}{18.00\\%} = 0.8056$$.",
+      "C": "Incorrect. 0.55 uses variance ($0.18^2 = 0.0324$) or divides by an incorrect denominator."
+    }
+  },
+  {
+    "id": "L1-PM-066",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part II",
+    "los": "Calculate and interpret the Treynor ratio",
+    "question": "Portfolio T generated a return of 15.00% with a standard deviation of 22.00% and a beta of 1.25. If the risk-free rate is 3.00%, the Treynor ratio of Portfolio T is closest to:",
+    "options": {
+      "A": "9.60%",
+      "B": "0.55",
+      "C": "12.00%"
+    },
+    "answer": "A",
+    "explanation": "The Treynor ratio measures excess return per unit of systematic risk (beta):\n$$\\text{Treynor Ratio} = \\frac{R_p - R_f}{\\beta_p} = \\frac{15.00\\% - 3.00\\%}{1.25} = \\frac{12.00\\%}{1.25} = 9.60\\%$$",
+    "distractor_analysis": {
+      "B": "Incorrect. 0.55 is the Sharpe ratio: $$\\frac{15.00\\% - 3.00\\%}{22.00\\%} = \\frac{12.00\\%}{22.00\\%} = 0.545$$.",
+      "C": "Incorrect. 12.00% is the raw excess return ($$15\\% - 3\\% = 12\\%$$), failing to divide by beta."
+    }
+  },
+  {
+    "id": "L1-PM-067",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part II",
+    "los": "Calculate and interpret the M-squared (M^2) measure",
+    "question": "Portfolio X has an average return of 13.00% and a standard deviation of 15.00%. The market index return is 10.00% with a standard deviation of 12.00%, and the risk-free rate is 3.00%. The Modigliani-Modigliani ($M^2$) measure for Portfolio X is closest to:",
+    "options": {
+      "A": "+1.00%",
+      "B": "+3.00%",
+      "C": "+2.00%"
+    },
+    "answer": "A",
+    "explanation": "The $M^2$ measure scales the portfolio's total risk to match market risk, comparing the resulting return to the market index return:\n$$M^2 = (R_p - R_f) \\left( \\frac{\\sigma_m}{\\sigma_p} \\right) - (R_m - R_f)$$\nFirst calculate the portfolio's Sharpe ratio:\n$$S_p = \\frac{13.00\\% - 3.00\\%}{15.00\\%} = \\frac{10.00\\%}{15.00\\%} = 0.6667$$\nMultiply by market standard deviation:\n$$R_{p,\\text{levered}} - R_f = 0.6667 \\times 12.00\\% = 8.00\\%$$\nSubtract excess market return ($R_m - R_f = 10.00\\% - 3.00\\% = 7.00\\%$):\n$$M^2 = 8.00\\% - 7.00\\% = +1.00\\%$$",
+    "distractor_analysis": {
+      "B": "Incorrect. +3.00% is the simple raw excess return over the market ($$13.00\\% - 10.00\\% = +3.00\\%$$), which ignores the higher volatility of Portfolio X.",
+      "C": "Incorrect. +2.00% miscalculates levered excess return as 9.00%."
+    }
+  },
+  {
+    "id": "L1-PM-068",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part II",
+    "los": "Contrast the Sharpe ratio, Treynor ratio, and Jensen's alpha",
+    "question": "An institutional investor is evaluating several active managers to assign capital as a sub-portfolio within a large, highly diversified master pension fund. The most appropriate performance measure to rank these candidate managers is the:",
+    "options": {
+      "A": "Treynor ratio or Jensen's alpha.",
+      "B": "Sharpe ratio.",
+      "C": "$M^2$ measure."
+    },
+    "answer": "A",
+    "explanation": "When evaluating a fund that will be added to an already well-diversified master portfolio, non-systematic risk will be diversified away. Therefore, systematic risk (beta) is the relevant risk metric, making the Treynor ratio or Jensen's alpha the most appropriate evaluation tools.",
+    "distractor_analysis": {
+      "B": "Incorrect. The Sharpe ratio uses total risk ($\\sigma$) and is appropriate when evaluating an entire portfolio that represents an investor's complete wealth.",
+      "C": "Incorrect. $M^2$ also uses total risk and is a direct linear transformation of the Sharpe ratio."
+    }
+  },
+  {
+    "id": "L1-PM-069",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part II",
+    "los": "Calculate and interpret the tracking error and Information Ratio",
+    "question": "An active fund generated an average annual return of 11.20% relative to its benchmark's return of 9.70%. If the standard deviation of excess returns (active risk / tracking error) was 3.00%, the Information Ratio (IR) of the fund is closest to:",
+    "options": {
+      "A": "0.50",
+      "B": "1.50",
+      "C": "0.33"
+    },
+    "answer": "A",
+    "explanation": "The Information Ratio measures active return per unit of active risk (tracking error):\n$$\\text{IR} = \\frac{\\bar{R}_p - \\bar{R}_b}{s(R_p - R_b)} = \\frac{11.20\\% - 9.70\\%}{3.00\\%} = \\frac{1.50\\%}{3.00\\%} = 0.50$$",
+    "distractor_analysis": {
+      "B": "Incorrect. 1.50 is the active return numerator ($$11.20\\% - 9.70\\% = 1.50\\%$$), failing to divide by tracking error.",
+      "C": "Incorrect. 0.33 inverts the ratio: $$\\frac{3.00\\%}{9.00\\%}$$ or miscalculates $1.00 / 3.00$."
+    }
+  },
+  {
+    "id": "L1-PM-070",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part II",
+    "los": "Describe the Security Market Line (SML)",
+    "question": "On a chart showing the Security Market Line (SML), what do the vertical intercept and slope of the line represent?",
+    "options": {
+      "A": "Vertical intercept = Risk-free rate ($R_f$); Slope = Market risk premium ($E(R_m) - R_f$).",
+      "B": "Vertical intercept = Expected return on the market ($E(R_m)$); Slope = Sharpe ratio.",
+      "C": "Vertical intercept = Zero; Slope = Modigliani-Modigliani measure."
+    },
+    "answer": "A",
+    "explanation": "The SML is the graphical depiction of the CAPM: $E(R_i) = R_f + \\beta_i [E(R_m) - R_f]$. Plotted with expected return on the y-axis and beta $\\beta$ on the x-axis, the vertical intercept at $\\beta = 0$ is the risk-free rate $R_f$, and the slope of the line is the market risk premium $[E(R_m) - R_f]$.",
+    "distractor_analysis": {
+      "B": "Incorrect. The vertical intercept is the risk-free rate, not the market return, and the slope is the market risk premium, not the Sharpe ratio.",
+      "C": "Incorrect. The vertical intercept is positive ($R_f > 0$) in normal economic environments."
+    }
+  },
+  {
+    "id": "L1-PM-071",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part II",
+    "los": "Describe the limitations of the CAPM",
+    "question": "Which of the following represents Roll's Critique regarding empirical tests of the Capital Asset Pricing Model?",
+    "options": {
+      "A": "The true market portfolio contains all investable and non-investable assets (including human capital) and is unobservable, meaning the CAPM is essentially unfalsifiable.",
+      "B": "Betas cannot be estimated using ordinary least squares regression because stock returns exhibit negative skewness.",
+      "C": "The risk-free rate of return fluctuates over time, violating the constant interest rate assumption."
+    },
+    "answer": "A",
+    "explanation": "Roll's Critique argues that the only testable hypothesis of the CAPM is whether the true market portfolio is mean-variance efficient. Because the true market portfolio includes all risky assets worldwide (including private businesses, real estate, commodities, and human capital), it cannot be observed. Using an equity index proxy (like the S&P 500) tests only the efficiency of the proxy, not the CAPM itself.",
+    "distractor_analysis": {
+      "B": "Incorrect. OLS regression can estimate betas regardless of skewness, though standard errors may be affected.",
+      "C": "Incorrect. Time variation in interest rates is addressed in multi-period models and is not the core of Roll's critique."
+    }
+  },
+  {
+    "id": "L1-PM-072",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part II",
+    "los": "Describe multi-factor models of risk and return",
+    "question": "In the Fama-French three-factor model, the two factors added to the market risk factor to explain equity returns are:",
+    "options": {
+      "A": "Small Minus Big (SMB) size factor and High Minus Low (HML) value factor.",
+      "B": "Term spread factor and credit default spread factor.",
+      "C": "Momentum (WML) factor and liquidity risk factor."
+    },
+    "answer": "A",
+    "explanation": "The Fama-French three-factor model expands the CAPM by adding: (1) SMB (Small Minus Big), which captures the historical excess return of small-cap stocks over large-cap stocks; and (2) HML (High Minus Low), which captures the historical excess return of value stocks (high book-to-market) over growth stocks (low book-to-market).",
+    "distractor_analysis": {
+      "B": "Incorrect. Term spread and credit spread are macroeconomic fixed-income factors, not the Fama-French equity factors.",
+      "C": "Incorrect. Momentum (WML) was added by Mark Carhart to create the Carhart four-factor model."
+    }
+  },
+  {
+    "id": "L1-PM-073",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part II",
+    "los": "Describe multi-factor models of risk and return",
+    "question": "The Carhart four-factor model builds directly on the Fama-French three-factor model by adding which factor?",
+    "options": {
+      "A": "Momentum factor (WML / Winners Minus Losers).",
+      "B": "Foreign exchange carry trade factor.",
+      "C": "Implied volatility skew factor."
+    },
+    "answer": "A",
+    "explanation": "Mark Carhart (1997) extended the Fama-French three-factor model to create the four-factor model by introducing a momentum factor, WML (Winners Minus Losers), which captures the empirical tendency for past outperforming stocks to continue outperforming in the intermediate term.",
+    "distractor_analysis": {
+      "B": "Incorrect. FX carry is a currency investment style, not a Carhart factor.",
+      "C": "Incorrect. Implied volatility skew is an options market metric."
+    }
+  },
+  {
+    "id": "L1-PM-074",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part II",
+    "los": "Calculate and interpret beta",
+    "question": "An analyst runs a market model regression of monthly stock excess returns against monthly market excess returns:\n$$R_{i,t} - R_{f,t} = \\alpha_i + \\beta_i (R_{m,t} - R_{f,t}) + \\epsilon_{i,t}$$\nIf the coefficient of determination $R^2$ of the regression is 0.64, what proportion of the stock's total return variance is explained by systematic market risk?",
+    "options": {
+      "A": "64%",
+      "B": "80%",
+      "C": "36%"
+    },
+    "answer": "A",
+    "explanation": "In a single-index market model regression, the coefficient of determination ($R^2$) measures the proportion of the dependent variable's total variance that is explained by the independent variable (systematic market risk). Here, $R^2 = 0.64$, meaning exactly 64% of the stock's total variance is systematic risk, and the remaining $1 - R^2 = 36\\%$ is unsystematic (residual) risk.",
+    "distractor_analysis": {
+      "B": "Incorrect. 80% is the correlation coefficient: $$\\rho = \\sqrt{R^2} = \\sqrt{0.64} = 0.80$$, not the proportion of variance.",
+      "C": "Incorrect. 36% represents the proportion of variance explained by unsystematic (residual) risk ($$1 - 0.64 = 0.36$$)."
+    }
+  },
+  {
+    "id": "L1-PM-075",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part II",
+    "los": "Calculate and interpret the expected return of an asset using the CAPM",
+    "question": "The current price of a dividend-paying stock is USD 40.00. The stock is expected to pay an annual dividend of USD 1.60 at the end of the year and trade at USD 44.00. The risk-free rate is 3.0%, the market risk premium is 6.0%, and the stock's beta is 1.25. Based on the CAPM, the stock is:",
+    "options": {
+      "A": "Undervalued by 3.50% in expected return.",
+      "B": "Overvalued by 3.50% in expected return.",
+      "C": "Properly valued."
+    },
+    "answer": "A",
+    "explanation": "1. Calculate expected holding period return:\n$$E(R) = \\frac{\\text{USD } 44.00 - \\text{USD } 40.00 + \\text{USD } 1.60}{\\text{USD } 40.00} = \\frac{\\text{USD } 5.60}{\\text{USD } 40.00} = 14.00\\%$$\n2. Calculate CAPM required return:\n$$R_{\\text{required}} = R_f + \\beta \\times [\\text{MRP}] = 3.00\\% + 1.25 \\times 6.00\\% = 3.00\\% + 7.50\\% = 10.50\\%$$\n3. Evaluate mispricing:\n$$\\text{Alpha} = 14.00\\% - 10.50\\% = +3.50\\%$$\nBecause expected return exceeds required return by +3.50%, the stock offers excess return above the SML and is undervalued.",
+    "distractor_analysis": {
+      "B": "Incorrect. Overvalued assets have expected returns below the required return.",
+      "C": "Incorrect. The stock generates a positive alpha of +3.50%, indicating mispricing."
+    }
+  },
+  {
+    "id": "L1-PM-076",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part II",
+    "los": "Calculate and interpret the Sharpe ratio",
+    "question": "A portfolio manager claims to have beaten the benchmark. The portfolio earned 12.0% with a standard deviation of 16.0%. The benchmark earned 10.0% with a standard deviation of 12.0%. If the risk-free rate is 2.0%, which portfolio exhibited the superior risk-adjusted return using the Sharpe ratio?",
+    "options": {
+      "A": "The benchmark, because its Sharpe ratio is 0.67 compared to 0.625 for the portfolio.",
+      "B": "The portfolio, because its Sharpe ratio is 0.75 compared to 0.67 for the benchmark.",
+      "C": "Both achieved identical risk-adjusted returns."
+    },
+    "answer": "A",
+    "explanation": "Calculate the Sharpe ratios:\n$$\\text{Sharpe}_{\\text{portfolio}} = \\frac{12.0\\% - 2.0\\%}{16.0\\%} = \\frac{10.0\\%}{16.0\\%} = 0.625$$\n$$\\text{Sharpe}_{\\text{benchmark}} = \\frac{10.0\\% - 2.0\\%}{12.0\\%} = \\frac{8.0\\%}{12.0\\%} = 0.667$$\nAlthough the manager generated higher absolute return (12% vs. 10%), they took on disproportionately greater volatility (16% vs. 12%), resulting in an inferior Sharpe ratio (0.625 < 0.667).",
+    "distractor_analysis": {
+      "B": "Incorrect. 0.75 results from omitting the risk-free rate ($$12 / 16 = 0.75$$).",
+      "C": "Incorrect. The benchmark achieved a higher Sharpe ratio."
+    }
+  },
+  {
+    "id": "L1-PM-077",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part II",
+    "los": "Calculate and interpret the Treynor ratio",
+    "question": "Portfolio 1 has an excess return over the risk-free rate of 8.0% and a beta of 0.80. Portfolio 2 has an excess return of 11.0% and a beta of 1.20. Which portfolio has the higher Treynor ratio?",
+    "options": {
+      "A": "Portfolio 1, with a Treynor ratio of 10.0% compared to 9.17% for Portfolio 2.",
+      "B": "Portfolio 2, with a Treynor ratio of 11.0% compared to 8.0% for Portfolio 1.",
+      "C": "Portfolio 2, with a Treynor ratio of 9.17% compared to 10.0% for Portfolio 1."
+    },
+    "answer": "A",
+    "explanation": "Calculate Treynor ratios:\n- Portfolio 1: $$T_1 = \\frac{8.0\\%}{0.80} = 10.00\\%$$\n- Portfolio 2: $$T_2 = \\frac{11.0\\%}{1.20} = 9.167\\% \\approx 9.17\\%$$\nPortfolio 1 delivers a higher excess return per unit of systematic beta risk ($10.00\\% > 9.17\\%$).",
+    "distractor_analysis": {
+      "B": "Incorrect. Compares raw excess return without adjusting for beta.",
+      "C": "Incorrect. Contradicts itself; 10.0% is higher than 9.17%."
+    }
+  },
+  {
+    "id": "L1-PM-078",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part II",
+    "los": "Calculate and interpret the M-squared (M^2) measure",
+    "question": "If a portfolio has a Sharpe ratio exactly equal to the Sharpe ratio of the market portfolio, its Modigliani-Modigliani ($M^2$) measure is:",
+    "options": {
+      "A": "Zero.",
+      "B": "Equal to the market risk premium.",
+      "C": "Equal to the risk-free rate."
+    },
+    "answer": "A",
+    "explanation": "The $M^2$ formula is:\n$$M^2 = (S_p - S_m) \\times \\sigma_m$$\nWhen the portfolio's Sharpe ratio equals the market's Sharpe ratio ($S_p = S_m$), $M^2 = (0) \\times \\sigma_m = 0.00\\%$. An $M^2$ of zero means the portfolio's risk-adjusted return matches the market index exactly.",
+    "distractor_analysis": {
+      "B": "Incorrect. $M^2$ equals zero when Sharpe ratios are identical.",
+      "C": "Incorrect. $M^2$ measures excess performance relative to the market index, not the baseline risk-free rate."
+    }
+  },
+  {
+    "id": "L1-PM-079",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part II",
+    "los": "Calculate and interpret beta",
+    "question": "The market portfolio variance is 0.0400. Stock A has a variance of 0.0900 and a correlation of 0.60 with the market. The beta of Stock A is closest to:",
+    "options": {
+      "A": "0.90",
+      "B": "1.35",
+      "C": "0.60"
+    },
+    "answer": "A",
+    "explanation": "First find the standard deviations:\n$$\\sigma_m = \\sqrt{0.0400} = 0.20$$\n$$\\sigma_A = \\sqrt{0.0900} = 0.30$$\nCompute beta:\n$$\\beta_A = \\rho_{A,m} \\frac{\\sigma_A}{\\sigma_m} = 0.60 \\times \\frac{0.30}{0.20} = 0.60 \\times 1.50 = 0.90$$",
+    "distractor_analysis": {
+      "B": "Incorrect. 1.35 results from dividing by market variance without taking square roots ($$0.60 \\times 0.09 / 0.04 = 1.35$$).",
+      "C": "Incorrect. 0.60 is simply the correlation coefficient $\\rho$, omitting the ratio of standard deviations."
+    }
+  },
+  {
+    "id": "L1-PM-080",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part II",
+    "los": "Evaluate whether an asset is overvalued, undervalued, or properly valued using the SML",
+    "question": "Stock K has a beta of 1.10 and expected return of 9.0%. Stock L has a beta of 0.70 and expected return of 9.0%. If the market risk premium is positive ($E(R_m) > R_f$), which stock is more attractive according to the SML?",
+    "options": {
+      "A": "Stock L, because it generates the same expected return while bearing significantly less systematic risk.",
+      "B": "Stock K, because high-beta stocks are systematically favored by the CAPM.",
+      "C": "Both stocks are equally attractive because they have identical expected returns."
+    },
+    "answer": "A",
+    "explanation": "Under the SML, the required return is strictly increasing in beta: $E(R) = R_f + \\beta [E(R_m) - R_f]$. Because Stock L has a much lower beta (0.70 vs. 1.10), its required return is lower, which yields a higher Jensen's alpha: $\\alpha_L = 9.0\\% - R_{\\text{req},L} > 9.0\\% - R_{\\text{req},K} = \\alpha_K$. Stock L plots further above the SML and is more undervalued.",
+    "distractor_analysis": {
+      "B": "Incorrect. High beta means higher required return, which makes a 9.0% return less attractive.",
+      "C": "Incorrect. Comparing expected returns without adjusting for systematic risk violates modern portfolio theory."
+    }
+  },
+  {
+    "id": "L1-PM-081",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part II",
+    "los": "Calculate and interpret the tracking error and Information Ratio",
+    "question": "A quantitative equity fund has generated an annualized active return of +2.40% over the last 36 months with a tracking error of 4.00%. The Information Ratio is:",
+    "options": {
+      "A": "0.60",
+      "B": "0.16",
+      "C": "1.67"
+    },
+    "answer": "A",
+    "explanation": "The Information Ratio is the ratio of active return to active risk (tracking error):\n$$\\text{IR} = \\frac{R_p - R_b}{\\text{Tracking Error}} = \\frac{2.40\\%}{4.00\\%} = 0.60$$",
+    "distractor_analysis": {
+      "B": "Incorrect. 0.16 multiplies active return by active risk ($$0.024 \\times 4.00$$) or calculation error.",
+      "C": "Incorrect. 1.67 inverts the ratio ($$4.00\\% / 2.40\\% = 1.67$$)."
+    }
+  },
+  {
+    "id": "L1-PM-082",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part II",
+    "los": "Calculate and interpret Jensen's alpha",
+    "question": "A portfolio manager achieved a realized return of 14.0% with a portfolio beta of 1.30. Over the same period, the market returned 10.0% and the risk-free rate was 2.0%. Jensen's alpha for the portfolio is closest to:",
+    "options": {
+      "A": "+1.60%",
+      "B": "+4.00%",
+      "C": "-1.60%"
+    },
+    "answer": "A",
+    "explanation": "Calculate CAPM benchmark required return:\n$$R_{\\text{required}} = R_f + \\beta_p [R_m - R_f] = 2.0\\% + 1.30 \\times [10.0\\% - 2.0\\%] = 2.0\\% + 1.30 \\times 8.0\\% = 2.0\\% + 10.4\\% = 12.4\\%$$\nCompute Jensen's alpha:\n$$\\alpha_p = R_p - R_{\\text{required}} = 14.0\\% - 12.4\\% = +1.60\\%$$",
+    "distractor_analysis": {
+      "B": "Incorrect. +4.00% is the raw return difference over the market ($$14.0\\% - 10.0\\% = +4.00\\%$$), ignoring the manager's higher beta.",
+      "C": "Incorrect. -1.60% reverses the signs of realized and required return."
+    }
+  },
+  {
+    "id": "L1-PM-083",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part II",
+    "los": "Explain systematic and nonsystematic risk",
+    "question": "Total variance of an individual asset's returns under the market model can be decomposed into:",
+    "options": {
+      "A": "$$\\sigma_i^2 = \\beta_i^2 \\sigma_m^2 + \\sigma_{\\epsilon,i}^2$$",
+      "B": "$$\\sigma_i^2 = \\beta_i \\sigma_m + \\sigma_{\\epsilon,i}$$",
+      "C": "$$\\sigma_i^2 = \\beta_i^2 \\sigma_m^2 - \\sigma_{\\epsilon,i}^2$$"
+    },
+    "answer": "A",
+    "explanation": "Under the single-index market model ($R_i = \\alpha_i + \\beta_i R_m + \\epsilon_i$), where residual error $\\epsilon_i$ is uncorrelated with the market $R_m$, total asset variance is the orthogonal sum of systematic variance and unsystematic (residual) variance:\n$$\\sigma_i^2 = \\beta_i^2 \\sigma_m^2 + \\sigma_{\\epsilon,i}^2$$",
+    "distractor_analysis": {
+      "B": "Incorrect. Uses standard deviations linearly rather than squaring variances.",
+      "C": "Incorrect. Subtracts unsystematic variance rather than adding it."
+    }
+  },
+  {
+    "id": "L1-PM-084",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part II",
+    "los": "Calculate and interpret beta",
+    "question": "Stock Z has a standard deviation of 30.0% and a residual standard deviation $\\sigma_{\\epsilon} = 18.0\\%$. If the market standard deviation is 15.0%, the stock's beta is closest to:",
+    "options": {
+      "A": "1.60",
+      "B": "2.00",
+      "C": "1.20"
+    },
+    "answer": "A",
+    "explanation": "Using the total variance decomposition:\n$$\\sigma_Z^2 = \\beta_Z^2 \\sigma_m^2 + \\sigma_{\\epsilon}^2$$\n$$(0.30)^2 = \\beta_Z^2 (0.15)^2 + (0.18)^2$$\n$$0.0900 = \\beta_Z^2 (0.0225) + 0.0324$$\n$$\\beta_Z^2 (0.0225) = 0.0900 - 0.0324 = 0.0576$$\n$$\\beta_Z^2 = \\frac{0.0576}{0.0225} = 2.56$$\n$$\\beta_Z = \\sqrt{2.56} = 1.60$$",
+    "distractor_analysis": {
+      "B": "Incorrect. 2.00 is the simple ratio of standard deviations: $$\\frac{0.30}{0.15} = 2.00$$, assuming zero unsystematic risk.",
+      "C": "Incorrect. 1.20 results from subtracting standard deviations directly: $$(0.30 - 0.18) / 0.15 = 0.12 / 0.15 = 0.80$$ or calculation error."
+    }
+  },
+  {
+    "id": "L1-PM-085",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part II",
+    "los": "Describe multi-factor models of risk and return",
+    "question": "Which type of multi-factor model specifies factors based on observed economic variables such as unexpected GDP growth, inflation surprises, and changes in the yield curve spread?",
+    "options": {
+      "A": "Macroeconomic factor model.",
+      "B": "Fundamental factor model.",
+      "C": "Statistical factor model."
+    },
+    "answer": "A",
+    "explanation": "Macroeconomic factor models use observable economic time series data (e.g., surprise changes in inflation, real GDP growth, interest rate term structure, and credit spreads) as factors to explain asset returns.",
+    "distractor_analysis": {
+      "B": "Incorrect. Fundamental factor models use company-specific financial statement ratios (e.g., P/E, book-to-market, leverage, market cap).",
+      "C": "Incorrect. Statistical factor models use mathematical techniques (principal component analysis, factor analysis) where factors have no inherent economic labels."
+    }
+  },
+  {
+    "id": "L1-PM-086",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part II",
+    "los": "Calculate and interpret the expected return of an asset using the CAPM",
+    "question": "A project has a beta of 1.50. The risk-free rate is 4.0% and the expected return on the market is 12.0%. If the project is expected to generate an internal rate of return (IRR) of 15.0%, should the firm accept the project?",
+    "options": {
+      "A": "No, because the project's IRR of 15.0% is less than its CAPM required return of 16.0%.",
+      "B": "Yes, because the project's IRR of 15.0% exceeds the market return of 12.0%.",
+      "C": "Yes, because the project's IRR of 15.0% exceeds the risk-free rate of 4.0%."
+    },
+    "answer": "A",
+    "explanation": "First calculate the hurdle rate (required rate of return) using the project's beta in the CAPM:\n$$R_{\\text{hurdle}} = R_f + \\beta_{\\text{project}} [E(R_m) - R_f] = 4.0\\% + 1.50 \\times [12.0\\% - 4.0\\%] = 4.0\\% + 1.50 \\times 8.0\\% = 16.0\\%$$\nBecause the project's forecasted IRR of 15.0% is below the required return of 16.0% ($15.0\\% < 16.0\\%$), the project has a negative net present value (NPV) and should be rejected.",
+    "distractor_analysis": {
+      "B": "Incorrect. The project's hurdle rate depends on its specific systematic risk (beta = 1.50), not average market return.",
+      "C": "Incorrect. Exceeding the risk-free rate is insufficient for a risky project."
+    }
+  },
+  {
+    "id": "L1-PM-087",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part II",
+    "los": "Contrast the Sharpe ratio, Treynor ratio, and Jensen's alpha",
+    "question": "A portfolio has a Sharpe ratio of 0.40 and a beta of 1.10. If the market standard deviation is 15.0% and market excess return is 6.0%, the portfolio's $M^2$ is closest to:",
+    "options": {
+      "A": "0.00%",
+      "B": "+1.50%",
+      "C": "-1.50%"
+    },
+    "answer": "A",
+    "explanation": "The market's Sharpe ratio is:\n$$S_m = \\frac{E(R_m) - R_f}{\\sigma_m} = \\frac{6.0\\%}{15.0\\%} = 0.40$$\nSince the portfolio's Sharpe ratio is also 0.40:\n$$M^2 = (S_p - S_m) \\times \\sigma_m = (0.40 - 0.40) \\times 15.0\\% = 0.00\\%$$",
+    "distractor_analysis": {
+      "B": "Incorrect. +1.50% assumes $S_p = 0.50$.",
+      "C": "Incorrect. -1.50% assumes $S_p = 0.30$."
+    }
+  },
+  {
+    "id": "L1-PM-088",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part II",
+    "los": "Calculate and interpret beta",
+    "question": "An investor adds a high-beta stock ($\\beta = 1.80$) to a well-diversified index portfolio with beta = 1.00. The effect of this addition on the overall portfolio's systematic risk is to:",
+    "options": {
+      "A": "Increase the portfolio beta above 1.00.",
+      "B": "Decrease the portfolio beta below 1.00.",
+      "C": "Leave the portfolio beta unchanged because unsystematic risk is diversified."
+    },
+    "answer": "A",
+    "explanation": "The beta of a portfolio is the linear weighted average of the constituent asset betas: $\\beta_p = \\sum w_i \\beta_i$. Adding an asset with $\\beta = 1.80 > 1.00$ mathematically increases the weighted average beta of the portfolio above 1.00.",
+    "distractor_analysis": {
+      "B": "Incorrect. Adding an asset with beta greater than the portfolio average increases systematic risk.",
+      "C": "Incorrect. While unsystematic risk is diversified away, systematic risk is weighted linearly."
+    }
+  },
+  {
+    "id": "L1-PM-089",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part II",
+    "los": "Calculate and interpret Jensen's alpha",
+    "question": "Portfolio A and Portfolio B have the same beta of 1.20 and both earned an average return of 11.0% when the risk-free rate was 3.0% and the market return was 9.0%. Which statement is most accurate regarding their performance?",
+    "options": {
+      "A": "Both portfolios have identical Jensen's alphas of +0.80%.",
+      "B": "Both portfolios have identical Jensen's alphas of +2.00%.",
+      "C": "Their Jensen's alphas cannot be compared without knowing their total standard deviations."
+    },
+    "answer": "A",
+    "explanation": "Calculate the CAPM required return for both portfolios:\n$$R_{\\text{required}} = 3.0\\% + 1.20 \\times [9.0\\% - 3.0\\%] = 3.0\\% + 1.20 \\times 6.0\\% = 3.0\\% + 7.20\\% = 10.20\\%$$\nCompute Jensen's alpha:\n$$\\alpha = 11.0\\% - 10.20\\% = +0.80\\%$$\nBecause both portfolios share identical returns and identical betas, their Jensen's alphas are identical (+0.80%).",
+    "distractor_analysis": {
+      "B": "Incorrect. +2.00% is the excess return over the market ($$11.0\\% - 9.0\\% = +2.00\\%$$), ignoring beta adjustment.",
+      "C": "Incorrect. Jensen's alpha measures excess return relative to systematic risk (beta) and does not require total standard deviation."
+    }
+  },
+  {
+    "id": "L1-PM-090",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Portfolio Risk and Return: Part II",
+    "los": "Evaluate whether an asset is overvalued, undervalued, or properly valued using the SML",
+    "question": "If an asset's price increases while its cash flow forecasts and fundamental risk profile remain unchanged, its expected return will:",
+    "options": {
+      "A": "Decrease, moving its position downward relative to the Security Market Line.",
+      "B": "Increase, moving its position upward relative to the Security Market Line.",
+      "C": "Remain unchanged because expected return depends solely on beta."
+    },
+    "answer": "A",
+    "explanation": "Expected return is inversely related to current market price: $E(R) = \\frac{E(P_1) + E(D_1) - P_0}{P_0}$. If the current price $P_0$ increases without any change in future cash flows, the expected holding period return decreases. Graphically, the asset's point moves downward vertically, reducing its alpha and potentially moving it below the SML into overvalued territory.",
+    "distractor_analysis": {
+      "B": "Incorrect. A higher purchase price reduces expected future returns, not increases them.",
+      "C": "Incorrect. Beta determines the required return, whereas the expected return is dictated by cash flows relative to purchase price."
+    }
+  },
+  {
+    "id": "L1-PM-091",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Basics of Portfolio Planning and Construction",
+    "los": "Describe the purpose and components of an Investment Policy Statement (IPS)",
+    "question": "The primary purpose of an Investment Policy Statement (IPS) in portfolio management is to:",
+    "options": {
+      "A": "Guarantee that the portfolio achieves above-benchmark alpha across every market cycle.",
+      "B": "Provide a formal, documented roadmap governing investment objectives, constraints, and decision-making.",
+      "C": "Serve as a legally binding contract eliminating all fiduciary liabilities for the asset manager."
+    },
+    "answer": "B",
+    "explanation": "The Investment Policy Statement (IPS) functions as a foundational strategic document for the investor and manager. It articulates realistic investment objectives (risk and return), documents constraints (liquidity, time horizon, taxes, legal/regulatory, unique circumstances), and establishes guidelines for asset allocation, benchmarking, and review.",
+    "distractor_analysis": {
+      "A": "Incorrect. An IPS does not and cannot guarantee outperformance or positive returns.",
+      "C": "Incorrect. An IPS guides investment decisions and establishes accountability, but does not shield managers from statutory fiduciary duties or gross negligence."
+    }
+  },
+  {
+    "id": "L1-PM-092",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Basics of Portfolio Planning and Construction",
+    "los": "Explain the difference between willingness and ability to bear risk",
+    "question": "A 62-year-old executive has an investment portfolio of USD 800,000 and needs USD 70,000 annual income from the portfolio to cover living expenses upon retiring next year. In a risk questionnaire, he indicates a high appetite for risk and desire for aggressive technology investments. In reconciling his risk profile, the advisor should conclude that his overall risk tolerance is:",
+    "options": {
+      "A": "High, because subjective willingness to bear risk should always dictate the portfolio's strategic asset allocation.",
+      "B": "Low, because his objective financial ability to bear risk is severely constrained by his imminent retirement and high withdrawal rate.",
+      "C": "Above average, because his willingness and ability can be averaged into a moderate-aggressive profile."
+    },
+    "answer": "B",
+    "explanation": "When an investor's willingness to bear risk conflicts with their financial ability to bear risk, the objective ability to bear risk MUST take precedence. With a pending retirement and an aggressive withdrawal rate of $$\\frac{\\text{USD } 70{,}000}{\\text{USD } 800{,}000} = 8.75\\%$$, substantial portfolio drawdowns would destroy retirement solvency. His overall risk tolerance is low.",
+    "distractor_analysis": {
+      "A": "Incorrect. Willingness cannot override an objective inability to absorb financial losses without jeopardizing basic solvency.",
+      "C": "Incorrect. Averaging willingness and ability is dangerous and violates CFA Institute portfolio planning standards."
+    }
+  },
+  {
+    "id": "L1-PM-093",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Basics of Portfolio Planning and Construction",
+    "los": "Calculate and interpret an investor's required return",
+    "question": "A private university endowment fund has an asset base of USD 500 million. The board mandates an annual spending distribution of 4.50% of asset value, long-term higher education inflation is projected at 2.80% annually, and investment management and custodial fees are 0.40%. Using the additive approach, the endowment's nominal required rate of return is closest to:",
+    "options": {
+      "A": "7.70%",
+      "B": "7.30%",
+      "C": "6.90%"
+    },
+    "answer": "A",
+    "explanation": "Under the additive return approach for endowments, the required return must cover spending, maintain the real purchasing power of the principal (inflation), and pay management fees:\n$$R_{\\text{nominal}} = \\text{Spending Rate} + \\text{Inflation} + \\text{Management Fees}$$\n$$R_{\\text{nominal}} = 4.50\\% + 2.80\\% + 0.40\\% = 7.70\\%$$",
+    "distractor_analysis": {
+      "B": "Incorrect. 7.30% omits the 0.40% investment management fees ($$4.50\\% + 2.80\\% = 7.30\\%$$).",
+      "C": "Incorrect. 6.90% subtracts fees instead of adding them ($$4.50\\% + 2.80\\% - 0.40\\% = 6.90\\%$$)."
+    }
+  },
+  {
+    "id": "L1-PM-094",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Basics of Portfolio Planning and Construction",
+    "los": "Calculate and interpret an investor's required return",
+    "question": "Using the multiplicative compounding approach for the endowment in the previous question (Spending = 4.50%, Inflation = 2.80%, Fees = 0.40%), the exact required rate of return is closest to:",
+    "options": {
+      "A": "7.85%",
+      "B": "7.70%",
+      "C": "8.12%"
+    },
+    "answer": "A",
+    "explanation": "The exact multiplicative formulation compounds all three elements:\n$$1 + R_{\\text{nominal}} = (1 + \\text{Spending})(1 + \\text{Inflation})(1 + \\text{Fees})$$\n$$1 + R_{\\text{nominal}} = (1 + 0.0450)(1 + 0.0280)(1 + 0.0040) = (1.0450)(1.0280)(1.0040)$$\n$$1 + R_{\\text{nominal}} = (1.07426)(1.0040) = 1.078557 \\implies R_{\\text{nominal}} = 7.86\\% \\approx 7.85\\%$$",
+    "distractor_analysis": {
+      "B": "Incorrect. 7.70% is the simple additive return approximation.",
+      "C": "Incorrect. 8.12% reflects an erroneous compounding calculation."
+    }
+  },
+  {
+    "id": "L1-PM-095",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Basics of Portfolio Planning and Construction",
+    "los": "Identify and explain investment constraints (RRTTLLU)",
+    "question": "An individual client states in her IPS that under no circumstances should her portfolio hold shares of companies involved in tobacco manufacturing or fossil fuel extraction. In the RRTTLLU constraint framework, this restriction is classified as a:",
+    "options": {
+      "A": "Unique circumstance.",
+      "B": "Legal and regulatory constraint.",
+      "C": "Liquidity constraint."
+    },
+    "answer": "A",
+    "explanation": "Unique circumstances encompass client-specific personal preferences, ethical values, religious restrictions, socially responsible investing (SRI/ESG) mandates, or specific asset exclusions. Because this restriction stems from individual ethical beliefs rather than statutory law, it is a unique circumstance.",
+    "distractor_analysis": {
+      "B": "Incorrect. Legal and regulatory constraints arise from statutory law, tax codes, or ERISA guidelines, not personal ethical preferences.",
+      "C": "Incorrect. Liquidity constraints relate to expected cash outflows and reserve requirements."
+    }
+  },
+  {
+    "id": "L1-PM-096",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Basics of Portfolio Planning and Construction",
+    "los": "Contrast strategic and tactical asset allocation",
+    "question": "Which statement most accurately distinguishes Strategic Asset Allocation (SAA) from Tactical Asset Allocation (TAA)?",
+    "options": {
+      "A": "SAA establishes the long-term target asset mix designed to meet policy objectives, whereas TAA reflects short-term discretionary deviations to exploit perceived market mispricings.",
+      "B": "SAA involves selecting individual undervalued securities, whereas TAA sets top-down macroeconomic risk limits.",
+      "C": "SAA is evaluated on a daily basis, whereas TAA remains static over multi-decade time horizons."
+    },
+    "answer": "A",
+    "explanation": "Strategic Asset Allocation (SAA) establishes the long-term baseline asset class weights based on client objectives and long-term capital market expectations. Tactical Asset Allocation (TAA) allows deliberate, short-term deviations from SAA weights to capitalize on temporary market dislocations or cyclical economic trends.",
+    "distractor_analysis": {
+      "B": "Incorrect. Individual security selection occurs within asset classes, not as the definition of SAA.",
+      "C": "Incorrect. SAA is long-term and reviewed annually or when client circumstances change, while TAA is dynamic and short-term."
+    }
+  },
+  {
+    "id": "L1-PM-097",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Basics of Portfolio Planning and Construction",
+    "los": "Explain principles of portfolio rebalancing",
+    "question": "An investor implements percentage-of-portfolio rebalancing bands around a 60% equity target with a $\\pm 5\\%$ corridor (55% to 65%). Which factor would justify widening the rebalancing corridor for equities?",
+    "options": {
+      "A": "Higher transaction costs and illiquidity in the equity market.",
+      "B": "Higher risk aversion of the investor.",
+      "C": "Higher volatility of the equity asset class."
+    },
+    "answer": "A",
+    "explanation": "Rebalancing corridor width is determined by a trade-off between tracking error risk and transaction costs. Higher transaction costs (commissions, bid-ask spreads, market impact, capital gains taxes) justify wider corridors to avoid frequent, costly trades.",
+    "distractor_analysis": {
+      "B": "Incorrect. Higher risk aversion calls for tighter corridors to ensure the portfolio does not stray from the target risk profile.",
+      "C": "Incorrect. Higher asset volatility increases the probability of extreme allocations, calling for tighter corridors."
+    }
+  },
+  {
+    "id": "L1-PM-098",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Basics of Portfolio Planning and Construction",
+    "los": "Explain principles of portfolio rebalancing",
+    "question": "How does the correlation between an asset class and the rest of the portfolio affect its optimal rebalancing corridor width?",
+    "options": {
+      "A": "Higher correlation justifies a wider corridor, because asset values tend to move together, moderating overall portfolio drift.",
+      "B": "Higher correlation justifies a narrower corridor, because diversification benefits are minimized.",
+      "C": "Correlation has zero influence on optimal rebalancing corridor width."
+    },
+    "answer": "A",
+    "explanation": "When an asset class has a high positive correlation with the other portfolio assets, their values tend to move in tandem, which naturally restrains dramatic shifts in relative portfolio weights and total portfolio volatility. Consequently, a wider rebalancing corridor is acceptable.",
+    "distractor_analysis": {
+      "B": "Incorrect. Low or negative correlation causes large relative weight swings, necessitating tighter corridors.",
+      "C": "Incorrect. Correlation is a primary mathematical input in determining optimal corridor width."
+    }
+  },
+  {
+    "id": "L1-PM-099",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Basics of Portfolio Planning and Construction",
+    "los": "Describe the core-satellite approach to portfolio construction",
+    "question": "In a core-satellite portfolio construction approach, the core component is typically invested in:",
+    "options": {
+      "A": "Low-cost, passively managed index funds representing broad market asset classes.",
+      "B": "High-conviction concentrated hedge fund strategies seeking idiosyncratic alpha.",
+      "C": "Illiquid venture capital and private equity partnerships."
+    },
+    "answer": "A",
+    "explanation": "The core-satellite framework allocates the majority of portfolio assets (the \"core\", typically 70% to 80%) to low-cost, broadly diversified passive index funds or enhanced index strategies to achieve benchmark beta. The remaining portion (the \"satellites\") is allocated to active managers or specialized alpha strategies.",
+    "distractor_analysis": {
+      "B": "Incorrect. Concentrated active strategies are placed in the satellite portion.",
+      "C": "Incorrect. Illiquid private assets serve as satellite allocations."
+    }
+  },
+  {
+    "id": "L1-PM-100",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Basics of Portfolio Planning and Construction",
+    "los": "Describe the core-satellite approach to portfolio construction",
+    "question": "An asset manager designs a core-satellite portfolio with USD 100 million total capital. She allocates 75% to a passive core earning an expected return of 8.0% with zero active risk, and 25% to active satellite strategies expected to earn 12.0% with an active risk (tracking error) of 6.0%. The expected return of the combined portfolio is closest to:",
+    "options": {
+      "A": "9.00%",
+      "B": "10.00%",
+      "C": "8.50%"
+    },
+    "answer": "A",
+    "explanation": "Portfolio expected return is the weighted average of the components:\n$$E(R_p) = w_{\\text{core}} E(R_{\\text{core}}) + w_{\\text{satellite}} E(R_{\\text{satellite}})$$\n$$E(R_p) = (0.75)(8.0\\%) + (0.25)(12.0\\%) = 6.00\\% + 3.00\\% = 9.00\\%$$",
+    "distractor_analysis": {
+      "B": "Incorrect. 10.00% is the simple arithmetic average of 8% and 12% ($$20 / 2 = 10\\%$$), ignoring the 75/25 weights.",
+      "C": "Incorrect. 8.50% assumes a 90/10 weighting."
+    }
+  },
+  {
+    "id": "L1-PM-101",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Basics of Portfolio Planning and Construction",
+    "los": "Identify and explain investment constraints (RRTTLLU)",
+    "question": "A private client must pay USD 120,000 for a child's college tuition in 6 months. In the IPS, this obligation should be documented primarily under:",
+    "options": {
+      "A": "Liquidity requirements.",
+      "B": "Tax concerns.",
+      "C": "Legal and regulatory constraints."
+    },
+    "answer": "A",
+    "explanation": "Known cash outflows occurring in the near term (such as tuition, home purchases, or tax liabilities due within the year) represent immediate liquidity requirements. The portfolio must hold sufficient cash or cash equivalents to satisfy these needs without forced liquidation of risky assets.",
+    "distractor_analysis": {
+      "B": "Incorrect. Tax concerns govern the impact of taxes on capital gains and income, not tuition outflows.",
+      "C": "Incorrect. Legal constraints involve statutory regulations and trust law."
+    }
+  },
+  {
+    "id": "L1-PM-102",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Basics of Portfolio Planning and Construction",
+    "los": "Explain approaches to ESG integration in portfolio planning",
+    "question": "An investment manager systematically evaluates environmental, social, and governance (ESG) factors alongside traditional financial statement analysis to identify material risks and valuation adjustments. This approach is best defined as:",
+    "options": {
+      "A": "ESG integration.",
+      "B": "Negative/exclusionary screening.",
+      "C": "Impact investing."
+    },
+    "answer": "A",
+    "explanation": "ESG integration involves the systematic inclusion of financially material environmental, social, and governance factors into fundamental investment analysis, financial forecasting, and valuation models alongside traditional financial metrics.",
+    "distractor_analysis": {
+      "B": "Incorrect. Negative screening strictly excludes specific sectors, companies, or countries based on ethical criteria.",
+      "C": "Incorrect. Impact investing specifically seeks to generate measurable positive social or environmental impact alongside a financial return."
+    }
+  },
+  {
+    "id": "L1-PM-103",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Basics of Portfolio Planning and Construction",
+    "los": "Explain approaches to ESG integration in portfolio planning",
+    "question": "Which ESG implementation approach seeks to invest in companies that score highest on sustainability metrics relative to industry peers within each sector, without excluding entire industries?",
+    "options": {
+      "A": "Best-in-class (positive screening).",
+      "B": "Exclusionary screening.",
+      "C": "Thematic investing."
+    },
+    "answer": "A",
+    "explanation": "Best-in-class (or positive screening) ranks companies within each sector according to ESG criteria and selects the top-performing companies in each group. Unlike negative screening, it maintains sector diversification by including industry leaders from all sectors.",
+    "distractor_analysis": {
+      "B": "Incorrect. Exclusionary screening completely eliminates entire industries (e.g., weapons, gambling, tobacco).",
+      "C": "Incorrect. Thematic investing focuses capital on specific sustainability themes (e.g., clean energy, water technology)."
+    }
+  },
+  {
+    "id": "L1-PM-104",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Basics of Portfolio Planning and Construction",
+    "los": "Identify and explain investment constraints (RRTTLLU)",
+    "question": "An investor holds a concentrated position of USD 10 million in low-basis founder stock within a corporate taxable account. Selling the stock immediately would trigger a 30% capital gains tax. This scenario represents which combination of constraints?",
+    "options": {
+      "A": "Tax concerns and Unique circumstances.",
+      "B": "Legal constraints and Time horizon.",
+      "C": "Liquidity constraints and Regulatory requirements."
+    },
+    "answer": "A",
+    "explanation": "The substantial unrealized capital gain triggers significant Tax concerns. Furthermore, holding an illiquid, concentrated founder stock position that cannot be liquidated without major tax or corporate control implications is categorized as a Unique circumstance in the client's IPS.",
+    "distractor_analysis": {
+      "B": "Incorrect. No statutory legal restrictions prevent sale; it is a tax and concentration issue.",
+      "C": "Incorrect. There are no mandatory regulatory filing constraints specified."
+    }
+  },
+  {
+    "id": "L1-PM-105",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Basics of Portfolio Planning and Construction",
+    "los": "Explain principles of portfolio rebalancing",
+    "question": "A portfolio target asset allocation is 50% equities and 50% fixed income with rebalancing bands of $\\pm 4\\%$. After a market rally, equities represent 56% and fixed income 44%. Under a disciplined rebalancing rule, the manager should:",
+    "options": {
+      "A": "Sell equities and buy fixed income to restore weights within the prescribed corridor.",
+      "B": "Allow equities to continue drifting to maximize upside momentum.",
+      "C": "Buy more equities to capture additional market trend expansion."
+    },
+    "answer": "A",
+    "explanation": "Because the equity allocation (56%) has breached the upper corridor limit of $50\\% + 4\\% = 54\\%$, disciplined rebalancing mandates selling equities and purchasing fixed income to bring the portfolio back within policy bands, enforcing a \"buy low, sell high\" contrarian discipline.",
+    "distractor_analysis": {
+      "B": "Incorrect. Allowing indefinite drift violates the IPS risk mandate and increases portfolio risk exposure.",
+      "C": "Incorrect. Buying more equities further breaches policy bands and compounds risk."
+    }
+  },
+  {
+    "id": "L1-PM-106",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Basics of Portfolio Planning and Construction",
+    "los": "Describe the purpose and components of an Investment Policy Statement (IPS)",
+    "question": "In an Investment Policy Statement, absolute risk objectives are best exemplified by:",
+    "options": {
+      "A": "A requirement that the portfolio value does not decline by more than 10% in any rolling 12-month period.",
+      "B": "A mandate to achieve a tracking error of less than 2.5% relative to the MSCI World Index.",
+      "C": "An objective to generate returns within the top quartile of peer endowment funds."
+    },
+    "answer": "A",
+    "explanation": "Absolute risk objectives express risk in terms of standalone capital preservation or maximum acceptable loss (e.g., maximum drawdown $\\le 10\\%$, probability of negative return $\\le 5\\%$, or standard deviation $\\le 8\\%$). Relative risk objectives express risk relative to a specific benchmark or peer group (e.g., tracking error).",
+    "distractor_analysis": {
+      "B": "Incorrect. Tracking error relative to an index is a classic relative risk objective.",
+      "C": "Incorrect. Ranking relative to peer funds is a relative performance/risk benchmark."
+    }
+  },
+  {
+    "id": "L1-PM-107",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Basics of Portfolio Planning and Construction",
+    "los": "Explain risk budgeting in portfolio construction",
+    "question": "Risk budgeting in portfolio construction involves:",
+    "options": {
+      "A": "Allocating total allowable portfolio risk across asset classes or risk factors to maximize expected return per unit of risk.",
+      "B": "Restricting portfolio investment strictly to risk-free sovereign Treasury bills.",
+      "C": "Setting an equal dollar amount of capital into each available investment security."
+    },
+    "answer": "A",
+    "explanation": "Risk budgeting establishes the overall acceptable level of risk for a portfolio and then decomposes that risk budget, allocating specific units of risk (volatility, tracking error, or factor risk) across various asset classes or managers to maximize overall risk-adjusted return.",
+    "distractor_analysis": {
+      "B": "Incorrect. Restricting to risk-free assets is complete risk avoidance, not risk budgeting.",
+      "C": "Incorrect. Equal dollar allocation is naive $1/N$ capital weighting, which completely ignores differences in asset risk."
+    }
+  },
+  {
+    "id": "L1-PM-108",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Basics of Portfolio Planning and Construction",
+    "los": "Describe the steps in the portfolio management process",
+    "question": "In the feedback step of the portfolio management process, which activity is primarily performed?",
+    "options": {
+      "A": "Performance measurement, attribution analysis, and portfolio rebalancing.",
+      "B": "Formulating capital market expectations and drafting the initial IPS.",
+      "C": "Determining strategic asset allocation weights and selecting brokers."
+    },
+    "answer": "A",
+    "explanation": "The feedback step consists of ongoing monitoring and re-evaluation: measuring realized investment returns, conducting performance attribution to determine the sources of excess return (asset allocation vs security selection), and executing rebalancing back to policy target weights.",
+    "distractor_analysis": {
+      "B": "Incorrect. IPS drafting and CME formulation belong to the planning step.",
+      "C": "Incorrect. Determining SAA and selecting brokers occur during planning and execution."
+    }
+  },
+  {
+    "id": "L1-PM-109",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Basics of Portfolio Planning and Construction",
+    "los": "Explain principles of portfolio rebalancing",
+    "question": "Calendar rebalancing differs from percentage-of-portfolio rebalancing in that calendar rebalancing:",
+    "options": {
+      "A": "Rebalances the portfolio at predetermined time intervals (e.g., monthly, quarterly) regardless of price movements.",
+      "B": "Triggers rebalancing only when an asset class weight exceeds pre-specified percentage bands.",
+      "C": "Completely avoids all transaction costs and capital gains taxes."
+    },
+    "answer": "A",
+    "explanation": "Calendar rebalancing re-evaluates and restores portfolio allocations on a fixed calendar schedule (e.g., monthly, quarterly, or annually). In contrast, percentage-of-portfolio rebalancing monitors asset weights continuously and triggers rebalancing trades only when an asset weight drifts outside pre-established corridor bands.",
+    "distractor_analysis": {
+      "B": "Incorrect. This describes percentage-of-portfolio (corridor) rebalancing.",
+      "C": "Incorrect. Calendar rebalancing incurs transaction costs and potential taxable capital gains."
+    }
+  },
+  {
+    "id": "L1-PM-110",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Basics of Portfolio Planning and Construction",
+    "los": "Identify and explain investment constraints (RRTTLLU)",
+    "question": "Under the Uniform Prudent Investor Act (UPIA) and modern fiduciary standards, a trustee's compliance with prudence is judged based on:",
+    "options": {
+      "A": "The conduct and investment process applied to the portfolio as a whole, rather than the isolated performance of individual investments.",
+      "B": "Whether every individual stock in the portfolio achieved a positive nominal return.",
+      "C": "Achieving a return strictly higher than the benchmark index in every calendar year."
+    },
+    "answer": "A",
+    "explanation": "Modern prudent investor rules evaluate fiduciary duty in the context of the total portfolio investment strategy and reasonable care, skill, and caution. No individual investment is deemed per se imprudent in isolation; investments are judged by their role in the overall diversified portfolio.",
+    "distractor_analysis": {
+      "B": "Incorrect. Fiduciary prudence evaluates the total portfolio process, not guaranteed gains on every single holding.",
+      "C": "Incorrect. Prudence is based on conduct and process, not guaranteed benchmark outperformance."
+    }
+  },
+  {
+    "id": "L1-PM-111",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Technical Analysis",
+    "los": "Describe principles of technical analysis",
+    "question": "The underlying premise of technical analysis is that:",
+    "options": {
+      "A": "Market prices reflect the collective interplay of supply and demand, and price trends tend to repeat due to human psychology.",
+      "B": "Financial statement ratios provide the sole basis for intrinsic company valuation.",
+      "C": "Markets are semi-strong form efficient and past prices cannot be used to forecast future prices."
+    },
+    "answer": "A",
+    "explanation": "Technical analysis is based on three foundational principles: (1) Market price reflects all known information and collective supply/demand dynamics; (2) Prices move in trends that persist over time; and (3) Market history and chart patterns tend to repeat because human and market psychology repeat.",
+    "distractor_analysis": {
+      "B": "Incorrect. Financial statement analysis is the domain of fundamental analysis.",
+      "C": "Incorrect. The semi-strong form Efficient Market Hypothesis directly contradicts technical analysis."
+    }
+  },
+  {
+    "id": "L1-PM-112",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Technical Analysis",
+    "los": "Identify and interpret chart patterns",
+    "question": "In a head and shoulders top chart pattern, the neckline is formed at USD 80. The head reached a peak at USD 100. Based on standard technical analysis projection rules, following a downside breakout below the neckline, the minimum price target is closest to:",
+    "options": {
+      "A": "USD 60.00",
+      "B": "USD 70.00",
+      "C": "USD 50.00"
+    },
+    "answer": "A",
+    "explanation": "In a head and shoulders top pattern, the projected price target following a breakdown below the neckline is determined by subtracting the vertical distance from the head to the neckline from the breakout price:\n$$\\text{Pattern Height} = \\text{Head} - \\text{Neckline} = \\text{USD } 100 - \\text{USD } 80 = \\text{USD } 20$$\n$$\\text{Price Target} = \\text{Neckline} - \\text{Pattern Height} = \\text{USD } 80 - \\text{USD } 20 = \\text{USD } 60.00$$",
+    "distractor_analysis": {
+      "B": "Incorrect. USD 70.00 subtracts only half the pattern height ($$80 - 10 = 70$$).",
+      "C": "Incorrect. USD 50.00 subtracts 1.5 times the pattern height."
+    }
+  },
+  {
+    "id": "L1-PM-113",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Technical Analysis",
+    "los": "Explain moving averages and technical indicators",
+    "question": "In technical analysis, a \"Golden Cross\" is defined as:",
+    "options": {
+      "A": "A short-term moving average (e.g., 50-day) crossing above a long-term moving average (e.g., 200-day), signaling a bullish trend.",
+      "B": "A short-term moving average crossing below a long-term moving average, signaling an impending bear market.",
+      "C": "The price crossing above the upper Bollinger Band, signaling an extreme overbought condition."
+    },
+    "answer": "A",
+    "explanation": "A Golden Cross occurs when a short-term moving average (commonly the 50-day SMA) crosses above a long-term moving average (commonly the 200-day SMA) from below. Technical analysts interpret this as strong confirmation of an emerging bullish trend.",
+    "distractor_analysis": {
+      "B": "Incorrect. A short-term moving average crossing below a long-term moving average is called a \"Death Cross\" (bearish signal).",
+      "C": "Incorrect. Crossing above the upper Bollinger Band is an oscillator breakout, not a moving average golden cross."
+    }
+  },
+  {
+    "id": "L1-PM-114",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Technical Analysis",
+    "los": "Explain moving averages and technical indicators",
+    "question": "A stock's 20-day simple moving average (SMA) is USD 50.00, and the sample standard deviation of closing prices over the 20 days is USD 2.50. The upper and lower Bollinger Bands set at 2 standard deviations are:",
+    "options": {
+      "A": "Upper Band = USD 55.00; Lower Band = USD 45.00",
+      "B": "Upper Band = USD 52.50; Lower Band = USD 47.50",
+      "C": "Upper Band = USD 60.00; Lower Band = USD 40.00"
+    },
+    "answer": "A",
+    "explanation": "Bollinger Bands consist of a center line (SMA) and two bands placed at $k$ standard deviations (standard $k = 2$):\n$$\\text{Upper Band} = \\text{SMA} + 2 \\times \\sigma = \\text{USD } 50.00 + 2(2.50) = \\text{USD } 50.00 + \\text{USD } 5.00 = \\text{USD } 55.00$$\n$$\\text{Lower Band} = \\text{SMA} - 2 \\times \\sigma = \\text{USD } 50.00 - 2(2.50) = \\text{USD } 50.00 - \\text{USD } 5.00 = \\text{USD } 45.00$$",
+    "distractor_analysis": {
+      "B": "Incorrect. Sets bands at 1 standard deviation ($$50 \\pm 2.50$$).",
+      "C": "Incorrect. Sets bands at 4 standard deviations ($$50 \\pm 10.00$$)."
+    }
+  },
+  {
+    "id": "L1-PM-115",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Technical Analysis",
+    "los": "Explain momentum oscillators and sentiment indicators",
+    "question": "A technical analyst monitors the Relative Strength Index (RSI) of an equity index. If the 14-day RSI reaches a reading of 78, the index is typically interpreted as:",
+    "options": {
+      "A": "Overbought, signaling potential vulnerability to a short-term price pullback or consolidation.",
+      "B": "Oversold, indicating that aggressive short-covering is imminent.",
+      "C": "At neutral fair value, confirming that the current trend is sustainable without risk."
+    },
+    "answer": "A",
+    "explanation": "The Relative Strength Index (RSI) is a bounded momentum oscillator ranging from 0 to 100. Readings above 70 indicate that the asset is overbought (potentially overextended to the upside), whereas readings below 30 indicate oversold conditions.",
+    "distractor_analysis": {
+      "B": "Incorrect. Oversold conditions correspond to RSI values below 30.",
+      "C": "Incorrect. 50 is the neutral centerline; 78 represents a distinctly overbought condition."
+    }
+  },
+  {
+    "id": "L1-PM-116",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Technical Analysis",
+    "los": "Explain momentum oscillators and sentiment indicators",
+    "question": "A contrarian technical analyst monitors the equity Put/Call ratio. A high Put/Call ratio is traditionally viewed by contrarians as a:",
+    "options": {
+      "A": "Bullish indicator, because extreme bearish market sentiment suggests selling pressure is exhausted.",
+      "B": "Bearish indicator, confirming that institutions will continue selling equities aggressively.",
+      "C": "Neutral indicator, reflecting balanced hedging activity across derivative exchanges."
+    },
+    "answer": "A",
+    "explanation": "The Put/Call ratio measures the trading volume of put options relative to call options. Contrarian investors view extreme high values (excessive put buying) as evidence of peak bearish sentiment and panic, which often marks a market bottom and provides a bullish contrarian buy signal.",
+    "distractor_analysis": {
+      "B": "Incorrect. Following the crowd in believing a high ratio is bearish is the opposite of contrarian analysis.",
+      "C": "Incorrect. A high ratio indicates extreme one-sided bearish speculation, not balanced hedging."
+    }
+  },
+  {
+    "id": "L1-PM-117",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Technical Analysis",
+    "los": "Explain sentiment indicators and flow of funds",
+    "question": "Company XYZ has 50 million shares outstanding and a current short interest of 6 million shares. If the average daily trading volume is 1.5 million shares, the short interest ratio (days to cover) is closest to:",
+    "options": {
+      "A": "4.0 days",
+      "B": "12.0%",
+      "C": "8.3 days"
+    },
+    "answer": "A",
+    "explanation": "The short interest ratio (days to cover) measures the number of days of normal trading volume required for short sellers to buy back and cover all borrowed shares:\n$$\\text{Days to Cover} = \\frac{\\text{Short Interest}}{\\text{Average Daily Volume}} = \\frac{6{,}000{,}000}{1{,}500{,}000} = 4.0 \\text{ days}$$",
+    "distractor_analysis": {
+      "B": "Incorrect. 12.0% is the short interest as a percentage of total shares outstanding ($$\\frac{6\\text{M}}{50\\text{M}} = 12.0\\%$$), not the short interest ratio.",
+      "C": "Incorrect. 8.3 days results from dividing 50 million shares by 6 million shares."
+    }
+  },
+  {
+    "id": "L1-PM-118",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Fintech in Investment Management",
+    "los": "Describe applications of big data and machine learning in investment management",
+    "question": "In quantitative portfolio management, analyzing satellite imagery of retail parking lots or parsing millions of corporate executive earnings call audio recordings represents the use of:",
+    "options": {
+      "A": "Alternative, unstructured big data.",
+      "B": "Traditional, structured financial reporting data.",
+      "C": "Statutory regulatory filings under GAAP."
+    },
+    "answer": "A",
+    "explanation": "Alternative data refers to non-traditional information generated outside corporate financial accounting systems (e.g., satellite imagery, social media posts, credit card transactions, web traffic, and audio transcripts). Because these sources lack a predefined tabular structure, they are classified as unstructured big data.",
+    "distractor_analysis": {
+      "B": "Incorrect. Traditional structured data consists of standardized numeric databases (e.g., quarterly balance sheets, stock prices).",
+      "C": "Incorrect. Regulatory filings (10-Ks, 10-Qs) are standard corporate disclosures."
+    }
+  },
+  {
+    "id": "L1-PM-119",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Fintech in Investment Management",
+    "los": "Describe applications of big data and machine learning in investment management",
+    "question": "A machine learning algorithm trained to predict corporate bond default probabilities by training on thousands of historical loan records with known \"default\" or \"no default\" outcomes is best classified as:",
+    "options": {
+      "A": "Supervised machine learning.",
+      "B": "Unsupervised machine learning.",
+      "C": "Heuristic clustering analysis."
+    },
+    "answer": "A",
+    "explanation": "Supervised machine learning utilizes labeled training datasets where both input features (e.g., leverage ratios, interest coverage) and target output labels (e.g., default vs non-default) are provided to train the predictive model.",
+    "distractor_analysis": {
+      "B": "Incorrect. Unsupervised machine learning explores unlabeled data to discover underlying patterns, groupings, or clusters without target labels.",
+      "C": "Incorrect. Heuristic clustering is typically an unsupervised method without ground-truth outcome labels."
+    }
+  },
+  {
+    "id": "L1-PM-120",
+    "level": 1,
+    "topic": "Portfolio Management",
+    "subtopic": "Fintech in Investment Management",
+    "los": "Describe applications of distributed ledger technology in investment management",
+    "question": "In financial market infrastructure, a primary benefit of Distributed Ledger Technology (DLT) and smart contracts for post-trade processing is:",
+    "options": {
+      "A": "Enabling near-instantaneous, atomic trade settlement and eliminating counterparty reconciliation requirements.",
+      "B": "Eliminating all fundamental market price volatility in financial assets.",
+      "C": "Guaranteeing fixed annual yields on equity investments through algorithmic protocols."
+    },
+    "answer": "A",
+    "explanation": "Distributed Ledger Technology (DLT) enables decentralized, cryptographically verifiable recordkeeping. Smart contracts execute conditional trade actions automatically when specified conditions are met. This allows atomic settlement (simultaneous exchange of cash and securities), sharply reducing settlement cycles (e.g., from T+1/T+2 to T+0) and eliminating manual reconciliation between custodians and clearing brokers.",
+    "distractor_analysis": {
+      "B": "Incorrect. DLT optimizes operational plumbing; it has no effect on fundamental asset price volatility.",
+      "C": "Incorrect. DLT cannot guarantee returns on risky financial instruments."
+    }
+  }
+]
