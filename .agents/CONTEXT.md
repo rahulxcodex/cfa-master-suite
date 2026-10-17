@@ -46,4 +46,7 @@
 - **Live Deployment & Repositories**:
   - **GitHub Repository**: https://github.com/rahulxcodex/cfa-master-suite (main branch)
   - **Live Portal**: https://rahulxcodex.github.io/cfa-master-suite/
+  - **Recent Milestones**:
+    - Sidebar scope fix: resolved unclosed `hashchange` listener in `scripts/generate_unified_dashboard.py` restoring global access to `toggleDesktopSidebar`, `filterNumericals`, and `renderSolvedNumericals`.
+    - Mobile UI responsiveness: hid duplicate desktop sidebar toggle on screens <= 900px, isolated mobile close button, and prevented sidebar drawer offset on mobile viewports.
 
