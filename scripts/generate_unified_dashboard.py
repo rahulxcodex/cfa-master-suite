@@ -1044,6 +1044,149 @@ dashboard_template = r'''<!DOCTYPE html>
       margin-bottom: 10px;
     }
 
+
+    /* --- Interactive CFA Jargon & Terminology Popover System --- */
+    .cfa-jargon-term {
+      border-bottom: 1.5px dashed var(--accent-amber);
+      color: inherit;
+      cursor: help;
+      padding: 0 2px;
+      border-radius: 2px;
+      transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+      text-decoration: none;
+      display: inline;
+    }
+    .cfa-jargon-term:hover, .cfa-jargon-term:focus, .cfa-jargon-term.active {
+      background: rgba(217, 119, 6, 0.18);
+      color: #f59e0b;
+      border-bottom-color: #f59e0b;
+      outline: none;
+    }
+    .cfa-jargon-popover {
+      position: fixed;
+      z-index: 100000;
+      width: 440px;
+      max-width: calc(100vw - 32px);
+      max-height: 480px;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.45);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      font-family: var(--font-sans);
+      pointer-events: auto;
+      opacity: 0;
+      transform: translateY(4px);
+      transition: opacity 0.16s ease, transform 0.16s ease;
+    }
+    .cfa-jargon-popover.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .cfa-jargon-popover-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 12px 14px 10px 14px;
+      background: var(--bg-tertiary);
+      border-bottom: 1px solid var(--border-color);
+      gap: 10px;
+      flex-shrink: 0;
+    }
+    .cfa-jargon-popover-body {
+      padding: 14px;
+      overflow-y: auto;
+      overscroll-contain: contain;
+      font-size: 13px;
+      line-height: 1.6;
+      color: var(--text-primary);
+      flex: 1 1 auto;
+    }
+    .cfa-jargon-section-title {
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-top: 12px;
+      margin-bottom: 4px;
+    }
+    .cfa-jargon-section-title:first-child {
+      margin-top: 0;
+    }
+    .cfa-jargon-formula-box {
+      background: var(--code-bg);
+      border-left: 3px solid var(--accent-blue);
+      padding: 10px 12px;
+      border-radius: 0 4px 4px 0;
+      margin: 8px 0 12px 0;
+      overflow-x: auto;
+      font-size: 14px;
+    }
+    .cfa-jargon-pitfalls-box {
+      background: rgba(239, 68, 68, 0.08);
+      border: 1px solid rgba(239, 68, 68, 0.35);
+      border-radius: 4px;
+      padding: 10px 12px;
+      margin: 10px 0;
+      font-size: 12.5px;
+      line-height: 1.55;
+    }
+    .cfa-jargon-numerical-box {
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      padding: 12px;
+      margin: 10px 0;
+      font-size: 12.5px;
+    }
+    .cfa-jargon-numerical-title {
+      font-weight: 700;
+      color: var(--accent-amber);
+      font-family: var(--font-serif);
+      font-size: 14.5px;
+      margin-bottom: 6px;
+    }
+    .cfa-jargon-result-badge {
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid var(--accent-emerald);
+      color: var(--accent-emerald);
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 4px;
+      margin-top: 8px;
+    }
+    .cfa-jargon-related-tag {
+      display: inline-block;
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      padding: 3px 7px;
+      border-radius: 3px;
+      margin: 2px 4px 2px 0;
+      cursor: pointer;
+      transition: all 0.12s ease;
+    }
+    .cfa-jargon-related-tag:hover {
+      border-color: var(--accent-blue);
+      color: var(--accent-blue);
+      background: rgba(59, 130, 246, 0.1);
+    }
+    .cfa-jargon-backdrop {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 99999;
+      backdrop-filter: blur(2px);
+    }
+
   </style>
 </head>
 <body>
@@ -1069,6 +1212,7 @@ dashboard_template = r'''<!DOCTYPE html>
       <li><a href="#l2-vignettes" onclick="switchTab('l2-vignettes')"><span>Level 2 Case Vignettes</span> <span class="nav-badge">102 V / 540 Q</span></a></li>
       
       <li class="nav-divider"><span>PRACTICE & WORKED SOLUTIONS</span></li>
+      <li><a href="#jargon-glossary" onclick="switchTab('jargon-glossary')"><span>📚 Terminology & Jargon Engine</span> <span class="nav-badge" style="color: var(--accent-amber); border-color: var(--accent-amber);">32 Master</span></a></li>
       <li><a href="#solved-numericals" onclick="switchTab('solved-numericals')"><span>Master Solved Numericals</span> <span class="nav-badge" style="color: var(--accent-amber); border-color: var(--accent-amber);">27 Worked</span></a></li>
       <li><a href="#curriculum-audit" onclick="switchTab('curriculum-audit')"><span>Curriculum Audit & Gaps</span> <span class="nav-badge">2024–2026</span></a></li>
       
@@ -1930,6 +2074,49 @@ dashboard_template = r'''<!DOCTYPE html>
       </div>
     </section>
 
+    <!-- 12B. CFA TERMINOLOGY & MATHEMATICAL JARGON ENGINE -->
+    <section id="jargon-glossary">
+      <div class="card" style="margin-bottom: 24px; border-left: 4px solid var(--accent-amber);">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px;">
+          <div>
+            <h2 style="font-family: var(--font-serif); font-size: 26px; font-weight: 700; margin-bottom: 6px;">CFA Terminology & Mathematical Jargon Engine</h2>
+            <p style="color: var(--text-secondary); max-width: 850px; font-size: 13.5px; line-height: 1.6;">
+              Instant, deep-dive conceptual cards for essential CFA Level 1 & Level 2 financial jargon. Hover over any underlined terminology anywhere in exam questions or vignettes to reveal intuitive definitions, KaTeX formulas, practical uses, common exam traps, and complete step-by-step worked numerical examples.
+            </p>
+          </div>
+          <div style="text-align: right; font-family: var(--font-mono);">
+            <div style="font-size: 24px; font-weight: 700; color: var(--accent-amber);" id="jargonCountDisplay">32 Master Entries</div>
+            <div style="font-size: 11px; color: var(--text-secondary);">Interactive Hover Cards & Worked Solutions</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="filter-bar" style="margin-bottom: 20px; display: flex; flex-direction: column; gap: 12px;">
+        <div style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
+          <span style="font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; color: var(--text-muted); font-weight: 700; margin-right: 4px;">Subject:</span>
+          <button class="filter-btn active" id="glossSubj-all" onclick="filterJargonGlossary('all', currentGlossaryLevel)">All Subjects</button>
+          <button class="filter-btn" id="glossSubj-fsa" onclick="filterJargonGlossary('FSA', currentGlossaryLevel)">FSA (8)</button>
+          <button class="filter-btn" id="glossSubj-fi" onclick="filterJargonGlossary('FI', currentGlossaryLevel)">Fixed Income (8)</button>
+          <button class="filter-btn" id="glossSubj-eq" onclick="filterJargonGlossary('EQ', currentGlossaryLevel)">Equity (8)</button>
+          <button class="filter-btn" id="glossSubj-pm" onclick="filterJargonGlossary('PM', currentGlossaryLevel)">Portfolio Mgmt (8)</button>
+        </div>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
+          <span style="font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; color: var(--text-muted); font-weight: 700; margin-right: 4px;">Level:</span>
+          <button class="filter-btn active" id="glossLvl-all" onclick="filterJargonGlossary(currentGlossarySubj, 'all')">All Levels</button>
+          <button class="filter-btn" id="glossLvl-l1" onclick="filterJargonGlossary(currentGlossarySubj, 'L1')">Level 1</button>
+          <button class="filter-btn" id="glossLvl-l2" onclick="filterJargonGlossary(currentGlossarySubj, 'L2')">Level 2</button>
+          <button class="filter-btn" id="glossLvl-both" onclick="filterJargonGlossary(currentGlossarySubj, 'Both')">Both (Core)</button>
+          <input type="text" id="glossarySearchInput" placeholder="Search terminologies, formulas, or acronyms (e.g. DuPont, FCFF, Duration, OAS, VaR)..." style="flex: 1 1 250px; min-width: 200px; padding: 7px 12px; background: var(--bg-tertiary); border: 1px solid var(--border-color); color: var(--text-primary); border-radius: 4px; font-size: 13px; font-family: var(--font-sans);" oninput="filterJargonGlossary(currentGlossarySubj, currentGlossaryLevel, this.value)">
+        </div>
+      </div>
+
+      <!-- Container -->
+      <div id="jargonGlossaryListContainer">
+        <!-- Rendered via JS -->
+      </div>
+    </section>
+
     <!-- 13. MASTER SOLVED NUMERICALS & WORKED SOLUTIONS -->
     <section id="solved-numericals">
       <div class="card" style="margin-bottom: 24px; border-left: 4px solid var(--accent-amber);">
@@ -2073,6 +2260,13 @@ dashboard_template = r'''<!DOCTYPE html>
       </div>
     </section>
 
+  <!-- Jargon Popover & Mobile Backdrop Portal -->
+  <div id="cfaJargonBackdrop" class="cfa-jargon-backdrop" style="display: none;" onclick="closeJargonPopover()"></div>
+  <div id="cfaJargonPopover" class="cfa-jargon-popover" style="display: none;" onmouseenter="cancelJargonClose()" onmouseleave="handleJargonPopoverLeave()">
+    <div class="cfa-jargon-popover-header" id="cfaJargonPopoverHeader"></div>
+    <div class="cfa-jargon-popover-body" id="cfaJargonPopoverBody"></div>
+  </div>
+
   </main>
 
   <script>
@@ -2140,11 +2334,15 @@ dashboard_template = r'''<!DOCTYPE html>
         'eq-reference': 'Equity Valuation Reference Library & Models (8 Modules)',
         'pm-reference': 'Portfolio Management Master Reference & Formulas (8 Modules)',
         'reference-diagrams': 'Visual Frameworks & Cheat Sheets',
+        'jargon-glossary': 'CFA Terminology & Mathematical Jargon Engine (32 Master Entries)',
         'solved-numericals': 'Master Solved Numericals & Worked Solutions (27 Cases)',
         'curriculum-audit': '2024–2026 CFA Curriculum Completeness Audit & Gaps'
       };
 
       document.getElementById('topTitle').innerHTML = `<h2>${titles[tabId] || 'CFA Master Suite'}</h2>`;
+      if (tabId === 'jargon-glossary') {
+        renderJargonGlossary();
+      }
       if (tabId === 'solved-numericals') {
         renderSolvedNumericals();
       }
@@ -2175,7 +2373,7 @@ dashboard_template = r'''<!DOCTYPE html>
       document.documentElement.setAttribute('data-theme', savedTheme);
     }
 
-    // KaTeX helper
+    // KaTeX helper & Jargon Auto-Highlighter
     function renderMath() {
       if (window.renderMathInElement) {
         renderMathInElement(document.body, {
@@ -2185,6 +2383,10 @@ dashboard_template = r'''<!DOCTYPE html>
           ],
           throwOnError: false
         });
+      }
+      // Scan and attach interactive jargon hover cards across rendered text
+      if (typeof scanAndHighlightJargon === 'function') {
+        scanAndHighlightJargon(document.body);
       }
     }
 
@@ -3991,7 +4193,607 @@ dashboard_template = r'''<!DOCTYPE html>
       });
     });
 
-    // Embedded Master Solved Numericals Bank
+
+    // ==========================================
+    // CFA JARGON & TERMINOLOGY POPOVER ENGINE
+    // ==========================================
+    const cfaJargonDictionary = __JARGON_DICTIONARY_DATA__;
+
+    let currentJargonId = null;
+    let jargonHistoryStack = [];
+    let jargonOpenTimer = null;
+    let jargonCloseTimer = null;
+    let activeJargonTriggerEl = null;
+
+    let currentGlossarySubj = 'all';
+    let currentGlossaryLevel = 'all';
+    let currentGlossaryQuery = '';
+
+    let compiledJargonRegex = null;
+    let phraseToJargonId = {};
+
+    function initJargonRegex() {
+      if (compiledJargonRegex) return;
+      const allPhrases = [];
+      phraseToJargonId = {};
+      
+      cfaJargonDictionary.forEach(entry => {
+        const list = [entry.term, ...entry.aliases];
+        list.forEach(p => {
+          const clean = p.trim();
+          if (clean.length >= 3) {
+            allPhrases.push(clean);
+            phraseToJargonId[clean.toLowerCase()] = entry.id;
+          }
+        });
+      });
+      
+      allPhrases.sort((a, b) => b.length - a.length);
+      const escaped = allPhrases.map(p => p.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+      compiledJargonRegex = new RegExp('\\b(' + escaped.join('|') + ')\\b', 'gi');
+    }
+
+    function scanAndHighlightJargon(rootElement = document.body) {
+      if (!window.cfaJargonDictionary || !window.cfaJargonDictionary.length) return;
+      initJargonRegex();
+      if (!compiledJargonRegex) return;
+
+      const targetSelector = '.question-text, .explanation-box, .vignette-text, .numerical-box-problem, .numerical-box-steps, .reference-content';
+      const targets = rootElement.querySelectorAll ? rootElement.querySelectorAll(targetSelector) : [rootElement];
+
+      targets.forEach(target => {
+        const walker = document.createTreeWalker(
+          target,
+          NodeFilter.SHOW_TEXT,
+          {
+            acceptNode: function(node) {
+              if (!node.nodeValue || !node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+              const parent = node.parentElement;
+              if (!parent) return NodeFilter.FILTER_REJECT;
+              const tag = parent.tagName.toLowerCase();
+              if (['script', 'style', 'noscript', 'textarea', 'input', 'code', 'pre', 'button'].includes(tag)) {
+                return NodeFilter.FILTER_REJECT;
+              }
+              if (parent.closest('.katex') || parent.closest('.cfa-jargon-term') || parent.closest('#cfaJargonPopover') || parent.closest('#jargonGlossaryListContainer')) {
+                return NodeFilter.FILTER_REJECT;
+              }
+              return NodeFilter.FILTER_ACCEPT;
+            }
+          }
+        );
+
+        const textNodes = [];
+        while (walker.nextNode()) {
+          textNodes.push(walker.currentNode);
+        }
+
+        textNodes.forEach(node => {
+          const text = node.nodeValue;
+          if (!compiledJargonRegex.test(text)) return;
+          compiledJargonRegex.lastIndex = 0;
+
+          const fragment = document.createDocumentFragment();
+          let lastIdx = 0;
+          let match;
+          
+          while ((match = compiledJargonRegex.exec(text)) !== null) {
+            const matchText = match[0];
+            const matchIdx = match.index;
+            const termId = phraseToJargonId[matchText.toLowerCase()];
+
+            if (matchIdx > lastIdx) {
+              fragment.appendChild(document.createTextNode(text.substring(lastIdx, matchIdx)));
+            }
+
+            const span = document.createElement('span');
+            span.className = 'cfa-jargon-term';
+            span.setAttribute('data-jargon-id', termId || '');
+            span.textContent = matchText;
+            span.setAttribute('tabindex', '0');
+            span.setAttribute('role', 'button');
+            span.setAttribute('aria-haspopup', 'dialog');
+            span.setAttribute('title', 'Hover or tap for CFA definition, formula & numerical example');
+            
+            span.addEventListener('mouseenter', (e) => handleJargonHover(e, termId));
+            span.addEventListener('mouseleave', () => handleJargonLeave());
+            span.addEventListener('click', (e) => handleJargonClick(e, termId));
+            span.addEventListener('focus', (e) => handleJargonHover(e, termId));
+            span.addEventListener('blur', () => handleJargonLeave());
+
+            fragment.appendChild(span);
+            lastIdx = matchIdx + matchText.length;
+          }
+
+          if (lastIdx < text.length) {
+            fragment.appendChild(document.createTextNode(text.substring(lastIdx)));
+          }
+
+          if (node.parentNode) {
+            node.parentNode.replaceChild(fragment, node);
+          }
+        });
+      });
+    }
+
+    function showJargonPopover(termId, triggerEl, isHistoryNav = false) {
+      if (!triggerEl && !activeJargonTriggerEl) return;
+      if (triggerEl) activeJargonTriggerEl = triggerEl;
+      
+      const entry = cfaJargonDictionary.find(j => j.id === termId);
+      if (!entry) return;
+
+      if (!isHistoryNav && currentJargonId && currentJargonId !== termId) {
+        jargonHistoryStack.push(currentJargonId);
+      } else if (!isHistoryNav && !currentJargonId) {
+        jargonHistoryStack = [];
+      }
+      currentJargonId = termId;
+
+      const popover = document.getElementById('cfaJargonPopover');
+      const header = document.getElementById('cfaJargonPopoverHeader');
+      const body = document.getElementById('cfaJargonPopoverBody');
+      const backdrop = document.getElementById('cfaJargonBackdrop');
+      if (!popover || !header || !body) return;
+
+      const isMobile = window.innerWidth <= 768;
+      const backBtnHtml = jargonHistoryStack.length > 0 
+        ? `<button class="btn-top" onclick="jargonHistoryBack()" style="padding: 2px 7px; font-size: 11px; margin-right: 6px;">← Back</button>` 
+        : '';
+
+      let categoryBadgeClass = 'badge-fsa';
+      if (entry.category === 'FI') categoryBadgeClass = 'badge-fi';
+      else if (entry.category === 'EQ') categoryBadgeClass = 'badge-eq';
+      else if (entry.category === 'PM') categoryBadgeClass = 'badge-pm';
+
+      header.innerHTML = `
+        <div style="flex: 1; min-width: 0;">
+          <div style="display: flex; gap: 6px; align-items: center; margin-bottom: 4px; flex-wrap: wrap;">
+            ${backBtnHtml}
+            <span class="subject-badge ${categoryBadgeClass}">${entry.category}</span>
+            <span class="nav-badge" style="font-size: 10px;">Level: ${entry.level}</span>
+            <span style="font-family: var(--font-mono); font-size: 10.5px; color: var(--text-muted);">${entry.id}</span>
+          </div>
+          <h3 style="font-family: var(--font-serif); font-size: 16px; font-weight: 700; color: var(--text-primary); margin: 0; line-height: 1.3;">
+            ${entry.term}
+          </h3>
+        </div>
+        <button onclick="closeJargonPopover()" class="btn-top" style="padding: 2px 8px; font-size: 14px;" title="Close (Esc)">✕</button>
+      `;
+
+      let formulaHtml = '';
+      if (entry.formula) {
+        let renderedFormula = entry.formula;
+        if (window.katex && window.katex.renderToString) {
+          try {
+            renderedFormula = katex.renderToString(entry.formula, { throwOnError: false, displayMode: true });
+          } catch (err) {
+            renderedFormula = `<code>${entry.formula}</code>`;
+          }
+        }
+        formulaHtml = `
+          <div class="cfa-jargon-section-title">Governing CFA Formula:</div>
+          <div class="cfa-jargon-formula-box">${renderedFormula}</div>
+        `;
+      }
+
+      let practicalHtml = '';
+      if (entry.practicalUses && entry.practicalUses.length) {
+        practicalHtml = `
+          <div class="cfa-jargon-section-title">Practical Applications & Exam Context:</div>
+          <ul style="margin: 0; padding-left: 18px; font-size: 12.5px; color: var(--text-secondary); line-height: 1.55;">
+            ${entry.practicalUses.map(u => `<li style="margin-bottom: 4px;">${u}</li>`).join('')}
+          </ul>
+        `;
+      }
+
+      let pitfallsHtml = '';
+      if (entry.commonPitfalls && entry.commonPitfalls.length) {
+        pitfallsHtml = `
+          <div class="cfa-jargon-section-title" style="color: var(--accent-rose);">⚠️ Common Traps & Exam Pitfalls:</div>
+          <div class="cfa-jargon-pitfalls-box">
+            <ul style="margin: 0; padding-left: 16px;">
+              ${entry.commonPitfalls.map(p => `<li style="margin-bottom: 4px;">${p}</li>`).join('')}
+            </ul>
+          </div>
+        `;
+      }
+
+      let numericalHtml = '';
+      if (entry.workedNumerical) {
+        const wn = entry.workedNumerical;
+        numericalHtml = `
+          <div class="cfa-jargon-section-title" style="color: var(--accent-amber);">📐 Worked Step-by-Step Numerical Example:</div>
+          <div class="cfa-jargon-numerical-box">
+            <div class="cfa-jargon-numerical-title">${wn.title}</div>
+            <div style="font-weight: 600; font-size: 11.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 3px;">Given Inputs:</div>
+            <ul style="margin: 0 0 8px 0; padding-left: 16px; color: var(--text-secondary); font-size: 12px;">
+              ${wn.given.map(g => `<li>${g}</li>`).join('')}
+            </ul>
+            <div style="font-weight: 600; font-size: 11.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 3px;">Step-by-Step Solution:</div>
+            <ol style="margin: 0 0 8px 0; padding-left: 16px; line-height: 1.5; font-size: 12px;">
+              ${wn.steps.map(s => `<li style="margin-bottom: 3px;">${s}</li>`).join('')}
+            </ol>
+            <div class="cfa-jargon-result-badge">
+              Final Answer: ${wn.result}
+            </div>
+          </div>
+        `;
+      }
+
+      let deepLinksHtml = '';
+      if (entry.relatedNumCode || entry.relatedSimTab) {
+        deepLinksHtml = `<div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px;">`;
+        if (entry.relatedNumCode) {
+          deepLinksHtml += `
+            <button class="filter-btn active" style="font-size: 11px; padding: 4px 10px;" onclick="openMasterSolvedCase('${entry.relatedNumCode}')">
+              ⚡ Jump to Case ${entry.relatedNumCode} in Solved Numericals
+            </button>
+          `;
+        }
+        if (entry.relatedSimTab) {
+          deepLinksHtml += `
+            <button class="filter-btn" style="font-size: 11px; padding: 4px 10px;" onclick="openInteractiveSim('${entry.relatedSimTab}')">
+              📈 Open Simulation Engine
+            </button>
+          `;
+        }
+        deepLinksHtml += `</div>`;
+      }
+
+      let relatedHtml = '';
+      if (entry.relatedTerms && entry.relatedTerms.length) {
+        relatedHtml = `
+          <div class="cfa-jargon-section-title">Related CFA Terminology:</div>
+          <div style="display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px;">
+            ${entry.relatedTerms.map(rtId => {
+              const rtEntry = cfaJargonDictionary.find(j => j.id === rtId);
+              const label = rtEntry ? rtEntry.term : rtId;
+              return `<span class="cfa-jargon-related-tag" onclick="navigateJargon('${rtId}')">🔗 ${label}</span>`;
+            }).join('')}
+          </div>
+        `;
+      }
+
+      body.innerHTML = `
+        <div class="cfa-jargon-section-title">Intuitive Definition:</div>
+        <p style="margin: 0 0 10px 0; font-size: 13.5px; line-height: 1.6;">${entry.definition}</p>
+        ${formulaHtml}
+        ${practicalHtml}
+        ${pitfallsHtml}
+        ${numericalHtml}
+        ${deepLinksHtml}
+        ${relatedHtml}
+      `;
+
+      if (window.renderMathInElement) {
+        renderMathInElement(body, {
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false}
+          ],
+          throwOnError: false
+        });
+      }
+
+      positionJargonPopover(activeJargonTriggerEl);
+      popover.style.display = 'flex';
+      requestAnimationFrame(() => popover.classList.add('visible'));
+
+      if (isMobile && backdrop) {
+        backdrop.style.display = 'block';
+      }
+    }
+
+    function positionJargonPopover(triggerEl) {
+      const popover = document.getElementById('cfaJargonPopover');
+      if (!popover) return;
+
+      const isMobile = window.innerWidth <= 768;
+      if (isMobile) {
+        popover.style.left = '16px';
+        popover.style.right = '16px';
+        popover.style.bottom = '16px';
+        popover.style.top = 'auto';
+        popover.style.width = 'calc(100vw - 32px)';
+        popover.style.maxHeight = '75vh';
+        return;
+      }
+
+      const pWidth = 440;
+      popover.style.width = pWidth + 'px';
+      popover.style.maxHeight = '480px';
+      popover.style.right = 'auto';
+      popover.style.bottom = 'auto';
+
+      if (!triggerEl || !triggerEl.getBoundingClientRect) {
+        popover.style.left = Math.max(16, (window.innerWidth - pWidth) / 2) + 'px';
+        popover.style.top = '80px';
+        return;
+      }
+
+      const tRect = triggerEl.getBoundingClientRect();
+      const vWidth = window.innerWidth;
+      const vHeight = window.innerHeight;
+      const pHeight = 440;
+
+      const idealX = tRect.left + (tRect.width / 2) - (pWidth / 2);
+      const clampedX = Math.max(16, Math.min(idealX, vWidth - pWidth - 16));
+      popover.style.left = clampedX + 'px';
+
+      const spaceBelow = vHeight - tRect.bottom - 16;
+      const spaceAbove = tRect.top - 16;
+
+      if (spaceBelow < 360 && spaceAbove > spaceBelow) {
+        const topPos = Math.max(16, tRect.top - pHeight - 8);
+        popover.style.top = topPos + 'px';
+        popover.style.maxHeight = Math.min(480, tRect.top - 24) + 'px';
+      } else {
+        popover.style.top = (tRect.bottom + 8) + 'px';
+        popover.style.maxHeight = Math.min(480, spaceBelow) + 'px';
+      }
+    }
+
+    function handleJargonHover(e, termId) {
+      clearTimeout(jargonCloseTimer);
+      clearTimeout(jargonOpenTimer);
+      const trigger = e.currentTarget || e.target;
+      activeJargonTriggerEl = trigger;
+
+      jargonOpenTimer = setTimeout(() => {
+        showJargonPopover(termId, trigger);
+      }, 200);
+    }
+
+    function handleJargonLeave() {
+      clearTimeout(jargonOpenTimer);
+      jargonCloseTimer = setTimeout(() => {
+        closeJargonPopover();
+      }, 180);
+    }
+
+    function cancelJargonClose() {
+      clearTimeout(jargonCloseTimer);
+    }
+
+    function handleJargonPopoverLeave() {
+      jargonCloseTimer = setTimeout(() => {
+        closeJargonPopover();
+      }, 180);
+    }
+
+    function handleJargonClick(e, termId) {
+      if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+      clearTimeout(jargonOpenTimer);
+      clearTimeout(jargonCloseTimer);
+      showJargonPopover(termId, e ? (e.currentTarget || e.target) : activeJargonTriggerEl);
+    }
+
+    function navigateJargon(termId) {
+      showJargonPopover(termId, activeJargonTriggerEl, false);
+      const body = document.getElementById('cfaJargonPopoverBody');
+      if (body) body.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function jargonHistoryBack() {
+      if (jargonHistoryStack.length > 0) {
+        const prevId = jargonHistoryStack.pop();
+        showJargonPopover(prevId, activeJargonTriggerEl, true);
+        const body = document.getElementById('cfaJargonPopoverBody');
+        if (body) body.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+
+    function closeJargonPopover() {
+      clearTimeout(jargonOpenTimer);
+      clearTimeout(jargonCloseTimer);
+      const popover = document.getElementById('cfaJargonPopover');
+      const backdrop = document.getElementById('cfaJargonBackdrop');
+      if (popover) {
+        popover.classList.remove('visible');
+        setTimeout(() => {
+          popover.style.display = 'none';
+          currentJargonId = null;
+        }, 150);
+      }
+      if (backdrop) {
+        backdrop.style.display = 'none';
+      }
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeJargonPopover();
+      }
+    });
+
+    function openMasterSolvedCase(numCode) {
+      closeJargonPopover();
+      switchTab('solved-numericals');
+      setTimeout(() => {
+        const input = document.getElementById('numSearchInput');
+        if (input) {
+          input.value = numCode;
+          filterNumericals('all', 'all', numCode);
+        }
+        const card = document.querySelector(`.numerical-card[id*="${numCode}"]`) || document.querySelector('.numerical-card');
+        if (card) {
+          card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          card.style.outline = '2px solid var(--accent-amber)';
+          setTimeout(() => { card.style.outline = ''; }, 2500);
+        }
+      }, 250);
+    }
+
+    function openInteractiveSim(simTab) {
+      closeJargonPopover();
+      const tabMap = {
+        'yield-curve': 'sim-yield',
+        'tree': 'sim-tree',
+        'dupont': 'sim-equity',
+        'ddm': 'sim-equity',
+        'key-rate': 'sim-duration',
+        'frn': 'sim-frn',
+        'ri': 'sim-ri-decay',
+        'cashflow': 'sim-waterfall',
+        'translation': 'sim-translation',
+        'prepayment': 'sim-prepayment',
+        'markowitz': 'sim-frontier',
+        'active': 'sim-fundamental-law',
+        'rebalancing': 'sim-rebalancing'
+      };
+      const targetTab = tabMap[simTab] || simTab;
+      switchTab(targetTab);
+    }
+
+    function filterJargonGlossary(subj, level, query) {
+      if (subj !== undefined) currentGlossarySubj = subj;
+      if (level !== undefined) currentGlossaryLevel = level;
+      if (query !== undefined) currentGlossaryQuery = query.toLowerCase().trim();
+
+      ['all', 'fsa', 'fi', 'eq', 'pm'].forEach(s => {
+        const btn = document.getElementById('glossSubj-' + s);
+        if (btn) btn.classList.toggle('active', (s === 'all' && currentGlossarySubj === 'all') || (s.toUpperCase() === currentGlossarySubj));
+      });
+
+      ['all', 'l1', 'l2', 'both'].forEach(l => {
+        const btn = document.getElementById('glossLvl-' + l);
+        if (btn) btn.classList.toggle('active', (l === 'all' && currentGlossaryLevel === 'all') || (l.toUpperCase() === currentGlossaryLevel.toUpperCase()));
+      });
+
+      renderJargonGlossary();
+    }
+
+    function renderJargonGlossary() {
+      const container = document.getElementById('jargonGlossaryListContainer');
+      if (!container || !window.cfaJargonDictionary) return;
+
+      const filtered = cfaJargonDictionary.filter(item => {
+        const matchSubj = currentGlossarySubj === 'all' || item.category === currentGlossarySubj;
+        const matchLvl = currentGlossaryLevel === 'all' || item.level.toUpperCase() === currentGlossaryLevel.toUpperCase();
+        let matchQuery = true;
+        if (currentGlossaryQuery) {
+          const hay = (item.term + ' ' + item.aliases.join(' ') + ' ' + item.definition + ' ' + item.formula + ' ' + item.category + ' ' + item.id).toLowerCase();
+          matchQuery = hay.includes(currentGlossaryQuery);
+        }
+        return matchSubj && matchLvl && matchQuery;
+      });
+
+      const countDisplay = document.getElementById('jargonCountDisplay');
+      if (countDisplay) {
+        countDisplay.innerText = `${filtered.length} of ${cfaJargonDictionary.length} Master Terminologies`;
+      }
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div class="card" style="text-align: center; padding: 40px; color: var(--text-secondary);">
+            <p style="font-size: 15px;">No terminology matches your selected filters.</p>
+            <button class="filter-btn" style="margin-top: 10px;" onclick="filterJargonGlossary('all', 'all', '')">Reset Filters</button>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = filtered.map(item => {
+        let catClass = 'badge-fsa';
+        if (item.category === 'FI') catClass = 'badge-fi';
+        else if (item.category === 'EQ') catClass = 'badge-eq';
+        else if (item.category === 'PM') catClass = 'badge-pm';
+
+        let renderedFormula = item.formula;
+        if (window.katex && window.katex.renderToString) {
+          try {
+            renderedFormula = katex.renderToString(item.formula, { throwOnError: false, displayMode: true });
+          } catch (e) {
+            renderedFormula = `<code>${item.formula}</code>`;
+          }
+        }
+
+        const wn = item.workedNumerical;
+        let numSection = '';
+        if (wn) {
+          numSection = `
+            <details style="margin-top: 12px; border: 1px solid var(--border-color); border-radius: 4px; padding: 8px 12px; background: var(--bg-tertiary);">
+              <summary style="cursor: pointer; font-weight: 600; color: var(--accent-amber); font-family: var(--font-mono); font-size: 12.5px;">
+                ▶ Click to Expand Worked Numerical: ${wn.title}
+              </summary>
+              <div style="margin-top: 10px; font-size: 12.5px;">
+                <div style="font-weight: 700; color: var(--text-muted); text-transform: uppercase; font-size: 11px; margin-bottom: 2px;">Given:</div>
+                <ul style="margin: 0 0 6px 0; padding-left: 16px; color: var(--text-secondary);">
+                  ${wn.given.map(g => `<li>${g}</li>`).join('')}
+                </ul>
+                <div style="font-weight: 700; color: var(--text-muted); text-transform: uppercase; font-size: 11px; margin-bottom: 2px;">Steps:</div>
+                <ol style="margin: 0 0 6px 0; padding-left: 16px;">
+                  ${wn.steps.map(s => `<li>${s}</li>`).join('')}
+                </ol>
+                <div class="cfa-jargon-result-badge">Result: ${wn.result}</div>
+              </div>
+            </details>
+          `;
+        }
+
+        return `
+          <div class="card" style="margin-bottom: 16px;" id="glossary-card-${item.id}">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 8px; margin-bottom: 8px;">
+              <div>
+                <div style="display: flex; gap: 6px; align-items: center; margin-bottom: 4px;">
+                  <span class="subject-badge ${catClass}">${item.category}</span>
+                  <span class="nav-badge">Level: ${item.level}</span>
+                  <span style="font-family: var(--font-mono); font-size: 11px; color: var(--text-muted);">${item.id}</span>
+                </div>
+                <h3 style="font-family: var(--font-serif); font-size: 18px; font-weight: 700; margin: 0; color: var(--text-primary);">
+                  ${item.term}
+                </h3>
+              </div>
+              <div style="display: flex; gap: 6px; align-items: center;">
+                <button class="filter-btn" style="font-size: 11px; padding: 4px 10px;" onclick="showJargonPopover('${item.id}', this)">
+                  👁️ Preview Popover Card
+                </button>
+                ${item.relatedNumCode ? `<button class="filter-btn active" style="font-size: 11px; padding: 4px 10px;" onclick="openMasterSolvedCase('${item.relatedNumCode}')">⚡ Solved Case</button>` : ''}
+              </div>
+            </div>
+            <p style="font-size: 13.5px; line-height: 1.6; margin: 0 0 10px 0; color: var(--text-primary);">${item.definition}</p>
+            <div class="cfa-jargon-formula-box">${renderedFormula}</div>
+            <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-top: 10px;">
+              <div style="flex: 1 1 300px;">
+                <div class="cfa-jargon-section-title">Practical Uses:</div>
+                <ul style="margin: 0; padding-left: 16px; font-size: 12.5px; color: var(--text-secondary);">
+                  ${item.practicalUses.map(u => `<li>${u}</li>`).join('')}
+                </ul>
+              </div>
+              <div style="flex: 1 1 300px;">
+                <div class="cfa-jargon-section-title" style="color: var(--accent-rose);">⚠️ Pitfalls:</div>
+                <ul style="margin: 0; padding-left: 16px; font-size: 12.5px; color: var(--text-secondary);">
+                  ${item.commonPitfalls.map(p => `<li>${p}</li>`).join('')}
+                </ul>
+              </div>
+            </div>
+            ${numSection}
+            <div style="margin-top: 10px; display: flex; gap: 4px; flex-wrap: wrap; align-items: center;">
+              <span style="font-family: var(--font-mono); font-size: 10.5px; color: var(--text-muted); margin-right: 4px;">Related:</span>
+              ${item.relatedTerms.map(rtId => {
+                const rt = cfaJargonDictionary.find(j => j.id === rtId);
+                return `<span class="cfa-jargon-related-tag" onclick="showJargonPopover('${rtId}', this)">🔗 ${rt ? rt.term : rtId}</span>`;
+              }).join('')}
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      if (window.renderMathInElement) {
+        renderMathInElement(container, {
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false}
+          ],
+          throwOnError: false
+        });
+      }
+    }
+
+        // Embedded Master Solved Numericals Bank
     const masterSolvedNumericals = [{"id": "NUM-3.1.1", "num_code": "3.1.1", "subject": "Financial Statement Analysis", "difficulty": "Easy / Foundational", "problem": "Apex Corp reported net income of 1,200,000 USD for the fiscal year ended December 31, 2025. On January 1, 2025, Apex had 500,000 common shares outstanding. On May 1, 2025, Apex issued 120,000 additional common shares. Apex paid 100,000 USD in preferred dividends on its non-convertible cumulative preferred stock. Calculate Apex Corp's Basic EPS.", "methodology": "`Weighted Average Shares Outstanding (WASO) = sum(Shares_i * (Months_i / 12))`  \n`Basic EPS = (Net Income - Preferred Dividends) / WASO`", "steps": "1. Calculate WASO:\n   - Initial shares: `500,000 * (12 / 12) = 500,000`\n   - New shares issued May 1 (outstanding for 8 months): `120,000 * (8 / 12) = 80,000`\n   - `WASO = 500,000 + 80,000 = 580,000 shares`\n2. Earnings Available to Common Shareholders:\n   - `Net Income - Preferred Dividends = 1,200,000 USD - 100,000 USD = 1,100,000 USD`\n3. Basic EPS:\n   - `Basic EPS = 1,100,000 USD / 580,000 = 1.8966 USD` (rounded to 1.90 USD per share).", "final_answer": "**1.90 USD per share**.  \n*Exam Trap Warning*: Cumulative preferred dividends must be subtracted from Net Income whether declared/paid or not!"}, {"id": "NUM-3.1.2", "num_code": "3.1.2", "subject": "Financial Statement Analysis", "difficulty": "Moderate / Intermediate", "problem": "Sigma Holdings reported net income of 4,500,000 USD for 2025 with 1,000,000 common shares outstanding throughout the year. The company had two potentially dilutive securities outstanding:\n1. 50,000 shares of 6% cumulative convertible preferred stock, par value 100 USD (each preferred share is convertible into 4 common shares).\n2. 200,000 stock options with an exercise price of 30 USD per share. The average market price of common shares during the year was 50 USD.\nThe corporate tax rate is 25%. Calculate Sigma's Diluted EPS.", "methodology": "Treasury Stock Method for Options:\n`Incremental Shares = Options * (1 - (Exercise Price / Average Market Price))`  \nIf-Converted Method for Convertible Preferred:\n`Incremental Earnings = Preferred Dividend saved = Shares_pref * Par * Dividend Rate`  \n`Incremental Shares = Shares_pref * Conversion Ratio`  \nCheck for antidilution: Incremental EPS must be lower than Basic EPS.", "steps": "1. Basic EPS:\n   - Preferred Dividend: `50,000 * 100 USD * 0.06 = 300,000 USD`\n   - Numerator: `4,500,000 USD - 300,000 USD = 4,200,000 USD`\n   - Denominator: `1,000,000 shares`\n   - `Basic EPS = 4,200,000 USD / 1,000,000 = 4.20 USD`\n2. Options Test (Treasury Stock Method):\n   - `Incremental Shares = 200,000 * (1 - (30 / 50)) = 200,000 * 0.40 = 80,000 shares`\n   - Incremental EPS for options = `0 USD / 80,000 = 0.00 USD` (strongly dilutive).\n3. Convertible Preferred Test (If-Converted Method):\n   - Preferred Dividend added back: `+300,000 USD` (no tax effect on dividends).\n   - Incremental Shares: `50,000 * 4 = 200,000 shares`.\n   - Incremental EPS: `300,000 USD / 200,000 = 1.50 USD`.\n   - Since `1.50 USD < 4.20 USD`, the convertible preferred is dilutive.\n4. Total Diluted EPS Calculation:\n   - Diluted Numerator = `4,200,000 USD + 300,000 USD = 4,500,000 USD`\n   - Diluted Denominator = `1,000,000 + 80,000 + 200,000 = 1,280,000 shares`\n   - `Diluted EPS = 4,500,000 USD / 1,280,000 = 3.5156 USD`", "final_answer": "**3.52 USD per share**.  \n*Exam Trap Warning*: Preferred dividends are NOT tax-deductible; do NOT multiply preferred dividends by `(1 - t)` when adding back to the numerator!"}, {"id": "NUM-3.1.3", "num_code": "3.1.3", "subject": "Financial Statement Analysis", "difficulty": "Difficult / Vignette Multi-Step", "problem": "Vanguard Industrial has Net Income of 8,000,000 USD. Throughout 2025, 2,000,000 common shares were outstanding. The marginal tax rate is 21%. During 2025, the following securities were outstanding:\n- 10,000,000 USD face value of 7% convertible bonds issued at par. Each 1,000 USD bond is convertible into 25 common shares.\n- 100,000 shares of 8% cumulative convertible preferred stock, 100 USD par. Each preferred share converts into 2 common shares.\n- 150,000 executive stock warrants with an exercise price of 40 USD. The average common share price was 60 USD.\nDetermine which securities are dilutive by ranking incremental EPS from most to least dilutive, and calculate the final Diluted EPS reported in SEC Form 10-K.", "methodology": "1. Basic EPS benchmark: `(Net Income - Preferred Div) / WASO`\n2. Individual Incremental EPS ranking:\n   - Warrants: `0 USD / Incremental Shares`\n   - Convertible Bonds: `Interest * (1 - t) / Incremental Shares`\n   - Convertible Preferred: `Preferred Dividend / Incremental Shares`\n3. Sequentially incorporate the most dilutive security into the running EPS until incremental EPS exceeds running EPS.", "steps": "1. Basic EPS:\n   - Preferred Dividend: `100,000 * 100 USD * 0.08 = 800,000 USD`\n   - Net Income to Common: `8,000,000 USD - 800,000 USD = 7,200,000 USD`\n   - `Basic EPS = 7,200,000 USD / 2,000,000 = 3.60 USD`\n2. Incremental EPS for each security:\n   - **Warrants**:\n     - Shares = `150,000 * (1 - (40 / 60)) = 150,000 * (1/3) = 50,000 shares`\n     - Incremental EPS = `0 / 50,000 = 0.00 USD` (Rank 1 - Most dilutive).\n   - **Convertible Bonds**:\n     - After-tax interest saved = `10,000,000 USD * 0.07 * (1 - 0.21) = 700,000 USD * 0.79 = 553,000 USD`\n     - Incremental Shares = `(10,000,000 / 1,000) * 25 = 10,000 * 25 = 250,000 shares`\n     - Incremental EPS = `553,000 USD / 250,000 = 2.212 USD` (Rank 2).\n   - **Convertible Preferred**:\n     - Dividend saved = `800,000 USD`\n     - Incremental Shares = `100,000 * 2 = 200,000 shares`\n     - Incremental EPS = `800,000 USD / 200,000 = 4.00 USD` (Rank 3).\n3. Sequential Dilution Inclusion:\n   - **Step 1 (Include Warrants)**:\n     - Numerator: `7,200,000 USD`\n     - Denominator: `2,000,000 + 50,000 = 2,050,000 shares`\n     - Running EPS: `7,200,000 / 2,050,000 = 3.5122 USD`\n   - **Step 2 (Include Convertible Bonds)**:\n     - Incremental EPS (`2.212 USD`) < Running EPS (`3.5122 USD`) -> Dilutive!\n     - Numerator: `7,200,000 USD + 553,000 USD = 7,753,000 USD`\n     - Denominator: `2,050,000 + 250,000 = 2,300,000 shares`\n     - Running EPS: `7,753,000 / 2,300,000 = 3.3709 USD`\n   - **Step 3 (Test Convertible Preferred)**:\n     - Incremental EPS is `4.00 USD`.\n     - Since `4.00 USD > Running EPS (3.3709 USD)`, including the convertible preferred would **increase** EPS back to `(7,753,000 + 800,000) / (2,300,000 + 200,000) = 8,553,000 / 2,500,000 = 3.4212 USD`.\n     - Therefore, the convertible preferred stock is **ANTIDILUTIVE** and must be excluded from Diluted EPS!", "final_answer": "**Diluted EPS = 3.37 USD per share** (Convertible Preferred excluded as antidilutive)."}, {"id": "NUM-3.2.1", "num_code": "3.2.1", "subject": "Financial Statement Analysis", "difficulty": "Easy / Foundational", "problem": "At the beginning of 2025, Global Logistics had a LIFO reserve of 140,000 USD. At the end of 2025, the LIFO reserve was 210,000 USD. For 2025, the company reported Cost of Goods Sold (COGS) under LIFO of 2,800,000 USD. Calculate COGS under FIFO for 2025.", "methodology": "`LIFO Reserve = Inventory_FIFO - Inventory_LIFO`  \n`Change in LIFO Reserve (Delta LIFO Reserve) = Ending LIFO Reserve - Beginning LIFO Reserve`  \n`COGS_FIFO = COGS_LIFO - Delta LIFO Reserve`", "steps": "1. `Delta LIFO Reserve = 210,000 USD - 140,000 USD = +70,000 USD`\n2. `COGS_FIFO = 2,800,000 USD - 70,000 USD = 2,730,000 USD`", "final_answer": "**2,730,000 USD**.  \n*Exam Takeaway*: When prices are rising, FIFO COGS is lower than LIFO COGS by the exact increase in the LIFO Reserve."}, {"id": "NUM-3.2.2", "num_code": "3.2.2", "subject": "Financial Statement Analysis", "difficulty": "Moderate / Intermediate", "problem": "Pacifica Inc. reports under US GAAP and uses LIFO for inventory valuation. For 2025, Pacifica reported:\n- LIFO Ending Inventory: 850,000 USD\n- Beginning LIFO Reserve: 120,000 USD; Ending LIFO Reserve: 195,000 USD\n- LIFO Net Income: 420,000 USD\n- Effective Tax Rate: 25%\n- Total Debt: 1,500,000 USD; Total Equity: 2,000,000 USD\nConvert Pacifica's financial statements to FIFO and compute the adjusted Debt-to-Equity ratio.", "methodology": "`Inventory_FIFO = Inventory_LIFO + Ending LIFO Reserve`  \n`Retained Earnings_FIFO = Retained Earnings_LIFO + [Ending LIFO Reserve * (1 - t)]`  \n`Cash adjustment (Cumulative taxes paid under FIFO) = -[Ending LIFO Reserve * t]`  \n`Equity_FIFO = Equity_LIFO + [Ending LIFO Reserve * (1 - t)]`  \n`Debt-to-Equity_FIFO = Total Debt / Equity_FIFO`", "steps": "1. Adjust Inventory to FIFO:\n   - `Inventory_FIFO = 850,000 USD + 195,000 USD = 1,045,000 USD`\n2. Adjust Equity to FIFO:\n   - Cumulative after-tax addition to Retained Earnings: `195,000 USD * (1 - 0.25) = 195,000 USD * 0.75 = 146,250 USD`\n   - `Equity_FIFO = 2,000,000 USD + 146,250 USD = 2,146,250 USD`\n3. Debt remains unchanged at `1,500,000 USD`.\n4. Calculate Debt-to-Equity:\n   - Original LIFO D/E: `1,500,000 / 2,000,000 = 0.750`\n   - Adjusted FIFO D/E: `1,500,000 / 2,146,250 = 0.6989` (or `69.89%`).", "final_answer": "**FIFO D/E Ratio = 0.70 (or 69.89%)** (leverage decreases under FIFO during rising prices)."}, {"id": "NUM-3.2.3", "num_code": "3.2.3", "subject": "Financial Statement Analysis", "difficulty": "Difficult / LIFO Liquidation", "problem": "Continental Steel experienced a LIFO liquidation in 2025 due to supply chain disruptions. In 2025, Continental sold 100,000 units of steel at 80 USD per unit. During the year, Continental produced only 70,000 units at an average cost of 55 USD per unit. The remaining 30,000 units were liquidated from beginning LIFO inventory base layers, which had an average historical cost of 25 USD per unit. The corporate tax rate is 30%.\nCalculate:\n1. The reported LIFO COGS and Gross Profit.\n2. The pre-tax and after-tax Gross Profit windfall directly attributable to the LIFO liquidation.\n3. The adjusted Gross Profit if Continental had not experienced a LIFO liquidation (i.e., if all 100,000 units sold had been produced at the current cost of 55 USD).", "methodology": "`LIFO COGS = (Current Units Produced * Current Cost) + (Liquidated Units * Historical Cost)`  \n`LIFO Liquidation Pre-Tax Windfall = Liquidated Units * (Current Replacement Cost - Historical Layer Cost)`  \n`After-Tax Windfall = Pre-Tax Windfall * (1 - t)`  \n`Normal (Sustainable) COGS = Total Units Sold * Current Replacement Cost`", "steps": "1. Reported LIFO COGS & Gross Profit:\n   - Cost from current production: `70,000 units * 55 USD = 3,850,000 USD`\n   - Cost from liquidated inventory layers: `30,000 units * 25 USD = 750,000 USD`\n   - `Total Reported LIFO COGS = 3,850,000 USD + 750,000 USD = 4,600,000 USD`\n   - Revenue: `100,000 units * 80 USD = 8,000,000 USD`\n   - `Reported Gross Profit = 8,000,000 USD - 4,600,000 USD = 3,400,000 USD`\n2. LIFO Liquidation Windfall:\n   - Per unit cost distortion: `55 USD (current) - 25 USD (historical) = 30 USD per unit`\n   - `Pre-Tax Windfall = 30,000 units * 30 USD = 900,000 USD`\n   - `After-Tax Windfall = 900,000 USD * (1 - 0.30) = 630,000 USD`\n3. Normalized (Sustainable) Figures:\n   - `Normalized COGS = 100,000 * 55 USD = 5,500,000 USD`\n   - `Normalized Gross Profit = 8,000,000 USD - 5,500,000 USD = 2,500,000 USD`\n   - Notice: `Reported Gross Profit (3,400,000 USD) - Pre-tax Windfall (900,000 USD) = 2,500,000 USD`.", "final_answer": "**Reported Gross Profit = 3,400,000 USD; Pre-tax Liquidation Windfall = 900,000 USD (After-tax = 630,000 USD); Normalized Gross Profit = 2,500,000 USD**."}, {"id": "NUM-3.3.1", "num_code": "3.3.1", "subject": "Financial Statement Analysis", "difficulty": "Easy / Foundational", "problem": "At the start of 2025, Horizon Corp's Defined Benefit Pension Plan had a Projected Benefit Obligation (PBO) of 12,000,000 USD and Plan Assets of 10,500,000 USD. During 2025:\n- Employer contributions paid to the trust: 800,000 USD\n- Actual return on plan assets: 950,000 USD\n- Benefit payments made to retirees: 600,000 USD\nCalculate the fair value of Plan Assets at the end of 2025.", "methodology": "`Ending Plan Assets = Beginning Plan Assets + Actual Return + Employer Contributions - Benefits Paid`", "steps": "`Ending Plan Assets = 10,500,000 USD + 950,000 USD + 800,000 USD - 600,000 USD = 11,650,000 USD`", "final_answer": "**11,650,000 USD**."}, {"id": "NUM-3.3.2", "num_code": "3.3.2", "subject": "Financial Statement Analysis", "difficulty": "Moderate / Intermediate", "problem": "Omega Energy reports pension accounting under IFRS (IAS 19). At the beginning of 2025:\n- Defined Benefit Obligation (DBO) = 25,000,000 EUR\n- Fair Value of Plan Assets = 22,000,000 EUR\n- Net Pension Liability = 3,000,000 EUR\n- Discount rate = 4.0%\nDuring 2025:\n- Current service cost = 1,400,000 EUR\n- Past service cost (plan amendment) = 300,000 EUR\n- Actual return on plan assets = 1,200,000 EUR\n- Actuarial loss from changes in demographic assumptions = 500,000 EUR\nCalculate:\n1. The Net Interest Expense / Income recognized in Profit & Loss (P&L).\n2. The Total Periodic Pension Cost recognized in P&L under IFRS.\n3. The Remeasurement recognized in Other Comprehensive Income (OCI).", "methodology": "Under IFRS (IAS 19):\n`Net Interest Expense = Net Pension Liability (or Asset) * Discount Rate`  \n`P&L Components = Current Service Cost + Past Service Cost + Net Interest Expense`  \n`OCI Remeasurement = Actuarial Gains/Losses - (Actual Return - Expected Return based on discount rate)`  \nwhere `Expected Return = Plan Assets * Discount Rate`.", "steps": "1. Net Interest Expense:\n   - `Net Pension Liability = 25,000,000 EUR - 22,000,000 EUR = 3,000,000 EUR`\n   - `Net Interest Expense = 3,000,000 EUR * 4.0% = 120,000 EUR`\n2. Total Pension Expense in P&L:\n   - Current Service Cost: `1,400,000 EUR`\n   - Past Service Cost (immediately expensed in P&L under IFRS): `300,000 EUR`\n   - Net Interest Expense: `120,000 EUR`\n   - `Total P&L Pension Cost = 1,400,000 EUR + 300,000 EUR + 120,000 EUR = 1,820,000 EUR`\n3. OCI Remeasurements:\n   - Interest income on assets = `22,000,000 EUR * 4.0% = 880,000 EUR`\n   - Asset return remeasurement = `Actual Return (1,200,000 EUR) - Expected Return (880,000 EUR) = +320,000 EUR (gain)`\n   - Actuarial loss on DBO = `-500,000 EUR (loss)`\n   - `Net OCI Remeasurement = -500,000 EUR + 320,000 EUR = -180,000 EUR (net loss in OCI)`", "final_answer": "**P&L Cost = 1,820,000 EUR; Net OCI Loss = 180,000 EUR** (under IFRS, OCI remeasurements are never recycled to P&L)."}, {"id": "NUM-3.3.3", "num_code": "3.3.3", "subject": "Financial Statement Analysis", "difficulty": "Difficult / US GAAP vs. IFRS Reconciliation", "problem": "Using the exact parameters of Omega Energy above, now assume the company reports under US GAAP (ASC 715) with an Expected Long-Term Rate of Return on Plan Assets (ERR) of 6.5%. Unrecognized prior service costs are amortized over a 10-year expected service life at 30,000 EUR per year. The corridor approach applies for actuarial gains/losses (corridor = 10% of the greater of beginning PBO or Plan Assets).\nCalculate:\n1. The Periodic Pension Cost recognized in the Income Statement under US GAAP.\n2. The exact numerical difference between IFRS P&L pension expense and US GAAP Income Statement pension cost, highlighting why analyst adjustments are necessary.", "methodology": "US GAAP Income Statement Periodic Pension Cost:\n`P&L Cost = Service Cost + Interest Cost on PBO - Expected Return on Plan Assets + Amortization of Prior Service Cost + Amortization of Actuarial Loss (if exceeding corridor)`  \n`Interest Cost on PBO = Beginning PBO * Discount Rate`  \n`Expected Return on Assets = Beginning Plan Assets * ERR`", "steps": "1. US GAAP Pension Expense Components:\n   - Current Service Cost: `1,400,000 EUR`\n   - Interest Cost on PBO: `25,000,000 EUR * 4.0% = 1,000,000 EUR`\n   - Expected Return on Plan Assets: `22,000,000 EUR * 6.5% = -1,430,000 EUR`\n   - Amortization of Prior Service Cost: `+30,000 EUR`\n   - Corridor check: `10% of max(25M, 22M) = 2.5M EUR`. Unamortized net actuarial losses (`500,000 - 320,000 = 180,000 EUR`) are well within the 2,500,000 EUR corridor, so amortization is `0 EUR`.\n   - `Total US GAAP P&L Pension Cost = 1,400,000 + 1,000,000 - 1,430,000 + 30,000 = 1,000,000 EUR`\n2. Comparative Analysis:\n   - IFRS P&L Expense: `1,820,000 EUR`\n   - US GAAP P&L Expense: `1,000,000 EUR`\n   - **Variance**: US GAAP reports **820,000 EUR lower operating expense** (higher operating profit).\n   - Drivers:\n     a) Under US GAAP, the full 300,000 EUR prior service cost was capitalized into OCI and amortized at only 30,000 EUR (270,000 EUR difference).\n     b) Under US GAAP, an aggressive expected return on assets (6.5% vs. 4.0% discount rate) suppressed expense by `22,000,000 * (6.5% - 4.0%) = 550,000 EUR`.\n     c) Total variance: `270,000 EUR + 550,000 EUR = 820,000 EUR`.", "final_answer": "**US GAAP Pension Cost = 1,000,000 EUR (820,000 EUR lower than IFRS)**."}, {"id": "NUM-4.1.1", "num_code": "4.1.1", "subject": "Fixed Income", "difficulty": "Easy / Foundational", "problem": "A 1,000 USD par value, 6.0% annual coupon corporate bond matures exactly 4 years from today. The current market yield-to-maturity (YTM) for comparable risk bonds is 5.2% per annum. Calculate the fair price of the bond.", "methodology": "`PV = sum_{t=1}^N [ Coupon / (1 + YTM)^t ] + [ Par / (1 + YTM)^N ]`  \nUsing financial calculator keystrokes:\n`N = 4`, `I/Y = 5.2`, `PMT = 60`, `FV = 1000` -> Solve for `PV`.", "steps": "1. Annual Coupon = `1,000 USD * 0.06 = 60 USD`.\n2. Present Value of Annuity of Coupons:\n   - Year 1: `60 / (1.052)^1 = 57.034 USD`\n   - Year 2: `60 / (1.052)^2 = 54.215 USD`\n   - Year 3: `60 / (1.052)^3 = 51.535 USD`\n   - Year 4: `60 / (1.052)^4 = 48.988 USD`\n   - Sum of Coupons = `211.772 USD`\n3. Present Value of Principal:\n   - `1,000 / (1.052)^4 = 816.467 USD`\n4. Total Bond Price:\n   - `Price = 211.772 USD + 816.467 USD = 1,028.239 USD`", "final_answer": "**1,028.24 USD** (Trading at a premium because Coupon Rate 6.0% > YTM 5.2%)."}, {"id": "NUM-4.1.2", "num_code": "4.1.2", "subject": "Fixed Income", "difficulty": "Moderate / Full Price vs. Flat Price", "problem": "An 8% semi-annual coupon bond with 1,000 USD par value pays coupons on March 15 and September 15. The bond is settled on June 27, 2025. The stated annual YTM on a semi-annual bond basis is 6.5%. The market convention is 30/360.\nThe number of days from the last coupon (March 15) to settlement (June 27) is 102 days. The total number of days in the coupon period is 180 days.\nThere are 8 full semi-annual periods remaining after September 15, 2025 (i.e., total remaining maturity after next coupon is 4 years).\nCalculate:\n1. The Full (Dirty) Price of the bond per 1,000 USD par.\n2. The Accrued Interest (AI).\n3. The Flat (Clean) Price of the bond quoted on dealer screens.", "methodology": "`Fraction of coupon period elapsed (t / T) = 102 / 180 = 0.56667`  \n`Semi-annual coupon (PMT) = (8% * 1,000) / 2 = 40 USD`  \n`Semi-annual yield (r) = 6.5% / 2 = 3.25% (0.0325)`  \n`PV_0 (Value at March 15) = PV of 9 remaining coupons of 40 USD plus 1,000 USD par at 3.25%`  \n`Full Price = PV_0 * (1 + r)^(t / T)`  \n`Accrued Interest (AI) = PMT * (t / T)`  \n`Flat Price = Full Price - Accrued Interest`", "steps": "1. Calculate `PV_0` on previous coupon date (March 15, 9 periods total):\n   - `PV_0 = 40 * [ (1 - (1 + 0.0325)^(-9)) / 0.0325 ] + 1000 * (1 + 0.0325)^(-9)`\n   - Annuity Factor = `(1 - 0.74955) / 0.0325 = 7.70615`\n   - `PV of Coupons = 40 * 7.70615 = 308.246 USD`\n   - `PV of Par = 1000 * 0.74955 = 749.550 USD`\n   - `PV_0 = 308.246 + 749.550 = 1,057.796 USD`\n2. Full (Dirty) Price on settlement date (June 27):\n   - `Full Price = 1,057.796 USD * (1 + 0.0325)^(102 / 180)`\n   - `(1.0325)^0.56667 = 1.01832`\n   - `Full Price = 1,057.796 * 1.01832 = 1,077.174 USD`\n3. Accrued Interest:\n   - `AI = 40 USD * (102 / 180) = 22.667 USD`\n4. Flat (Clean) Price:\n   - `Flat Price = 1,077.174 USD - 22.667 USD = 1,054.507 USD`", "final_answer": "**Full Price = 1,077.17 USD; Accrued Interest = 22.67 USD; Flat Price = 1,054.51 USD**."}, {"id": "NUM-4.1.3", "num_code": "4.1.3", "subject": "Fixed Income", "difficulty": "Difficult / Matrix Pricing Interpolation", "problem": "An illiquid, newly issued 7-year, 5.0% annual coupon corporate bond (Bond X) needs to be priced via matrix pricing. The following liquid benchmark corporate bonds with similar credit ratings are trading in the secondary market:\n- Bond A: 5-year maturity, 4.5% coupon, priced at 101.50 (YTM = 4.161%).\n- Bond B: 5-year maturity, 6.0% coupon, priced at 107.80 (YTM = 4.238%).\n- Bond C: 9-year maturity, 5.2% coupon, priced at 98.20 (YTM = 5.460%).\n- Bond D: 9-year maturity, 4.0% coupon, priced at 89.60 (YTM = 5.520%).\nCalculate:\n1. The estimated 5-year and 9-year benchmark required yields.\n2. The interpolated 7-year required yield for Bond X using linear interpolation.\n3. The estimated matrix price per 100 par for Bond X.", "methodology": "`Benchmark YTM_5 = (YTM_A + YTM_B) / 2`  \n`Benchmark YTM_9 = (YTM_C + YTM_D) / 2`  \n`Linear Interpolation: YTM_7 = YTM_5 + [ (7 - 5) / (9 - 5) ] * (YTM_9 - YTM_5)`  \n`Price = sum_{t=1}^7 [ 5 / (1 + YTM_7)^t ] + [ 100 / (1 + YTM_7)^7 ]`", "steps": "1. Benchmark Average Yields:\n   - `5-Year Average YTM = (4.161% + 4.238%) / 2 = 4.1995%`\n   - `9-Year Average YTM = (5.460% + 5.520%) / 2 = 5.4900%`\n2. Linear Interpolation for 7-Year Maturity:\n   - `Spread = 5.4900% - 4.1995% = 1.2905%`\n   - `Maturity Fraction = (7 - 5) / (9 - 5) = 2 / 4 = 0.50`\n   - `YTM_7 = 4.1995% + (0.50 * 1.2905%) = 4.1995% + 0.64525% = 4.84475% (4.845%)`\n3. Price of Bond X (N = 7, PMT = 5, FV = 100, YTM = 4.84475%):\n   - Annuity factor for 7 years at 4.84475%:\n     `AF = [ 1 - (1.0484475)^(-7) ] / 0.0484475 = (1 - 0.71872) / 0.0484475 = 5.8058`\n   - `PV of Coupons = 5 * 5.8058 = 29.029`\n   - `PV of Par = 100 * 0.71872 = 71.872`\n   - `Price = 29.029 + 71.872 = 100.901`", "final_answer": "**Interpolated YTM = 4.845%; Estimated Matrix Price = 100.90 per 100 par**."}, {"id": "NUM-4.2.1", "num_code": "4.2.1", "subject": "Fixed Income", "difficulty": "Easy / Foundational", "problem": "A portfolio manager holds a 10,000,000 USD par position in a bond trading at 98.50 per 100 par. The bond has a Modified Duration of 6.40 years and an Annualized Convexity of 55.2. Market yields suddenly increase by 75 basis points (0.75%).\nEstimate the percentage and dollar price change of the bond using both duration and convexity.", "methodology": "`Percentage Price Change (% Delta P) = [ -ModDur * Delta Y ] + [ 0.5 * Convexity * (Delta Y)^2 ]`  \n`Dollar Price Change (Delta P_dollar) = % Delta P * Current Portfolio Market Value`", "steps": "1. Duration Effect:\n   - `-ModDur * Delta Y = -6.40 * (+0.0075) = -0.0480 (or -4.80%)`\n2. Convexity Adjustment:\n   - `+0.5 * Convexity * (Delta Y)^2 = 0.5 * 55.2 * (0.0075)^2`\n   - `(0.0075)^2 = 0.00005625`\n   - `0.5 * 55.2 * 0.00005625 = 27.6 * 0.00005625 = +0.0015525 (or +0.15525%)`\n3. Net Percentage Price Change:\n   - `% Delta P = -4.80% + 0.15525% = -4.64475%`\n4. Dollar Price Change:\n   - Current Market Value = `10,000,000 USD * (98.50 / 100) = 9,850,000 USD`\n   - `Dollar Loss = 9,850,000 USD * (-0.0464475) = -457,508 USD`", "final_answer": "**Percentage Price Change = -4.64%; Dollar Value Loss = -457,508 USD**."}, {"id": "NUM-4.2.2", "num_code": "4.2.2", "subject": "Fixed Income", "difficulty": "Moderate / Key Rate Duration & Yield Curve Twists", "problem": "An institutional fixed-income portfolio has a market value of 50,000,000 USD with Key Rate Durations (KRD) distributed across four benchmark maturities:\n- 2-year KRD = 0.85\n- 5-year KRD = 2.10\n- 10-year KRD = 4.25\n- 30-year KRD = 1.60\nTotal Effective Duration = `0.85 + 2.10 + 4.25 + 1.60 = 8.80 years`.\nThe yield curve experiences an asymmetrical steepening twist:\n- 2-year yield decreases by 40 bps (-0.40%)\n- 5-year yield decreases by 10 bps (-0.10%)\n- 10-year yield increases by 25 bps (+0.25%)\n- 30-year yield increases by 60 bps (+0.60%)\nCalculate:\n1. The contribution of each key rate bucket to portfolio return.\n2. The total expected percentage change in portfolio market value.\n3. The difference between the actual KRD-based return and the naive return obtained using single effective duration with the average curve shift (+8.75 bps).", "methodology": "`Portfolio % Delta P = -sum(KRD_k * Delta Y_k)`", "steps": "1. Individual Bucket Contributions:\n   - 2-Year Bucket: `-0.85 * (-0.0040) = +0.00340 (or +0.340%)`\n   - 5-Year Bucket: `-2.10 * (-0.0010) = +0.00210 (or +0.210%)`\n   - 10-Year Bucket: `-4.25 * (+0.0025) = -0.010625 (or -1.0625%)`\n   - 30-Year Bucket: `-1.60 * (+0.0060) = -0.00960 (or -0.960%)`\n2. Total Portfolio % Change:\n   - `% Delta P = +0.340% + 0.210% - 1.0625% - 0.960% = -1.4725%`\n   - Total Dollar Impact = `50,000,000 USD * (-0.014725) = -736,250 USD`.\n3. Naive Effective Duration Benchmark:\n   - Average yield change: `(-40 - 10 + 25 + 60) / 4 = +35 / 4 = +8.75 bps (+0.000875)`\n   - Naive estimate: `-8.80 * (+0.000875) = -0.00770 (or -0.770%)`\n   - **Variance**: The naive model underestimates the loss by `0.7025%` (a 351,250 USD forecasting error) because the heaviest portfolio exposure (10-year KRD = 4.25) coincided with substantial yield increases.", "final_answer": "**KRD Portfolio Return = -1.47% (Dollar loss = -736,250 USD); Naive Duration Error = 0.70% (351,250 USD)**."}, {"id": "NUM-4.3.1", "num_code": "4.3.1", "subject": "Fixed Income", "difficulty": "Difficult / Backward Induction for Callable Bond", "problem": "A 2-year, 5.0% annual coupon corporate bond with 100 par value is callable at par (100) at the end of Year 1 (immediately after the Year 1 coupon is paid).\nThe 1-year spot rate today is `r_0 = 3.5%`.\nThe calibrated 1-year forward rates on the binomial tree at Year 1 are:\n- Upper state (higher interest rate): `r_{1,U} = 5.80%`\n- Lower state (lower interest rate): `r_{1,D} = 3.90%`\nThe probability of each state is 0.50.\nCalculate:\n1. The value of an option-free (straight) bond.\n2. The value of the callable bond using backward induction.\n3. The embedded call option value held by the issuer.", "methodology": "`Value at Year 2 = Par + Coupon = 100 + 5 = 105`  \n`Straight Value at Year 1 node = (Par + Coupon) / (1 + r_1)`  \n`Callable Bond Value at Year 1 node = min(Call Price, (Par + Coupon) / (1 + r_1))`  \n`Value at Node 0 = [ 0.5 * (Value_{1,U} + Coupon) + 0.5 * (Value_{1,D} + Coupon) ] / (1 + r_0)`  \n`Call Option Value = Value_{straight} - Value_{callable}`", "steps": "1. Option-Free (Straight) Bond Value:\n   - At Node `1,U`: `V_{1,U} = 105 / (1 + 0.0580) = 99.2439`\n   - At Node `1,D`: `V_{1,D} = 105 / (1 + 0.0390) = 101.0587`\n   - At Node 0:\n     `V_0 = [ 0.5 * (99.2439 + 5) + 0.5 * (101.0587 + 5) ] / (1 + 0.035)`\n     `V_0 = [ 0.5 * 104.2439 + 0.5 * 106.0587 ] / 1.035 = 105.1513 / 1.035 = 101.5955`\n   - `Straight Bond Value = 101.60 per 100 par`.\n2. Callable Bond Value (Call Price = 100):\n   - At Node `1,U`: Unconstrained value is `99.2439`. Since `99.2439 <= 100`, the issuer will **not call**. Node value = `99.2439`.\n   - At Node `1,D`: Unconstrained value is `101.0587`. Since `101.0587 > 100`, the issuer **will exercise the call** at 100! Node value = `100.0000`.\n   - At Node 0:\n     `V_{callable,0} = [ 0.5 * (99.2439 + 5) + 0.5 * (100.0000 + 5) ] / (1 + 0.035)`\n     `V_{callable,0} = [ 0.5 * 104.2439 + 0.5 * 105.0000 ] / 1.035 = 104.62195 / 1.035 = 101.0840`\n   - `Callable Bond Value = 101.08 per 100 par`.\n3. Embedded Option Value:\n   - `Option Value = Value_{straight} - Value_{callable} = 101.5955 - 101.0840 = 0.5115 per 100 par`.", "final_answer": "**Straight Bond Value = 101.60; Callable Bond Value = 101.08; Embedded Call Option = 0.51 per 100 par**."}, {"id": "NUM-5.1.1", "num_code": "5.1.1", "subject": "Equity Investments", "difficulty": "Easy / Foundational", "problem": "An investor buys 1,000 shares of TechCorp on margin at 50 USD per share. The initial margin requirement is 40%, and the maintenance margin requirement is 25%.\nCalculate:\n1. The initial equity contributed by the investor and the borrowed margin loan.\n2. The price at which the investor will receive a margin call.", "methodology": "`Total Investment = Shares * Initial Price`  \n`Initial Equity = Total Investment * Initial Margin %`  \n`Margin Loan = Total Investment - Initial Equity`  \n`Margin Call Trigger Price (P_call) = P_0 * [ (1 - Initial Margin %) / (1 - Maintenance Margin %) ]`", "steps": "1. Initial Position:\n   - `Total Investment = 1,000 * 50 USD = 50,000 USD`\n   - `Initial Equity = 50,000 USD * 0.40 = 20,000 USD`\n   - `Margin Loan = 50,000 USD - 20,000 USD = 30,000 USD`\n2. Margin Call Trigger Price:\n   - `P_call = 50 USD * [ (1 - 0.40) / (1 - 0.25) ]`\n   - `P_call = 50 USD * (0.60 / 0.75) = 50 USD * 0.80 = 40.00 USD`\n3. Verification:\n   - At 40 USD, Total Value = `1,000 * 40 USD = 40,000 USD`.\n   - Equity = `40,000 USD - 30,000 USD loan = 10,000 USD`.\n   - Equity % = `10,000 USD / 40,000 USD = 25.0%` (exact maintenance threshold).", "final_answer": "**Initial Equity = 20,000 USD; Margin Call Price = 40.00 USD per share**."}, {"id": "NUM-5.1.2", "num_code": "5.1.2", "subject": "Equity Investments", "difficulty": "Moderate / Return on Leveraged Margin Long", "problem": "An investor purchases 500 shares of BioPharm at 80 USD per share using 50% initial margin. The broker charges a call money interest rate of 6.0% per annum on the margin loan. During the 1-year holding period, BioPharm pays a dividend of 2.00 USD per share. At the end of the year, the investor sells the shares at 96 USD per share. The commission paid on purchase is 0.20 USD per share and on sale is 0.20 USD per share.\nCalculate the investor's leveraged return on equity investment.", "methodology": "`Initial Equity = (500 * 80 * 0.50) + (500 * 0.20 commission)`  \n`Margin Loan = 500 * 80 * 0.50`  \n`Interest Paid = Margin Loan * 6.0%`  \n`Total Dividends Received = 500 * 2.00`  \n`Net Sales Proceeds = (500 * 96) - (500 * 0.20 commission) - Margin Loan - Interest Paid`  \n`Leveraged Return = (Net Sales Proceeds + Dividends - Initial Equity) / Initial Equity`", "steps": "1. Initial Outflow:\n   - Share purchase: `500 * 80 USD = 40,000 USD`\n   - Margin Loan: `40,000 USD * 0.50 = 20,000 USD`\n   - Initial Equity invested: `20,000 USD + (500 * 0.20 USD) = 20,100 USD`\n2. Carrying Costs & Dividends:\n   - Margin loan interest: `20,000 USD * 0.06 = 1,200 USD`\n   - Dividends received: `500 * 2.00 USD = +1,000 USD`\n3. Terminal Liquidation Outflow:\n   - Gross sale value: `500 * 96 USD = 48,000 USD`\n   - Selling commission: `500 * 0.20 USD = -100 USD`\n   - Repay margin loan principal: `-20,000 USD`\n   - Repay margin interest: `-1,200 USD`\n   - Cash received at sale: `48,000 - 100 - 20,000 - 1,200 = 26,700 USD`\n4. Net Total Return:\n   - Total Cash Inflow = `26,700 USD + 1,000 USD dividends = 27,700 USD`\n   - Profit = `27,700 USD - 20,100 USD initial equity = 7,600 USD`\n   - `Return on Equity = 7,600 USD / 20,100 USD = 0.3781 (or 37.81%)`\n   - Compare with unleveraged return: `(96 - 80 + 2 - 0.40) / 80.20 = 17.60 / 80.20 = 21.94%`. Leverage increased return by 15.87%!", "final_answer": "**Leveraged Return on Equity = 37.81%**."}, {"id": "NUM-5.2.1", "num_code": "5.2.1", "subject": "Equity Investments", "difficulty": "Easy / Gordon Growth & PVGO", "problem": "Crestline Energy currently earns 6.00 USD per share (EPS_1) and pays out 40% of its earnings as dividends. The required rate of return on equity is 10.0%.\n1. If the sustainable return on equity (ROE) is 15.0%, calculate the intrinsic value per share using the Gordon Growth Model.\n2. Decompose the intrinsic value into the value of assets in place (no-growth value) and the Present Value of Growth Opportunities (PVGO).", "methodology": "`Retention rate (b) = 1 - Dividend Payout Ratio`  \n`Sustainable growth rate (g) = b * ROE`  \n`Expected Dividend (D_1) = EPS_1 * Payout Ratio`  \n`Intrinsic Value (P_0) = D_1 / (r - g)`  \n`No-Growth Value per share = EPS_1 / r`  \n`PVGO = P_0 - (EPS_1 / r)`", "steps": "1. Growth & Dividend:\n   - `Retention rate b = 1 - 0.40 = 0.60`\n   - `g = 0.60 * 15.0% = 9.0% (0.09)`\n   - `D_1 = 6.00 USD * 0.40 = 2.40 USD`\n2. Gordon Growth Model Value:\n   - `P_0 = 2.40 USD / (0.10 - 0.09) = 2.40 USD / 0.01 = 240.00 USD`\n3. PVGO Decomposition:\n   - `No-Growth Value = 6.00 USD / 0.10 = 60.00 USD`\n   - `PVGO = 240.00 USD - 60.00 USD = 180.00 USD`\n   - `PVGO % of Stock Price = 180.00 USD / 240.00 USD = 75.0%`.", "final_answer": "**Intrinsic Value = 240.00 USD; No-Growth Value = 60.00 USD; PVGO = 180.00 USD (75% of firm value)**."}, {"id": "NUM-5.2.2", "num_code": "5.2.2", "subject": "Equity Investments", "difficulty": "Moderate / The H-Model Valuation", "problem": "Apex Semiconductor just paid an annual dividend of `D_0 = 2.50 USD` per share. Due to competitive patent expiration, the current high growth rate of 18.0% (`g_S`) is projected to decline linearly over a transition period of 8 years to a long-term mature sustainable growth rate of 4.0% (`g_L`). The required rate of return for Apex is 9.0%.\nCalculate the intrinsic value per share using the Fuller-Hsia H-Model.", "methodology": "`H = Transition Period (years) / 2`  \n`P_0 = [ D_0 * (1 + g_L) / (r - g_L) ] + [ D_0 * H * (g_S - g_L) / (r - g_L) ]`  \nor equivalently:  \n`P_0 = [ D_0 / (r - g_L) ] * [ (1 + g_L) + H * (g_S - g_L) ]`", "steps": "1. Parameters:\n   - `D_0 = 2.50 USD`\n   - `r = 0.09`\n   - `g_S = 0.18`\n   - `g_L = 0.04`\n   - `Transition period = 8 years -> Half-life H = 8 / 2 = 4 years`\n   - `Denominator = r - g_L = 0.09 - 0.04 = 0.05`\n2. Base Terminal Value Component:\n   - `Base Value = [ 2.50 USD * (1 + 0.04) ] / 0.05 = [ 2.50 * 1.04 ] / 0.05 = 2.60 / 0.05 = 52.00 USD`\n3. High-Growth Linear Transition Premium Component:\n   - `Growth Premium = [ 2.50 USD * 4 * (0.18 - 0.04) ] / 0.05`\n   - `2.50 * 4 = 10.00`\n   - `10.00 * 0.14 = 1.40 USD`\n   - `Growth Premium = 1.40 USD / 0.05 = 28.00 USD`\n4. Total H-Model Value:\n   - `P_0 = 52.00 USD + 28.00 USD = 80.00 USD per share`.", "final_answer": "**Intrinsic Value = 80.00 USD per share** (Base value = 52.00 USD, Linear transition excess value = 28.00 USD)."}, {"id": "NUM-5.2.3", "num_code": "5.2.3", "subject": "Equity Investments", "difficulty": "Difficult / Reverse-Solving H-Model for Implied Return", "problem": "NovaTech stock currently trades in the market at `P_0 = 65.00 USD`. The company just paid a dividend of `D_0 = 1.80 USD`. Equity research consensus projects an initial extraordinary growth rate of `g_S = 16.0%`, declining linearly over a 6-year transition period to a perpetual growth rate of `g_L = 4.5%`.\nAn analyst wants to determine the market-implied required rate of return (`r`) embedded in NovaTech's current market price. Calculate `r`.", "methodology": "Rearranging the H-Model equation for `r`:\n`P_0 * (r - g_L) = D_0 * [ (1 + g_L) + H * (g_S - g_L) ]`  \n`r = g_L + [ (D_0 / P_0) * [ (1 + g_L) + H * (g_S - g_L) ] ]`", "steps": "1. Parameters:\n   - `P_0 = 65.00 USD`\n   - `D_0 = 1.80 USD`\n   - `g_S = 0.16`\n   - `g_L = 0.045`\n   - `Transition period = 6 years -> H = 6 / 2 = 3`\n2. Calculate the dividend adjustment factor:\n   - `Base factor = 1 + g_L = 1 + 0.045 = 1.045`\n   - `Excess growth factor = H * (g_S - g_L) = 3 * (0.16 - 0.045) = 3 * 0.115 = 0.345`\n   - `Total multiplier = 1.045 + 0.345 = 1.390`\n3. Solve for `r`:\n   - `Effective Adjusted Dividend = 1.80 USD * 1.390 = 2.502 USD`\n   - `Spread over g_L = 2.502 USD / 65.00 USD = 0.038492 (or 3.849%)`\n   - `r = g_L + 3.849% = 4.50% + 3.849% = 8.349% (8.35%)`", "final_answer": "**Market-Implied Required Rate of Return r = 8.35%**."}, {"id": "NUM-5.3.1", "num_code": "5.3.1", "subject": "Equity Investments", "difficulty": "Difficult / Comprehensive FCFF to FCFE Reconciliation", "problem": "Zeta Corp reported the following financial statement figures for fiscal year 2025:\n- Net Income = 450,000 USD\n- Non-Cash Charges (Depreciation & Amortization) = 180,000 USD\n- Capital Expenditures (FCInv) = 220,000 USD\n- Increase in Working Capital (WCInv) = 45,000 USD\n- Interest Expense = 80,000 USD\n- Corporate Tax Rate = 25%\n- Long-term debt issued during year = 120,000 USD\n- Long-term debt retired during year = 50,000 USD\n- Target Debt-to-Capital Ratio = 35%\nCalculate:\n1. Free Cash Flow to the Firm (FCFF) starting from Net Income.\n2. Free Cash Flow to Equity (FCFE) starting from FCFF.\n3. Verify FCFE starting directly from Net Income.", "methodology": "`FCFF = Net Income + Non-Cash Charges + [ Interest * (1 - t) ] - FCInv - WCInv`  \n`Net Borrowing = Debt Issued - Debt Repaid`  \n`FCFE = FCFF - [ Interest * (1 - t) ] + Net Borrowing`  \n`Direct FCFE = Net Income + Non-Cash Charges - FCInv - WCInv + Net Borrowing`", "steps": "1. Calculate FCFF:\n   - `Net Income = 450,000 USD`\n   - `+ Non-Cash Charges = +180,000 USD`\n   - `+ After-tax Interest = 80,000 USD * (1 - 0.25) = +60,000 USD`\n   - `- Fixed Capital Investment (FCInv) = -220,000 USD`\n   - `- Working Capital Investment (WCInv) = -45,000 USD`\n   - `FCFF = 450,000 + 180,000 + 60,000 - 220,000 - 45,000 = 425,000 USD`\n2. Calculate FCFE from FCFF:\n   - `Net Borrowing = 120,000 USD (issued) - 50,000 USD (retired) = +70,000 USD`\n   - `FCFE = 425,000 USD - 60,000 USD (after-tax interest) + 70,000 USD (net borrowing)`\n   - `FCFE = 435,000 USD`\n3. Direct Verification:\n   - `Direct FCFE = 450,000 (NI) + 180,000 (NCC) - 220,000 (FCInv) - 45,000 (WCInv) + 70,000 (Net Borrowing)`\n   - `Direct FCFE = 630,000 - 265,000 + 70,000 = 435,000 USD` (Exact reconciliation verified).", "final_answer": "**FCFF = 425,000 USD; FCFE = 435,000 USD**."}, {"id": "NUM-6.1.1", "num_code": "6.1.1", "subject": "Portfolio Management", "difficulty": "Easy / MWR vs. TWR", "problem": "An investor opens a brokerage account on January 1, 2025:\n- Jan 1, 2025: Deposits 100,000 USD and purchases shares.\n- June 30, 2025: Portfolio value is 120,000 USD (prior to deposit). Investor deposits an additional 50,000 USD cash (new total value = 170,000 USD).\n- Dec 31, 2025: Portfolio value is 153,000 USD.\nCalculate:\n1. The Time-Weighted Return (TWR) for 2025.\n2. The Money-Weighted Return (MWR / IRR) for 2025.\n3. Explain which metric accurately evaluates the manager's investment performance.", "methodology": "`HPR_1 = (End Value_1 - Beginning Value_1) / Beginning Value_1`  \n`HPR_2 = (End Value_2 - (Beginning Value_2 + Deposit)) / (Beginning Value_2 + Deposit)`  \n`1 + TWR = (1 + HPR_1) * (1 + HPR_2)`  \n`MWR (IRR): PV(Outflows) = PV(Inflows)`  \n`100,000 USD + [ 50,000 USD / (1 + r)^0.5 ] = 153,000 USD / (1 + r)`", "steps": "1. Time-Weighted Return (TWR):\n   - Period 1 (Jan 1 to June 30):\n     `HPR_1 = (120,000 - 100,000) / 100,000 = +20.0% (+0.20)`\n   - Period 2 (June 30 to Dec 31):\n     Portfolio starting base = `120,000 + 50,000 = 170,000 USD`\n     `HPR_2 = (153,000 - 170,000) / 170,000 = -17,000 / 170,000 = -10.0% (-0.10)`\n   - Full Year TWR:\n     `1 + TWR = (1 + 0.20) * (1 - 0.10) = 1.20 * 0.90 = 1.080`\n     `TWR = +8.0% (0.08)`\n2. Money-Weighted Return (MWR / IRR):\n   - Cash Flow 0 (Jan 1): `-100,000 USD`\n   - Cash Flow 0.5 (June 30): `-50,000 USD`\n   - Cash Flow 1.0 (Dec 31): `+153,000 USD`\n   - Set up semi-annual discount equation:\n     `100,000 + [ 50,000 / (1 + r_{semi}) ] = 153,000 / (1 + r_{semi})^2`\n     Let `x = 1 / (1 + r_{semi})`:\n     `153,000 * x^2 - 50,000 * x - 100,000 = 0`\n     Divide by 1,000: `153 * x^2 - 50 * x - 100 = 0`\n     Using quadratic formula:\n     `x = [ 50 + sqrt((-50)^2 - 4 * 153 * (-100)) ] / (2 * 153)`\n     `sqrt(2500 + 61,200) = sqrt(63,700) = 252.388`\n     `x = (50 + 252.388) / 306 = 302.388 / 306 = 0.98820`\n     `1 + r_{semi} = 1 / 0.98820 = 1.01194 -> r_{semi} = 1.194%`\n     Annualized compounded MWR = `(1 + 0.01194)^2 - 1 = 1.0240 - 1 = +2.40%`\n3. Performance Evaluation Context:\n   - `TWR = +8.0%` vs. `MWR = +2.40%`.\n   - The manager generated an 8.0% return on invested assets. The MWR is drastically lower (+2.40%) solely because the **client deposited 50,000 USD right before the market declined 10%**.\n   - Because investment managers typically do not control client cash deposit/withdrawal timing, GIPS mandates **TWR** for evaluating portfolio manager skill!", "final_answer": "**Time-Weighted Return (TWR) = +8.0%; Money-Weighted Return (MWR) = +2.40%**."}, {"id": "NUM-6.1.2", "num_code": "6.1.2", "subject": "Portfolio Management", "difficulty": "Moderate / Three-Asset Portfolio Variance Expansion", "problem": "An institutional endowment allocates its fund across three asset classes:\n- US Large-Cap Equities (Asset 1): Weight `w_1 = 0.50`, Standard Deviation `sigma_1 = 18.0%`\n- Global Developed Bonds (Asset 2): Weight `w_2 = 0.35`, Standard Deviation `sigma_2 = 7.0%`\n- Private Real Estate (Asset 3): Weight `w_3 = 0.15`, Standard Deviation `sigma_3 = 12.0%`\nThe correlation matrix `rho_{i,j}` between the asset classes is:\n- `rho_{1,2} = -0.15` (Equities vs. Bonds)\n- `rho_{1,3} = +0.45` (Equities vs. Real Estate)\n- `rho_{2,3} = +0.05` (Bonds vs. Real Estate)\nCalculate:\n1. The Covariance between each pair of asset classes.\n2. The total Portfolio Variance (`sigma_p^2`) and Portfolio Standard Deviation (`sigma_p`).", "methodology": "`Cov(i, j) = rho_{i, j} * sigma_i * sigma_j`  \n`Portfolio Variance (sigma_p^2) = sum_{i=1}^3 (w_i^2 * sigma_i^2) + 2 * sum_{i < j} (w_i * w_j * Cov(i, j))`", "steps": "1. Pairwise Covariances:\n   - `Cov(1, 2) = -0.15 * 0.18 * 0.07 = -0.001890`\n   - `Cov(1, 3) = +0.45 * 0.18 * 0.12 = +0.009720`\n   - `Cov(2, 3) = +0.05 * 0.07 * 0.12 = +0.000420`\n2. Weighted Individual Variances:\n   - Asset 1: `(0.50)^2 * (0.18)^2 = 0.25 * 0.0324 = 0.008100`\n   - Asset 2: `(0.35)^2 * (0.07)^2 = 0.1225 * 0.0049 = 0.000600`\n   - Asset 3: `(0.15)^2 * (0.12)^2 = 0.0225 * 0.0144 = 0.000324`\n   - `Sum of individual terms = 0.008100 + 0.000600 + 0.000324 = 0.009024`\n3. Weighted Cross-Product Covariances (multiplied by 2):\n   - Term 1,2: `2 * 0.50 * 0.35 * (-0.001890) = 0.35 * (-0.001890) = -0.0006615`\n   - Term 1,3: `2 * 0.50 * 0.15 * (+0.009720) = 0.15 * (+0.009720) = +0.0014580`\n   - Term 2,3: `2 * 0.35 * 0.15 * (+0.000420) = 0.105 * (+0.000420) = +0.0000441`\n   - `Sum of covariance terms = -0.0006615 + 0.0014580 + 0.0000441 = +0.0008406`\n4. Total Portfolio Variance & Volatility:\n   - `sigma_p^2 = 0.009024 + 0.0008406 = 0.0098646`\n   - `sigma_p = sqrt(0.0098646) = 0.09932 (or 9.93%)`\n   - Notice: Weighted average standard deviation = `0.50 * 18% + 0.35 * 7% + 0.15 * 12% = 9.0% + 2.45% + 1.8% = 13.25%`. Diversification reduced portfolio risk from 13.25% to 9.93%!", "final_answer": "**Portfolio Variance = 0.009865; Portfolio Standard Deviation = 9.93%**."}, {"id": "NUM-6.2.1", "num_code": "6.2.1", "subject": "Portfolio Management", "difficulty": "Moderate / Unconstrained Fundamental Law", "problem": "An equity long-only quantitative manager follows an unconstrained stock selection strategy (`Transfer Coefficient TC = 1.0`):\n- Number of independent stock return forecasts per year (`Breadth BR`) = 400 stocks\n- Information Coefficient per stock forecast (`IC`) = 0.06\n- Benchmark Sharpe Ratio (`SR_B`) = 0.40\n- Benchmark Standard Deviation (`sigma_B`) = 15.0%\nCalculate:\n1. The Information Ratio (IR) of the active manager.\n2. The expected maximum active return (`E(R_A)`) if active risk (`sigma_A`) is budgeted at 4.0%.\n3. The Sharpe Ratio of the actively managed portfolio (`SR_P`).", "methodology": "Grinold's Fundamental Law of Active Management:\n`IR = TC * IC * sqrt(BR)` (where `TC = 1.0` for unconstrained portfolios)  \n`Expected Active Return E(R_A) = IR * sigma_A`  \n`Sharpe Ratio Expansion: SR_P = sqrt(SR_B^2 + IR^2)`", "steps": "1. Information Ratio (IR):\n   - `sqrt(BR) = sqrt(400) = 20`\n   - `IR = 1.0 * 0.06 * 20 = 1.20`\n2. Expected Active Return:\n   - For `sigma_A = 4.0%`:\n   - `E(R_A) = 1.20 * 4.0% = 4.80% (0.048)`\n3. Portfolio Total Sharpe Ratio:\n   - `SR_B^2 = (0.40)^2 = 0.16`\n   - `IR^2 = (1.20)^2 = 1.44`\n   - `SR_P^2 = 0.16 + 1.44 = 1.60`\n   - `SR_P = sqrt(1.60) = 1.2649 (1.26)`", "final_answer": "**Information Ratio IR = 1.20; Expected Active Return = 4.80%; Portfolio Sharpe Ratio = 1.26**."}, {"id": "NUM-6.2.2", "num_code": "6.2.2", "subject": "Portfolio Management", "difficulty": "Difficult / Constrained Fundamental Law & Optimal Active Risk", "problem": "A real-world portfolio manager is subject to long-only constraints, sector neutrality caps, and turnover limits, resulting in a Transfer Coefficient `TC = 0.65`.\nThe manager covers an investment universe of `BR = 196` independent decisions per year with skill `IC = 0.08`.\nThe benchmark Sharpe Ratio is `SR_B = 0.45`.\nCalculate:\n1. The constrained Information Ratio (`IR_constrained`).\n2. The optimal active risk (`sigma_A^*`) the manager should target if the benchmark volatility `sigma_B = 16.0%`.\n3. The resulting total portfolio Sharpe Ratio (`SR_P`).", "methodology": "`IR_constrained = TC * IC * sqrt(BR)`  \n`Optimal Active Risk sigma_A^* = (IR / SR_B) * sigma_B * TC` (or `sigma_A^* = (IR_constrained / SR_B) * sigma_B`)  \n`SR_P = sqrt(SR_B^2 + IR_constrained^2)`", "steps": "1. Constrained Information Ratio:\n   - `sqrt(BR) = sqrt(196) = 14`\n   - Unconstrained IR = `0.08 * 14 = 1.12`\n   - `IR_constrained = 0.65 * 1.12 = 0.728`\n2. Optimal Active Risk:\n   - `sigma_A^* = (IR_constrained / SR_B) * sigma_B`\n   - `sigma_A^* = (0.728 / 0.45) * 16.0% = 1.6178 * 16.0% = 25.88%`\n   - Note: If constrained active risk is capped by the investment mandate (e.g., at `sigma_A = 5.0%`), expected active return would be:\n     `E(R_A) = IR_constrained * sigma_A = 0.728 * 5.0% = 3.64%`.\n3. Constrained Sharpe Ratio Expansion:\n   - `SR_P = sqrt((0.45)^2 + (0.728)^2) = sqrt(0.2025 + 0.52998) = sqrt(0.73248) = 0.8558 (0.86)`", "final_answer": "**Constrained IR = 0.73; Optimal Active Risk = 25.88%; Portfolio Sharpe Ratio = 0.86**."}, {"id": "NUM-6.3.1", "num_code": "6.3.1", "subject": "Portfolio Management", "difficulty": "Difficult / Perold 4-Component Implementation Shortfall", "problem": "A portfolio manager decides to buy 50,000 shares of Meridian Tech.\n- **Decision Date (Monday 9:30 AM)**: Benchmark Decision Price = `50.00 USD`.\n- Order is released to the trading desk at 11:00 AM when the market price is `50.60 USD` (Arrival Price).\n- **Execution Day 1 (Monday)**: Desk buys 30,000 shares at an average execution price of `51.20 USD`. Explicit commission is `0.05 USD` per share.\n- Monday closing price is `51.50 USD`.\n- **Execution Day 2 (Tuesday)**: Desk buys 12,000 shares at an average execution price of `52.10 USD`. Explicit commission is `0.05 USD` per share.\n- Tuesday closing price is `52.80 USD`.\n- **Cancellation**: The manager cancels the remaining 8,000 shares on Tuesday afternoon as the price has run away.\nCalculate the total Implementation Shortfall in dollars and basis points, and decompose it into its 4 distinct components:\n1. Explicit Fees (Commissions)\n2. Execution Cost (Delay / Market Impact on filled shares relative to Arrival Price)\n3. Delay Cost (Slippage from decision time to order release time)\n4. Opportunity Cost (Cost of unfilled / cancelled shares)", "methodology": "`Paper Portfolio Return = Total Target Shares * (Closing Price - Decision Price)`  \n`Actual Portfolio Return = sum(Executed Shares_d * Closing Price) - sum(Executed Shares_d * Execution Price_d) - Total Commissions`  \n`Total Implementation Shortfall (IS) = Paper Return - Actual Return`  \nComponent Breakdown:\n1. `Explicit Costs = sum(Executed Shares_d * Commission_per_share)`\n2. `Delay Cost = Total Executed Shares * (Arrival Price - Decision Price)`\n3. `Realized Execution Cost = sum(Executed Shares_d * (Execution Price_d - Arrival Price))`\n4. `Opportunity Cost (Unfilled) = Unfilled Shares * (Final Cancellation Price - Decision Price)`", "steps": "1. Total Target Shares = `50,000`; Decision Price = `50.00 USD`.\n   - Total base capital = `50,000 * 50.00 USD = 2,500,000 USD`.\n2. Total Executed Shares = `30,000 + 12,000 = 42,000 shares`.\n   - Unfilled Shares = `50,000 - 42,000 = 8,000 shares`.\n3. Component Calculations:\n   - **Component 1: Explicit Costs**:\n     - `42,000 shares * 0.05 USD = 2,100 USD` (or `2,100 / 2,500,000 = 8.4 bps`).\n   - **Component 2: Delay Cost (Between Decision Price 50.00 and Arrival Price 50.60)**:\n     - `Executed Shares * (Arrival Price - Decision Price)`\n     - `42,000 * (50.60 USD - 50.00 USD) = 42,000 * 0.60 USD = 25,200 USD` (or `25,200 / 2,500,000 = 100.8 bps`).\n   - **Component 3: Realized Execution Cost (Market Impact above Arrival Price 50.60)**:\n     - Day 1: `30,000 * (51.20 USD - 50.60 USD) = 30,000 * 0.60 USD = 18,000 USD`\n     - Day 2: `12,000 * (52.10 USD - 50.60 USD) = 12,000 * 1.50 USD = 18,000 USD`\n     - `Total Execution Cost = 18,000 USD + 18,000 USD = 36,000 USD` (or `36,000 / 2,500,000 = 144.0 bps`).\n   - **Component 4: Opportunity Cost (Unfilled Shares 8,000)**:\n     - Final Benchmark Price at cancellation (Tuesday close) = `52.80 USD`.\n     - `8,000 shares * (52.80 USD - 50.00 USD) = 8,000 * 2.80 USD = 22,400 USD` (or `22,400 / 2,500,000 = 89.6 bps`).\n4. Total Implementation Shortfall Reconciliation:\n   - `Total IS = 2,100 USD (Explicit) + 25,200 USD (Delay) + 36,000 USD (Execution) + 22,400 USD (Opportunity)`\n   - `Total IS = 85,700 USD`\n   - In basis points: `85,700 USD / 2,500,000 USD = 0.03428 (or 342.8 bps)`.\n   - Verification via Paper Portfolio:\n     - Paper Profit = `50,000 * (52.80 - 50.00) = 140,000 USD`.\n     - Actual Profit = `(42,000 * 52.80) - (30,000 * 51.20) - (12,000 * 52.10) - 2,100`\n     - Actual Profit = `2,217,600 - 1,536,000 - 625,200 - 2,100 = 54,300 USD`.\n     - `Shortfall = Paper Profit (140,000 USD) - Actual Profit (54,300 USD) = 85,700 USD` (Reconciliation matches down to the dollar!).", "final_answer": "**Total Implementation Shortfall = 85,700 USD (342.8 bps)**:\n- **Explicit Commissions**: 2,100 USD (8.4 bps)\n- **Delay Cost**: 25,200 USD (100.8 bps)\n- **Realized Execution Cost**: 36,000 USD (144.0 bps)\n- **Opportunity Cost**: 22,400 USD (89.6 bps)."}, {"id": "NUM-6.4.1", "num_code": "6.4.1", "subject": "Portfolio Management", "difficulty": "Difficult / Sector Allocation vs. Stock Selection", "problem": "An active equity portfolio and its benchmark have returns and weights across three sectors over a quarterly evaluation period:\n\n| Sector | Portfolio Weight (`w_i`) | Benchmark Weight (`W_i`) | Portfolio Return (`R_i`) | Benchmark Return (`B_i`) |\n| :--- | :---: | :---: | :---: | :---: |\n| Technology | 45.0% | 30.0% | 14.0% | 12.0% |\n| Financials | 25.0% | 35.0% | 6.0% | 5.0% |\n| Healthcare | 30.0% | 35.0% | -2.0% | 1.0% |\n| **Total / Benchmark** | **100.0%** | **100.0%** | — | — |\n\nCalculate:\n1. The total return of the benchmark (`R_B`) and the portfolio (`R_P`).\n2. The Active Return (`R_P - R_B`).\n3. Decompose the Active Return using the **Brinson-Fachler model** into:\n   - Sector Allocation Effect\n   - Within-Sector Selection Effect\n   - Interaction Effect.", "methodology": "`Benchmark Return R_B = sum(W_i * B_i)`  \n`Portfolio Return R_P = sum(w_i * R_i)`  \nBrinson-Fachler Attribution Formulas:\n`Allocation Effect (A_i) = (w_i - W_i) * (B_i - R_B)`  \n`Selection Effect (S_i) = W_i * (R_i - B_i)`  \n`Interaction Effect (I_i) = (w_i - W_i) * (R_i - B_i)`  \n`Active Return = sum(A_i) + sum(S_i) + sum(I_i)`", "steps": "1. Portfolio and Benchmark Total Returns:\n   - Benchmark: `(0.30 * 12%) + (0.35 * 5%) + (0.35 * 1%) = 3.60% + 1.75% + 0.35% = 5.70% (0.057)`\n   - Portfolio: `(0.45 * 14%) + (0.25 * 6%) + (0.30 * -2%) = 6.30% + 1.50% - 0.60% = 7.20% (0.072)`\n   - `Active Return = 7.20% - 5.70% = +1.50% (+0.0150 or +150 bps)`\n2. Allocation Effect (Brinson-Fachler: Evaluates over/underweighting relative to overall benchmark return `R_B = 5.70%`):\n   - Tech: `(0.45 - 0.30) * (12.0% - 5.70%) = +0.15 * (+6.30%) = +0.9450% (+94.5 bps)`\n   - Financials: `(0.25 - 0.35) * (5.0% - 5.70%) = -0.10 * (-0.70%) = +0.0700% (+7.0 bps)`\n   - Healthcare: `(0.30 - 0.35) * (1.0% - 5.70%) = -0.05 * (-4.70%) = +0.2350% (+23.5 bps)`\n   - `Total Allocation Effect = +0.9450% + 0.0700% + 0.2350% = +1.2500% (+125 bps)`\n3. Selection Effect:\n   - Tech: `0.30 * (14.0% - 12.0%) = 0.30 * (+2.0%) = +0.6000% (+60.0 bps)`\n   - Financials: `0.35 * (6.0% - 5.0%) = 0.35 * (+1.0%) = +0.3500% (+35.0 bps)`\n   - Healthcare: `0.35 * (-2.0% - 1.0%) = 0.35 * (-3.0%) = -1.0500% (-105.0 bps)`\n   - `Total Selection Effect = +0.6000% + 0.3500% - 1.0500% = -0.1000% (-10 bps)`\n4. Interaction Effect:\n   - Tech: `(0.45 - 0.30) * (14.0% - 12.0%) = +0.15 * (+2.0%) = +0.3000% (+30.0 bps)`\n   - Financials: `(0.25 - 0.35) * (6.0% - 5.0%) = -0.10 * (+1.0%) = -0.1000% (-10.0 bps)`\n   - Healthcare: `(0.30 - 0.35) * (-2.0% - 1.0%) = -0.05 * (-3.0%) = +0.1500% (+15.0 bps)`\n   - `Total Interaction Effect = +0.3000% - 0.1000% + 0.1500% = +0.3500% (+35 bps)`\n5. Verification:\n   - `Sum = +1.25% (Allocation) - 0.10% (Selection) + 0.35% (Interaction) = +1.50%` (Exact match with active return).", "final_answer": "**Active Return = +150 bps (+1.50%)**:\n- **Allocation Effect**: +125 bps (+1.25%) -> Driven primarily by a strong overweight in outperforming Technology.\n- **Selection Effect**: -10 bps (-0.10%) -> Good tech and bank selection was offset by severe healthcare stock underperformance.\n- **Interaction Effect**: +35 bps (+0.35%)."}];
 
     let currentNumSubj = 'all';
@@ -4135,8 +4937,10 @@ def generate():
     FI_REF_HTML = os.path.join(DATA_DIR, "fi_reference_extracted.html")
     EQ_REF_HTML = os.path.join(DATA_DIR, "eq_reference_extracted.html")
     PM_REF_HTML = os.path.join(DATA_DIR, "pm_reference_extracted.html")
+    JARGON_JSON = os.path.join(DATA_DIR, "cfa_jargon_dictionary.json")
 
     assert os.path.exists(MASTER_JSON), f"Missing {MASTER_JSON}. Run compile_unified_suite.py first."
+    assert os.path.exists(JARGON_JSON), f"Missing {JARGON_JSON}."
     assert os.path.exists(FSA_REF_HTML), f"Missing {FSA_REF_HTML}. Run extract_fsa_notes.py first."
     assert os.path.exists(FI_REF_HTML), f"Missing {FI_REF_HTML}. Run generate_notes_libraries.py first."
     assert os.path.exists(EQ_REF_HTML), f"Missing {EQ_REF_HTML}. Run generate_notes_libraries.py first."
@@ -4157,7 +4961,11 @@ def generate():
     with open(PM_REF_HTML, "r", encoding="utf-8") as f:
         pm_ref_content = f.read()
 
+    with open(JARGON_JSON, "r", encoding="utf-8") as f:
+        jargon_entries = json.load(f)
+
     print(f"Loaded {len(questions)} questions from {MASTER_JSON}")
+    print(f"Loaded {len(jargon_entries)} CFA jargon entries from {JARGON_JSON}")
     print(f"Loaded {len(fsa_ref_content)} characters of FSA reference library")
     print(f"Loaded {len(fi_ref_content)} characters of FI reference library")
     print(f"Loaded {len(eq_ref_content)} characters of EQ reference library")

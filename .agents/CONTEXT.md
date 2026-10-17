@@ -23,6 +23,7 @@
   - `scripts/`:
     - `generate_unified_dashboard.py`: Unified dashboard compiler with Anti-AI Design tokens and sidebar collapse.
     - `verify_unified_suite.py`: Strict schema, KaTeX parity, and stray dollar verifier.
+  - `data/cfa_jargon_dictionary.json`: Comprehensive 32-term database with intuitive definitions, KaTeX formulas, practical uses, exam traps, and worked step-by-step numericals.
 - **Interactive Simulations (12 Total)**:
   1. Yield Curve Shift, Twist & Butterfly Simulator.
   2. Binomial Interest Rate Tree & Embedded Option Backward Induction Engine.
@@ -49,4 +50,5 @@
   - **Recent Milestones**:
     - Sidebar scope fix: resolved unclosed `hashchange` listener in `scripts/generate_unified_dashboard.py` restoring global access to `toggleDesktopSidebar`, `filterNumericals`, and `renderSolvedNumericals`.
     - Mobile UI responsiveness: hid duplicate desktop sidebar toggle on screens <= 900px, isolated mobile close button, and prevented sidebar drawer offset on mobile viewports.
+    - Terminology & Jargon Interactive Popover System: Architected with Gemini 4 (Argon High Thinking) via `/gemini4web`. Added 32 comprehensive CFA Level 1 & Level 2 terminologies across FSA, FI, EQ, PM with intuitive definitions, KaTeX formulas, practical uses, common pitfalls, worked step-by-step numerical examples, history stack back navigation, mobile bottom-sheet fallback, and automatic DOM tree-walker highlighting.
 
