@@ -10,18 +10,18 @@
   - **Portfolio Management**: 210 Questions (120 L1 MCQs + 90 L2 Questions across 18 vignettes)
   - **Level Breakdown**: 545 Level 1 MCQs, 540 Level 2 Questions across 102 distinct vignettes.
 - **Core Deliverables**:
-  - `index.html`: Unified CFA Master Dashboard housing all 1,085 questions, 102 vignette item sets, 12 simulation engines, 4-subject curriculum reference library with KaTeX & Chart.js, and question type calculation filters.
+  - `index.html`: Unified CFA Master Dashboard (2.50 MB) housing all 1,085 questions, 102 vignette item sets, 12 simulation engines, 27 master solved numerical cases, 2024-2026 curriculum audit matrix, desktop collapsible sidebar, and Anti-AI Design typography.
   - `fi_eq_dashboard.html`: Zero-latency redirect page forwarding legacy bookmarks to `index.html`.
-  - `data/cfa_master_855.json`: Consolidated, normalized master JSON dataset (2.23 MB, 1,085 questions).
+  - `CFA_CURRICULUM_AUDIT_AND_SOLVED_NUMERICALS.md`: Exhaustive 77KB audit and multi-tier worked problems.
+  - `data/master_solved_numericals.json`: Normalized dataset of 27 multi-step solved numericals.
+  - `data/cfa_master_855.json`: Consolidated master question bank (1,085 questions).
   - Reference Libraries:
     - `data/fsa_reference_extracted.html`: 20-chapter accounting mechanics & formula sheet (65 KB).
     - `data/fi_reference_extracted.html`: 8-module fixed income notes & formulas (22 KB).
     - `data/eq_reference_extracted.html`: 8-module equity valuation library & models (19 KB).
     - `data/pm_reference_extracted.html`: 8-module portfolio management library, institutional matrix & worked numericals (64 KB).
   - `scripts/`:
-    - `compile_unified_suite.py`: Multi-source dataset compiler and validator.
-    - `generate_notes_libraries.py`: Multi-subject curriculum notes compiler.
-    - `generate_unified_dashboard.py`: Unified HTML dashboard generation engine.
+    - `generate_unified_dashboard.py`: Unified dashboard compiler with Anti-AI Design tokens and sidebar collapse.
     - `verify_unified_suite.py`: Strict schema, KaTeX parity, and stray dollar verifier.
 - **Interactive Simulations (12 Total)**:
   1. Yield Curve Shift, Twist & Butterfly Simulator.
