@@ -358,7 +358,7 @@ dashboard_template = r'''<!DOCTYPE html>
     .callout-danger .callout-title { color: var(--accent-rose); }
     .callout-info .callout-title { color: var(--accent-blue); }
 
-    .table-container {
+    .table-container, .table-wrap {
       overflow-x: auto;
       margin: 1.5rem 0;
       border: 1px solid var(--border-color);
@@ -1214,7 +1214,7 @@ dashboard_template = r'''<!DOCTYPE html>
       <li class="nav-divider"><span>PRACTICE & WORKED SOLUTIONS</span></li>
       <li><a href="#jargon-glossary" onclick="switchTab('jargon-glossary')"><span>📚 Terminology & Jargon Engine</span> <span class="nav-badge" style="color: var(--accent-amber); border-color: var(--accent-amber);">32 Master</span></a></li>
       <li><a href="#solved-numericals" onclick="switchTab('solved-numericals')"><span>Master Solved Numericals</span> <span class="nav-badge" style="color: var(--accent-amber); border-color: var(--accent-amber);">27 Worked</span></a></li>
-      <li><a href="#curriculum-audit" onclick="switchTab('curriculum-audit')"><span>Curriculum Audit & Gaps</span> <span class="nav-badge">2024–2026</span></a></li>
+      <li><a href="#curriculum-audit" onclick="switchTab('curriculum-audit')"><span>Curriculum Audit & Gaps</span> <span class="nav-badge">2026–2027</span></a></li>
       
       <li class="nav-divider"><span>FINANCIAL SIMULATIONS (12)</span></li>
       <li><a href="#sim-yield" onclick="switchTab('sim-yield')"><span>📈 Yield Curve Simulator</span></a></li>
@@ -1925,7 +1925,7 @@ dashboard_template = r'''<!DOCTYPE html>
       <div class="card">
         <div class="card-title">📖 Comprehensive Financial Statement Analysis Reference Library</div>
         <p style="color: var(--text-secondary); margin-bottom: 16px;">
-          20 Chapters of in-depth theoretical notes, comparative IFRS vs US GAAP matrices, and the master financial ratio formula sheet.
+          20 Chapters of Schweser-grade notes, 14 inline worked numerical examples, Off-Balance-Sheet VIEs, Share-Based Comp, 3-Statement Modeling, Sustainability/ESG, comparative IFRS vs US GAAP matrices, and the master formula sheet.
         </p>
         <div class="fsa-nav-bar">
           <a class="fsa-nav-btn" href="#m1-intro">01. Mechanics</a>
@@ -2163,100 +2163,111 @@ dashboard_template = r'''<!DOCTYPE html>
     <!-- 14. CURRICULUM AUDIT & GAPS -->
     <section id="curriculum-audit">
       <div class="card" style="margin-bottom: 24px; border-left: 4px solid var(--accent-blue);">
-        <h2 style="font-family: var(--font-serif); font-size: 26px; font-weight: 700; margin-bottom: 6px;">2024–2026 CFA Curriculum Completeness Audit</h2>
-        <p style="color: var(--text-secondary); max-width: 900px; font-size: 13.5px; line-height: 1.6;">
-          Authoritative syllabus gap analysis benchmarking this master platform against the official CFA Institute 2024–2026 curriculum and third-party preparation materials (Kaplan SchweserNotes and Wiley/UWorld).
+        <h2 style="font-family: var(--font-serif); font-size: 26px; font-weight: 700; margin-bottom: 6px;">2026–2027 CFA CBOK Curriculum Completeness Audit &amp; Simultaneous L1/L2 Advisory</h2>
+        <p style="color: var(--text-secondary); max-width: 960px; font-size: 13.5px; line-height: 1.6;">
+          Audited directly against the official <strong>CFA Institute Candidate Body of Knowledge (CBOK)</strong>, updated 2026–2027 Level I &amp; Level II syllabi, and Kaplan SchweserNotes. Covers the 4 quantitative core subjects embedded in this portal (50 inline worked numericals in Reference Notes + 27 Master Solved Numericals + 1,085 Q-bank items + 12 Simulators).
         </p>
       </div>
 
-      <!-- Macro 10-Topic Matrix -->
+      <!-- Macro 10-Topic Matrix (2027 CBOK Weights) -->
       <div class="card" style="margin-bottom: 24px;">
-        <h3 style="font-family: var(--font-serif); font-size: 19px; margin-bottom: 14px;">Full 10-Topic CFA Program Scope Matrix</h3>
-        <div style="overflow-x: auto;">
+        <h3 style="font-family: var(--font-serif); font-size: 19px; margin-bottom: 14px;">Official 2027 CFA CBOK 10-Topic Scope &amp; Weight Matrix (L1 &amp; L2)</h3>
+        <div class="table-container">
           <table style="width: 100%; border-collapse: collapse; font-size: 13px;">
             <thead>
               <tr style="border-bottom: 2px solid var(--border-color); text-align: left;">
-                <th style="padding: 10px; font-family: var(--font-mono);">Topic Area</th>
-                <th style="padding: 10px; font-family: var(--font-mono);">L1 Weight</th>
-                <th style="padding: 10px; font-family: var(--font-mono);">L2 Weight</th>
-                <th style="padding: 10px; font-family: var(--font-mono);">Master Suite Status</th>
-                <th style="padding: 10px; font-family: var(--font-mono);">Coverage & Questions</th>
+                <th style="padding: 10px; font-family: var(--font-mono);">CBOK Topic Area (2027 Naming)</th>
+                <th style="padding: 10px; font-family: var(--font-mono);">L1 Weight (2027)</th>
+                <th style="padding: 10px; font-family: var(--font-mono);">L2 Weight (2027)</th>
+                <th style="padding: 10px; font-family: var(--font-mono);">Portal Status</th>
+                <th style="padding: 10px; font-family: var(--font-mono);">Coverage, Notes &amp; Gaps</th>
               </tr>
             </thead>
             <tbody>
               <tr style="border-bottom: 1px solid var(--border-color); background: rgba(16, 185, 129, 0.05);">
-                <td style="padding: 10px; font-weight: 600;">Financial Statement Analysis (FSA)</td>
+                <td style="padding: 10px; font-weight: 600;">IV. Financial Statement Analysis (FSA)</td>
                 <td style="padding: 10px; font-family: var(--font-mono);">11%–14%</td>
                 <td style="padding: 10px; font-family: var(--font-mono);">10%–15%</td>
                 <td style="padding: 10px;"><span class="badge-diff-easy">COVERED</span></td>
-                <td style="padding: 10px; color: var(--accent-emerald);">460 Questions (190 L1 + 270 L2)</td>
+                <td style="padding: 10px; color: var(--accent-emerald);">460 Q + 20 Ch. Notes + 14 Inline Worked Examples (incl. Share-Based Comp, VIEs, IAS 29, 3-Stmt Model, ESG)</td>
               </tr>
               <tr style="border-bottom: 1px solid var(--border-color); background: rgba(16, 185, 129, 0.05);">
-                <td style="padding: 10px; font-weight: 600;">Fixed Income (FI)</td>
+                <td style="padding: 10px; font-weight: 600;">VI. Equities (prev. Equity Investments)</td>
                 <td style="padding: 10px; font-family: var(--font-mono);">11%–14%</td>
                 <td style="padding: 10px; font-family: var(--font-mono);">10%–15%</td>
                 <td style="padding: 10px;"><span class="badge-diff-easy">COVERED</span></td>
-                <td style="padding: 10px; color: var(--accent-emerald);">205 Questions (120 L1 + 85 L2)</td>
+                <td style="padding: 10px; color: var(--accent-emerald);">210 Q + 8 Ch. Notes + 11 Inline Worked Examples (incl. 2027 L1 Forecasting, Cost of Equity, Shorting, EEM, SOTP, ESG)</td>
               </tr>
               <tr style="border-bottom: 1px solid var(--border-color); background: rgba(16, 185, 129, 0.05);">
-                <td style="padding: 10px; font-weight: 600;">Equity Investments (EQ)</td>
+                <td style="padding: 10px; font-weight: 600;">VII. Fixed Income (FI)</td>
                 <td style="padding: 10px; font-family: var(--font-mono);">11%–14%</td>
                 <td style="padding: 10px; font-family: var(--font-mono);">10%–15%</td>
                 <td style="padding: 10px;"><span class="badge-diff-easy">COVERED</span></td>
-                <td style="padding: 10px; color: var(--accent-emerald);">210 Questions (115 L1 + 95 L2)</td>
+                <td style="padding: 10px; color: var(--accent-emerald);">205 Q + 8 Ch. Notes + 11 Inline Worked Examples (incl. Repo/Shorting, Convertibles, CDS, Vasicek/CIR, Covered &amp; Green Bonds)</td>
               </tr>
               <tr style="border-bottom: 1px solid var(--border-color); background: rgba(16, 185, 129, 0.05);">
-                <td style="padding: 10px; font-weight: 600;">Portfolio Management (PM)</td>
+                <td style="padding: 10px; font-weight: 600;">X. Portfolio Construction (prev. Portfolio Mgmt)</td>
                 <td style="padding: 10px; font-family: var(--font-mono);">8%–12%</td>
                 <td style="padding: 10px; font-family: var(--font-mono);">10%–15%</td>
-                <td style="padding: 10px;"><span class="badge-diff-easy">COVERED</span></td>
-                <td style="padding: 10px; color: var(--accent-emerald);">210 Questions (120 L1 + 90 L2)</td>
+                <td style="padding: 10px;"><span class="badge-diff-easy">COVERED (L1/L2)</span></td>
+                <td style="padding: 10px; color: var(--accent-emerald);">210 Q + 9 Ch. Notes + 14 Inline Worked Examples (Behavioral, VaR/CVaR, Backtesting, Brinson-Fachler, Macro, Technicals, Fintech)</td>
               </tr>
-              <tr style="border-bottom: 1px solid var(--border-color); opacity: 0.65;">
-                <td style="padding: 10px;">Ethical & Professional Standards</td>
-                <td style="padding: 10px; font-family: var(--font-mono);">15%–20%</td>
+              <tr style="border-bottom: 1px solid var(--border-color); opacity: 0.72;">
+                <td style="padding: 10px;">I. Ethical &amp; Professional Standards</td>
+                <td style="padding: 10px; font-family: var(--font-mono);">10%–15% (15–20% in 2026)</td>
                 <td style="padding: 10px; font-family: var(--font-mono);">10%–15%</td>
-                <td style="padding: 10px;"><span class="badge-diff-difficult">OMITTED</span></td>
-                <td style="padding: 10px;">Phase 2 Roadmap (Standards I–VII, GIPS)</td>
+                <td style="padding: 10px;"><span class="badge-diff-difficult">NOT IN PORTAL</span></td>
+                <td style="padding: 10px;">Required externally: Standards I–VII (split into individual modules in 2027; L1 GIPS removed in 2027)</td>
               </tr>
-              <tr style="border-bottom: 1px solid var(--border-color); opacity: 0.65;">
-                <td style="padding: 10px;">Quantitative Methods</td>
+              <tr style="border-bottom: 1px solid var(--border-color); opacity: 0.72;">
+                <td style="padding: 10px;">II. Quantitative Methods</td>
+                <td style="padding: 10px; font-family: var(--font-mono);">11%–14% (6–9% in 2026)</td>
+                <td style="padding: 10px; font-family: var(--font-mono);">5%–10%</td>
+                <td style="padding: 10px;"><span class="badge-diff-difficult">NOT IN PORTAL</span></td>
+                <td style="padding: 10px;">Required externally: TVM, Hypothesis Testing, Regression, Time Series, ML &amp; new 2027 L1 GenAI/LLM + Excel Simulation</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-color); opacity: 0.72;">
+                <td style="padding: 10px;">III. Economics</td>
                 <td style="padding: 10px; font-family: var(--font-mono);">6%–9%</td>
                 <td style="padding: 10px; font-family: var(--font-mono);">5%–10%</td>
-                <td style="padding: 10px;"><span class="badge-diff-difficult">OMITTED</span></td>
-                <td style="padding: 10px;">Phase 2 Roadmap (Time Series, Machine Learning)</td>
+                <td style="padding: 10px;"><span class="badge-diff-difficult">NOT IN PORTAL</span></td>
+                <td style="padding: 10px;">Required externally: Market Structures, Macro Policy, FX Parity, Geopolitics, Growth</td>
               </tr>
-              <tr style="border-bottom: 1px solid var(--border-color); opacity: 0.65;">
-                <td style="padding: 10px;">Economics</td>
+              <tr style="border-bottom: 1px solid var(--border-color); opacity: 0.72;">
+                <td style="padding: 10px;">V. Corporate Finance (prev. Issuers)</td>
                 <td style="padding: 10px; font-family: var(--font-mono);">6%–9%</td>
                 <td style="padding: 10px; font-family: var(--font-mono);">5%–10%</td>
-                <td style="padding: 10px;"><span class="badge-diff-difficult">OMITTED</span></td>
-                <td style="padding: 10px;">Phase 2 Roadmap (FX Parity, Growth Economics)</td>
+                <td style="padding: 10px;"><span class="badge-diff-difficult">NOT IN PORTAL</span></td>
+                <td style="padding: 10px;">Required externally: Governance, Capital Structure, Working Capital, Cost of Capital, M&amp;A</td>
               </tr>
-              <tr style="border-bottom: 1px solid var(--border-color); opacity: 0.65;">
-                <td style="padding: 10px;">Corporate Issuers</td>
+              <tr style="border-bottom: 1px solid var(--border-color); opacity: 0.72;">
+                <td style="padding: 10px;">VIII. Derivatives &amp; Risk Management</td>
                 <td style="padding: 10px; font-family: var(--font-mono);">6%–9%</td>
                 <td style="padding: 10px; font-family: var(--font-mono);">5%–10%</td>
-                <td style="padding: 10px;"><span class="badge-diff-difficult">OMITTED</span></td>
-                <td style="padding: 10px;">Phase 2 Roadmap (Capital Structure, Mergers)</td>
+                <td style="padding: 10px;"><span class="badge-diff-difficult">NOT IN PORTAL</span></td>
+                <td style="padding: 10px;">Required externally: Forwards, Futures, Swaps, Binomial Options &amp; Black-Scholes-Merton (BSM)</td>
               </tr>
-              <tr style="border-bottom: 1px solid var(--border-color); opacity: 0.65;">
-                <td style="padding: 10px;">Derivatives</td>
-                <td style="padding: 10px; font-family: var(--font-mono);">5%–8%</td>
+              <tr style="border-bottom: 1px solid var(--border-color); opacity: 0.72;">
+                <td style="padding: 10px;">IX. Alternative Investments</td>
+                <td style="padding: 10px; font-family: var(--font-mono);">6%–9%</td>
                 <td style="padding: 10px; font-family: var(--font-mono);">5%–10%</td>
-                <td style="padding: 10px;"><span class="badge-diff-difficult">OMITTED</span></td>
-                <td style="padding: 10px;">Phase 2 Roadmap (Options BSM, Swaps)</td>
-              </tr>
-              <tr style="border-bottom: 1px solid var(--border-color); opacity: 0.65;">
-                <td style="padding: 10px;">Alternative Investments</td>
-                <td style="padding: 10px; font-family: var(--font-mono);">7%–10%</td>
-                <td style="padding: 10px; font-family: var(--font-mono);">5%–10%</td>
-                <td style="padding: 10px;"><span class="badge-diff-difficult">OMITTED</span></td>
-                <td style="padding: 10px;">Phase 2 Roadmap (Real Estate NAV, Private Equity)</td>
+                <td style="padding: 10px;"><span class="badge-diff-difficult">NOT IN PORTAL</span></td>
+                <td style="padding: 10px;">Required externally: Real Estate, Private Capital, Hedge Funds, Commodities, Digital Assets</td>
               </tr>
             </tbody>
           </table>
         </div>
+      </div>
+
+      <!-- Simultaneous L1 & L2 Preparation Critique -->
+      <div class="card" style="margin-bottom: 24px; border-left: 4px solid var(--accent-amber);">
+        <h3 style="font-family: var(--font-serif); font-size: 19px; margin-bottom: 10px;">Simultaneous CFA Level 1 &amp; Level 2 Preparation: Strategic Critique &amp; Required Actions</h3>
+        <ul style="font-size: 13.5px; line-height: 1.7; color: var(--text-secondary); padding-left: 20px;">
+          <li><strong>Why This Webpage Alone Is Insufficient (41%–54% of Exam Weight)</strong>: This portal intentionally focuses on the 4 valuation-heavy subjects (FSA, Equities, Fixed Income, Portfolio Construction). Even at 100% mastery of these 4 topics, ~46%–59% of Level I and ~40%–60% of Level II marks depend on the 6 external subjects (especially Ethics, which acts as the CFA borderline pass/fail tiebreaker, and Quant, which jumps to 11%–14% in 2027 L1).</li>
+          <li><strong>Pros &amp; Risks of Simultaneous L1 + L2 Study</strong>: Studying L1 and L2 together helps unify intuition (e.g., L1 Bond Duration feeds directly into L2 Binomial Trees; L1 Balance Sheet ratios feed into L2 Multinational/Pensions). However, <em>cognitive overload risk is high</em>: CFA Level I tests broad definitions and standalone 90-second MCQs, whereas Level II tests deep multi-step item-set vignettes. You cannot sit for Level II before passing Level I—master L1 foundations completely before drilling L2 vignettes.</li>
+          <li><strong>Level III CBOK Topics Excluded Intentionally</strong>: The official CFA CBOK webpage spans Levels I, II, and III combined. Subtopics under CBOK X–XII such as Private Wealth Tax Planning, Individual IPS, Fixed Income/Equity Portfolio Management, Currency Overlay, Asset Allocation, and GIPS Performance Presentation belong primarily to Level III and are not tested in depth at L1/L2.</li>
+          <li><strong>Mandatory External Requirements</strong>: (1) Study Ethics, Quant, Economics, Corporate Finance, Derivatives, and Alternatives from official CFAI texts or SchweserNotes; (2) Complete at least one mandatory <strong>Practical Skills Module (PSM)</strong> per level in the CFA Learning Ecosystem (scores are withheld without PSM completion); (3) Drill official CFAI LES Q-banks &amp; timed mock exams using an approved physical <strong>BA II Plus / HP 12C</strong> calculator.</li>
+        </ul>
       </div>
     </section>
 
@@ -2336,7 +2347,7 @@ dashboard_template = r'''<!DOCTYPE html>
         'reference-diagrams': 'Visual Frameworks & Cheat Sheets',
         'jargon-glossary': 'CFA Terminology & Mathematical Jargon Engine (32 Master Entries)',
         'solved-numericals': 'Master Solved Numericals & Worked Solutions (27 Cases)',
-        'curriculum-audit': '2024–2026 CFA Curriculum Completeness Audit & Gaps'
+        'curriculum-audit': '2026–2027 CFA CBOK Curriculum Audit & L1/L2 Advisory'
       };
 
       document.getElementById('topTitle').innerHTML = `<h2>${titles[tabId] || 'CFA Master Suite'}</h2>`;

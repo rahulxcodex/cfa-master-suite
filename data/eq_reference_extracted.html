@@ -76,6 +76,37 @@
       </tbody>
     </table>
   </div>
+
+  <h3 class="subheading">Shorting Equity Securities, Voting Jurisdictions &amp; Market Efficiency (CBOK VI &amp; 2027 L1)</h3>
+  <ul>
+    <li><strong>Shorting Equities &amp; Short Margin Call</strong>: A short seller borrows shares through a broker, sells them at $P_0$, deposits initial margin ($IM$), and remains liable for dividends paid during the short period plus any stock loan fee. The broker pays interest on cash proceeds minus the loan fee (the <strong>short rebate rate</strong>; hard-to-borrow stocks carry negative rebate rates and risk a <em>short squeeze</em>). Trigger price for a short margin call:
+      $$P_{\text{Short Call}} = P_0 \times \left(\frac{1 + IM}{1 + MM}\right)$$
+    </li>
+    <li><strong>Equity Features, Jurisdictions &amp; Depositary Receipts (2027 L1 LM1–LM2)</strong>: <em>Statutory voting</em> assigns one vote per share per board seat; <em>cumulative voting</em> lets minority shareholders concentrate votes ($\text{shares} \times \text{seats}$) onto a single director. Dual-class shares grant superior voting rights to founders. <strong>ADRs</strong> (Level I OTC, Level II listed, Level III capital-raising, Rule 144A private) vs. <strong>GDRs</strong> trade foreign equities across borders. Preference shares may be cumulative, participating, callable, or convertible.</li>
+    <li><strong>Market Efficiency &amp; Anomalies (EMH)</strong>: <em>Weak-form</em> rejects technical analysis; <em>Semi-strong-form</em> rejects both technical and fundamental analysis of public data; <em>Strong-form</em> prices reflect even private insider information. Apparent calendar, size, value, or momentum anomalies often stem from unmodeled risk factors, behavioral biases, or data mining.</li>
+  </ul>
+
+  <div class="card" style="background: rgba(16, 185, 129, 0.05); border-left: 4px solid var(--accent-emerald); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-emerald);">Worked Numerical Example 1: Long &amp; Short Margin Call Triggers &amp; Leveraged Return</h4>
+    <p><strong>Scenario</strong>: Initial margin $IM = 50\%$, maintenance margin $MM = 30\%$, initial stock price $P_0 = 80.00\text{ USD}$ on 1,000 shares.</p>
+    <ol>
+      <li><strong>Long Position Margin Call Price</strong>: $P_{\text{Long Call}} = 80.00 \times \frac{1 - 0.50}{1 - 0.30} = 80.00 \times \frac{0.50}{0.70} = 57.14\text{ USD}$.</li>
+      <li><strong>Long Leveraged Return</strong>: If stock rises to 96.00 USD, pays 2.00 USD/share dividend, and margin loan interest on 40,000 USD is 6.0% ($2,400\text{ USD}$):
+        $$R_{\text{Leveraged}} = \frac{1,000(96 - 80) + 1,000(2) - 2,400}{40,000} = \frac{15,600}{40,000} = 39.00\%$$
+      </li>
+      <li><strong>Short Sale Margin Call Price</strong>: $P_{\text{Short Call}} = 80.00 \times \frac{1 + 0.50}{1 + 0.30} = 80.00 \times \frac{1.50}{1.30} = 92.31\text{ USD}$.</li>
+    </ol>
+  </div>
+
+  <div class="card" style="background: rgba(59, 130, 246, 0.05); border-left: 4px solid var(--accent-blue); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-blue);">Worked Numerical Example 2: Price-Weighted, Market-Cap-Weighted &amp; Equal-Weighted Index Returns</h4>
+    <p><strong>Scenario</strong>: A 3-stock index consists of Stock A ($P_0=100, Q=1\text{M} \to P_1=110$), Stock B ($P_0=50, Q=4\text{M} \to P_1=55$), and Stock C ($P_0=30, Q=10\text{M} \to P_1=27$).</p>
+    <ul>
+      <li><strong>Price-Weighted Return</strong>: $\text{Index}_0 = \frac{100+50+30}{3} = 60.00$, $\text{Index}_1 = \frac{110+55+27}{3} = 64.00 \implies R_{PW} = \frac{64}{60} - 1 = +6.67\%$. If Stock A executes a 2-for-1 split at $t=0$ ($P_A \to 50$), the new divisor is $d_{\text{new}} = \frac{50+50+30}{60.00} = 2.1667$.</li>
+      <li><strong>Market-Cap Weighted Return</strong>: $MC_0 = 100 + 200 + 300 = 600\text{M}$, $MC_1 = 110 + 220 + 270 = 600\text{M} \implies R_{MCW} = 0.00\%$.</li>
+      <li><strong>Equal-Weighted Return</strong>: $\frac{1}{3}(+10.0\% + 10.0\% - 10.0\%) = +3.33\%$.</li>
+    </ul>
+  </div>
 </section>
 
 <!-- ========================================================================================= -->
@@ -102,6 +133,20 @@
     <li><strong>Mature</strong>: Slower growth matching GDP, consolidated oligopoly, focus on efficiency.</li>
     <li><strong>Decline</strong>: Negative demand growth due to technological substitution.</li>
   </ol>
+
+  <h3 class="subheading">Financial Statement Forecasting, Research Reports &amp; ESG Integration (2027 L1 &amp; CBOK VI)</h3>
+  <ul>
+    <li><strong>Disaggregated Financial Forecasting</strong>: Combine <em>Top-Down</em> drivers (GDP growth, market share) with <em>Bottom-Up</em> unit drivers (stores $\times$ sales/store, volume $\times$ ASP). Model COGS and SG&amp;A separately via fixed vs. variable operating leverage, working capital via DSO/DIO/DPO days, and CapEx into maintenance vs. growth buckets.</li>
+    <li><strong>Equity Analyst Research Reports</strong>: <em>Initiation of Coverage</em> reports cover company overview, industry Porter analysis, financial forecasts, valuation, investment risks, and ESG factors; <em>Update Reports</em> analyze quarterly earnings surprises and catalyst revisions. Sell-side reports serve external institutional/retail clients; buy-side research serves internal portfolio managers.</li>
+    <li><strong>Sustainability / ESG in Equity Valuation</strong>: Material ESG risks translate into DCF inputs—adjusting revenue growth (green demand / carbon regulation), operating margins (transition costs), cost of capital (beta/credit spread), or terminal value (stranded assets).</li>
+  </ul>
+
+  <div class="card" style="background: rgba(147, 51, 234, 0.05); border-left: 4px solid var(--accent-purple); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-purple);">Worked Numerical Example 3: Probability-Weighted Scenario Valuation</h4>
+    <p><strong>Scenario</strong>: Following disaggregated financial modeling across three macro/regulatory scenarios, an equity analyst estimates intrinsic equity values of 58.00 USD (Bull, 25% probability), 46.00 USD (Base, 50% probability), and 32.00 USD (Bear, 25% probability). Current market price is 40.00 USD.</p>
+    $$E(V_0) = (0.25 \times 58.00) + (0.50 \times 46.00) + (0.25 \times 32.00) = 14.50 + 23.00 + 8.00 = 45.50\text{ USD}$$
+    <p><strong>Implied Upside</strong>: $\frac{45.50 - 40.00}{40.00} = +13.75\% \implies$ <em>Buy / Outperform</em> recommendation.</p>
+  </div>
 </section>
 
 <!-- ========================================================================================= -->
@@ -111,11 +156,30 @@
   <h2 class="section-heading"><span class="num">03.</span> Dividend Discount Models & Multi-Stage Valuation</h2>
   <p>The Dividend Discount Model (DDM) values common stock as the present value of all expected future cash dividend payments discounted at the required return on equity ($r$).</p>
 
-  <h3 class="subheading">Gordon Growth Model & Sustainable Growth Rate</h3>
+  <h3 class="subheading">Cost of Equity Estimation Models (2027 L1 LM12 &amp; L2 Return Concepts)</h3>
+  <div class="formula-card">
+    <div class="formula-title">CAPM, Blume Adjusted Beta, Expanded CAPM &amp; Country Risk Premium</div>
+    $$r_{\text{CAPM}} = R_f + \beta_{\text{adj}} \times ERP, \qquad \beta_{\text{adj}} = \frac{2}{3}\beta_{\text{raw}} + \frac{1}{3}(1.0)$$
+    $$r_{\text{Expanded CAPM}} = R_f + \beta_{\text{peer}}(ERP) + SP + IP + SCRP$$
+    $$CRP = \text{Sovereign Yield Spread} \times \left(\frac{\sigma_{\text{Equity}}}{\sigma_{\text{Bond}}}\right), \qquad r_{\text{BYPRP}} = \text{Bond Yield} + \text{Risk Premium}$$
+    $$\text{Fama-French 3-Factor + Liquidity: } r = R_f + \beta_{mkt}ERP + \beta_{size}SMB + \beta_{val}HML + \beta_{liq}LIQ$$
+  </div>
+
+  <div class="card" style="background: rgba(245, 158, 11, 0.05); border-left: 4px solid var(--accent-amber); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-amber);">Worked Numerical Example 4: Adjusted Beta, Country Risk Premium &amp; Expanded CAPM</h4>
+    <p><strong>Scenario</strong>: An emerging-market mid-cap stock has raw historical $\beta_{\text{raw}} = 1.30$, risk-free rate $R_f = 4.00\%$, developed ERP $= 5.00\%$, small-stock premium $SP = 1.50\%$, company-specific risk premium $SCRP = 1.00\%$, sovereign yield spread $= 1.80\%$, and equity-to-sovereign-bond volatility ratio $= 1.25$.</p>
+    <ol>
+      <li><strong>Blume's Adjusted Beta</strong>: $\beta_{\text{adj}} = \frac{2}{3}(1.30) + \frac{1}{3}(1.00) = 1.20$.</li>
+      <li><strong>Country Risk Premium (CRP)</strong>: $CRP = 1.80\% \times 1.25 = 2.25\%$.</li>
+      <li><strong>Required Return on Equity</strong>: $r = 4.00\% + 1.20(5.00\%) + 1.50\% + 1.00\% + 2.25\% = 14.75\%$.</li>
+    </ol>
+  </div>
+
+  <h3 class="subheading">Gordon Growth Model &amp; Sustainable Growth Rate (PRAT)</h3>
   <div class="formula-card">
     <div class="formula-title">Constant Growth DDM (Gordon Growth)</div>
     $$V_0 = \frac{D_1}{r - g} = \frac{D_0 (1 + g)}{r - g} \quad (\text{Condition: } r > g)$$
-    $$g = b \times ROE = (1 - \text{Dividend Payout Ratio}) \times ROE$$
+    $$g = b \times ROE = \left(\frac{NI - Div}{NI}\right) \times \left(\frac{NI}{Sales}\right) \times \left(\frac{Sales}{Assets}\right) \times \left(\frac{Assets}{Equity}\right) \quad (\text{PRAT Model})$$
   </div>
 
   <h3 class="subheading">Present Value of Growth Opportunities (PVGO)</h3>
@@ -125,11 +189,34 @@
     $$V_0 = \frac{E_1}{r} + PVGO \implies PVGO = V_0 - \frac{E_1}{r}$$
   </div>
 
+  <div class="card" style="background: rgba(16, 185, 129, 0.05); border-left: 4px solid var(--accent-emerald); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-emerald);">Worked Numerical Example 5: Gordon Growth, PRAT &amp; PVGO Decomposition</h4>
+    <p><strong>Scenario</strong>: Expected next-year EPS $E_1 = 5.00\text{ USD}$, Dividend Payout Ratio $= 50\%$ ($b = 0.50$, $D_1 = 2.50\text{ USD}$), $ROE = 16.0\%$, and required equity return $r = 12.0\%$.</p>
+    <ul>
+      <li><strong>Sustainable Growth Rate</strong>: $g = 0.50 \times 16.0\% = 8.00\%$.</li>
+      <li><strong>Gordon Growth Intrinsic Value</strong>: $V_0 = \frac{2.50}{0.12 - 0.08} = 62.50\text{ USD}$.</li>
+      <li><strong>No-Growth Value &amp; PVGO</strong>: $\frac{E_1}{r} = \frac{5.00}{0.12} = 41.67\text{ USD} \implies PVGO = 62.50 - 41.67 = 20.83\text{ USD}$ (33.3% of total stock value comes from future growth opportunities!).</li>
+    </ul>
+  </div>
+
   <h3 class="subheading">The H-Model for Linearly Transitioning Growth</h3>
   <p>The H-Model values a firm experiencing high initial growth ($g_S$) that transitions linearly over half-life $H$ (years $= 2H$) to a sustainable long-term rate ($g_L$):</p>
   <div class="formula-card">
     <div class="formula-title">H-Model Valuation Equation</div>
-    $$V_0 = \frac{D_0 (1 + g_L)}{r - g_L} + \frac{D_0 \times H \times (g_S - g_L)}{r - g_L}$$
+    $$V_0 = \frac{D_0 (1 + g_L)}{r - g_L} + \frac{D_0 \times H \times (g_S - g_L)}{r - g_L}, \qquad r_{\text{implied}} = \left(\frac{D_0}{P_0}\right)[(1 + g_L) + H(g_S - g_L)] + g_L$$
+  </div>
+
+  <div class="card" style="background: rgba(59, 130, 246, 0.05); border-left: 4px solid var(--accent-blue); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-blue);">Worked Numerical Example 6: H-Model Valuation &amp; Implied Expected Return</h4>
+    <p><strong>Scenario</strong>: A firm just paid $D_0 = 2.00\text{ USD}$. Dividend growth starts at $g_S = 14.0\%$ and declines linearly over 8 years ($H = 4$) to $g_L = 4.0\%$. Required return $r = 10.0\%$.</p>
+    <ol>
+      <li><strong>Intrinsic Value ($V_0$)</strong>:
+        $$V_0 = \frac{2.00(1.04) + 2.00(4)(0.14 - 0.04)}{0.10 - 0.04} = \frac{2.08 + 0.80}{0.06} = \frac{2.88}{0.06} = 48.00\text{ USD}$$
+      </li>
+      <li><strong>Implied Expected Return if Market Price $P_0 = 52.00\text{ USD}$</strong>:
+        $$r_{\text{implied}} = \frac{2.00}{52.00}(1.04 + 0.40) + 0.04 = \frac{2.88}{52.00} + 0.04 = 5.54\% + 4.00\% = 9.54\%$$
+      </li>
+    </ol>
   </div>
 
   <div class="chart-box">
@@ -177,6 +264,23 @@
       <canvas id="eqNotesFcfChart"></canvas>
     </div>
   </div>
+
+  <div class="card" style="background: rgba(16, 185, 129, 0.05); border-left: 4px solid var(--accent-emerald); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-emerald);">Worked Numerical Example 7: FCFF &amp; FCFE Derivation and Firm Valuation</h4>
+    <p><strong>Scenario</strong>: A firm reports Net Income $= 120\text{M USD}$, Depreciation (NCC) $= 35\text{M USD}$, Interest Expense $= 20\text{M USD}$, Tax Rate $T = 25\%$, Capital Expenditures ($FCInv$) $= 50\text{M USD}$, Working Capital Investment ($WCInv$) $= 15\text{M USD}$, and Net Debt Borrowing $= +10\text{M USD}$. $WACC = 9.0\%$, perpetual growth $g = 4.0\%$, and market value of debt $= 400\text{M USD}$.</p>
+    <ol>
+      <li><strong>Free Cash Flow to Firm ($FCFF_0$)</strong>:
+        $$FCFF_0 = 120 + 35 + 20(1 - 0.25) - 50 - 15 = 120 + 35 + 15 - 50 - 15 = 105.00\text{M USD}$$
+      </li>
+      <li><strong>Free Cash Flow to Equity ($FCFE_0$)</strong>:
+        $$FCFE_0 = 105.00 - 20(1 - 0.25) + 10 = 105.00 - 15.00 + 10.00 = 100.00\text{M USD}$$
+      </li>
+      <li><strong>Intrinsic Firm &amp; Equity Value</strong>:
+        $$V_{\text{Firm}} = \frac{105.00(1.04)}{0.09 - 0.04} = \frac{109.20}{0.05} = 2,184.00\text{M USD} \implies V_{\text{Equity}} = 2,184.00 - 400.00 = 1,784.00\text{M USD}$$
+      </li>
+    </ol>
+    <p><em>Exam Trap</em>: Ignore non-cash share-based compensation add-backs if analysts treat SBC as a real economic dilution cost; always add back after-tax interest to Net Income/CFO when computing FCFF, NEVER pre-tax interest.</p>
+  </div>
 </section>
 
 <!-- ========================================================================================= -->
@@ -195,11 +299,24 @@
     $$\text{Justified Price-to-Sales (P/S): } \frac{P_0}{S_0} = \frac{\text{Net Margin} \times (1 - b)(1 + g)}{r - g}$$
   </div>
 
-  <h3 class="subheading">Enterprise Value Multipliers</h3>
+  <h3 class="subheading">Enterprise Value Multipliers, Harmonic Mean &amp; Sum-of-the-Parts (SOTP)</h3>
   <p><strong>Enterprise Value ($EV$)</strong> measures total market value of core operations independent of capital structure financing:</p>
   <div class="formula-card">
-    <div class="formula-title">Enterprise Value Accounting Identity</div>
-    $$EV = \text{Market Value of Common Equity} + \text{Total Debt} + \text{Preferred Stock} + \text{Minority Interest} - \text{Cash & Equivalents}$$
+    <div class="formula-title">Enterprise Value, PEG &amp; Harmonic Mean Identities</div>
+    $$EV = \text{Market Value of Common Equity} + \text{Total Debt} + \text{Preferred Stock} + \text{Minority Interest} - \text{Cash &amp; Equivalents}$$
+    $$\text{PEG Ratio} = \frac{P/E}{g \text{ (in whole \%)}}, \qquad \bar{X}_{H} = \frac{n}{\sum_{i=1}^n (1 / X_i)}$$
+  </div>
+  <p><strong>CFA Exam Rule on Peer Multiples</strong>: When averaging peer P/E multiples containing high positive outliers (e.g., depressed earnings), the <strong>Harmonic Mean</strong> mitigates extreme upward skew compared to the arithmetic mean. For diversified conglomerates, use <strong>Sum-of-the-Parts (SOTP)</strong> valuation—applying distinct EV/EBITDA or P/E multiples to each operating segment before subtracting net debt.</p>
+
+  <div class="card" style="background: rgba(147, 51, 234, 0.05); border-left: 4px solid var(--accent-purple); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-purple);">Worked Numerical Example 8: Justified Multiples &amp; Harmonic Mean Benchmark</h4>
+    <p><strong>Part A (Justified Fundamentals)</strong>: A company earns $ROE = 15.0\%$, retains $b = 40\%$ ($g = 0.40 \times 15.0\% = 6.0\%$), and has required return $r = 10.0\%$.</p>
+    <ul>
+      <li><strong>Justified Leading P/E</strong>: $\frac{1 - 0.40}{0.10 - 0.06} = \frac{0.60}{0.04} = 15.00\times$. <strong>Justified Trailing P/E</strong>: $15.00 \times 1.06 = 15.90\times$.</li>
+      <li><strong>Justified P/B</strong>: $\frac{ROE - g}{r - g} = \frac{0.15 - 0.06}{0.10 - 0.06} = 2.25\times$.</li>
+    </ul>
+    <p><strong>Part B (Harmonic vs. Arithmetic Mean)</strong>: Three industry peers trade at P/E ratios of $12.0\times$, $15.0\times$, and $60.0\times$.</p>
+    $$\text{Arithmetic Mean} = \frac{12 + 15 + 60}{3} = 29.00\times, \qquad \text{Harmonic Mean } \bar{X}_H = \frac{3}{\frac{1}{12} + \frac{1}{15} + \frac{1}{60}} = \frac{3}{0.1667} = 18.00\times$$
   </div>
 </section>
 
@@ -223,12 +340,26 @@
     Items bypassing the income statement through Other Comprehensive Income (AOCI)—such as foreign currency translation adjustments or unrealized gains on OCI securities—violate clean surplus and require analyst normalization.
   </div>
 
-  <h3 class="subheading">Continuing Residual Income & Persistence Factor ($\omega$)</h3>
-  <p>Under competitive market dynamics, supernormal returns decay over time to normal returns ($ROE \to r$):</p>
+  <h3 class="subheading">Continuing Residual Income, Persistence ($\omega$) &amp; EVA / MVA</h3>
+  <p>Under competitive market dynamics, supernormal returns decay over time to normal returns ($ROE \to r$). Related economic metrics include <strong>Economic Value Added (EVA)</strong> $= NOPAT - (WACC \times \text{Invested Capital})$ and <strong>Market Value Added (MVA)</strong> $= \text{Market Value} - \text{Invested Capital}$:</p>
   <div class="formula-card">
     <div class="formula-title">Terminal Value with Persistence Decay ($\omega$)</div>
     $$PV(\text{Continuing RI at } T-1) = \frac{RI_T}{1 + r - \omega}$$
     $$\text{Where } \omega \in [0, 1]: \quad \omega = 1.0 \implies \text{Perpetual RI}, \quad \omega = 0.0 \implies \text{Instant Return to Cost of Equity}$$
+  </div>
+
+  <div class="card" style="background: rgba(245, 158, 11, 0.05); border-left: 4px solid var(--accent-amber); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-amber);">Worked Numerical Example 9: Multi-Stage Residual Income with Persistence Decay</h4>
+    <p><strong>Scenario</strong>: Beginning book value $B_0 = 20.00\text{ USD}$, cost of equity $r = 10.0\%$. Forecasts: Year 1 ($EPS_1 = 4.00, D_1 = 1.00$), Year 2 ($EPS_2 = 4.50, D_2 = 1.20$), Year 3 ($EPS_3 = 4.80, D_3 = 1.30$). After Year 3, residual income decays with persistence factor $\omega = 0.60$.</p>
+    <ol>
+      <li><strong>Year 1</strong>: $RI_1 = 4.00 - 0.10(20.00) = 2.00\text{ USD}$; $B_1 = 20.00 + 4.00 - 1.00 = 23.00\text{ USD}$.</li>
+      <li><strong>Year 2</strong>: $RI_2 = 4.50 - 0.10(23.00) = 2.20\text{ USD}$; $B_2 = 23.00 + 4.50 - 1.20 = 26.30\text{ USD}$.</li>
+      <li><strong>Year 3</strong>: $RI_3 = 4.80 - 0.10(26.30) = 2.17\text{ USD}$.</li>
+      <li><strong>PV of Continuing RI at $t=2$</strong>: $\frac{RI_3}{1 + r - \omega} = \frac{2.17}{1 + 0.10 - 0.60} = \frac{2.17}{0.50} = 4.34\text{ USD}$.</li>
+      <li><strong>Intrinsic Equity Value ($V_0$)</strong>:
+        $$V_0 = 20.00 + \frac{2.00}{1.10} + \frac{2.20 + 4.34}{(1.10)^2} = 20.00 + 1.818 + 5.405 = 27.22\text{ USD}$$
+      </li>
+    </ol>
   </div>
 </section>
 
@@ -246,12 +377,36 @@
     <li><strong>Related-Party Transactions</strong>: Re-align intercompany lease agreements to market rents.</li>
   </ul>
 
-  <h3 class="subheading">Valuation Discounts & Premiums</h3>
+  <h3 class="subheading">Private Company Methods: Excess Earnings Method (EEM), GPCM, GTM &amp; Discounts</h3>
+  <p>Private equity appraisals apply three main approaches: <strong>Income Approach</strong> (FCF and the <em>Excess Earnings Method [EEM]</em> for intangible-heavy firms), <strong>Market Approach</strong> (<em>Guideline Public Company Method [GPCM]</em>, <em>Guideline Transactions Method [GTM]</em>, and <em>Prior Transaction Method [PTM]</em>), and <strong>Asset-Based Approach</strong> (adjusted book value).</p>
   <div class="formula-card">
     <div class="formula-title">Control and Marketability Discount Interaction</div>
     $$\text{Total Combined Discount} = 1 - (1 - DLOC) \times (1 - DLOM)$$
     $$DLOC = 1 - \left( \frac{1}{1 + \text{Control Premium}} \right)$$
     $$\text{Where: } DLOC = \text{Discount for Lack of Control}, \quad DLOM = \text{Discount for Lack of Marketability}$$
+  </div>
+
+  <div class="card" style="background: rgba(16, 185, 129, 0.05); border-left: 4px solid var(--accent-emerald); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-emerald);">Worked Numerical Example 10: Excess Earnings Method (EEM) Private Firm Valuation</h4>
+    <p><strong>Scenario</strong>: A private firm generates normalized EBIT $= 360,000\text{ USD}$ (25% tax rate). Working capital $= 500,000\text{ USD}$ (6.0% required return), Fixed Assets $= 1,200,000\text{ USD}$ (10.0% required return), intangible asset capitalization rate $= 18.0\%$, and perpetual intangible growth $= 3.0\%$.</p>
+    <ol>
+      <li><strong>Normalized NOPAT</strong>: $360,000 \times (1 - 0.25) = 270,000\text{ USD}$.</li>
+      <li><strong>Required Returns on Tangible Assets</strong>: $WC = 500,000 \times 0.06 = 30,000\text{ USD}$; $FA = 1,200,000 \times 0.10 = 120,000\text{ USD}$.</li>
+      <li><strong>Residual Intangible Income</strong>: $270,000 - (30,000 + 120,000) = 120,000\text{ USD}$.</li>
+      <li><strong>Intangible Value &amp; Total Firm Value</strong>:
+        $$V_{\text{Intangible}} = \frac{120,000(1.03)}{0.18 - 0.03} = 824,000\text{ USD} \implies V_{\text{Firm}} = 500,000 + 1,200,000 + 824,000 = 2,524,000\text{ USD}$$
+      </li>
+    </ol>
+  </div>
+
+  <div class="card" style="background: rgba(59, 130, 246, 0.05); border-left: 4px solid var(--accent-blue); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-blue);">Worked Numerical Example 11: DLOC &amp; DLOM Multiplicative Discounting</h4>
+    <p><strong>Scenario</strong>: A controlling equity stake in a private company is valued at 10,000,000 USD. Guideline transaction control premiums average 25.0%, and the estimated DLOM is 15.0%. Value a non-controlling, non-marketable minority stake.</p>
+    <ol>
+      <li><strong>Discount for Lack of Control ($DLOC$)</strong>: $1 - \frac{1}{1 + 0.25} = 1 - 0.80 = 20.0\%$.</li>
+      <li><strong>Total Multiplicative Discount</strong>: $1 - (1 - 0.20)(1 - 0.15) = 1 - (0.80 \times 0.85) = 1 - 0.68 = 32.0\%$ (NOT $20\% + 15\% = 35\%$!).</li>
+      <li><strong>Implied Minority Non-Marketable Value</strong>: $10,000,000 \times (1 - 0.32) = 6,800,000\text{ USD}$.</li>
+    </ol>
   </div>
 </section>
 
@@ -320,6 +475,24 @@
           <td>Total Discount</td>
           <td>$$\text{Total Disc} = 1 - (1 - DLOC)(1 - DLOM)$$</td>
           <td>Multiplicative interaction of lack of control and marketability.</td>
+        </tr>
+        <tr>
+          <td><strong>Trading</strong></td>
+          <td>Short Margin Call</td>
+          <td>$$P_{\text{call}} = P_0 \left(\frac{1 + IM}{1 + MM}\right)$$</td>
+          <td>Short sale collateral trigger price when shares rally.</td>
+        </tr>
+        <tr>
+          <td><strong>Cost of Equity</strong></td>
+          <td>Blume Adj. Beta &amp; CRP</td>
+          <td>$$\beta_{\text{adj}} = \frac{2}{3}\beta_{\text{raw}} + \frac{1}{3}, \quad CRP = \Delta y_{\text{sov}}\frac{\sigma_{\text{eq}}}{\sigma_{\text{bond}}}$$</td>
+          <td>Forward-looking beta mean reversion &amp; emerging market risk.</td>
+        </tr>
+        <tr>
+          <td><strong>Multipliers</strong></td>
+          <td>Harmonic Mean P/E</td>
+          <td>$$\bar{X}_H = \frac{n}{\sum_{i=1}^n (1/X_i)}$$</td>
+          <td>Eliminates upward outlier distortion in peer multiples.</td>
         </tr>
       </tbody>
     </table>

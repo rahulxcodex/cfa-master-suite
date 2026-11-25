@@ -56,7 +56,43 @@
   </ul>
 
   <h3 class="subheading">Matrix Pricing for Illiquid & Unrated Bonds</h3>
-  <p>When a target bond is illiquid or newly issued without market quotes, analysts utilize <strong>Matrix Pricing</strong> (linear interpolation of yields on comparable liquid benchmark bonds matching maturity and credit quality) to establish the appropriate discounting yield.</p>
+  <p>When a target bond is illiquid or newly issued without market quotes, analysts utilize <strong>Matrix Pricing</strong> (linear interpolation of yields on comparable liquid benchmark bonds matching maturity and credit quality) to establish the appropriate discounting yield:</p>
+  <div class="formula-card">
+    <div class="formula-title">Matrix Pricing Linear Interpolation</div>
+    $$y_{\text{target}} = y_{\text{short}} + \left( \frac{T_{\text{target}} - T_{\text{short}}}{T_{\text{long}} - T_{\text{short}}} \right) \times (y_{\text{long}} - y_{\text{short}})$$
+  </div>
+
+  <div class="card" style="background: rgba(16, 185, 129, 0.05); border-left: 4px solid var(--accent-emerald); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-emerald);">Worked Numerical Example 1: Clean vs. Dirty Price &amp; Matrix Pricing</h4>
+    <p><strong>Part A (Accrued Interest &amp; Full Price)</strong>: A 6.0% semiannual-pay Treasury bond (Par = 1,000 USD) settles 62 days into a 182-day coupon period (Actual/Actual convention) at a quoted flat (clean) price of 1,018.50 USD.</p>
+    <ul>
+      <li>Semiannual coupon payment: $PMT = \frac{6.0\% \times 1,000}{2} = 30.00\text{ USD}$</li>
+      <li>Accrued Interest: $AI = 30.00 \times \frac{62}{182} = 10.22\text{ USD}$</li>
+      <li>Full (Dirty) Price paid by buyer: $PV^{\text{Full}} = 1,018.50 + 10.22 = 1,028.72\text{ USD}$</li>
+    </ul>
+    <p><strong>Part B (Matrix Pricing)</strong>: A newly issued 4.2-year BBB-rated corporate bond lacks market quotes. Comparable liquid BBB bonds yield 5.20% (3.0-year maturity) and 5.80% (5.0-year maturity):</p>
+    $$y_{\text{4.2Y}} = 5.20\% + \left(\frac{4.2 - 3.0}{5.0 - 3.0}\right) \times (5.80\% - 5.20\%) = 5.20\% + 0.60 \times 0.60\% = 5.56\%$$
+  </div>
+
+  <h3 class="subheading">Floating-Rate Notes (FRNs), Repo &amp; Shorting Fixed Income (CBOK VII)</h3>
+  <p><strong>Floating-Rate Notes (FRNs)</strong> reset coupons periodically relative to a market reference rate (MRR / SOFR) plus a fixed <strong>Quoted Margin ($QM$)</strong>. When credit quality changes after issuance, the market discounts cash flows using MRR plus the required <strong>Discount Margin ($DM$)</strong> ($PV < \text{Par}$ if $DM > QM$).</p>
+  <p><strong>Repurchase Agreements (Repo) &amp; Shorting Bonds</strong>: A repo is a collateralized short-term loan where a dealer sells a bond today and agrees to repurchase it at a higher price on a future date. Conversely, investors <strong>short fixed-income securities</strong> by entering a <em>reverse repo</em> (lending cash to borrow the bond collateral), selling the bond in the market, and obligating themselves to reimburse the lender for any interim coupon payments. High demand to short a specific Treasury issue drives its collateral rate down—trading <strong>"on special"</strong> (below the general collateral repo rate).</p>
+  <div class="formula-card">
+    <div class="formula-title">Repurchase Agreement (Repo) Pricing &amp; Haircut</div>
+    $$\text{Initial Loan (Purchase Price)} = \text{Collateral Market Value} \times (1 - \text{Repo Margin / Haircut})$$
+    $$\text{Repurchase Price} = \text{Purchase Price} \times \left(1 + \text{Repo Rate} \times \frac{\text{Days}}{360}\right)$$
+  </div>
+
+  <div class="card" style="background: rgba(59, 130, 246, 0.05); border-left: 4px solid var(--accent-blue); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-blue);">Worked Numerical Example 2: Repo Haircut, Dollar Interest &amp; Short Financing</h4>
+    <p><strong>Scenario</strong>: A dealer finances 10,000,000 USD market value of corporate bonds via a 30-day repo agreement with a 4.0% haircut and a 4.80% annualized repo rate (Actual/360 convention).</p>
+    <ol>
+      <li><strong>Purchase Price (Cash Borrowed)</strong>: $10,000,000 \times (1 - 0.04) = 9,600,000\text{ USD}$</li>
+      <li><strong>Repo Dollar Interest</strong>: $9,600,000 \times 0.0480 \times \frac{30}{360} = 38,400\text{ USD}$</li>
+      <li><strong>Repurchase Price at Maturity</strong>: $9,600,000 + 38,400 = 9,638,400\text{ USD}$</li>
+    </ol>
+    <p><em>Short-Selling Link</em>: A hedge fund acting as the reverse-repo counterparty lends 9,600,000 USD, receives the bonds as collateral, shorts them for cash, and earns 4.80% on its posted cash margin (rebate) while paying the bond's accrued coupon to the collateral owner.</p>
+  </div>
 </section>
 
 <!-- ========================================================================================= -->
@@ -126,6 +162,60 @@
       </tbody>
     </table>
   </div>
+
+  <div class="card" style="background: rgba(147, 51, 234, 0.05); border-left: 4px solid var(--accent-purple); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-purple);">Worked Numerical Example 3: Bootstrapping Spot Rates &amp; Forward Rate Parity</h4>
+    <p><strong>Scenario</strong>: Given annual-pay benchmark government par yields of $y_1 = 4.00\%$, $y_2 = 4.50\%$, and $y_3 = 5.00\%$, bootstrap the spot curve ($S_1, S_2, S_3$) and derive the 2-year forward rate starting in 1 year, $f(1,2)$.</p>
+    <ol>
+      <li><strong>1-Year Spot Rate ($S_1$)</strong>: $S_1 = y_1 = 4.0000\%$</li>
+      <li><strong>2-Year Spot Rate ($S_2$)</strong>: Using a 2-year par bond ($c = 4.50\%$):
+        $$1.00 = \frac{0.045}{1.04} + \frac{1.045}{(1+S_2)^2} \implies (1+S_2)^2 = \frac{1.045}{1 - 0.043269} = 1.09226 \implies S_2 = 4.5113\%$$
+      </li>
+      <li><strong>3-Year Spot Rate ($S_3$)</strong>: Using a 3-year par bond ($c = 5.00\%$):
+        $$1.00 = \frac{0.05}{1.04} + \frac{0.05}{(1.045113)^2} + \frac{1.05}{(1+S_3)^3} \implies S_3 = \left(\frac{1.05}{1 - 0.048077 - 0.045777}\right)^{1/3} - 1 = 5.0341\%$$
+      </li>
+      <li><strong>Implied 2-Year Forward Rate 1 Year Forward ($f(1,2)$)</strong>:
+        $$[1 + f(1,2)]^2 = \frac{(1+S_3)^3}{(1+S_1)^1} = \frac{(1.050341)^3}{1.0400} = 1.11408 \implies f(1,2) = \sqrt{1.11408} - 1 = 5.5550\%$$
+      </li>
+    </ol>
+    <p><em>Check</em>: Because the spot curve is upward sloping, $f(1,2) = 5.56\% > S_3 = 5.03\% > y_3 = 5.00\%$.</p>
+  </div>
+
+  <h3 class="subheading">Equilibrium vs. Arbitrage-Free Term Structure Models (L2) &amp; Yield Curve Strategies</h3>
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Model / Class</th>
+          <th>Drift &amp; Volatility Specification</th>
+          <th>Key Properties &amp; Exam Distinction</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Vasicek Model</strong> (Equilibrium)</td>
+          <td>$dr = a(b - r)dt + \sigma dW$</td>
+          <td>Mean-reverting ($b$ = long-run mean); <strong>constant volatility</strong> $\sigma$; permits <em>negative</em> interest rates.</td>
+        </tr>
+        <tr>
+          <td><strong>Cox-Ingersoll-Ross (CIR)</strong> (Equilibrium)</td>
+          <td>$dr = a(b - r)dt + \sigma\sqrt{r}\,dW$</td>
+          <td>Mean-reverting; volatility proportional to $\sqrt{r}$ (rises with rate level); prevents negative rates if $2ab \ge \sigma^2$.</td>
+        </tr>
+        <tr>
+          <td><strong>Ho-Lee Model</strong> (Arbitrage-Free)</td>
+          <td>$dr = \theta_t\,dt + \sigma dW$</td>
+          <td>Calibrated exactly to today's observed spot curve via time-dependent drift $\theta_t$; normal distribution (allows negative rates).</td>
+        </tr>
+        <tr>
+          <td><strong>Kalotay-Williams-Fabozzi (KWF)</strong> (Arbitrage-Free)</td>
+          <td>$d\ln(r) = \theta_t\,dt + \sigma dW$</td>
+          <td>Lognormal short-rate distribution; calibrated to market term structure; guarantees <strong>strictly positive rates</strong> with constant proportional vol.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p><strong>Active Curve Strategies</strong>: Under an upward-sloping, stable yield curve, <strong>Riding the Yield Curve</strong> purchases bonds with maturities longer than the holding horizon so the bond "rolls down" the curve to lower yields and appreciates in price. The <strong>MRR–OIS Spread</strong> (difference between interbank funding rates and overnight index swap rates) serves as a primary gauge of banking-sector funding stress.</p>
 </section>
 
 <!-- ========================================================================================= -->
@@ -147,6 +237,24 @@
       $$\text{For a Callable Bond: } Z\text{-spread} > OAS \implies \text{Option Cost} > 0$$
       $$\text{For a Putable Bond: } Z\text{-spread} < OAS \implies \text{Option Cost} < 0$$
     </li>
+    <li><strong>Current Yield, Yield-to-Call (YTC) &amp; Yield-to-Worst (YTW)</strong>: Current yield $= \frac{\text{Annual Coupon}}{\text{Flat Price}}$. For callable bonds, compute YTM and YTC to every call schedule date; <strong>Yield-to-Worst (YTW)</strong> is the minimum of YTM and all YTCs.</li>
+  </ul>
+
+  <div class="card" style="background: rgba(245, 158, 11, 0.05); border-left: 4px solid var(--accent-amber); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-amber);">Worked Numerical Example 4: Yield-to-Worst (YTW), Z-Spread &amp; OAS Decomposition</h4>
+    <p><strong>Scenario</strong>: A 10-year, 6.0% semiannual coupon corporate bond (Par = 1,000 USD) trades at 1,060.00 USD and is callable in 4 years at 1,030.00 USD. A comparable government benchmark yields 4.00%, the bond's $Z$-spread is 148 bps, and the embedded call option cost is estimated at 36 bps.</p>
+    <ol>
+      <li><strong>Yield-to-Maturity (YTM)</strong>: Solving $1,060 = \sum_{t=1}^{20} \frac{30}{(1+r)^{t}} + \frac{1,000}{(1+r)^{20}}$ yields semiannual $r = 2.61\% \implies \text{YTM} = 5.22\%$.</li>
+      <li><strong>Yield-to-Call (YTC at 4Y)</strong>: Solving $1,060 = \sum_{t=1}^{8} \frac{30}{(1+r_c)^{t}} + \frac{1,030}{(1+r_c)^{8}}$ yields semiannual $r_c = 2.505\% \implies \text{YTC} = 5.01\%$.</li>
+      <li><strong>Yield-to-Worst (YTW)</strong>: $\min(5.22\%, 5.01\%) = 5.01\%$ (YTC governs because bond trades above call price).</li>
+      <li><strong>G-Spread &amp; OAS</strong>: $\text{G-Spread} = 5.22\% - 4.00\% = 122\text{ bps}$. Removing the call option cost gives pure credit/liquidity compensation: $OAS = Z\text{-spread} - \text{Option Cost} = 148 - 36 = 112\text{ bps}$.</li>
+    </ol>
+  </div>
+
+  <h3 class="subheading">Sustainability Considerations in Fixed Income (CBOK VII)</h3>
+  <ul>
+    <li><strong>Green, Social &amp; Sustainability Bonds</strong>: Use-of-proceeds debt ring-fenced to environmental or social projects; credit risk remains backed by the issuer's general balance sheet. When investor demand outpaces supply, green bonds may price at a slight yield discount (<strong>Greenium</strong>).</li>
+    <li><strong>Sustainability-Linked Bonds (SLBs)</strong>: General corporate purpose debt whose financial terms (typically a coupon step-up of +25 bps to +50 bps) adjust if the issuer fails to achieve predefined Sustainability Performance Targets (SPTs) by a target observation date.</li>
   </ul>
 </section>
 
@@ -183,9 +291,25 @@
     </div>
   </div>
 
-  <h3 class="subheading">Key Rate Duration (KRD)</h3>
+  <h3 class="subheading">Key Rate Duration (KRD), Money Duration &amp; Empirical Duration</h3>
   <p>Key rate duration measures bond price sensitivity to a 100 bps shift at a single maturity point on the spot curve while holding all other points constant. The sum of all key rate durations equals the effective duration for a parallel shift:</p>
-  $$EffDur = \sum_{i=1}^M KRD_i$$
+  $$EffDur = \sum_{i=1}^M KRD_i, \qquad \text{MoneyDur} = ModDur \times PV^{\text{Full}}, \qquad \text{PVBP} = \frac{PV_- - PV_+}{2} \text{ (for } \Delta y = 1\text{ bp)}$$
+  <p><strong>Portfolio Duration</strong> equals the <em>market-value weighted average</em> of constituent bond durations ($Dur_P = \sum w_i Dur_i$), NOT an equally weighted average. <strong>Analytical vs. Empirical Duration</strong>: Analytical formulas assume benchmark yields and credit spreads move independently. In "flight-to-safety" recessions, government benchmark yields fall while high-yield credit spreads widen simultaneously—making <strong>Empirical Duration</strong> (estimated via historical regression of bond prices on benchmark yields) substantially lower than analytical duration for high-yield corporates.</p>
+
+  <div class="card" style="background: rgba(16, 185, 129, 0.05); border-left: 4px solid var(--accent-emerald); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-emerald);">Worked Numerical Example 5: Effective Duration, Convexity &amp; Key Rate Duration Twist</h4>
+    <p><strong>Scenario</strong>: A bond trades at $PV_0 = 100.00\text{ USD}$. Shifting the benchmark par curve by $\Delta y = \pm 25\text{ bps}$ ($0.0025$) produces $PV_- = 101.84\text{ USD}$ and $PV_+ = 98.24\text{ USD}$. Its key rate profile is $KRD_2 = 1.20$, $KRD_5 = 2.80$, $KRD_{10} = 3.20$.</p>
+    <ol>
+      <li><strong>Effective Duration</strong>: $EffDur = \frac{101.84 - 98.24}{2 \times 0.0025 \times 100.00} = \frac{3.60}{0.50} = 7.20$ (Notice $1.20 + 2.80 + 3.20 = 7.20$).</li>
+      <li><strong>Effective Convexity</strong>: $EffConv = \frac{101.84 + 98.24 - 2(100.00)}{(0.0025)^2 \times 100.00} = \frac{0.08}{0.000625} = 128.00$.</li>
+      <li><strong>+100 bps Parallel Yield Increase ($\Delta y = +0.01$)</strong>:
+        $$\%\Delta PV \approx -7.20(0.01) + \frac{1}{2}(128.00)(0.01)^2 = -7.20\% + 0.64\% = -6.56\%$$
+      </li>
+      <li><strong>Non-Parallel Curve Flattening Twist</strong> ($\Delta y_2 = +40\text{ bps}$, $\Delta y_5 = +10\text{ bps}$, $\Delta y_{10} = -25\text{ bps}$):
+        $$\%\Delta PV \approx -(1.20 \times 0.40\% + 2.80 \times 0.10\% + 3.20 \times (-0.25\%)) = -(0.48\% + 0.28\% - 0.80\%) = +0.04\%$$
+      </li>
+    </ol>
+  </div>
 </section>
 
 <!-- ========================================================================================= -->
@@ -213,6 +337,47 @@
     $$V_{\text{node}} = \frac{1}{2} \left[ \frac{V_{u} + PMT}{1 + r_{\text{node}}} + \frac{V_{d} + PMT}{1 + r_{\text{node}}} \right]$$
     $$\text{Callable Node Decision: } V = \min(\text{Calculated Node Value}, \text{Call Price})$$
     $$\text{Putable Node Decision: } V = \max(\text{Calculated Node Value}, \text{Put Price})$$
+  </div>
+
+  <div class="card" style="background: rgba(59, 130, 246, 0.05); border-left: 4px solid var(--accent-blue); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-blue);">Worked Numerical Example 6: 2-Period Binomial Tree Backward Induction (Callable Bond)</h4>
+    <p><strong>Scenario</strong>: Value a 2-year, 6.0% annual-pay bond (Par = 100.00) callable at 101.00 at $t=1$. The calibrated 1-year forward rates are $r_0 = 4.00\%$ at $t=0$, and $r_{1,u} = 5.50\%$, $r_{1,d} = 4.20\%$ at $t=1$.</p>
+    <ol>
+      <li><strong>Straight Bond at $t=1$</strong> ($CF_2 = 106.00$):
+        $$V_{1,u}^{\text{straight}} = \frac{106.00}{1.055} = 100.4739, \qquad V_{1,d}^{\text{straight}} = \frac{106.00}{1.042} = 101.7274$$
+        $$V_0^{\text{straight}} = \frac{1}{2}\left[\frac{100.4739 + 6}{1.04} + \frac{101.7274 + 6}{1.04}\right] = 102.9814$$
+      </li>
+      <li><strong>Callable Bond Decision at $t=1$</strong> ($V_{\text{call}} = \min(V_{\text{calc}}, 101.00)$):
+        <ul>
+          <li>Upper node: $\min(100.4739, 101.00) = 100.4739$ (not called).</li>
+          <li>Lower node: $\min(101.7274, 101.00) = 101.0000$ (<strong>called</strong> at 101.00!).</li>
+        </ul>
+      </li>
+      <li><strong>Callable Value &amp; Embedded Call Option Value at $t=0$</strong>:
+        $$V_0^{\text{callable}} = \frac{1}{2}\left[\frac{100.4739 + 6}{1.04} + \frac{101.0000 + 6}{1.04}\right] = 102.6317$$
+        $$V_{\text{Call Option}} = V_0^{\text{straight}} - V_0^{\text{callable}} = 102.9814 - 102.6317 = 0.3497$$
+      </li>
+    </ol>
+  </div>
+
+  <h3 class="subheading">Convertible Bonds Valuation &amp; Parity Metrics (L2)</h3>
+  <p>A <strong>Convertible Bond</strong> grants the holder the right to convert the bond into a specified number of common shares (<strong>Conversion Ratio</strong>). Its value cannot fall below the greater of its straight debt value or conversion value:</p>
+  <div class="formula-card">
+    <div class="formula-title">Convertible Bond Identities</div>
+    $$\text{Conversion Value} = \text{Conversion Ratio} \times \text{Stock Price}, \qquad \text{Minimum Value} = \max(\text{Straight Value}, \text{Conversion Value})$$
+    $$\text{Market Conversion Price} = \frac{\text{Convertible Bond Price}}{\text{Conversion Ratio}}, \qquad \text{Conv. Premium Ratio} = \frac{\text{Market Conv. Price} - \text{Stock Price}}{\text{Stock Price}}$$
+  </div>
+
+  <div class="card" style="background: rgba(147, 51, 234, 0.05); border-left: 4px solid var(--accent-purple); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-purple);">Worked Numerical Example 7: Convertible Bond Parity &amp; Premiums</h4>
+    <p><strong>Scenario</strong>: A convertible bond (Par = 1,000 USD) has a Conversion Ratio of 25 shares, Straight Value of 940 USD, and trades at 1,144 USD when the underlying common stock trades at 44.00 USD.</p>
+    <ul>
+      <li><strong>Conversion Value</strong>: $25 \times 44.00 = 1,100.00\text{ USD}$</li>
+      <li><strong>Minimum Value</strong>: $\max(940.00, 1,100.00) = 1,100.00\text{ USD}$</li>
+      <li><strong>Market Conversion Price</strong>: $\frac{1,144}{25} = 45.76\text{ USD}$ (effective entry price per share via the bond).</li>
+      <li><strong>Market Conversion Premium Ratio</strong>: $\frac{45.76 - 44.00}{44.00} = 4.00\%$ (or $\frac{1,144 - 1,100}{1,100} = 4.00\%$).</li>
+      <li><strong>Premium Over Straight Value</strong> (Downside Risk): $\frac{1,144 - 940}{940} = 21.70\%$.</li>
+    </ul>
   </div>
 </section>
 
@@ -260,6 +425,39 @@
       </tbody>
     </table>
   </div>
+
+  <h3 class="subheading">4 Cs of Credit, Sovereign/Municipal/HY Debt &amp; CDS Mechanics (L1 &amp; L2)</h3>
+  <ul>
+    <li><strong>The 4 Cs of Corporate Credit</strong>: <strong>Capacity</strong> (EBITDA coverage, FCF/Debt), <strong>Collateral</strong> (asset quality, seniority waterfall), <strong>Covenants</strong> (affirmative &amp; negative restrictions), and <strong>Character</strong> (management integrity &amp; capital allocation history).</li>
+    <li><strong>Sovereign, Municipal &amp; High-Yield Debt</strong>: Sovereigns lack collateral and rely on fiscal/monetary institutional strength and FX reserves. US Municipal bonds divide into <strong>General Obligation (GO)</strong> (tax-backed) vs. <strong>Revenue Bonds</strong> (project-backed; higher risk); evaluate via <em>Tax-Equivalent Yield</em> $= \frac{y_{\text{muni}}}{1 - t}$. High-yield issuers emphasize structural subordination, liquidity runways, and recovery waterfalls.</li>
+    <li><strong>Credit Default Swaps (CDS) &amp; Upfront Payments</strong>: Protection buyer pays standardized fixed coupon (100 bps IG / 500 bps HY) to protection seller. Upfront payment reconciles coupon to market spread:
+      $$\text{Upfront Payment (\%)} \approx (\text{CDS Spread} - \text{Fixed Coupon}) \times \text{EffDur}_{\text{CDS}}$$
+      $$\Delta\text{Value}_{\text{Buyer}} \approx \Delta\text{Spread} \times \text{EffDur}_{\text{CDS}} \times \text{Notional}, \qquad POD(t) = 1 - e^{-\lambda t}$$
+      <strong>Basis &amp; Curve Trades</strong>: Negative basis trade (buy bond + buy CDS when CDS spread $<$ bond credit spread). Credit curve steepener (sell short-dated CDS protection + buy long-dated CDS protection).
+    </li>
+  </ul>
+
+  <div class="card" style="background: rgba(245, 158, 11, 0.05); border-left: 4px solid var(--accent-amber); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-amber);">Worked Numerical Example 8: Multi-Period Credit Valuation Adjustment (CVA)</h4>
+    <p><strong>Scenario</strong>: Value a 2-year, 5.0% annual-pay corporate bond (Par = 1,000 USD) given a flat 3.00% risk-free rate, conditional annual hazard rate $PD = 2.00\%$, and Recovery Rate $RR = 40\%$ ($LGD = 60\%$).</p>
+    <ol>
+      <li><strong>Default-Free Bond Value</strong>: $V_{\text{ND}} = \frac{50}{1.03} + \frac{1,050}{1.03^2} = 48.54 + 989.73 = 1,038.27\text{ USD}$.</li>
+      <li><strong>Year 1 Expected Loss</strong>: Exposure $= 50 + \frac{1,050}{1.03} = 1,069.42\text{ USD}$. $EL_1 = 0.02 \times 0.60 \times 1,069.42 = 12.83\text{ USD}$. $PV(EL_1) = \frac{12.83}{1.03} = 12.46\text{ USD}$.</li>
+      <li><strong>Year 2 Expected Loss</strong>: Unconditional $PD_2 = (1 - 0.02) \times 0.02 = 1.96\%$. Exposure $= 1,050\text{ USD}$. $EL_2 = 0.0196 \times 0.60 \times 1,050 = 12.35\text{ USD}$. $PV(EL_2) = \frac{12.35}{1.03^2} = 11.64\text{ USD}$.</li>
+      <li><strong>CVA &amp; Fair Risky Value</strong>: $CVA = 12.46 + 11.64 = 24.10\text{ USD} \implies V_{\text{Risky}} = 1,038.27 - 24.10 = 1,014.17\text{ USD}$.</li>
+    </ol>
+  </div>
+
+  <div class="card" style="background: rgba(16, 185, 129, 0.05); border-left: 4px solid var(--accent-emerald); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-emerald);">Worked Numerical Example 9: CDS Upfront Payment &amp; Mark-to-Market Valuation</h4>
+    <p><strong>Scenario</strong>: An investor buys 10,000,000 USD notional of 5-year high-yield CDS protection (standardized fixed coupon = 500 bps) when the market CDS spread is 620 bps and $EffDur_{\text{CDS}} = 4.2$.</p>
+    <ol>
+      <li><strong>Initial Upfront Payment</strong>: $(6.20\% - 5.00\%) \times 4.2 = 1.20\% \times 4.2 = 5.04\%$ of notional ($504,000\text{ USD}$ paid by buyer to seller at initiation).</li>
+      <li><strong>Mark-to-Market After Spread Widening</strong>: Suppose credit fundamentals deteriorate and the CDS spread widens by $+80\text{ bps}$ to 700 bps (new duration $= 4.0$):
+        $$\text{Buyer MTM Gain} \approx +0.0080 \times 4.0 \times 10,000,000\text{ USD} = +320,000\text{ USD}$$
+      </li>
+    </ol>
+  </div>
 </section>
 
 <!-- ========================================================================================= -->
@@ -282,11 +480,34 @@
     $$CPR = 1 - (1 - SMM)^{12} \iff SMM = 1 - (1 - CPR)^{1/12}$$
   </div>
 
-  <h3 class="subheading">Collateralized Mortgage Obligations (CMO) Tranching</h3>
+  <h3 class="subheading">Collateralized Mortgage Obligations (CMO), CMBS, CDO &amp; Covered Bonds (CBOK VII)</h3>
   <ul>
     <li><strong>Sequential-Pay Tranches</strong>: Principal payments retire tranches in sequential order (Tranche A first, then B, then C). Early tranches absorb contraction risk; later tranches absorb extension risk.</li>
-    <li><strong>PAC & Support Tranches</strong>: Planned Amortization Class (PAC) tranches provide stable cash flows within a specified prepayment collar. The support tranche absorbs prepayments above or below the band, exhibiting high volatility.</li>
+    <li><strong>PAC &amp; Support Tranches</strong>: Planned Amortization Class (PAC) tranches provide stable cash flows within a specified prepayment collar. The support tranche absorbs prepayments above or below the band, exhibiting high volatility.</li>
+    <li><strong>Commercial MBS (CMBS) &amp; Credit Enhancement</strong>: Non-recourse loans analyzed via <em>DSCR</em> ($\text{NOI} / \text{Debt Service}$) and <em>LTV</em>. Call protection is embedded via lockout, defeasance, and yield maintenance. ABS/CDO waterfalls combine internal credit enhancement (overcollateralization, subordination, excess spread) to shield senior tranches.</li>
+    <li><strong>Covered Bonds</strong>: On-balance-sheet senior debt backed by <strong>dual recourse</strong>—both to the issuing financial institution and to a ring-fenced, dynamic cover pool (non-performing loans must be replaced). Redemption structures include <em>hard-bullet</em>, <em>soft-bullet</em>, and <em>conditional pass-through</em>.</li>
   </ul>
+
+  <div class="card" style="background: rgba(59, 130, 246, 0.05); border-left: 4px solid var(--accent-blue); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-blue);">Worked Numerical Example 10: MBS Prepayment Speed (PSA, CPR &amp; SMM)</h4>
+    <p><strong>Scenario</strong>: A residential mortgage pass-through pool has a beginning balance of 50,000,000 USD in Month 20, scheduled principal payment of 180,000 USD, and prepays at 150% PSA.</p>
+    <ol>
+      <li><strong>100% PSA Benchmark CPR (Month 20)</strong>: Ramps linearly at 0.20% per month up to Month 30 ($6.0\%$): $\text{CPR}_{100\%}(20) = 6.0\% \times \frac{20}{30} = 4.00\%$.</li>
+      <li><strong>150% PSA CPR</strong>: $\text{CPR}_{150\%} = 1.50 \times 4.00\% = 6.00\%$.</li>
+      <li><strong>Single Monthly Mortality (SMM)</strong>: $SMM = 1 - (1 - 0.060)^{1/12} = 0.005143 \; (0.5143\%)$.</li>
+      <li><strong>Monthly Principal Prepayment</strong>: $0.005143 \times (50,000,000 - 180,000) = 256,225\text{ USD}$.</li>
+    </ol>
+  </div>
+
+  <div class="card" style="background: rgba(147, 51, 234, 0.05); border-left: 4px solid var(--accent-purple); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-purple);">Worked Numerical Example 11: ABS / CDO Subordination Waterfall</h4>
+    <p><strong>Scenario</strong>: A 100,000,000 USD collateralized debt structure issues Senior Tranche (75,000,000 USD), Mezzanine Tranche (15,000,000 USD), and Equity/First-Loss Tranche (10,000,000 USD). Cumulative net default losses reach 18,000,000 USD.</p>
+    <ul>
+      <li><strong>Equity Tranche</strong>: Absorbs the first 10,000,000 USD of losses $\implies$ completely wiped out (0 USD remaining).</li>
+      <li><strong>Mezzanine Tranche</strong>: Absorbs remaining $18,000,000 - 10,000,000 = 8,000,000\text{ USD}$ $\implies$ impaired to 7,000,000 USD principal.</li>
+      <li><strong>Senior Tranche</strong>: Fully protected by 25% subordination buffer $\implies$ 75,000,000 USD principal remains 100% intact.</li>
+    </ul>
+  </div>
 </section>
 
 <!-- ========================================================================================= -->
@@ -354,6 +575,24 @@
           <td>SMM from CPR</td>
           <td>$$SMM = 1 - (1 - CPR)^{1/12}$$</td>
           <td>Monthly equivalent prepayment rate.</td>
+        </tr>
+        <tr>
+          <td><strong>Repo</strong></td>
+          <td>Repurchase Price</td>
+          <td>$$P_{\text{rep}} = MV(1 - h)\left(1 + r_{\text{repo}} \frac{\text{Days}}{360}\right)$$</td>
+          <td>Short-term collateralized financing &amp; bond shorting.</td>
+        </tr>
+        <tr>
+          <td><strong>Convertibles</strong></td>
+          <td>Min. Convertible Value</td>
+          <td>$$V_{\min} = \max(\text{Straight Value}, \text{CR} \times P_{\text{stock}})$$</td>
+          <td>Floor valuation combining debt &amp; equity parity.</td>
+        </tr>
+        <tr>
+          <td><strong>CDS</strong></td>
+          <td>CDS Upfront (%)</td>
+          <td>$$\text{Upfront} \approx (S_{\text{CDS}} - C_{\text{fixed}}) \times EffDur_{\text{CDS}}$$</td>
+          <td>Upfront compensation between market spread &amp; fixed coupon.</td>
         </tr>
       </tbody>
     </table>

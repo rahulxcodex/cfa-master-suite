@@ -133,6 +133,21 @@
       </tbody>
     </table>
   </div>
+
+  <h3 class="subheading">Endowment Spending Rules &amp; Intergenerational Equity (L2 Institutional PM)</h3>
+  <ul>
+    <li><strong>Simple / Constant Growth Rule</strong>: $\text{Spending}_t = \text{Spending}_{t-1} \times (1 + \pi)$. Protects purchasing power stability but ignores AUM drawdowns.</li>
+    <li><strong>Rolling Average (Market-Value) Rule</strong>: $\text{Spending}_t = r \times \frac{1}{3}(AUM_{t-1} + AUM_{t-2} + AUM_{t-3})$. Smoothes market volatility over 3 years.</li>
+    <li><strong>Geometric / Hybrid (Tobin) Rule</strong>: Balances budget stability ($w$) with market reality ($1 - w$):
+      $$\text{Spending}_t = w \cdot [\text{Spending}_{t-1} \times (1 + \pi)] + (1 - w) \cdot [r \times AUM_{t-1}]$$
+    </li>
+  </ul>
+
+  <div class="card" style="background: rgba(16, 185, 129, 0.05); border-left: 4px solid var(--accent-emerald); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-emerald);">Worked Numerical Example: Hybrid (Tobin) Endowment Spending Calculation</h4>
+    <p><strong>Scenario</strong>: A university endowment has prior-year spending of 4.20M USD, annual inflation $\pi = 2.50\%$, trailing market value $AUM_{t-1} = 100.00\text{M USD}$, target spending rate $r = 4.50\%$, and smoothing weight $w = 0.70$.</p>
+    $$\text{Spending}_t = 0.70 \times [4.20\text{M} \times 1.025] + 0.30 \times [0.045 \times 100.00\text{M}] = 0.70(4.305\text{M}) + 0.30(4.500\text{M}) = 3.0135\text{M} + 1.3500\text{M} = 4.3635\text{M USD}$$
+  </div>
 </section>
 
 <!-- ========================================================================================= -->
@@ -214,6 +229,19 @@
     $$\sigma_p = \sqrt{0.0133552} = 11.56\%$$
 
     <p><strong>Diversification Analysis</strong>: The weighted-average standard deviation is $0.60(18.0\%) + 0.40(7.0\%) = 10.80\% + 2.80\% = 13.60\%$. Because $\rho_{1,2} = 0.15 < 1.0$, the actual portfolio risk is $\sigma_p = 11.56\%$. Diversification eliminates $13.60\% - 11.56\% = 2.04\%$ percentage points of annual volatility with zero reduction in expected return.</p>
+  </div>
+
+  <h3 class="subheading">Three-Asset Portfolio Variance Expansion</h3>
+  <div class="formula-card">
+    <div class="formula-title">N-Asset Variance Covariance Matrix Form</div>
+    $$\sigma_p^2 = w_1^2\sigma_1^2 + w_2^2\sigma_2^2 + w_3^2\sigma_3^2 + 2w_1w_2\rho_{1,2}\sigma_1\sigma_2 + 2w_1w_3\rho_{1,3}\sigma_1\sigma_3 + 2w_2w_3\rho_{2,3}\sigma_2\sigma_3$$
+  </div>
+
+  <div class="card" style="background: rgba(147, 51, 234, 0.05); border-left: 4px solid var(--accent-purple); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-purple);">Worked Numerical Example: Three-Asset Portfolio Risk</h4>
+    <p><strong>Scenario</strong>: Weights $w_1 = 50\%$ ($\sigma_1 = 18\%$), $w_2 = 30\%$ ($\sigma_2 = 10\%$), $w_3 = 20\%$ ($\sigma_3 = 6\%$). Correlations: $\rho_{1,2} = 0.25$, $\rho_{1,3} = -0.10$, $\rho_{2,3} = 0.40$.</p>
+    $$\sigma_p^2 = (0.5^2)(0.18^2) + (0.3^2)(0.10^2) + (0.2^2)(0.06^2) + 2(0.5)(0.3)(0.25)(0.18)(0.10) + 2(0.5)(0.2)(-0.10)(0.18)(0.06) + 2(0.3)(0.2)(0.40)(0.10)(0.06)$$
+    $$\sigma_p^2 = 0.008100 + 0.000900 + 0.000144 + 0.001350 - 0.000216 + 0.000288 = 0.010566 \implies \sigma_p = \sqrt{0.010566} = 10.28\%$$
   </div>
 </section>
 
@@ -483,6 +511,49 @@
       </tbody>
     </table>
   </div>
+
+  <div class="card" style="background: rgba(59, 130, 246, 0.05); border-left: 4px solid var(--accent-blue); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-blue);">Worked Numerical Example: Utility-Optimal Risky Asset Weight ($w^*$)</h4>
+    <p><strong>Scenario</strong>: An investor with risk-aversion coefficient $A = 4.0$ allocates between a risk-free T-bill ($R_f = 3.50\%$) and an optimal risky portfolio ($E(R_p) = 9.50\%$, $\sigma_p = 16.0\%$). Determine the utility-maximizing allocation $w^*$ to the risky portfolio.</p>
+    $$w^* = \frac{E(R_p) - R_f}{A \sigma_p^2} = \frac{0.095 - 0.035}{4.0 \times (0.16)^2} = \frac{0.060}{0.1024} = 58.59\% \quad (\text{and } 41.41\% \text{ in } R_f)$$
+  </div>
+
+  <h3 class="subheading">Behavioral Biases of Individuals (L1 &amp; CBOK X)</h3>
+  <p>Behavioral finance contrasts rational decision-making with psychological biases. The pivotal exam rule: <strong>Cognitive errors</strong> stem from faulty reasoning or statistical mistakes and can usually be <em>corrected/mitigated</em> through advisor education; <strong>Emotional biases</strong> stem from deep-seated feelings or impulses and generally must be <em>adapted to</em>.</p>
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Key Biases</th>
+          <th>Portfolio Consequence</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Cognitive: Belief Perseverance</strong></td>
+          <td>Conservatism, Confirmation, Representativeness (base-rate/sample-size neglect), Illusion of Control, Hindsight</td>
+          <td>Underreacting to new earnings surprises; extrapolating small sample trends; holding concentrated employer stock.</td>
+        </tr>
+        <tr>
+          <td><strong>Cognitive: Information Processing</strong></td>
+          <td>Anchoring &amp; Adjustment, Mental Accounting, Framing, Availability</td>
+          <td>Fixating on purchase price; treating dividends separately from capital gains; home-country bias.</td>
+        </tr>
+        <tr>
+          <td><strong>Emotional Biases</strong></td>
+          <td>Loss Aversion (Disposition Effect), Overconfidence, Self-Control, Status Quo, Endowment, Regret Aversion</td>
+          <td>Selling winners too early while riding losers; excessive turnover; holding inherited legacy positions indefinitely.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 class="subheading">Sustainability / ESG Integration &amp; Shorting in Portfolios (CBOK X)</h3>
+  <ul>
+    <li><strong>ESG Investment Spectrum</strong>: Ranges from <em>Negative / Exclusionary Screening</em> (avoiding sin/fossil stocks) and <em>Best-in-Class / Positive Screening</em> to full <em>ESG Integration</em> into valuation models, <em>Thematic Investing</em> (clean energy), and <em>Impact Investing</em> (targeting measurable social/environmental outcomes alongside return).</li>
+    <li><strong>Shorting Securities in Portfolio Construction</strong>: Active extension strategies (e.g., <strong>130/30 funds</strong>: 130% long / 30% short, maintaining 100% net equity beta) relax the long-only constraint, raising Grinold's Transfer Coefficient ($TC \to 1.0$) and allowing alpha capture on overvalued stocks. Risks include unlimited upside loss, short-rebate compression, and stock-borrow recall risk.</li>
+  </ul>
 </section>
 
 <!-- ========================================================================================= -->
@@ -554,6 +625,19 @@
     $$\pi^* = \text{Central bank inflation target}, \quad y - y^* = \text{Output gap (actual vs potential real GDP in percent)}$$
   </div>
   <p><strong>Policy Implication</strong>: When actual inflation exceeds the target ($\pi > \pi^*$) or output exceeds potential ($y > y^*$), the Taylor Rule prescribes an elevated policy rate to cool aggregate demand. If current rates are below $i^*$, monetary authorities will likely hike rates, inducing yield curve flattening and compressed equity valuation multiples.</p>
+
+  <h3 class="subheading">Economics and Investment Markets (L2): Discount Rates &amp; Bad-Times Covariance</h3>
+  <p>Asset values equal expected future cash flows discounted by the stochastic <strong>Intertemporal Rate of Substitution ($m_t$)</strong>, which reflects the marginal utility of consuming 1 unit tomorrow versus today ($m_t = \beta u'(c_t)/u'(c_0)$):</p>
+  <div class="formula-card">
+    <div class="formula-title">Macro Asset Pricing Decomposition</div>
+    $$\text{Risk-Free Real Rate: } r_{\text{real}} \approx -\ln(\beta) + \text{Expected Real GDP Growth}$$
+    $$\text{Nominal Default-Free Yield} = r_{\text{real}} + \text{Expected Inflation } (\pi) + \text{Inflation Risk Premium } (\theta)$$
+    $$\text{Risky Asset Discount Rate} = r_{\text{real}} + \pi + \theta + \text{Credit / Equity Risk Premium } (\lambda)$$
+  </div>
+  <ul>
+    <li><strong>Covariance with Bad Times</strong>: Assets whose payoffs drop during recessions ("bad times," when marginal utility of consumption $m_t$ is highest) have $\text{Cov}(P_t, m_t) < 0$ and therefore demand a positive risk premium (equities, corporate credit, commercial real estate). Default-free inflation-linked bonds exhibit near-zero or positive covariance and command lower yields.</li>
+    <li><strong>Business Cycle Behavior</strong>: Corporate credit spreads widen sharply in contractions (flight to quality) and compress during expansions; break-even inflation ($BEI = \text{Nominal Yield} - \text{TIPS Yield} = \pi + \theta$) falls when recessionary deflation risks dominate.</li>
+  </ul>
 </section>
 
 <!-- ========================================================================================= -->
@@ -650,6 +734,32 @@
       </tbody>
     </table>
   </div>
+
+  <h3 class="subheading">Brinson-Fachler Return Attribution (Allocation, Selection &amp; Interaction)</h3>
+  <p>Performance attribution decomposes active portfolio return ($R_P - R_B$) across asset classes or equity sectors relative to benchmark weights ($w_{B,i}$) and benchmark total return ($R_B$):</p>
+  <div class="formula-card">
+    <div class="formula-title">Brinson-Fachler Single-Period Attribution Equations</div>
+    $$A_i = (w_{P,i} - w_{B,i}) \times (R_{B,i} - R_B) \quad (\text{Allocation Effect})$$
+    $$S_i = w_{B,i} \times (R_{P,i} - R_{B,i}) \quad (\text{Security Selection Effect})$$
+    $$I_i = (w_{P,i} - w_{B,i}) \times (R_{P,i} - R_{B,i}) \quad (\text{Interaction Effect})$$
+  </div>
+
+  <div class="card" style="background: rgba(245, 158, 11, 0.05); border-left: 4px solid var(--accent-amber); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-amber);">Worked Numerical Example: Brinson-Fachler Sector Attribution</h4>
+    <p><strong>Scenario</strong>: Technology ($w_B = 50\%, R_B = 10.0\%$ vs. $w_P = 60\%, R_P = 12.0\%$) and Healthcare ($w_B = 50\%, R_B = 6.0\%$ vs. $w_P = 40\%, R_P = 5.0\%$). Total $R_B = 0.5(10\%) + 0.5(6\%) = 8.00\%$, Total $R_P = 0.6(12\%) + 0.4(5\%) = 9.20\%$, Active Return $= +1.20\%$ (+120 bps).</p>
+    <ol>
+      <li><strong>Allocation Effect</strong>:
+        $$A_{\text{Tech}} = (0.60 - 0.50)(10.0\% - 8.0\%) = +0.20\%, \quad A_{\text{HC}} = (0.40 - 0.50)(6.0\% - 8.0\%) = +0.20\% \implies \sum A_i = +0.40\%$$
+      </li>
+      <li><strong>Selection Effect</strong>:
+        $$S_{\text{Tech}} = 0.50(12.0\% - 10.0\%) = +1.00\%, \quad S_{\text{HC}} = 0.50(5.0\% - 6.0\%) = -0.50\% \implies \sum S_i = +0.50\%$$
+      </li>
+      <li><strong>Interaction Effect</strong>:
+        $$I_{\text{Tech}} = (0.60 - 0.50)(12.0\% - 10.0\%) = +0.20\%, \quad I_{\text{HC}} = (0.40 - 0.50)(5.0\% - 6.0\%) = +0.10\% \implies \sum I_i = +0.30\%$$
+      </li>
+      <li><strong>Total Attribution Check</strong>: $+0.40\% + 0.50\% + 0.30\% = +1.20\%$ (120 bps exact match).</li>
+    </ol>
+  </div>
 </section>
 
 <!-- ========================================================================================= -->
@@ -687,7 +797,7 @@
 
   <div class="card" style="background: rgba(16, 185, 129, 0.05); border-left: 4px solid var(--accent-emerald); margin: 15px 0;">
     <h4 style="margin: 0 0 10px 0; color: var(--accent-emerald);">Worked Numerical Example: Factor vs Specific Active Risk Decomposition</h4>
-    <p>A portfolio manager holds active exposures to two factors: Market ($\Delta eta_1 = +0.15$) and Size ($\Delta eta_2 = +0.25$).</p>
+    <p>A portfolio manager holds active exposures to two factors: Market ($\Delta \beta_1 = +0.15$) and Size ($\Delta \beta_2 = +0.25$).</p>
     <ul>
       <li>Factor Volatilities: $\sigma_{F1} = 15.0\%$, $\sigma_{F2} = 8.0\%$; Factor Correlation: $\rho_{1,2} = 0.20$</li>
       <li>Active Specific Risk (from security selection): $\sigma_{\epsilon,A} = 2.80\%$ (Specific Variance $= 2.80^2 = 7.84$)</li>
@@ -704,6 +814,27 @@
     $$\sigma_A^2 = \text{Active Factor Variance} + \text{Active Specific Variance} = 10.8625 + 7.8400 = 18.7025$$
     $$\sigma_A = \sqrt{18.7025} = 4.32\%$$
     <p><em>Attribution Breakdown</em>: Active factor risk accounts for $\frac{10.8625}{18.7025} = 58.08\%$ of total active variance, while active specific risk accounts for $\frac{7.8400}{18.7025} = 41.92\%$.</p>
+  </div>
+
+  <h3 class="subheading">Measuring &amp; Managing Market Risk: VaR, CVaR &amp; Risk Budgeting (L2)</h3>
+  <ul>
+    <li><strong>Value at Risk (VaR)</strong>: Minimum expected loss over a given time horizon at a specified confidence level (or probability $p$ of exceeding loss). Three estimation methods:
+      <ol>
+        <li><em>Parametric (Variance-Covariance)</em>: $\text{VaR}_{p} = |\mu_p - z_{p}\sigma_p| \times V_P$ (assumes normal returns; fast but underestimates fat tails &amp; non-linear option gamma).</li>
+        <li><em>Historical Simulation</em>: Ranks actual past returns empirically without distributional assumptions (captures fat tails, assumes history repeats).</li>
+        <li><em>Monte Carlo Simulation</em>: Generates thousands of random paths allowing non-normal distributions, fat tails, and path-dependent options.</li>
+      </ol>
+    </li>
+    <li><strong>Extensions &amp; Risk Governance</strong>: <strong>Conditional VaR (CVaR / Expected Shortfall)</strong> measures the <em>average</em> loss given that the VaR threshold has been breached (coherent risk measure). <strong>Incremental VaR (IVaR)</strong> measures exact change in VaR from adding/removing a position; <strong>Marginal VaR (MVaR)</strong> gives the first derivative ($\partial \text{VaR}/\partial w_i$). Combine VaR with <em>Stress Testing</em>, <em>Scenario Analysis</em>, and <em>Risk Budgeting</em> (allocating capital by marginal contribution to risk).</li>
+  </ul>
+
+  <div class="card" style="background: rgba(16, 185, 129, 0.05); border-left: 4px solid var(--accent-emerald); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-emerald);">Worked Numerical Example: Parametric 95% &amp; 99% Portfolio VaR</h4>
+    <p><strong>Scenario</strong>: A 50,000,000 USD multi-asset portfolio has daily expected return $\mu_d = 0.04\%$ and daily volatility $\sigma_d = 1.25\%$. Compute 1-day 95% ($z = 1.645$) and 99% ($z = 2.326$) parametric VaR.</p>
+    <ul>
+      <li><strong>1-Day 95% VaR</strong>: $|0.04\% - 1.645(1.25\%)| = 2.01625\% \implies 0.0201625 \times 50,000,000 = 1,008,125\text{ USD}$ (meaning there is a 5% probability of losing <em>at least</em> 1,008,125 USD in a single day).</li>
+      <li><strong>1-Day 99% VaR</strong>: $|0.04\% - 2.326(1.25\%)| = 2.8675\% \implies 0.028675 \times 50,000,000 = 1,433,750\text{ USD}$.</li>
+    </ul>
   </div>
 </section>
 
@@ -848,6 +979,18 @@
       </li>
     </ol>
   </div>
+
+  <h3 class="subheading">Backtesting &amp; Simulation Pitfalls (L2)</h3>
+  <ul>
+    <li><strong>Core Backtesting Biases</strong>: <em>Survivorship Bias</em> (excluding delisted/bankrupt firms inflates backtested alpha); <em>Look-Ahead Bias</em> (using financial statements before their actual public filing date); <em>Data Snooping / Overfitting</em> (p-hacking multiple rules on one dataset without out-of-sample cross-validation).</li>
+    <li><strong>Simulation Methods</strong>: <em>Rolling Window</em> drops oldest observations (captures regime shifts); <em>Expanding Window</em> keeps all history (reduces estimation error). <em>Bootstrapping</em> resamples actual historical returns with replacement (preserving empirical skewness/kurtosis), whereas <em>Monte Carlo</em> samples from a parameterized theoretical distribution.</li>
+  </ul>
+
+  <h3 class="subheading">Technical Analysis, Market Microstructure &amp; Fintech (L1 &amp; CBOK X)</h3>
+  <ul>
+    <li><strong>Technical Analysis &amp; Market Sentiment</strong>: Assumes market prices discount all known fundamentals and trends persist. Analysts track <strong>Support/Resistance</strong> levels, reversal patterns (<em>Head &amp; Shoulders</em>, <em>Double Top/Bottom</em>), continuation patterns (<em>Triangles</em>, <em>Flags</em>), trend indicators (50/200-day <em>Moving Averages</em>, <em>MACD</em>), momentum oscillators (<em>RSI &gt; 70 overbought, &lt; 30 oversold</em>), and contrarian sentiment gauges (Put/Call ratio, VIX).</li>
+    <li><strong>Fintech, Big Data, AI &amp; DLT</strong>: Structured vs. unstructured data (satellite imagery, earnings-call transcripts) analyzed via <strong>Natural Language Processing (NLP)</strong> and <strong>Machine Learning</strong> (Supervised: LASSO/Ridge/Random Forests for return prediction; Unsupervised: clustering/PCA for risk regimes). <em>Robo-advisors</em> automate IPS profiling and tax-loss harvesting; <em>Distributed Ledger Technology (DLT)</em> and smart contracts streamline trade clearing and tokenized settlement.</li>
+  </ul>
 </section>
 
 <!-- ========================================================================================= -->
@@ -987,6 +1130,30 @@
           <td>Implementation Shortfall</td>
           <td>$$\text{IS} = (P_0 - P_d)S_E + \sum (p_j - P_0)s_j + (P_{\text{cancel}} - P_d)S_U + \text{Fees}$$</td>
           <td>Delay cost + Trading cost + Opportunity cost + Explicit fees.</td>
+        </tr>
+        <tr>
+          <td><strong>Allocation</strong></td>
+          <td>Optimal Risky Weight</td>
+          <td>$$w^* = \frac{E(R_p) - R_f}{A\sigma_p^2}$$</td>
+          <td>Utility-maximizing allocation to optimal risky portfolio.</td>
+        </tr>
+        <tr>
+          <td><strong>Attribution</strong></td>
+          <td>Brinson-Fachler</td>
+          <td>$$A_i = (w_{P,i}-w_{B,i})(R_{B,i}-R_B), \quad S_i = w_{B,i}(R_{P,i}-R_{B,i})$$</td>
+          <td>Decomposes active return into allocation, selection, and interaction.</td>
+        </tr>
+        <tr>
+          <td><strong>Market Risk</strong></td>
+          <td>Parametric VaR</td>
+          <td>$$\text{VaR}_p = |\mu_p - z_p\sigma_p| \times V_P$$</td>
+          <td>Minimum expected portfolio loss at confidence threshold.</td>
+        </tr>
+        <tr>
+          <td><strong>Institutional</strong></td>
+          <td>Tobin Spending Rule</td>
+          <td>$$S_t = w \cdot S_{t-1}(1+\pi) + (1-w) \cdot r \cdot AUM_{t-1}$$</td>
+          <td>Balances budget predictability with market endowment value.</td>
         </tr>
       </tbody>
     </table>

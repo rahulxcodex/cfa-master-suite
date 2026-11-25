@@ -71,7 +71,43 @@ fi_html = """<div class="top-controls">
   </ul>
 
   <h3 class="subheading">Matrix Pricing for Illiquid & Unrated Bonds</h3>
-  <p>When a target bond is illiquid or newly issued without market quotes, analysts utilize <strong>Matrix Pricing</strong> (linear interpolation of yields on comparable liquid benchmark bonds matching maturity and credit quality) to establish the appropriate discounting yield.</p>
+  <p>When a target bond is illiquid or newly issued without market quotes, analysts utilize <strong>Matrix Pricing</strong> (linear interpolation of yields on comparable liquid benchmark bonds matching maturity and credit quality) to establish the appropriate discounting yield:</p>
+  <div class="formula-card">
+    <div class="formula-title">Matrix Pricing Linear Interpolation</div>
+    $$y_{\\text{target}} = y_{\\text{short}} + \\left( \\frac{T_{\\text{target}} - T_{\\text{short}}}{T_{\\text{long}} - T_{\\text{short}}} \\right) \\times (y_{\\text{long}} - y_{\\text{short}})$$
+  </div>
+
+  <div class="card" style="background: rgba(16, 185, 129, 0.05); border-left: 4px solid var(--accent-emerald); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-emerald);">Worked Numerical Example 1: Clean vs. Dirty Price &amp; Matrix Pricing</h4>
+    <p><strong>Part A (Accrued Interest &amp; Full Price)</strong>: A 6.0% semiannual-pay Treasury bond (Par = 1,000 USD) settles 62 days into a 182-day coupon period (Actual/Actual convention) at a quoted flat (clean) price of 1,018.50 USD.</p>
+    <ul>
+      <li>Semiannual coupon payment: $PMT = \\frac{6.0\\% \\times 1,000}{2} = 30.00\\text{ USD}$</li>
+      <li>Accrued Interest: $AI = 30.00 \\times \\frac{62}{182} = 10.22\\text{ USD}$</li>
+      <li>Full (Dirty) Price paid by buyer: $PV^{\\text{Full}} = 1,018.50 + 10.22 = 1,028.72\\text{ USD}$</li>
+    </ul>
+    <p><strong>Part B (Matrix Pricing)</strong>: A newly issued 4.2-year BBB-rated corporate bond lacks market quotes. Comparable liquid BBB bonds yield 5.20% (3.0-year maturity) and 5.80% (5.0-year maturity):</p>
+    $$y_{\\text{4.2Y}} = 5.20\\% + \\left(\\frac{4.2 - 3.0}{5.0 - 3.0}\\right) \\times (5.80\\% - 5.20\\%) = 5.20\\% + 0.60 \\times 0.60\\% = 5.56\\%$$
+  </div>
+
+  <h3 class="subheading">Floating-Rate Notes (FRNs), Repo &amp; Shorting Fixed Income (CBOK VII)</h3>
+  <p><strong>Floating-Rate Notes (FRNs)</strong> reset coupons periodically relative to a market reference rate (MRR / SOFR) plus a fixed <strong>Quoted Margin ($QM$)</strong>. When credit quality changes after issuance, the market discounts cash flows using MRR plus the required <strong>Discount Margin ($DM$)</strong> ($PV < \\text{Par}$ if $DM > QM$).</p>
+  <p><strong>Repurchase Agreements (Repo) &amp; Shorting Bonds</strong>: A repo is a collateralized short-term loan where a dealer sells a bond today and agrees to repurchase it at a higher price on a future date. Conversely, investors <strong>short fixed-income securities</strong> by entering a <em>reverse repo</em> (lending cash to borrow the bond collateral), selling the bond in the market, and obligating themselves to reimburse the lender for any interim coupon payments. High demand to short a specific Treasury issue drives its collateral rate down—trading <strong>"on special"</strong> (below the general collateral repo rate).</p>
+  <div class="formula-card">
+    <div class="formula-title">Repurchase Agreement (Repo) Pricing &amp; Haircut</div>
+    $$\\text{Initial Loan (Purchase Price)} = \\text{Collateral Market Value} \\times (1 - \\text{Repo Margin / Haircut})$$
+    $$\\text{Repurchase Price} = \\text{Purchase Price} \\times \\left(1 + \\text{Repo Rate} \\times \\frac{\\text{Days}}{360}\\right)$$
+  </div>
+
+  <div class="card" style="background: rgba(59, 130, 246, 0.05); border-left: 4px solid var(--accent-blue); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-blue);">Worked Numerical Example 2: Repo Haircut, Dollar Interest &amp; Short Financing</h4>
+    <p><strong>Scenario</strong>: A dealer finances 10,000,000 USD market value of corporate bonds via a 30-day repo agreement with a 4.0% haircut and a 4.80% annualized repo rate (Actual/360 convention).</p>
+    <ol>
+      <li><strong>Purchase Price (Cash Borrowed)</strong>: $10,000,000 \\times (1 - 0.04) = 9,600,000\\text{ USD}$</li>
+      <li><strong>Repo Dollar Interest</strong>: $9,600,000 \\times 0.0480 \\times \\frac{30}{360} = 38,400\\text{ USD}$</li>
+      <li><strong>Repurchase Price at Maturity</strong>: $9,600,000 + 38,400 = 9,638,400\\text{ USD}$</li>
+    </ol>
+    <p><em>Short-Selling Link</em>: A hedge fund acting as the reverse-repo counterparty lends 9,600,000 USD, receives the bonds as collateral, shorts them for cash, and earns 4.80% on its posted cash margin (rebate) while paying the bond's accrued coupon to the collateral owner.</p>
+  </div>
 </section>
 
 <!-- ========================================================================================= -->
@@ -141,6 +177,60 @@ fi_html = """<div class="top-controls">
       </tbody>
     </table>
   </div>
+
+  <div class="card" style="background: rgba(147, 51, 234, 0.05); border-left: 4px solid var(--accent-purple); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-purple);">Worked Numerical Example 3: Bootstrapping Spot Rates &amp; Forward Rate Parity</h4>
+    <p><strong>Scenario</strong>: Given annual-pay benchmark government par yields of $y_1 = 4.00\\%$, $y_2 = 4.50\\%$, and $y_3 = 5.00\\%$, bootstrap the spot curve ($S_1, S_2, S_3$) and derive the 2-year forward rate starting in 1 year, $f(1,2)$.</p>
+    <ol>
+      <li><strong>1-Year Spot Rate ($S_1$)</strong>: $S_1 = y_1 = 4.0000\\%$</li>
+      <li><strong>2-Year Spot Rate ($S_2$)</strong>: Using a 2-year par bond ($c = 4.50\\%$):
+        $$1.00 = \\frac{0.045}{1.04} + \\frac{1.045}{(1+S_2)^2} \\implies (1+S_2)^2 = \\frac{1.045}{1 - 0.043269} = 1.09226 \\implies S_2 = 4.5113\\%$$
+      </li>
+      <li><strong>3-Year Spot Rate ($S_3$)</strong>: Using a 3-year par bond ($c = 5.00\\%$):
+        $$1.00 = \\frac{0.05}{1.04} + \\frac{0.05}{(1.045113)^2} + \\frac{1.05}{(1+S_3)^3} \\implies S_3 = \\left(\\frac{1.05}{1 - 0.048077 - 0.045777}\\right)^{1/3} - 1 = 5.0341\\%$$
+      </li>
+      <li><strong>Implied 2-Year Forward Rate 1 Year Forward ($f(1,2)$)</strong>:
+        $$[1 + f(1,2)]^2 = \\frac{(1+S_3)^3}{(1+S_1)^1} = \\frac{(1.050341)^3}{1.0400} = 1.11408 \\implies f(1,2) = \\sqrt{1.11408} - 1 = 5.5550\\%$$
+      </li>
+    </ol>
+    <p><em>Check</em>: Because the spot curve is upward sloping, $f(1,2) = 5.56\\% > S_3 = 5.03\\% > y_3 = 5.00\\%$.</p>
+  </div>
+
+  <h3 class="subheading">Equilibrium vs. Arbitrage-Free Term Structure Models (L2) &amp; Yield Curve Strategies</h3>
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Model / Class</th>
+          <th>Drift &amp; Volatility Specification</th>
+          <th>Key Properties &amp; Exam Distinction</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Vasicek Model</strong> (Equilibrium)</td>
+          <td>$dr = a(b - r)dt + \\sigma dW$</td>
+          <td>Mean-reverting ($b$ = long-run mean); <strong>constant volatility</strong> $\\sigma$; permits <em>negative</em> interest rates.</td>
+        </tr>
+        <tr>
+          <td><strong>Cox-Ingersoll-Ross (CIR)</strong> (Equilibrium)</td>
+          <td>$dr = a(b - r)dt + \\sigma\\sqrt{r}\\,dW$</td>
+          <td>Mean-reverting; volatility proportional to $\\sqrt{r}$ (rises with rate level); prevents negative rates if $2ab \\ge \\sigma^2$.</td>
+        </tr>
+        <tr>
+          <td><strong>Ho-Lee Model</strong> (Arbitrage-Free)</td>
+          <td>$dr = \\theta_t\\,dt + \\sigma dW$</td>
+          <td>Calibrated exactly to today's observed spot curve via time-dependent drift $\\theta_t$; normal distribution (allows negative rates).</td>
+        </tr>
+        <tr>
+          <td><strong>Kalotay-Williams-Fabozzi (KWF)</strong> (Arbitrage-Free)</td>
+          <td>$d\\ln(r) = \\theta_t\\,dt + \\sigma dW$</td>
+          <td>Lognormal short-rate distribution; calibrated to market term structure; guarantees <strong>strictly positive rates</strong> with constant proportional vol.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p><strong>Active Curve Strategies</strong>: Under an upward-sloping, stable yield curve, <strong>Riding the Yield Curve</strong> purchases bonds with maturities longer than the holding horizon so the bond "rolls down" the curve to lower yields and appreciates in price. The <strong>MRR–OIS Spread</strong> (difference between interbank funding rates and overnight index swap rates) serves as a primary gauge of banking-sector funding stress.</p>
 </section>
 
 <!-- ========================================================================================= -->
@@ -162,6 +252,24 @@ fi_html = """<div class="top-controls">
       $$\\text{For a Callable Bond: } Z\\text{-spread} > OAS \\implies \\text{Option Cost} > 0$$
       $$\\text{For a Putable Bond: } Z\\text{-spread} < OAS \\implies \\text{Option Cost} < 0$$
     </li>
+    <li><strong>Current Yield, Yield-to-Call (YTC) &amp; Yield-to-Worst (YTW)</strong>: Current yield $= \\frac{\\text{Annual Coupon}}{\\text{Flat Price}}$. For callable bonds, compute YTM and YTC to every call schedule date; <strong>Yield-to-Worst (YTW)</strong> is the minimum of YTM and all YTCs.</li>
+  </ul>
+
+  <div class="card" style="background: rgba(245, 158, 11, 0.05); border-left: 4px solid var(--accent-amber); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-amber);">Worked Numerical Example 4: Yield-to-Worst (YTW), Z-Spread &amp; OAS Decomposition</h4>
+    <p><strong>Scenario</strong>: A 10-year, 6.0% semiannual coupon corporate bond (Par = 1,000 USD) trades at 1,060.00 USD and is callable in 4 years at 1,030.00 USD. A comparable government benchmark yields 4.00%, the bond's $Z$-spread is 148 bps, and the embedded call option cost is estimated at 36 bps.</p>
+    <ol>
+      <li><strong>Yield-to-Maturity (YTM)</strong>: Solving $1,060 = \\sum_{t=1}^{20} \\frac{30}{(1+r)^{t}} + \\frac{1,000}{(1+r)^{20}}$ yields semiannual $r = 2.61\\% \\implies \\text{YTM} = 5.22\\%$.</li>
+      <li><strong>Yield-to-Call (YTC at 4Y)</strong>: Solving $1,060 = \\sum_{t=1}^{8} \\frac{30}{(1+r_c)^{t}} + \\frac{1,030}{(1+r_c)^{8}}$ yields semiannual $r_c = 2.505\\% \\implies \\text{YTC} = 5.01\\%$.</li>
+      <li><strong>Yield-to-Worst (YTW)</strong>: $\\min(5.22\\%, 5.01\\%) = 5.01\\%$ (YTC governs because bond trades above call price).</li>
+      <li><strong>G-Spread &amp; OAS</strong>: $\\text{G-Spread} = 5.22\\% - 4.00\\% = 122\\text{ bps}$. Removing the call option cost gives pure credit/liquidity compensation: $OAS = Z\\text{-spread} - \\text{Option Cost} = 148 - 36 = 112\\text{ bps}$.</li>
+    </ol>
+  </div>
+
+  <h3 class="subheading">Sustainability Considerations in Fixed Income (CBOK VII)</h3>
+  <ul>
+    <li><strong>Green, Social &amp; Sustainability Bonds</strong>: Use-of-proceeds debt ring-fenced to environmental or social projects; credit risk remains backed by the issuer's general balance sheet. When investor demand outpaces supply, green bonds may price at a slight yield discount (<strong>Greenium</strong>).</li>
+    <li><strong>Sustainability-Linked Bonds (SLBs)</strong>: General corporate purpose debt whose financial terms (typically a coupon step-up of +25 bps to +50 bps) adjust if the issuer fails to achieve predefined Sustainability Performance Targets (SPTs) by a target observation date.</li>
   </ul>
 </section>
 
@@ -198,9 +306,25 @@ fi_html = """<div class="top-controls">
     </div>
   </div>
 
-  <h3 class="subheading">Key Rate Duration (KRD)</h3>
+  <h3 class="subheading">Key Rate Duration (KRD), Money Duration &amp; Empirical Duration</h3>
   <p>Key rate duration measures bond price sensitivity to a 100 bps shift at a single maturity point on the spot curve while holding all other points constant. The sum of all key rate durations equals the effective duration for a parallel shift:</p>
-  $$EffDur = \\sum_{i=1}^M KRD_i$$
+  $$EffDur = \\sum_{i=1}^M KRD_i, \\qquad \\text{MoneyDur} = ModDur \\times PV^{\\text{Full}}, \\qquad \\text{PVBP} = \\frac{PV_- - PV_+}{2} \\text{ (for } \\Delta y = 1\\text{ bp)}$$
+  <p><strong>Portfolio Duration</strong> equals the <em>market-value weighted average</em> of constituent bond durations ($Dur_P = \\sum w_i Dur_i$), NOT an equally weighted average. <strong>Analytical vs. Empirical Duration</strong>: Analytical formulas assume benchmark yields and credit spreads move independently. In "flight-to-safety" recessions, government benchmark yields fall while high-yield credit spreads widen simultaneously—making <strong>Empirical Duration</strong> (estimated via historical regression of bond prices on benchmark yields) substantially lower than analytical duration for high-yield corporates.</p>
+
+  <div class="card" style="background: rgba(16, 185, 129, 0.05); border-left: 4px solid var(--accent-emerald); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-emerald);">Worked Numerical Example 5: Effective Duration, Convexity &amp; Key Rate Duration Twist</h4>
+    <p><strong>Scenario</strong>: A bond trades at $PV_0 = 100.00\\text{ USD}$. Shifting the benchmark par curve by $\\Delta y = \\pm 25\\text{ bps}$ ($0.0025$) produces $PV_- = 101.84\\text{ USD}$ and $PV_+ = 98.24\\text{ USD}$. Its key rate profile is $KRD_2 = 1.20$, $KRD_5 = 2.80$, $KRD_{10} = 3.20$.</p>
+    <ol>
+      <li><strong>Effective Duration</strong>: $EffDur = \\frac{101.84 - 98.24}{2 \\times 0.0025 \\times 100.00} = \\frac{3.60}{0.50} = 7.20$ (Notice $1.20 + 2.80 + 3.20 = 7.20$).</li>
+      <li><strong>Effective Convexity</strong>: $EffConv = \\frac{101.84 + 98.24 - 2(100.00)}{(0.0025)^2 \\times 100.00} = \\frac{0.08}{0.000625} = 128.00$.</li>
+      <li><strong>+100 bps Parallel Yield Increase ($\\Delta y = +0.01$)</strong>:
+        $$\\%\\Delta PV \\approx -7.20(0.01) + \\frac{1}{2}(128.00)(0.01)^2 = -7.20\\% + 0.64\\% = -6.56\\%$$
+      </li>
+      <li><strong>Non-Parallel Curve Flattening Twist</strong> ($\\Delta y_2 = +40\\text{ bps}$, $\\Delta y_5 = +10\\text{ bps}$, $\\Delta y_{10} = -25\\text{ bps}$):
+        $$\\%\\Delta PV \\approx -(1.20 \\times 0.40\\% + 2.80 \\times 0.10\\% + 3.20 \\times (-0.25\\%)) = -(0.48\\% + 0.28\\% - 0.80\\%) = +0.04\\%$$
+      </li>
+    </ol>
+  </div>
 </section>
 
 <!-- ========================================================================================= -->
@@ -228,6 +352,47 @@ fi_html = """<div class="top-controls">
     $$V_{\\text{node}} = \\frac{1}{2} \\left[ \\frac{V_{u} + PMT}{1 + r_{\\text{node}}} + \\frac{V_{d} + PMT}{1 + r_{\\text{node}}} \\right]$$
     $$\\text{Callable Node Decision: } V = \\min(\\text{Calculated Node Value}, \\text{Call Price})$$
     $$\\text{Putable Node Decision: } V = \\max(\\text{Calculated Node Value}, \\text{Put Price})$$
+  </div>
+
+  <div class="card" style="background: rgba(59, 130, 246, 0.05); border-left: 4px solid var(--accent-blue); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-blue);">Worked Numerical Example 6: 2-Period Binomial Tree Backward Induction (Callable Bond)</h4>
+    <p><strong>Scenario</strong>: Value a 2-year, 6.0% annual-pay bond (Par = 100.00) callable at 101.00 at $t=1$. The calibrated 1-year forward rates are $r_0 = 4.00\\%$ at $t=0$, and $r_{1,u} = 5.50\\%$, $r_{1,d} = 4.20\\%$ at $t=1$.</p>
+    <ol>
+      <li><strong>Straight Bond at $t=1$</strong> ($CF_2 = 106.00$):
+        $$V_{1,u}^{\\text{straight}} = \\frac{106.00}{1.055} = 100.4739, \\qquad V_{1,d}^{\\text{straight}} = \\frac{106.00}{1.042} = 101.7274$$
+        $$V_0^{\\text{straight}} = \\frac{1}{2}\\left[\\frac{100.4739 + 6}{1.04} + \\frac{101.7274 + 6}{1.04}\\right] = 102.9814$$
+      </li>
+      <li><strong>Callable Bond Decision at $t=1$</strong> ($V_{\\text{call}} = \\min(V_{\\text{calc}}, 101.00)$):
+        <ul>
+          <li>Upper node: $\\min(100.4739, 101.00) = 100.4739$ (not called).</li>
+          <li>Lower node: $\\min(101.7274, 101.00) = 101.0000$ (<strong>called</strong> at 101.00!).</li>
+        </ul>
+      </li>
+      <li><strong>Callable Value &amp; Embedded Call Option Value at $t=0$</strong>:
+        $$V_0^{\\text{callable}} = \\frac{1}{2}\\left[\\frac{100.4739 + 6}{1.04} + \\frac{101.0000 + 6}{1.04}\\right] = 102.6317$$
+        $$V_{\\text{Call Option}} = V_0^{\\text{straight}} - V_0^{\\text{callable}} = 102.9814 - 102.6317 = 0.3497$$
+      </li>
+    </ol>
+  </div>
+
+  <h3 class="subheading">Convertible Bonds Valuation &amp; Parity Metrics (L2)</h3>
+  <p>A <strong>Convertible Bond</strong> grants the holder the right to convert the bond into a specified number of common shares (<strong>Conversion Ratio</strong>). Its value cannot fall below the greater of its straight debt value or conversion value:</p>
+  <div class="formula-card">
+    <div class="formula-title">Convertible Bond Identities</div>
+    $$\\text{Conversion Value} = \\text{Conversion Ratio} \\times \\text{Stock Price}, \\qquad \\text{Minimum Value} = \\max(\\text{Straight Value}, \\text{Conversion Value})$$
+    $$\\text{Market Conversion Price} = \\frac{\\text{Convertible Bond Price}}{\\text{Conversion Ratio}}, \\qquad \\text{Conv. Premium Ratio} = \\frac{\\text{Market Conv. Price} - \\text{Stock Price}}{\\text{Stock Price}}$$
+  </div>
+
+  <div class="card" style="background: rgba(147, 51, 234, 0.05); border-left: 4px solid var(--accent-purple); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-purple);">Worked Numerical Example 7: Convertible Bond Parity &amp; Premiums</h4>
+    <p><strong>Scenario</strong>: A convertible bond (Par = 1,000 USD) has a Conversion Ratio of 25 shares, Straight Value of 940 USD, and trades at 1,144 USD when the underlying common stock trades at 44.00 USD.</p>
+    <ul>
+      <li><strong>Conversion Value</strong>: $25 \\times 44.00 = 1,100.00\\text{ USD}$</li>
+      <li><strong>Minimum Value</strong>: $\\max(940.00, 1,100.00) = 1,100.00\\text{ USD}$</li>
+      <li><strong>Market Conversion Price</strong>: $\\frac{1,144}{25} = 45.76\\text{ USD}$ (effective entry price per share via the bond).</li>
+      <li><strong>Market Conversion Premium Ratio</strong>: $\\frac{45.76 - 44.00}{44.00} = 4.00\\%$ (or $\\frac{1,144 - 1,100}{1,100} = 4.00\\%$).</li>
+      <li><strong>Premium Over Straight Value</strong> (Downside Risk): $\\frac{1,144 - 940}{940} = 21.70\\%$.</li>
+    </ul>
   </div>
 </section>
 
@@ -275,6 +440,39 @@ fi_html = """<div class="top-controls">
       </tbody>
     </table>
   </div>
+
+  <h3 class="subheading">4 Cs of Credit, Sovereign/Municipal/HY Debt &amp; CDS Mechanics (L1 &amp; L2)</h3>
+  <ul>
+    <li><strong>The 4 Cs of Corporate Credit</strong>: <strong>Capacity</strong> (EBITDA coverage, FCF/Debt), <strong>Collateral</strong> (asset quality, seniority waterfall), <strong>Covenants</strong> (affirmative &amp; negative restrictions), and <strong>Character</strong> (management integrity &amp; capital allocation history).</li>
+    <li><strong>Sovereign, Municipal &amp; High-Yield Debt</strong>: Sovereigns lack collateral and rely on fiscal/monetary institutional strength and FX reserves. US Municipal bonds divide into <strong>General Obligation (GO)</strong> (tax-backed) vs. <strong>Revenue Bonds</strong> (project-backed; higher risk); evaluate via <em>Tax-Equivalent Yield</em> $= \\frac{y_{\\text{muni}}}{1 - t}$. High-yield issuers emphasize structural subordination, liquidity runways, and recovery waterfalls.</li>
+    <li><strong>Credit Default Swaps (CDS) &amp; Upfront Payments</strong>: Protection buyer pays standardized fixed coupon (100 bps IG / 500 bps HY) to protection seller. Upfront payment reconciles coupon to market spread:
+      $$\\text{Upfront Payment (\\%)} \\approx (\\text{CDS Spread} - \\text{Fixed Coupon}) \\times \\text{EffDur}_{\\text{CDS}}$$
+      $$\\Delta\\text{Value}_{\\text{Buyer}} \\approx \\Delta\\text{Spread} \\times \\text{EffDur}_{\\text{CDS}} \\times \\text{Notional}, \\qquad POD(t) = 1 - e^{-\\lambda t}$$
+      <strong>Basis &amp; Curve Trades</strong>: Negative basis trade (buy bond + buy CDS when CDS spread $<$ bond credit spread). Credit curve steepener (sell short-dated CDS protection + buy long-dated CDS protection).
+    </li>
+  </ul>
+
+  <div class="card" style="background: rgba(245, 158, 11, 0.05); border-left: 4px solid var(--accent-amber); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-amber);">Worked Numerical Example 8: Multi-Period Credit Valuation Adjustment (CVA)</h4>
+    <p><strong>Scenario</strong>: Value a 2-year, 5.0% annual-pay corporate bond (Par = 1,000 USD) given a flat 3.00% risk-free rate, conditional annual hazard rate $PD = 2.00\\%$, and Recovery Rate $RR = 40\\%$ ($LGD = 60\\%$).</p>
+    <ol>
+      <li><strong>Default-Free Bond Value</strong>: $V_{\\text{ND}} = \\frac{50}{1.03} + \\frac{1,050}{1.03^2} = 48.54 + 989.73 = 1,038.27\\text{ USD}$.</li>
+      <li><strong>Year 1 Expected Loss</strong>: Exposure $= 50 + \\frac{1,050}{1.03} = 1,069.42\\text{ USD}$. $EL_1 = 0.02 \\times 0.60 \\times 1,069.42 = 12.83\\text{ USD}$. $PV(EL_1) = \\frac{12.83}{1.03} = 12.46\\text{ USD}$.</li>
+      <li><strong>Year 2 Expected Loss</strong>: Unconditional $PD_2 = (1 - 0.02) \\times 0.02 = 1.96\\%$. Exposure $= 1,050\\text{ USD}$. $EL_2 = 0.0196 \\times 0.60 \\times 1,050 = 12.35\\text{ USD}$. $PV(EL_2) = \\frac{12.35}{1.03^2} = 11.64\\text{ USD}$.</li>
+      <li><strong>CVA &amp; Fair Risky Value</strong>: $CVA = 12.46 + 11.64 = 24.10\\text{ USD} \\implies V_{\\text{Risky}} = 1,038.27 - 24.10 = 1,014.17\\text{ USD}$.</li>
+    </ol>
+  </div>
+
+  <div class="card" style="background: rgba(16, 185, 129, 0.05); border-left: 4px solid var(--accent-emerald); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-emerald);">Worked Numerical Example 9: CDS Upfront Payment &amp; Mark-to-Market Valuation</h4>
+    <p><strong>Scenario</strong>: An investor buys 10,000,000 USD notional of 5-year high-yield CDS protection (standardized fixed coupon = 500 bps) when the market CDS spread is 620 bps and $EffDur_{\\text{CDS}} = 4.2$.</p>
+    <ol>
+      <li><strong>Initial Upfront Payment</strong>: $(6.20\\% - 5.00\\%) \\times 4.2 = 1.20\\% \\times 4.2 = 5.04\\%$ of notional ($504,000\\text{ USD}$ paid by buyer to seller at initiation).</li>
+      <li><strong>Mark-to-Market After Spread Widening</strong>: Suppose credit fundamentals deteriorate and the CDS spread widens by $+80\\text{ bps}$ to 700 bps (new duration $= 4.0$):
+        $$\\text{Buyer MTM Gain} \\approx +0.0080 \\times 4.0 \\times 10,000,000\\text{ USD} = +320,000\\text{ USD}$$
+      </li>
+    </ol>
+  </div>
 </section>
 
 <!-- ========================================================================================= -->
@@ -297,11 +495,34 @@ fi_html = """<div class="top-controls">
     $$CPR = 1 - (1 - SMM)^{12} \\iff SMM = 1 - (1 - CPR)^{1/12}$$
   </div>
 
-  <h3 class="subheading">Collateralized Mortgage Obligations (CMO) Tranching</h3>
+  <h3 class="subheading">Collateralized Mortgage Obligations (CMO), CMBS, CDO &amp; Covered Bonds (CBOK VII)</h3>
   <ul>
     <li><strong>Sequential-Pay Tranches</strong>: Principal payments retire tranches in sequential order (Tranche A first, then B, then C). Early tranches absorb contraction risk; later tranches absorb extension risk.</li>
-    <li><strong>PAC & Support Tranches</strong>: Planned Amortization Class (PAC) tranches provide stable cash flows within a specified prepayment collar. The support tranche absorbs prepayments above or below the band, exhibiting high volatility.</li>
+    <li><strong>PAC &amp; Support Tranches</strong>: Planned Amortization Class (PAC) tranches provide stable cash flows within a specified prepayment collar. The support tranche absorbs prepayments above or below the band, exhibiting high volatility.</li>
+    <li><strong>Commercial MBS (CMBS) &amp; Credit Enhancement</strong>: Non-recourse loans analyzed via <em>DSCR</em> ($\\text{NOI} / \\text{Debt Service}$) and <em>LTV</em>. Call protection is embedded via lockout, defeasance, and yield maintenance. ABS/CDO waterfalls combine internal credit enhancement (overcollateralization, subordination, excess spread) to shield senior tranches.</li>
+    <li><strong>Covered Bonds</strong>: On-balance-sheet senior debt backed by <strong>dual recourse</strong>—both to the issuing financial institution and to a ring-fenced, dynamic cover pool (non-performing loans must be replaced). Redemption structures include <em>hard-bullet</em>, <em>soft-bullet</em>, and <em>conditional pass-through</em>.</li>
   </ul>
+
+  <div class="card" style="background: rgba(59, 130, 246, 0.05); border-left: 4px solid var(--accent-blue); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-blue);">Worked Numerical Example 10: MBS Prepayment Speed (PSA, CPR &amp; SMM)</h4>
+    <p><strong>Scenario</strong>: A residential mortgage pass-through pool has a beginning balance of 50,000,000 USD in Month 20, scheduled principal payment of 180,000 USD, and prepays at 150% PSA.</p>
+    <ol>
+      <li><strong>100% PSA Benchmark CPR (Month 20)</strong>: Ramps linearly at 0.20% per month up to Month 30 ($6.0\\%$): $\\text{CPR}_{100\\%}(20) = 6.0\\% \\times \\frac{20}{30} = 4.00\\%$.</li>
+      <li><strong>150% PSA CPR</strong>: $\\text{CPR}_{150\\%} = 1.50 \\times 4.00\\% = 6.00\\%$.</li>
+      <li><strong>Single Monthly Mortality (SMM)</strong>: $SMM = 1 - (1 - 0.060)^{1/12} = 0.005143 \\; (0.5143\\%)$.</li>
+      <li><strong>Monthly Principal Prepayment</strong>: $0.005143 \\times (50,000,000 - 180,000) = 256,225\\text{ USD}$.</li>
+    </ol>
+  </div>
+
+  <div class="card" style="background: rgba(147, 51, 234, 0.05); border-left: 4px solid var(--accent-purple); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-purple);">Worked Numerical Example 11: ABS / CDO Subordination Waterfall</h4>
+    <p><strong>Scenario</strong>: A 100,000,000 USD collateralized debt structure issues Senior Tranche (75,000,000 USD), Mezzanine Tranche (15,000,000 USD), and Equity/First-Loss Tranche (10,000,000 USD). Cumulative net default losses reach 18,000,000 USD.</p>
+    <ul>
+      <li><strong>Equity Tranche</strong>: Absorbs the first 10,000,000 USD of losses $\\implies$ completely wiped out (0 USD remaining).</li>
+      <li><strong>Mezzanine Tranche</strong>: Absorbs remaining $18,000,000 - 10,000,000 = 8,000,000\\text{ USD}$ $\\implies$ impaired to 7,000,000 USD principal.</li>
+      <li><strong>Senior Tranche</strong>: Fully protected by 25% subordination buffer $\\implies$ 75,000,000 USD principal remains 100% intact.</li>
+    </ul>
+  </div>
 </section>
 
 <!-- ========================================================================================= -->
@@ -369,6 +590,24 @@ fi_html = """<div class="top-controls">
           <td>SMM from CPR</td>
           <td>$$SMM = 1 - (1 - CPR)^{1/12}$$</td>
           <td>Monthly equivalent prepayment rate.</td>
+        </tr>
+        <tr>
+          <td><strong>Repo</strong></td>
+          <td>Repurchase Price</td>
+          <td>$$P_{\\text{rep}} = MV(1 - h)\\left(1 + r_{\\text{repo}} \\frac{\\text{Days}}{360}\\right)$$</td>
+          <td>Short-term collateralized financing &amp; bond shorting.</td>
+        </tr>
+        <tr>
+          <td><strong>Convertibles</strong></td>
+          <td>Min. Convertible Value</td>
+          <td>$$V_{\\min} = \\max(\\text{Straight Value}, \\text{CR} \\times P_{\\text{stock}})$$</td>
+          <td>Floor valuation combining debt &amp; equity parity.</td>
+        </tr>
+        <tr>
+          <td><strong>CDS</strong></td>
+          <td>CDS Upfront (%)</td>
+          <td>$$\\text{Upfront} \\approx (S_{\\text{CDS}} - C_{\\text{fixed}}) \\times EffDur_{\\text{CDS}}$$</td>
+          <td>Upfront compensation between market spread &amp; fixed coupon.</td>
         </tr>
       </tbody>
     </table>
@@ -454,6 +693,37 @@ eq_html = """<div class="top-controls">
       </tbody>
     </table>
   </div>
+
+  <h3 class="subheading">Shorting Equity Securities, Voting Jurisdictions &amp; Market Efficiency (CBOK VI &amp; 2027 L1)</h3>
+  <ul>
+    <li><strong>Shorting Equities &amp; Short Margin Call</strong>: A short seller borrows shares through a broker, sells them at $P_0$, deposits initial margin ($IM$), and remains liable for dividends paid during the short period plus any stock loan fee. The broker pays interest on cash proceeds minus the loan fee (the <strong>short rebate rate</strong>; hard-to-borrow stocks carry negative rebate rates and risk a <em>short squeeze</em>). Trigger price for a short margin call:
+      $$P_{\\text{Short Call}} = P_0 \\times \\left(\\frac{1 + IM}{1 + MM}\\right)$$
+    </li>
+    <li><strong>Equity Features, Jurisdictions &amp; Depositary Receipts (2027 L1 LM1–LM2)</strong>: <em>Statutory voting</em> assigns one vote per share per board seat; <em>cumulative voting</em> lets minority shareholders concentrate votes ($\\text{shares} \\times \\text{seats}$) onto a single director. Dual-class shares grant superior voting rights to founders. <strong>ADRs</strong> (Level I OTC, Level II listed, Level III capital-raising, Rule 144A private) vs. <strong>GDRs</strong> trade foreign equities across borders. Preference shares may be cumulative, participating, callable, or convertible.</li>
+    <li><strong>Market Efficiency &amp; Anomalies (EMH)</strong>: <em>Weak-form</em> rejects technical analysis; <em>Semi-strong-form</em> rejects both technical and fundamental analysis of public data; <em>Strong-form</em> prices reflect even private insider information. Apparent calendar, size, value, or momentum anomalies often stem from unmodeled risk factors, behavioral biases, or data mining.</li>
+  </ul>
+
+  <div class="card" style="background: rgba(16, 185, 129, 0.05); border-left: 4px solid var(--accent-emerald); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-emerald);">Worked Numerical Example 1: Long &amp; Short Margin Call Triggers &amp; Leveraged Return</h4>
+    <p><strong>Scenario</strong>: Initial margin $IM = 50\\%$, maintenance margin $MM = 30\\%$, initial stock price $P_0 = 80.00\\text{ USD}$ on 1,000 shares.</p>
+    <ol>
+      <li><strong>Long Position Margin Call Price</strong>: $P_{\\text{Long Call}} = 80.00 \\times \\frac{1 - 0.50}{1 - 0.30} = 80.00 \\times \\frac{0.50}{0.70} = 57.14\\text{ USD}$.</li>
+      <li><strong>Long Leveraged Return</strong>: If stock rises to 96.00 USD, pays 2.00 USD/share dividend, and margin loan interest on 40,000 USD is 6.0% ($2,400\\text{ USD}$):
+        $$R_{\\text{Leveraged}} = \\frac{1,000(96 - 80) + 1,000(2) - 2,400}{40,000} = \\frac{15,600}{40,000} = 39.00\\%$$
+      </li>
+      <li><strong>Short Sale Margin Call Price</strong>: $P_{\\text{Short Call}} = 80.00 \\times \\frac{1 + 0.50}{1 + 0.30} = 80.00 \\times \\frac{1.50}{1.30} = 92.31\\text{ USD}$.</li>
+    </ol>
+  </div>
+
+  <div class="card" style="background: rgba(59, 130, 246, 0.05); border-left: 4px solid var(--accent-blue); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-blue);">Worked Numerical Example 2: Price-Weighted, Market-Cap-Weighted &amp; Equal-Weighted Index Returns</h4>
+    <p><strong>Scenario</strong>: A 3-stock index consists of Stock A ($P_0=100, Q=1\\text{M} \\to P_1=110$), Stock B ($P_0=50, Q=4\\text{M} \\to P_1=55$), and Stock C ($P_0=30, Q=10\\text{M} \\to P_1=27$).</p>
+    <ul>
+      <li><strong>Price-Weighted Return</strong>: $\\text{Index}_0 = \\frac{100+50+30}{3} = 60.00$, $\\text{Index}_1 = \\frac{110+55+27}{3} = 64.00 \\implies R_{PW} = \\frac{64}{60} - 1 = +6.67\\%$. If Stock A executes a 2-for-1 split at $t=0$ ($P_A \\to 50$), the new divisor is $d_{\\text{new}} = \\frac{50+50+30}{60.00} = 2.1667$.</li>
+      <li><strong>Market-Cap Weighted Return</strong>: $MC_0 = 100 + 200 + 300 = 600\\text{M}$, $MC_1 = 110 + 220 + 270 = 600\\text{M} \\implies R_{MCW} = 0.00\\%$.</li>
+      <li><strong>Equal-Weighted Return</strong>: $\\frac{1}{3}(+10.0\\% + 10.0\\% - 10.0\\%) = +3.33\\%$.</li>
+    </ul>
+  </div>
 </section>
 
 <!-- ========================================================================================= -->
@@ -480,6 +750,20 @@ eq_html = """<div class="top-controls">
     <li><strong>Mature</strong>: Slower growth matching GDP, consolidated oligopoly, focus on efficiency.</li>
     <li><strong>Decline</strong>: Negative demand growth due to technological substitution.</li>
   </ol>
+
+  <h3 class="subheading">Financial Statement Forecasting, Research Reports &amp; ESG Integration (2027 L1 &amp; CBOK VI)</h3>
+  <ul>
+    <li><strong>Disaggregated Financial Forecasting</strong>: Combine <em>Top-Down</em> drivers (GDP growth, market share) with <em>Bottom-Up</em> unit drivers (stores $\\times$ sales/store, volume $\\times$ ASP). Model COGS and SG&amp;A separately via fixed vs. variable operating leverage, working capital via DSO/DIO/DPO days, and CapEx into maintenance vs. growth buckets.</li>
+    <li><strong>Equity Analyst Research Reports</strong>: <em>Initiation of Coverage</em> reports cover company overview, industry Porter analysis, financial forecasts, valuation, investment risks, and ESG factors; <em>Update Reports</em> analyze quarterly earnings surprises and catalyst revisions. Sell-side reports serve external institutional/retail clients; buy-side research serves internal portfolio managers.</li>
+    <li><strong>Sustainability / ESG in Equity Valuation</strong>: Material ESG risks translate into DCF inputs—adjusting revenue growth (green demand / carbon regulation), operating margins (transition costs), cost of capital (beta/credit spread), or terminal value (stranded assets).</li>
+  </ul>
+
+  <div class="card" style="background: rgba(147, 51, 234, 0.05); border-left: 4px solid var(--accent-purple); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-purple);">Worked Numerical Example 3: Probability-Weighted Scenario Valuation</h4>
+    <p><strong>Scenario</strong>: Following disaggregated financial modeling across three macro/regulatory scenarios, an equity analyst estimates intrinsic equity values of 58.00 USD (Bull, 25% probability), 46.00 USD (Base, 50% probability), and 32.00 USD (Bear, 25% probability). Current market price is 40.00 USD.</p>
+    $$E(V_0) = (0.25 \\times 58.00) + (0.50 \\times 46.00) + (0.25 \\times 32.00) = 14.50 + 23.00 + 8.00 = 45.50\\text{ USD}$$
+    <p><strong>Implied Upside</strong>: $\\frac{45.50 - 40.00}{40.00} = +13.75\\% \\implies$ <em>Buy / Outperform</em> recommendation.</p>
+  </div>
 </section>
 
 <!-- ========================================================================================= -->
@@ -489,11 +773,30 @@ eq_html = """<div class="top-controls">
   <h2 class="section-heading"><span class="num">03.</span> Dividend Discount Models & Multi-Stage Valuation</h2>
   <p>The Dividend Discount Model (DDM) values common stock as the present value of all expected future cash dividend payments discounted at the required return on equity ($r$).</p>
 
-  <h3 class="subheading">Gordon Growth Model & Sustainable Growth Rate</h3>
+  <h3 class="subheading">Cost of Equity Estimation Models (2027 L1 LM12 &amp; L2 Return Concepts)</h3>
+  <div class="formula-card">
+    <div class="formula-title">CAPM, Blume Adjusted Beta, Expanded CAPM &amp; Country Risk Premium</div>
+    $$r_{\\text{CAPM}} = R_f + \\beta_{\\text{adj}} \\times ERP, \\qquad \\beta_{\\text{adj}} = \\frac{2}{3}\\beta_{\\text{raw}} + \\frac{1}{3}(1.0)$$
+    $$r_{\\text{Expanded CAPM}} = R_f + \\beta_{\\text{peer}}(ERP) + SP + IP + SCRP$$
+    $$CRP = \\text{Sovereign Yield Spread} \\times \\left(\\frac{\\sigma_{\\text{Equity}}}{\\sigma_{\\text{Bond}}}\\right), \\qquad r_{\\text{BYPRP}} = \\text{Bond Yield} + \\text{Risk Premium}$$
+    $$\\text{Fama-French 3-Factor + Liquidity: } r = R_f + \\beta_{mkt}ERP + \\beta_{size}SMB + \\beta_{val}HML + \\beta_{liq}LIQ$$
+  </div>
+
+  <div class="card" style="background: rgba(245, 158, 11, 0.05); border-left: 4px solid var(--accent-amber); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-amber);">Worked Numerical Example 4: Adjusted Beta, Country Risk Premium &amp; Expanded CAPM</h4>
+    <p><strong>Scenario</strong>: An emerging-market mid-cap stock has raw historical $\\beta_{\\text{raw}} = 1.30$, risk-free rate $R_f = 4.00\\%$, developed ERP $= 5.00\\%$, small-stock premium $SP = 1.50\\%$, company-specific risk premium $SCRP = 1.00\\%$, sovereign yield spread $= 1.80\\%$, and equity-to-sovereign-bond volatility ratio $= 1.25$.</p>
+    <ol>
+      <li><strong>Blume's Adjusted Beta</strong>: $\\beta_{\\text{adj}} = \\frac{2}{3}(1.30) + \\frac{1}{3}(1.00) = 1.20$.</li>
+      <li><strong>Country Risk Premium (CRP)</strong>: $CRP = 1.80\\% \\times 1.25 = 2.25\\%$.</li>
+      <li><strong>Required Return on Equity</strong>: $r = 4.00\\% + 1.20(5.00\\%) + 1.50\\% + 1.00\\% + 2.25\\% = 14.75\\%$.</li>
+    </ol>
+  </div>
+
+  <h3 class="subheading">Gordon Growth Model &amp; Sustainable Growth Rate (PRAT)</h3>
   <div class="formula-card">
     <div class="formula-title">Constant Growth DDM (Gordon Growth)</div>
     $$V_0 = \\frac{D_1}{r - g} = \\frac{D_0 (1 + g)}{r - g} \\quad (\\text{Condition: } r > g)$$
-    $$g = b \\times ROE = (1 - \\text{Dividend Payout Ratio}) \\times ROE$$
+    $$g = b \\times ROE = \\left(\\frac{NI - Div}{NI}\\right) \\times \\left(\\frac{NI}{Sales}\\right) \\times \\left(\\frac{Sales}{Assets}\\right) \\times \\left(\\frac{Assets}{Equity}\\right) \\quad (\\text{PRAT Model})$$
   </div>
 
   <h3 class="subheading">Present Value of Growth Opportunities (PVGO)</h3>
@@ -503,11 +806,34 @@ eq_html = """<div class="top-controls">
     $$V_0 = \\frac{E_1}{r} + PVGO \\implies PVGO = V_0 - \\frac{E_1}{r}$$
   </div>
 
+  <div class="card" style="background: rgba(16, 185, 129, 0.05); border-left: 4px solid var(--accent-emerald); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-emerald);">Worked Numerical Example 5: Gordon Growth, PRAT &amp; PVGO Decomposition</h4>
+    <p><strong>Scenario</strong>: Expected next-year EPS $E_1 = 5.00\\text{ USD}$, Dividend Payout Ratio $= 50\\%$ ($b = 0.50$, $D_1 = 2.50\\text{ USD}$), $ROE = 16.0\\%$, and required equity return $r = 12.0\\%$.</p>
+    <ul>
+      <li><strong>Sustainable Growth Rate</strong>: $g = 0.50 \\times 16.0\\% = 8.00\\%$.</li>
+      <li><strong>Gordon Growth Intrinsic Value</strong>: $V_0 = \\frac{2.50}{0.12 - 0.08} = 62.50\\text{ USD}$.</li>
+      <li><strong>No-Growth Value &amp; PVGO</strong>: $\\frac{E_1}{r} = \\frac{5.00}{0.12} = 41.67\\text{ USD} \\implies PVGO = 62.50 - 41.67 = 20.83\\text{ USD}$ (33.3% of total stock value comes from future growth opportunities!).</li>
+    </ul>
+  </div>
+
   <h3 class="subheading">The H-Model for Linearly Transitioning Growth</h3>
   <p>The H-Model values a firm experiencing high initial growth ($g_S$) that transitions linearly over half-life $H$ (years $= 2H$) to a sustainable long-term rate ($g_L$):</p>
   <div class="formula-card">
     <div class="formula-title">H-Model Valuation Equation</div>
-    $$V_0 = \\frac{D_0 (1 + g_L)}{r - g_L} + \\frac{D_0 \\times H \\times (g_S - g_L)}{r - g_L}$$
+    $$V_0 = \\frac{D_0 (1 + g_L)}{r - g_L} + \\frac{D_0 \\times H \\times (g_S - g_L)}{r - g_L}, \\qquad r_{\\text{implied}} = \\left(\\frac{D_0}{P_0}\\right)[(1 + g_L) + H(g_S - g_L)] + g_L$$
+  </div>
+
+  <div class="card" style="background: rgba(59, 130, 246, 0.05); border-left: 4px solid var(--accent-blue); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-blue);">Worked Numerical Example 6: H-Model Valuation &amp; Implied Expected Return</h4>
+    <p><strong>Scenario</strong>: A firm just paid $D_0 = 2.00\\text{ USD}$. Dividend growth starts at $g_S = 14.0\\%$ and declines linearly over 8 years ($H = 4$) to $g_L = 4.0\\%$. Required return $r = 10.0\\%$.</p>
+    <ol>
+      <li><strong>Intrinsic Value ($V_0$)</strong>:
+        $$V_0 = \\frac{2.00(1.04) + 2.00(4)(0.14 - 0.04)}{0.10 - 0.04} = \\frac{2.08 + 0.80}{0.06} = \\frac{2.88}{0.06} = 48.00\\text{ USD}$$
+      </li>
+      <li><strong>Implied Expected Return if Market Price $P_0 = 52.00\\text{ USD}$</strong>:
+        $$r_{\\text{implied}} = \\frac{2.00}{52.00}(1.04 + 0.40) + 0.04 = \\frac{2.88}{52.00} + 0.04 = 5.54\\% + 4.00\\% = 9.54\\%$$
+      </li>
+    </ol>
   </div>
 
   <div class="chart-box">
@@ -555,6 +881,23 @@ eq_html = """<div class="top-controls">
       <canvas id="eqNotesFcfChart"></canvas>
     </div>
   </div>
+
+  <div class="card" style="background: rgba(16, 185, 129, 0.05); border-left: 4px solid var(--accent-emerald); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-emerald);">Worked Numerical Example 7: FCFF &amp; FCFE Derivation and Firm Valuation</h4>
+    <p><strong>Scenario</strong>: A firm reports Net Income $= 120\\text{M USD}$, Depreciation (NCC) $= 35\\text{M USD}$, Interest Expense $= 20\\text{M USD}$, Tax Rate $T = 25\\%$, Capital Expenditures ($FCInv$) $= 50\\text{M USD}$, Working Capital Investment ($WCInv$) $= 15\\text{M USD}$, and Net Debt Borrowing $= +10\\text{M USD}$. $WACC = 9.0\\%$, perpetual growth $g = 4.0\\%$, and market value of debt $= 400\\text{M USD}$.</p>
+    <ol>
+      <li><strong>Free Cash Flow to Firm ($FCFF_0$)</strong>:
+        $$FCFF_0 = 120 + 35 + 20(1 - 0.25) - 50 - 15 = 120 + 35 + 15 - 50 - 15 = 105.00\\text{M USD}$$
+      </li>
+      <li><strong>Free Cash Flow to Equity ($FCFE_0$)</strong>:
+        $$FCFE_0 = 105.00 - 20(1 - 0.25) + 10 = 105.00 - 15.00 + 10.00 = 100.00\\text{M USD}$$
+      </li>
+      <li><strong>Intrinsic Firm &amp; Equity Value</strong>:
+        $$V_{\\text{Firm}} = \\frac{105.00(1.04)}{0.09 - 0.04} = \\frac{109.20}{0.05} = 2,184.00\\text{M USD} \\implies V_{\\text{Equity}} = 2,184.00 - 400.00 = 1,784.00\\text{M USD}$$
+      </li>
+    </ol>
+    <p><em>Exam Trap</em>: Ignore non-cash share-based compensation add-backs if analysts treat SBC as a real economic dilution cost; always add back after-tax interest to Net Income/CFO when computing FCFF, NEVER pre-tax interest.</p>
+  </div>
 </section>
 
 <!-- ========================================================================================= -->
@@ -573,11 +916,24 @@ eq_html = """<div class="top-controls">
     $$\\text{Justified Price-to-Sales (P/S): } \\frac{P_0}{S_0} = \\frac{\\text{Net Margin} \\times (1 - b)(1 + g)}{r - g}$$
   </div>
 
-  <h3 class="subheading">Enterprise Value Multipliers</h3>
+  <h3 class="subheading">Enterprise Value Multipliers, Harmonic Mean &amp; Sum-of-the-Parts (SOTP)</h3>
   <p><strong>Enterprise Value ($EV$)</strong> measures total market value of core operations independent of capital structure financing:</p>
   <div class="formula-card">
-    <div class="formula-title">Enterprise Value Accounting Identity</div>
-    $$EV = \\text{Market Value of Common Equity} + \\text{Total Debt} + \\text{Preferred Stock} + \\text{Minority Interest} - \\text{Cash & Equivalents}$$
+    <div class="formula-title">Enterprise Value, PEG &amp; Harmonic Mean Identities</div>
+    $$EV = \\text{Market Value of Common Equity} + \\text{Total Debt} + \\text{Preferred Stock} + \\text{Minority Interest} - \\text{Cash &amp; Equivalents}$$
+    $$\\text{PEG Ratio} = \\frac{P/E}{g \\text{ (in whole \\%)}}, \\qquad \\bar{X}_{H} = \\frac{n}{\\sum_{i=1}^n (1 / X_i)}$$
+  </div>
+  <p><strong>CFA Exam Rule on Peer Multiples</strong>: When averaging peer P/E multiples containing high positive outliers (e.g., depressed earnings), the <strong>Harmonic Mean</strong> mitigates extreme upward skew compared to the arithmetic mean. For diversified conglomerates, use <strong>Sum-of-the-Parts (SOTP)</strong> valuation—applying distinct EV/EBITDA or P/E multiples to each operating segment before subtracting net debt.</p>
+
+  <div class="card" style="background: rgba(147, 51, 234, 0.05); border-left: 4px solid var(--accent-purple); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-purple);">Worked Numerical Example 8: Justified Multiples &amp; Harmonic Mean Benchmark</h4>
+    <p><strong>Part A (Justified Fundamentals)</strong>: A company earns $ROE = 15.0\\%$, retains $b = 40\\%$ ($g = 0.40 \\times 15.0\\% = 6.0\\%$), and has required return $r = 10.0\\%$.</p>
+    <ul>
+      <li><strong>Justified Leading P/E</strong>: $\\frac{1 - 0.40}{0.10 - 0.06} = \\frac{0.60}{0.04} = 15.00\\times$. <strong>Justified Trailing P/E</strong>: $15.00 \\times 1.06 = 15.90\\times$.</li>
+      <li><strong>Justified P/B</strong>: $\\frac{ROE - g}{r - g} = \\frac{0.15 - 0.06}{0.10 - 0.06} = 2.25\\times$.</li>
+    </ul>
+    <p><strong>Part B (Harmonic vs. Arithmetic Mean)</strong>: Three industry peers trade at P/E ratios of $12.0\\times$, $15.0\\times$, and $60.0\\times$.</p>
+    $$\\text{Arithmetic Mean} = \\frac{12 + 15 + 60}{3} = 29.00\\times, \\qquad \\text{Harmonic Mean } \\bar{X}_H = \\frac{3}{\\frac{1}{12} + \\frac{1}{15} + \\frac{1}{60}} = \\frac{3}{0.1667} = 18.00\\times$$
   </div>
 </section>
 
@@ -601,12 +957,26 @@ eq_html = """<div class="top-controls">
     Items bypassing the income statement through Other Comprehensive Income (AOCI)—such as foreign currency translation adjustments or unrealized gains on OCI securities—violate clean surplus and require analyst normalization.
   </div>
 
-  <h3 class="subheading">Continuing Residual Income & Persistence Factor ($\\omega$)</h3>
-  <p>Under competitive market dynamics, supernormal returns decay over time to normal returns ($ROE \\to r$):</p>
+  <h3 class="subheading">Continuing Residual Income, Persistence ($\\omega$) &amp; EVA / MVA</h3>
+  <p>Under competitive market dynamics, supernormal returns decay over time to normal returns ($ROE \\to r$). Related economic metrics include <strong>Economic Value Added (EVA)</strong> $= NOPAT - (WACC \\times \\text{Invested Capital})$ and <strong>Market Value Added (MVA)</strong> $= \\text{Market Value} - \\text{Invested Capital}$:</p>
   <div class="formula-card">
     <div class="formula-title">Terminal Value with Persistence Decay ($\\omega$)</div>
     $$PV(\\text{Continuing RI at } T-1) = \\frac{RI_T}{1 + r - \\omega}$$
     $$\\text{Where } \\omega \\in [0, 1]: \\quad \\omega = 1.0 \\implies \\text{Perpetual RI}, \\quad \\omega = 0.0 \\implies \\text{Instant Return to Cost of Equity}$$
+  </div>
+
+  <div class="card" style="background: rgba(245, 158, 11, 0.05); border-left: 4px solid var(--accent-amber); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-amber);">Worked Numerical Example 9: Multi-Stage Residual Income with Persistence Decay</h4>
+    <p><strong>Scenario</strong>: Beginning book value $B_0 = 20.00\\text{ USD}$, cost of equity $r = 10.0\\%$. Forecasts: Year 1 ($EPS_1 = 4.00, D_1 = 1.00$), Year 2 ($EPS_2 = 4.50, D_2 = 1.20$), Year 3 ($EPS_3 = 4.80, D_3 = 1.30$). After Year 3, residual income decays with persistence factor $\\omega = 0.60$.</p>
+    <ol>
+      <li><strong>Year 1</strong>: $RI_1 = 4.00 - 0.10(20.00) = 2.00\\text{ USD}$; $B_1 = 20.00 + 4.00 - 1.00 = 23.00\\text{ USD}$.</li>
+      <li><strong>Year 2</strong>: $RI_2 = 4.50 - 0.10(23.00) = 2.20\\text{ USD}$; $B_2 = 23.00 + 4.50 - 1.20 = 26.30\\text{ USD}$.</li>
+      <li><strong>Year 3</strong>: $RI_3 = 4.80 - 0.10(26.30) = 2.17\\text{ USD}$.</li>
+      <li><strong>PV of Continuing RI at $t=2$</strong>: $\\frac{RI_3}{1 + r - \\omega} = \\frac{2.17}{1 + 0.10 - 0.60} = \\frac{2.17}{0.50} = 4.34\\text{ USD}$.</li>
+      <li><strong>Intrinsic Equity Value ($V_0$)</strong>:
+        $$V_0 = 20.00 + \\frac{2.00}{1.10} + \\frac{2.20 + 4.34}{(1.10)^2} = 20.00 + 1.818 + 5.405 = 27.22\\text{ USD}$$
+      </li>
+    </ol>
   </div>
 </section>
 
@@ -624,12 +994,36 @@ eq_html = """<div class="top-controls">
     <li><strong>Related-Party Transactions</strong>: Re-align intercompany lease agreements to market rents.</li>
   </ul>
 
-  <h3 class="subheading">Valuation Discounts & Premiums</h3>
+  <h3 class="subheading">Private Company Methods: Excess Earnings Method (EEM), GPCM, GTM &amp; Discounts</h3>
+  <p>Private equity appraisals apply three main approaches: <strong>Income Approach</strong> (FCF and the <em>Excess Earnings Method [EEM]</em> for intangible-heavy firms), <strong>Market Approach</strong> (<em>Guideline Public Company Method [GPCM]</em>, <em>Guideline Transactions Method [GTM]</em>, and <em>Prior Transaction Method [PTM]</em>), and <strong>Asset-Based Approach</strong> (adjusted book value).</p>
   <div class="formula-card">
     <div class="formula-title">Control and Marketability Discount Interaction</div>
     $$\\text{Total Combined Discount} = 1 - (1 - DLOC) \\times (1 - DLOM)$$
     $$DLOC = 1 - \\left( \\frac{1}{1 + \\text{Control Premium}} \\right)$$
     $$\\text{Where: } DLOC = \\text{Discount for Lack of Control}, \\quad DLOM = \\text{Discount for Lack of Marketability}$$
+  </div>
+
+  <div class="card" style="background: rgba(16, 185, 129, 0.05); border-left: 4px solid var(--accent-emerald); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-emerald);">Worked Numerical Example 10: Excess Earnings Method (EEM) Private Firm Valuation</h4>
+    <p><strong>Scenario</strong>: A private firm generates normalized EBIT $= 360,000\\text{ USD}$ (25% tax rate). Working capital $= 500,000\\text{ USD}$ (6.0% required return), Fixed Assets $= 1,200,000\\text{ USD}$ (10.0% required return), intangible asset capitalization rate $= 18.0\\%$, and perpetual intangible growth $= 3.0\\%$.</p>
+    <ol>
+      <li><strong>Normalized NOPAT</strong>: $360,000 \\times (1 - 0.25) = 270,000\\text{ USD}$.</li>
+      <li><strong>Required Returns on Tangible Assets</strong>: $WC = 500,000 \\times 0.06 = 30,000\\text{ USD}$; $FA = 1,200,000 \\times 0.10 = 120,000\\text{ USD}$.</li>
+      <li><strong>Residual Intangible Income</strong>: $270,000 - (30,000 + 120,000) = 120,000\\text{ USD}$.</li>
+      <li><strong>Intangible Value &amp; Total Firm Value</strong>:
+        $$V_{\\text{Intangible}} = \\frac{120,000(1.03)}{0.18 - 0.03} = 824,000\\text{ USD} \\implies V_{\\text{Firm}} = 500,000 + 1,200,000 + 824,000 = 2,524,000\\text{ USD}$$
+      </li>
+    </ol>
+  </div>
+
+  <div class="card" style="background: rgba(59, 130, 246, 0.05); border-left: 4px solid var(--accent-blue); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-blue);">Worked Numerical Example 11: DLOC &amp; DLOM Multiplicative Discounting</h4>
+    <p><strong>Scenario</strong>: A controlling equity stake in a private company is valued at 10,000,000 USD. Guideline transaction control premiums average 25.0%, and the estimated DLOM is 15.0%. Value a non-controlling, non-marketable minority stake.</p>
+    <ol>
+      <li><strong>Discount for Lack of Control ($DLOC$)</strong>: $1 - \\frac{1}{1 + 0.25} = 1 - 0.80 = 20.0\\%$.</li>
+      <li><strong>Total Multiplicative Discount</strong>: $1 - (1 - 0.20)(1 - 0.15) = 1 - (0.80 \\times 0.85) = 1 - 0.68 = 32.0\\%$ (NOT $20\\% + 15\\% = 35\\%$!).</li>
+      <li><strong>Implied Minority Non-Marketable Value</strong>: $10,000,000 \\times (1 - 0.32) = 6,800,000\\text{ USD}$.</li>
+    </ol>
   </div>
 </section>
 
@@ -698,6 +1092,24 @@ eq_html = """<div class="top-controls">
           <td>Total Discount</td>
           <td>$$\\text{Total Disc} = 1 - (1 - DLOC)(1 - DLOM)$$</td>
           <td>Multiplicative interaction of lack of control and marketability.</td>
+        </tr>
+        <tr>
+          <td><strong>Trading</strong></td>
+          <td>Short Margin Call</td>
+          <td>$$P_{\\text{call}} = P_0 \\left(\\frac{1 + IM}{1 + MM}\\right)$$</td>
+          <td>Short sale collateral trigger price when shares rally.</td>
+        </tr>
+        <tr>
+          <td><strong>Cost of Equity</strong></td>
+          <td>Blume Adj. Beta &amp; CRP</td>
+          <td>$$\\beta_{\\text{adj}} = \\frac{2}{3}\\beta_{\\text{raw}} + \\frac{1}{3}, \\quad CRP = \\Delta y_{\\text{sov}}\\frac{\\sigma_{\\text{eq}}}{\\sigma_{\\text{bond}}}$$</td>
+          <td>Forward-looking beta mean reversion &amp; emerging market risk.</td>
+        </tr>
+        <tr>
+          <td><strong>Multipliers</strong></td>
+          <td>Harmonic Mean P/E</td>
+          <td>$$\\bar{X}_H = \\frac{n}{\\sum_{i=1}^n (1/X_i)}$$</td>
+          <td>Eliminates upward outlier distortion in peer multiples.</td>
         </tr>
       </tbody>
     </table>
@@ -848,6 +1260,21 @@ pm_html = r"""<div class="top-controls">
       </tbody>
     </table>
   </div>
+
+  <h3 class="subheading">Endowment Spending Rules &amp; Intergenerational Equity (L2 Institutional PM)</h3>
+  <ul>
+    <li><strong>Simple / Constant Growth Rule</strong>: $\text{Spending}_t = \text{Spending}_{t-1} \times (1 + \pi)$. Protects purchasing power stability but ignores AUM drawdowns.</li>
+    <li><strong>Rolling Average (Market-Value) Rule</strong>: $\text{Spending}_t = r \times \frac{1}{3}(AUM_{t-1} + AUM_{t-2} + AUM_{t-3})$. Smoothes market volatility over 3 years.</li>
+    <li><strong>Geometric / Hybrid (Tobin) Rule</strong>: Balances budget stability ($w$) with market reality ($1 - w$):
+      $$\text{Spending}_t = w \cdot [\text{Spending}_{t-1} \times (1 + \pi)] + (1 - w) \cdot [r \times AUM_{t-1}]$$
+    </li>
+  </ul>
+
+  <div class="card" style="background: rgba(16, 185, 129, 0.05); border-left: 4px solid var(--accent-emerald); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-emerald);">Worked Numerical Example: Hybrid (Tobin) Endowment Spending Calculation</h4>
+    <p><strong>Scenario</strong>: A university endowment has prior-year spending of 4.20M USD, annual inflation $\pi = 2.50\%$, trailing market value $AUM_{t-1} = 100.00\text{M USD}$, target spending rate $r = 4.50\%$, and smoothing weight $w = 0.70$.</p>
+    $$\text{Spending}_t = 0.70 \times [4.20\text{M} \times 1.025] + 0.30 \times [0.045 \times 100.00\text{M}] = 0.70(4.305\text{M}) + 0.30(4.500\text{M}) = 3.0135\text{M} + 1.3500\text{M} = 4.3635\text{M USD}$$
+  </div>
 </section>
 
 <!-- ========================================================================================= -->
@@ -929,6 +1356,19 @@ pm_html = r"""<div class="top-controls">
     $$\sigma_p = \sqrt{0.0133552} = 11.56\%$$
 
     <p><strong>Diversification Analysis</strong>: The weighted-average standard deviation is $0.60(18.0\%) + 0.40(7.0\%) = 10.80\% + 2.80\% = 13.60\%$. Because $\rho_{1,2} = 0.15 < 1.0$, the actual portfolio risk is $\sigma_p = 11.56\%$. Diversification eliminates $13.60\% - 11.56\% = 2.04\%$ percentage points of annual volatility with zero reduction in expected return.</p>
+  </div>
+
+  <h3 class="subheading">Three-Asset Portfolio Variance Expansion</h3>
+  <div class="formula-card">
+    <div class="formula-title">N-Asset Variance Covariance Matrix Form</div>
+    $$\sigma_p^2 = w_1^2\sigma_1^2 + w_2^2\sigma_2^2 + w_3^2\sigma_3^2 + 2w_1w_2\rho_{1,2}\sigma_1\sigma_2 + 2w_1w_3\rho_{1,3}\sigma_1\sigma_3 + 2w_2w_3\rho_{2,3}\sigma_2\sigma_3$$
+  </div>
+
+  <div class="card" style="background: rgba(147, 51, 234, 0.05); border-left: 4px solid var(--accent-purple); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-purple);">Worked Numerical Example: Three-Asset Portfolio Risk</h4>
+    <p><strong>Scenario</strong>: Weights $w_1 = 50\%$ ($\sigma_1 = 18\%$), $w_2 = 30\%$ ($\sigma_2 = 10\%$), $w_3 = 20\%$ ($\sigma_3 = 6\%$). Correlations: $\rho_{1,2} = 0.25$, $\rho_{1,3} = -0.10$, $\rho_{2,3} = 0.40$.</p>
+    $$\sigma_p^2 = (0.5^2)(0.18^2) + (0.3^2)(0.10^2) + (0.2^2)(0.06^2) + 2(0.5)(0.3)(0.25)(0.18)(0.10) + 2(0.5)(0.2)(-0.10)(0.18)(0.06) + 2(0.3)(0.2)(0.40)(0.10)(0.06)$$
+    $$\sigma_p^2 = 0.008100 + 0.000900 + 0.000144 + 0.001350 - 0.000216 + 0.000288 = 0.010566 \implies \sigma_p = \sqrt{0.010566} = 10.28\%$$
   </div>
 </section>
 
@@ -1198,6 +1638,49 @@ pm_html = r"""<div class="top-controls">
       </tbody>
     </table>
   </div>
+
+  <div class="card" style="background: rgba(59, 130, 246, 0.05); border-left: 4px solid var(--accent-blue); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-blue);">Worked Numerical Example: Utility-Optimal Risky Asset Weight ($w^*$)</h4>
+    <p><strong>Scenario</strong>: An investor with risk-aversion coefficient $A = 4.0$ allocates between a risk-free T-bill ($R_f = 3.50\%$) and an optimal risky portfolio ($E(R_p) = 9.50\%$, $\sigma_p = 16.0\%$). Determine the utility-maximizing allocation $w^*$ to the risky portfolio.</p>
+    $$w^* = \frac{E(R_p) - R_f}{A \sigma_p^2} = \frac{0.095 - 0.035}{4.0 \times (0.16)^2} = \frac{0.060}{0.1024} = 58.59\% \quad (\text{and } 41.41\% \text{ in } R_f)$$
+  </div>
+
+  <h3 class="subheading">Behavioral Biases of Individuals (L1 &amp; CBOK X)</h3>
+  <p>Behavioral finance contrasts rational decision-making with psychological biases. The pivotal exam rule: <strong>Cognitive errors</strong> stem from faulty reasoning or statistical mistakes and can usually be <em>corrected/mitigated</em> through advisor education; <strong>Emotional biases</strong> stem from deep-seated feelings or impulses and generally must be <em>adapted to</em>.</p>
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Key Biases</th>
+          <th>Portfolio Consequence</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Cognitive: Belief Perseverance</strong></td>
+          <td>Conservatism, Confirmation, Representativeness (base-rate/sample-size neglect), Illusion of Control, Hindsight</td>
+          <td>Underreacting to new earnings surprises; extrapolating small sample trends; holding concentrated employer stock.</td>
+        </tr>
+        <tr>
+          <td><strong>Cognitive: Information Processing</strong></td>
+          <td>Anchoring &amp; Adjustment, Mental Accounting, Framing, Availability</td>
+          <td>Fixating on purchase price; treating dividends separately from capital gains; home-country bias.</td>
+        </tr>
+        <tr>
+          <td><strong>Emotional Biases</strong></td>
+          <td>Loss Aversion (Disposition Effect), Overconfidence, Self-Control, Status Quo, Endowment, Regret Aversion</td>
+          <td>Selling winners too early while riding losers; excessive turnover; holding inherited legacy positions indefinitely.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 class="subheading">Sustainability / ESG Integration &amp; Shorting in Portfolios (CBOK X)</h3>
+  <ul>
+    <li><strong>ESG Investment Spectrum</strong>: Ranges from <em>Negative / Exclusionary Screening</em> (avoiding sin/fossil stocks) and <em>Best-in-Class / Positive Screening</em> to full <em>ESG Integration</em> into valuation models, <em>Thematic Investing</em> (clean energy), and <em>Impact Investing</em> (targeting measurable social/environmental outcomes alongside return).</li>
+    <li><strong>Shorting Securities in Portfolio Construction</strong>: Active extension strategies (e.g., <strong>130/30 funds</strong>: 130% long / 30% short, maintaining 100% net equity beta) relax the long-only constraint, raising Grinold's Transfer Coefficient ($TC \to 1.0$) and allowing alpha capture on overvalued stocks. Risks include unlimited upside loss, short-rebate compression, and stock-borrow recall risk.</li>
+  </ul>
 </section>
 
 <!-- ========================================================================================= -->
@@ -1269,6 +1752,19 @@ pm_html = r"""<div class="top-controls">
     $$\pi^* = \text{Central bank inflation target}, \quad y - y^* = \text{Output gap (actual vs potential real GDP in percent)}$$
   </div>
   <p><strong>Policy Implication</strong>: When actual inflation exceeds the target ($\pi > \pi^*$) or output exceeds potential ($y > y^*$), the Taylor Rule prescribes an elevated policy rate to cool aggregate demand. If current rates are below $i^*$, monetary authorities will likely hike rates, inducing yield curve flattening and compressed equity valuation multiples.</p>
+
+  <h3 class="subheading">Economics and Investment Markets (L2): Discount Rates &amp; Bad-Times Covariance</h3>
+  <p>Asset values equal expected future cash flows discounted by the stochastic <strong>Intertemporal Rate of Substitution ($m_t$)</strong>, which reflects the marginal utility of consuming 1 unit tomorrow versus today ($m_t = \beta u'(c_t)/u'(c_0)$):</p>
+  <div class="formula-card">
+    <div class="formula-title">Macro Asset Pricing Decomposition</div>
+    $$\text{Risk-Free Real Rate: } r_{\text{real}} \approx -\ln(\beta) + \text{Expected Real GDP Growth}$$
+    $$\text{Nominal Default-Free Yield} = r_{\text{real}} + \text{Expected Inflation } (\pi) + \text{Inflation Risk Premium } (\theta)$$
+    $$\text{Risky Asset Discount Rate} = r_{\text{real}} + \pi + \theta + \text{Credit / Equity Risk Premium } (\lambda)$$
+  </div>
+  <ul>
+    <li><strong>Covariance with Bad Times</strong>: Assets whose payoffs drop during recessions ("bad times," when marginal utility of consumption $m_t$ is highest) have $\text{Cov}(P_t, m_t) < 0$ and therefore demand a positive risk premium (equities, corporate credit, commercial real estate). Default-free inflation-linked bonds exhibit near-zero or positive covariance and command lower yields.</li>
+    <li><strong>Business Cycle Behavior</strong>: Corporate credit spreads widen sharply in contractions (flight to quality) and compress during expansions; break-even inflation ($BEI = \text{Nominal Yield} - \text{TIPS Yield} = \pi + \theta$) falls when recessionary deflation risks dominate.</li>
+  </ul>
 </section>
 
 <!-- ========================================================================================= -->
@@ -1365,6 +1861,32 @@ pm_html = r"""<div class="top-controls">
       </tbody>
     </table>
   </div>
+
+  <h3 class="subheading">Brinson-Fachler Return Attribution (Allocation, Selection &amp; Interaction)</h3>
+  <p>Performance attribution decomposes active portfolio return ($R_P - R_B$) across asset classes or equity sectors relative to benchmark weights ($w_{B,i}$) and benchmark total return ($R_B$):</p>
+  <div class="formula-card">
+    <div class="formula-title">Brinson-Fachler Single-Period Attribution Equations</div>
+    $$A_i = (w_{P,i} - w_{B,i}) \times (R_{B,i} - R_B) \quad (\text{Allocation Effect})$$
+    $$S_i = w_{B,i} \times (R_{P,i} - R_{B,i}) \quad (\text{Security Selection Effect})$$
+    $$I_i = (w_{P,i} - w_{B,i}) \times (R_{P,i} - R_{B,i}) \quad (\text{Interaction Effect})$$
+  </div>
+
+  <div class="card" style="background: rgba(245, 158, 11, 0.05); border-left: 4px solid var(--accent-amber); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-amber);">Worked Numerical Example: Brinson-Fachler Sector Attribution</h4>
+    <p><strong>Scenario</strong>: Technology ($w_B = 50\%, R_B = 10.0\%$ vs. $w_P = 60\%, R_P = 12.0\%$) and Healthcare ($w_B = 50\%, R_B = 6.0\%$ vs. $w_P = 40\%, R_P = 5.0\%$). Total $R_B = 0.5(10\%) + 0.5(6\%) = 8.00\%$, Total $R_P = 0.6(12\%) + 0.4(5\%) = 9.20\%$, Active Return $= +1.20\%$ (+120 bps).</p>
+    <ol>
+      <li><strong>Allocation Effect</strong>:
+        $$A_{\text{Tech}} = (0.60 - 0.50)(10.0\% - 8.0\%) = +0.20\%, \quad A_{\text{HC}} = (0.40 - 0.50)(6.0\% - 8.0\%) = +0.20\% \implies \sum A_i = +0.40\%$$
+      </li>
+      <li><strong>Selection Effect</strong>:
+        $$S_{\text{Tech}} = 0.50(12.0\% - 10.0\%) = +1.00\%, \quad S_{\text{HC}} = 0.50(5.0\% - 6.0\%) = -0.50\% \implies \sum S_i = +0.50\%$$
+      </li>
+      <li><strong>Interaction Effect</strong>:
+        $$I_{\text{Tech}} = (0.60 - 0.50)(12.0\% - 10.0\%) = +0.20\%, \quad I_{\text{HC}} = (0.40 - 0.50)(5.0\% - 6.0\%) = +0.10\% \implies \sum I_i = +0.30\%$$
+      </li>
+      <li><strong>Total Attribution Check</strong>: $+0.40\% + 0.50\% + 0.30\% = +1.20\%$ (120 bps exact match).</li>
+    </ol>
+  </div>
 </section>
 
 <!-- ========================================================================================= -->
@@ -1402,7 +1924,7 @@ pm_html = r"""<div class="top-controls">
 
   <div class="card" style="background: rgba(16, 185, 129, 0.05); border-left: 4px solid var(--accent-emerald); margin: 15px 0;">
     <h4 style="margin: 0 0 10px 0; color: var(--accent-emerald);">Worked Numerical Example: Factor vs Specific Active Risk Decomposition</h4>
-    <p>A portfolio manager holds active exposures to two factors: Market ($\Delta eta_1 = +0.15$) and Size ($\Delta eta_2 = +0.25$).</p>
+    <p>A portfolio manager holds active exposures to two factors: Market ($\Delta \beta_1 = +0.15$) and Size ($\Delta \beta_2 = +0.25$).</p>
     <ul>
       <li>Factor Volatilities: $\sigma_{F1} = 15.0\%$, $\sigma_{F2} = 8.0\%$; Factor Correlation: $\rho_{1,2} = 0.20$</li>
       <li>Active Specific Risk (from security selection): $\sigma_{\epsilon,A} = 2.80\%$ (Specific Variance $= 2.80^2 = 7.84$)</li>
@@ -1419,6 +1941,27 @@ pm_html = r"""<div class="top-controls">
     $$\sigma_A^2 = \text{Active Factor Variance} + \text{Active Specific Variance} = 10.8625 + 7.8400 = 18.7025$$
     $$\sigma_A = \sqrt{18.7025} = 4.32\%$$
     <p><em>Attribution Breakdown</em>: Active factor risk accounts for $\frac{10.8625}{18.7025} = 58.08\%$ of total active variance, while active specific risk accounts for $\frac{7.8400}{18.7025} = 41.92\%$.</p>
+  </div>
+
+  <h3 class="subheading">Measuring &amp; Managing Market Risk: VaR, CVaR &amp; Risk Budgeting (L2)</h3>
+  <ul>
+    <li><strong>Value at Risk (VaR)</strong>: Minimum expected loss over a given time horizon at a specified confidence level (or probability $p$ of exceeding loss). Three estimation methods:
+      <ol>
+        <li><em>Parametric (Variance-Covariance)</em>: $\text{VaR}_{p} = |\mu_p - z_{p}\sigma_p| \times V_P$ (assumes normal returns; fast but underestimates fat tails &amp; non-linear option gamma).</li>
+        <li><em>Historical Simulation</em>: Ranks actual past returns empirically without distributional assumptions (captures fat tails, assumes history repeats).</li>
+        <li><em>Monte Carlo Simulation</em>: Generates thousands of random paths allowing non-normal distributions, fat tails, and path-dependent options.</li>
+      </ol>
+    </li>
+    <li><strong>Extensions &amp; Risk Governance</strong>: <strong>Conditional VaR (CVaR / Expected Shortfall)</strong> measures the <em>average</em> loss given that the VaR threshold has been breached (coherent risk measure). <strong>Incremental VaR (IVaR)</strong> measures exact change in VaR from adding/removing a position; <strong>Marginal VaR (MVaR)</strong> gives the first derivative ($\partial \text{VaR}/\partial w_i$). Combine VaR with <em>Stress Testing</em>, <em>Scenario Analysis</em>, and <em>Risk Budgeting</em> (allocating capital by marginal contribution to risk).</li>
+  </ul>
+
+  <div class="card" style="background: rgba(16, 185, 129, 0.05); border-left: 4px solid var(--accent-emerald); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-emerald);">Worked Numerical Example: Parametric 95% &amp; 99% Portfolio VaR</h4>
+    <p><strong>Scenario</strong>: A 50,000,000 USD multi-asset portfolio has daily expected return $\mu_d = 0.04\%$ and daily volatility $\sigma_d = 1.25\%$. Compute 1-day 95% ($z = 1.645$) and 99% ($z = 2.326$) parametric VaR.</p>
+    <ul>
+      <li><strong>1-Day 95% VaR</strong>: $|0.04\% - 1.645(1.25\%)| = 2.01625\% \implies 0.0201625 \times 50,000,000 = 1,008,125\text{ USD}$ (meaning there is a 5% probability of losing <em>at least</em> 1,008,125 USD in a single day).</li>
+      <li><strong>1-Day 99% VaR</strong>: $|0.04\% - 2.326(1.25\%)| = 2.8675\% \implies 0.028675 \times 50,000,000 = 1,433,750\text{ USD}$.</li>
+    </ul>
   </div>
 </section>
 
@@ -1563,6 +2106,18 @@ pm_html = r"""<div class="top-controls">
       </li>
     </ol>
   </div>
+
+  <h3 class="subheading">Backtesting &amp; Simulation Pitfalls (L2)</h3>
+  <ul>
+    <li><strong>Core Backtesting Biases</strong>: <em>Survivorship Bias</em> (excluding delisted/bankrupt firms inflates backtested alpha); <em>Look-Ahead Bias</em> (using financial statements before their actual public filing date); <em>Data Snooping / Overfitting</em> (p-hacking multiple rules on one dataset without out-of-sample cross-validation).</li>
+    <li><strong>Simulation Methods</strong>: <em>Rolling Window</em> drops oldest observations (captures regime shifts); <em>Expanding Window</em> keeps all history (reduces estimation error). <em>Bootstrapping</em> resamples actual historical returns with replacement (preserving empirical skewness/kurtosis), whereas <em>Monte Carlo</em> samples from a parameterized theoretical distribution.</li>
+  </ul>
+
+  <h3 class="subheading">Technical Analysis, Market Microstructure &amp; Fintech (L1 &amp; CBOK X)</h3>
+  <ul>
+    <li><strong>Technical Analysis &amp; Market Sentiment</strong>: Assumes market prices discount all known fundamentals and trends persist. Analysts track <strong>Support/Resistance</strong> levels, reversal patterns (<em>Head &amp; Shoulders</em>, <em>Double Top/Bottom</em>), continuation patterns (<em>Triangles</em>, <em>Flags</em>), trend indicators (50/200-day <em>Moving Averages</em>, <em>MACD</em>), momentum oscillators (<em>RSI &gt; 70 overbought, &lt; 30 oversold</em>), and contrarian sentiment gauges (Put/Call ratio, VIX).</li>
+    <li><strong>Fintech, Big Data, AI &amp; DLT</strong>: Structured vs. unstructured data (satellite imagery, earnings-call transcripts) analyzed via <strong>Natural Language Processing (NLP)</strong> and <strong>Machine Learning</strong> (Supervised: LASSO/Ridge/Random Forests for return prediction; Unsupervised: clustering/PCA for risk regimes). <em>Robo-advisors</em> automate IPS profiling and tax-loss harvesting; <em>Distributed Ledger Technology (DLT)</em> and smart contracts streamline trade clearing and tokenized settlement.</li>
+  </ul>
 </section>
 
 <!-- ========================================================================================= -->
@@ -1702,6 +2257,30 @@ pm_html = r"""<div class="top-controls">
           <td>Implementation Shortfall</td>
           <td>$$\text{IS} = (P_0 - P_d)S_E + \sum (p_j - P_0)s_j + (P_{\text{cancel}} - P_d)S_U + \text{Fees}$$</td>
           <td>Delay cost + Trading cost + Opportunity cost + Explicit fees.</td>
+        </tr>
+        <tr>
+          <td><strong>Allocation</strong></td>
+          <td>Optimal Risky Weight</td>
+          <td>$$w^* = \frac{E(R_p) - R_f}{A\sigma_p^2}$$</td>
+          <td>Utility-maximizing allocation to optimal risky portfolio.</td>
+        </tr>
+        <tr>
+          <td><strong>Attribution</strong></td>
+          <td>Brinson-Fachler</td>
+          <td>$$A_i = (w_{P,i}-w_{B,i})(R_{B,i}-R_B), \quad S_i = w_{B,i}(R_{P,i}-R_{B,i})$$</td>
+          <td>Decomposes active return into allocation, selection, and interaction.</td>
+        </tr>
+        <tr>
+          <td><strong>Market Risk</strong></td>
+          <td>Parametric VaR</td>
+          <td>$$\text{VaR}_p = |\mu_p - z_p\sigma_p| \times V_P$$</td>
+          <td>Minimum expected portfolio loss at confidence threshold.</td>
+        </tr>
+        <tr>
+          <td><strong>Institutional</strong></td>
+          <td>Tobin Spending Rule</td>
+          <td>$$S_t = w \cdot S_{t-1}(1+\pi) + (1-w) \cdot r \cdot AUM_{t-1}$$</td>
+          <td>Balances budget predictability with market endowment value.</td>
         </tr>
       </tbody>
     </table>
