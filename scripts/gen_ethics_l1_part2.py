@@ -1,0 +1,2280 @@
+"""
+Generate 135 rigorous CFA Level 1 Ethics MCQs (L1-ETH-136 through L1-ETH-270)
+and save validated output to data/courses/l1_ethics_part2.json.
+"""
+import os
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from qbank_helper import add_l1, save_validated_json
+
+SUBJECT = "Ethical and Professional Standards"
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+OUTPUT_PATH = os.path.join(BASE_DIR, "data", "courses", "l1_ethics_part2.json")
+
+
+def build_std3_a(out: list) -> None:
+    mod = "eth-m4-std3"
+    top = "Standard III: Duties to Clients"
+    sub = "Standard III(A): Loyalty, Prudence, and Care"
+    los = "Demonstrate the application of the Code and Standards to situations involving loyalty, prudence, and care owed to clients"
+
+    add_l1(
+        out, "L1-ETH-136", SUBJECT, mod, top, sub, los,
+        "Marcus Vance, CFA, manages the defined-benefit pension fund of Redstone Manufacturing. Redstone's CFO, who sits on the pension committee that hired Vance's firm, instructs Vance to purchase 15 million USD of Redstone's newly issued subordinated debentures at a below-market coupon to help the company avoid higher bank borrowing costs. What is Vance's most appropriate course of action?",
+        {
+            "A": "Purchase the debentures because the CFO represents the hiring plan sponsor and holds authority over investment guidelines.",
+            "B": "Decline the CFO's instruction because Vance's fiduciary duty of loyalty is owed exclusively to the pension plan beneficiaries.",
+            "C": "Purchase half the requested amount and disclose the transaction in the pension plan's annual regulatory filing.",
+        },
+        "B",
+        "Under Standard III(A) (Loyalty, Prudence, and Care), when managing a corporate pension plan or trust, a member's fiduciary duty is owed to the ultimate beneficiaries (the plan participants and retirees), not to the corporate sponsor or officers who appointed the manager. Purchasing below-market corporate debt to subsidize the sponsor's financing violates loyalty and prudence. Recommended procedures include establishing clear governance lines identifying the ultimate beneficiary and refusing client-sponsor directives that harm plan participants.",
+        {
+            "A": "Confuses the hiring entity (the plan sponsor and CFO) with the true fiduciary client (the pension plan's participants and beneficiaries).",
+            "C": "Even a partial allocation to a below-market, conflicted bond issue harms plan beneficiaries and cannot be cured solely by annual disclosure.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-137", SUBJECT, mod, top, sub, los,
+        "Elena Rostova, CFA, is a portfolio manager at Horizon Equity Advisors. Horizon pays slightly higher brokerage commissions to Summit Execution Partners in exchange for soft-dollar credits. Summit uses those credits to pay for Horizon's third-party quantitative equity screening feeds and also covers 40% of Horizon's office rent and client-billing software license. Rostova discloses the soft-dollar arrangement to clients. Has Rostova complied with Standard III(A)?",
+        {
+            "A": "No, because client brokerage may not be used to pay for general firm overhead such as office rent and client-billing software.",
+            "B": "Yes, because Rostova fully disclosed the soft-dollar arrangement in advance to all affected clients.",
+            "C": "No, because paying higher commissions for any form of third-party research violates the duty to obtain best execution.",
+        },
+        "A",
+        "Under Standard III(A) (Loyalty, Prudence, and Care), client brokerage is an asset of the client and may only be used for research goods and services that directly assist the manager in the investment decision-making process to benefit clients. Paying for general administrative overhead, office rent, or client-billing software using client commissions misappropriates client assets, even if disclosed. Recommended procedures require maintaining strict soft-dollar documentation separating eligible research from mixed-use or administrative expenses paid by the firm in hard dollars.",
+        {
+            "B": "Disclosure does not permit misappropriating client brokerage assets for non-research firm operating overhead.",
+            "C": "Paying slightly higher commissions for legitimate research that benefits clients is permissible under Standard III(A) when best execution and proper disclosure are maintained.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-138", SUBJECT, mod, top, sub, los,
+        "During a routine review of Harbor Trust's municipal pension client, Tariq Al-Mansoor, CFA, receives a written directive from the municipal treasury board instructing him to route 60% of the pension fund's equity trades through Civic Securities. In exchange, Civic Securities will waive municipal bond underwriting fees for the city's general operating budget. Al-Mansoor confirms Civic's commissions are 2 basis points higher than average. To comply with Standard III(A), Al-Mansoor should:",
+        {
+            "A": "Follow the treasury board's written instruction after obtaining a signed acknowledgment that best execution may be compromised.",
+            "B": "Route 30% of the trades to Civic Securities to balance the city's financing needs with pension execution costs.",
+            "C": "Refuse the directed-brokerage arrangement because pension assets cannot be used to benefit the city's general operating budget.",
+        },
+        "C",
+        "Under Standard III(A) (Loyalty, Prudence, and Care), directed brokerage is only permissible when the client directs trades for the client's own benefit (such as offsetting the pension plan's own custodial or consulting fees) and after disclosure that best execution may be affected. Here, the pension plan's brokerage—an asset of the plan beneficiaries—is being diverted to reduce general municipal underwriting expenses, harming beneficiaries for the sponsor's benefit. Recommended procedures dictate rejecting directed-brokerage mandates that transfer value away from beneficial owners.",
+        {
+            "A": "Applies the rule for client-directed brokerage benefiting the client itself; here the benefit flows to the sponsor's general budget rather than the pension beneficiaries.",
+            "B": "Compromising by diverting even 30% of plan brokerage for the sponsor's non-plan expenses still breaches fiduciary loyalty.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-139", SUBJECT, mod, top, sub, los,
+        "To market lower headline trading costs to prospective clients, Chloe Bennett, CFA, switches her firm's small-cap equity execution from an institutional desk charging 3 cents per share with algorithmic liquidity sourcing to a zero-commission retail broker. Over the next two quarters, explicit commissions fall to zero, but bid-ask slippage and adverse market impact rise by 18 basis points per trade. Which statement best describes Bennett's action under Standard III(A)?",
+        {
+            "A": "Compliant, because eliminating explicit brokerage commissions directly lowers visible expenses for client accounts.",
+            "B": "A violation, because best execution requires maximizing total execution quality and net value rather than merely minimizing explicit commissions.",
+            "C": "Compliant, provided Bennett updates client statements quarterly to show the zero-commission rate.",
+        },
+        "B",
+        "Under Standard III(A) (Loyalty, Prudence, and Care), members have a duty to seek best execution for client transactions. Best execution is defined as obtaining the most favorable net execution terms reasonably available under the circumstances—considering price, market impact, speed, liquidity, and implicit spread costs—not simply the lowest explicit commission rate. Sacrificing 18 bps in execution quality to advertise zero explicit commissions breaches prudence and care. Recommended procedures include periodic best-execution committee reviews measuring total implementation shortfall.",
+        {
+            "A": "Incorrectly equates lowest explicit commission with best execution while ignoring larger implicit market-impact costs.",
+            "C": "Quarterly reporting of explicit fees does not cure an ongoing failure to achieve best execution.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-140", SUBJECT, mod, top, sub, los,
+        "David Kwon, CFA, manages institutional equity portfolios at Sterling Asset Management, which is a subsidiary of a large commercial bank. Sterling's internal policy instructs portfolio managers to always vote client proxies in favor of corporate management proposals whenever the portfolio company is also a borrower or prospective investment-banking client of the parent bank. Kwon follows this policy without analyzing the economic merits of each ballot item. Kwon is violating Standard III(A) primarily because:",
+        {
+            "A": "Proxies are client assets that must be evaluated and voted in the best economic interest of clients, not the firm's affiliates.",
+            "B": "Standard III(A) strictly prohibits commercial banks from owning asset management subsidiaries.",
+            "C": "All proxies across every holding must be voted independently by an outside proxy advisory firm.",
+        },
+        "A",
+        "Under Standard III(A) (Loyalty, Prudence, and Care), proxy voting rights are part of the economic value of client securities. Members must vote proxies in an informed and responsible manner consistent with the best economic interests of the client, free from conflicts with the firm or parent company's commercial banking relationships. Recommended procedures require adopting written proxy voting policies, disclosing them to clients, and implementing firewalls or independent voting protocols when issuer conflicts exist.",
+        {
+            "B": "Affiliated banking and asset management structures are permitted if conflicts are managed and proxies are voted solely for client benefit.",
+            "C": "Using an external proxy advisor is optional, not mandatory; internal evaluation in the client's economic interest satisfies the standard.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-141", SUBJECT, mod, top, sub, los,
+        "Priya Nair, CFA, manages the Zenith Euro Corporate Bond Fund, a pooled open-end mutual fund with a stated prospectus mandate to remain at least 95% invested in investment-grade corporate debt. A sovereign investor holding 38% of the fund's units calls Nair and requests that she raise cash to 25% over the next month ahead of its planned partial redemption so market impact is minimized. Under Standard III(A), Nair should:",
+        {
+            "A": "Raise the 25% cash buffer immediately to prevent fire-sale losses when the 38% investor redeems.",
+            "B": "Consult the sovereign investor weekly and adjust duration to match its internal treasury schedule.",
+            "C": "Maintain compliance with the 95% investment mandate because her duty is to the fund as a whole rather than one major unitholder.",
+        },
+        "C",
+        "Under Standard III(A) (Loyalty, Prudence, and Care), the manager of a pooled investment vehicle owes loyalty to the fund as a whole and must adhere strictly to its stated prospectus mandate. Altering portfolio positioning to 25% cash violates the 95% invested mandate and unfairly forces the remaining 62% of unitholders to bear cash drag to accommodate a single large investor's upcoming liquidity event. Recommended procedures include managing liquidity within prospectus limits and applying fair redemption mechanisms (such as swing pricing or in-kind redemptions) consistently.",
+        {
+            "A": "Breaches the prospectus mandate and sacrifices expected returns for all other fund shareholders to accommodate one investor.",
+            "B": "Tailoring a pooled fund's risk profile to one unitholder's schedule violates the duty to treat the pooled fund as the client.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-142", SUBJECT, mod, top, sub, los,
+        "Oliver Sterling, CFA, oversees separately managed accounts (SMAs) under an all-inclusive 1.0% annual wrap fee agreement. Without modifying the fee schedule or providing disclosure, Sterling sweeps clients' temporary cash balances—typically 6% of assets—into a proprietary money market mutual fund managed by his firm that charges an additional 0.45% internal management fee. Sterling has most likely violated Standard III(A) by:",
+        {
+            "A": "Holding 6% cash in client accounts during active equity market periods.",
+            "B": "Imposing undisclosed duplicative fees through an affiliated cash sweep vehicle.",
+            "C": "Failing to guarantee a money market yield exceeding the 1.0% wrap fee.",
+        },
+        "B",
+        "Under Standard III(A) (Loyalty, Prudence, and Care), loyalty requires full fee transparency and avoiding undisclosed self-dealing or fee double-dipping. Sweeping cash from an all-in wrap fee account into an affiliated money market fund that charges an extra 0.45% management fee enriches the firm at clients' expense without informed consent or fee offset. Recommended procedures include crediting proprietary fund fees against the wrap fee or using unaffiliated low-cost institutional sweep vehicles with explicit advance disclosure.",
+        {
+            "A": "Holding 6% temporary cash is not inherently a violation if consistent with client liquidity needs or rebalancing.",
+            "C": "Standard III(A) never requires guaranteeing investment returns above management fees.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-143", SUBJECT, mod, top, sub, los,
+        "Nadia Okafor, CFA, has managed an investment account for an 84-year-old retired client, Mr. Henderson, for twelve years. During a phone call, Henderson sounds disoriented and asks Okafor to liquidate 250,000 USD of Treasury bonds and wire the proceeds to the personal checking account of his nephew, who is not listed on the account agreement and holds no power of attorney. What is Okafor's most appropriate action under Standard III(A)?",
+        {
+            "A": "Pause the wire request, follow firm elder-protection escalation procedures, and verify legal authority before transferring assets.",
+            "B": "Execute the wire promptly because an oral directive from the named account holder takes precedence over third-party concerns.",
+            "C": "Transfer the funds to the nephew's account only after sending an email confirmation to Henderson's home address.",
+        },
+        "A",
+        "Under Standard III(A) (Loyalty, Prudence, and Care), acting with prudence and care includes protecting vulnerable clients from potential financial exploitation or unauthorized transfers when signs of cognitive impairment appear. Okafor must not immediately execute an unusual third-party wire from a disoriented client; instead, she should delay disbursement per firm compliance/elder-protection protocols, verify capacity or legal power of attorney (POA), and contact pre-designated trusted contacts if authorized.",
+        {
+            "B": "Blindly executing an unusual third-party disbursement when a client appears impaired breaches the duty of prudence and care.",
+            "C": "An email confirmation does not verify legal capacity or protect an impaired client against potential financial abuse.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-144", SUBJECT, mod, top, sub, los,
+        "Apex Institutional Brokers manages both client discretionary portfolios and a large proprietary trading book. Head of Equities Samuel Ortiz, CFA, negotiates an agreement with Apex's prime custodian: because Apex pledges to maintain high client margin debit balances at a 7.5% interest rate, the custodian agrees to lend funds to Apex's proprietary trading desk at a discounted 4.0% rate. Ortiz's action most directly violates Standard III(A) because:",
+        {
+            "A": "Asset managers are prohibited from operating proprietary trading books alongside client accounts.",
+            "B": "Borrowing on margin in any client discretionary portfolio is inherently imprudent.",
+            "C": "He is using client financing costs to cross-subsidize cheaper borrowing for the firm's own account.",
+        },
+        "C",
+        "Under Standard III(A) (Loyalty, Prudence, and Care), members must place client interests ahead of employer interests and must not misuse client assets or borrowing capacity for firm benefit. Accepting elevated 7.5% client margin rates in exchange for subsidized 4.0% proprietary financing extracts direct economic value from clients to enrich the employer. Recommended procedures include negotiating borrowing rates strictly on clients' behalf and maintaining complete separation between client and firm prime brokerage terms.",
+        {
+            "A": "Firms may maintain both proprietary desks and client accounts provided strict ethical walls, priority rules, and loyalty are observed.",
+            "B": "Margin borrowing may be prudent when consistent with a client's IPS and risk parameters.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-145", SUBJECT, mod, top, sub, los,
+        "In establishing a new international small-cap fund, Hannah Lindqvist, CFA, must appoint an external sub-custodian in an emerging market. She bypasses her firm's standard vendor due-diligence checklist and selects GlobalVault Ltd.—a newly launched custodian founded by her former university roommate—without verifying its capital adequacy, segregation controls, or insurance coverage. GlobalVault charges 15 bps more than established global custodians. Lindqvist has violated Standard III(A) by failing to:",
+        {
+            "A": "Disclose her personal acquaintance with the founder to the securities regulator.",
+            "B": "Exercise reasonable prudence, care, and due diligence in selecting a third-party service provider for client assets.",
+            "C": "Choose the single lowest-fee sub-custodian operating in that country.",
+        },
+        "B",
+        "Under Standard III(A) (Loyalty, Prudence, and Care), the duty of prudence and care extends to due diligence when selecting external custodians, brokers, and sub-advisors to safeguard client assets. Skipping operational, capital, and asset-segregation checks to favor an acquaintance while imposing higher fees breaches both prudence and loyalty. Recommended procedures mandate documented RFP evaluations, credit/control audits, and ongoing vendor oversight.",
+        {
+            "A": "Disclosing a conflict to a regulator alone does not cure an imprudent selection of an unvetted, higher-fee custodian.",
+            "C": "Prudence requires evaluating total safety, service quality, and fees reasonably—not blindly picking the cheapest vendor.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-146", SUBJECT, mod, top, sub, los,
+        "Julian Park, CFA, oversees a global equity fund holding small positions in several Eastern European micro-cap stocks. Local corporate rules require share-blocking for 10 business days and physical attendance at annual meetings in local capitals to cast proxy votes. After performing a documented cost-benefit analysis showing that travel and illiquidity costs far outweigh any realistic economic impact on the fund, Park abstains from voting those foreign proxies and discloses this policy in the fund's annual report. Has Park violated Standard III(A)?",
+        {
+            "A": "No, because a cost-benefit analysis justifies abstaining when voting costs exceed expected economic value and the policy is disclosed.",
+            "B": "Yes, because Standard III(A) requires voting 100% of all equity proxies regardless of jurisdiction or cost.",
+            "C": "Yes, because Park must liquidate any foreign holding whose jurisdiction imposes share-blocking rules.",
+        },
+        "A",
+        "Under Standard III(A) (Loyalty, Prudence, and Care), although proxies have economic value and generally must be voted in clients' best interests, members may apply a documented cost-benefit analysis. When physical attendance, translation, or share-blocking costs clearly exceed the expected economic benefit to the portfolio—and the firm discloses its proxy voting policies and exceptions—abstaining is compliant.",
+        {
+            "B": "Standard III(A) explicitly permits abstention when documented costs outweigh benefits.",
+            "C": "Share-blocking does not automatically render a foreign equity imprudent or prohibited under Standard III(A).",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-147", SUBJECT, mod, top, sub, los,
+        "Sophia Rossi, CFA, is appointed investment manager for a private family trust. The trust deed instructs the trustee to provide reasonable current income for the founder's surviving spouse during her lifetime and preserve principal growth for the founder's three adult children as remaindermen. Yielding to lobbying from the children, Rossi shifts 95% of the trust into zero-dividend early-stage technology stocks. Rossi has most likely violated Standard III(A) because:",
+        {
+            "A": "Early-stage technology equities are categorically prohibited in fiduciary trust accounts.",
+            "B": "She failed to seek approval from the surviving spouse's personal attorney before rebalancing.",
+            "C": "She breached her duty of impartiality among beneficiaries as defined by the trust's governing terms.",
+        },
+        "C",
+        "Under Standard III(A) (Loyalty, Prudence, and Care), when a trust or estate establishes competing interests between current income beneficiaries and remaindermen, the fiduciary must follow the governing trust document and treat all beneficiary classes impartially. Tilting 95% into zero-dividend growth stocks to favor the remaindermen completely starves the income beneficiary, violating the trust mandate and duty of care.",
+        {
+            "A": "No asset class is categorically barred; suitability and loyalty depend on balancing the trust instrument's dual objectives.",
+            "B": "The core violation is breaching the trust deed's impartial mandate, not lacking approval from a beneficiary's personal lawyer.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-148", SUBJECT, mod, top, sub, los,
+        "Which of the following compliance practices is most directly cited as a recommended procedure for adhering to Standard III(A) (Loyalty, Prudence, and Care)?",
+        {
+            "A": "Providing clients with itemized quarterly account statements showing all securities held, cash balances, and transactions.",
+            "B": "Maintaining a minimum five-year composite history verified by an independent external auditor.",
+            "C": "Requiring employees to obtain verbal permission from a supervisor before accepting external board seats.",
+        },
+        "A",
+        "Recommended procedures for Standard III(A) (Loyalty, Prudence, and Care) include submitting to each client, at least quarterly, an itemized statement showing the funds and securities in the custody or possession of the member/firm plus all debits, credits, and transactions during the period, as well as establishing written proxy policies, reviewing IPS guidelines regularly, and disclosing conflicts.",
+        {
+            "B": "Refers to GIPS compliance and third-party verification, which relate to Standard III(D) rather than Standard III(A).",
+            "C": "Relates to Standard IV(B) and Standard VI(A), which require written (not verbal) consent for additional compensation and conflict disclosure.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-149", SUBJECT, mod, top, sub, los,
+        "A retiree transfers 1.2 million USD in cash from a matured certificate of deposit to her discretionary wealth advisor, Liam O'Connor, CFA, with instructions to invest immediately according to her balanced 50/50 income IPS. Distracted by a firm software migration, O'Connor leaves the 1.2 million USD sitting in a zero-interest brokerage clearing account for seven months while charging the standard 0.85% annual AUM fee on the cash. O'Connor has violated Standard III(A) primarily due to:",
+        {
+            "A": "Failure to exercise reasonable care and diligence in promptly investing client capital per the mandate.",
+            "B": "Charging an advisory fee higher than institutional Treasury bill yields.",
+            "C": "Accepting cash from a matured certificate of deposit without a 30-day waiting period.",
+        },
+        "A",
+        "Under Standard III(A) (Loyalty, Prudence, and Care), prudence and care require timely portfolio deployment and diligent cash management. Leaving 1.2 million USD uninvested at zero yield for seven months while collecting a 0.85% AUM fee deprives the client of expected income and demonstrates neglect of fiduciary duty. Recommended procedures include automated cash-sweep rules and regular exception monitoring of idle client cash balances.",
+        {
+            "B": "Advisory fees are contractual and need not be lower than T-bill yields; the breach is negligent failure to invest or sweep idle cash.",
+            "C": "No mandatory 30-day waiting period applies to deploying incoming client cash under the Code and Standards.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-150", SUBJECT, mod, top, sub, los,
+        "Victor Alvarez, CFA, manages both long-only retail mutual funds and a performance-fee hedge fund at Meridian Capital. To secure large allocations in heavily oversubscribed technology IPOs exclusively for his hedge fund, Alvarez routes excessive equity trading commissions from the retail mutual funds to the lead underwriting investment bank—even though another broker executes retail trades 40% cheaper. Alvarez's conduct violates Standard III(A) because he:",
+        {
+            "A": "Participated in oversubscribed technology IPOs within a hedge fund structure.",
+            "B": "Managed both performance-fee and asset-based-fee funds simultaneously.",
+            "C": "Misappropriated retail fund brokerage commissions to obtain IPO benefits for a different client fund.",
+        },
+        "C",
+        "Under Standard III(A) (Loyalty, Prudence, and Care), client brokerage belongs exclusively to the account generating those commissions. Using the retail mutual funds' brokerage commissions to buy IPO access for a separate performance-fee hedge fund—while sacrificing execution cost for the retail accounts—breaches loyalty and care owed to the retail fund shareholders. Recommended procedures strictly forbid trading off one client's brokerage to secure benefits for another.",
+        {
+            "A": "Hedge funds may participate in IPOs when allocated fairly and consistent with their mandate.",
+            "B": "Managing side-by-side fee structures is permitted if fair dealing, best execution, and conflict controls are strictly maintained.",
+        },
+    )
+
+
+def build_std3_b(out: list) -> None:
+    mod = "eth-m4-std3"
+    top = "Standard III: Duties to Clients"
+    sub = "Standard III(B): Fair Dealing"
+    los = "Evaluate investment recommendations, trade allocations, and client service tiers under Standard III(B) Fair Dealing"
+
+    add_l1(
+        out, "L1-ETH-151", SUBJECT, mod, top, sub, los,
+        "Claire Fontaine, CFA, manages 14 institutional and high-net-worth discretionary equity accounts with identical growth mandates. Her firm receives a 10,000-share allocation in a heavily oversubscribed biotech IPO suitable for all 14 accounts. Fontaine allocates 100% of the shares to her three performance-fee hedge fund accounts and zero shares to her 11 flat-fee accounts. Fontaine has violated:",
+        {
+            "A": "Standard III(A) only, because hedge funds cannot buy biotech stocks.",
+            "B": "Standard III(B) (Fair Dealing), because she failed to allocate the oversubscribed issue pro rata among all suitable accounts.",
+            "C": "No standard, because managers have discretion to reward accounts paying higher incentive fees.",
+        },
+        "B",
+        "Under Standard III(B) (Fair Dealing), members must deal fairly and objectively with all clients when taking investment actions. When an oversubscribed IPO is suitable for multiple discretionary accounts, shares must be allocated on a fair, pro rata basis (such as proportional to order size or assets under management) under a documented policy. Favoring performance-fee accounts over flat-fee accounts is a classic breach of fair dealing.",
+        {
+            "A": "Biotech IPOs are not barred for hedge funds; the primary violation is biased allocation among equally suitable client accounts.",
+            "C": "Fee structure differences never justify favoring performance-fee clients over flat-fee clients during trade allocation.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-152", SUBJECT, mod, top, sub, los,
+        "Rajesh Mehta, CFA, oversees client block allocations at Trident Wealth. One of Trident's regular fee-paying clients is Mehta's independent adult sister, Maya, who pays standard advisory fees and whose account Mehta holds no beneficial ownership in. When allocating an oversubscribed green-bond issue suitable for all balanced clients, Mehta excludes Maya's account entirely so nobody will accuse him of nepotism. Under Standard III(B), Mehta's action is:",
+        {
+            "A": "A violation, because a bona fide fee-paying client account with no member beneficial interest must be treated fairly alongside all other clients.",
+            "B": "Compliant, because Standard VI(B) prohibits all family members from participating in oversubscribed offerings.",
+            "C": "Compliant, provided Mehta verbally apologizes to his sister and gives her priority on the next secondary offering.",
+        },
+        "A",
+        "Under Standard III(B) (Fair Dealing) and Standard VI(B) (Priority of Transactions), only accounts in which the member has a direct or indirect beneficial ownership interest (such as the member's own, spouse's, or dependent child's account) must stand behind client orders. An independent adult relative's regular fee-paying account where the member has no pecuniary interest is a normal client account; excluding it from an eligible pro-rata allocation unfairly discriminates against that client in violation of Standard III(B).",
+        {
+            "B": "Standard VI(B) restricts accounts with member beneficial ownership, not unrelated-interest fee-paying family clients.",
+            "C": "Excluding her now and giving her priority later compounds the fair dealing violation across two offerings.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-153", SUBJECT, mod, top, sub, los,
+        "Vanguardia Wealth Management offers two transparent service tiers disclosed in its onboarding brochure and Form ADV: Premier clients (assets above 5 million USD, paying 0.90%) receive quarterly face-to-face portfolio reviews and dedicated analyst phone briefings; Core clients (assets under 5 million USD, paying 0.65%) receive digital quarterly reviews and portal research access. Whenever the investment committee issues a material rating change, alerts are transmitted simultaneously to both tiers via email and portal. Does this structure comply with Standard III(B)?",
+        {
+            "A": "No, because Standard III(B) requires identical personal phone service for every client regardless of fee paid.",
+            "B": "No, because minimum asset thresholds for premium service tiers violate fair dealing.",
+            "C": "Yes, because differentiated service levels are disclosed upfront and material recommendation changes are disseminated fairly to all clients.",
+        },
+        "C",
+        "Under Standard III(B) (Fair Dealing), 'fair' does not mean 'identical.' Differentiated service tiers (such as in-person meetings or analyst briefings for higher-fee clients) are permissible provided the tiers are disclosed to all clients and prospects, are available to anyone meeting the disclosed fee/minimum criteria, and do not disadvantage lower-tier clients when material investment changes are communicated or acted upon. Simultaneous transmission of rating changes preserves fair opportunity to act.",
+        {
+            "A": "Standard III(B) permits varying non-prejudicial service levels (e.g., extra meetings or deeper customization) when disclosed.",
+            "B": "Minimum thresholds for service tiers are compliant if transparently disclosed and not used to front-run lower-tier clients.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-154", SUBJECT, mod, top, sub, los,
+        "At 8:45 AM, equity analyst Henrik Lindholm, CFA, finalizes a material downgrade on Nordic Wind Power from 'Buy' to 'Sell' due to hidden turbine warranty liabilities. Before publishing the downgrade on the client portal at 1:30 PM, Lindholm telephones his firm's four largest pension fund clients at 9:00 AM to warn them to exit their positions. Lindholm has violated:",
+        {
+            "A": "Standard III(D) only, because he failed to calculate historical returns accurately.",
+            "B": "Standard III(B) (Fair Dealing), because he selectively gave large clients a 4.5-hour head start to trade ahead of other clients.",
+            "C": "No standard, because large institutional clients generate 80% of the brokerage's annual research revenue.",
+        },
+        "B",
+        "Under Standard III(B) (Fair Dealing), material changes in investment recommendations must be disseminated fairly and roughly simultaneously to all clients who hold the security or have expressed interest in it. Calling four major pension clients hours before releasing the downgrade to smaller clients violates fair dealing and allows selective trading ahead of the price drop. Recommended procedures include limiting pre-dissemination knowledge and enforcing simultaneous broadcast.",
+        {
+            "A": "Standard III(D) governs performance presentation; selective advance tipping of a rating change is a Standard III(B) breach.",
+            "C": "Higher commission revenue never justifies giving certain clients advance access to material recommendation changes.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-155", SUBJECT, mod, top, sub, los,
+        "Asset manager Fiona Gallagher, CFA, enters a block buy order for 50,000 shares of a thinly traded infrastructure bond across 10 balanced client accounts. Only 12,000 shares execute before the market closes. Noticing that Account #4 trailed its peer benchmark by 110 basis points last quarter, Gallagher allocates all 12,000 filled shares to Account #4 at the favorable fill price. Gallagher's allocation violates Standard III(B) because she:",
+        {
+            "A": "Failed to allocate the partial block fill pro rata across all participating accounts under a fair written policy.",
+            "B": "Used a block trade order instead of entering 10 separate small retail tickets.",
+            "C": "Did not wait until the full 50,000-share order was completely filled before allocating any shares.",
+        },
+        "A",
+        "Under Standard III(B) (Fair Dealing), partial fills of block orders must be allocated fairly—typically pro rata based on initial order size—across all participating accounts in accordance with a written allocation policy. Cherry-picking a single lagging account to boost its quarterly performance ('performance smoothing') directly violates fair dealing toward the other nine participating clients.",
+        {
+            "B": "Block trading is a recommended efficiency procedure when allocations are handled pro rata.",
+            "C": "Partial fills at market close may be allocated on the same day provided the allocation is pro rata across participating accounts.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-156", SUBJECT, mod, top, sub, los,
+        "A block order for 20,000 shares of a newly issued preferred stock across 25 retail SMA accounts receives a partial fill of 3,300 shares. Under the firm's pre-established written allocation policy, the trading desk allocates shares pro rata rounded down to the minimum 100-share board lot, and then distributes the remaining 300 shares via a documented random lottery among accounts that did not yet receive a full pro-rata fill. This practice is:",
+        {
+            "A": "A violation of Standard III(B) because lot-size rounding leaves some very small accounts with zero shares.",
+            "B": "A violation of Standard III(B) unless the manager uses personal funds to buy additional shares in the secondary market.",
+            "C": "Compliant with Standard III(B) as a systematic, transparent procedure addressing odd-lot and minimum-fill constraints.",
+        },
+        "C",
+        "Under Standard III(B) (Fair Dealing), when partial fills make exact fractional pro-rata allocation impractical due to minimum tradeable lot sizes or custodial fees on tiny odd lots, firms may use a systematic, pre-disclosed written policy such as pro-rata allocation rounded to board lots combined with a random lottery for residual shares. This prevents arbitrary favoritism and complies with Standard III(B).",
+        {
+            "A": "Written minimum-lot and random-lottery policies are explicitly recognized as fair ways to handle small partial fills.",
+            "B": "Managers are under no obligation to subsidize partial market fills with personal capital.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-157", SUBJECT, mod, top, sub, los,
+        "Oakridge Capital manages identical model-portfolio SMA sleeves across six independent third-party wrap sponsor platforms that forbid cross-platform block trading. Because executing trades sequentially across platforms can cause slight price drift, Oakridge adopts and discloses a written trade-rotation schedule that shifts the execution order alphabetically each rebalancing cycle so every platform rotates evenly through positions 1 to 6. Which statement is most accurate?",
+        {
+            "A": "Oakridge violates Standard III(B) because simultaneous execution across all six platforms is strictly mandatory.",
+            "B": "Oakridge is following a recommended fair-dealing procedure by using and disclosing a systematic trade-rotation policy.",
+            "C": "Oakridge must compensate platforms ranked fourth through sixth out of management fees for any adverse price drift.",
+        },
+        "B",
+        "Under Standard III(B) (Fair Dealing), when structural or operational constraints (such as separate third-party wrap sponsor trading desks) prevent simultaneous block execution across all clients, adopting and disclosing a systematic, unbiased trade-rotation schedule ensures no client group is consistently disadvantaged over time. This is an explicit recommended compliance procedure.",
+        {
+            "A": "Simultaneous execution is ideal when feasible, but a fair trade-rotation policy complies when platforms prevent combined block trades.",
+            "C": "No fee rebate is required for normal market movement across a disclosed, equitable trade rotation.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-158", SUBJECT, mod, top, sub, los,
+        "At 7:30 AM, research director Anita Desai, CFA, distributes a new 'Outperform' initiation report on Titan Semiconductors simultaneously to all paying institutional and retail clients via email and the firm portal. At 11:30 AM, she posts an abbreviated highlight of the initiation report on the firm's public marketing blog to attract prospective clients. Under Standard III(B), Desai's conduct is:",
+        {
+            "A": "Compliant, because Standard III(B) requires fair dealing among current clients rather than giving non-paying prospects simultaneous access with clients.",
+            "B": "A violation, because prospective clients must receive new research reports at the exact same moment as current paying clients.",
+            "C": "A violation, because publishing any investment recommendation on a public blog breaches Standard III(B).",
+        },
+        "A",
+        "Standard III(B) (Fair Dealing) applies to dealings with existing clients. Paying clients are entitled to receive investment recommendations fairly and before non-paying prospective clients or the general public. Releasing the full initiation report simultaneously to all existing clients four hours before sharing excerpts with non-client prospects on a marketing blog complies with Standard III(B).",
+        {
+            "B": "Prospective clients who do not pay for the firm's services are not owed simultaneous access ahead of or alongside paying clients.",
+            "C": "Public marketing excerpts after fair client dissemination do not violate Standard III(B) (provided other standards like V(B) and VII(B) are met).",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-159", SUBJECT, mod, top, sub, los,
+        "At 10:00 AM, Apex Research publishes an internal 'Strong Buy' upgrade on an illiquid micro-cap software stock (average daily volume 35,000 shares). Portfolio manager Kevin Brooks, CFA, immediately purchases 90,000 shares for his discretionary accounts over the next two hours, driving the stock price up 8.5%, and only emails the upgrade alert to his non-discretionary advisory clients at 2:00 PM. Brooks has violated Standard III(B) because he:",
+        {
+            "A": "Invested discretionary accounts in a micro-cap stock with low daily trading volume.",
+            "B": "Did not force non-discretionary clients to convert to discretionary mandates.",
+            "C": "Failed to give non-discretionary clients a fair opportunity to act on the recommendation before discretionary trading moved the market.",
+        },
+        "C",
+        "Under Standard III(B) (Fair Dealing), members must not act on a new or changed recommendation for discretionary accounts in a manner that systematically disadvantages non-discretionary clients. Trading heavily in an illiquid stock for four hours before notifying non-discretionary clients—pushing the price up 8.5%—deprives non-discretionary clients of a fair opportunity to evaluate and act on the recommendation. All clients must receive timely, fair dissemination.",
+        {
+            "A": "Low liquidity requires careful execution and suitability review, not a categorical ban if consistent with client mandates.",
+            "B": "Managers cannot compel non-discretionary clients to grant discretion; they must instead ensure fair notice across both groups.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-160", SUBJECT, mod, top, sub, los,
+        "A retail advisory client calls her investment advisor, Lucas Weber, CFA, and asks to purchase 500 shares of SolarGrid Corp. SolarGrid is currently rated 'Sell' by Weber's firm due to excessive debt. Weber informs the client of the firm's 'Sell' rating and explains the debt concerns, but the client states she still wants to buy the shares for personal reasons. Weber records the instruction as unsolicited in the client log and executes the buy order. Has Weber violated Standard III(B)?",
+        {
+            "A": "Yes, because Standard III(B) prohibits executing any client order that contradicts the firm's active research rating.",
+            "B": "No, because advisors may execute unsolicited orders contrary to firm recommendations after informing the client of the firm's view and documenting the call.",
+            "C": "Yes, because Weber must wait until the firm removes its 'Sell' rating before placing any buy trade in SolarGrid.",
+        },
+        "B",
+        "Under Standard III(B) (Fair Dealing), a member may accept and execute an unsolicited client order that runs counter to a current firm recommendation provided the member informs the client of the firm's contrary recommendation and rationale before executing, confirms the client still wishes to proceed, and documents the trade as unsolicited (also verifying suitability impact under Standard III(C)).",
+        {
+            "A": "Firms are not barred from executing unsolicited orders contrary to house ratings once proper disclosure and documentation occur.",
+            "C": "Waiting for a rating change would wrongfully block a client's explicit, informed, unsolicited instruction.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-161", SUBJECT, mod, top, sub, los,
+        "Due to a back-office coding error at Ridgeview Advisors, an unwanted duplicate buy order in copper futures is executed across four client accounts managed under identical risk-parity mandates, resulting in an immediate 18,000 USD loss per account. Only Client D, a vocal institutional pension fund threatening to terminate its contract, is reimbursed by Ridgeview out of firm capital; Clients A, B, and C receive nothing. Ridgeview's handling violates:",
+        {
+            "A": "Standard III(B) (Fair Dealing), because similarly situated clients harmed by the same firm trading error must be treated equitably.",
+            "B": "Standard III(E) only, because disclosing trading errors reveals client identities.",
+            "C": "No standard, because reimbursing a trading error is strictly a commercial negotiation with each client.",
+        },
+        "A",
+        "Under Standard III(B) (Fair Dealing), fair and objective treatment extends beyond research dissemination to all professional activities, including trade-error resolution. When a firm operational error harms four similarly situated accounts identically, selectively compensating only the large client threatening termination while ignoring Clients A, B, and C breaches Standard III(B) (and Standard III(A)).",
+        {
+            "B": "Standard III(E) governs confidentiality; fixing an error for all four harmed clients does not require exposing one client's identity to another.",
+            "C": "Error remediation cannot be selectively withheld from quieter or smaller clients harmed by the exact same firm mistake.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-162", SUBJECT, mod, top, sub, los,
+        "To save external brokerage spreads, portfolio manager Sarah Jenkins, CFA, executes an internal cross-trade selling 100,000 shares of an illiquid regional bank from a terminating pension client's account into her firm's flagship equity fund. Instead of using an independent closing or midpoint quote, Jenkins prices the trade at the lowest bid seen earlier in the week to give the flagship fund an advantageous entry cost. Jenkins's cross-trade violates Standard III(B) primarily because:",
+        {
+            "A": "Internal cross-trades between two client accounts are strictly illegal under the CFA Standards.",
+            "B": "Terminating accounts are prohibited from selling illiquid equities before closure.",
+            "C": "Pricing a cross-trade off-market to favor the ongoing flagship fund unfairly harms the terminating client.",
+        },
+        "C",
+        "Under Standard III(B) (Fair Dealing) and Standard III(A), cross-trades between client accounts are permissible only when suitable for both accounts, permitted by client mandates/law, properly disclosed, and executed at an independent, fair market price (such as an independent midpoint or closing auction price). Setting an artificially depressed price to subsidize the ongoing flagship fund at the terminating account's expense violates fair dealing.",
+        {
+            "A": "Cross-trades are permissible when properly disclosed, suitable for both parties, and priced at an objective independent market value.",
+            "B": "Terminating accounts naturally liquidate holdings; the breach is the unfair off-market pricing favoring the surviving fund.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-163", SUBJECT, mod, top, sub, los,
+        "Following an unexpected regulatory fine against PharmaCore, analyst Ethan Mercer, CFA, lowers his recommendation from 'Buy' to 'Sell'. Mercer instructs his distribution assistant to email the downgrade alert only to clients who paid at least 10,000 USD in commissions over the past year, leaving smaller buy-and-hold clients who currently own PharmaCore shares unnotified. Under Standard III(B), this action is:",
+        {
+            "A": "Compliant, because commission-paying clients fund the analyst's research compensation.",
+            "B": "A violation, because material changes in recommendations must be communicated fairly to all clients known to hold the security or interested in it.",
+            "C": "Compliant, provided the buy-and-hold clients opted out of daily trading alerts at onboarding.",
+        },
+        "B",
+        "Under Standard III(B) (Fair Dealing), when a member makes a material change in an investment recommendation, it is especially critical to notify all clients who hold the affected security or have previously expressed interest in it, regardless of how much commission revenue they generated. Screening out smaller buy-and-hold shareholders from a 'Sell' alert violates fair dealing.",
+        {
+            "A": "Client commission size cannot be used to deny material downgrade notifications to existing shareholders.",
+            "C": "Opting out of routine market noise does not excuse withholding a material downgrade on an actively held position.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-164", SUBJECT, mod, top, sub, los,
+        "Which of the following is a recommended procedure for compliance with Standard III(B) (Fair Dealing)?",
+        {
+            "A": "Limiting the number of people who know about a pending recommendation change and shortening the time between decision and dissemination.",
+            "B": "Allowing portfolio managers 24 hours after a research downgrade to exit discretionary accounts before emailing retail advisors.",
+            "C": "Prohibiting any firm from offering higher-fee premium client service tiers.",
+        },
+        "A",
+        "Recommended procedures under Standard III(B) include: (1) limiting the number of people privy to a pending recommendation change prior to release, (2) shortening the time frame between the investment decision and its dissemination, (3) publishing personnel guidelines for pre-dissemination behavior, (4) ensuring simultaneous dissemination, and (5) maintaining written trade allocation procedures.",
+        {
+            "B": "Giving discretionary accounts a 24-hour head start ahead of retail clients violates fair dealing.",
+            "C": "Differential service tiers are permitted under Standard III(B) provided they are disclosed and do not prejudice lower-tier clients.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-165", SUBJECT, mod, top, sub, los,
+        "Beacon Capital receives 4,000 shares of a hot software IPO suitable for 20 discretionary accounts ranging in size from 150,000 USD to 45 million USD. Without any written allocation policy or client disclosure, portfolio manager Maya Brooks divides the allocation equally—200 shares per account—so a 150,000 USD account receives a 6.7% portfolio weight while a 45 million USD account receives a 0.02% weight. Brooks's approach most likely violates Standard III(B) because:",
+        {
+            "A": "Software IPOs must be excluded from discretionary accounts under 500,000 USD.",
+            "B": "Equal per-account distribution is the mandatory default rule only for fixed-income issues.",
+            "C": "Allocations across eligible accounts should generally be made pro rata to order size or account assets under a documented written policy.",
+        },
+        "C",
+        "Under Standard III(B) (Fair Dealing), fair trade allocation across accounts of vastly different asset sizes typically requires pro-rata allocation proportional to order size (or portfolio assets) governed by a transparent written allocation policy. An ad hoc equal-share-per-account split without written policy or disclosure arbitrarily distorts portfolio impact and unfairly disadvantages larger accounts relative to their capital.",
+        {
+            "A": "Accounts under 500,000 USD are not barred from suitable IPOs.",
+            "B": "Equal per-account allocation is not a default rule for fixed income or equities; pro-rata allocation based on order size is standard.",
+        },
+    )
+
+
+def build_std3_c(out: list) -> None:
+    mod = "eth-m4-std3"
+    top = "Standard III: Duties to Clients"
+    sub = "Standard III(C): Suitability"
+    los = "Evaluate client investment mandates, total portfolio context, and unsolicited trades under Standard III(C) Suitability"
+
+    add_l1(
+        out, "L1-ETH-166", SUBJECT, mod, top, sub, los,
+        "Daniel Cho, CFA, manages a tax-deferred individual retirement account (IRA) for a physician in the top marginal income tax bracket. Seeking safe fixed-income exposure, Cho invests 40% of the IRA in long-term AAA-rated tax-exempt municipal bonds yielding 3.1%, while comparable-maturity AAA taxable corporate and agency bonds yield 4.9%. Under Standard III(C), Cho has most likely:",
+        {
+            "A": "Complied, because AAA municipal bonds offer ultra-low credit risk appropriate for retirement funds.",
+            "B": "Violated Standard III(C) by failing to account for the tax-deferred status of the account, sacrificing 180 bps in yield for a tax exemption that confers no benefit.",
+            "C": "Complied, provided the physician is in the highest personal income tax bracket on her taxable salary.",
+        },
+        "B",
+        "Under Standard III(C) (Suitability), members must consider all client constraints—including tax status—before taking investment action. Placing lower-yielding tax-exempt municipal bonds inside an already tax-deferred retirement account (IRA) wastes the tax exemption while locking in a 180 bps yield penalty compared with taxable bonds of equal credit quality. This violates suitability.",
+        {
+            "A": "Low credit risk alone does not make an asset suitable when it violates tax-efficiency constraints inside a tax-deferred account.",
+            "C": "The client's personal tax bracket applies to taxable brokerage accounts, not assets sheltered inside a tax-deferred IRA.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-167", SUBJECT, mod, top, sub, los,
+        "During an onboarding interview, 68-year-old retiree Grace Tanaka tells advisor Paul Morales, CFA, 'I love market volatility and want you to put my savings into leveraged semiconductor ETFs to maximize upside.' Morales reviews Tanaka's finances and sees her 480,000 USD portfolio is her sole financial asset supporting 32,000 USD in annual living expenses alongside a modest pension. How should Morales address this gap under Standard III(C)?",
+        {
+            "A": "Constrain the portfolio risk level to Tanaka's lower ability to take risk and educate her on why leveraged ETFs are unsuitable.",
+            "B": "Follow Tanaka's high willingness to take risk because client autonomy overrides financial capacity metrics.",
+            "C": "Split the portfolio evenly between Treasury bills and leveraged semiconductor ETFs to average out risk.",
+        },
+        "A",
+        "Under Standard III(C) (Suitability), when a client's willingness to take risk conflicts with their ability to take risk, the lower of the two—here, Tanaka's low financial ability to absorb drawdowns without impairing essential retirement income—must govern the Investment Policy Statement (IPS) and portfolio construction. Morales should educate Tanaka and adhere to her financial capacity.",
+        {
+            "B": "Willingness cannot override low financial ability to bear losses; an advisor must not expose essential living capital to catastrophic drawdowns.",
+            "C": "A 50% allocation to leveraged sector ETFs still imposes severe principal loss risk inconsistent with her low ability to take risk.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-168", SUBJECT, mod, top, sub, los,
+        "Rachel Greenwald, CFA, manages the Zenith Investment-Grade US Corporate Bond Fund, a mutual fund whose prospectus restricts holdings to USD-denominated corporate debt rated BBB- or higher. Anticipating a spike in US inflation, Greenwald invests 22% of the fund in emerging-market equities and gold mining stocks to protect purchasing power. Under Standard III(C), Greenwald's action is:",
+        {
+            "A": "Compliant, because protecting real purchasing power is the primary economic objective of bond investors.",
+            "B": "Compliant, provided the emerging-market equities outperform corporate bonds over the subsequent 12 months.",
+            "C": "A violation, because when managing to a specific fund mandate, suitability must be judged strictly by adherence to the stated mandate and strategy.",
+        },
+        "C",
+        "Under Standard III(C) (Suitability), when managing a pooled fund or institutional account with a stated mandate, the member's duty is to make investment decisions consistent with that stated mandate, strategy, and investment constraints. Unilaterally adding 22% emerging-market equities and gold miners to an investment-grade US corporate bond fund constitutes unauthorized style drift and violates Standard III(C) regardless of outcome.",
+        {
+            "A": "Investors select an investment-grade bond fund for predictable fixed-income exposure within their broader asset allocation, not ad hoc equity bets.",
+            "B": "Ex-post positive returns never justify violating a fund's stated mandate.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-169", SUBJECT, mod, top, sub, los,
+        "A university endowment's IPS specifies moderate total portfolio risk (target annualized volatility under 10%) and permits alternative diversifiers. Portfolio manager Omar Farooq, CFA, recommends allocating 4% of the endowment to a high-volatility systematic managed-futures strategy (standalone volatility 22%) that exhibits near-zero correlation with equities and bonds, lowering total portfolio expected volatility from 9.4% to 8.9%. Under Standard III(C), this recommendation is:",
+        {
+            "A": "A violation, because an asset with 22% standalone volatility exceeds the endowment's 10% total portfolio risk threshold.",
+            "B": "Compliant, because suitability must be judged in the context of the client's total portfolio rather than evaluating an investment in isolation.",
+            "C": "A violation, unless the managed-futures fund reduces its own standalone volatility below 10%.",
+        },
+        "B",
+        "Under Standard III(C) (Suitability), members must judge the suitability of each investment in the context of the client's total portfolio—incorporating correlation, diversification benefits, and overall risk-return profile—rather than viewing a security in isolation. Adding a 4% sleeve of an uncorrelated strategy that reduces overall portfolio volatility from 9.4% to 8.9% enhances risk-adjusted efficiency within the IPS.",
+        {
+            "A": "Improperly evaluates standalone asset volatility in isolation instead of total portfolio variance.",
+            "C": "Individual portfolio holdings need not have lower standalone volatility than the portfolio's aggregate volatility limit.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-170", SUBJECT, mod, top, sub, los,
+        "A conservative retired client whose IPS prioritizes capital preservation calls her discretionary wealth manager, Victor Chen, CFA, and gives an unsolicited instruction to liquidate 35% of her investment-grade bond ladder and invest the proceeds into a single illiquid, early-stage biotech penny stock. How should Chen respond under Standard III(C)?",
+        {
+            "A": "Explain why the trade would materially impair her IPS objectives, attempt to dissuade her, and decline to execute within the managed IPS unless the IPS is formally updated or the trade is moved outside the mandate.",
+            "B": "Execute the trade immediately and append a brief phone memo noting 'unsolicited client order.'",
+            "C": "Execute half of the requested trade (17.5%) to compromise between her request and her IPS.",
+        },
+        "A",
+        "Under Standard III(C) (Suitability), when a client initiates an unsolicited trade that would have a MATERIAL adverse impact on the portfolio's overall risk-return profile and IPS, the member must explain the inconsistency, try to dissuade the client, and not execute the trade under the current IPS. If the client insists, the manager must either obtain a formal written revision of the IPS (confirming a genuine change in objectives), execute the trade in a separate self-directed account outside the managed mandate, or resign the relationship.",
+        {
+            "B": "Simple 'unsolicited' documentation suffices only for trades with minimal portfolio impact, not a 35% allocation that upends a conservative IPS.",
+            "C": "Executing a 17.5% unsuitable trade in a single speculative penny stock still materially breaches the conservative IPS.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-171", SUBJECT, mod, top, sub, los,
+        "Multi-millionaire entrepreneur Sofia Bergstrom maintains an 8.5 million USD diversified growth portfolio with advisor Martin Schulz, CFA. Bergstrom calls Schulz with an unsolicited request to invest 5,000 USD (0.06% of the portfolio) in a speculative neighborhood micro-brewery startup because she knows the founders. Schulz reviews the request, discusses its illiquidity and unsuitability relative to her public-equity IPS, confirms Bergstrom understands the risk, and executes the trade after obtaining written acknowledgment. Schulz's action is:",
+        {
+            "A": "A violation of Standard III(C), because startup equity never matches a public-equity IPS.",
+            "B": "A violation of Standard III(A), because advisors may never facilitate speculative private placements.",
+            "C": "Compliant with Standard III(C), because the unsolicited trade has minimal impact on the total portfolio and was preceded by risk discussion and documentation.",
+        },
+        "C",
+        "Under Standard III(C) (Suitability), when an unsolicited client trade request is unsuitable in nature but has MINIMAL impact on the client's total portfolio (here, 0.06% of net worth), the member may execute the order after discussing why it deviates from the IPS, ensuring the client understands the risks, and documenting the client's informed instruction.",
+        {
+            "A": "Misses the critical distinction under Standard III(C) between unsolicited unsuitable requests with minimal impact versus material impact.",
+            "B": "Private placements are not prohibited under Standard III(A) when properly vetted or executed as an informed minimal-impact unsolicited request.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-172", SUBJECT, mod, top, sub, los,
+        "Eighteen months ago, wealth manager Nadia Khoury, CFA, drafted an aggressive growth IPS for a 42-year-old surgeon earning 600,000 USD annually. Three months ago, the surgeon suffered a severe hand injury forcing early retirement, reduced disability income, and mounting medical expenses—all of which he reported to Khoury. Without revisiting the IPS, Khoury invests a maturing bond payout into a 10-year locked-up private equity buyout fund. Khoury has most likely violated Standard III(C) by failing to:",
+        {
+            "A": "Require the surgeon to purchase long-term care insurance prior to onboarding.",
+            "B": "Promptly update the client's IPS and reassess suitability following a material change in financial circumstances.",
+            "C": "Restrict all retired clients exclusively to insured bank deposits.",
+        },
+        "B",
+        "Under Standard III(C) (Suitability), members must update a client's IPS at least annually and PROMPTLY whenever the client experiences a major life or financial change (such as job loss, disability, divorce, or retirement). Continuing to deploy capital into illiquid 10-year lockups under an outdated high-income aggressive IPS after learning of permanent disability and liquidity needs violates Standard III(C).",
+        {
+            "A": "Insurance planning may be helpful, but the Standard III(C) violation is failing to update the IPS and match investments to altered constraints.",
+            "C": "Retirees do not face a blanket ban on all capital-market assets, provided holdings align with their updated risk, horizon, and liquidity needs.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-173", SUBJECT, mod, top, sub, los,
+        "At onboarding, small-business owner Thomas Reed informs investment advisor Clara Vance, CFA, that he must withdraw 300,000 USD in exactly five months to pay a confirmed commercial real estate closing deposit. Seeking higher yield than Treasury bills, Vance invests that 300,000 USD into a private credit interval fund that permits redemptions only quarterly capped at 5% of total fund assets. Vance has violated Standard III(C) primarily by neglecting the client's:",
+        {
+            "A": "Liquidity and time horizon constraints.",
+            "B": "Tax bracket optimization.",
+            "C": "Qualitative risk tolerance questionnaire score.",
+        },
+        "A",
+        "Under Standard III(C) (Suitability), an IPS must incorporate all five investment constraints: liquidity, time horizon, tax concerns, legal/regulatory factors, and unique circumstances. Placing funds needed in five months for a fixed real estate closing into a gated interval fund with capped quarterly redemptions exposes the client to severe illiquidity and potential default on his closing, violating liquidity and horizon suitability.",
+        {
+            "B": "Tax optimization is not the primary issue; the 5-month hard liquidity deadline is the binding constraint.",
+            "C": "Even an aggressive risk score cannot justify placing short-term earmarked closing cash in a gated illiquid vehicle.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-174", SUBJECT, mod, top, sub, los,
+        "A senior executive at a major cloud-software firm holds 4.5 million USD in vested employer stock and unvested RSUs (representing 82% of her total net worth) in an outside custodian account. She asks advisor Benjamin Frost, CFA, to manage her remaining 1.0 million USD liquid savings for long-term diversification. Without inquiring about her concentrated outside holdings, Frost invests 90% of the 1.0 million USD account into a Nasdaq-100 technology-heavy ETF. Frost's action violates Standard III(C) because he:",
+        {
+            "A": "Used low-cost passive ETFs instead of individual securities.",
+            "B": "Failed to advise the executive to resign from her employer immediately.",
+            "C": "Failed to evaluate portfolio risk and sector concentration in the context of the client's total financial wealth and human capital.",
+        },
+        "C",
+        "Under Standard III(C) (Suitability), members must make reasonable inquiry into a client's overall financial situation—including outside holdings and employment-linked concentration—to judge suitability in the context of the total portfolio. Piling 90% of her liquid diversification portfolio into tech-heavy equities when 82% of her net worth and her salary are already tied to cloud software dangerously compounds concentration risk.",
+        {
+            "A": "Passive ETFs are often suitable tools; the breach is ignoring massive existing sector concentration across her total net worth.",
+            "B": "Advisors need not demand resignation; they must gather complete net-worth context and diversify the managed sleeve accordingly.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-175", SUBJECT, mod, top, sub, los,
+        "Liam Shaw, CFA, works on an execution-only discount brokerage desk where clients normally place self-directed trades with no advisory relationship. When a caller asks Shaw, 'What do you think I should buy with 100,000 USD right now?', Shaw replies, 'Put it all in our newly underwritten biotech stock—it has huge upside,' without asking about the caller's income, horizon, or risk tolerance. Which statement is accurate under Standard III(C)?",
+        {
+            "A": "Shaw complied because execution-only discount brokers are permanently exempt from Standard III(C).",
+            "B": "Shaw violated Standard III(C) because offering an investment recommendation triggered the duty to first inquire into the client's objectives, experience, and constraints.",
+            "C": "Shaw complied provided the caller explicitly asked for his opinion first.",
+        },
+        "B",
+        "Under Standard III(C) (Suitability), while pure order-takers executing unsolicited trades under an execution-only agreement do not provide suitability assessments, the moment a broker makes an investment recommendation, an advisory duty arises. Shaw must conduct a reasonable inquiry into the client's financial situation, experience, objectives, and constraints BEFORE recommending a security.",
+        {
+            "A": "The execution-only exemption applies strictly to passive order execution, never when the broker actively recommends securities.",
+            "C": "A client asking for a recommendation does not waive the member's duty to gather financial and risk information prior to advising.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-176", SUBJECT, mod, top, sub, los,
+        "On his first day working with a newly referred wealthy client, portfolio manager Derek Patel, CFA, relies solely on the referring acquaintance's remark that the client 'is rich and likes aggressive returns.' Before holding a discovery meeting or drafting a written IPS, Patel invests 800,000 USD of the client's cash into structured autocallable equity notes. Patel has most likely violated Standard III(C) by:",
+        {
+            "A": "Failing to make a reasonable inquiry into the client's investment experience, risk/return objectives, and constraints prior to taking investment action.",
+            "B": "Purchasing structured notes rather than direct shares of common stock.",
+            "C": "Accepting client referrals from existing acquaintances.",
+        },
+        "A",
+        "Under Standard III(C) (Suitability), members in an advisory relationship must make a reasonable inquiry into a client's investment experience, risk and return objectives, and financial constraints—and document them in an IPS—PRIOR to making recommendations or taking investment action. Relying on casual third-party remarks before onboarding inquiry directly violates Standard III(C).",
+        {
+            "B": "Structured notes can be suitable for appropriate clients; the breach is acting before completing a proper suitability inquiry.",
+            "C": "Client referrals are normal and permissible (subject to Standard VI(C) if referral fees exist), provided full onboarding inquiry occurs first.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-177", SUBJECT, mod, top, sub, los,
+        "The governing charter of the Hope Medical Foundation strictly prohibits owning companies deriving any revenue from tobacco or firearms manufacturing. Hired to manage the foundation's US equity sleeve, analyst Laura Gomez, CFA, invests 100% of the sleeve in a broad S&P 500 index ETF for low fees without reviewing whether index constituents violate the charter's screens. Under Standard III(C), Gomez has violated the requirement to adhere to:",
+        {
+            "A": "Active stock-picking performance expectations.",
+            "B": "Time-horizon diversification guidelines.",
+            "C": "Unique and legal constraints established in the client's IPS.",
+        },
+        "C",
+        "Under Standard III(C) (Suitability), members must ensure all portfolio selections comply with the client's written constraints, including ethical, religious, or charter-mandated negative screens categorized under legal or unique constraints. Purchasing a commingled broad index ETF containing prohibited tobacco and firearms firms without verifying or implementing screens violates the foundation's IPS.",
+        {
+            "A": "Index funds are not barred when compliant with mandates; the failure is ignoring explicit ethical/charter restrictions.",
+            "B": "The violation relates to unique/legal negative screening constraints rather than time horizon.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-178", SUBJECT, mod, top, sub, los,
+        "Because her conservative municipal bond portfolios performed steadily for four consecutive years and no clients requested changes, portfolio manager Evelyn Chang, CFA, skips annual IPS reviews for all clients over that four-year span. Which statement best describes Chang's practice relative to Standard III(C)?",
+        {
+            "A": "Fully compliant, because IPS updates are required only when clients initiate contact about major life changes.",
+            "B": "Fails recommended compliance procedures under Standard III(C), which call for reviewing and updating each client's IPS at least annually.",
+            "C": "A violation only if bond prices declined during the four-year interval.",
+        },
+        "B",
+        "Recommended procedures for Standard III(C) (Suitability) specify that members must review and update each client's IPS regularly—at least annually—even when the client has not reported changes or portfolios have performed steadily, to ensure objectives, liquidity needs, tax status, and constraints remain current.",
+        {
+            "A": "Waiting solely for client-initiated changes leaves outdated assumptions unchecked; proactive annual review is recommended.",
+            "C": "Compliance with suitability review procedures does not depend on negative market performance.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-179", SUBJECT, mod, top, sub, los,
+        "FinTech Advisory launches an automated wealth platform whose algorithm assigns model portfolios strictly using a single input: client age. Under the rule, every user aged 25 to 35 is automatically placed into a 100% emerging-market and small-cap equity portfolio without collecting income stability, debt levels, liquidity horizons, or risk tolerance. Compliance officer Jason Lee, CFA, signs off on the platform. Lee's sign-off violates:",
+        {
+            "A": "Standard III(C) (Suitability), because assigning portfolios solely by age ignores required financial objectives, constraints, and risk profiles.",
+            "B": "Standard III(D) only, because automated platforms cannot calculate money-weighted returns.",
+            "C": "No standard, because algorithmic model allocations are exempt from individualized inquiry.",
+        },
+        "A",
+        "Under Standard III(C) (Suitability), advisory relationships—whether human or digital/automated—require reasonable inquiry into investment experience, risk/return objectives, and all relevant financial constraints (liquidity, horizon, tax, legal, unique circumstances). Relying solely on age ignores emergency needs, debt obligations, and individual risk tolerance, violating Standard III(C).",
+        {
+            "B": "Return calculation methodology falls under III(D)/GIPS, whereas ignoring client risk capacity and constraints breaches III(C).",
+            "C": "Technology-delivered investment advice carries the exact same suitability obligations as traditional advisors.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-180", SUBJECT, mod, top, sub, los,
+        "Client Arthur Miller opens a 1.0 million USD discretionary brokerage account with advisor Priya Kapoor, CFA, seeking growth and income. During onboarding, Kapoor omits questions about outside assets and never learns that Miller already owns 3.5 million USD in leveraged commercial rental properties outside the brokerage. Kapoor recommends allocating 45% of the 1.0 million USD portfolio to illiquid non-traded REITs. Kapoor has violated Standard III(C) because she:",
+        {
+            "A": "Recommended non-traded REITs, which are unsuitable for any individual investor.",
+            "B": "Failed to verify property tax assessments on Miller's external properties.",
+            "C": "Did not inquire about outside holdings needed to judge suitability and real estate exposure in the context of Miller's total wealth.",
+        },
+        "C",
+        "Under Standard III(C) (Suitability), assessing suitability in the context of the client's total portfolio requires inquiring about significant outside financial holdings, real estate, and liabilities. Failing to learn that Miller already holds 3.5 million USD in leveraged real estate led Kapoor to overconcentrate his remaining liquid wealth in illiquid non-traded REITs, violating Standard III(C).",
+        {
+            "A": "Non-traded REITs may be suitable in modest proportions when aligned with liquidity and diversification needs.",
+            "B": "Advisors need an accurate picture of outside asset exposures and liquidity—not property tax audit records.",
+        },
+    )
+
+
+def build_std3_de(out: list) -> None:
+    mod = "eth-m4-std3"
+    top = "Standard III: Duties to Clients"
+    sub_d = "Standard III(D): Performance Presentation"
+    los_d = "Evaluate performance reporting disclosures, composites, and simulated returns under Standard III(D)"
+    sub_e = "Standard III(E): Preservation of Confidentiality"
+    los_e = "Determine appropriate handling of confidential current, former, and prospective client information under Standard III(E)"
+
+    add_l1(
+        out, "L1-ETH-181", SUBJECT, mod, top, sub_d, los_d,
+        "Quantitative firm Vertex Partners launches a live systematic momentum fund in 2023. To present a full 10-year performance chart to institutional prospects in 2026, marketing director Elena Cruz, CFA, combines seven years of backtested model returns (2016–2022) seamlessly with three years of actual live composite returns (2023–2025) into a single continuous line labeled '10-Year Composite Track Record.' Cruz has violated Standard III(D) because:",
+        {
+            "A": "Backtested simulated returns may never be shown to institutional prospects under any circumstances.",
+            "B": "Simulated or backtested model results must be clearly separated from actual performance and explicitly disclosed as hypothetical.",
+            "C": "Ten-year performance charts must strictly display gross-of-fee returns before trading commissions.",
+        },
+        "B",
+        "Under Standard III(D) (Performance Presentation), members must make reasonable efforts to ensure performance presentations are fair, accurate, and complete. Linking simulated/backtested model returns seamlessly with actual historical returns without clearly separating them and disclosing hypothetical methodology, assumptions, and limitations is misleading. Recommended procedures allow showing simulated data only when clearly labeled as hypothetical and separated from live results.",
+        {
+            "A": "Simulated performance is permissible under Standard III(D) if transparently labeled, separated from live track records, and accompanied by methodology disclosures.",
+            "C": "Standard III(D) requires clear disclosure of whether returns are gross or net of fees, not mandatory gross-only reporting.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-182", SUBJECT, mod, top, sub_d, los_d,
+        "Over a five-year period, Harbor Global Advisors manages 18 discretionary international equity accounts. Three accounts underperformed the MSCI EAFE benchmark by more than 400 basis points annually and were terminated by dissatisfied clients in Year 4. When constructing Harbor's five-year composite return table for prospective clients, portfolio manager Ian Wallace, CFA, omits all historical returns of the three terminated accounts. Wallace's presentation violates Standard III(D) primarily due to:",
+        {
+            "A": "Failing to use an equal-weighted average across the 15 surviving accounts.",
+            "B": "Reporting returns over a five-year period rather than a mandatory ten-year minimum.",
+            "C": "Creating survivorship bias by excluding terminated accounts from historical composite performance.",
+        },
+        "C",
+        "Under Standard III(D) (Performance Presentation), omitting terminated accounts from historical composite records introduces survivorship bias and paints an artificially inflated picture of past performance, violating the duty to present fair, accurate, and complete information. Terminated accounts must remain included in historical composite results through their final full measurement period under management.",
+        {
+            "A": "Asset-weighted composites (rather than equal-weighted) are the standard recommended practice for accurate composite presentation.",
+            "B": "Standard III(D) does not impose a mandatory ten-year minimum return window (that schedule governs GIPS build-up).",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-183", SUBJECT, mod, top, sub_d, los_d,
+        "After serving for six years as the sole primary decision-maker on a top-quartile small-cap equity fund at Alpine Asset Management, Priya Ramanathan, CFA, joins Cascade Investments to launch a similar strategy. With written authorization from Alpine and complete supporting records obtained permissibly, Ramanathan showcases her six-year record in Cascade's marketing deck titled 'Cascade Small-Cap Strategy Historical Performance' without mentioning Alpine Asset Management. Under Standard III(D), Ramanathan has:",
+        {
+            "A": "Violated Standard III(D) by failing to credit Alpine Asset Management as the prior firm where the performance was achieved.",
+            "B": "Complied fully with Standard III(D) because she was the sole primary investment decision-maker.",
+            "C": "Violated Standard III(D) because past track records can never be shown after changing employers.",
+        },
+        "A",
+        "Under Standard III(D) (Performance Presentation), a member may present performance achieved at a prior firm ONLY when three conditions are met: (1) the member was the primary investment decision-maker (or part of a team with accurately disclosed attribution), (2) the prior firm is explicitly credited as where the track record occurred, and (3) supporting performance records are available. Labeling the prior firm's record as 'Cascade Small-Cap Strategy' without crediting Alpine misleads prospective clients.",
+        {
+            "B": "Being the primary decision-maker is necessary but not sufficient; crediting the prior employer is mandatory.",
+            "C": "Performance portability is permitted under Standard III(D) when attribution, supporting records, and prior-firm credit are properly handled.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-184", SUBJECT, mod, top, sub_d, los_d,
+        "A retail brokerage brochure prepared by Owen Carter, CFA, highlights a 12.4% five-year annualized return for its Managed Dividend Portfolio alongside a prominent statement: 'Outperformed the 10.8% benchmark return.' The 12.4% figure is calculated gross of the firm's 1.75% annual wrap fee, which would reduce net client returns to 10.65%—below the benchmark—yet the brochure fails to state whether returns are gross or net of fees. Carter has violated Standard III(D) by failing to:",
+        {
+            "A": "Deduct federal capital gains taxes from the reported annual returns.",
+            "B": "Clearly disclose that performance is presented gross of fees and accurately reflect the net impact on retail investors.",
+            "C": "Limit marketing comparisons exclusively to money market index benchmarks.",
+        },
+        "B",
+        "Under Standard III(D) (Performance Presentation), members must ensure performance presentations are fair, accurate, and complete, which includes clearly disclosing whether performance is gross or net of management and trading fees. Presenting gross returns as 'outperformance' to fee-paying retail investors without disclosing the 1.75% fee that puts net returns below the benchmark is materially misleading.",
+        {
+            "A": "After-tax presentation is optional unless specifically claimed; fee-basis disclosure (gross vs. net) is the critical omission here.",
+            "C": "Using a relevant dividend equity benchmark is appropriate; the breach is hiding the gross-of-fee basis.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-185", SUBJECT, mod, top, sub_d, los_d,
+        "During Q1 (January 1 through March 31), a new tactical currency strategy launched by Mei Lin, CFA, gains +7.5%. In her April marketing email to prospective institutional investors, Lin states: 'Our Global Currency Alpha Strategy is delivering a 33.5% annualized return in 2026.' She omits the three-month actual holding period and the compounding assumption. Lin's marketing email violates Standard III(D) because:",
+        {
+            "A": "Currency strategies cannot report returns until completing a full three-year cycle.",
+            "B": "She failed to compare the currency strategy against the S&P 500 Equity Index.",
+            "C": "Annualizing a short three-month sub-period return misleads prospects by implying an unsustainable full-year return rate.",
+        },
+        "C",
+        "Under Standard III(D) (Performance Presentation), extrapolating or annualizing returns for periods shorter than one year—especially in volatile strategies like tactical currency trading—misleads prospective clients about expected full-year performance and violates the requirement for fair, accurate, and complete communication. Short-period results must be presented as unannualized cumulative returns for the exact stated period.",
+        {
+            "A": "Short-period actual returns may be presented for the exact three-month window as unannualized returns.",
+            "B": "Comparing a currency strategy to an unrelated equity index would worsen benchmark mismatch rather than fix annualization distortion.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-186", SUBJECT, mod, top, sub_d, los_d,
+        "Crescent Wealth manages 32 discretionary balanced accounts following a uniform 60/40 model. Due to legacy low-basis stock holdings in one founder's account (#12), Account #12 returned 14.2% annually over three years while the asset-weighted average of all 32 accounts returned 9.6%. To simplify marketing materials, advisor Thomas Grant, CFA, prints only Account #12's 14.2% performance chart labeled 'Crescent Balanced Strategy Performance' without mentioning the other 31 accounts. Grant has violated Standard III(D) by:",
+        {
+            "A": "Cherry-picking a single non-representative account without disclosing the composite performance of similarly managed accounts.",
+            "B": "Refusing to force the founder of Account #12 to sell low-basis legacy equities.",
+            "C": "Failing to obtain independent third-party GIPS verification before publishing any chart.",
+        },
+        "A",
+        "Under Standard III(D) (Performance Presentation), presenting a single best-performing account as representative of a strategy when all similarly managed accounts averaged 460 bps lower is deceptive and violates fair, accurate, and complete presentation. Recommended procedures call for presenting weighted-average composite performance of all similar portfolios rather than cherry-picked individual accounts.",
+        {
+            "B": "Accommodating low-basis tax constraints in Account #12 is appropriate under Standard III(C); the breach is misrepresenting that account as typical.",
+            "C": "GIPS verification is voluntary and not required to comply with Standard III(D).",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-187", SUBJECT, mod, top, sub_d, los_d,
+        "Boutique investment advisor Kestrel Asset Management does not claim compliance with GIPS. When pitching a pension board, Kestrel presents a 7-year track record calculated as an asset-weighted composite of all actual fee-paying discretionary accounts in the strategy (including terminated accounts through termination), clearly discloses returns both gross and net of fees, uses a matching total-return benchmark, and notes full calculation methodology. Under Standard III(D), Kestrel's presentation is:",
+        {
+            "A": "A violation, because claiming Standard III(D) compliance is impossible without full GIPS compliance.",
+            "B": "A violation, because presenting both gross and net returns together creates ambiguity.",
+            "C": "Compliant, because GIPS compliance is voluntary and Kestrel's presentation is fair, accurate, and complete.",
+        },
+        "C",
+        "Under Standard III(D) (Performance Presentation), GIPS compliance is strongly recommended as a voluntary best practice, NOT mandatory for compliance with Standard III(D). A non-GIPS firm complies fully with Standard III(D) when it presents fair, accurate, and complete performance using asset-weighted composites of all actual similar accounts (including terminated accounts), clear gross/net fee disclosures, and an appropriate benchmark.",
+        {
+            "A": "GIPS is strictly voluntary; Standard III(D) can be satisfied through transparent, complete non-GIPS composite disclosures.",
+            "B": "Showing both gross and net returns side by side enhances transparency rather than creating ambiguity.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-188", SUBJECT, mod, top, sub_d, los_d,
+        "Portfolio manager Lucas Moreno, CFA, runs an Emerging Market High-Yield Corporate Debt Fund (average credit rating B+, effective duration 5.5 years). In client factsheets, Moreno exclusively compares his fund's 8.9% annualized return against the 3-month US Treasury Bill Index (2.1%) and highlights '+680 bps alpha.' Moreno's benchmark selection most directly violates Standard III(D) because:",
+        {
+            "A": "Treasury bill indices are prohibited from all fixed-income marketing materials.",
+            "B": "Comparing a high-risk emerging-market credit fund solely against a risk-free cash index misrepresents risk-adjusted skill and value added.",
+            "C": "High-yield funds must compare returns solely against equity benchmarks such as the MSCI Emerging Markets Index.",
+        },
+        "B",
+        "Under Standard III(D) (Performance Presentation), fair and complete performance reporting requires comparing portfolio returns against a relevant benchmark matching the strategy's asset class, credit risk, geography, and duration. Claiming '+680 bps alpha' over risk-free 3-month T-bills while omitting an emerging-market high-yield bond benchmark misleads clients regarding risk-adjusted outperformance.",
+        {
+            "A": "Cash indices are acceptable for money-market mandates or as a secondary risk-free reference, not as the sole benchmark for risky credit.",
+            "C": "A bond fund should be benchmarked against a comparable fixed-income/credit index, not an equity index.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-189", SUBJECT, mod, top, sub_e, los_e,
+        "Two years after high-net-worth client Dr. Arthur Vance transfers all his accounts away from Meridian Private Wealth to a competitor, a financial journalist contacts Meridian advisor Nora Gallagher, CFA, to verify rumors about Dr. Vance's past portfolio losses and asset size during a public business dispute. Dr. Vance has not authorized any release, and no subpoena exists. Gallagher confirms Dr. Vance's historical account balance to 'set the record straight.' Gallagher has:",
+        {
+            "A": "Violated Standard III(E) (Preservation of Confidentiality), because confidentiality obligations survive indefinitely after the client relationship ends.",
+            "B": "Complied with Standard III(E), because Dr. Vance ceased to be a client two years earlier.",
+            "C": "Complied with Standard III(E), provided she only disclosed historical figures rather than current holdings.",
+        },
+        "A",
+        "Under Standard III(E) (Preservation of Confidentiality), members must keep information about current, former, and prospective clients strictly confidential unless the client permits disclosure, disclosure is required by law, or the information concerns illegal activities by the client. The duty of confidentiality persists indefinitely even after a client terminates the relationship.",
+        {
+            "B": "Former clients remain explicitly protected under Standard III(E) after terminating advisory relationships.",
+            "C": "Historical balances and performance remain confidential client data protected under Standard III(E).",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-190", SUBJECT, mod, top, sub_e, los_e,
+        "While reviewing wire transfer logs for a private client account, compliance analyst Devon Patel, CFA, uncovers clear documentary evidence that the client is structuring fragmented cash deposits across shell companies to launder proceeds from illegal narcotics trafficking. Patel alerts the firm's Chief Compliance Officer and outside legal counsel, who instruct Patel to file a Suspicious Activity Report with financial crime authorities without notifying the client. Patel's disclosure to authorities is:",
+        {
+            "A": "A violation of Standard III(E), because client permission was not obtained prior to external reporting.",
+            "B": "Permissible under Standard III(E), which provides an explicit exception for information concerning illegal client activities and disclosures required by law.",
+            "C": "A violation of Standard III(E), unless a judge first issues a criminal conviction.",
+        },
+        "B",
+        "Under Standard III(E) (Preservation of Confidentiality), confidentiality is overridden when (1) the information concerns illegal activities on the part of the client or prospective client, or (2) disclosure is required by applicable law (such as anti-money-laundering statutes). Consulting legal/compliance counsel and reporting suspected money laundering to proper authorities complies fully with Standard III(E).",
+        {
+            "A": "Standard III(E) does not require client consent when illegal client activity or statutory reporting mandates apply.",
+            "C": "Reasonable evidence of illegal activity and mandatory statutory AML reporting trigger the exception prior to any court conviction.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-191", SUBJECT, mod, top, sub_e, los_e,
+        "The CFA Institute Professional Conduct Program (PCP) initiates an investigation into alleged front-running by a colleague at Apex Investments and formally requests trading blotters and client allocation logs containing client names and account details from portfolio manager Grace Yoon, CFA. Without obtaining prior permission from each individual client, Yoon supplies the requested records directly to the PCP. Has Yoon violated Standard III(E)?",
+        {
+            "A": "Yes, because CFA Institute is a private professional organization rather than a government regulator.",
+            "B": "Yes, unless she first redacts every client name and account identifier.",
+            "C": "No, because Standard III(E) permits sharing confidential client information with the CFA Institute Professional Conduct Program during an investigation.",
+        },
+        "C",
+        "Under the Standard III(E) (Preservation of Confidentiality) guidance, members and candidates are expressly permitted to cooperate with the CFA Institute Professional Conduct Program (PCP) and submit confidential client information requested during a PCP inquiry without violating Standard III(E), as the PCP itself maintains strict confidentiality over investigative records.",
+        {
+            "A": "Although PCP is not a government agency, the Standards explicitly carve out cooperation with PCP investigations.",
+            "B": "Unredacted records may be provided directly to PCP staff when needed to verify allocation fairness or misconduct.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-192", SUBJECT, mod, top, sub_e, los_e,
+        "To win a major endowment mandate, institutional sales director Marcus Reed, CFA, includes a slide in his RFP pitchbook listing the names and approximate asset sizes of six prestigious Fortune 500 corporate pension plans that his firm currently manages. Although the figures are generally positive and two of those pensions publicly announce their managers in annual filings, Reed did not ask any of the six clients for permission to use their names as marketing references. Reed has violated Standard III(E) because:",
+        {
+            "A": "Client identities and relationship details are confidential and cannot be disclosed for marketing without explicit prior client permission.",
+            "B": "Corporate pension plans may never be used as marketing references even with written consent.",
+            "C": "Standard III(E) applies only to individual retail clients, not institutional pension plans.",
+        },
+        "A",
+        "Under Standard III(E) (Preservation of Confidentiality), even the fact that an organization or individual is a client—along with account sizes—is confidential client information. Using current client names as marketing references in an RFP without obtaining prior client permission (unless already unmistakably public and approved, or better yet with explicit written consent) violates Standard III(E).",
+        {
+            "B": "Clients may be listed as references if they grant explicit prior permission.",
+            "C": "Standard III(E) protects institutional, corporate, and individual current, former, and prospective clients equally.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-193", SUBJECT, mod, top, sub_e, los_e,
+        "Preparing for client review meetings, associate advisor Priya Nair, CFA, pastes an unredacted spreadsheet containing 35 high-net-worth clients' full names, tax identification numbers, net worth figures, and current portfolio holdings into a free, public web-based generative AI chatbot to draft personalized meeting summaries. The AI vendor's terms state uploaded prompts may be stored and used for model training. Nair's action most directly violates:",
+        {
+            "A": "Standard V(A) only, because generative AI outputs lack a reasonable basis.",
+            "B": "Standard III(D) only, because meeting summaries omit GIPS disclosures.",
+            "C": "Standard III(E) (Preservation of Confidentiality), by exposing private client data to an unauthorized external system.",
+        },
+        "C",
+        "Under Standard III(E) (Preservation of Confidentiality), members must safeguard client data from unauthorized electronic access or third-party exposure. Uploading non-public client identities, tax IDs, and holdings to an unapproved public generative AI platform that retains inputs breaches client confidentiality. Recommended procedures require strict cybersecurity controls, approved enterprise-isolated tools, or complete anonymization before any external processing.",
+        {
+            "A": "While AI tools require diligence under V(A) if used for research, the immediate breach here is leaking PII and holdings under III(E).",
+            "B": "Meeting summaries are not composite performance advertisements under Standard III(D).",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-194", SUBJECT, mod, top, sub_e, los_e,
+        "Wealth advisor Henrik Solberg, CFA, manages two separate individual accounts at his firm: an Individual Retirement Account solely in Husband's name and a separate individual brokerage account solely in Wife's name. Neither spouse holds trading authority or written view-access on the other's individual account. Amid contentious divorce proceedings, Wife calls Solberg asking for the current balance and recent withdrawal history of Husband's IRA. Solberg should:",
+        {
+            "A": "Provide the balance because spouses share marital property rights by default.",
+            "B": "Refuse to disclose Husband's account details unless Husband provides explicit authorization or a valid court order/subpoena requires disclosure.",
+            "C": "Disclose only the total account balance without listing specific security holdings.",
+        },
+        "B",
+        "Under Standard III(E) (Preservation of Confidentiality), each individual client account is protected against unauthorized third-party disclosure—even to a spouse who lacks formal account authorization or power of attorney. Solberg must withhold Husband's private account details unless Husband consents in writing or disclosure is legally compelled via a valid subpoena or court order.",
+        {
+            "A": "Marital property laws in divorce do not authorize an advisor to breach account-level confidentiality absent consent or a court order.",
+            "C": "Revealing even the aggregate account balance or withdrawal status without permission violates Standard III(E).",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-195", SUBJECT, mod, top, sub_e, los_e,
+        "A sovereign wealth fund invites three asset managers, including Horizon Capital, to participate in a closed request-for-proposal (RFP) process and shares confidential internal asset-liability mismatch projections and upcoming currency hedging targets. Horizon does not win the mandate. Two months later, Horizon portfolio manager Samuel Kim, CFA, shares the sovereign fund's proprietary hedging targets with a competing institutional prospect to demonstrate Horizon's market insight. Kim has violated Standard III(E) because:",
+        {
+            "A": "Prospective clients are covered by Standard III(E) confidentiality protections even when no formal advisory contract is ultimately signed.",
+            "B": "Sovereign wealth funds require diplomatic immunity waivers before RFP discussions.",
+            "C": "Horizon cannot discuss currency hedging strategies with any institutional prospect.",
+        },
+        "A",
+        "Standard III(E) (Preservation of Confidentiality) explicitly protects current, former, AND prospective clients. Confidential strategic, financial, or portfolio data shared by a prospective client during an RFP or pitch remains strictly protected even if the prospect never hires the firm. Disclosing those private hedging plans to another prospect violates Standard III(E).",
+        {
+            "B": "Protection arises directly from Standard III(E)'s coverage of prospective clients, not diplomatic immunity.",
+            "C": "Horizon may discuss its own general hedging capabilities, but never another prospect's confidential data.",
+        },
+    )
+
+
+def build_std4(out: list) -> None:
+    mod = "eth-m5-std4"
+    top = "Standard IV: Duties to Employers"
+    sub_a = "Standard IV(A): Loyalty"
+    los_a = "Apply Standard IV(A) Loyalty to situations involving departing an employer, independent practice, and whistleblowing"
+    sub_b = "Standard IV(B): Additional Compensation Arrangements"
+    los_b = "Evaluate gifts, outside compensation, and written consent requirements under Standard IV(B)"
+    sub_c = "Standard IV(C): Responsibilities of Supervisors"
+    los_c = "Assess supervisory adequacy, delegation, enforcement, and escalation duties under Standard IV(C)"
+
+    add_l1(
+        out, "L1-ETH-196", SUBJECT, mod, top, sub_a, los_a,
+        "Two weeks before submitting his resignation from Northstar Capital to join a competing hedge fund, senior equity analyst Nathan Brooks, CFA, downloads Northstar's proprietary discounted cash flow valuation templates—which Brooks personally programmed during company hours—and exports Northstar's confidential client contact CRM spreadsheet onto a personal encrypted USB drive. Under Standard IV(A), Brooks's conduct is:",
+        {
+            "A": "Compliant with respect to the DCF templates because Brooks authored them himself.",
+            "B": "Compliant provided he waits until after his final workday to open the USB files.",
+            "C": "A violation, because proprietary models created on employer time and confidential client lists belong strictly to the employer.",
+        },
+        "C",
+        "Under Standard IV(A) (Loyalty), employees must not misappropriate employer property, trade secrets, or confidential client lists upon departure. Models, software, and research created on the employer's time and resources are firm property (also reinforced by Standard V(C)), even if developed personally by the departing employee. Taking them via USB without written employer authorization violates Standard IV(A).",
+        {
+            "A": "Work product developed during employment belongs to the employer, not the individual creator, absent an explicit contrary contract.",
+            "B": "Misappropriating firm property and client lists prior to resignation violates loyalty regardless of when the USB is later opened.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-197", SUBJECT, mod, top, sub_a, los_a,
+        "Portfolio manager Claire Beaumont, CFA, plans to resign from Apex Wealth in two months to launch an independent registered investment advisor. On Saturday mornings using her personal laptop at home, Beaumont drafts articles of incorporation, leases an empty office suite, and sets up a business checking account. She performs all current Apex duties diligently, takes zero Apex files, and makes no contact with Apex clients or coworkers about her plans. Beaumont's actions are:",
+        {
+            "A": "Compliant with Standard IV(A), because reasonable personal-time preparations to establish a new business do not breach loyalty if current duties and employer assets are respected.",
+            "B": "A violation of Standard IV(A), because any step toward creating a competing business while still employed breaches loyalty.",
+            "C": "A violation of Standard IV(A), unless she first receives written permission from Apex's CEO before leasing office space.",
+        },
+        "A",
+        "Under Standard IV(A) (Loyalty), making reasonable preparations to leave and start a competing enterprise—such as incorporating an entity, retaining legal counsel, or leasing space on personal time—is permissible so long as the employee does not solicit clients or staff before departure, misappropriate firm IP/records, misuse employer time/equipment, or breach a valid employment covenant.",
+        {
+            "B": "Passive off-hours logistical preparations without solicitation or IP theft do not violate Standard IV(A).",
+            "C": "Employer consent is required for active independent practice while employed, not for private off-hours preparations to depart.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-198", SUBJECT, mod, top, sub_a, los_a,
+        "After resigning cleanly from Vanguardia Advisors—leaving behind all files, models, and client lists—wealth advisor Mateo Silva, CFA, launches his own advisory boutique. Because Silva signed no non-compete or non-solicitation agreement, once his resignation is effective he searches public LinkedIn profiles and telephone directories to locate former clients whose names he remembers and sends them an announcement introducing his new firm. Silva has:",
+        {
+            "A": "Violated Standard IV(A), because former employees may never contact former clients regardless of how contact info is obtained.",
+            "B": "Complied with Standard IV(A), because contacting former clients post-departure using memory and public sources—absent a binding non-compete—does not breach employer loyalty.",
+            "C": "Violated Standard III(E), because remembering a former client's name breaches confidentiality.",
+        },
+        "B",
+        "Under Standard IV(A) (Loyalty), once an employee's resignation is effective and assuming no valid non-solicitation/non-compete agreement bars contact, reaching out to former clients using publicly available directories or unassisted memory—without having taken proprietary firm client lists or solicited clients before resigning—does not violate Standard IV(A).",
+        {
+            "A": "Pre-departure solicitation and stolen client lists are barred, not post-departure outreach via public directories when no contractual restriction exists.",
+            "C": "Contacting a former client directly to offer services does not disclose confidential data to third parties under Standard III(E).",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-199", SUBJECT, mod, top, sub_a, los_a,
+        "Full-time fixed-income analyst Julian Park, CFA, works at a large institutional asset manager that serves only pension funds. To earn extra income on weekends, Park launches a paid personal financial planning consultancy advising individual retail physicians for a 2,500 USD annual retainer. Reasoning that his weekend retail clients do not overlap with his employer's institutional pension clients, Park does not notify his employer. Park has violated Standard IV(A) because:",
+        {
+            "A": "Analysts may never perform any outside financial work, even with employer written consent.",
+            "B": "Charging 2,500 USD retainers exceeds CFA Institute fee guidelines.",
+            "C": "Engaging in independent practice for compensation requires prior written notice and written consent from the employer.",
+        },
+        "C",
+        "Under Standard IV(A) (Loyalty), members must not engage in independent practice for compensation that could compete with or interfere with their employer unless they provide written notification detailing the nature, duration, and compensation of the services and obtain WRITTEN CONSENT from their employer beforehand. Even non-overlapping paid financial advisory work carries regulatory, liability, and time-allocation implications requiring employer consent.",
+        {
+            "A": "Independent practice is permitted once full written disclosure and written employer consent are obtained.",
+            "B": "CFA Institute sets no fixed fee cap on financial planning retainers.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-200", SUBJECT, mod, top, sub_a, los_a,
+        "Compliance associate Fiona Byrne, CFA, discovers that her firm's Chief Investment Officer has been deliberately falsifying third-party price quotes on illiquid private debt holdings to inflate fund NAV and earn higher incentive fees. After escalating the evidence internally to the Board Audit Committee and being told to 'drop the matter immediately,' Byrne reports the valuation fraud confidentially to the national securities commission—triggering regulatory sanctions that severely damage her employer's stock price. Under Standard IV(A), Byrne's whistleblowing is:",
+        {
+            "A": "A violation of Standard IV(A), because employees may never take external action that harms their employer's financial standing.",
+            "B": "Compliant with Standard IV(A), because loyalty to employer never supersedes protecting client interests, legal compliance, and market integrity.",
+            "C": "A violation of Standard III(E), because reporting firm fraud discloses fund holdings to regulators.",
+        },
+        "B",
+        "Under Standard IV(A) (Loyalty), the duty of loyalty to an employer does not require participating in or concealing illegal or unethical behavior. Whistleblowing—disclosing employer misconduct to regulatory authorities to protect clients and capital market integrity, rather than for personal gain—is explicitly permitted and does not violate Standard IV(A).",
+        {
+            "A": "Loyalty to employer is subordinate to client protection, law, and market integrity; covering up fraud is never required.",
+            "C": "Standard III(E) explicitly permits disclosures required by law or involving illegal activities.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-201", SUBJECT, mod, top, sub_a, los_a,
+        "While still employed as lead portfolio manager at Sterling Partners, Omar Hassan, CFA, meets privately for lunch with three institutional client trustees and two junior analysts from his team. During the meeting, Hassan explains that he plans to resign next month to open a competing boutique and asks both the trustees to sign non-binding letters of intent to transfer 200 million USD and the analysts to commit to joining him. Hassan has violated:",
+        {
+            "A": "Standard IV(A) (Loyalty), by actively soliciting employer clients and staff while still employed.",
+            "B": "Standard IV(B) only, because he paid for lunch without written HR approval.",
+            "C": "No standard, because the letters of intent are non-binding.",
+        },
+        "A",
+        "Under Standard IV(A) (Loyalty), until resignation becomes effective, an employee must act strictly in the employer's best interest. Actively soliciting current clients to transfer assets or recruiting coworkers to leave while still on the employer's payroll directly deprives the employer of business and violates Standard IV(A), regardless of whether letters are non-binding.",
+        {
+            "B": "Paying for lunch is not the issue; pre-departure client and employee solicitation breaches loyalty.",
+            "C": "Solicitation itself while employed violates Standard IV(A), even before binding contracts are signed.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-202", SUBJECT, mod, top, sub_a, los_a,
+        "Meridian Asset Management enforces a strict written compliance policy prohibiting employees from posting specific stock opinions or buy/sell commentary on external internet forums or social media without pre-clearance. Junior analyst Trevor Bell, CFA, uses an anonymous handle on a public investment forum during weekends to post detailed Buy recommendations on three mid-cap stocks he does not own personally and his firm does not cover. Bell's posts violate Standard IV(A) primarily because:",
+        {
+            "A": "Anonymous social media handles automatically violate Standard VII(B).",
+            "B": "Mid-cap stock analysis requires a minimum five-year track record.",
+            "C": "Violating an employer's reasonable compliance policies breaches the duty of loyalty, even if no client suffered direct financial loss.",
+        },
+        "C",
+        "Under Standard IV(A) (Loyalty), members must comply with all reasonable employer compliance policies and supervisory directives designed to protect the firm's regulatory standing and reputation. Deliberately circumventing firm social-media pre-clearance rules exposes the employer to regulatory risk and violates Standard IV(A), even without personal holdings or direct client harm.",
+        {
+            "A": "Standard VII(B) governs references to CFA Institute/designation, not anonymous stock commentary.",
+            "B": "No five-year track record is needed to analyze mid-cap equities.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-203", SUBJECT, mod, top, sub_a, los_a,
+        "Equity strategist Rachel Kim, CFA, is asked to serve as the unpaid volunteer treasurer for a local community animal shelter. The shelter keeps its modest operating reserves strictly in insured bank checking accounts, receives zero investment advisory services from Kim's employer, and requires only three hours of Kim's time on Sunday afternoons. Kim does not obtain formal written consent from her employer's compliance office (assuming employer policy does not require reporting unpaid civic roles). Under Standard IV(A), Kim's volunteer work is:",
+        {
+            "A": "Compliant, because unpaid civic volunteer work that neither competes with nor interferes with employer duties does not constitute independent practice for compensation.",
+            "B": "A violation of Standard IV(A), because all volunteer board or treasurer roles require written employer consent.",
+            "C": "A violation of Standard IV(B), because the shelter benefits economically from Kim's financial expertise.",
+        },
+        "A",
+        "Under Standard IV(A) (Loyalty), written notice and employer consent are required for independent practice undertaken FOR COMPENSATION or activities that compete with or interfere with the employer's business. Unpaid community volunteer work on weekends that involves no compensation, no overlapping client/investment business, and no interference with work duties does not violate Standard IV(A).",
+        {
+            "B": "Absent a specific firm policy requiring disclosure of all civic roles, unpaid non-competing volunteerism does not violate IV(A).",
+            "C": "Standard IV(B) restricts receiving competing/conflicting compensation, not providing unpaid charity service.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-204", SUBJECT, mod, top, sub_a, los_a,
+        "After giving two weeks' notice of resignation to accept a role elsewhere, derivatives trader Daniel Cho, CFA, stops monitoring intraday client option margin alerts during his final eight business days, causing two client accounts to suffer forced liquidation penalties and exposing his employer to client reimbursement claims. Cho's deliberate neglect during his notice period violates:",
+        {
+            "A": "Standard VII(A) only, because his behavior undermines the CFA exam.",
+            "B": "Standard IV(A) (Loyalty), because an employee owes full diligence and skills to the employer until employment formally ends.",
+            "C": "No standard, because submitting resignation notice terminates operational loyalty obligations.",
+        },
+        "B",
+        "Under Standard IV(A) (Loyalty), members must not deprive their employer of the advantage of their skills and abilities or cause harm to the employer until their employment relationship actually terminates. Neglecting assigned risk-monitoring duties during a two-week notice period harms both clients and the employer, violating Standard IV(A) (and III(A)).",
+        {
+            "A": "Standard VII(A) governs participation in CFA Institute programs/exams, not workplace trading negligence.",
+            "C": "Notice period employment remains full employment; duties continue until the final effective departure date.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-205", SUBJECT, mod, top, sub_a, los_a,
+        "During an alumni dinner, quantitative analyst Priya Kapoor, CFA, shares the proprietary Python risk-factor weighting code used by her employer's flagship market-neutral hedge fund with a former classmate who runs a competing fund, in exchange for industry gossip about upcoming analyst layoffs. Kapoor's disclosure violates Standard IV(A) primarily because she:",
+        {
+            "A": "Attended a social dinner with employees of a competing asset manager.",
+            "B": "Failed to verify whether the classmate holds the CFA charter.",
+            "C": "Divulged her employer's confidential proprietary intellectual property to a competitor.",
+        },
+        "C",
+        "Under Standard IV(A) (Loyalty), members must safeguard employer trade secrets, proprietary software, research models, and confidential business information. Sharing proprietary factor-weighting code with a competitor directly undermines the employer's competitive advantage and violates Standard IV(A).",
+        {
+            "A": "Socializing with industry peers is completely normal when confidential firm information is protected.",
+            "B": "Divulging employer trade secrets is prohibited regardless of whether the recipient holds the CFA charter.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-206", SUBJECT, mod, top, sub_b, los_b,
+        "A wealthy individual client tells his portfolio manager, Arthur Novak, CFA, that if his account beats the Russell 1000 Index by more than 250 basis points this year, the client will personally wire Novak a 30,000 USD cash bonus and give him free use of a Swiss ski chalet for two weeks. Novak mentions the offer to his branch manager over coffee, who verbally replies, 'Sure, go ahead—keep the client happy.' Novak accepts the arrangement. Novak has violated Standard IV(B) because he failed to:",
+        {
+            "A": "Obtain prior written consent from all parties involved—both his employer and the client.",
+            "B": "Share 50% of the 30,000 USD cash bonus with his branch manager.",
+            "C": "Guarantee the 250 bps outperformance in writing to the client.",
+        },
+        "A",
+        "Under Standard IV(B) (Additional Compensation Arrangements), members must not accept gifts, benefits, compensation, or consideration that competes with or might reasonably be expected to create a conflict of interest with their employer's interest unless they obtain WRITTEN CONSENT from ALL parties involved (here, written approval from both the employer/compliance and the client offering the arrangement). Verbal approval from a branch manager is insufficient.",
+        {
+            "B": "Splitting an undisclosed or verbally approved outside bonus does not satisfy Standard IV(B)'s written-consent rule.",
+            "C": "Guaranteeing market outperformance violates Standard I(C) (Misrepresentation) and Standard III(D).",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-207", SUBJECT, mod, top, sub_b, los_b,
+        "Technology equity analyst Sofia Lin, CFA, is invited to join the paid advisory board of a private artificial-intelligence startup not currently covered by her brokerage firm, earning 20,000 USD worth of startup stock options annually. Lin signs the advisory board contract on Monday and sends an email to her firm's HR director on Friday informing HR of her new board role. Has Lin complied with Standard IV(B)?",
+        {
+            "A": "Yes, because the startup is private and outside her firm's current coverage universe.",
+            "B": "No, because she failed to obtain written consent from all parties BEFORE entering into the compensation arrangement.",
+            "C": "Yes, because disclosing by email within five business days satisfies post-event reporting rules.",
+        },
+        "B",
+        "Under Standard IV(B) (Additional Compensation Arrangements), written consent from all parties involved (employer and the outside party) must be obtained PRIOR to accepting or entering into the additional compensation arrangement—not retroactively after signing the contract. Even if the startup is not currently covered, future coverage or IPO underwriting conflicts could arise.",
+        {
+            "A": "Potential future conflicts and time/reputational commitments make prior written consent mandatory even for uncovered private entities.",
+            "C": "Standard IV(B) requires prior written consent, not post-signing email notification.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-208", SUBJECT, mod, top, sub_b, los_b,
+        "Quantitative researcher Marcus Chen, CFA, is offered an adjunct lecturing position to teach a graduate fixed-income seminar one evening per week for a 9,000 USD semester stipend. Before accepting, Chen writes to his employer's Chief Compliance Officer detailing the teaching schedule, curriculum, and 9,000 USD stipend, and writes to the university dean confirming his full-time asset-management employment. After receiving formal written email approval from both his CCO and the university, Chen signs the teaching contract. Chen's actions are:",
+        {
+            "A": "A violation of Standard IV(B), because outside income above 5,000 USD is strictly prohibited.",
+            "B": "A violation of Standard IV(A), because academic lecturing competes with asset management.",
+            "C": "Compliant with Standard IV(B) (and IV(A)), because he disclosed all terms and obtained prior written consent from all parties involved.",
+        },
+        "C",
+        "Under Standard IV(B) (Additional Compensation Arrangements), verifiable electronic communications such as formal email constitute 'written consent.' By disclosing the nature, duration, and dollar amount of the compensation and receiving prior written approval from all parties involved (both his employer's CCO and the university), Chen fully complied with Standard IV(B) and Standard IV(A).",
+        {
+            "A": "Standard IV(B) sets no absolute dollar ceiling once proper written consent is secured.",
+            "B": "Evening university lecturing approved in writing by the employer does not breach employer loyalty.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-209", SUBJECT, mod, top, sub_b, los_b,
+        "Financial advisor Kevin Walsh, CFA, works at a registered broker-dealer whose standard payout grid pays 0.50% across all private placements. An external private-credit fund sponsor privately offers to pay Walsh personally an extra 1.25% cash marketing fee directly into his personal bank account for every client dollar he places into their new fund. Walsh agrees and promotes the fund heavily to clients without informing his firm or clients. Walsh has violated:",
+        {
+            "A": "Standard IV(B) (Additional Compensation Arrangements), as well as Standards I(B) and VI(A), by accepting undisclosed conflicting compensation.",
+            "B": "Standard V(C) only, because private credit funds lack sufficient historical records.",
+            "C": "No standard, provided the private-credit fund matches each client's risk tolerance.",
+        },
+        "A",
+        "Accepting an undisclosed 1.25% direct cash kickback from an external sponsor competes directly with the employer's compensation structure and creates severe bias in product selection. This violates Standard IV(B) (requiring written consent from all parties), Standard I(B) (Independence and Objectivity), and Standard VI(A) (Disclosure of Conflicts).",
+        {
+            "B": "The core ethical breaches are secret third-party compensation and severe conflicts of interest, not record retention.",
+            "C": "Suitability never excuses taking secret third-party cash incentives without employer and client written consent/disclosure.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-210", SUBJECT, mod, top, sub_b, los_b,
+        "Two years prior to joining Horizon Investments as a senior technology portfolio manager, Hannah Diaz, CFA, entered a multi-year consulting agreement paying her 18,000 USD annually to advise an enterprise cloud vendor on capital allocation. Upon starting at Horizon, Diaz assumes she does not need to mention the consulting arrangement because it predated her employment at Horizon and involves no stock ownership. Diaz has violated Standard IV(B) because:",
+        {
+            "A": "Software consulting agreements are permanently forbidden for CFA charterholders.",
+            "B": "Pre-existing outside compensation arrangements that could conflict with new employer duties must be disclosed to obtain written consent upon joining.",
+            "C": "Standard IV(B) applies only if the arrangement pays stock rather than cash.",
+        },
+        "B",
+        "Under Standard IV(B) (Additional Compensation Arrangements), members joining a new employer must disclose all pre-existing ongoing outside compensation arrangements that might reasonably conflict with or affect their duties to the new employer (such as consulting for a tech vendor Horizon could invest in) and obtain written consent from all parties to continue.",
+        {
+            "A": "Consulting is permitted if disclosed and consented to in writing by all involved parties.",
+            "C": "Cash retainers, royalties, equity options, and non-cash benefits are all covered equally by Standard IV(B).",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-211", SUBJECT, mod, top, sub_b, los_b,
+        "Which of the following client gestures most clearly triggers Standard IV(B) (Additional Compensation Arrangements) requiring prior written consent from all parties involved, rather than falling solely under routine gift policies under Standard I(B)?",
+        {
+            "A": "A long-standing client sends a 55 USD seasonal fruit basket to the advisor's office at year-end with a thank-you card.",
+            "B": "A client invites the advisor to a local 75 USD lunch meeting to review annual tax-loss harvesting.",
+            "C": "A client promises to pay for an all-expenses-paid 10-day European yacht trip for the advisor's family if the portfolio ends the year positive.",
+        },
+        "C",
+        "Standard IV(B) targets outside compensation, gifts, or benefits that compete with or create a conflict with the employer's interest—particularly contingent performance incentives or lavish benefits tied to portfolio results, which require written consent from all parties involved. Modest customary tokens like a 55 USD holiday fruit basket or a 75 USD working lunch fall under Standard I(B) gift/hospitality policies and do not require formal multi-party written contracts.",
+        {
+            "A": "A modest 55 USD holiday gift unrelated to future performance does not constitute an additional compensation arrangement under IV(B).",
+            "B": "A routine 75 USD business lunch falls under ordinary client hospitality rather than contingent outside compensation.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-212", SUBJECT, mod, top, sub_b, los_b,
+        "Equity research analyst Lucas Bennett, CFA, receives an offer from an independent financial newsletter publisher to write paid weekend equity commentary for 1,200 USD per article. Bennett submits a written request outlining the topic scope, time commitment, and pay to his employer's compliance department. Compliance denies the request in writing due to potential reputational and coverage overlap risks. Bennett emails the publisher declining the offer. Bennett has:",
+        {
+            "A": "Violated Standard IV(B), because his employer unreasonably restricted his weekend earnings.",
+            "B": "Complied fully with Standard IV(B) by seeking prior written consent and declining the outside arrangement once consent was refused.",
+            "C": "Violated Standard IV(A), because merely asking to write external commentary shows disloyalty.",
+        },
+        "B",
+        "Under Standard IV(B) (Additional Compensation Arrangements), requesting written consent before entering an external arrangement and respecting the employer's written refusal by declining the offer demonstrates textbook compliance. Asking compliance for review is encouraged and never breaches loyalty.",
+        {
+            "A": "Employers have the legitimate right to withhold consent for external financial commentary that creates coverage or reputational conflict.",
+            "C": "Transparently requesting permission from compliance adheres to Standards IV(A) and IV(B).",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-213", SUBJECT, mod, top, sub_c, los_c,
+        "While reviewing daily order audit logs, Chief Equity Trader Samuel Ortiz, CFA, discovers that a junior trader under his direct supervision repeatedly delayed submitting large pension buy orders by 15 minutes in order to buy shares in his own personal account first. Ortiz calls the trader into his office, warns him verbally never to do it again, and leaves the trader on the desk with full trading privileges without alerting compliance or auditing prior months' trades. Ortiz has violated Standard IV(C) because:",
+        {
+            "A": "Upon detecting a violation, a supervisor must initiate a thorough investigation, place appropriate limits on the wrongdoer, and escalate rather than issuing an informal verbal warning.",
+            "B": "Standard IV(C) requires supervisors to physically execute every trade personally.",
+            "C": "Front-running only violates Standard IV(C) if the pension client files a formal lawsuit.",
+        },
+        "A",
+        "Under Standard IV(C) (Responsibilities of Supervisors), detecting a violation triggers an affirmative duty to respond promptly: the supervisor must conduct or initiate a thorough investigation (including past activity), place heightened supervision or operational limits on the employee pending investigation, escalate to compliance/senior management, and enforce discipline. A private verbal warning with zero monitoring or escalation fails Standard IV(C).",
+        {
+            "B": "Supervisors may delegate execution and rely on reasonable supervisory systems, provided violations are rigorously investigated and controlled.",
+            "C": "Supervisory accountability does not wait for external client lawsuits.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-214", SUBJECT, mod, top, sub_c, los_c,
+        "Horizon Asset Management operates a robust compliance infrastructure featuring comprehensive written policies, mandatory quarterly ethics training, automated pre-clearance software, duplicate broker feeds, and annual signed compliance attestations. Despite these enforced controls, a rogue analyst secretly opens a brokerage account under a distant cousin's name using forged identity papers and front-runs a firm upgrade. Under Standard IV(C), the analyst's supervisor has:",
+        {
+            "A": "Violated Standard IV(C) strictly on a no-fault basis because a violation occurred within her department.",
+            "B": "Violated Standard IV(C) unless she personally inspects every employee's private tax returns.",
+            "C": "Not violated Standard IV(C), because supervisors are held to making reasonable efforts rather than guaranteeing total prevention of deliberate, hidden fraud.",
+        },
+        "C",
+        "Under Standard IV(C) (Responsibilities of Supervisors), supervisors must make REASONABLE efforts to prevent and detect violations through adequate compliance systems and active enforcement. Standard IV(C) does not impose strict vicarious liability when a well-designed, actively enforced compliance system is deliberately circumvented by a rogue employee falsifying records.",
+        {
+            "A": "Standard IV(C) imposes a 'reasonable efforts' standard, not strict no-fault liability for hidden fraud.",
+            "B": "Inspecting personal tax returns is neither required nor standard when automated feeds, attestations, and surveillance operate properly.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-215", SUBJECT, mod, top, sub_c, los_c,
+        "Branch Manager Elena Kovalenko, CFA, oversees six wealth advisors, two of whom are neither CFA charterholders nor candidates in the CFA Program. One non-CFA advisor distributes unapproved marketing flyers guaranteeing 12% annual returns. When questioned by regulators, Kovalenko argues she had no CFA Code obligation to monitor that advisor because he is not subject to the CFA Institute Code and Standards. Kovalenko's argument is flawed under Standard IV(C) because:",
+        {
+            "A": "Standard IV(C) only covers marketing employees who hold FINRA licenses.",
+            "B": "Supervisory responsibility extends to anyone subject to the member's supervision or authority, regardless of whether those subordinates are CFA members or candidates.",
+            "C": "Non-CFA subordinates are governed exclusively by Standard I(A).",
+        },
+        "B",
+        "Standard IV(C) (Responsibilities of Supervisors) explicitly requires members and candidates to make reasonable efforts to ensure that ANYONE subject to their supervision or authority—whether CFA charterholders, candidates, non-CFA advisors, traders, or support staff—complies with applicable laws, rules, regulations, and ethical standards.",
+        {
+            "A": "Supervisory duties cover all supervised personnel regardless of license type or CFA affiliation.",
+            "C": "Subordinates' legal duties under I(A) do not relieve a CFA supervisor of oversight accountability under IV(C).",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-216", SUBJECT, mod, top, sub_c, los_c,
+        "Head of Research Martin Vogel, CFA, delegates daily compliance pre-publication review of equity reports to a senior vice president. Over six months, the senior VP routinely approves analyst drafts in under two minutes without checking sources or conflict disclosures, and Vogel never reviews the VP's sign-off logs. An analyst subsequently publishes a report containing fabricated channel checks. Under Standard IV(C), Vogel:",
+        {
+            "A": "Violated Standard IV(C), because delegating supervisory tasks does not absolve the supervisor of ultimate responsibility to verify the delegate performs adequately.",
+            "B": "Complied with Standard IV(C) because he delegated the task to a senior officer.",
+            "C": "Violated Standard IV(C) only if Vogel personally co-authored the fabricated report.",
+        },
+        "A",
+        "Under Standard IV(C) (Responsibilities of Supervisors), a member may delegate day-to-day supervisory tasks to qualified subordinates, but CANNOT delegate away ultimate supervisory responsibility. A supervisor must monitor delegates periodically to confirm compliance reviews are thorough and effective; failing to oversee a rubber-stamping delegate breaches Standard IV(C).",
+        {
+            "B": "Delegation without ongoing oversight fails the 'reasonable efforts' standard.",
+            "C": "Supervisory failure occurs through lax oversight of subordinates/delegates, even without co-authoring the false report.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-217", SUBJECT, mod, top, sub_c, los_c,
+        "Promoted to Director of Portfolio Management at a fast-growing family office, Nadia Al-Khoury, CFA, discovers the firm has no written compliance manual, no personal trading pre-clearance, and no independent trade review. Al-Khoury submits a detailed compliance budget to the managing partner, who flatly rejects it as 'unnecessary red tape.' Under Standard IV(C), what is Al-Khoury's most appropriate course of action?",
+        {
+            "A": "Accept the supervisory role anyway and try to watch employees informally without written policies.",
+            "B": "Wait one full calendar year before raising the compliance budget again.",
+            "C": "Decline in writing to accept supervisory responsibility until the firm adopts reasonable compliance procedures.",
+        },
+        "C",
+        "Under Standard IV(C) (Responsibilities of Supervisors), if an employer refuses to establish an adequate compliance system despite the member's recommendations, the member must NOT accept supervisory responsibility over an inadequate system—she must formally decline supervisory responsibility in writing until reasonable procedures are adopted and enforced.",
+        {
+            "A": "Informal oversight without an adequate compliance framework leaves the supervisor in ongoing violation of Standard IV(C).",
+            "B": "Delaying a full year while supervising an unmonitored department violates supervisory duties.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-218", SUBJECT, mod, top, sub_c, los_c,
+        "Compliance software alerts Chief Investment Officer Victor Ramirez, CFA, that a portfolio manager may have engaged in biased trade allocations favoring a personal friend's trust account over the past quarter. Ramirez immediately suspends the PM's manual allocation permissions, requires dual compliance sign-off on every block trade the PM executes, and launches an independent audit of all historical allocations. Ramirez's response is:",
+        {
+            "A": "A violation of Standard IV(C), because he should have terminated the PM on the spot prior to investigating.",
+            "B": "Compliant with Standard IV(C), because he initiated an immediate investigation while placing appropriate interim operational limits on the employee.",
+            "C": "A violation of Standard III(B), because dual sign-off slows trade execution for clients.",
+        },
+        "B",
+        "Under Standard IV(C) (Responsibilities of Supervisors), when suspected misconduct is detected, the appropriate supervisory response is to promptly initiate a thorough investigation AND place appropriate interim limitations (such as heightened supervision, dual sign-off, or trading restrictions) on the employee while the inquiry proceeds. Ramirez handled all required steps cleanly.",
+        {
+            "A": "Standard IV(C) calls for investigation and interim safeguards rather than summary termination before verifying facts.",
+            "C": "Dual compliance review protects clients from biased allocation and does not violate Standard III(B).",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-219", SUBJECT, mod, top, sub_c, los_c,
+        "At onboarding, Sterling Advisors hands every employee a 220-page compliance manual purchased from a legal vendor, covering insider trading, personal account blackouts, and fair allocation. However, Chief Compliance Officer Paul Myers, CFA, never conducts training, never collects brokerage statements, and ignores repeated employee exceptions over three years. No regulatory fine has occurred yet. Under Standard IV(C), Myers has:",
+        {
+            "A": "Violated Standard IV(C), because possessing written policies without active implementation, monitoring, and enforcement fails supervisory duty.",
+            "B": "Complied with Standard IV(C), because distributing a comprehensive 220-page manual satisfies reasonable supervision.",
+            "C": "Complied with Standard IV(C), because no regulatory fine or client lawsuit has materialized.",
+        },
+        "A",
+        "Under Standard IV(C) (Responsibilities of Supervisors), having an adequate compliance system requires BOTH comprehensive written procedures AND active implementation, training, monitoring, and enforcement. A 'paper manual' sitting unread without trade surveillance or enforcement is inadequate and violates Standard IV(C) even before a client loss or regulatory sanction occurs.",
+        {
+            "B": "Written rules without monitoring, training, or enforcement do not meet Standard IV(C).",
+            "C": "Supervisory compliance is evaluated by the adequacy and enforcement of controls, not luck in avoiding regulatory penalties.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-220", SUBJECT, mod, top, sub_c, los_c,
+        "Quantitative Strategies Head Lisa Sato, CFA, deploys an automated third-party algorithmic portfolio rebalancing platform across 400 client accounts. Sato grants the software full automated execution access without establishing exception alerts, position-limit circuit breakers, or supervisory validation checks of the algorithm's output. An unchecked bug causes 300% daily turnover across accounts. Sato has violated Standard IV(C) because:",
+        {
+            "A": "Quantitative strategies may never use automated execution software.",
+            "B": "Software vendors are solely liable under Standard IV(C) for coding defects.",
+            "C": "Supervisory oversight extends to automated systems, algorithms, and third-party tools operating under the supervisor's authority.",
+        },
+        "C",
+        "Under Standard IV(C) (Responsibilities of Supervisors), supervisors are responsible for establishing and enforcing controls over all processes, staff, and automated/AI trading tools operating under their authority. Deploying live automated rebalancing without validation tests, turnover limits, and exception monitoring violates supervisory care.",
+        {
+            "A": "Automated trading is permissible when paired with proper validation, risk limits, and ongoing supervisory controls.",
+            "B": "External vendor mistakes do not absolve the firm's supervisor of oversight and risk-control duties.",
+        },
+    )
+
+
+def build_std5_part1(out: list) -> None:
+    mod = "eth-m6-std5"
+    top = "Standard V: Investment Analysis & Actions"
+    sub_a = "Standard V(A): Diligence and Reasonable Basis"
+    los_a = "Evaluate research rigor, secondary research reliance, and group dissent under Standard V(A)"
+
+    add_l1(
+        out, "L1-ETH-221", SUBJECT, mod, top, sub_a, los_a,
+        "Portfolio manager Liam Gallagher, CFA, reads a glowing 20-page equity research initiation from a prestigious bulge-bracket investment bank naming a foreign small-cap diagnostics company its 'Top Conviction Buy.' Impressed by the bank's reputation, Gallagher immediately buys a 5% position for client accounts without reviewing the company's financial filings, clinical trial assumptions, or valuation sensitivity. Gallagher has violated:",
+        {
+            "A": "Standard III(E) only, because foreign equities carry currency risk.",
+            "B": "Standard V(A) (Diligence and Reasonable Basis), by relying blindly on third-party research without independently verifying its assumptions and soundness.",
+            "C": "No standard, because bulge-bracket institutional reports are presumed to satisfy reasonable basis.",
+        },
+        "B",
+        "Under Standard V(A) (Diligence and Reasonable Basis), members may use secondary or third-party research ONLY after exercising independent due diligence to verify the reasonableness, objectivity, methodology, and assumptions underlying that research. Blindly purchasing a 5% client position based solely on another bank's brand prestige without independent review violates Standard V(A).",
+        {
+            "A": "Standard III(E) covers client confidentiality, not investment diligence.",
+            "C": "Brand prestige of a sell-side investment bank never excuses a portfolio manager from conducting independent diligence on third-party reports.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-222", SUBJECT, mod, top, sub_a, los_a,
+        "Quant manager Elena Petrova, CFA, purchases a subscription to a commercial vendor's proprietary machine-learning stock-selection model whose marketing brochure highlights a 12-year backtested Sharpe ratio of 2.9. Because the vendor treats the neural-network architecture as a trade secret, Petrova cannot inspect feature weights; she deploys live client capital immediately without running out-of-sample stress tests, turnover sensitivity checks, or regime-shift simulations. Petrova has violated Standard V(A) primarily because:",
+        {
+            "A": "She failed to test and validate the quantitative model's robustness, assumptions, and overfitting risks before deploying client capital.",
+            "B": "Machine-learning quantitative models are categorically banned under the Code and Standards.",
+            "C": "Sharpe ratios above 2.0 require prior written approval from CFA Institute.",
+        },
+        "A",
+        "Under Standard V(A) (Diligence and Reasonable Basis), when using external quantitative or AI/ML models, members must understand the model's parameters, assumptions, and limitations, and independently verify robustness—such as testing out-of-sample performance, transaction-cost drag, and stress scenarios—before relying on it for live client recommendations or trades.",
+        {
+            "B": "Quantitative and ML models are widely permitted once properly vetted and stress-tested.",
+            "C": "CFA Institute does not pre-approve quantitative models or Sharpe thresholds.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-223", SUBJECT, mod, top, sub_a, los_a,
+        "Analyst Maya Patel, CFA, serves on Horizon Capital's five-member European Equity Committee. Following weeks of thorough financial modeling, channel checks, and scenario analysis, four members vote to upgrade a German automaker to 'Buy.' Patel respectfully disagrees because she places a higher probability on near-term EV battery cost inflation, though she confirms the majority's valuation model is rigorously documented and analytically sound. Patel allows her name to remain on the committee's published 'Buy' report. Patel has:",
+        {
+            "A": "Violated Standard V(A), because a dissenting committee member must always remove her name from every report with which she disagrees.",
+            "B": "Violated Standard I(B), because staying on the report shows lack of personal conviction.",
+            "C": "Complied with Standard V(A), because a member need not dissociate from a group consensus report provided the consensus opinion has a reasonable and adequate basis.",
+        },
+        "C",
+        "Under Standard V(A) (Diligence and Reasonable Basis), when participating in group research or an investment committee, a member who reaches a different investment conclusion does NOT have to dissociate from the group report so long as the group report itself has a reasonable and adequate basis and reflects diligent, independent analysis. Dissociation is required only if the consensus lacks a reasonable basis or is unethical.",
+        {
+            "A": "Mandatory dissociation applies only when a group report lacks a reasonable and adequate basis, not over legitimate analytical disagreement.",
+            "B": "Allowing a well-supported consensus report to go forward with one's team name does not sacrifice objectivity.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-224", SUBJECT, mod, top, sub_a, los_a,
+        "Pension consultant Derek Shaw, CFA, recommends allocating 12% of a municipal pension fund to Crescent Macro, a three-year-old offshore hedge fund. Shaw bases his recommendation solely on Crescent's impressive 18% net annual return summary sheet and a 45-minute lunch meeting with Crescent's charismatic founder, never requesting audited financial statements, prime-broker custody confirmations, or operational risk-control reviews. Shaw's recommendation violates Standard V(A) because:",
+        {
+            "A": "Three-year-old hedge funds are ineligible for institutional pension portfolios.",
+            "B": "Selecting an external manager requires comprehensive operational and investment due diligence beyond headline historical returns.",
+            "C": "Meeting a fund manager over lunch violates Standard I(B) hospitality limits.",
+        },
+        "B",
+        "Under Standard V(A) (Diligence and Reasonable Basis), recommending a third-party sub-advisor or hedge fund requires thorough investment AND operational due diligence—verifying audited financials, independent custody, valuation policies, risk controls, and consistency of process—not relying superficially on unaudited return tables and an informal lunch.",
+        {
+            "A": "Younger funds are not categorically barred if rigorous investment/operational diligence supports suitability and mandate fit.",
+            "C": "A routine 45-minute business lunch is not the core issue; superficial manager selection lacking audited verification breaches V(A).",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-225", SUBJECT, mod, top, sub_a, los_a,
+        "Before incorporating macroeconomic GDP and inflation projections from an external independent forecasting consultancy into her fixed-income duration models, analyst Mei Zhou, CFA, audits the consultancy's 10-year forecast error history, checks its econometric assumptions, verifies it receives no funding from bond issuers, and documents how its inputs align with her internal bond valuation framework. Under Standard V(A), Zhou's reliance on the external forecast is:",
+        {
+            "A": "Compliant, because she exercised reasonable diligence to validate the third-party provider's methodology, historical accuracy, and objectivity.",
+            "B": "A violation, because members must build every macroeconomic forecast completely in-house without external data.",
+            "C": "A violation, unless the external consultancy employs only CFA charterholders.",
+        },
+        "A",
+        "Under Standard V(A) (Diligence and Reasonable Basis), members may rely on third-party research (macro forecasts, credit ratings, sector studies) once they conduct independent due diligence verifying the provider's methodology, assumptions, historical rigor, and freedom from conflicts of interest. Zhou's documented review satisfies Standard V(A) cleanly.",
+        {
+            "B": "Standard V(A) explicitly allows using vetted secondary and third-party research rather than forcing redundant creation of all inputs from scratch.",
+            "C": "Third-party research providers need not employ CFA charterholders for their validated work to be relied upon.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-226", SUBJECT, mod, top, sub_a, los_a,
+        "Retail utilities analyst Victor Santos, CFA, updates a 'Buy' recommendation on Regional Grid Corp after skimming the headline quarterly EPS press release. Santos skips reading the Form 10-Q debt footnotes, thereby overlooking a newly triggered covenant acceleration clause requiring 900 million USD in off-balance-sheet joint-venture debt to be refinanced within four months at punitive rates. Two weeks later, the company halts dividends and the stock plunges 38%. Santos has violated Standard V(A) because:",
+        {
+            "A": "Utilities analysts are prohibited from relying on quarterly EPS announcements.",
+            "B": "Standard V(A) forbids issuing 'Buy' ratings on leveraged infrastructure companies.",
+            "C": "He failed to exercise thoroughness and diligence by omitting critical footnote review needed to establish a reasonable and adequate basis.",
+        },
+        "C",
+        "Under Standard V(A) (Diligence and Reasonable Basis), members must exercise diligence, independence, and thoroughness in analyzing investments. Skimming headline EPS without examining balance-sheet footnotes—missing an imminent 900 million USD debt acceleration risk—leaves the recommendation without a reasonable and adequate basis.",
+        {
+            "A": "Press releases may be reviewed alongside primary filings, but never as a substitute for thorough footnote analysis.",
+            "B": "Leveraged utilities can receive Buy ratings when thorough credit and valuation diligence supports the recommendation.",
+        },
+    )
+
+
+def build_std5_part2(out: list) -> None:
+    mod = "eth-m6-std5"
+    top = "Standard V: Investment Analysis & Actions"
+    sub_b = "Standard V(B): Communication with Clients and Prospective Clients"
+    los_b = "Apply disclosure rules for investment process changes, risks, and fact-versus-opinion separation under Standard V(B)"
+    sub_c = "Standard V(C): Record Retention"
+    los_c = "Determine record-retention responsibilities, employer ownership, and archival timeframes under Standard V(C)"
+
+    add_l1(
+        out, "L1-ETH-227", SUBJECT, mod, top, sub_b, los_b,
+        "In a client equity research report on MedTech Innovations, analyst Sarah Lindqvist, CFA, writes: 'MedTech generated 3.10 USD in diluted EPS last fiscal year, and the company will earn 4.65 USD per share next year while expanding operating margins by 340 basis points as its surgical robot captures 28% market share.' Which Standard V(B) requirement has Lindqvist most clearly violated?",
+        {
+            "A": "Distinguishing clearly between historical facts and forward-looking opinions or estimates.",
+            "B": "Disclosing her firm's soft-dollar trading policy in every company report.",
+            "C": "Retaining workpapers for at least seven years.",
+        },
+        "A",
+        "Under Standard V(B) (Communication with Clients and Prospective Clients), members must clearly distinguish between verifiable historical facts and opinions, projections, or expectations. Presenting next year's projected 4.65 USD EPS, 340 bps margin expansion, and 28% market share as definitive assertions ('will earn') blurred with actual prior-year EPS violates Standard V(B).",
+        {
+            "B": "Soft-dollar disclosures fall primarily under Standard III(A) and Standard VI(A), not Standard V(B) report phrasing.",
+            "C": "Record retention is governed by Standard V(C) rather than distinguishing facts from opinions in Standard V(B).",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-228", SUBJECT, mod, top, sub_b, los_b,
+        "For nine years, Pioneer Value Partners marketed its flagship fund to clients as 'strictly long-only, unleveraged, bottom-up fundamental value investing.' Seeking to smooth returns during a growth-led rally, lead manager Daniel Cho, CFA, begins borrowing 30% on margin and selling short-dated earnings-straddle options on momentum stocks—without informing existing clients or updating offering communications. Cho's conduct violates Standard V(B) primarily because he failed to:",
+        {
+            "A": "Avoid using any options or margin leverage across all mutual funds.",
+            "B": "Promptly disclose material changes in the basic format, general principles, and risks of the investment process.",
+            "C": "Obtain independent GIPS verification prior to adding an options overlay.",
+        },
+        "B",
+        "Under Standard V(B) (Communication with Clients and Prospective Clients), members must disclose the basic format and general principles of their investment process and PROMPTLY disclose any changes that might materially affect those processes, along with significant associated risks. Quietly adding 30% margin leverage and short-term earnings option straddles to an unleveraged value process breaches Standard V(B) (and III(C)).",
+        {
+            "A": "Options and leverage are permissible when permitted by the mandate and properly disclosed with risks.",
+            "C": "GIPS verification is voluntary and unrelated to timely process-change disclosures under Standard V(B).",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-229", SUBJECT, mod, top, sub_b, los_b,
+        "Private bank advisor Marcus Bell, CFA, distributes a sleek two-page marketing flyer promoting a five-year structured note linked to European bank stocks. The headline boldly promises '11.5% Annual Target Coupon with Principal Buffer Features.' Nowhere in the flyer does Bell mention that the note carries 100% unsecured single-issuer credit risk of the underwriting bank, includes an issuer call feature capping upside, and has no liquid secondary market. Burying those details in a separate 140-page prospectus provided only at closing violates Standard V(B) because:",
+        {
+            "A": "Structured notes may never be advertised in two-page flyers.",
+            "B": "Target coupons above 10% automatically breach Standard I(C).",
+            "C": "Communications must disclose significant limitations and risks associated with the investment process and product rather than omitting material downsides.",
+        },
+        "C",
+        "Under Standard V(B) (Communication with Clients and Prospective Clients), members must disclose significant limitations and risks associated with recommended investments and include all important analytical factors. Highlighting an 11.5% coupon in promotional summaries while omitting single-issuer credit risk, call risk, and illiquidity misleads clients under Standard V(B).",
+        {
+            "A": "Summary flyers are permissible when key risks and limitations are accurately presented alongside return features.",
+            "B": "Yield level alone does not establish a violation if clearly labeled as conditional and paired with prominent risk disclosures.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-230", SUBJECT, mod, top, sub_b, los_b,
+        "Following an exhaustive 35-page DCF and credit valuation of Horizon Logistics, equity analyst Priya Desai, CFA, emails clients a concise one-page executive summary. The summary clearly distinguishes historical revenues from estimated future cash flows, states the main valuation assumptions (WACC and terminal growth), highlights key downside risks (freight recession and refinancing spread sensitivity), and informs recipients that the complete 35-page research report and sensitivity tables are available on the client portal. Under Standard V(B), Desai's summary note is:",
+        {
+            "A": "Compliant, because concise capsule summaries may omit granular modeling details if key factors, risks, and fact-opinion distinctions are preserved and full documentation is accessible.",
+            "B": "A violation, because every client email must reproduce 100% of all spreadsheet sensitivity tables.",
+            "C": "A violation, because DCF valuation assumptions may not be summarized in less than five pages.",
+        },
+        "A",
+        "Under Standard V(B) (Communication with Clients and Prospective Clients), capsule summaries or brief electronic updates comply with Standard V(B) provided the member uses reasonable judgment to include key factors, preserves the distinction between fact and opinion, discloses material risks/limitations, and notifies clients how to access the full detailed report.",
+        {
+            "B": "Reproducing entire 35-page appendices in every email is unnecessary when full reports are transparently made available.",
+            "C": "Standard V(B) imposes no minimum page count; clarity, balance, and inclusion of important factors govern.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-231", SUBJECT, mod, top, sub_b, los_b,
+        "During a pitch for a distressed middle-market direct lending fund, portfolio manager Trevor Vance, CFA, emphasizes its low historical reported return volatility (2.4% annualized) without explaining that the underlying loans do not trade on exchanges, are valued only quarterly via internal appraisal models (creating artificial price smoothing), and impose a two-year redemption gate. Vance has most directly violated Standard V(B) by failing to disclose:",
+        {
+            "A": "Exact tax identification numbers of underlying corporate borrowers.",
+            "B": "Significant valuation methodology limitations, stale-pricing effects, and illiquidity constraints.",
+            "C": "Daily mark-to-market bid-ask spreads on US Treasury futures.",
+        },
+        "B",
+        "Under Standard V(B) (Communication with Clients and Prospective Clients), members must communicate significant limitations and risks of their investment process and valuation methodology. Presenting appraisal-smoothed 2.4% volatility as low risk while omitting illiquidity, two-year gates, and model-based quarterly pricing conceals crucial limitations from investors.",
+        {
+            "A": "Borrower tax IDs are irrelevant and potentially confidential; the breach concerns hiding appraisal-smoothing and gate risks.",
+            "C": "Treasury futures spreads are unrelated to disclosing direct-lending valuation and liquidity constraints.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-232", SUBJECT, mod, top, sub_c, los_c,
+        "Before leaving Apex Securities to join Rival Capital, healthcare analyst Claire Novak, CFA, copies onto a personal hard drive 150 Excel financial models, clinical interview transcripts, and site-visit notebooks that she personally compiled during her five years at Apex. When challenged by Apex compliance, Novak claims she is required to keep those files to fulfill Standard V(C) (Record Retention) at her new employer. Novak's argument is:",
+        {
+            "A": "Correct, because Standard V(C) obligates individual analysts to carry personal copies of historical research wherever they work.",
+            "B": "Correct with respect to her personal handwritten site-visit notebooks, though not Excel files.",
+            "C": "Incorrect, because supporting research records created during employment belong to the employer, and departing analysts must re-create support from public sources at their new firm.",
+        },
+        "C",
+        "Under Standard V(C) (Record Retention) and Standard IV(A) (Loyalty), investment research records, models, and notes compiled during employment are the property of the employer (firm), not the individual employee. Departing analysts may not take original or copied firm records without employer permission; to re-issue recommendations at a new firm, they must re-create supporting documentation from public sources.",
+        {
+            "A": "Record-retention accountability at Firm A stays with Firm A; individual portability of proprietary firm files is prohibited.",
+            "B": "Handwritten field notes and site-visit workpapers compiled on employer business are also firm property.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-233", SUBJECT, mod, top, sub_c, los_c,
+        "To streamline fast communication with busy entrepreneur clients, wealth advisor Lucas Ortega, CFA, discusses specific stock buy/sell recommendations, risk-tolerance modifications, and execution rationales using an encrypted smartphone messaging application configured to automatically delete all messages after 24 hours. Neither Ortega nor his firm archives those chats. Ortega's practice violates Standard V(C) because:",
+        {
+            "A": "Electronic communications conveying investment recommendations, rationales, and client instructions must be captured and retained as firm records.",
+            "B": "Smartphone encryption violates Standard III(E) confidentiality.",
+            "C": "Standard V(C) bans discussing investments with clients via any digital channel.",
+        },
+        "A",
+        "Under Standard V(C) (Record Retention), members must develop and maintain appropriate records—across both physical and electronic media—supporting investment analyses, recommendations, actions, and client communications. Using auto-deleting ephemeral messaging apps for client investment advice prevents archival verification and directly violates Standard V(C).",
+        {
+            "B": "Encryption helps confidentiality under III(E); the violation is automatic deletion destroying required audit trails under V(C).",
+            "C": "Digital channels (email, archived portals, logged messaging) are fully compliant once properly archived.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-234", SUBJECT, mod, top, sub_c, los_c,
+        "Boutique investment advisor Harborview Management operates in a local jurisdiction whose statutory securities rules require retaining client trade tickets and research files for only two years. To save cloud storage expenses, Harborview's operations policy permanently purges all research memos, model backups, and client recommendation logs at the 24-month mark. Absent stricter local legal rules, what minimum retention horizon does CFA Institute recommend under Standard V(C)?",
+        {
+            "A": "Three years from the date of initial security purchase.",
+            "B": "At least seven years.",
+            "C": "Indefinitely in physical paper binders only.",
+        },
+        "B",
+        "Under the recommended procedures for Standard V(C) (Record Retention), in the absence of stricter local regulatory requirements, CFA Institute recommends maintaining supporting investment records—whether in hard copy or electronic format—for at least seven years.",
+        {
+            "A": "Three years falls short of CFA Institute's seven-year recommended benchmark.",
+            "C": "Electronic archival is expressly acceptable (and often preferred), and the baseline recommended horizon is seven years rather than mandatory indefinite paper storage.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-235", SUBJECT, mod, top, sub_c, los_c,
+        "After resigning honorably from Sterling Asset Management without taking any files, notes, or valuation spreadsheets, industrial analyst Devon Patel, CFA, joins Cascade Investments. Before publishing a new 'Buy' initiation on Global Freight Corp—a company Patel previously covered at Sterling—Patel downloads public SEC 10-K filings, earnings call transcripts, and industry freight volume data at Cascade, builds a fresh valuation model from scratch, and archives all supporting files in Cascade's research repository. Under Standard V(C), Patel has:",
+        {
+            "A": "Violated Standard V(C) by covering the same company he analyzed at his previous firm.",
+            "B": "Violated Standard IV(A) by remembering Global Freight Corp's ticker symbol.",
+            "C": "Complied fully with Standard V(C) by re-creating supporting research records from public sources for his new employer's archives.",
+        },
+        "C",
+        "Under Standard V(C) (Record Retention) and Standard IV(A) (Loyalty), when an analyst moves to a new firm without taking prior firm files and wishes to cover a previously analyzed issuer, the proper compliant path is to rebuild the analysis and supporting documentation completely from public sources and save those newly created records in the new employer's repository.",
+        {
+            "A": "Covering the same industry or issuer at a new firm is entirely permissible using fresh public research.",
+            "B": "General industry expertise and public company names are not confidential employer property.",
+        },
+    )
+
+
+def build_std6(out: list) -> None:
+    mod = "eth-m7-std6"
+    top = "Standard VI: Conflicts of Interest"
+    sub_a = "Standard VI(A): Avoid or Disclose Conflicts"
+    los_a = "Evaluate prominence, plain-language clarity, and scope of conflict disclosures under Standard VI(A)"
+    sub_b = "Standard VI(B): Priority of Transactions"
+    los_b = "Apply transaction priority rules among clients, employers, and beneficial ownership accounts under Standard VI(B)"
+    sub_c = "Standard VI(C): Referral Fees"
+    los_c = "Assess timing, content, and recipient rules for referral fee disclosures under Standard VI(C)"
+
+    add_l1(
+        out, "L1-ETH-236", SUBJECT, mod, top, sub_a, los_a,
+        "Investment bank and brokerage firm Horizon Securities acts as co-manager for a secondary equity offering of BioPulse Ltd and owns 400,000 BioPulse stock warrants received as underwriting compensation. When publishing an institutional 'Outperform' report on BioPulse, Horizon places its disclosure of the underwriting fee and warrant holdings in 8-point italic legal text buried inside Note 19 on page 29 of an attached general compliance appendix. Under Standard VI(A), this disclosure is:",
+        {
+            "A": "Insufficient, because disclosures of material conflicts must be prominent, delivered in plain language, and communicate relevant information effectively.",
+            "B": "Compliant, because any written mention anywhere inside the distributed PDF fulfills Standard VI(A).",
+            "C": "Insufficient solely because warrants must be sold before any research coverage begins.",
+        },
+        "A",
+        "Under Standard VI(A) (Avoid or Disclose Conflicts), disclosure is effective only when it is PROMINENT, stated in plain language, and communicates the nature of the conflict clearly to readers (typically on the front page or dedicated prominent disclosure section of a research report). Burying material underwriting fees and warrant ownership in fine-print boilerplate on page 29 fails Standard VI(A).",
+        {
+            "B": "Obscuring conflicts in dense back-page boilerplate violates the prominence and effective communication standard.",
+            "C": "Holding warrants does not automatically prohibit coverage if the conflict is managed properly and prominently disclosed.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-237", SUBJECT, mod, top, sub_a, los_a,
+        "Biotech analyst Martin Chen, CFA, initiates coverage on GeneTherapeutics Inc. with a strong 'Buy' recommendation. Chen's spouse owns 150,000 USD in vested GeneTherapeutics stock options earned during prior employment there. Chen discloses his spouse's option holdings in writing to his Research Director and Compliance Department, who clear him to publish the report, yet the published client report contains zero mention of the spousal option stake. Chen has violated Standard VI(A) because:",
+        {
+            "A": "Spousal holdings never require disclosure if the analyst holds no shares personally.",
+            "B": "Material beneficial ownership conflicts must be disclosed not only to the employer, but also prominently to clients and prospective clients reading the recommendation.",
+            "C": "Compliance pre-clearance automatically transfers all disclosure liability to the Research Director.",
+        },
+        "B",
+        "Under Standard VI(A) (Avoid or Disclose Conflicts), members must disclose all matters that could reasonably impair independence and objectivity to ALL affected parties—meaning BOTH the employer AND clients/prospective clients. Disclosing a spouse's 150,000 USD vested option stake internally to Compliance without disclosing it in the published client report leaves clients uninformed of the conflict.",
+        {
+            "A": "Spousal financial holdings represent indirect beneficial/household interests that can clearly impair objectivity.",
+            "C": "Internal clearance by Compliance does not excuse omitting mandatory client-facing conflict disclosures.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-238", SUBJECT, mod, top, sub_a, los_a,
+        "Senior equity portfolio manager Nora Takahashi, CFA, accepts an invitation to serve as an unpaid independent member of the Board of Directors of Solaris Medical Corp, a publicly traded firm whose shares fall within the investable universe of her clients' growth portfolios. Takahashi holds no Solaris shares personally. To comply with Standard VI(A), Takahashi must:",
+        {
+            "A": "Skip disclosure entirely because her directorship is unpaid.",
+            "B": "Disclose the directorship only to Solaris Medical's corporate secretary.",
+            "C": "Disclose the board membership prominently to both her employer and her clients/prospective clients, and implement controls around potential conflicts and material nonpublic information.",
+        },
+        "C",
+        "Under Standard VI(A) (Avoid or Disclose Conflicts), serving on a public company's board—even unpaid—creates significant conflicts of interest between fiduciary duties to corporate shareholders and duties to investment clients (plus exposure to MNPI under Standard II(A)). Takahashi must disclose the board service to BOTH her employer and clients/prospective clients, and follow firm conflict/restriction protocols.",
+        {
+            "A": "Lack of director compensation does not eliminate conflicting fiduciary loyalties and reputational incentives.",
+            "B": "Her employer and advisory clients are the affected investment stakeholders requiring full conflict disclosure.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-239", SUBJECT, mod, top, sub_a, los_a,
+        "Wealth advisor Kevin Morales, CFA, works at a dual-registered firm offering both low-cost third-party ETFs and proprietary actively managed multi-asset funds. Under the firm's payout schedule, Morales receives a 1.50% upfront sales credit when placing clients into proprietary funds versus 0.15% on third-party ETFs. Morales routinely recommends the proprietary funds to new clients without disclosing this tenfold payout differential. Morales has violated Standard VI(A) by failing to:",
+        {
+            "A": "Disclose an incentive compensation structure that could reasonably bias his product recommendations.",
+            "B": "Charge identical 1.50% fees across all third-party ETFs.",
+            "C": "Avoid all proprietary products in retail wealth accounts.",
+        },
+        "A",
+        "Under Standard VI(A) (Avoid or Disclose Conflicts), compensation differentials—such as earning 10 times higher sales credits on proprietary products than external ETFs—create an obvious financial incentive that can impair objectivity. Failing to disclose this conflict prominently in plain language to clients and prospects violates Standard VI(A).",
+        {
+            "B": "Uniformity of fees is not required, whereas transparent upfront disclosure of conflicting compensation incentives is mandatory.",
+            "C": "Proprietary funds may be offered when suitable and when compensation conflicts are prominently disclosed.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-240", SUBJECT, mod, top, sub_a, los_a,
+        "Regional bank analyst Rachel Foster, CFA, covers Heartland Bancorp. Heartland recently hired Foster's brother as its Chief Financial Officer. Confident in her analytical integrity and knowing she will maintain strict objectivity, Foster declines to notify her research supervisor or add a disclosure note to her upcoming Heartland earnings update. Under Standard VI(A), Foster has:",
+        {
+            "A": "Complied, because personal integrity prevents actual bias in her financial models.",
+            "B": "Violated Standard VI(A), because a close family member holding a senior executive post at a covered company creates a material conflict requiring disclosure (or reassignment).",
+            "C": "Complied, provided she never discusses quarterly earnings with her brother at family gatherings.",
+        },
+        "B",
+        "Under Standard VI(A) (Avoid or Disclose Conflicts), disclosure depends on whether a matter could REASONABLY BE EXPECTED to impair objectivity or create the appearance of conflict in the eyes of clients and employer—not the analyst's subjective confidence in her own willpower. Having a sibling serve as CFO of a covered bank must be disclosed to employer and clients (or coverage reassigned).",
+        {
+            "A": "Subjective confidence in one's objectivity never waives Standard VI(A) disclosure obligations.",
+            "C": "Avoiding insider conversations addresses Standard II(A), but does not eliminate the reportable conflict under Standard VI(A).",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-241", SUBJECT, mod, top, sub_a, los_a,
+        "Quantitative portfolio manager Oliver Grant, CFA, is employed full time managing global macro hedge funds at Titan Capital. Outside work, Grant is invited to join his university's volunteer Endowment Investment Committee, which actively allocates capital across competing global macro hedge funds and occasionally co-invests in the same sovereign bond auctions Titan targets. To adhere to Standard VI(A), Grant must:",
+        {
+            "A": "Accept quietly without notifying Titan Capital because the university role is unpaid.",
+            "B": "Notify only the university endowment board about his job at Titan Capital.",
+            "C": "Disclose the outside committee role and potential strategy/allocation overlap to his employer before accepting.",
+        },
+        "C",
+        "Under Standard VI(A) (Avoid or Disclose Conflicts), members must disclose any outside duties, board seats, or investment committee memberships that could interfere with their duties to their employer or create competing/conflicting market allocations. Even though unpaid, participating in macro manager selection and sovereign co-investments directly intersects with Titan Capital's business and requires prior disclosure to the employer.",
+        {
+            "A": "Unpaid status does not prevent competitive or time/information conflicts with the employer.",
+            "B": "Standard VI(A) explicitly requires disclosing conflicts affecting employer duties to the employer.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-242", SUBJECT, mod, top, sub_b, los_b,
+        "At 9:00 AM, Apex Investment Partners releases a firm-wide research upgrade on OmniCorp from 'Hold' to 'Buy.' Portfolio manager Sophia Rossi, CFA, executes buy orders across all suitable client accounts at 9:35 AM. After all client orders are completely filled, Apex's proprietary trading desk executes its OmniCorp purchase at 10:30 AM. Following the firm's mandatory 48-hour employee trading blackout window, Rossi receives compliance pre-clearance and buys 200 shares for her personal IRA two days later. Under Standard VI(B), Rossi's trade sequence is:",
+        {
+            "A": "Compliant, because transactions followed the required priority order: clients first, employer second, and personal beneficial accounts last.",
+            "B": "A violation, because portfolio managers may never buy securities held in client accounts.",
+            "C": "A violation, because the employer's proprietary desk must trade before client accounts.",
+        },
+        "A",
+        "Under Standard VI(B) (Priority of Transactions), investment transactions for clients and employers must have priority over transactions in which a member or candidate is the beneficial owner. The strict hierarchy is: (1) Clients first, (2) Employer second, and (3) Personal/beneficial accounts last after required blackout/pre-clearance periods. Rossi followed every requirement.",
+        {
+            "B": "Personal ownership of covered securities is permissible once client/employer priority, blackout rules, pre-clearance, and VI(A) disclosures are observed.",
+            "C": "Client transactions always take priority over the employer's proprietary trading desk.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-243", SUBJECT, mod, top, sub_b, los_b,
+        "Small-cap portfolio manager Nathan Patel, CFA, submits orders for 15,000 shares of a hot software IPO across 12 eligible discretionary client accounts, which receive only a 60% partial fill (9,000 shares). Simultaneously, Patel places an order for 500 shares in his wife's IRA—an account in which he holds no trading title on paper—and receives a full 500-share allotment because his wife's account is maintained as an individual brokerage relationship at the firm. Patel has violated Standard VI(B) because:",
+        {
+            "A": "Spouses of portfolio managers are prohibited from opening IRAs.",
+            "B": "Partial fills require canceling all client IPO allocations.",
+            "C": "A spouse's account represents a beneficial ownership interest that must stand behind unsatisfied client orders.",
+        },
+        "C",
+        "Under Standard VI(B) (Priority of Transactions), 'beneficial owner' encompasses any account in which a member has a direct or indirect pecuniary interest or shares household financial benefit—explicitly including a spouse's or dependent child's account. Allocating oversubscribed IPO shares to a spouse's IRA while client orders remain partially unfilled directly violates Standard VI(B).",
+        {
+            "A": "Spouses may maintain IRAs, but those accounts are treated as member-beneficial accounts under personal trading and IPO priority rules.",
+            "B": "Client partial fills are allocated pro rata under III(B); they are not canceled because of personal/spousal conflicts.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-244", SUBJECT, mod, top, sub_b, los_b,
+        "At 10:10 AM, equity trader Julian Brooks, CFA, receives an institutional pension client's order to purchase 1.8 million shares of an illiquid mid-cap industrial stock over the day. Knowing the massive buy flow will drive the share price higher, Brooks buys 4,000 shares in his personal brokerage account at 10:15 AM before releasing the pension's initial block slice to the market at 10:30 AM. Brooks's conduct most directly violates:",
+        {
+            "A": "Standard III(C) only, because mid-cap stocks are illiquid.",
+            "B": "Standard VI(B) (Priority of Transactions), by front-running a pending client order for personal profit.",
+            "C": "Standard VII(A), because trading ahead of clients undermines CFA exam security.",
+        },
+        "B",
+        "Front-running a pending client order by executing a personal trade ahead of client execution violates Standard VI(B) (Priority of Transactions)—as well as Standard III(A) (Loyalty) and Standard II(B) (Market Manipulation) if used to distort prices. Client transactions must always precede personal transactions.",
+        {
+            "A": "The core violation is personal front-running of a client order, not suitability of mid-cap exposure.",
+            "C": "Standard VII(A) applies to CFA Program exam conduct and member integrity, not securities front-running.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-245", SUBJECT, mod, top, sub_b, los_b,
+        "Prior to becoming Head of Consumer Research at Meridian Capital, Elena Rostova, CFA, establishes an irrevocable blind trust managed entirely by an independent third-party bank trustee. Under the trust instrument, Rostova has zero investment discretion, receives no advance trade notifications, and cannot direct or influence security selection. Without Rostova's knowledge, the independent trustee purchases shares in a beverage stock covered by Rostova two days before she upgrades the stock. Under Standard VI(B) recommended compliance procedures, Rostova has:",
+        {
+            "A": "Not violated Standard VI(B), because genuine blind trusts over which the member exercises zero influence or knowledge are normally exempt from pre-clearance and blackout restrictions.",
+            "B": "Violated Standard VI(B), because a blind trust is treated identically to an active personal brokerage account.",
+            "C": "Violated Standard VI(B), unless she immediately forces the independent trustee to liquidate the beverage shares at a loss.",
+        },
+        "A",
+        "Recommended procedures for Standard VI(B) (Priority of Transactions) distinguish accounts where the member exercises investment influence from genuine blind trusts or fully independent discretionary accounts/diversified mutual funds where the member has zero knowledge, communication, or control over individual security timing. Because Rostova exercised no knowledge or influence, no Standard VI(B) violation occurred.",
+        {
+            "B": "True blind trusts are recognized exemptions under personal trading pre-clearance and blackout frameworks.",
+            "C": "Forcing the independent trustee to sell would actually breach the blind trust's non-interference boundary.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-246", SUBJECT, mod, top, sub_b, los_b,
+        "Meridian Investment Bank's proprietary trading desk places an order for 50,000 shares of a newly listed robotics IPO, but receives only 20,000 shares (all client demand having already been fully satisfied). Meanwhile, proprietary analyst Trevor Kim, CFA, who received no client allocations, purchases 1,000 shares of the same robotics IPO in his personal brokerage account during the initial offering allocation. Under Standard VI(B), Kim's purchase:",
+        {
+            "A": "Complied, because all external client orders were completely satisfied.",
+            "B": "Complied, because analysts are unrelated to the firm's proprietary desk.",
+            "C": "Violated Standard VI(B), because transactions for the employer must also take priority over transactions in accounts where a member is beneficial owner.",
+        },
+        "C",
+        "Standard VI(B) (Priority of Transactions) requires that investment transactions for BOTH clients AND employers have priority over personal transactions in which the member is a beneficial owner. Even after external client orders are filled, an employee cannot participate in a scarce IPO allocation ahead of or to the detriment of an unfilled employer proprietary order.",
+        {
+            "A": "Client priority is only the first tier; the employer's transaction priority still supersedes employee personal accounts.",
+            "B": "Standard VI(B) binds all members and candidates regarding their employer's orders regardless of department.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-247", SUBJECT, mod, top, sub_c, los_c,
+        "Independent wealth advisor Clara Vance, CFA, signs a referral agreement paying an external Certified Public Accountant (CPA) 20% of first-year advisory fees for every wealthy tax client the CPA refers to Vance's firm. Vance discloses this payment arrangement in writing to her firm's Chief Compliance Officer, but neither Vance nor the CPA mentions the 20% fee split to referred prospective clients prior to signing investment management agreements. Vance has violated Standard VI(C) because:",
+        {
+            "A": "Paying cash referral fees to CPAs is banned outright under the Code and Standards.",
+            "B": "Referral fees paid to—not merely received from—outside parties must be disclosed to clients and prospective clients before entering into an agreement.",
+            "C": "Only referral fees exceeding 50% of annual advisory fees require prospect disclosure.",
+        },
+        "B",
+        "Under Standard VI(C) (Referral Fees), members must disclose to their employer, clients, and prospective clients any compensation, consideration, or benefit RECEIVED FROM OR PAID TO others for the recommendation of products or services. Disclosure to prospects must occur BEFORE entering into any formal service agreement so clients can evaluate the referrer's bias.",
+        {
+            "A": "Referral fees are permitted when disclosed upfront in plain terms (nature and estimated value/percentage) to employer, clients, and prospects.",
+            "C": "Standard VI(C) applies to any material referral benefit regardless of percentage threshold.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-248", SUBJECT, mod, top, sub_c, los_c,
+        "Private client advisor Liam Shaw, CFA, routinely refers high-net-worth clients needing complex trust drafting to an external estate law firm. Rather than paying Shaw cash, the law firm gives Shaw complimentary use of its luxury stadium box suite for client entertainment plus three free hours of personal legal drafting for every client referred. Shaw does not inform his employer or referred clients of these benefits. Shaw's omission violates Standard VI(C) because:",
+        {
+            "A": "Standard VI(C) covers any non-cash consideration or benefit, not strictly direct cash commissions.",
+            "B": "Estate law referrals are covered only under Standard I(B) hospitality rules.",
+            "C": "Disclosures apply exclusively when the advisor pays fees out of pocket.",
+        },
+        "A",
+        "Standard VI(C) (Referral Fees) applies broadly to 'any compensation, consideration, or benefit received from or paid to others'—explicitly covering non-cash perks, complimentary personal legal services, stadium suites, soft-dollar credits, or reciprocal business arrangements. Failing to disclose these benefits to employer and clients breaches Standard VI(C).",
+        {
+            "B": "Quid-pro-quo benefits tied directly to client referrals trigger Standard VI(C) referral disclosures in addition to conflict rules.",
+            "C": "Standard VI(C) covers benefits both received from and paid to external parties.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-249", SUBJECT, mod, top, sub_c, los_c,
+        "Boutique asset manager Apex Wealth receives a client referral from an outside insurance broker, to whom Apex pays an ongoing 25-basis-point annual AUM trail. Ten days AFTER the new client signs Apex's advisory contract and transfers 2 million USD, Apex mails a welcome packet containing a footnote stating: 'Apex may occasionally pay referral compensation to third parties.' Which two flaws place Apex advisor Thomas Grant, CFA, in violation of Standard VI(C)?",
+        {
+            "A": "Paying an ongoing AUM trail instead of a flat fee, and using postal mail.",
+            "B": "Working with insurance brokers, and accepting transfers above 1 million USD.",
+            "C": "Disclosing after contract execution instead of beforehand, and omitting the nature and estimated dollar value or formula of the fee.",
+        },
+        "C",
+        "Under Standard VI(C) (Referral Fees), disclosure must occur BEFORE entering into a formal agreement for services so the prospective client can make an informed decision. Moreover, disclosure must communicate BOTH the nature of the consideration (ongoing 25 bps trail) and its estimated dollar value (here, 5,000 USD annually on 2 million USD)—vague post-contract 'may occasionally pay' footnotes fail both requirements.",
+        {
+            "A": "Ongoing AUM trails and postal disclosures are permissible when properly structured, timed upfront, and quantified.",
+            "B": "Referral relationships with insurance brokers and large account sizes are normal and compliant once properly disclosed.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-250", SUBJECT, mod, top, sub_c, los_c,
+        "Mortgage specialist Priya Nair, CFA, partners with an independent wealth advisor who refers homebuyers seeking jumbo mortgages. Nair pays the external wealth advisor a flat 500 USD referral fee per closed loan. Before accepting any loan application from a referred client, Nair obtains written sign-off from her employer and hands the prospective borrower a standalone one-page plain-English disclosure stating the exact 500 USD flat referral payment and who receives it. Under Standard VI(C), Nair has:",
+        {
+            "A": "Violated Standard VI(C), because flat-dollar referral payments are prohibited.",
+            "B": "Complied fully with Standard VI(C) by disclosing the nature and exact amount of the fee to both her employer and prospective clients prior to formal engagement.",
+            "C": "Violated Standard VI(C), because referral disclosures must be hidden inside closing escrow statements.",
+        },
+        "B",
+        "Nair satisfied every requirement of Standard VI(C) (Referral Fees): she disclosed the external referral payment to her employer, presented a prominent plain-English disclosure detailing both the nature (flat referral fee) and exact dollar amount (500 USD) to prospective clients BEFORE entering any formal lending agreement.",
+        {
+            "A": "Flat-dollar, percentage, and non-cash referral fees are all permissible when transparently disclosed upfront.",
+            "C": "Prominent standalone pre-agreement disclosure is ideal and vastly superior to burying notices in closing documents.",
+        },
+    )
+
+
+def build_std7(out: list) -> None:
+    mod = "eth-m8-std7"
+    top = "Standard VII: Member & Candidate Responsibilities"
+    sub_a = "Standard VII(A): Conduct as Participants in CFA Institute Programs"
+    los_a = "Evaluate exam security, confidential testing rules, and program integrity under Standard VII(A)"
+    sub_b = "Standard VII(B): Reference to CFA Institute, the CFA Designation, and the CFA Program"
+    los_b = "Identify proper and improper references to CFA candidacy, membership, and the CFA designation under Standard VII(B)"
+
+    add_l1(
+        out, "L1-ETH-251", SUBJECT, mod, top, sub_a, los_a,
+        "Hours after completing the CFA Level I exam, registered candidate Ethan Brooks posts in an online study forum: 'What a relief—I completely skipped reviewing GIPS verification rules and two-period binomial option trees during my final week, and luckily neither topic appeared anywhere on today's exam!' Has Brooks violated Standard VII(A)?",
+        {
+            "A": "Yes, because disclosing confidential information about which specific curriculum topics were or were not tested compromises exam security.",
+            "B": "No, because he did not quote exact numerical questions or answer choices from the exam.",
+            "C": "No, because exam confidentiality applies only to CFA charterholders rather than Level I candidates.",
+        },
+        "A",
+        "Under Standard VII(A) (Conduct as Participants in CFA Institute Programs), candidates and members must not compromise the integrity, validity, or security of CFA exams. Disclosing confidential exam details includes revealing NOT ONLY specific questions, but also which curriculum topics, formulas, or reading areas were or were NOT tested on a particular exam sitting.",
+        {
+            "B": "Even confirming which specific subjects were absent from the exam leaks protected exam content structure to subsequent test takers.",
+            "C": "Standard VII(A) explicitly binds all registered CFA Program candidates as well as active members.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-252", SUBJECT, mod, top, sub_a, los_a,
+        "After exiting the testing center for her CFA Level II examination, candidate Maya Alvarez writes on her social media page: 'Just finished Level II! The afternoon item sets were mentally exhausting and I barely managed my pacing on the final session, but I'm glad to be done and celebrating tonight.' Alvarez mentions no specific readings, formulas, or tested subjects. Under Standard VII(A), Alvarez's post is:",
+        {
+            "A": "A violation, because candidates are prohibited from publicly mentioning that they sat for a CFA exam.",
+            "B": "A violation, because commenting on exam time pacing breaches testing security.",
+            "C": "Compliant, because expressing general personal feelings about exam difficulty or time pressure without revealing tested or untested content does not compromise exam security.",
+        },
+        "C",
+        "Under Standard VII(A) (Conduct as Participants in CFA Institute Programs), candidates are free to share general opinions about how they felt during the exam (difficulty, fatigue, time management) provided they reveal zero specifics regarding what curriculum topics, vignettes, or formulas were or were not tested.",
+        {
+            "A": "Candidates are permitted to state they sat for an exam and discuss general non-content impressions.",
+            "B": "Commenting that one felt rushed on pacing reveals nothing about exam questions or topic coverage.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-253", SUBJECT, mod, top, sub_a, los_a,
+        "Having passed all three CFA exam levels, applicant Victor Novak completes his CFA charter application. Lacking six months of qualified investment decision-making work experience, Novak persuades a friendly former boss to sign an inflated job description exaggerating his clerical operations role as 'direct institutional portfolio management.' Novak also omits a minor regulatory fine on his annual Professional Conduct Statement (PCS). Novak has violated:",
+        {
+            "A": "Standard IV(B) only, because his former boss assisted him without compensation.",
+            "B": "Standard VII(A) (Conduct as Participants in CFA Institute Programs), by falsifying work-experience credentials and omitting required PCS disclosures.",
+            "C": "Standard III(D), because misstating job duties distorts firm composite performance.",
+        },
+        "B",
+        "Under Standard VII(A) (Conduct as Participants in CFA Institute Programs), misconduct extends beyond exam-day cheating to include falsifying or misrepresenting qualified work experience on charter applications, forging supervisor references, or submitting false/incomplete information on the annual Professional Conduct Statement (PCS).",
+        {
+            "A": "Standard IV(B) governs outside compensation conflicting with an employer, not falsifying CFA Institute charter applications.",
+            "C": "Standard III(D) applies to investment performance presentations, whereas falsifying CFA credential applications breaches Standard VII(A).",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-254", SUBJECT, mod, top, sub_a, los_a,
+        "During the final seconds of the CFA Level I morning session, the proctor announces over the loudspeaker: 'Time is up. Stop writing immediately and set down your pencils and calculators.' Candidate Kevin Ortiz keeps punching numbers into his financial calculator for 15 extra seconds to finish flagging a final multiple-choice answer on screen before the proctor intervenes. Under Standard VII(A), Ortiz has:",
+        {
+            "A": "Violated Standard VII(A) by failing to comply with testing rules and proctor instructions, compromising exam fairness and integrity.",
+            "B": "Complied with Standard VII(A), provided his final calculation changed no more than one answer.",
+            "C": "Violated Standard IV(A) only, because candidates owe loyalty to proctors.",
+        },
+        "A",
+        "Under Standard VII(A) (Conduct as Participants in CFA Institute Programs), candidates must adhere strictly to all CFA Institute exam policies and proctor instructions—including stopping immediately when time expires and keeping unauthorized devices out of testing rooms. Continuing to work after 'stop' is called compromises exam fairness and violates Standard VII(A).",
+        {
+            "B": "Any unauthorized extra work after time expires—even affecting a single question—violates exam rules under Standard VII(A).",
+            "C": "Standard IV(A) covers loyalty to employers, whereas testing room infractions are governed by Standard VII(A).",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-255", SUBJECT, mod, top, sub_a, los_a,
+        "Charterholder Samuel Park, CFA, serves as an unpaid volunteer on a CFA Institute exam-development review panel, signing strict non-disclosure agreements. Six months later, Park launches a commercial CFA exam-prep tutoring company and writes a paid mock-exam booklet containing several lightly disguised vignettes copied closely from confidential draft items he reviewed on the volunteer panel. Park's actions violate:",
+        {
+            "A": "Standard III(E) only, because draft exam items are client records.",
+            "B": "Standard VII(B) only, because he used 'CFA' in advertising a tutoring business.",
+            "C": "Standard VII(A) (Conduct as Participants in CFA Institute Programs), by misusing confidential volunteer access to compromise exam integrity.",
+        },
+        "C",
+        "Under Standard VII(A) (Conduct as Participants in CFA Institute Programs), CFA Institute volunteers who participate in curriculum or exam development must strictly protect confidential program materials and never leverage non-public exam knowledge for commercial prep products or personal advantage. Replicating draft exam items violates Standard VII(A) (and I(D)/IV(A)).",
+        {
+            "A": "Draft exam items are confidential CFA Institute program property under VII(A), not client account data under III(E).",
+            "B": "Simply describing a tutoring service for CFA candidates is permissible if accurate; stealing confidential exam content violates VII(A).",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-256", SUBJECT, mod, top, sub_b, los_b,
+        "Charterholder Rachel Chen, CFA, launches an independent wealth boutique and prints the following tagline on her business cards and website homepage: 'ChenCFA Wealth Advisors — Hire Certified Financial Advisors: Our team of CFAs delivers disciplined portfolio governance.' Which two errors in Chen's tagline violate Standard VII(B)?",
+        {
+            "A": "Claiming disciplined portfolio governance, and printing a tagline on a business card.",
+            "B": "Embedding 'CFA' inside a firm name ('ChenCFA') and using 'CFA' as a plural noun ('CFAs').",
+            "C": "Using the word 'team' on a boutique website, and mentioning 'wealth advisors.'",
+        },
+        "B",
+        "Under Standard VII(B) (Reference to CFA Institute, the CFA Designation, and the CFA Program), the 'CFA' designation must NEVER be used as a noun ('a CFA' or 'CFAs')—it must always be used as an adjective ('CFA charterholder') or post-nominal credential ('Rachel Chen, CFA'). Additionally, 'CFA' may never be incorporated into a company name, domain, or logo (such as 'ChenCFA Wealth Advisors').",
+        {
+            "A": "Promoting disciplined governance is standard business language, whereas misusing the trademark/adjective rules violates VII(B).",
+            "C": "Ordinary descriptive terms like 'team' and 'wealth advisors' are completely permissible.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-257", SUBJECT, mod, top, sub_b, los_b,
+        "Two years ago, Lucas Reed passed the CFA Level I exam. Due to demanding work travel, Reed has not registered for the Level II exam for the past two years and is not currently registered for any upcoming CFA exam sitting. On his LinkedIn profile headline and email signature, Reed writes: 'Lucas Reed, CFA Level II Candidate (CFA Level I).' Reed's profile violates Standard VII(B) because:",
+        {
+            "A": "There is no partial 'CFA Level I' designation, and an individual may describe themselves as a CFA candidate only while actively registered for the next exam or awaiting results.",
+            "B": "LinkedIn profiles are banned from mentioning passed CFA exam levels under any wording.",
+            "C": "Only Level III passers may mention the CFA Program on public social networks.",
+        },
+        "A",
+        "Under Standard VII(B) (Reference to CFA Institute, the CFA Designation, and the CFA Program), there is NO partial CFA designation ('CFA Level I' or 'CFA Level II' cannot follow a name). Furthermore, someone is a 'CFA candidate' ONLY if they have an active exam registration (or are awaiting exam results). Since Reed is not currently registered for Level II, calling himself a Level II Candidate and appending '(CFA Level I)' violates Standard VII(B).",
+        {
+            "B": "Past passers who are not registered may still state factually in CV text: 'Passed Level I of the CFA Program in [year].'",
+            "C": "Active Level I, II, and III candidates may accurately state their current candidacy status in factual prose.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-258", SUBJECT, mod, top, sub_b, los_b,
+        "Sterling Global Asset Management's institutional pitchbook includes the following bullet point: 'Why Choose Sterling? Because 100% of our senior portfolio managers hold the Chartered Financial Analyst designation, our portfolios consistently generate superior risk-adjusted alpha and commit fewer judgment errors than non-charterholder competitors.' This marketing claim violates Standard VII(B) because it:",
+        {
+            "A": "Spells out 'Chartered Financial Analyst' instead of abbreviating it as 'CFA.'",
+            "B": "Discloses the percentage of portfolio managers holding the designation.",
+            "C": "Exaggerates the meaning and implications of the CFA designation by claiming superior investment returns or lower error rates.",
+        },
+        "C",
+        "Under Standard VII(B) (Reference to CFA Institute, the CFA Designation, and the CFA Program), members and firms must not misstate or exaggerate the meaning or implications of holding the CFA designation. While a firm may factually state that all senior managers hold the CFA charter and summarize what the program requires, claiming the charter guarantees superior investment performance, alpha, or fewer errors violates Standard VII(B).",
+        {
+            "A": "Spelling out 'Chartered Financial Analyst' is completely valid and encouraged alongside proper usage rules.",
+            "B": "Stating accurately what percentage of staff hold the CFA charter is factual and compliant.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-259", SUBJECT, mod, top, sub_b, los_b,
+        "After earning her CFA charter six years ago, Priya Kapoor transitions from asset management to serve as corporate Treasurer of a manufacturing company. For two consecutive years, Kapoor forgets to pay her annual CFA Institute membership dues and skips submitting her annual Professional Conduct Statement (PCS). She nevertheless continues listing 'Priya Kapoor, CFA' on company investor press releases. Under Standard VII(B), Kapoor has:",
+        {
+            "A": "Complied, because once earned, the right to use the CFA designation never lapses regardless of dues or PCS filing.",
+            "B": "Violated Standard VII(B), because only active regular members current on annual dues and PCS filings are authorized to use the CFA designation.",
+            "C": "Complied, provided she works outside the asset management industry.",
+        },
+        "B",
+        "Under Standard VII(B) (Reference to CFA Institute, the CFA Designation, and the CFA Program) and CFA Institute Bylaws, the right to use the CFA designation is strictly contingent upon maintaining ACTIVE regular membership—including paying annual dues and submitting the annual Professional Conduct Statement (PCS). When membership lapses, the former charterholder must immediately cease displaying 'CFA' until reinstated.",
+        {
+            "A": "While passing the three exams never expires, active authority to display the designation pauses immediately upon lapsed dues or missing PCS.",
+            "C": "The active-membership rule applies regardless of whether the member works in corporate finance, banking, or asset management.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-260", SUBJECT, mod, top, sub_b, los_b,
+        "Which of the following employee biographies in an investment firm's brochure complies fully with Standard VII(B) (Reference to CFA Institute, the CFA Designation, and the CFA Program)?",
+        {
+            "A": "'Devon Brooks has passed Levels I and II of the CFA Program and is currently registered as a Level III candidate. Earning the CFA charter requires passing three comprehensive exams and committing annually to the CFA Institute Code and Standards.'",
+            "B": "'Devon Brooks, CFA Level III Candidate, will earn his CFA designation automatically next summer to enhance client returns.'",
+            "C": "'Devon Brooks is nearly a CFA, holding a Level II CFA credential that proves superior ethical conduct over non-members.'",
+        },
+        "A",
+        "Statement A adheres strictly to every rule under Standard VII(B): it states exam passage factually ('passed Levels I and II'), accurately states active registration ('currently registered as a Level III candidate'), avoids creating a partial designation after his name, and describes the charter's actual requirements (three exams plus annual Code commitment) without exaggerating future returns or moral superiority.",
+        {
+            "B": "Appends a non-existent 'CFA Level III Candidate' title after the name, assumes guaranteed passing, and implies enhanced returns.",
+            "C": "Uses 'CFA' as a noun ('nearly a CFA'), invents a partial 'Level II CFA credential,' and claims superior ethics over non-members.",
+        },
+    )
+
+
+def build_gips_amc(out: list) -> None:
+    mod = "eth-m9-gips"
+    top = "GIPS & Asset Manager Code"
+    sub_g = "Global Investment Performance Standards (GIPS)"
+    los_g = "Explain the objectives, firm-wide compliance, composite construction, and verification rules of GIPS"
+    sub_a = "Asset Manager Code of Professional Conduct"
+    los_a = "Apply the six core principles and key operational requirements of the CFA Institute Asset Manager Code"
+
+    add_l1(
+        out, "L1-ETH-261", SUBJECT, mod, top, sub_g, los_g,
+        "Global Horizon Partners manages both institutional equity strategies and high-yield municipal bond portfolios. Hoping to win an endowment equity mandate quickly, Horizon completes GIPS-compliant composite calculations strictly for its Global Equity division while ignoring GIPS accounting and composite rules in its fixed-income division. Horizon states in its RFP: 'Our Global Equity Composite is 100% GIPS-compliant.' Under GIPS, this claim is:",
+        {
+            "A": "Permissible, provided the Global Equity division holds separate trading desks.",
+            "B": "Permissible if fixed-income assets represent under 25% of total firm AUM.",
+            "C": "Prohibited, because GIPS compliance can be claimed only on a firm-wide basis rather than for an individual composite or single division.",
+        },
+        "C",
+        "Under the Global Investment Performance Standards (GIPS), compliance is strictly an all-or-nothing, FIRM-WIDE commitment across a defined investment management firm holding itself out as a distinct business entity. A firm cannot claim GIPS compliance for a single composite, fund, or asset-class division while excluding the rest of the firm.",
+        {
+            "A": "Unless the equity unit is formally defined and held out to the public as a distinct business entity under GIPS firm-definition rules, partial division claims are prohibited.",
+            "B": "Asset percentage thresholds do not allow excluding a division from firm-wide GIPS compliance.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-262", SUBJECT, mod, top, sub_g, los_g,
+        "When constructing a GIPS-compliant composite for a Large-Cap Core Equity strategy, which combination of portfolios MUST be included by the firm?",
+        {
+            "A": "Only active surviving fee-paying accounts with assets above 1 million USD, plus three years of backtested simulated portfolios.",
+            "B": "All actual, fee-paying, discretionary portfolios managed according to the Large-Cap Core Equity mandate—including terminated portfolios through their final full measurement period.",
+            "C": "All discretionary and non-discretionary client accounts combined, excluding terminated accounts from prior years.",
+        },
+        "B",
+        "Under GIPS composite construction rules, a composite MUST include ALL actual, fee-paying, discretionary portfolios managed to the same investment mandate, objective, or strategy—including terminated portfolios up through their last full measurement period under management (to prevent survivorship bias). Non-discretionary portfolios and simulated/model accounts must NEVER be included.",
+        {
+            "A": "Excluding smaller accounts or terminated accounts biases results, and simulated portfolios cannot be included in GIPS composites.",
+            "C": "Non-discretionary accounts cannot enter GIPS composites, and excluding terminated accounts introduces survivorship bias.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-263", SUBJECT, mod, top, sub_g, los_g,
+        "Crestline Capital has been managing discretionary institutional equity portfolios for nine full calendar years. This year, Crestline decides to adopt and claim compliance with the Global Investment Performance Standards (GIPS) for the first time. At a minimum, how many years of GIPS-compliant performance history must Crestline initially present, and how does the track record evolve thereafter?",
+        {
+            "A": "Initially present at least 5 years of GIPS-compliant performance (or since inception if less than 5 years), then add one year annually until reaching a minimum 10-year compliant track record.",
+            "B": "Initially present all 9 years immediately or wait until 10 full years exist before claiming compliance.",
+            "C": "Initially present at least 3 years of GIPS-compliant performance and stop adding years once 5 years are reached.",
+        },
+        "A",
+        "Under GIPS presentation requirements, a firm initially claiming GIPS compliance must present at least 5 years of GIPS-compliant historical performance (or performance since the firm/composite inception date if less than 5 years old). After initial compliance, the firm must add one year of compliant performance each subsequent year until it reaches a minimum 10-year compliant track record.",
+        {
+            "B": "A 9-year-old firm need only present a minimum of 5 compliant years at initial adoption, building up to 10 years over time.",
+            "C": "The initial minimum is 5 years (not 3), and the ultimate minimum build-up target is 10 years (not 5).",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-264", SUBJECT, mod, top, sub_g, los_g,
+        "Which statement accurately describes third-party verification under the Global Investment Performance Standards (GIPS)?",
+        {
+            "A": "GIPS verification is mandatory for every firm claiming compliance and may be performed internally by the firm's CFO.",
+            "B": "Verification can be purchased exclusively for a single flagship composite without testing firm-wide composite policies.",
+            "C": "Verification is voluntary, must be performed on a firm-wide basis by an independent third party, and does not certify the mathematical accuracy of any specific composite report.",
+        },
+        "C",
+        "Under GIPS, third-party verification is VOLUNTARY (though strongly encouraged), must be performed by an INDEPENDENT third party (never self-verified internally), and applies on a FIRM-WIDE basis. Importantly, verification assesses whether firm-wide policies/procedures comply with GIPS composite construction and calculation rules—it does NOT ensure the accuracy of any single specific composite presentation (unless an optional separate performance examination is also done).",
+        {
+            "A": "Verification is voluntary (not mandatory) and cannot be performed by internal firm staff.",
+            "B": "Verification cannot be restricted to one composite; it must cover firm-wide GIPS policies and processes.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-265", SUBJECT, mod, top, sub_g, los_g,
+        "While preparing year-end GIPS performance reports for its Fixed Income Credit Composite, analyst Samuel Vance discovers that the firm values illiquid corporate private-placement bonds at historical amortized purchase cost rather than fair value, records bond coupon income on a cash-received basis instead of accrual accounting, and uses settlement-date accounting for trades. Which adjustment is required to maintain GIPS compliance?",
+        {
+            "A": "Continue amortized historical cost for private placements while switching only coupon income to cash basis.",
+            "B": "Value all assets at fair value, use trade-date accounting, and apply accrual accounting for fixed-income interest.",
+            "C": "Use settlement-date accounting and market value solely at fiscal year-end.",
+        },
+        "B",
+        "GIPS calculation standards mandate that firms: (1) value all portfolio investments using FAIR VALUE (objective market value or fair-value estimation hierarchy, not amortized historical cost), (2) use TRADE-DATE accounting (mandatory for periods beginning on or after January 1, 2005), and (3) apply ACCRUAL accounting for fixed-income interest income (and accrual/ex-dividend accounting for equity dividends).",
+        {
+            "A": "Amortized historical cost and cash-basis interest accounting violate GIPS fair-value and accrual rules.",
+            "C": "Settlement-date accounting violates GIPS trade-date accounting mandates, and fair value applies at each valuation/external cash-flow point.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-266", SUBJECT, mod, top, sub_g, los_g,
+        "Cascade Private Markets manages a closed-end, 10-year fixed-life private equity buyout fund in which the general partner holds full discretion over the timing and size of investor capital calls and cash distributions. When presenting GIPS-compliant performance to prospective limited partners, Cascade presents net and gross Money-Weighted Returns (since-inception IRR) rather than Time-Weighted Returns. Under GIPS, Cascade's return metric choice is:",
+        {
+            "A": "Permissible, because GIPS allows Money-Weighted Returns when the manager controls external cash-flow timing and the vehicle is closed-end, fixed-life, or illiquid.",
+            "B": "Prohibited, because GIPS mandates Time-Weighted Returns exclusively across every public and private asset class.",
+            "C": "Prohibited, unless Cascade converts the private equity fund into a daily-liquidity mutual fund.",
+        },
+        "A",
+        "While GIPS requires Time-Weighted Returns (TWR) for most open-end public composites (to remove distortion from client-directed cash flows), GIPS expressly PERMITS Money-Weighted Returns (MWR / IRR) when the investment manager controls the timing of external cash flows AND the portfolio has closed-end, fixed-life, fixed-commitment, or predominantly illiquid private-market characteristics.",
+        {
+            "B": "GIPS explicitly accommodates MWR for closed-end private market structures where managers control capital calls and distributions.",
+            "C": "Private equity vehicles remain closed-end and properly use MWR under GIPS without converting to daily liquidity.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-267", SUBJECT, mod, top, sub_a, los_a,
+        "Under the CFA Institute Asset Manager Code of Professional Conduct (AMC), which governance failure at Zenith Global Funds most clearly violates the principle of Risk Management, Compliance, and Support?",
+        {
+            "A": "Charging a tiered asset-based management fee disclosed in plain English in the prospectus.",
+            "B": "Hiring an independent third-party pricing vendor for daily equity marks.",
+            "C": "Allowing the Head of Equities Trading to simultaneously serve as Chief Risk Officer without an independent risk function or a tested Business Continuity Plan.",
+        },
+        "C",
+        "Under the Asset Manager Code's principle of Risk Management, Compliance, and Support, asset managers must maintain an independent risk-management function (separate from trading and investment decision-making), appoint an independent compliance officer, and establish a formal Business Continuity / Disaster Recovery Plan (BCP) that is regularly tested. Having the Head of Trading act as CRO without a tested BCP violates the AMC.",
+        {
+            "A": "Disclosed tiered AUM fee schedules comply with the AMC Disclosures principle.",
+            "B": "Using independent third-party pricing services is explicitly required best practice under AMC Performance and Valuation.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-268", SUBJECT, mod, top, sub_a, los_a,
+        "Vanguardia Credit Partners manages an open-end high-yield corporate credit fund holding 20% thinly traded distressed loans. To avoid recording a quarterly drawdown ahead of annual performance-fee crystallization, the lead portfolio manager overrides broker marks and sets quarter-end fair values internally without independent review. Under the CFA Institute Asset Manager Code (AMC), this practice violates:",
+        {
+            "A": "Trading, because distressed loans must be traded exclusively on listed exchanges.",
+            "B": "Performance and Valuation, which requires valuing portfolios fairly and accurately using independent third-party pricing sources whenever available.",
+            "C": "Client Confidentiality, because third-party pricing reveals portfolio balances.",
+        },
+        "B",
+        "Under the Asset Manager Code's Performance and Valuation principle, managers must ensure client portfolios are valued fairly and accurately using objective market prices or independent third-party pricing sources, avoiding self-interested internal valuation overrides by portfolio managers whose fees depend on NAV.",
+        {
+            "A": "Over-the-counter distressed loans are permissible if valued independently and fairly.",
+            "C": "Obtaining objective pricing quotes from independent vendors does not breach client confidentiality.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-269", SUBJECT, mod, top, sub_a, los_a,
+        "A private wealth boutique claims adherence to the CFA Institute Asset Manager Code of Professional Conduct (AMC). During an operational review, an examiner discovers that the firm holds all client securities inside an unsegregated firm-affiliated ledger rather than an independent qualified custodian, and issues client portfolio holdings and fee reports only once per year. Under the AMC, these practices violate required standards for:",
+        {
+            "A": "Safeguarding client assets via independent custody/segregation and providing client reporting at least quarterly (with fee/conflict disclosures at least annually).",
+            "B": "Limiting equity portfolio turnover below 20% annually.",
+            "C": "Requiring every client to sign weekly trade confirmations.",
+        },
+        "A",
+        "Under the Asset Manager Code (Risk Management, Compliance, and Support & Disclosures), managers must protect client assets by utilizing independent custodians and segregating client accounts where feasible, provide clear client account reporting at least QUARTERLY, and disclose fee structures, soft-dollar policies, proxy policies, and conflicts at least ANNUALLY.",
+        {
+            "B": "The AMC sets no arbitrary 20% turnover ceiling when trades are suitable and achieve best execution.",
+            "C": "Quarterly reporting—not weekly client trade signatures—is the AMC reporting floor.",
+        },
+    )
+
+    add_l1(
+        out, "L1-ETH-270", SUBJECT, mod, top, sub_a, los_a,
+        "Which statement best describes the relationship between the CFA Institute Asset Manager Code of Professional Conduct (AMC) and the CFA Institute Code of Ethics and Standards of Professional Conduct?",
+        {
+            "A": "The AMC replaces the individual Code and Standards once a charterholder becomes a Chief Investment Officer.",
+            "B": "The AMC is a voluntary firm-level ethical framework specifically tailored to investment management organizations, complementing the individual obligations of the Code and Standards.",
+            "C": "Adopting the AMC is mandatory for all firms employing at least one CFA candidate and automatically confers GIPS compliance.",
+        },
+        "B",
+        "Whereas the CFA Institute Code of Ethics and Standards of Professional Conduct govern INDIVIDUAL members and candidates, the Asset Manager Code of Professional Conduct (AMC) establishes voluntary, firm-level ethical and operational standards specifically for INVESTMENT ORGANIZATIONS (asset managers) across six core areas: Loyalty to Clients, Investment Process and Actions, Trading, Risk Management/Compliance/Support, Performance and Valuation, and Disclosures.",
+        {
+            "A": "Individual CFA members and CIOs remain permanently bound by the Code and Standards regardless of whether their firm adopts the AMC.",
+            "C": "AMC adoption is voluntary (not mandatory upon hiring a candidate), and it is distinct from claiming GIPS compliance.",
+        },
+    )
+
+
+def main() -> None:
+    questions = []
+    build_std3_a(questions)
+    build_std3_b(questions)
+    build_std3_c(questions)
+    build_std3_de(questions)
+    build_std4(questions)
+    build_std5_part1(questions)
+    build_std5_part2(questions)
+    build_std6(questions)
+    build_std7(questions)
+    build_gips_amc(questions)
+
+    assert len(questions) == 135, f"Expected 135 questions, got {len(questions)}"
+    save_validated_json(questions, OUTPUT_PATH)
+
+
+if __name__ == "__main__":
+    main()

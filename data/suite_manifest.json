@@ -1,0 +1,80 @@
+{
+  "total_questions": 2210,
+  "l1_total": 1225,
+  "l2_total": 985,
+  "vignettes_total": 183,
+  "subjects": {
+    "Financial Statement Analysis": {
+      "total": 460,
+      "l1": 190,
+      "l2": 270,
+      "vignettes": 48
+    },
+    "Fixed Income": {
+      "total": 205,
+      "l1": 120,
+      "l2": 85,
+      "vignettes": 17
+    },
+    "Equity Investments": {
+      "total": 210,
+      "l1": 115,
+      "l2": 95,
+      "vignettes": 19
+    },
+    "Portfolio Management": {
+      "total": 210,
+      "l1": 120,
+      "l2": 90,
+      "vignettes": 18
+    },
+    "Ethical and Professional Standards": {
+      "total": 450,
+      "l1": 270,
+      "l2": 180,
+      "vignettes": 30
+    },
+    "Quantitative Methods": {
+      "total": 150,
+      "l1": 90,
+      "l2": 60,
+      "vignettes": 10
+    },
+    "Economics": {
+      "total": 130,
+      "l1": 80,
+      "l2": 50,
+      "vignettes": 10
+    },
+    "Corporate Issuers": {
+      "total": 130,
+      "l1": 80,
+      "l2": 50,
+      "vignettes": 10
+    },
+    "Derivatives": {
+      "total": 140,
+      "l1": 85,
+      "l2": 55,
+      "vignettes": 11
+    },
+    "Alternative Investments": {
+      "total": 125,
+      "l1": 75,
+      "l2": 50,
+      "vignettes": 10
+    }
+  },
+  "subject_order": [
+    "Ethical and Professional Standards",
+    "Quantitative Methods",
+    "Economics",
+    "Financial Statement Analysis",
+    "Corporate Issuers",
+    "Equity Investments",
+    "Fixed Income",
+    "Derivatives",
+    "Alternative Investments",
+    "Portfolio Management"
+  ]
+}

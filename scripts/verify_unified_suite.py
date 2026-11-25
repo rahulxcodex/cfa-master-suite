@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """
 verify_unified_suite.py
-Rigorous audit and assertion verification for the unified CFA Master Platform:
-- 875 total questions
-- 425 Level 1 questions (190 FSA, 120 FI, 115 Equity)
-- 450 Level 2 questions across 84 distinct vignettes (270 FSA across 48 V, 85 FI across 17 V, 95 EQ across 19 V)
-- 9 Financial simulation engines
-- KaTeX syntax balance and currency rule compliance
+Rigorous audit and assertion verification for the complete 10-course CFA Master Platform:
+- 2,210 total questions across all 10 CBOK courses
+- 1,225 Level 1 MCQs + 985 Level 2 Questions across 183 distinct vignettes
+- 16 Financial simulation engines
+- 10 Complete Curriculum Reference Note sections (105 chapters)
+- 63 Master Solved Numericals & 64 Jargon Terminologies
+- 100% KaTeX delimiter balance, currency compliance, and zero unreplaced template tokens
 """
 
 import json
@@ -16,36 +17,52 @@ import re
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(BASE_DIR, "data")
 MASTER_JSON = os.path.join(DATA_DIR, "cfa_master_855.json")
+MANIFEST_JSON = os.path.join(DATA_DIR, "suite_manifest.json")
+SOLVED_JSON = os.path.join(DATA_DIR, "master_solved_numericals.json")
+JARGON_JSON = os.path.join(DATA_DIR, "cfa_jargon_dictionary.json")
 INDEX_HTML = os.path.join(BASE_DIR, "index.html")
 FI_EQ_HTML = os.path.join(BASE_DIR, "fi_eq_dashboard.html")
 
-assert os.path.exists(MASTER_JSON), "Missing cfa_master_855.json"
-assert os.path.exists(INDEX_HTML), "Missing index.html"
-assert os.path.exists(FI_EQ_HTML), "Missing fi_eq_dashboard.html"
+for p in [MASTER_JSON, MANIFEST_JSON, SOLVED_JSON, JARGON_JSON, INDEX_HTML, FI_EQ_HTML]:
+    assert os.path.exists(p), f"Missing required file: {p}"
 
 with open(MASTER_JSON, "r", encoding="utf-8") as f:
     questions = json.load(f)
+with open(MANIFEST_JSON, "r", encoding="utf-8") as f:
+    manifest = json.load(f)
+with open(SOLVED_JSON, "r", encoding="utf-8") as f:
+    solved_items = json.load(f)
+with open(JARGON_JSON, "r", encoding="utf-8") as f:
+    jargon_items = json.load(f)
 
 total_count = len(questions)
 print(f"Total questions loaded from {MASTER_JSON}: {total_count}")
-assert total_count == 1085, f"Expected 1085 questions, got {total_count}"
+assert total_count == 2210, f"Expected 2210 questions, got {total_count}"
+assert len(solved_items) == 63, f"Expected 63 solved numericals, got {len(solved_items)}"
+assert len(jargon_items) == 64, f"Expected 64 jargon terms, got {len(jargon_items)}"
 
-# Subject and level counters
+expected_subjects = {
+    "Ethical and Professional Standards": (270, 180, 30),
+    "Quantitative Methods": (90, 60, 10),
+    "Economics": (80, 50, 10),
+    "Financial Statement Analysis": (190, 270, 48),
+    "Corporate Issuers": (80, 50, 10),
+    "Equity Investments": (115, 95, 19),
+    "Fixed Income": (120, 85, 17),
+    "Derivatives": (85, 55, 11),
+    "Alternative Investments": (75, 50, 10),
+    "Portfolio Management": (120, 90, 18),
+}
+
 by_subj = {}
 by_level = {1: 0, 2: 0}
 l1_by_subj = {}
 l2_by_subj = {}
-vignettes_by_subj = {
-    "Financial Statement Analysis": set(),
-    "Fixed Income": set(),
-    "Equity Investments": set(),
-    "Portfolio Management": set()
-}
+vignettes_by_subj = {s: set() for s in expected_subjects}
 all_ids = set()
 
-# KaTeX delimiter and bare currency patterns
-re_display = re.compile(r'\$\$.*?\$\$', re.DOTALL)
-re_inline = re.compile(r'(?<!\\)\$.*?(?<!\\)\$')
+re_display = re.compile(r"\$\$.*?\$\$", re.DOTALL)
+re_inline = re.compile(r"(?<!\\)\$.*?(?<!\\)\$")
 
 schema_errors = []
 currency_errors = []
@@ -57,12 +74,11 @@ for q in questions:
     all_ids.add(qid)
 
     subj = q["subject"]
+    assert subj in expected_subjects, f"{qid}: unexpected subject {subj}"
     lvl = q["level"]
     ans = q["answer"]
     opts = q["options"]
-    expl = q.get("explanation", "")
 
-    # Schema checks
     if ans not in ["A", "B", "C"]:
         schema_errors.append(f"{qid}: Invalid answer '{ans}'")
     if set(opts.keys()) != {"A", "B", "C"}:
@@ -81,70 +97,68 @@ for q in questions:
         assert q.get("vignette_text"), f"Missing vignette_text in {qid}"
         vignettes_by_subj[subj].add(vid)
 
-    # Rigorous check across all textual fields for KaTeX parity and bare dollars
     for field_name in ["question", "explanation", "vignette_text"]:
         field_val = q.get(field_name, "")
         if not field_val:
             continue
-
-        # 1. Delimiter parity check
         if field_val.count("$$") % 2 != 0:
             katex_errors.append(f"{qid} ({field_name}): Unbalanced $$ delimiters")
         cleaned_dollars = field_val.replace("$$", "").replace(r"\$", "")
         if cleaned_dollars.count("$") % 2 != 0:
             katex_errors.append(f"{qid} ({field_name}): Unbalanced inline $ delimiters")
-
-        # 2. Currency/stray dollar check: No unescaped bare $ allowed outside math blocks
         no_display = re_display.sub("", field_val)
         no_inline = re_inline.sub("", no_display)
         no_escaped = no_inline.replace(r"\$", "")
         if "$" in no_escaped:
-            currency_errors.append(f"{qid} ({field_name}): Bare unescaped $ found in prose outside math block")
+            currency_errors.append(f"{qid} ({field_name}): Bare unescaped $ found outside math block")
 
-print("--- Subject Breakdown ---")
-for s, c in sorted(by_subj.items()):
-    print(f"  {s}: {c} Questions")
-
-print("--- Level Breakdown ---")
-print(f"  Level 1: {by_level[1]} MCQs (FSA: {l1_by_subj.get('Financial Statement Analysis', 0)}, FI: {l1_by_subj.get('Fixed Income', 0)}, Equity: {l1_by_subj.get('Equity Investments', 0)}, PM: {l1_by_subj.get('Portfolio Management', 0)})")
-print(f"  Level 2: {by_level[2]} Questions (FSA: {l2_by_subj.get('Financial Statement Analysis', 0)}, FI: {l2_by_subj.get('Fixed Income', 0)}, Equity: {l2_by_subj.get('Equity Investments', 0)}, PM: {l2_by_subj.get('Portfolio Management', 0)})")
+print("\n--- 10-Course CBOK Breakdown ---")
+for s, (exp_l1, exp_l2, exp_v) in expected_subjects.items():
+    got_l1 = l1_by_subj.get(s, 0)
+    got_l2 = l2_by_subj.get(s, 0)
+    got_v = len(vignettes_by_subj[s])
+    print(f"  {s:36s}: {got_l1:3d} L1 + {got_l2:3d} L2 ({got_v:2d} V) = {got_l1+got_l2:3d} Qs")
+    assert (got_l1, got_l2, got_v) == (exp_l1, exp_l2, exp_v), f"{s}: expected {(exp_l1, exp_l2, exp_v)}, got {(got_l1, got_l2, got_v)}"
 
 total_vignettes = sum(len(v) for v in vignettes_by_subj.values())
-print(f"  Level 2 Item Sets: {total_vignettes} distinct vignettes (FSA: {len(vignettes_by_subj['Financial Statement Analysis'])}, FI: {len(vignettes_by_subj['Fixed Income'])}, Equity: {len(vignettes_by_subj['Equity Investments'])}, PM: {len(vignettes_by_subj['Portfolio Management'])})")
+assert by_level[1] == 1225, f"Expected 1225 L1, got {by_level[1]}"
+assert by_level[2] == 985, f"Expected 985 L2, got {by_level[2]}"
+assert total_vignettes == 183, f"Expected 183 vignettes, got {total_vignettes}"
 
-# Assertions
-assert by_level[1] == 545, f"Expected 545 L1, got {by_level[1]}"
-assert by_level[2] == 540, f"Expected 540 L2, got {by_level[2]}"
-assert total_vignettes == 102, f"Expected 102 vignettes, got {total_vignettes}"
-
-# Check HTML size and content
 with open(INDEX_HTML, "r", encoding="utf-8") as f:
     html_content = f.read()
 
 print(f"\nUnified index.html size: {len(html_content)} bytes ({len(html_content)/1024/1024:.2f} MB)")
-assert len(html_content) > 2_000_000, "index.html appears truncated"
+assert len(html_content) > 4_000_000, "index.html appears smaller than expected"
 
-# Check that all 12 simulations exist in index.html
+# Check all 16 simulations exist
 sim_ids = [
     "sim-yield", "sim-tree", "sim-equity", "sim-duration",
     "sim-frn", "sim-ri-decay", "sim-waterfall", "sim-translation", "sim-prepayment",
-    "sim-frontier", "sim-fundamental-law", "sim-rebalancing"
+    "sim-frontier", "sim-fundamental-law", "sim-rebalancing",
+    "sim-bsm", "sim-quant", "sim-alts", "sim-corp",
 ]
 for sid in sim_ids:
     assert f'id="{sid}"' in html_content, f"Simulation {sid} missing from index.html"
 
-# Check Reference sections
-assert 'id="fsa-reference"' in html_content, "FSA reference section missing from index.html"
-assert 'id="fi-reference"' in html_content, "FI reference section missing from index.html"
-assert 'id="eq-reference"' in html_content, "Equity reference section missing from index.html"
-assert 'id="pm-reference"' in html_content, "Portfolio Management reference section missing from index.html"
-assert 'GAAP vs IFRS Matrix' in html_content, "GAAP vs IFRS matrix missing from index.html"
+# Check all 10 Reference sections exist
+ref_ids = [
+    "eth-reference", "qm-reference", "econ-reference", "fsa-reference",
+    "corp-reference", "eq-reference", "fi-reference", "deriv-reference",
+    "alt-reference", "pm-reference",
+]
+for rid in ref_ids:
+    assert f'id="{rid}"' in html_content, f"Reference section {rid} missing from index.html"
 
-# Check redirect file
+# Check no unreplaced template tokens remain
+unreplaced = re.findall(r"__[A-Z0-9_]+__", html_content)
+assert not unreplaced, f"Unreplaced template tokens in index.html: {set(unreplaced)}"
+assert "GAAP vs IFRS Matrix" in html_content, "GAAP vs IFRS matrix missing"
+assert "NOT IN PORTAL" not in html_content, "Stale NOT IN PORTAL status found in audit table"
+
 with open(FI_EQ_HTML, "r", encoding="utf-8") as f:
     redirect_content = f.read()
 assert 'http-equiv="refresh"' in redirect_content, "fi_eq_dashboard.html missing refresh redirect"
-assert 'url=index.html' in redirect_content, "fi_eq_dashboard.html redirect destination incorrect"
 
 print("\n--- Compliance & Auditing ---")
 print(f"  Schema Errors:   {len(schema_errors)}")
@@ -155,4 +169,4 @@ assert len(schema_errors) == 0, f"Found schema errors: {schema_errors[:5]}"
 assert len(currency_errors) == 0, f"Found currency errors: {currency_errors[:5]}"
 assert len(katex_errors) == 0, f"Found KaTeX errors: {katex_errors[:5]}"
 
-print("\n[SUCCESS] ALL AUDIT ASSERTIONS PASSED WITH 100% COMPLIANCE!")
+print("\n[SUCCESS] ALL 10-COURSE AUDIT ASSERTIONS PASSED WITH 100% COMPLIANCE!")

@@ -1,5 +1,185 @@
 [
   {
+    "id": "NUM-1.1.1",
+    "num_code": "1.1.1",
+    "subject": "Ethical and Professional Standards",
+    "difficulty": "Easy / GIPS Modified Dietz",
+    "problem": "Under GIPS performance presentation rules (Standard III(D) & CBOK I/XII), an institutional equity account opens May 1 with 12,000,000 USD, receives a 3,000,000 USD client deposit at the end of May 10 (21 days remaining in the 31-day month), and ends May 31 at 15,800,000 USD. Calculate the Modified Dietz monthly return.",
+    "methodology": "$$R_{\\text{ModDietz}} = \\frac{EMV - BMV - CF}{BMV + \\sum CF_j \\cdot w_j}, \\quad w_j = \\frac{CD - D_j}{CD}$$",
+    "steps": "1. Day-weight of cash flow: $w = (31 - 10) / 31 = 21 / 31 = 0.67742$.\n2. Weighted capital base: $12,000,000 + 3,000,000(0.67742) = 14,032,258\\text{ USD}$.\n3. Net dollar gain: $15,800,000 - 12,000,000 - 3,000,000 = 800,000\\text{ USD}$.\n4. Return: $800,000 / 14,032,258 = 5.70\\%$.",
+    "final_answer": "**+5.70%**. Note: GIPS requires true Time-Weighted Return (daily/sub-period valuation on large external cash flows >= 10% of AUM, which applies here since 3M/12M = 25%)."
+  },
+  {
+    "id": "NUM-1.1.2",
+    "num_code": "1.1.2",
+    "subject": "Ethical and Professional Standards",
+    "difficulty": "Moderate / GIPS Composite Return & Dispersion",
+    "problem": "A GIPS-compliant Small-Cap Composite contains three discretionary fee-paying portfolios for Q2 (no external cash flows): Portfolio A (BMV = 25M USD, return = +11.20%), Portfolio B (BMV = 45M USD, return = +8.40%), Portfolio C (BMV = 30M USD, return = +14.60%). Calculate (1) the asset-weighted composite return and (2) the equal-weighted internal dispersion (standard deviation).",
+    "methodology": "$$R_{\\text{comp}} = \\sum \\left(\\frac{BMV_i}{\\sum BMV}\\right) R_i, \\qquad \\sigma_{\\text{disp}} = \\sqrt{\\frac{1}{n}\\sum_{i=1}^n (R_i - \\bar{R}_{\\text{eq}})^2}$$",
+    "steps": "1. Total BMV $= 25 + 45 + 30 = 100\\text{M USD}$.\n2. Asset-weighted return $= 0.25(11.20\\%) + 0.45(8.40\\%) + 0.30(14.60\\%) = 2.80\\% + 3.78\\% + 4.38\\% = 10.96\\%$.\n3. Equal-weighted mean $= (11.20 + 8.40 + 14.60)/3 = 11.40\\%$.\n4. Equal-weighted population SD $= 2.54\\%$.",
+    "final_answer": "**Composite Return = 10.96%; Equal-Weighted Dispersion = 2.54%**."
+  },
+  {
+    "id": "NUM-1.1.3",
+    "num_code": "1.1.3",
+    "subject": "Ethical and Professional Standards",
+    "difficulty": "Moderate / GIPS Large Cash Flow TWR",
+    "problem": "To eliminate cash-flow distortion under Standard III(D) and GIPS, an equity fund valued at 10,000,000 USD on Jan 1 rises to 13,200,000 USD on July 15 prior to a 2,800,000 USD institutional deposit (21.2% of AUM). By Dec 31, ending value reaches 17,500,000 USD. Calculate the exact Time-Weighted Return (TWR).",
+    "methodology": "$$TWR = (1 + HPR_1)(1 + HPR_2) - 1$$",
+    "steps": "1. Sub-period 1 (Jan 1–Jul 15): $HPR_1 = (13.2\\text{M} - 10.0\\text{M}) / 10.0\\text{M} = +32.00\\%$.\n2. New post-deposit base on Jul 15: $13.2\\text{M} + 2.8\\text{M} = 16.0\\text{M USD}$.\n3. Sub-period 2 (Jul 15–Dec 31): $HPR_2 = (17.5\\text{M} - 16.0\\text{M}) / 16.0\\text{M} = +9.375\\%$.\n4. Chain-linked $TWR = (1.32)(1.09375) - 1 = 44.38\\%$.",
+    "final_answer": "**TWR = +44.38%** (mandated by GIPS when large external cash flows occur)."
+  },
+  {
+    "id": "NUM-1.2.1",
+    "num_code": "1.2.1",
+    "subject": "Ethical and Professional Standards",
+    "difficulty": "Easy / Std III(A) Soft Dollar Compliance",
+    "problem": "An asset manager generates 180,000 USD in soft-dollar brokerage credits from client equity trades to pay for an institutional analytics package. Compliance audits reveal that 65% of the package directly supports investment research while 35% funds firm compliance overhead and office marketing travel. Under Standard III(A) Loyalty, Prudence, and Care, compute the impermissible client commission amount that the firm must reimburse from its own corporate capital.",
+    "methodology": "$$\\text{Reimbursement} = \\text{Total Soft Dollars} \\times (1 - \\%\\text{Direct Research Benefit})$$",
+    "steps": "1. Permissible research allocation: $180,000 \\times 0.65 = 117,000\\text{ USD}$.\n2. Impermissible firm overhead/marketing portion: $180,000 \\times 0.35 = 63,000\\text{ USD}$.",
+    "final_answer": "**63,000 USD must be paid directly by the firm's management company** (client brokerage belongs strictly to clients)."
+  },
+  {
+    "id": "NUM-1.2.2",
+    "num_code": "1.2.2",
+    "subject": "Ethical and Professional Standards",
+    "difficulty": "Moderate / Std III(B) & VI(B) Pro-Rata IPO",
+    "problem": "A portfolio manager enters an oversubscribed hot IPO for 4 suitable client accounts (Client A: 40,000 shares; Client B: 30,000; Client C: 20,000; Client D: 10,000) plus her own personal account (10,000 shares). The syndicate allocates only 25,000 total shares. Determine the compliant Standard III(B) / VI(B) share allocation across all 5 accounts.",
+    "methodology": "$$\\text{Client Allocation}_i = \\text{Available Shares} \\times \\frac{\\text{Order}_i}{\\sum \\text{Suitable Client Orders}}$$",
+    "steps": "1. Under Standard VI(B) Priority of Transactions, the manager's personal account receives **0 shares** until all client orders are filled.\n2. Total client demand $= 40,000 + 30,000 + 20,000 + 10,000 = 100,000$ shares; fill ratio $= 25,000 / 100,000 = 25.0\\%$.\n3. Pro-rata allocations: Client A $= 10,000$, Client B $= 7,500$, Client C $= 5,000$, Client D $= 2,500$ shares.",
+    "final_answer": "**Client A: 10,000; Client B: 7,500; Client C: 5,000; Client D: 2,500; Manager Personal Account: 0 shares**."
+  },
+  {
+    "id": "NUM-1.2.3",
+    "num_code": "1.2.3",
+    "subject": "Ethical and Professional Standards",
+    "difficulty": "Difficult / Std VI(C) & III(D) Fee Presentation",
+    "problem": "A wealth advisor charges a 1.20% annual management fee on a 5,000,000 USD portfolio and pays an ongoing 25% referral fee to an unaffiliated CPA who introduced the client. The portfolio earns +9.40% gross return in Year 1. Compute (1) the exact annual referral dollar payment required in the pre-engagement Standard VI(C) disclosure, and (2) the net-of-fee return that must be shown alongside gross returns under Standard III(D).",
+    "methodology": "$$\\text{Referral Payment} = AUM \\times f_{\\text{mgmt}} \\times \\%\\text{Split}, \\qquad R_{\\text{net}} \\approx R_{\\text{gross}} - f_{\\text{mgmt}}$$",
+    "steps": "1. Gross annual advisory fee $= 5,000,000 \\times 1.20\\% = 60,000\\text{ USD}$.\n2. Referral fee disclosed to prospect BEFORE signing: $60,000 \\times 25\\% = 15,000\\text{ USD/year}$ (paid from advisor fee, not extra charge to client).\n3. Net client return $= 9.40\\% - 1.20\\% = 8.20\\%$ (note: if fee deducted at year-end on ending AUM, $5\\text{M}(1.094)(1-0.012) - 5\\text{M} = +8.09\\%$).",
+    "final_answer": "**Disclosed Referral Fee = 15,000 USD/yr; Net Return = 8.20% (8.09% if fee charged on ending balance)**."
+  },
+  {
+    "id": "NUM-2.1.1",
+    "num_code": "2.1.1",
+    "subject": "Quantitative Methods",
+    "difficulty": "Easy / Foundational (EAR & TVM)",
+    "problem": "A corporate treasury evaluates two short-term investments: Note A offers 9.00% stated annual rate compounded monthly, while Note B offers 8.85% compounded continuously. Calculate the Effective Annual Rate (EAR) for both notes.",
+    "methodology": "$$EAR_{\\text{discrete}} = (1 + r_s/m)^m - 1, \\qquad EAR_{\\text{cont}} = e^{r_s} - 1$$",
+    "steps": "1. Note A: $(1 + 0.09/12)^{12} - 1 = (1.0075)^{12} - 1 = 9.3807\\%$.\n2. Note B: $e^{0.0885} - 1 = 9.2534\\%$.",
+    "final_answer": "**Note A EAR = 9.381%; Note B EAR = 9.253%** (Note A outperforms)."
+  },
+  {
+    "id": "NUM-2.1.2",
+    "num_code": "2.1.2",
+    "subject": "Quantitative Methods",
+    "difficulty": "Easy / Bayes Theorem Updating",
+    "problem": "An economist assigns a 25% prior probability of recession next year. Historically, the 10y-2y yield curve inverts 85% of the time prior to recessions, versus 20% of the time during continuing expansions. Today the yield curve inverts. Update the recession probability using Bayes' theorem.",
+    "methodology": "$$P(R \\mid I) = \\frac{P(I \\mid R)P(R)}{P(I \\mid R)P(R) + P(I \\mid E)P(E)}$$",
+    "steps": "1. Joint probability of recession & inversion: $0.25 \\times 0.85 = 0.2125$.\n2. Unconditional probability of inversion: $0.25(0.85) + 0.75(0.20) = 0.2125 + 0.1500 = 0.3625$.\n3. Posterior probability: $0.2125 / 0.3625 = 58.62\\%$.",
+    "final_answer": "**Posterior Recession Probability = 58.62%**."
+  },
+  {
+    "id": "NUM-2.2.1",
+    "num_code": "2.2.1",
+    "subject": "Quantitative Methods",
+    "difficulty": "Moderate / Hypothesis Testing (t-Stat & CI)",
+    "problem": "Over $n = 49$ quarters, a quantitative equity fund generates a mean quarterly return of 1.50% with sample standard deviation 4.20%. Test whether the true mean return exceeds the 0.40% quarterly risk-free benchmark at $\\alpha = 5\\%$ one-tailed ($t_{\\text{crit}, 48} = 1.677$), and build the 95% two-tailed confidence interval ($t_{0.025} = 2.011$).",
+    "methodology": "$$t = \\frac{\\bar{X} - \\mu_0}{s / \\sqrt{n}}, \\qquad CI = \\bar{X} \\pm t_{\\alpha/2} \\left(\\frac{s}{\\sqrt{n}}\\right)$$",
+    "steps": "1. Standard Error $= 4.20\\% / \\sqrt{49} = 4.20\\% / 7 = 0.60\\%$.\n2. Test statistic $t = (1.50\\% - 0.40\\%) / 0.60\\% = 1.833$. Since $1.833 &gt; 1.677$, reject $H_0$.\n3. 95% CI $= 1.50\\% \\pm 2.011(0.60\\%) = [0.29\\%, 2.71\\%]$.",
+    "final_answer": "**$t = 1.83$ (Reject $H_0$); 95% CI = [0.29%, 2.71%]**."
+  },
+  {
+    "id": "NUM-2.2.2",
+    "num_code": "2.2.2",
+    "subject": "Quantitative Methods",
+    "difficulty": "Moderate / Multiple Regression ANOVA",
+    "problem": "A 4-factor equity return regression over $n = 60$ monthly observations produces $R^2 = 0.72$ and $SST = 500$. Compute (1) Adjusted $\\bar{R}^2$, (2) the $F$-statistic, and (3) Standard Error of Estimate (SEE).",
+    "methodology": "$$\\bar{R}^2 = 1 - \\frac{n-1}{n-k-1}(1 - R^2), \\qquad F = \\frac{SSR/k}{SSE/(n-k-1)}, \\qquad SEE = \\sqrt{MSE}$$",
+    "steps": "1. Adjusted $\\bar{R}^2 = 1 - \\frac{59}{55}(0.28) = 0.6996$.\n2. $SSR = 0.72 \\times 500 = 360$; $SSE = 140$. $MSR = 360/4 = 90.0$; $MSE = 140/55 = 2.5455$.\n3. $F = 90.0 / 2.5455 = 35.36$; $SEE = \\sqrt{2.5455} = 1.595$.",
+    "final_answer": "**Adjusted $\\bar{R}^2 = 0.6996$; $F = 35.36$; $SEE = 1.595$**."
+  },
+  {
+    "id": "NUM-2.3.1",
+    "num_code": "2.3.1",
+    "subject": "Quantitative Methods",
+    "difficulty": "Difficult / L2 AR(1) Chain-Rule Forecasting",
+    "problem": "An analyst models quarterly ROE via a covariance-stationary AR(1) process: $ROE_t = 0.012 + 0.75 ROE_{t-1} + \\epsilon_t$. Current quarter $ROE_0 = 8.00\\%$. Calculate (1) the long-run mean-reverting ROE level and (2) the 2-quarter-ahead forecast $\\widehat{ROE}_2$.",
+    "methodology": "$$\\text{Mean Level} = \\frac{b_0}{1 - b_1}, \\qquad \\widehat{X}_{t+2} = b_0 + b_1 \\widehat{X}_{t+1}$$",
+    "steps": "1. Mean-reverting level $= \\frac{0.012}{1 - 0.75} = 4.80\\%$.\n2. 1-step forecast $\\widehat{ROE}_1 = 0.012 + 0.75(0.080) = 7.20\\%$.\n3. 2-step forecast $\\widehat{ROE}_2 = 0.012 + 0.75(0.0720) = 6.600\\%$.",
+    "final_answer": "**Mean-Reverting ROE = 4.80%; 2-Step Forecast = 6.600%**."
+  },
+  {
+    "id": "NUM-2.3.2",
+    "num_code": "2.3.2",
+    "subject": "Quantitative Methods",
+    "difficulty": "Difficult / L2 GARCH(1,1) Volatility",
+    "problem": "A risk desk estimates a daily GARCH(1,1) model on S&P 500 returns: $\\sigma_t^2 = 0.000015 + 0.12 \\epsilon_{t-1}^2 + 0.82 \\sigma_{t-1}^2$. Yesterday's volatility forecast was $\\sigma_{t-1} = 2.00\\%$ and an unexpected macro surprise triggered a return shock $\\epsilon_{t-1} = -3.00\\%$. Compute today's conditional volatility $\\sigma_t$ and the unconditional long-run daily volatility.",
+    "methodology": "$$\\sigma_t^2 = \\omega + \\alpha\\epsilon_{t-1}^2 + \\beta\\sigma_{t-1}^2, \\qquad V_L = \\frac{\\omega}{1 - \\alpha - \\beta}$$",
+    "steps": "1. $\\sigma_t^2 = 0.000015 + 0.12(0.0009) + 0.82(0.0004) = 0.000015 + 0.000108 + 0.000328 = 0.000451$.\n2. $\\sigma_t = \\sqrt{0.000451} = 2.124\\%$ daily.\n3. Long-run $V_L = \\frac{0.000015}{1 - 0.94} = 0.000250 \\implies \\sqrt{V_L} = 1.581\\%$ daily.",
+    "final_answer": "**Conditional Volatility $\\sigma_t = 2.12%$; Long-Run Volatility = 1.58% daily**."
+  },
+  {
+    "id": "NUM-3.4.1",
+    "num_code": "3.4.1",
+    "subject": "Economics",
+    "difficulty": "Easy / Micro Elasticity & Revenue",
+    "problem": "A streaming platform's linear demand function is $Q_d = 500 - 15P$ (in thousands of subscribers). At $P = 20\\text{ USD}$, calculate point price elasticity of demand and determine whether raising price increases or decreases total revenue.",
+    "methodology": "$$E_p^d = \\left(\\frac{\\Delta Q_d}{\\Delta P}\\right) \\cdot \\frac{P}{Q_d}$$",
+    "steps": "1. At $P = 20$: $Q_d = 500 - 15(20) = 200$ thousand.\n2. Slope $\\Delta Q_d / \\Delta P = -15$.\n3. $E_p^d = -15 \\times (20 / 200) = -1.50$.",
+    "final_answer": "**$E_p^d = -1.50$ (Elastic)** — raising price decreases total revenue."
+  },
+  {
+    "id": "NUM-3.4.2",
+    "num_code": "3.4.2",
+    "subject": "Economics",
+    "difficulty": "Easy / Fiscal Multiplier & Taylor Rule",
+    "problem": "In a closed economy with marginal propensity to consume $c = 0.75$ and marginal tax rate $t = 20\\%$, compute the fiscal spending multiplier. Also compute the Taylor Rule target rate if neutral real rate $= 1.5\\%$, current inflation $= 4.0\\%$ (target $2.0\\%$), and output gap $= +1.0\\%$.",
+    "methodology": "$$\\text{Mult} = \\frac{1}{1 - c(1-t)}, \\qquad i^* = r^* + \\pi + 0.5(\\pi - \\pi^*) + 0.5(y - y^*)$$",
+    "steps": "1. Fiscal Multiplier $= \\frac{1}{1 - 0.75(0.80)} = \\frac{1}{0.40} = 2.50$.\n2. Taylor Rule $i^* = 1.5\\% + 4.0\\% + 0.5(2.0\\%) + 0.5(1.0\\%) = 7.00\\%$.",
+    "final_answer": "**Fiscal Multiplier = 2.50; Taylor Rule Target Rate = 7.00%**."
+  },
+  {
+    "id": "NUM-3.5.1",
+    "num_code": "3.5.1",
+    "subject": "Economics",
+    "difficulty": "Moderate / Dealer FX Bid-Ask Cross Rate",
+    "problem": "A Tokyo currency desk quotes $USD/EUR = 1.1200\\text{--}1.1210$ and $JPY/USD = 145.00\\text{--}145.30$. Compute the no-arbitrage dealer bid and ask cross-rate quotes for $JPY/EUR$.",
+    "methodology": "$$(A/C)_{\\text{bid}} = (A/B)_{\\text{bid}}(B/C)_{\\text{bid}}, \\qquad (A/C)_{\\text{ask}} = (A/B)_{\\text{ask}}(B/C)_{\\text{ask}}$$",
+    "steps": "1. Bid $(JPY/EUR) = 1.1200 \\times 145.00 = 162.40$.\n2. Ask $(JPY/EUR) = 1.1210 \\times 145.30 = 162.881$.",
+    "final_answer": "**$JPY/EUR = 162.40\\text{--}162.88$** (spread = 0.48 JPY)."
+  },
+  {
+    "id": "NUM-3.5.2",
+    "num_code": "3.5.2",
+    "subject": "Economics",
+    "difficulty": "Moderate / L2 Covered Interest Arbitrage",
+    "problem": "Spot $USD/EUR = 1.2000$, 180-day $r_{USD} = 4.80\\%$ (annualized, 30/360), 180-day $r_{EUR} = 3.20\\%$, and a dealer quotes a 180-day forward rate of $USD/EUR = 1.2200$. Starting with 1,000,000 USD borrowing capacity, calculate the riskless covered interest arbitrage profit.",
+    "methodology": "$$F^* = S_0 \\cdot \\frac{1 + r_P(T)}{1 + r_B(T)}$$",
+    "steps": "1. Arbitrage-free $F^* = 1.2000 \\times \\frac{1.024}{1.016} = 1.20945$. Quoted forward (1.2200) overvalues EUR forward.\n2. Borrow 1,000,000 USD at 4.80% (owe $1,024,000\\text{ USD}$ in 180 days).\n3. Convert spot to EUR: $1,000,000 / 1.2000 = 833,333.33\\text{ EUR}$; invest at 3.20% $\\implies 846,666.67\\text{ EUR}$.\n4. Sell EUR forward at 1.2200 $\\implies 1,032,933.33\\text{ USD}$.\n5. Profit $= 1,032,933.33 - 1,024,000 = +8,933.33\\text{ USD}$.",
+    "final_answer": "**+8,933.33 USD Riskless Arbitrage Profit**."
+  },
+  {
+    "id": "NUM-3.6.1",
+    "num_code": "3.6.1",
+    "subject": "Economics",
+    "difficulty": "Difficult / L2 FX Carry Trade Return",
+    "problem": "An investor borrows 100,000,000 JPY at 1.20% ($r_{\\text{funding}}$), converts spot at $JPY/BRL = 30.00$, and invests in 1-year BRL deposits yielding 7.20%. Over the year, BRL depreciates so spot moves to $JPY/BRL = 29.18$. Wait—note $JPY/BRL$ falling from 30.00 to 29.18 means 1 BRL buys FEWER JPY (BRL depreciated by $(29.18/30.00)-1 = -2.733\\%$). Calculate the exact JPY-denominated percentage return on the carry trade.",
+    "methodology": "$$R_{\\text{Carry, Funding Ccy}} = (1 + r_{\\text{target}})\\left(\\frac{S_1}{S_0}\\right) - (1 + r_{\\text{funding}})$$",
+    "steps": "1. Initial BRL bought: $100,000,000 / 30.00 = 3,333,333.33\\text{ BRL}$.\n2. Ending BRL after 7.20% interest: $3,573,333.33\\text{ BRL}$.\n3. Convert back to JPY at $S_1 = 29.18$: $104,269,867\\text{ JPY}$.\n4. Repay JPY loan ($101,200,000\\text{ JPY}$): Net profit $= +3,069,867\\text{ JPY}$ ($+3.07\\%$).",
+    "final_answer": "**+3.07% (+3,069,867 JPY)** — interest differential (+6.00%) outweighed the -2.73% BRL depreciation."
+  },
+  {
+    "id": "NUM-3.6.2",
+    "num_code": "3.6.2",
+    "subject": "Economics",
+    "difficulty": "Difficult / L2 Cobb-Douglas & Solow Steady State",
+    "problem": "An emerging market has Cobb-Douglas capital share $\\alpha = 0.30$, TFP growth $= 1.60\\%$, capital stock growth $= 4.00\\%$, and labor force growth $n = 1.20\\%$. Also compute steady-state capital-per-worker $k^*$ if savings rate $s = 28\\%$, $A = 1.0$, depreciation $\\delta = 5\\%$, and $n = 2\\%$.",
+    "methodology": "$$\\frac{\\Delta Y}{Y} = \\frac{\\Delta A}{A} + \\alpha \\frac{\\Delta K}{K} + (1-\\alpha)\\frac{\\Delta L}{L}, \\qquad k^* = \\left(\\frac{sA}{\\delta+n}\\right)^{\\frac{1}{1-\\alpha}}$$",
+    "steps": "1. Potential GDP growth $= 1.60\\% + 0.30(4.00\\%) + 0.70(1.20\\%) = 1.60\\% + 1.20\\% + 0.84\\% = 3.64\\%$.\n2. Steady-state $k^* = \\left(\\frac{0.28}{0.07}\\right)^{1/0.70} = 4.0^{1.42857} = 7.246$.",
+    "final_answer": "**Potential GDP Growth = 3.64%; Solow Steady-State $k^* = 7.246$**."
+  },
+  {
     "id": "NUM-3.1.1",
     "num_code": "3.1.1",
     "subject": "Financial Statement Analysis",
@@ -88,6 +268,66 @@
     "methodology": "US GAAP Income Statement Periodic Pension Cost:\n`P&L Cost = Service Cost + Interest Cost on PBO - Expected Return on Plan Assets + Amortization of Prior Service Cost + Amortization of Actuarial Loss (if exceeding corridor)`  \n`Interest Cost on PBO = Beginning PBO * Discount Rate`  \n`Expected Return on Assets = Beginning Plan Assets * ERR`",
     "steps": "1. US GAAP Pension Expense Components:\n   - Current Service Cost: `1,400,000 EUR`\n   - Interest Cost on PBO: `25,000,000 EUR * 4.0% = 1,000,000 EUR`\n   - Expected Return on Plan Assets: `22,000,000 EUR * 6.5% = -1,430,000 EUR`\n   - Amortization of Prior Service Cost: `+30,000 EUR`\n   - Corridor check: `10% of max(25M, 22M) = 2.5M EUR`. Unamortized net actuarial losses (`500,000 - 320,000 = 180,000 EUR`) are well within the 2,500,000 EUR corridor, so amortization is `0 EUR`.\n   - `Total US GAAP P&L Pension Cost = 1,400,000 + 1,000,000 - 1,430,000 + 30,000 = 1,000,000 EUR`\n2. Comparative Analysis:\n   - IFRS P&L Expense: `1,820,000 EUR`\n   - US GAAP P&L Expense: `1,000,000 EUR`\n   - **Variance**: US GAAP reports **820,000 EUR lower operating expense** (higher operating profit).\n   - Drivers:\n     a) Under US GAAP, the full 300,000 EUR prior service cost was capitalized into OCI and amortized at only 30,000 EUR (270,000 EUR difference).\n     b) Under US GAAP, an aggressive expected return on assets (6.5% vs. 4.0% discount rate) suppressed expense by `22,000,000 * (6.5% - 4.0%) = 550,000 EUR`.\n     c) Total variance: `270,000 EUR + 550,000 EUR = 820,000 EUR`.",
     "final_answer": "**US GAAP Pension Cost = 1,000,000 EUR (820,000 EUR lower than IFRS)**."
+  },
+  {
+    "id": "NUM-5.4.1",
+    "num_code": "5.4.1",
+    "subject": "Corporate Issuers",
+    "difficulty": "Easy / Cash Conversion Cycle & Trade Credit",
+    "problem": "Apex Manufacturing holds average inventory for 48 days, collects receivables in 39 days, and pays suppliers in 31 days. Suppliers offer credit terms '2/10, net 40'. Calculate (1) the Cash Conversion Cycle and (2) the Effective Annual Rate (EAR) of forgoing the trade discount.",
+    "methodology": "$$CCC = DOH + DSO - DPO, \\qquad EAR = \\left(1 + \\frac{d}{1-d}\\right)^{\\frac{365}{N - D}} - 1$$",
+    "steps": "1. $CCC = 48 + 39 - 31 = 56\\text{ days}$.\n2. $EAR = \\left(1 + \\frac{2}{98}\\right)^{365/30} - 1 = 27.86\\%$.",
+    "final_answer": "**CCC = 56 days; Foregone Trade Credit Cost = 27.86%**."
+  },
+  {
+    "id": "NUM-5.4.2",
+    "num_code": "5.4.2",
+    "subject": "Corporate Issuers",
+    "difficulty": "Easy / Capital Budgeting NPV & IRR",
+    "problem": "A project costs 400,000 USD upfront and yields end-of-year cash inflows of 140,000 USD, 180,000 USD, and 210,000 USD over 3 years at a 9.0% WACC. Compute NPV and IRR.",
+    "methodology": "$$NPV = \\sum_{t=0}^3 \\frac{CF_t}{(1+r)^t}$$",
+    "steps": "1. $PV = \\frac{140k}{1.09} + \\frac{180k}{1.09^2} + \\frac{210k}{1.09^3} = 128,440 + 151,502 + 162,159 = 442,101\\text{ USD}$.\n2. $NPV = 442,101 - 400,000 = +42,101.30\\text{ USD}$.\n3. Solving $NPV = 0 \\implies IRR = 14.42\\%$.",
+    "final_answer": "**NPV = +42,101.30 USD; IRR = 14.42%**."
+  },
+  {
+    "id": "NUM-5.5.1",
+    "num_code": "5.5.1",
+    "subject": "Corporate Issuers",
+    "difficulty": "Moderate / L2 Pure-Play Hamada Beta & WACC",
+    "problem": "A pure-play semiconductor peer has equity $\\beta_L = 1.40$, $D/E = 0.50$, and tax rate 25%. Target project will operate at $D/E = 1.00$ (50% debt / 50% equity), tax rate 20%, pre-tax debt cost 6.20%, $R_f = 3.80\\%$, and $ERP = 5.50\\%$. Calculate project beta, cost of equity, and WACC.",
+    "methodology": "$$\\beta_U = \\frac{\\beta_L}{1 + (1-t)D/E}, \\qquad \\beta_P = \\beta_U[1 + (1-t_P)(D/E)_P]$$",
+    "steps": "1. $\\beta_U = 1.40 / [1 + 0.75(0.50)] = 1.0182$.\n2. $\\beta_P = 1.0182[1 + 0.80(1.00)] = 1.8327$.\n3. $r_e = 3.80\\% + 1.8327(5.50\\%) = 13.88\\%$.\n4. $WACC = 0.50(6.20\\%)(0.80) + 0.50(13.88\\%) = 9.42\\%$.",
+    "final_answer": "**Project Beta = 1.833; $r_e = 13.88\\%$; WACC = 9.42%**."
+  },
+  {
+    "id": "NUM-5.5.2",
+    "num_code": "5.5.2",
+    "subject": "Corporate Issuers",
+    "difficulty": "Moderate / Debt-Funded Buyback Accretion",
+    "problem": "Titan Corp earns 36.0M USD over 12.0M shares ($EPS = 3.00\\text{ USD}$, stock price $P = 40.00\\text{ USD}$). Titan issues 40.0M USD of 6.00% debt ($t = 25\\%$) to buy back 1.0M shares. Compute post-buyback EPS.",
+    "methodology": "$$EPS_{\\text{post}} = \\frac{NI - \\text{Debt} \\cdot r_d(1-t)}{\\text{Shares}_0 - (\\text{Debt}/P)}$$",
+    "steps": "1. After-tax interest $= 40.0\\text{M} \\times 6.0\\% \\times 0.75 = 1.80\\text{M USD}$.\n2. Post-buyback $NI = 36.0 - 1.8 = 34.2\\text{M USD}$ across $11.0\\text{M}$ shares.\n3. $EPS_{\\text{post}} = 34.2 / 11.0 = 3.11\\text{ USD}$ (accretive because $E/P = 7.50\\% &gt; r_d(1-t) = 4.50\\%$).",
+    "final_answer": "**Post-Buyback EPS = 3.11 USD (+0.11 USD Accretive)**."
+  },
+  {
+    "id": "NUM-5.6.1",
+    "num_code": "5.6.1",
+    "subject": "Corporate Issuers",
+    "difficulty": "Difficult / L2 MM Proposition I & II w/ Distress",
+    "problem": "Unlevered firm generates perpetual EBIT of 3,000,000 USD ($t = 25\\%$, $r_0 = 11.0\\%$). Management adds 8,000,000 USD debt at 6.0%, generating estimated present value of financial distress costs of 450,000 USD. Calculate (1) $V_U$, (2) Static Trade-Off $V_L$, and (3) MM levered cost of equity $r_e$ (assuming $V_L$ equity value = $V_L - D$).",
+    "methodology": "$$V_L = V_U + t D - PV(\\text{Distress}), \\qquad r_e = r_0 + (r_0 - r_d)(1-t)\\frac{D}{E}$$",
+    "steps": "1. $V_U = \\frac{3,000,000 \\times 0.75}{0.11} = 20,454,545.45\\text{ USD}$.\n2. $V_L = 20,454,545.45 + 0.25(8,000,000) - 450,000 = 22,004,545.45\\text{ USD}$.\n3. Equity $E = V_L - D = 14,004,545.45\\text{ USD}$.\n4. $r_e = 11\\% + (11\\% - 6\\%)(0.75)(8,000,000 / 14,004,545.45) = 13.14\\%$.",
+    "final_answer": "**$V_U = 20,454,545\\text{ USD}$; $V_L = 22,004,545\\text{ USD}$; $r_e = 13.14\\%$**."
+  },
+  {
+    "id": "NUM-5.6.2",
+    "num_code": "5.6.2",
+    "subject": "Corporate Issuers",
+    "difficulty": "Difficult / L2 M&A Exchange Ratio & Breakeven Synergy",
+    "problem": "Acquirer (80M shares, $P = 72\\text{ USD}$, $EPS = 4.50\\text{ USD}$) bids 54.00 USD/share in stock for Target (20M shares, $EPS = 2.40\\text{ USD}$). Corporate tax rate is 25%. Calculate (1) the exchange ratio and new shares issued, (2) post-merger EPS before synergies, and (3) minimum pre-tax annual synergies required to make the merger non-dilutive to Acquirer EPS.",
+    "methodology": "$$ER = \\frac{P_{\\text{offer}}}{P_A}, \\qquad \\text{Breakeven } S_{\\text{pre-tax}} = \\frac{EPS_A(N_A + N_{\\text{new}}) - (NI_A + NI_T)}{1 - t}$$",
+    "steps": "1. Exchange ratio $= 54 / 72 = 0.75$; New shares $= 20\\text{M} \\times 0.75 = 15\\text{M}$ (Total $= 95\\text{M}$).\n2. Combined $NI = 80(4.50) + 20(2.40) = 360 + 48 = 408\\text{M USD}$. Pre-synergy $EPS = 408 / 95 = 4.29\\text{ USD}$ (dilutive by 0.21 USD).\n3. Required after-tax synergy $= (4.50 \\times 95) - 408 = 427.5 - 408 = 19.50\\text{M USD}$.\n4. Minimum pre-tax synergy $= 19.50 / 0.75 = 26.00\\text{M USD}$.",
+    "final_answer": "**ER = 0.75 (15M new shares); Pre-Synergy EPS = 4.29 USD; Breakeven Pre-Tax Synergy = 26.00M USD**."
   },
   {
     "id": "NUM-4.1.1",
@@ -210,6 +450,126 @@
     "final_answer": "**FCFF = 425,000 USD; FCFE = 435,000 USD**."
   },
   {
+    "id": "NUM-7.1.1",
+    "num_code": "7.1.1",
+    "subject": "Derivatives",
+    "difficulty": "Easy / Forward Pricing w/ Discrete Dividend",
+    "problem": "A stock trades at $S_0 = 150.00\\text{ USD}$ and pays a 3.00 USD dividend in 3 months (0.25 yr). Risk-free rate is 5.00% annual compounding. Calculate the no-arbitrage 9-month (0.75 yr) forward price.",
+    "methodology": "$$F_0(T) = [S_0 - PV_0(D)] (1 + r)^T$$",
+    "steps": "1. $PV_0(D) = 3.00 / 1.05^{0.25} = 2.9636\\text{ USD}$.\n2. $F_0 = (150.00 - 2.9636) \\times 1.05^{0.75} = 152.52\\text{ USD}$.",
+    "final_answer": "**Forward Price = 152.52 USD**."
+  },
+  {
+    "id": "NUM-7.1.2",
+    "num_code": "7.1.2",
+    "subject": "Derivatives",
+    "difficulty": "Easy / Put-Call Parity Arbitrage",
+    "problem": "A European call ($X = 80\\text{ USD}$, $T = 0.5$ yr) trades at 6.40 USD while $S_0 = 82.00\\text{ USD}$ and $r_f = 4.00\\%$. If the market European put ($X=80, T=0.5$) trades at 3.50 USD, compute the fair put price and the immediate arbitrage profit per share.",
+    "methodology": "$$p_0 = c_0 + \\frac{X}{(1+r)^T} - S_0$$",
+    "steps": "1. Fair $p_0 = 6.40 + \\frac{80.00}{1.04^{0.5}} - 82.00 = 6.40 + 78.446 - 82.00 = 2.85\\text{ USD}$.\n2. Market put (3.50 USD) is overpriced by $3.50 - 2.85 = 0.65\\text{ USD}$.\n3. Sell market put (+3.50) and buy synthetic put ($+c_0 - S_0 + PV(X)$ at -2.85).",
+    "final_answer": "**Fair Put = 2.85 USD; Riskless Arbitrage Profit = +0.65 USD/share**."
+  },
+  {
+    "id": "NUM-7.2.1",
+    "num_code": "7.2.1",
+    "subject": "Derivatives",
+    "difficulty": "Moderate / L2 Interest Rate Swap Valuation",
+    "problem": "A pension fund holds a 25,000,000 USD notional receive-fixed 4.80% (semiannual: 2.40%/period) plain-vanilla swap with exactly 1 year (two 6-month settlements) remaining. Current 6-month and 12-month discount factors are $DF_1 = 0.9804$ and $DF_2 = 0.9600$. Calculate the current mark-to-market value of the swap to the receive-fixed party.",
+    "methodology": "$$r_{\\text{new, semi}} = \\frac{1 - DF_n}{\\sum DF_i}, \\qquad V_{\\text{rec-fix}} = NP \\cdot (r_{\\text{old, semi}} - r_{\\text{new, semi}}) \\sum DF_i$$",
+    "steps": "1. Sum of discount factors $= 0.9804 + 0.9600 = 1.9404$.\n2. New par semiannual fixed rate $= (1 - 0.9600) / 1.9404 = 2.0614\\%$ (annualized $4.123\\%$, below old 4.80%!).\n3. Value of receive-fixed swap $= 25,000,000 \\times (0.0240 - 0.020614) \\times 1.9404 = +164,240.00\\text{ USD}$.",
+    "final_answer": "**Receive-Fixed Swap Value = +164,240.00 USD**."
+  },
+  {
+    "id": "NUM-7.2.2",
+    "num_code": "7.2.2",
+    "subject": "Derivatives",
+    "difficulty": "Moderate / L2 2-Period American Put Binomial Tree",
+    "problem": "A 2-period American put ($S_0 = 50\\text{ USD}$, $X = 52\\text{ USD}$) has $u = 1.20$, $d = 0.80$, and per-period risk-free rate $r = 5.0\\%$. Calculate both the American put value and the European put value (isolating the early exercise premium).",
+    "methodology": "$$\\pi_u = \\frac{(1+r)-d}{u-d}, \\qquad P_{\\text{node}} = \\max\\!\\left(X - S_t, \\; \\frac{\\pi_u P_u + (1-\\pi_u)P_d}{1+r}\\right)$$",
+    "steps": "1. Risk-neutral $\\pi_u = (1.05 - 0.80)/(1.20 - 0.80) = 0.6250$ ($1-\\pi_u = 0.3750$).\n2. Year 2 stock nodes: $S_{uu}=72, S_{ud}=48, S_{dd}=32$ $\\implies$ Put payoffs: $P_{uu}=0, P_{ud}=4.00, P_{dd}=20.00$.\n3. Year 1 Upper ($S_u = 60$): Cont $= (0.625(0) + 0.375(4))/1.05 = 1.4286$; Intr $= 0$. Node $= 1.4286$.\n4. Year 1 Lower ($S_d = 40$): Cont $= (0.625(4) + 0.375(20))/1.05 = 9.5238$; Intr $= 52 - 40 = 12.00$. **Exercise early!** Node $= 12.00$.\n5. Year 0 American Put $= [0.625(1.4286) + 0.375(12.00)] / 1.05 = 5.14\\text{ USD}$ (vs. European Put $= 4.25\\text{ USD}$).",
+    "final_answer": "**American Put = 5.14 USD; European Put = 4.25 USD (Early Exercise Premium = +0.88 USD)**."
+  },
+  {
+    "id": "NUM-7.3.1",
+    "num_code": "7.3.1",
+    "subject": "Derivatives",
+    "difficulty": "Difficult / L2 Black-Scholes-Merton & Delta-Gamma Hedge",
+    "problem": "Stock $S_0 = 60.00\\text{ USD}$ (no dividends), $K = 58.00\\text{ USD}$, $r = 4.0\\%$, $T = 0.25\\text{ yr}$, $\\sigma = 30.0\\%$. Using Black-Scholes-Merton, compute (1) $d_1, d_2, N(d_1), N(d_2)$, (2) European Call & Put premiums, and (3) shares needed to delta-hedge a short position of 500 call contracts (100 shares/contract = 50,000 options).",
+    "methodology": "$$c = S_0 N(d_1) - K e^{-rT} N(d_2), \\qquad d_1 = \\frac{\\ln(S_0/K) + (r + 0.5\\sigma^2)T}{\\sigma\\sqrt{T}}, \\qquad d_2 = d_1 - \\sigma\\sqrt{T}$$",
+    "steps": "1. $d_1 = 0.3677 \\implies N(d_1) = 0.6434$; $d_2 = 0.2177 \\implies N(d_2) = 0.5862$.\n2. Call $c = 4.95\\text{ USD}$; Put $p = 2.37\\text{ USD}$.\n3. Short 50,000 calls has $\\Delta = -50,000 \\times 0.6434 = -32,172$ shares $\\implies$ **Buy 32,172 shares**.",
+    "final_answer": "**Call = 4.95 USD; Put = 2.37 USD; Buy 32,172 shares to delta-hedge**."
+  },
+  {
+    "id": "NUM-7.3.2",
+    "num_code": "7.3.2",
+    "subject": "Derivatives",
+    "difficulty": "Difficult / L2 Fixed-for-Fixed Currency Swap MTM",
+    "problem": "A US corporate entered a fixed-for-fixed currency swap receiving 4.0% EUR annually on 10.0M EUR and paying 5.0% USD annually on 11.0M USD. Exactly 1 year remains before final principal & coupon exchange. Current 1-year discount rates are $r_{EUR} = 3.50\\%$ and $r_{USD} = 4.50\\%$, and spot FX is $USD/EUR = 1.1500$. Compute the USD mark-to-market value of the swap.",
+    "methodology": "$$V_{\\text{USD}} = S_{USD/EUR} \\cdot PV(\\text{EUR Leg}) - PV(\\text{USD Leg})$$",
+    "steps": "1. PV of Receive EUR Leg $= 10.40\\text{M} / 1.035 = 10.0483\\text{M EUR}$.\n2. Converted to USD at spot $1.15$: $10.0483\\text{M} \\times 1.15 = 11.5556\\text{M USD}$.\n3. PV of Pay USD Leg $= 11.55\\text{M} / 1.045 = 11.0526\\text{M USD}$.\n4. Net USD Swap Value $= 11.5556 - 11.0526 = +0.5029\\text{M USD}$ (+502,924 USD).",
+    "final_answer": "**+502,924 USD**."
+  },
+  {
+    "id": "NUM-8.1.1",
+    "num_code": "8.1.1",
+    "subject": "Alternative Investments",
+    "difficulty": "Easy / Hedge Fund Fee Waterfall (Hard Hurdle)",
+    "problem": "A hedge fund opens with 200M USD NAV, charges 2% management fee on ending AUM and 20% incentive fee calculated net of management fees above a 5.0% hard hurdle (10M USD). Gross return is +20.0%. Calculate the investor's net percentage return.",
+    "methodology": "$$\\text{Inc Fee} = \\max(0, [NAV_{\\text{after mgmt}} - NAV_0 - \\text{Hurdle}] \\times 0.20)$$",
+    "steps": "1. Gross Ending NAV $= 200 \\times 1.20 = 240.00\\text{M USD}$.\n2. Management fee $= 240 \\times 2\\% = 4.80\\text{M} \\implies NAV_{\\text{after mgmt}} = 235.20\\text{M}$.\n3. Excess above HWM + 5% hard hurdle $= 235.20 - 200.00 - 10.00 = 25.20\\text{M}$.\n4. Incentive fee $= 20\\% \\times 25.20 = 5.04\\text{M USD}$.\n5. Net Ending NAV $= 235.20 - 5.04 = 230.16\\text{M USD} \\implies \\text{Net Return} = +15.08\\%$.",
+    "final_answer": "**+15.08% Net Investor Return** (Total GP fees = 9.84M USD)."
+  },
+  {
+    "id": "NUM-8.1.2",
+    "num_code": "8.1.2",
+    "subject": "Alternative Investments",
+    "difficulty": "Easy / PE Fund DPI, RVPI & TVPI",
+    "problem": "A buyout fund with 100M USD committed capital has called 75M USD paid-in capital, distributed 54M USD cash to LPs, and holds 48M USD in residual unrealized NAV. Calculate DPI, RVPI, and TVPI.",
+    "methodology": "$$DPI = \\frac{\\text{Distributions}}{\\text{Paid-In}}, \\quad RVPI = \\frac{\\text{NAV}}{\\text{Paid-In}}, \\quad TVPI = DPI + RVPI$$",
+    "steps": "1. $DPI = 54 / 75 = 0.72\\times$.\n2. $RVPI = 48 / 75 = 0.64\\times$.\n3. $TVPI = 0.72 + 0.64 = 1.36\\times$ (paid-in capital is always the denominator, NOT committed capital!).",
+    "final_answer": "**DPI = 0.72x; RVPI = 0.64x; TVPI = 1.36x**."
+  },
+  {
+    "id": "NUM-8.2.1",
+    "num_code": "8.2.1",
+    "subject": "Alternative Investments",
+    "difficulty": "Moderate / L2 Venture Capital Method w/ Dilution",
+    "problem": "A Series A VC invests 10.0M USD today into FinTechCo, targeting a 35% IRR over a 4-year exit projected at 150.0M USD. Management plans a Series B financing in Year 2 that will dilute Series A investors by 20%. Calculate (1) post-money valuation, (2) required final exit ownership, and (3) required initial Series A ownership percentage today.",
+    "methodology": "$$\\text{Post} = \\frac{TV}{(1+r)^T}, \\qquad f_{\\text{initial}} = \\frac{f_{\\text{final}}}{1 - \\text{Dilution}}$$",
+    "steps": "1. Post-money valuation $= 150 / 1.35^4 = 45.16\\text{M USD}$.\n2. Required ownership at Year 4 exit $= 10 / 45.16 = 22.14\\%$.\n3. Adjusting for 20% Series B dilution: Required initial share $= 22.14\\% / 0.80 = 27.68\\%$.",
+    "final_answer": "**Post-Money = 45.16M USD; Exit Share = 22.14%; Initial Share Today = 27.68%**."
+  },
+  {
+    "id": "NUM-8.2.2",
+    "num_code": "8.2.2",
+    "subject": "Alternative Investments",
+    "difficulty": "Moderate / L2 Real Estate Cap Rate, LTV & DSCR",
+    "problem": "A logistics warehouse generates $NOI_1 = 960,000\\text{ USD}$ at an 8.00% going-in market cap rate. A commercial lender enforces a max LTV of 65% and a minimum DSCR of 1.30x at a 7.3846% mortgage debt constant (annual debt service $= 7.3846\\% \\times \\text{Loan}$). Determine the maximum permissible mortgage loan.",
+    "methodology": "$$V_0 = \\frac{NOI_1}{R_{\\text{cap}}}, \\qquad \\text{Loan}_{\\text{DSCR}} = \\frac{NOI_1 / DSCR_{\\text{min}}}{\\text{Debt Constant}}$$",
+    "steps": "1. Appraised Value $V_0 = 960,000 / 0.08 = 12,000,000\\text{ USD}$.\n2. LTV cap $= 0.65 \\times 12,000,000 = 7,800,000\\text{ USD}$.\n3. Max Debt Service $= 960,000 / 1.30 = 738,461.54\\text{ USD}$.\n4. DSCR max loan $= 738,461.54 / 0.07384615 = 10,000,000\\text{ USD}$.\n5. Take the *lower* binding constraint: **7,800,000 USD**.",
+    "final_answer": "**Maximum Loan = 7,800,000 USD (LTV Constraint Binds)**."
+  },
+  {
+    "id": "NUM-8.3.1",
+    "num_code": "8.3.1",
+    "subject": "Alternative Investments",
+    "difficulty": "Difficult / L2 REIT NAVPS & AFFO Valuation",
+    "problem": "Industrial REIT reports cash NOI of 65.0M USD (market cap rate 6.50%), non-RE cash of 20.0M USD, total debt of 420.0M USD, and 25.0M diluted shares. GAAP Net Income is 32.0M USD, RE Depreciation is 22.0M USD, Property Sales Gains are 4.0M USD, Straight-Line Rent adjustment is +2.5M USD, and recurring maintenance capex is 7.5M USD. Compute (1) NAVPS and (2) AFFO per share.",
+    "methodology": "$$NAVPS = \\frac{(NOI / R_{\\text{cap}}) + \\text{Cash} - \\text{Debt}}{\\text{Shares}}, \\qquad AFFO = (NI + \\text{Dep} - \\text{Gains}) - \\text{SL Rent} - \\text{Maint Capex}$$",
+    "steps": "1. Gross Real Estate $= 65.0 / 0.065 = 1,000.0\\text{M USD}$.\n2. $NAV = 1,000 + 20 - 420 = 600.0\\text{M} \\implies NAVPS = 600.0 / 25.0 = 24.00\\text{ USD}$.\n3. $FFO = 32.0 + 22.0 - 4.0 = 50.0\\text{M USD}$.\n4. $AFFO = 50.0 - 2.5 - 7.5 = 40.0\\text{M USD} \\implies \\text{AFFO/share} = 40.0 / 25.0 = 1.60\\text{ USD}$.",
+    "final_answer": "**NAVPS = 24.00 USD; AFFO/share = 1.60 USD**."
+  },
+  {
+    "id": "NUM-8.3.2",
+    "num_code": "8.3.2",
+    "subject": "Alternative Investments",
+    "difficulty": "Difficult / L2 Whole-of-Fund PE Catch-Up Waterfall",
+    "problem": "A private equity fund receives 100M USD LP paid-in capital and exits everything after 1 year for 140M USD (40M total gain). Terms specify a whole-of-fund waterfall: (1) 100% return of capital, (2) 8.0% preferred hurdle (8.0M USD) to LPs, (3) 100% GP Catch-Up until GP holds 20% of cumulative profits distributed, and (4) 80/20 LP/GP split thereafter. Compute exact LP and GP dollar payouts.",
+    "methodology": "$$\\text{Catch-Up Target: } GP = 0.20 \\times (\\text{Hurdle} + \\text{Catch-Up}) \\implies \\text{Catch-Up} = \\frac{0.20}{0.80} \\times \\text{Hurdle}$$",
+    "steps": "1. Tier 1 (Return of Capital): 100.0M USD to LPs (40.0M gain remaining).\n2. Tier 2 (8% Preferred Hurdle): 8.0M USD to LPs (32.0M remaining).\n3. Tier 3 (100% GP Catch-Up): To make GP share 20% of profits so far: $GP = 0.25 \\times 8.0\\text{M} = 2.0\\text{M USD}$ to GP ($2 / (8+2) = 20\\%$! Remaining gain $= 30.0\\text{M}$).\n4. Tier 4 (80/20 Split of remaining 30.0M): LP gets $0.80 \\times 30 = 24.0\\text{M}$; GP gets $0.20 \\times 30 = 6.0\\text{M}$.\n5. Total GP Carry $= 2.0 + 6.0 = 8.0\\text{M USD}$ (20% of 40M!); Total LP payout $= 100 + 8 + 24 = 132.0\\text{M USD}$.",
+    "final_answer": "**LP Payout = 132.0M USD (+32.0M gain); GP Carried Interest = 8.0M USD**"
+  },
+  {
     "id": "NUM-6.1.1",
     "num_code": "6.1.1",
     "subject": "Portfolio Management",
@@ -264,7 +624,7 @@
     "num_code": "6.4.1",
     "subject": "Portfolio Management",
     "difficulty": "Difficult / Sector Allocation vs. Stock Selection",
-    "problem": "An active equity portfolio and its benchmark have returns and weights across three sectors over a quarterly evaluation period:\n\n| Sector | Portfolio Weight (`w_i`) | Benchmark Weight (`W_i`) | Portfolio Return (`R_i`) | Benchmark Return (`B_i`) |\n| :--- | :---: | :---: | :---: | :---: |\n| Technology | 45.0% | 30.0% | 14.0% | 12.0% |\n| Financials | 25.0% | 35.0% | 6.0% | 5.0% |\n| Healthcare | 30.0% | 35.0% | -2.0% | 1.0% |\n| **Total / Benchmark** | **100.0%** | **100.0%** | \u2014 | \u2014 |\n\nCalculate:\n1. The total return of the benchmark (`R_B`) and the portfolio (`R_P`).\n2. The Active Return (`R_P - R_B`).\n3. Decompose the Active Return using the **Brinson-Fachler model** into:\n   - Sector Allocation Effect\n   - Within-Sector Selection Effect\n   - Interaction Effect.",
+    "problem": "An active equity portfolio and its benchmark have returns and weights across three sectors over a quarterly evaluation period:\n\n| Sector | Portfolio Weight (`w_i`) | Benchmark Weight (`W_i`) | Portfolio Return (`R_i`) | Benchmark Return (`B_i`) |\n| :--- | :---: | :---: | :---: | :---: |\n| Technology | 45.0% | 30.0% | 14.0% | 12.0% |\n| Financials | 25.0% | 35.0% | 6.0% | 5.0% |\n| Healthcare | 30.0% | 35.0% | -2.0% | 1.0% |\n| **Total / Benchmark** | **100.0%** | **100.0%** | — | — |\n\nCalculate:\n1. The total return of the benchmark (`R_B`) and the portfolio (`R_P`).\n2. The Active Return (`R_P - R_B`).\n3. Decompose the Active Return using the **Brinson-Fachler model** into:\n   - Sector Allocation Effect\n   - Within-Sector Selection Effect\n   - Interaction Effect.",
     "methodology": "`Benchmark Return R_B = sum(W_i * B_i)`  \n`Portfolio Return R_P = sum(w_i * R_i)`  \nBrinson-Fachler Attribution Formulas:\n`Allocation Effect (A_i) = (w_i - W_i) * (B_i - R_B)`  \n`Selection Effect (S_i) = W_i * (R_i - B_i)`  \n`Interaction Effect (I_i) = (w_i - W_i) * (R_i - B_i)`  \n`Active Return = sum(A_i) + sum(S_i) + sum(I_i)`",
     "steps": "1. Portfolio and Benchmark Total Returns:\n   - Benchmark: `(0.30 * 12%) + (0.35 * 5%) + (0.35 * 1%) = 3.60% + 1.75% + 0.35% = 5.70% (0.057)`\n   - Portfolio: `(0.45 * 14%) + (0.25 * 6%) + (0.30 * -2%) = 6.30% + 1.50% - 0.60% = 7.20% (0.072)`\n   - `Active Return = 7.20% - 5.70% = +1.50% (+0.0150 or +150 bps)`\n2. Allocation Effect (Brinson-Fachler: Evaluates over/underweighting relative to overall benchmark return `R_B = 5.70%`):\n   - Tech: `(0.45 - 0.30) * (12.0% - 5.70%) = +0.15 * (+6.30%) = +0.9450% (+94.5 bps)`\n   - Financials: `(0.25 - 0.35) * (5.0% - 5.70%) = -0.10 * (-0.70%) = +0.0700% (+7.0 bps)`\n   - Healthcare: `(0.30 - 0.35) * (1.0% - 5.70%) = -0.05 * (-4.70%) = +0.2350% (+23.5 bps)`\n   - `Total Allocation Effect = +0.9450% + 0.0700% + 0.2350% = +1.2500% (+125 bps)`\n3. Selection Effect:\n   - Tech: `0.30 * (14.0% - 12.0%) = 0.30 * (+2.0%) = +0.6000% (+60.0 bps)`\n   - Financials: `0.35 * (6.0% - 5.0%) = 0.35 * (+1.0%) = +0.3500% (+35.0 bps)`\n   - Healthcare: `0.35 * (-2.0% - 1.0%) = 0.35 * (-3.0%) = -1.0500% (-105.0 bps)`\n   - `Total Selection Effect = +0.6000% + 0.3500% - 1.0500% = -0.1000% (-10 bps)`\n4. Interaction Effect:\n   - Tech: `(0.45 - 0.30) * (14.0% - 12.0%) = +0.15 * (+2.0%) = +0.3000% (+30.0 bps)`\n   - Financials: `(0.25 - 0.35) * (6.0% - 5.0%) = -0.10 * (+1.0%) = -0.1000% (-10.0 bps)`\n   - Healthcare: `(0.30 - 0.35) * (-2.0% - 1.0%) = -0.05 * (-3.0%) = +0.1500% (+15.0 bps)`\n   - `Total Interaction Effect = +0.3000% - 0.1000% + 0.1500% = +0.3500% (+35 bps)`\n5. Verification:\n   - `Sum = +1.25% (Allocation) - 0.10% (Selection) + 0.35% (Interaction) = +1.50%` (Exact match with active return).",
     "final_answer": "**Active Return = +150 bps (+1.50%)**:\n- **Allocation Effect**: +125 bps (+1.25%) -> Driven primarily by a strong overweight in outperforming Technology.\n- **Selection Effect**: -10 bps (-0.10%) -> Good tech and bank selection was offset by severe healthcare stock underperformance.\n- **Interaction Effect**: +35 bps (+0.35%)."

@@ -1152,6 +1152,7 @@ pm_html = r"""<div class="top-controls">
     <a class="fsa-nav-btn" href="#pm-m6-active">06. Active Management &amp; Fundamental Law</a>
     <a class="fsa-nav-btn" href="#pm-m7-multifactor">07. Multifactor Risk Models</a>
     <a class="fsa-nav-btn" href="#pm-m8-execution">08. ETFs, Algos &amp; Implementation Shortfall</a>
+    <a class="fsa-nav-btn" href="#pm-m10-cbok1112">09. Asset Allocation &amp; Perf (CBOK XI-XII)</a>
     <a class="fsa-nav-btn" href="#pm-formulas" style="color: var(--accent-emerald); font-weight: 700;">Master Formula Sheet</a>
   </div>
 </div>
@@ -2118,6 +2119,67 @@ pm_html = r"""<div class="top-controls">
     <li><strong>Technical Analysis &amp; Market Sentiment</strong>: Assumes market prices discount all known fundamentals and trends persist. Analysts track <strong>Support/Resistance</strong> levels, reversal patterns (<em>Head &amp; Shoulders</em>, <em>Double Top/Bottom</em>), continuation patterns (<em>Triangles</em>, <em>Flags</em>), trend indicators (50/200-day <em>Moving Averages</em>, <em>MACD</em>), momentum oscillators (<em>RSI &gt; 70 overbought, &lt; 30 oversold</em>), and contrarian sentiment gauges (Put/Call ratio, VIX).</li>
     <li><strong>Fintech, Big Data, AI &amp; DLT</strong>: Structured vs. unstructured data (satellite imagery, earnings-call transcripts) analyzed via <strong>Natural Language Processing (NLP)</strong> and <strong>Machine Learning</strong> (Supervised: LASSO/Ridge/Random Forests for return prediction; Unsupervised: clustering/PCA for risk regimes). <em>Robo-advisors</em> automate IPS profiling and tax-loss harvesting; <em>Distributed Ledger Technology (DLT)</em> and smart contracts streamline trade clearing and tokenized settlement.</li>
   </ul>
+</section>
+
+<!-- ========================================================================================= -->
+<!-- MODULE 10: ASSET ALLOCATION (CBOK XI) & PERFORMANCE MEASUREMENT / MANAGER SELECTION (CBOK XII) -->
+<!-- ========================================================================================= -->
+<section id="pm-m10-cbok1112" class="notes-chapter">
+  <h2 class="section-heading"><span class="num">09B.</span> Asset Allocation (CBOK XI) &amp; Performance Appraisal / Manager Selection (CBOK XII)</h2>
+  <p>Completing the official 12-section CFA CBOK framework, Asset Allocation and Performance Measurement integrate Capital Market Expectations into multi-horizon portfolio construction, Liability-Driven Investing (LDI), Manager Selection, and Attribution Appraisal.</p>
+
+  <h3 class="subheading">Strategic Asset Allocation (SAA), Tactical Tilts (TAA) &amp; Liability-Driven Investing (LDI)</h3>
+  <ul>
+    <li><strong>Mean-Variance Optimization (MVO) &amp; Resampled / Reverse Optimization</strong>: Unconstrained MVO suffers from input sensitivity (small return perturbations cause extreme concentrated weights). <em>Black-Litterman</em> blends market-implied equilibrium returns with investor views; <em>Risk Parity</em> equalizes marginal contribution to total risk ($MCTR_i \times w_i$) across asset classes.</li>
+    <li><strong>Strategic vs. Tactical Asset Allocation (SAA vs. TAA)</strong>: SAA establishes policy weights matching long-term IPS goals; TAA introduces disciplined short-term factor/valuation tilts inside IPS corridor bands, evaluated via Information Ratio of active risk budget.</li>
+    <li><strong>Liability-Driven Investing (LDI / ALM) &amp; Goals-Based Investing (GBI)</strong>: Institutional pensions align asset duration ($D_A \cdot A = D_L \cdot L$) to immunize funded status against rate shocks (Type I cash-flow matching vs. Type II duration/convexity matching). Individual wealth divides capital into sub-portfolios ("buckets") mapped to distinct probabilities of achieving safety, lifestyle, and aspirational goals.</li>
+  </ul>
+
+  <h3 class="subheading">Performance Appraisal, Manager Selection &amp; Fee Structuring (CBOK XII)</h3>
+  <div class="formula-card">
+    <div class="formula-title">Appraisal Ratio, Sortino Ratio &amp; Manager Selection Decision Errors</div>
+    $$\text{Appraisal Ratio} = \frac{\alpha_p}{\sigma_{\epsilon_p}}, \qquad \text{Sortino Ratio} = \frac{E(R_p) - MAR}{\text{Downside Deviation}_{MAR}}, \qquad \text{Capture Ratio} = \frac{R_{\text{mgr}}}{R_{\text{bench}}}$$
+  </div>
+  <ul>
+    <li><strong>Type I vs. Type II Errors in Manager Selection</strong>: <em>Type I Error (False Positive)</em> = hiring/retaining an unskilled manager who loses alpha; <em>Type II Error (False Negative)</em> = firing/passing over a skilled manager during a temporary style drawdown. Style-box consistency, holdings-based attribution, and operational due diligence mitigate selection errors.</li>
+    <li><strong>Symmetric vs. Asymmetric Performance Fees</strong>: <em>Fulcrum fees</em> reward outperformance and penalize underperformance symmetrically; <em>Option-like bonus fees</em> ($Base + k \cdot \max(0, R_p - R_b)$) incentivize managers to raise portfolio volatility unless paired with high-water marks and clawbacks.</li>
+  </ul>
+
+  <div class="card" style="background: rgba(16, 185, 129, 0.05); border-left: 4px solid var(--accent-emerald); margin: 15px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-emerald);">Worked Numerical Example: Risk-Budgeted Active SAA/TAA &amp; Pension Dollar-Duration Immunizing</h4>
+    <p><strong>Part A (Pension Surplus Duration Match)</strong>: A defined-benefit pension holds 400M USD in assets ($D_A = 8.0$) against 500M USD in projected benefit liabilities ($D_L = 11.2$). Asset BPV $= 400\text{M} \times 8.0 \times 0.0001 = 320,000\text{ USD}$; Liability BPV $= 500\text{M} \times 11.2 \times 0.0001 = 560,000\text{ USD}$. To close the $-240,000\text{ USD}$ duration gap using 30-year Treasury futures ($\text{BPV}_{\text{ct}} = 2,400\text{ USD}$ per contract), the CIO buys $N_f = 240,000 / 2,400 = +100\text{ contracts}$.</p>
+    <p><strong>Part B (Upside/Downside Capture)</strong>: An active equity manager captures +12.0% when the index gains +10.0% (Upside Capture $= 120\%$) and loses -6.4% when the index falls -8.0% (Downside Capture $= 80\%$), achieving an asymmetric Capture Ratio $= 120\% / 80\% = 1.50\times$.</p>
+  </div>
+
+  <div class="exercise-toolbar" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin: 18px 0 10px 0; padding:10px 14px; background:var(--bg-secondary); border:1px solid var(--border-color); border-radius:6px;">
+    <span style="font-weight:700; font-size:13.5px; color:var(--accent-amber);">Module 09B Chapter Exercises (Asset Allocation &amp; Perf Measurement)</span>
+    <div style="display:flex; gap:8px;">
+      <button type="button" class="filter-btn" onclick="toggleChapterExercises('pm-m10-cbok1112', false)">Hide All (Unsolved Mode)</button>
+      <button type="button" class="filter-btn" onclick="toggleChapterExercises('pm-m10-cbok1112', true)">Reveal All (Solved Mode)</button>
+    </div>
+  </div>
+  <div class="chapter-exercise-card card" id="pm-ex-1" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 9B.1 (Solved): Appraisal Ratio &amp; Sortino Comparison</strong>
+      <span class="badge-diff-easy" style="font-size:10px;">SOLVED WALKTHROUGH</span>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;">Fund Alpha delivers $\alpha = +2.40\%$ with unsystematic residual risk $\sigma_\epsilon = 3.00\%$; Fund Beta delivers $\alpha = +3.00\%$ with $\sigma_\epsilon = 5.00\%$. Which manager exhibits superior risk-adjusted stock-selection skill per unit of idiosyncratic noise?</div>
+    <details class="exercise-solution-details" open style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Solution &amp; Derivation</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><strong>Fund Alpha</strong>: $AR_A = 2.40\% / 3.00\% = 0.80$ vs. $AR_B = 3.00\% / 5.00\% = 0.60$. Fund Alpha generates higher alpha per unit of active idiosyncratic risk.</div>
+    </details>
+  </div>
+  <div class="chapter-exercise-card card" id="pm-ex-2" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 9B.2 (Unsolved): Type I vs. Type II Manager Selection Errors</strong>
+      <span class="badge-diff-moderate" style="font-size:10px;">UNSOLVED SELF-TEST</span>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;">An institutional committee fires a deep-value equity manager solely because the manager trailed the S&amp;P 500 growth rally over 2 consecutive years, only for the manager's value style to rebound +18% above benchmark the very next year. Which selection error occurred?</div>
+    <details class="exercise-solution-details" style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Click to Reveal Answer &amp; Derivation</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><strong>Type II Error (False Negative — prematurely terminating a skilled manager during a cyclical style headwind)</strong>.</div>
+    </details>
+  </div>
 </section>
 
 <!-- ========================================================================================= -->

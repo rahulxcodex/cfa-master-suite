@@ -1,55 +1,25 @@
 # Project Context: Finance Workspace (CFA Master Suite)
 
 - **Workspace Path**: `c:\Users\Rahul\Documents\antigravity\Finance`
-- **Domain**: CFA Program Exam Prep (Level 1 & Level 2), covering Financial Statement Analysis (FSA), Fixed Income, Equity Investments, and Portfolio Management.
-- **Architecture**: Unified Single-Page Application (SPA) Portal at `index.html` (2.42 MB) with backward-compatibility redirect at `fi_eq_dashboard.html`.
-- **Total Questions**: **1,085 Certified Questions** across 4 modules:
-  - **Financial Statement Analysis**: 460 Questions (190 L1 MCQs + 270 L2 Questions across 48 vignettes)
-  - **Fixed Income**: 205 Questions (120 L1 MCQs + 85 L2 Questions across 17 vignettes)
-  - **Equity Investments**: 210 Questions (115 L1 MCQs + 95 L2 Questions across 19 vignettes)
-  - **Portfolio Management**: 210 Questions (120 L1 MCQs + 90 L2 Questions across 18 vignettes)
-  - **Level Breakdown**: 545 Level 1 MCQs, 540 Level 2 Questions across 102 distinct vignettes.
-- **Core Deliverables**:
-  - `index.html`: Unified CFA Master Dashboard (2.50 MB) housing all 1,085 questions, 102 vignette item sets, 12 simulation engines, 27 master solved numerical cases, 2024-2026 curriculum audit matrix, desktop collapsible sidebar, and Anti-AI Design typography.
-  - `fi_eq_dashboard.html`: Zero-latency redirect page forwarding legacy bookmarks to `index.html`.
-  - `CFA_CURRICULUM_AUDIT_AND_SOLVED_NUMERICALS.md`: Exhaustive 77KB audit and multi-tier worked problems.
-  - `data/master_solved_numericals.json`: Normalized dataset of 27 multi-step solved numericals.
-  - `data/cfa_master_855.json`: Consolidated master question bank (1,085 questions).
-  - Reference Libraries:
-    - `data/fsa_reference_extracted.html`: 20-chapter accounting mechanics & formula sheet (65 KB).
-    - `data/fi_reference_extracted.html`: 8-module fixed income notes & formulas (22 KB).
-    - `data/eq_reference_extracted.html`: 8-module equity valuation library & models (19 KB).
-    - `data/pm_reference_extracted.html`: 8-module portfolio management library, institutional matrix & worked numericals (64 KB).
-  - `scripts/`:
-    - `generate_unified_dashboard.py`: Unified dashboard compiler with Anti-AI Design tokens and sidebar collapse.
-    - `verify_unified_suite.py`: Strict schema, KaTeX parity, and stray dollar verifier.
-  - `data/cfa_jargon_dictionary.json`: Comprehensive 32-term database with intuitive definitions, KaTeX formulas, practical uses, exam traps, and worked step-by-step numericals.
-- **Interactive Simulations (12 Total)**:
-  1. Yield Curve Shift, Twist & Butterfly Simulator.
-  2. Binomial Interest Rate Tree & Embedded Option Backward Induction Engine.
-  3. Equity Valuation: Two-Stage DDM & DuPont Explorer.
-  4. Key Rate Duration & Sensitivity Visualizer.
-  5. Floating-Rate Note (FRN) Pricing & Discount Margin Engine.
-  6. Residual Income Persistence Decay Explorer ($\omega \in [0, 1]$).
-  7. FCFF -> FCFE Cash Flow Waterfall Bridge.
-  8. Multinational Currency Translation Engine (Current Rate vs. Temporal Method).
-  9. MBS Prepayment Simulator & Contraction/Extension Risk Engine.
-  10. Markowitz Mean-Variance Frontier & CAL/Indifference Curve Optimizer.
-  11. Grinold's Fundamental Law of Active Management ($IR = TC \times IC \times \sqrt{BR}$) & Sharpe Expansion Engine.
-  12. Dynamic Rebalancing Corridors & Tolerance Band Simulation Engine.
-- **Compliance & Auditing**:
-  - Currency strictly formatted with `USD`, `EUR`, `GBP` or `\$`.
-  - 100% KaTeX delimiter balance (0 unpaired delimiters, 0 stray dollars outside math blocks).
-  - 0 schema errors across all 1,085 questions and 102 item sets.
-  - 48.5% numerical calculation question density across all 4 subjects.
-  - Full 4-Subject Curriculum Reference Library with 4-tab instant switcher bar.
-  - Question Type filter pills ("All", "Numericals", "Theory") across L1 and L2 portals.
-- **Live Deployment & Repositories**:
-  - **GitHub Repository**: https://github.com/rahulxcodex/cfa-master-suite (main branch)
-  - **Live Portal**: https://rahulxcodex.github.io/cfa-master-suite/
-  - **Recent Milestones**:
-    - Sidebar scope fix: resolved unclosed `hashchange` listener in `scripts/generate_unified_dashboard.py` restoring global access to `toggleDesktopSidebar`, `filterNumericals`, and `renderSolvedNumericals`.
-    - Mobile UI responsiveness: hid duplicate desktop sidebar toggle on screens <= 900px, isolated mobile close button, and prevented sidebar drawer offset on mobile viewports.
-    - Terminology & Jargon Interactive Popover System: Architected with Gemini 4 (Argon High Thinking) via `/gemini4web`. Added 32 comprehensive CFA Level 1 & Level 2 terminologies across FSA, FI, EQ, PM with intuitive definitions, KaTeX formulas, practical uses, common pitfalls, worked step-by-step numerical examples, history stack back navigation, mobile bottom-sheet fallback, and automatic DOM tree-walker highlighting.
-    - 2026–2027 CFA CBOK Curriculum Audit & 50 Inline Notes Worked Numericals: Audited all 4 portal topics against official CFA Institute CBOK (`cfainstitute.org/.../cbok`), 2026–2027 L1/L2 syllabi, and Kaplan SchweserNotes; closed subtopic gaps across FSA (Off-Balance-Sheet VIEs, Share-Based Comp, IAS 29 Hyperinflation, Sustainability/ISSB, 3-Statement Modeling), Fixed Income (Repo/Shorting, Convertibles, Vasicek/CIR/Ho-Lee/KWF term structure models, CDS Upfront/Basis, Covered Bonds, Green/SLBs, Empirical Duration), Equities (Shorting/Short Margin Call, 2027 L1 12-module Forecasting/Jurisdictions/Research Reports/Cost of Equity, EMH, Harmonic Mean, SOTP, Clean Surplus/EVA, EEM), and Portfolio Construction (Endowment Spending, 3-Asset Variance, Behavioral Biases, Economics & Investment Markets, Brinson-Fachler Attribution, VaR/CVaR, Backtesting & Simulation, Technical Analysis, Fintech/ML/DLT, ESG & 130/30 Shorting); embedded 50 inline Schweser-style Worked Numerical Examples (14 FSA, 11 FI, 11 EQ, 14 PM) directly inside Reference Notes; updated `#curriculum-audit` to official 2027 CBOK weights & simultaneous L1/L2 critique.
-
+- **Domain**: Complete CFA Program Exam Prep (Level 1 & Level 2 across all 10 CBOK I–X courses + XI–XII Asset Allocation & Performance Measurement).
+- **Architecture**: Unified Single-Page Application (SPA) Portal at `index.html` (5.60 MB) with backward-compatibility redirect at `fi_eq_dashboard.html`.
+- **Total Q-Bank**: **2,210 Audited Questions** (1,225 Level 1 MCQs + 985 Level 2 Questions across 183 distinct vignettes) + **160+ Inline Chapter Exercises (Solved & Unsolved)**:
+  - **I. Ethical & Professional Standards**: 450 Q-Bank (270 L1 + 180 L2 across 30 V) + 50 Inline Chapter Drills (25 Solved / 25 Unsolved) = **500 Ethics Exercises**
+  - **II. Quantitative Methods**: 150 Qs (90 L1 + 60 L2 across 10 V) + 12 Ch + 24 Inline Drills
+  - **III. Economics**: 130 Qs (80 L1 + 50 L2 across 10 V) + 10 Ch + 20 Inline Drills
+  - **IV. Financial Statement Analysis**: 460 Qs (190 L1 + 270 L2 across 48 V) + 20 Ch
+  - **V. Corporate Issuers**: 130 Qs (80 L1 + 50 L2 across 10 V) + 9 Ch + 20 Inline Drills
+  - **VI. Equity Investments**: 210 Qs (115 L1 + 95 L2 across 19 V) + 8 Ch
+  - **VII. Fixed Income**: 205 Qs (120 L1 + 85 L2 across 17 V) + 8 Ch
+  - **VIII. Derivatives**: 140 Qs (85 L1 + 55 L2 across 11 V) + 9 Ch + 20 Inline Drills
+  - **IX. Alternative Investments**: 125 Qs (75 L1 + 50 L2 across 10 V) + 9 Ch + 20 Inline Drills
+  - **X–XII. Portfolio Mgmt, Asset Allocation & Performance**: 210 Qs (120 L1 + 90 L2 across 18 V) + 10 Ch + 2 Inline Drills
+- **Core Deliverables & Scripts**:
+  - `index.html`: Unified CFA Master Dashboard (2,210 Qs, 183 vignettes, 16 simulators, 63 master solved numericals, 64 jargon terms, 105 curriculum chapters, Paginated L1 List View, Solved/Unsolved Self-Test toggle).
+  - `data/cfa_master_855.json` & `data/suite_manifest.json`: Canonical 2,210-question consolidated bank & manifest.
+  - `data/master_solved_numericals.json`: 63 graduated Python-verified worked numericals across all 10 courses.
+  - `data/cfa_jargon_dictionary.json`: 64 interactive hover-card terminologies across all 10 courses.
+  - `data/*_reference_extracted.html`: 10 complete reference libraries (`eth`, `qm`, `econ`, `fsa`, `corp`, `eq`, `fi`, `deriv`, `alt`, `pm`).
+  - `scripts/compile_unified_suite.py`, `scripts/generate_unified_dashboard.py`, `scripts/verify_unified_suite.py`: End-to-end build, data injection, and compliance pipeline.
+- **Interactive Simulations (16 Total)**: Yield Curve, Binomial Tree, DDM & DuPont, Key Rate Duration, FRN Pricing, RI Persistence Decay, FCFF->FCFE Waterfall, Currency Translation, MBS Prepayment, Markowitz Frontier & CAL, Fundamental Law, Dynamic Rebalancing Corridors, **BSM & Option Greeks**, **Quant Monte Carlo GBM & t-Test**, **Hedge Fund Fee Waterfall & HWM**, **Corporate WACC / Hamada Beta / MM Optimizer**.
+- **Live Deployment**: https://github.com/rahulxcodex/cfa-master-suite (main branch) | https://rahulxcodex.github.io/cfa-master-suite/

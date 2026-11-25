@@ -1449,5 +1449,1217 @@
       "pm-capm-alpha",
       "pm-information-ratio"
     ]
+  },
+  {
+    "id": "eth-mosaic-theory",
+    "term": "Mosaic Theory",
+    "aliases": [
+      "Mosaic Theory"
+    ],
+    "regexPattern": "\\bMosaic Theory\\b",
+    "category": "ETH",
+    "level": "Both",
+    "definition": "An analytical framework permitting research analysts to combine material public information with nonmaterial nonpublic observations to derive a perceptive, actionable investment conclusion without violating insider trading rules.",
+    "formula": "\\text{Public Material Info} + \\text{Nonmaterial Nonpublic Info} \\implies \\text{Compliant Alpha}",
+    "practicalUses": [
+      "Channel checks with store managers, suppliers, and industry experts.",
+      "Satellite imagery and web-scraped pricing combined with 10-K filings."
+    ],
+    "commonPitfalls": [
+      "Combining public info with ANY single piece of material nonpublic info (MNPI) destroys the mosaic defense and violates Standard II(A)."
+    ],
+    "workedNumerical": {
+      "title": "Supplier Channel Check",
+      "given": [
+        "10-K filings (Public)",
+        "12 regional parts vendors' order observations (Nonmaterial Nonpublic)"
+      ],
+      "steps": [
+        "Verify no vendor broke NDA.",
+        "Synthesize margin surprise thesis."
+      ],
+      "result": "100% Compliant under Standard II(A)"
+    },
+    "relatedTerms": [
+      "eth-soft-dollars",
+      "eth-gips-composite"
+    ],
+    "relatedNumCode": "",
+    "relatedSimTab": ""
+  },
+  {
+    "id": "eth-soft-dollars",
+    "term": "Soft Dollars (Client Brokerage)",
+    "aliases": [
+      "Soft Dollars",
+      "Soft-Dollar"
+    ],
+    "regexPattern": "\\bSoft[- ]Dollars?\\b",
+    "category": "ETH",
+    "level": "Both",
+    "definition": "Commissions directed by an investment manager to a broker in exchange for research products or execution services rather than purely lowest-cost trade execution.",
+    "formula": "\\text{Client Brokerage} \\in \\text{Client Asset} \\implies \\text{Must Directly Assist Investment Decisions}",
+    "practicalUses": [
+      "Funding Bloomberg terminals, quantitative factor databases, or independent sell-side research."
+    ],
+    "commonPitfalls": [
+      "Never use soft dollars to pay firm rent, employee salaries, conference travel, or marketing brochures (violates Standard III(A))."
+    ],
+    "workedNumerical": {
+      "title": "Mixed-Use Research Allocation",
+      "given": [
+        "180k USD soft dollars",
+        "65% research / 35% firm overhead"
+      ],
+      "steps": [
+        "Firm pays 35% * 180k = 63,000 USD from corporate cash."
+      ],
+      "result": "63,000 USD corporate reimbursement"
+    },
+    "relatedTerms": [
+      "eth-priority-tx",
+      "eth-mosaic-theory"
+    ],
+    "relatedNumCode": "1.2.1",
+    "relatedSimTab": ""
+  },
+  {
+    "id": "eth-priority-tx",
+    "term": "Priority of Transactions (Std VI(B))",
+    "aliases": [
+      "Priority of Transactions",
+      "Front-Running"
+    ],
+    "regexPattern": "\\b(Priority of Transactions|Front[- ]Running)\\b",
+    "category": "ETH",
+    "level": "Both",
+    "definition": "CFA Standard VI(B) requiring that investment transactions for clients and employers take precedence over transactions in which a member/candidate has beneficial ownership.",
+    "formula": "\\text{Order Hierarchy: } 1.\\;\\text{Clients} \\succ 2.\\;\\text{Employer} \\succ 3.\\;\\text{Personal / Beneficial Family}",
+    "practicalUses": [
+      "Enforcing blackout periods, pre-clearance lists, and minimum holding periods."
+    ],
+    "commonPitfalls": [
+      "Treating a fee-paying relative's non-beneficial retail account worse than external clients violates Standard III(B) Fair Dealing!"
+    ],
+    "workedNumerical": {
+      "title": "Hot IPO Share Queue",
+      "given": [
+        "100k client demand",
+        "10k personal order",
+        "25k IPO allocation"
+      ],
+      "steps": [
+        "Assign 0 to personal account; allocate 25% pro-rata across client accounts."
+      ],
+      "result": "25,000 to clients; 0 personal"
+    },
+    "relatedTerms": [
+      "eth-soft-dollars",
+      "eth-gips-composite"
+    ],
+    "relatedNumCode": "1.2.2",
+    "relatedSimTab": ""
+  },
+  {
+    "id": "eth-gips-composite",
+    "term": "GIPS Composite & Verification",
+    "aliases": [
+      "GIPS",
+      "GIPS Composite"
+    ],
+    "regexPattern": "\\b(GIPS Composite|GIPS)\\b",
+    "category": "ETH",
+    "level": "Both",
+    "definition": "Global Investment Performance Standards grouping all actual, fee-paying, discretionary portfolios managed under a single strategy to prevent cherry-picking and survivorship bias.",
+    "formula": "R_{\\text{comp}} = \\sum \\left(\\frac{BMV_i}{\\sum BMV}\\right) R_i, \\quad \\text{TWR Mandated}",
+    "practicalUses": [
+      "Standardizing institutional performance track records globally across asset managers."
+    ],
+    "commonPitfalls": [
+      "A firm cannot claim GIPS compliance for just one fund or verify one composite without firm-wide compliance."
+    ],
+    "workedNumerical": {
+      "title": "Asset-Weighted Composite",
+      "given": [
+        "Acct A: 25M at +11.2%",
+        "Acct B: 45M at +8.4%",
+        "Acct C: 30M at +14.6%"
+      ],
+      "steps": [
+        "0.25(11.2)+0.45(8.4)+0.30(14.6) = 10.96%"
+      ],
+      "result": "10.96% Composite Return"
+    },
+    "relatedTerms": [
+      "eth-modified-dietz",
+      "pm-twr-mwr"
+    ],
+    "relatedNumCode": "1.1.2",
+    "relatedSimTab": ""
+  },
+  {
+    "id": "eth-modified-dietz",
+    "term": "Modified Dietz Return",
+    "aliases": [
+      "Modified Dietz"
+    ],
+    "regexPattern": "\\bModified Dietz\\b",
+    "category": "ETH",
+    "level": "L2",
+    "definition": "An approximation to Time-Weighted Return weighting external cash flows by the fraction of the measurement period they remain invested in the portfolio.",
+    "formula": "R_{\\text{MD}} = \\frac{EMV - BMV - CF}{BMV + \\sum CF_j \\left(\\frac{CD - D_j}{CD}\\right)}",
+    "practicalUses": [
+      "Computing sub-period performance between daily valuations for GIPS reporting."
+    ],
+    "commonPitfalls": [
+      "Cannot substitute for exact re-valuation on dates with large external cash flows (>= 10% of portfolio value)."
+    ],
+    "workedNumerical": {
+      "title": "31-Day Month Dietz",
+      "given": [
+        "BMV=12M",
+        "Day 10 CF=+3M",
+        "EMV=15.8M"
+      ],
+      "steps": [
+        "w=(31-10)/31=0.6774",
+        "Base=14.032M",
+        "Gain=0.8M"
+      ],
+      "result": "+5.70%"
+    },
+    "relatedTerms": [
+      "eth-gips-composite"
+    ],
+    "relatedNumCode": "1.1.1",
+    "relatedSimTab": ""
+  },
+  {
+    "id": "eth-dissociation",
+    "term": "Dissociation Duty (Std I(A))",
+    "aliases": [
+      "Dissociation",
+      "Dissociate"
+    ],
+    "regexPattern": "\\bDissociat(e|ion)\\b",
+    "category": "ETH",
+    "level": "Both",
+    "definition": "Mandatory compliance action under Standard I(A) when internal escalation fails to halt an illegal or unethical firm practice—requiring the practitioner to remove their name and sever ties with the activity.",
+    "formula": "\\text{Confront} \\to \\text{Escalate to Compliance} \\to \\text{Dissociate / Resign}",
+    "practicalUses": [
+      "Removing one's name from biased research or refusing to sign misleading marketing."
+    ],
+    "commonPitfalls": [
+      "Passive silence is NOT compliant; whistleblowing to regulators is optional unless required by local law, whereas dissociation is mandatory."
+    ],
+    "workedNumerical": {
+      "title": "Biased Brochure Escalation",
+      "given": [
+        "Firm guarantees 12% equity returns",
+        "Compliance refuses edit"
+      ],
+      "steps": [
+        "Submit written dissent; strip name from report; request reassignment or resign."
+      ],
+      "result": "Compliant Dissociation"
+    },
+    "relatedTerms": [
+      "eth-mosaic-theory"
+    ],
+    "relatedNumCode": "",
+    "relatedSimTab": ""
+  },
+  {
+    "id": "qm-bayes",
+    "term": "Bayes' Theorem",
+    "aliases": [
+      "Bayes' Theorem",
+      "Bayes' Formula",
+      "Posterior Probability"
+    ],
+    "regexPattern": "\\bBayes'? (Theorem|Formula)\\b",
+    "category": "QM",
+    "level": "L1",
+    "definition": "Probability rule updating prior beliefs about an event when new diagnostic evidence or market signals arrive.",
+    "formula": "P(A \\mid B) = \\frac{P(B \\mid A)\\,P(A)}{P(B \\mid A)P(A) + P(B \\mid A^c)P(A^c)}",
+    "practicalUses": [
+      "Updating default probabilities upon credit downgrades or recession probability after yield curve inversion."
+    ],
+    "commonPitfalls": [
+      "Confusing conditional likelihood P(B|A) with posterior probability P(A|B)."
+    ],
+    "workedNumerical": {
+      "title": "Yield Curve Recession Signal",
+      "given": [
+        "Prior P(Rec)=25%",
+        "P(Inv|Rec)=85%",
+        "P(Inv|Exp)=20%"
+      ],
+      "steps": [
+        "0.2125 / (0.2125 + 0.1500) = 0.2125 / 0.3625"
+      ],
+      "result": "58.62% Posterior"
+    },
+    "relatedTerms": [
+      "qm-safety-first"
+    ],
+    "relatedNumCode": "2.1.2",
+    "relatedSimTab": "quant"
+  },
+  {
+    "id": "qm-safety-first",
+    "term": "Roy's Safety-First Criterion",
+    "aliases": [
+      "Roy's Safety-First",
+      "Safety-First Ratio"
+    ],
+    "regexPattern": "\\b(Roy'?s )?Safety[- ]First( Criterion| Ratio)?\\b",
+    "category": "QM",
+    "level": "L1",
+    "definition": "Portfolio selection metric minimizing the probability that portfolio return falls below a critical disaster threshold R_L.",
+    "formula": "\\text{SFRatio} = \\frac{E(R_p) - R_L}{\\sigma_p}",
+    "practicalUses": [
+      "Selecting pension or endowment allocations facing strict minimum funding constraints."
+    ],
+    "commonPitfalls": [
+      "Using R_f instead of the specific shortfall threshold R_L (note: SFRatio equals Sharpe only when R_L = R_f)."
+    ],
+    "workedNumerical": {
+      "title": "Shortfall Threshold Rank",
+      "given": [
+        "R_L=3%",
+        "Fund A: E=11%, SD=16%",
+        "Fund B: E=14%, SD=24%"
+      ],
+      "steps": [
+        "SFR_A = 8/16 = 0.500",
+        "SFR_B = 11/24 = 0.458"
+      ],
+      "result": "Fund A Dominates (SFR=0.500)"
+    },
+    "relatedTerms": [
+      "qm-bayes",
+      "pm-sharpe-treynor"
+    ],
+    "relatedNumCode": "",
+    "relatedSimTab": "quant"
+  },
+  {
+    "id": "qm-vif",
+    "term": "Variance Inflation Factor (VIF)",
+    "aliases": [
+      "Variance Inflation Factor",
+      "VIF"
+    ],
+    "regexPattern": "\\b(Variance Inflation Factor|VIF)\\b",
+    "category": "QM",
+    "level": "L2",
+    "definition": "Diagnostic detecting multicollinearity in multiple regression by measuring how much an independent variable's coefficient variance is inflated by correlation with other predictors.",
+    "formula": "\\text{VIF}_j = \\frac{1}{1 - R_j^2}",
+    "practicalUses": [
+      "Screening macroeconomic or valuation factors for redundant predictors before OLS estimation."
+    ],
+    "commonPitfalls": [
+      "Forgetting that multicollinearity leaves R^2 high and F-test significant while inflating SEs so individual t-stats look insignificant."
+    ],
+    "workedNumerical": {
+      "title": "Factor Collinearity Screen",
+      "given": [
+        "R_j^2 = 0.88"
+      ],
+      "steps": [
+        "VIF = 1 / (1 - 0.88) = 1 / 0.12"
+      ],
+      "result": "VIF = 8.33 (Warning > 5)"
+    },
+    "relatedTerms": [
+      "qm-durbin-watson",
+      "qm-garch"
+    ],
+    "relatedNumCode": "2.2.2",
+    "relatedSimTab": ""
+  },
+  {
+    "id": "qm-durbin-watson",
+    "term": "Durbin-Watson & Newey-West",
+    "aliases": [
+      "Durbin-Watson",
+      "Serial Correlation",
+      "Autocorrelation"
+    ],
+    "regexPattern": "\\b(Durbin[- ]Watson|Serial Correlation)\\b",
+    "category": "QM",
+    "level": "L2",
+    "definition": "Diagnostic statistic testing first-order residual autocorrelation in OLS time-series regressions, typically corrected via Newey-West HAC standard errors.",
+    "formula": "DW \\approx 2(1 - r), \\quad DW \\approx 2 \\implies \\text{No Serial Correlation}",
+    "practicalUses": [
+      "Validating monthly factor regressions before trusting t-statistics."
+    ],
+    "commonPitfalls": [
+      "NEVER apply Durbin-Watson to an autoregressive AR(p) model containing lagged dependent variables (use Breusch-Godfrey or residual t-tests instead!)."
+    ],
+    "workedNumerical": {
+      "title": "Residual Autocorrelation Check",
+      "given": [
+        "Residual lag-1 corr r = +0.65"
+      ],
+      "steps": [
+        "DW ≈ 2(1 - 0.65) = 0.70 << 2"
+      ],
+      "result": "Strong Positive Serial Correlation"
+    },
+    "relatedTerms": [
+      "qm-vif",
+      "qm-ar1"
+    ],
+    "relatedNumCode": "",
+    "relatedSimTab": ""
+  },
+  {
+    "id": "qm-ar1",
+    "term": "AR(1) & Unit Root (Dickey-Fuller)",
+    "aliases": [
+      "Autoregressive",
+      "AR(1)",
+      "Unit Root",
+      "Dickey-Fuller"
+    ],
+    "regexPattern": "\\b(AR\\(1\\)|Unit Root|Dickey[- ]Fuller)\\b",
+    "category": "QM",
+    "level": "L2",
+    "definition": "Time-series regression on its own 1-period lag; covariance stationary and mean-reverting only when |b_1| < 1 (unit root when b_1 = 1).",
+    "formula": "X_t = b_0 + b_1 X_{t-1} + \\epsilon_t, \\qquad \\bar{X} = \\frac{b_0}{1 - b_1}",
+    "practicalUses": [
+      "Forecasting mean-reverting margins, ROE, or real interest rates."
+    ],
+    "commonPitfalls": [
+      "Attempting to compute a mean-reverting level when b_1 = 1 (random walk has undefined infinite variance and no mean reversion)."
+    ],
+    "workedNumerical": {
+      "title": "Mean-Reverting ROE Forecast",
+      "given": [
+        "b0=0.012",
+        "b1=0.75",
+        "ROE_0=8%"
+      ],
+      "steps": [
+        "Mean=0.012/0.25=4.80%",
+        "ROE_1=0.012+0.75(0.08)=7.20%"
+      ],
+      "result": "Mean = 4.80%; ROE_2 = 6.60%"
+    },
+    "relatedTerms": [
+      "qm-garch",
+      "qm-durbin-watson"
+    ],
+    "relatedNumCode": "2.3.1",
+    "relatedSimTab": ""
+  },
+  {
+    "id": "qm-garch",
+    "term": "GARCH(1,1) Volatility Model",
+    "aliases": [
+      "GARCH",
+      "Volatility Clustering"
+    ],
+    "regexPattern": "\\bGARCH(\\(1,1\\))?\\b",
+    "category": "QM",
+    "level": "L2",
+    "definition": "Generalized Autoregressive Conditional Heteroskedasticity model forecasting time-varying volatility clustering from lagged squared return shocks and lagged conditional variance.",
+    "formula": "\\sigma_t^2 = \\omega + \\alpha \\epsilon_{t-1}^2 + \\beta \\sigma_{t-1}^2, \\qquad V_L = \\frac{\\omega}{1 - \\alpha - \\beta}",
+    "practicalUses": [
+      "Risk budgeting, dynamic option pricing, and VaR scaling during turbulent volatility regimes."
+    ],
+    "commonPitfalls": [
+      "Forgetting persistence condition alpha + beta < 1 required for finite long-run variance V_L."
+    ],
+    "workedNumerical": {
+      "title": "Daily Variance Shock Update",
+      "given": [
+        "omega=0.000015",
+        "alpha=0.12",
+        "beta=0.82",
+        "eps=-3%",
+        "sigma=2%"
+      ],
+      "steps": [
+        "0.000015 + 0.12(0.0009) + 0.82(0.0004) = 0.000451"
+      ],
+      "result": "sigma_t = 2.12% daily"
+    },
+    "relatedTerms": [
+      "qm-ar1",
+      "deriv-bsm"
+    ],
+    "relatedNumCode": "2.3.2",
+    "relatedSimTab": ""
+  },
+  {
+    "id": "econ-cirp",
+    "term": "Covered Interest Rate Parity (CIRP)",
+    "aliases": [
+      "Covered Interest Rate Parity",
+      "CIRP",
+      "Interest Rate Parity"
+    ],
+    "regexPattern": "\\b(Covered Interest Rate Parity|CIRP)\\b",
+    "category": "ECON",
+    "level": "Both",
+    "definition": "Arbitrage-enforced condition equating the forward FX premium/discount to the nominal interest rate differential between price and base currencies.",
+    "formula": "F_{P/B} = S_{P/B} \\cdot \\frac{1 + r_P(T)}{1 + r_B(T)}",
+    "practicalUses": [
+      "Pricing currency forwards and detecting covered interest arbitrage mispricings."
+    ],
+    "commonPitfalls": [
+      "Reversing CFA P/B quote order: the higher-interest-rate currency ALWAYS trades at a forward discount!"
+    ],
+    "workedNumerical": {
+      "title": "180-Day Arbitrage Check",
+      "given": [
+        "S=1.20 USD/EUR",
+        "r_USD=4.8%",
+        "r_EUR=3.2%",
+        "F_quote=1.22"
+      ],
+      "steps": [
+        "F* = 1.20*(1.024/1.016)=1.20945",
+        "Borrow USD, invest EUR, sell forward"
+      ],
+      "result": "+8,933 USD Riskless Profit"
+    },
+    "relatedTerms": [
+      "econ-carry-trade",
+      "econ-ppp"
+    ],
+    "relatedNumCode": "3.5.2",
+    "relatedSimTab": ""
+  },
+  {
+    "id": "econ-carry-trade",
+    "term": "FX Carry Trade",
+    "aliases": [
+      "Carry Trade",
+      "FX Carry"
+    ],
+    "regexPattern": "\\b(FX )?Carry Trade\\b",
+    "category": "ECON",
+    "level": "L2",
+    "definition": "Leveraged currency strategy borrowing low-yielding funding currencies and investing in high-yielding target currencies, exploiting empirical violations of Uncovered IRP.",
+    "formula": "R_{\\text{Carry}} = (1 + r_{\\text{target}})\\left(\\frac{S_1}{S_0}\\right) - (1 + r_{\\text{funding}})",
+    "practicalUses": [
+      "Generating systematic yield pickup during low-volatility global expansion regimes."
+    ],
+    "commonPitfalls": [
+      "Ignoring severe negative skewness (crash risk) when risk-off shocks cause rapid funding-currency appreciation."
+    ],
+    "workedNumerical": {
+      "title": "JPY/BRL Unhedged Carry",
+      "given": [
+        "Borrow JPY at 1.2%",
+        "Invest BRL at 7.2%",
+        "BRL drops -2.73%"
+      ],
+      "steps": [
+        "1.072*(29.18/30.00) - 1.012 = +3.07%"
+      ],
+      "result": "+3.07% Net Return"
+    },
+    "relatedTerms": [
+      "econ-cirp",
+      "econ-ppp"
+    ],
+    "relatedNumCode": "3.6.1",
+    "relatedSimTab": ""
+  },
+  {
+    "id": "econ-ppp",
+    "term": "Purchasing Power Parity (PPP)",
+    "aliases": [
+      "Purchasing Power Parity",
+      "PPP"
+    ],
+    "regexPattern": "\\b(Purchasing Power Parity|PPP)\\b",
+    "category": "ECON",
+    "level": "L2",
+    "definition": "Long-run exchange rate equilibrium predicting currencies with higher domestic inflation depreciate proportionally relative to lower-inflation currencies.",
+    "formula": "\\%\\Delta S_{P/B} \\approx \\pi_P - \\pi_B",
+    "practicalUses": [
+      "Setting multi-decade strategic currency anchors in Capital Market Expectations."
+    ],
+    "commonPitfalls": [
+      "Applying PPP to short-term 3-month FX trading—PPP holds only over 5–10+ year horizons."
+    ],
+    "workedNumerical": {
+      "title": "3-Year Relative PPP Path",
+      "given": [
+        "S0=1.10 USD/EUR",
+        "US pi=2.2%",
+        "EU pi=3.7%"
+      ],
+      "steps": [
+        "1.10 * (1.022/1.037)^3"
+      ],
+      "result": "1.0530 USD/EUR"
+    },
+    "relatedTerms": [
+      "econ-cirp",
+      "econ-cobb-douglas"
+    ],
+    "relatedNumCode": "",
+    "relatedSimTab": ""
+  },
+  {
+    "id": "econ-cobb-douglas",
+    "term": "Cobb-Douglas & Solow Growth",
+    "aliases": [
+      "Cobb-Douglas",
+      "Solow Steady State",
+      "Growth Accounting"
+    ],
+    "regexPattern": "\\b(Cobb[- ]Douglas|Solow Steady State|Growth Accounting)\\b",
+    "category": "ECON",
+    "level": "L2",
+    "definition": "Macroeconomic production framework decomposing potential GDP growth into Total Factor Productivity (TFP), capital deepening, and labor force growth.",
+    "formula": "\\frac{\\Delta Y}{Y} = \\frac{\\Delta A}{A} + \\alpha \\frac{\\Delta K}{K} + (1-\\alpha)\\frac{\\Delta L}{L}, \\qquad g^* = \\frac{\\theta}{1-\\alpha} + n",
+    "practicalUses": [
+      "Forecasting long-run sovereign equity growth limits and emerging-market convergence."
+    ],
+    "commonPitfalls": [
+      "Claiming higher savings permanently raises steady-state GDP growth—in Solow, savings only elevates level k*, not permanent growth!"
+    ],
+    "workedNumerical": {
+      "title": "Potential GDP Forecast",
+      "given": [
+        "TFP=1.6%",
+        "alpha=0.30",
+        "dK/K=4%",
+        "dL/L=1.2%"
+      ],
+      "steps": [
+        "1.6 + 0.30(4) + 0.70(1.2) = 3.64%"
+      ],
+      "result": "3.64% Potential Growth"
+    },
+    "relatedTerms": [
+      "econ-taylor-rule",
+      "econ-ppp"
+    ],
+    "relatedNumCode": "3.6.2",
+    "relatedSimTab": ""
+  },
+  {
+    "id": "econ-taylor-rule",
+    "term": "Taylor Rule (Policy Rate)",
+    "aliases": [
+      "Taylor Rule"
+    ],
+    "regexPattern": "\\bTaylor Rule\\b",
+    "category": "ECON",
+    "level": "Both",
+    "definition": "Central bank monetary policy prescription setting target nominal short-term rates based on neutral real rate, inflation gap, and output gap.",
+    "formula": "i^* = r_{\\text{neutral}} + \\pi + 0.5(\\pi - \\pi^*) + 0.5(y - y^*)",
+    "practicalUses": [
+      "Anticipating Fed/ECB tightening cycles and yield curve flattening shifts."
+    ],
+    "commonPitfalls": [
+      "Adding inflation gap to target inflation pi* instead of current inflation pi!"
+    ],
+    "workedNumerical": {
+      "title": "Prescribed Fed Funds Rate",
+      "given": [
+        "r*=1.5%",
+        "pi=4.0%",
+        "pi*=2.0%",
+        "y-y*=+1.0%"
+      ],
+      "steps": [
+        "1.5 + 4.0 + 0.5(2.0) + 0.5(1.0)"
+      ],
+      "result": "7.00% Target Policy Rate"
+    },
+    "relatedTerms": [
+      "econ-cobb-douglas"
+    ],
+    "relatedNumCode": "3.4.2",
+    "relatedSimTab": ""
+  },
+  {
+    "id": "corp-wacc",
+    "term": "WACC & Marginal Cost of Capital",
+    "aliases": [
+      "WACC",
+      "Weighted Average Cost of Capital"
+    ],
+    "regexPattern": "\\b(WACC|Weighted Average Cost of Capital)\\b",
+    "category": "CORP",
+    "level": "Both",
+    "definition": "After-tax blended required rate of return across debt, preferred stock, and common equity weighted by target market-value capital structure.",
+    "formula": "\\text{WACC} = w_d r_d(1-t) + w_p r_p + w_e r_e",
+    "practicalUses": [
+      "Hurdle rate for corporate NPV capital budgeting and FCFF enterprise valuation."
+    ],
+    "commonPitfalls": [
+      "Adding equity flotation costs into WACC permanently instead of deducting them upfront at t=0, or using historical book weights."
+    ],
+    "workedNumerical": {
+      "title": "Target Capital Structure WACC",
+      "given": [
+        "wd=50%",
+        "rd=6.2%",
+        "t=20%",
+        "re=11.0%"
+      ],
+      "steps": [
+        "0.5(6.2%)(0.8) + 0.5(11.0%) = 2.48% + 5.50%"
+      ],
+      "result": "WACC = 7.98%"
+    },
+    "relatedTerms": [
+      "corp-hamada",
+      "corp-mm"
+    ],
+    "relatedNumCode": "5.5.1",
+    "relatedSimTab": "corp"
+  },
+  {
+    "id": "corp-hamada",
+    "term": "Pure-Play Hamada Beta",
+    "aliases": [
+      "Hamada",
+      "Unlevered Beta",
+      "Pure-Play Method"
+    ],
+    "regexPattern": "\\b(Hamada|Unlevered Beta|Pure[- ]Play Method)\\b",
+    "category": "CORP",
+    "level": "L2",
+    "definition": "Two-step method stripping peer financial leverage out of observed equity beta to obtain pure business asset risk, then relevering for a target project's tax rate and debt-to-equity ratio.",
+    "formula": "\\beta_U = \\frac{\\beta_L}{1 + (1-t)\\frac{D}{E}}, \\qquad \\beta_{\\text{proj}} = \\beta_U\\left[1 + (1-t_P)\\left(\\frac{D}{E}\\right)_P\\right]",
+    "practicalUses": [
+      "Estimating divisional hurdle rates for conglomerates entering new business lines."
+    ],
+    "commonPitfalls": [
+      "Using the target firm's tax rate when unlevering the comparable peer—always use the peer's own (t, D/E) to unlever!"
+    ],
+    "workedNumerical": {
+      "title": "Divisional Beta Adjustment",
+      "given": [
+        "Peer beta=1.40, D/E=0.50, t=25%",
+        "Proj D/E=1.00, t=20%"
+      ],
+      "steps": [
+        "beta_U = 1.40/1.375 = 1.0182",
+        "beta_P = 1.0182 * 1.80"
+      ],
+      "result": "Project Beta = 1.833"
+    },
+    "relatedTerms": [
+      "corp-wacc",
+      "corp-mm"
+    ],
+    "relatedNumCode": "5.5.1",
+    "relatedSimTab": "corp"
+  },
+  {
+    "id": "corp-ccc",
+    "term": "Cash Conversion Cycle (CCC)",
+    "aliases": [
+      "Cash Conversion Cycle",
+      "CCC"
+    ],
+    "regexPattern": "\\bCash Conversion Cycle\\b",
+    "category": "CORP",
+    "level": "L1",
+    "definition": "Working capital efficiency metric measuring net days cash remains tied up between paying suppliers and collecting cash from customers.",
+    "formula": "CCC = DOH + DSO - DPO",
+    "practicalUses": [
+      "Evaluating short-term working capital financing needs and operational efficiency trends."
+    ],
+    "commonPitfalls": [
+      "Adding DPO instead of subtracting DPO (longer supplier payables reduce cash tied up)."
+    ],
+    "workedNumerical": {
+      "title": "Working Capital Cycle",
+      "given": [
+        "DOH=48d",
+        "DSO=39d",
+        "DPO=31d"
+      ],
+      "steps": [
+        "48 + 39 - 31"
+      ],
+      "result": "CCC = 56 Days"
+    },
+    "relatedTerms": [
+      "corp-wacc"
+    ],
+    "relatedNumCode": "5.4.1",
+    "relatedSimTab": ""
+  },
+  {
+    "id": "corp-mm",
+    "term": "Modigliani-Miller Capital Structure",
+    "aliases": [
+      "Modigliani-Miller",
+      "Static Trade-Off",
+      "Pecking Order"
+    ],
+    "regexPattern": "\\b(Modigliani[- ]Miller|Static Trade[- ]Off|Pecking Order)\\b",
+    "category": "CORP",
+    "level": "L2",
+    "definition": "Capital structure theorem proving debt adds value solely via tax shields (t*D), balanced against financial distress and agency costs in Static Trade-Off theory.",
+    "formula": "V_L = V_U + t D - PV(\\text{Distress}), \\qquad r_e = r_0 + (r_0 - r_d)(1-t)\\frac{D}{E}",
+    "practicalUses": [
+      "Optimizing corporate debt targets and explaining negative SEO stock price reactions (Pecking Order)."
+    ],
+    "commonPitfalls": [
+      "Forgetting that MM Proposition II assumes debt risk-free/constant r_d until financial distress spikes."
+    ],
+    "workedNumerical": {
+      "title": "Tax Shield vs. Distress",
+      "given": [
+        "VU=20.45M",
+        "D=8M",
+        "t=25%",
+        "Distress=450k"
+      ],
+      "steps": [
+        "20.45M + 2.00M - 0.45M"
+      ],
+      "result": "VL = 22.00M USD"
+    },
+    "relatedTerms": [
+      "corp-wacc",
+      "corp-hamada"
+    ],
+    "relatedNumCode": "5.6.1",
+    "relatedSimTab": "corp"
+  },
+  {
+    "id": "corp-ma-accretion",
+    "term": "M&A Accretion & Exchange Ratio",
+    "aliases": [
+      "Exchange Ratio",
+      "Accretive Merger",
+      "Bootstrapping Fallacy"
+    ],
+    "regexPattern": "\\b(Exchange Ratio|Bootstrapping Fallacy)\\b",
+    "category": "CORP",
+    "level": "L2",
+    "definition": "Stock-for-stock merger ratio determining shares issued per target share and whether combined post-merger EPS rises or dilutes.",
+    "formula": "ER = \\frac{P_{\\text{offer}}}{P_A}, \\qquad EPS_{\\text{post}} = \\frac{NI_A + NI_T + S_{\\text{after-tax}}}{N_A + N_T \\cdot ER}",
+    "practicalUses": [
+      "Negotiating cash vs. stock M&A deal terms and breakeven synergy targets."
+    ],
+    "commonPitfalls": [
+      "Mistaking bootstrapping (buying a low-P/E firm with high-P/E stock) for real economic value creation without synergies."
+    ],
+    "workedNumerical": {
+      "title": "Stock Swap EPS Check",
+      "given": [
+        "Acq P=72, EPS=4.50, 80M sh",
+        "Tgt Offer=54, EPS=2.40, 20M sh"
+      ],
+      "steps": [
+        "ER=0.75 (15M new sh)",
+        "408M / 95M = 4.29 USD"
+      ],
+      "result": "Breakeven Pre-Tax Synergy = 26.0M USD"
+    },
+    "relatedTerms": [
+      "corp-wacc",
+      "corp-mm"
+    ],
+    "relatedNumCode": "5.6.2",
+    "relatedSimTab": ""
+  },
+  {
+    "id": "deriv-pcp",
+    "term": "Put-Call Parity",
+    "aliases": [
+      "Put-Call Parity",
+      "Fiduciary Call",
+      "Protective Put"
+    ],
+    "regexPattern": "\\b(Put[- ]Call Parity|Fiduciary Call|Protective Put)\\b",
+    "category": "DERIV",
+    "level": "Both",
+    "definition": "Exact no-arbitrage pricing identity linking European calls, European puts, the underlying spot asset, and a risk-free zero-coupon bond at identical strike and expiry.",
+    "formula": "c_0 + \\frac{X}{(1+r)^T} = S_0 + p_0",
+    "practicalUses": [
+      "Pricing synthetic calls, puts, stocks, or risk-free bonds and exploiting arbitrage mispricings."
+    ],
+    "commonPitfalls": [
+      "Applying strict equality to American options (dividends/early exercise turn equality into inequality bounds)."
+    ],
+    "workedNumerical": {
+      "title": "Synthetic Put Arbitrage",
+      "given": [
+        "c=6.40",
+        "X=80",
+        "S=82",
+        "r=4%",
+        "T=0.5"
+      ],
+      "steps": [
+        "Fair p = 6.40 + 78.45 - 82 = 2.85 USD"
+      ],
+      "result": "Fair Put = 2.85 USD"
+    },
+    "relatedTerms": [
+      "deriv-bsm",
+      "deriv-fra"
+    ],
+    "relatedNumCode": "7.1.2",
+    "relatedSimTab": "bsm"
+  },
+  {
+    "id": "deriv-fra",
+    "term": "Forward Rate Agreement (FRA)",
+    "aliases": [
+      "Forward Rate Agreement",
+      "FRA"
+    ],
+    "regexPattern": "\\b(Forward Rate Agreement|FRA)\\b",
+    "category": "DERIV",
+    "level": "L2",
+    "definition": "OTC interest rate forward locking in a fixed borrowing/lending rate over a future reference period, settled in cash on a discounted basis at loan start.",
+    "formula": "V_t(\\text{Pay-Fix}) = NP \\cdot \\frac{(FRA_t - FRA_0)(m/360)}{1 + L_{T-t}(T_{\\text{settle}}/360)}",
+    "practicalUses": [
+      "Hedging future corporate floating-rate debt issuances or commercial loan resets."
+    ],
+    "commonPitfalls": [
+      "Forgetting to discount the FRA cash settlement from loan maturity back to settlement date (paid in advance!)."
+    ],
+    "workedNumerical": {
+      "title": "3x6 FRA Mid-Life MTM",
+      "given": [
+        "NP=10M",
+        "FRA0=4.2%",
+        "FRA_t=5.1%",
+        "90d loan, 150d disc @5%"
+      ],
+      "steps": [
+        "10M*(0.009*0.25) / (1+0.05*150/360)"
+      ],
+      "result": "+22,041 USD"
+    },
+    "relatedTerms": [
+      "deriv-pcp",
+      "deriv-swap-mtm"
+    ],
+    "relatedNumCode": "",
+    "relatedSimTab": ""
+  },
+  {
+    "id": "deriv-swap-mtm",
+    "term": "Interest & Currency Swap Valuation",
+    "aliases": [
+      "Swap Valuation",
+      "Swap Fixed Rate"
+    ],
+    "regexPattern": "\\bSwap (Valuation|Fixed Rate)\\b",
+    "category": "DERIV",
+    "level": "L2",
+    "definition": "Valuation of existing swaps via discounted bond equivalence: receive-fixed value rises when market par swap rates fall below the contract rate.",
+    "formula": "r_{\\text{fix}} = \\frac{1 - DF_n}{\\sum DF_i}, \\qquad V_{\\text{rec-fix}} = NP(r_{\\text{old}} - r_{\\text{new}})\\sum DF_i",
+    "practicalUses": [
+      "Marking OTC derivative books to market and pricing cross-currency hedges."
+    ],
+    "commonPitfalls": [
+      "Forgetting that Currency Swaps DO exchange principal notionals at initiation and maturity (unlike single-currency IRS)."
+    ],
+    "workedNumerical": {
+      "title": "25M IRS Mark-to-Market",
+      "given": [
+        "Old 2.40% semi",
+        "DF1=0.9804, DF2=0.9600"
+      ],
+      "steps": [
+        "New semi=(1-0.96)/1.9404=2.0614%",
+        "25M*(0.024-0.020614)*1.9404"
+      ],
+      "result": "+164,250 USD Value"
+    },
+    "relatedTerms": [
+      "deriv-fra",
+      "deriv-bsm"
+    ],
+    "relatedNumCode": "7.2.1",
+    "relatedSimTab": ""
+  },
+  {
+    "id": "deriv-bsm",
+    "term": "Black-Scholes-Merton & Greeks",
+    "aliases": [
+      "Black-Scholes-Merton",
+      "BSM Model",
+      "Delta Hedging",
+      "Option Greeks"
+    ],
+    "regexPattern": "\\b(Black[- ]Scholes[- ]Merton|BSM|Delta[- ]Hedg(e|ing)|Option Greeks)\\b",
+    "category": "DERIV",
+    "level": "L2",
+    "definition": "Continuous-time European option valuation framework yielding closed-form premiums alongside Delta, Gamma, Theta, Vega, and Rho sensitivities.",
+    "formula": "c = S_0 e^{-qT}N(d_1) - K e^{-rT}N(d_2), \\qquad \\Delta_c = e^{-qT}N(d_1)",
+    "practicalUses": [
+      "Dynamic delta-gamma portfolio hedging and extracting market-implied volatility."
+    ],
+    "commonPitfalls": [
+      "Confusing Delta (first derivative) with Gamma (curvature); long ATM options near expiry have peak +Gamma and peak -Theta."
+    ],
+    "workedNumerical": {
+      "title": "Short Call Book Delta Hedge",
+      "given": [
+        "S=60, K=58, r=4%, T=0.25, vol=30%",
+        "Short 50,000 calls"
+      ],
+      "steps": [
+        "d1=0.3122, Nd1=0.6226, c=4.83"
+      ],
+      "result": "Buy 31,128 Shares"
+    },
+    "relatedTerms": [
+      "deriv-pcp",
+      "deriv-binomial"
+    ],
+    "relatedNumCode": "7.3.1",
+    "relatedSimTab": "bsm"
+  },
+  {
+    "id": "deriv-binomial",
+    "term": "Binomial Option Tree (Risk-Neutral)",
+    "aliases": [
+      "Binomial Option",
+      "Risk-Neutral Probability"
+    ],
+    "regexPattern": "\\b(Binomial Option|Risk[- ]Neutral Probability)\\b",
+    "category": "DERIV",
+    "level": "Both",
+    "definition": "Discrete-time lattice pricing European and American options via no-arbitrage replication and backward induction using risk-neutral probability pi_u.",
+    "formula": "\\pi_u = \\frac{(1+r) - d}{u - d}, \\qquad V_t = \\max\\!\\left(\\text{Intrinsic}, \\; \\frac{\\pi_u V_u + (1-\\pi_u)V_d}{1+r}\\right)",
+    "practicalUses": [
+      "Checking early exercise optimality for American puts and dividend-paying calls."
+    ],
+    "commonPitfalls": [
+      "Inserting real-world expected stock return probabilities instead of risk-neutral probability pi_u."
+    ],
+    "workedNumerical": {
+      "title": "2-Step American Put",
+      "given": [
+        "S=50, X=52, u=1.2, d=0.8, r=5%"
+      ],
+      "steps": [
+        "pi_u=0.625",
+        "At S_d=40, Int=12 > Cont=9.52 (Exercise!)"
+      ],
+      "result": "American = 4.65 USD vs. European = 3.92 USD"
+    },
+    "relatedTerms": [
+      "deriv-bsm",
+      "deriv-pcp"
+    ],
+    "relatedNumCode": "7.2.2",
+    "relatedSimTab": ""
+  },
+  {
+    "id": "alt-hwm",
+    "term": "High-Water Mark & Hurdle Rate",
+    "aliases": [
+      "High-Water Mark",
+      "Hard Hurdle",
+      "Soft Hurdle"
+    ],
+    "regexPattern": "\\b(High[- ]Water Mark|Hard Hurdle|Soft Hurdle)\\b",
+    "category": "ALT",
+    "level": "Both",
+    "definition": "Hedge fund performance fee safeguards ensuring GPs collect incentive fees only on new net profits exceeding prior peak NAV (HWM) and minimum return thresholds (hurdle).",
+    "formula": "\\text{Hard Hurdle Fee} = \\max(0, [NAV_{\\text{pre}} - \\max(NAV_0, HWM) - \\text{Hurdle}] \\cdot f_{\\text{inc}})",
+    "practicalUses": [
+      "Aligning GP/LP incentives and preventing double-charging after market drawdowns."
+    ],
+    "commonPitfalls": [
+      "Applying a hard-hurdle deduction on a soft-hurdle fund—once cleared, soft hurdle taxes the ENTIRE return above HWM!"
+    ],
+    "workedNumerical": {
+      "title": "2 and 20 Hard Hurdle Fee",
+      "given": [
+        "NAV0=200M",
+        "Gross=+20% (240M)",
+        "2% mgmt on end AUM",
+        "5% hard hurdle"
+      ],
+      "steps": [
+        "After mgmt=235.2M",
+        "Excess=25.2M",
+        "Inc=5.04M"
+      ],
+      "result": "+15.08% Net LP Return"
+    },
+    "relatedTerms": [
+      "alt-pe-multiples",
+      "alt-vc-method"
+    ],
+    "relatedNumCode": "8.1.1",
+    "relatedSimTab": "alts"
+  },
+  {
+    "id": "alt-pe-multiples",
+    "term": "PE Multiples (DPI, RVPI, TVPI)",
+    "aliases": [
+      "DPI",
+      "RVPI",
+      "TVPI",
+      "MOIC"
+    ],
+    "regexPattern": "\\b(DPI|RVPI|TVPI|MOIC)\\b",
+    "category": "ALT",
+    "level": "Both",
+    "definition": "Private equity fund performance multiples measuring realized cash distributions (DPI), unrealized residual NAV (RVPI), and total value (TVPI) relative to Paid-In Capital.",
+    "formula": "TVPI = DPI + RVPI = \\frac{\\text{Cumulative Distributions} + \\text{Residual NAV}}{\\text{Paid-In Capital}}",
+    "practicalUses": [
+      "Tracking J-curve progression across PE fund vintage years against peer quartiles."
+    ],
+    "commonPitfalls": [
+      "Dividing by Committed Capital instead of Paid-In (drawn) Capital!"
+    ],
+    "workedNumerical": {
+      "title": "Buyout Fund Progression",
+      "given": [
+        "Committed=100M",
+        "Paid-In=75M",
+        "Dist=54M",
+        "NAV=48M"
+      ],
+      "steps": [
+        "DPI=54/75=0.72",
+        "RVPI=48/75=0.64"
+      ],
+      "result": "TVPI = 1.36x"
+    },
+    "relatedTerms": [
+      "alt-hwm",
+      "alt-vc-method"
+    ],
+    "relatedNumCode": "8.1.2",
+    "relatedSimTab": "alts"
+  },
+  {
+    "id": "alt-vc-method",
+    "term": "Venture Capital Valuation Method",
+    "aliases": [
+      "Venture Capital Method",
+      "Post-Money Valuation",
+      "Pre-Money Valuation"
+    ],
+    "regexPattern": "\\b(Venture Capital Method|Post[- ]Money Valuation|Pre[- ]Money Valuation)\\b",
+    "category": "ALT",
+    "level": "L2",
+    "definition": "Startup valuation discounting projected exit value at a high VC target IRR, then adjusting initial ownership upward for anticipated future funding dilution.",
+    "formula": "\\text{Post} = \\frac{\\text{Exit TV}}{(1+r)^T}, \\qquad f_{\\text{init}} = \\frac{\\text{Inv}/\\text{Post}}{1 - \\text{Future Dilution}}",
+    "practicalUses": [
+      "Pricing Series A/B term sheets with high binary startup failure risk."
+    ],
+    "commonPitfalls": [
+      "Forgetting to divide exit ownership by (1 - dilution) when future financing rounds occur before exit!"
+    ],
+    "workedNumerical": {
+      "title": "Series A w/ 20% Dilution",
+      "given": [
+        "Exit=150M Yr4",
+        "IRR=35%",
+        "Inv=10M",
+        "Dil=20%"
+      ],
+      "steps": [
+        "Post=45.16M",
+        "Exit%=22.14%",
+        "Init%=22.14%/0.8"
+      ],
+      "result": "27.68% Initial Equity Stake"
+    },
+    "relatedTerms": [
+      "alt-pe-multiples",
+      "alt-hwm"
+    ],
+    "relatedNumCode": "8.2.1",
+    "relatedSimTab": "alts"
+  },
+  {
+    "id": "alt-reit-affo",
+    "term": "REIT NAVPS, FFO & AFFO",
+    "aliases": [
+      "AFFO",
+      "FFO",
+      "NAVPS"
+    ],
+    "regexPattern": "\\b(AFFO|FFO|NAVPS)\\b",
+    "category": "ALT",
+    "level": "L2",
+    "definition": "Public REIT cash flow and intrinsic net asset value metrics reversing non-cash real estate depreciation and accounting straight-line rent distortions.",
+    "formula": "AFFO = (NI + \\text{RE Depr} - \\text{Property Gains}) - \\text{Straight-Line Rent} - \\text{Maint Capex}",
+    "practicalUses": [
+      "Valuing REITs via P/AFFO multiples and comparing market prices against private market NAVPS."
+    ],
+    "commonPitfalls": [
+      "Forgetting to subtract recurring maintenance capex and leasing commissions when moving from FFO to AFFO."
+    ],
+    "workedNumerical": {
+      "title": "Industrial REIT Valuation",
+      "given": [
+        "NI=32M",
+        "Depr=22M",
+        "Gain=4M",
+        "SLRent=2.5M",
+        "Capex=7.5M"
+      ],
+      "steps": [
+        "FFO=50M",
+        "AFFO=50-2.5-7.5=40M"
+      ],
+      "result": "AFFO = 40M (1.60 USD/sh)"
+    },
+    "relatedTerms": [
+      "alt-roll-yield"
+    ],
+    "relatedNumCode": "8.3.1",
+    "relatedSimTab": ""
+  },
+  {
+    "id": "alt-roll-yield",
+    "term": "Commodity Roll Return & Backwardation",
+    "aliases": [
+      "Roll Return",
+      "Roll Yield",
+      "Backwardation",
+      "Contango"
+    ],
+    "regexPattern": "\\b(Roll (Return|Yield)|Backwardation|Contango)\\b",
+    "category": "ALT",
+    "level": "Both",
+    "definition": "Return earned from rolling expiring commodity futures contracts into the next contract month—positive in backwardation (scarce supply/high convenience yield) and negative in contango.",
+    "formula": "\\text{Total Return} = \\text{Collateral (T-Bill)} + \\text{Price Return} + \\text{Roll Return}, \\quad \\text{Roll} \\approx \\frac{F_{\\text{near}} - F_{\\text{far}}}{F_{\\text{near}}}",
+    "practicalUses": [
+      "Decomposing commodity ETF return attribution beyond spot price moves."
+    ],
+    "commonPitfalls": [
+      "Confusing futures market backwardation (F_0 < S_0) with negative price trend—backwardation actually generates POSITIVE roll yield for long futures holders!"
+    ],
+    "workedNumerical": {
+      "title": "Crude Oil Futures Attribution",
+      "given": [
+        "T-bill=4.5%",
+        "Spot=+3.0%",
+        "Near=72, Far=70.5"
+      ],
+      "steps": [
+        "Roll=(72-70.5)/72=+2.08%"
+      ],
+      "result": "+9.58% Total Return"
+    },
+    "relatedTerms": [
+      "alt-reit-affo"
+    ],
+    "relatedNumCode": "",
+    "relatedSimTab": ""
   }
 ]

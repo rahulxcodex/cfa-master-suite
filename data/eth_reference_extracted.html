@@ -1,0 +1,1019 @@
+<div class="top-controls">
+  <button class="btn-ctrl" onclick="toggleTheme()">🌓 Switch Theme</button>
+  <button class="btn-ctrl" onclick="window.print()">🖨️ Print / Save as PDF</button>
+</div>
+
+<div class="doc-hero">
+  <h1>Ethical and Professional Standards (CFA&reg; CBOK I)</h1>
+  <p>Complete CFA&reg; Level 1 &amp; Level 2 Master Reference aligned with the 12th Edition <em>Standards of Practice Handbook</em> and 2026–2027 per-standard curriculum structure. Includes all 7 Standards &amp; 23 Sub-Standards, Ethical Decision-Making Framework, GIPS&reg;, Asset Manager Code&trade;, 50 interactive Chapter Exercises (25 Solved + 25 Unsolved Self-Test), plus direct links to 450 L1/L2 Ethics Q-Bank scenarios.</p>
+  <div class="meta-tags">
+    <span class="badge badge-amber">Weight: 10%–15% (L1 &amp; L2)</span>
+    <span class="badge badge-blue">Standards I–VII (23 Sub-Standards)</span>
+    <span class="badge badge-emerald">50 Chapter Exercises + 450 Q-Bank</span>
+    <span class="badge badge-purple">Ethics Adjustment Tiebreaker</span>
+  </div>
+</div>
+
+<div class="card" style="margin-top: 15px; margin-bottom: 25px;">
+  <div class="card-title">⚖️ Quick Navigation: Ethics Modules &amp; Practice Vault</div>
+  <div class="fsa-nav-bar">
+    <a class="fsa-nav-btn" href="#eth-m1-code">01. Code &amp; Framework</a>
+    <a class="fsa-nav-btn" href="#eth-m2-std1">02. Std I: Professionalism</a>
+    <a class="fsa-nav-btn" href="#eth-m3-std2">03. Std II: Market Integrity</a>
+    <a class="fsa-nav-btn" href="#eth-m4-std3">04. Std III: Duties to Clients</a>
+    <a class="fsa-nav-btn" href="#eth-m5-std4">05. Std IV: Duties to Employers</a>
+    <a class="fsa-nav-btn" href="#eth-m6-std5">06. Std V: Analysis &amp; Actions</a>
+    <a class="fsa-nav-btn" href="#eth-m7-std6">07. Std VI: Conflicts</a>
+    <a class="fsa-nav-btn" href="#eth-m8-std7">08. Std VII: CFA Member/Candidate</a>
+    <a class="fsa-nav-btn" href="#eth-m9-gips">09. GIPS &amp; Asset Manager Code</a>
+    <a class="fsa-nav-btn" href="#eth-m10-matrix" style="color: var(--accent-emerald); font-weight: 700;">10. Compliance Matrix &amp; 450 Q-Bank</a>
+  </div>
+  <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:10px;">
+    <button type="button" class="btn" onclick="jumpToSubjectBank(1, 'Ethical and Professional Standards')">📝 Launch 270 L1 Ethics MCQs</button>
+    <button type="button" class="btn btn-secondary" onclick="jumpToSubjectBank(2, 'Ethical and Professional Standards')">📑 Launch 30 L2 Ethics Vignettes (180 Qs)</button>
+    <button type="button" class="filter-btn" onclick="toggleChapterExercises('eth-reference', false)">🙈 Unsolved Self-Test Mode (Hide All Solutions)</button>
+    <button type="button" class="filter-btn" onclick="toggleChapterExercises('eth-reference', true)">✅ Solved Study Mode (Reveal All Solutions)</button>
+  </div>
+</div>
+
+<section id="eth-m1-code" class="notes-chapter">
+  <h2 class="section-heading"><span class="num">01.</span> Ethics, Trust &amp; The CFA Institute Code of Ethics</h2>
+  <p>Capital markets depend on public trust. When investors lose confidence in fair dealing and fiduciary integrity, risk premiums spike, liquidity dries up, and capital allocation becomes inefficient. The CFA Institute Professional Conduct Program applies uniformly to all CFA charterholders, regular/affiliate members, and CFA Program candidates worldwide.</p>
+
+  <h3 class="subheading">The Six Tenets of the Code of Ethics</h3>
+  <ol>
+    <li><strong>Integrity, Competence, Diligence &amp; Respect</strong>: Act with integrity, competence, diligence, respect, and in an ethical manner with the public, clients, prospective clients, employers, employees, colleagues in the investment profession, and other participants in global capital markets.</li>
+    <li><strong>Client &amp; Profession Primacy</strong>: Place the integrity of the investment profession and the interests of clients above their own personal interests.</li>
+    <li><strong>Independent Professional Judgment</strong>: Use reasonable care and exercise independent professional judgment when conducting investment analysis, making investment recommendations, taking investment actions, and engaging in other professional activities.</li>
+    <li><strong>Encourage Ethical Culture</strong>: Practice and encourage others to practice in a professional and ethical manner that will reflect credit on themselves and the profession.</li>
+    <li><strong>Capital Market Integrity</strong>: Promote the integrity and viability of the global capital markets for the ultimate benefit of society.</li>
+    <li><strong>Maintain &amp; Improve Competence</strong>: Maintain and improve their professional competence and strive to maintain and improve the competence of other investment professionals.</li>
+  </ol>
+
+  <h3 class="subheading">Ethical Decision-Making Framework (4-Step Process)</h3>
+  <div class="table-container">
+    <table>
+      <thead><tr><th>Step</th><th>Core Diagnostic Question</th><th>Exam Application</th></tr></thead>
+      <tbody>
+        <tr><td><strong>1. Identify</strong></td><td>Relevant facts, stakeholders, duties owed, conflicts of interest?</td><td>Distinguish fiduciary clients, employer, public, and regulators.</td></tr>
+        <tr><td><strong>2. Consider</strong></td><td>Situational influences (authority, time pressure, peer bias) &amp; alternative actions?</td><td>Identify subtle behavioral rationalizations ("everyone does it").</td></tr>
+        <tr><td><strong>3. Decide &amp; Act</strong></td><td>Which action upholds client interests, market integrity, and the strictest applicable rule?</td><td>Choose concrete escalation, disclosure, recusal, or refusal.</td></tr>
+        <tr><td><strong>4. Reflect</strong></td><td>Did outcome align with Code? Are stronger compliance controls needed?</td><td>Institutionalize written policies and compliance surveillance.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="exercise-toolbar" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin: 18px 0 10px 0; padding:10px 14px; background:var(--bg-secondary); border:1px solid var(--border-color); border-radius:6px;">
+    <span style="font-weight:700; font-size:13.5px; color:var(--accent-amber);">Module 01 Chapter Exercises (Code & Framework — 5 Drills)</span>
+    <div style="display:flex; gap:8px;">
+      <button type="button" class="filter-btn" onclick="toggleChapterExercises('eth-m1-code', false)">Hide All (Unsolved Mode)</button>
+      <button type="button" class="filter-btn" onclick="toggleChapterExercises('eth-m1-code', true)">Reveal All (Solved Mode)</button>
+    </div>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-1" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 1.1 (Solved): Client Primacy vs. Firm Profitability</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">Code of Ethics</span>
+        <span class="badge-diff-easy" style="font-size:10px;">SOLVED WALKTHROUGH</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: An analyst discovers that a high-margin proprietary structured note heavily promoted by her firm carries higher hidden embedded fees and lower expected Sharpe ratio than a plain-vanilla Treasury ETF for a conservative retiree. Her manager reminds her that firm bonuses depend on structured note sales. What does the Code of Ethics require?</p></div>
+    <details class="exercise-solution-details" open style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Solution &amp; Step-by-Step Ruling (Expanded — Click to Collapse)</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Ruling: Recommend the Treasury ETF (or decline to recommend the structured note).</strong></p><p><strong>Reasoning</strong>: Tenet 2 of the Code of Ethics requires placing the integrity of the profession and client interests above personal and employer short-term financial interests. Recommending an inferior product for bonus compensation also violates Standard III(A) Loyalty, Prudence, and Care and Standard III(C) Suitability.</p></div>
+    </details>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-2" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 1.2 (Unsolved): Passive Acquiescence & Encouraging Ethics</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">Code of Ethics</span>
+        <span class="badge-diff-moderate" style="font-size:10px;">UNSOLVED SELF-TEST</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: During a team meeting, a junior analyst notices a senior colleague altering backtest start dates to hide a severe drawdown period before pitching a pension fund. The junior analyst stays silent because she did not personally prepare the slides. Has the junior analyst met her obligations under the Code of Ethics?</p></div>
+    <details class="exercise-solution-details" style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Click to Reveal Answer, Derivation &amp; Exam Ruling</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Ruling: No — staying silent fails Tenet 4 and risks dissociation obligations under Standard I(A).</strong></p><p><strong>Reasoning</strong>: Tenet 4 requires members and candidates to practice and encourage others to practice ethically. Under Standard I(A) Knowledge of the Law, knowingly allowing oneself to be associated with a misleading client presentation requires escalating to compliance/supervisors and dissociating from the activity if unaddressed.</p></div>
+    </details>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-3" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 1.3 (Solved): Professional Conduct Program (PCP) Jurisdiction</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">PCP Jurisdiction</span>
+        <span class="badge-diff-easy" style="font-size:10px;">SOLVED WALKTHROUGH</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: A registered CFA Level II candidate commits wire fraud unrelated to her investment job and receives a civil regulatory settlement without admitting guilt. Can CFA Institute's Professional Conduct Program sanction her?</p></div>
+    <details class="exercise-solution-details" open style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Solution &amp; Step-by-Step Ruling (Expanded — Click to Collapse)</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Ruling: Yes.</strong></p><p><strong>Reasoning</strong>: All CFA candidates fall under PCP jurisdiction upon registration. Standard I(D) Misconduct covers any act involving dishonesty, fraud, or deceit reflecting adversely on professional reputation, integrity, or competence—even outside direct investment employment—and civil regulatory findings trigger PCP review.</p></div>
+    </details>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-4" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 1.4 (Unsolved): Situational Influences in Decision Framework</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">Decision Framework</span>
+        <span class="badge-diff-moderate" style="font-size:10px;">UNSOLVED SELF-TEST</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: An analyst under intense quarter-end pressure skips verifying third-party revenue data because a senior MD vouches for the vendor. In the CFA Ethical Decision-Making Framework, which element is most directly compromising judgment?</p></div>
+    <details class="exercise-solution-details" style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Click to Reveal Answer, Derivation &amp; Exam Ruling</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Ruling: Situational influences (time pressure and obedience to authority).</strong></p><p><strong>Reasoning</strong>: Step 2 (Consider) specifically warns practitioners to recognize situational influences—such as deference to authority figures, peer pressure, and deadline compression—that override independent professional judgment (Tenet 3) and Standard V(A) Diligence and Reasonable Basis.</p></div>
+    </details>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-5" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 1.5 (Unsolved): Competence Maintenance Requirement</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">Code & Std I(E)</span>
+        <span class="badge-diff-moderate" style="font-size:10px;">UNSOLVED SELF-TEST</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: A portfolio manager with 20 years of equity experience begins managing complex credit derivatives without completing prior study or retaining qualified quantitative support. Which Code of Ethics tenet and Standard are violated?</p></div>
+    <details class="exercise-solution-details" style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Click to Reveal Answer, Derivation &amp; Exam Ruling</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Ruling: Code Tenet 6 (Maintain and improve professional competence) and Standard I(E) Competence / Standard III(C) Suitability &amp; V(A) Diligence.</strong></p><p><strong>Reasoning</strong>: Added in the 12th Edition Handbook, Standard I(E) Competence explicitly mandates maintaining the knowledge and skills necessary to fulfill professional responsibilities competently.</p></div>
+    </details>
+  </div></section>
+<section id="eth-m2-std1" class="notes-chapter">
+  <h2 class="section-heading"><span class="num">02.</span> Standard I: Professionalism (I(A)–I(E))</h2>
+  <div class="table-container">
+    <table>
+      <thead><tr><th>Sub-Standard</th><th>Core Rule</th><th>Critical Exam Distinctions &amp; Compliance Procedures</th></tr></thead>
+      <tbody>
+        <tr><td><strong>I(A) Knowledge of the Law</strong></td><td>Understand and comply with all applicable laws, rules, regulations, and the Code &amp; Standards.</td><td><strong>Strictest Law Applies:</strong> When local law and Code conflict, follow whichever is <em>stricter</em>. If local law requires silence vs Code requiring disclosure, follow law if mandatory, else follow Code. Upon discovering a firm violation: (1) confront wrongdoer, (2) escalate to supervisor/compliance, (3) <strong>dissociate</strong> (remove name from reports, reassign, or resign). Whistleblowing to regulators is NOT mandatory under I(A) unless required by law, though permissible to protect clients/market integrity.</td></tr>
+        <tr><td><strong>I(B) Independence &amp; Objectivity</strong></td><td>Use reasonable care and judgment to achieve and maintain independence and objectivity.</td><td>Modest business meals/courtesies are acceptable; <strong>lavish travel, luxury gifts, or contingent compensation</strong> (bonuses tied to banking deal closure or stock price performance) compromise objectivity. Issuer-paid research is permitted ONLY with flat-fee (non-contingent) compensation and prominent disclosure. Reject IPO allocations in oversubscribed hot issues for personal accounts.</td></tr>
+        <tr><td><strong>I(C) Misrepresentation</strong></td><td>Do not knowingly make any misrepresentations relating to investment analysis, recommendations, actions, or other professional activities.</td><td>Covers: (1) omitting/cherry-picking benchmarks, (2) guaranteeing investment returns on risky assets, (3) <strong>plagiarism</strong> (copying research/models without attribution—even internal firm research if claiming personal authorship, or public data beyond standard factual attribution like S&amp;P/World Bank), (4) misstating AI/third-party model authorship or qualifications.</td></tr>
+        <tr><td><strong>I(D) Misconduct</strong></td><td>Do not engage in any professional conduct involving dishonesty, fraud, or deceit or commit any act reflecting adversely on professional reputation, integrity, or competence.</td><td>Includes intoxication on the job, personal tax fraud, falsifying expense reports, cheating, or criminal acts. Does <em>not</em> cover honest investment mistakes or peaceful political civil disobedience unrelated to integrity/trust.</td></tr>
+        <tr><td><strong>I(E) Competence</strong> <em>(12th Ed.)</em></td><td>Act with and maintain the competence necessary to fulfill professional responsibilities.</td><td>Must possess requisite skills before accepting mandates (e.g., AI/crypto/options/ESG models) and engage in continuing professional development.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card" style="background: rgba(59, 130, 246, 0.05); border-left: 4px solid var(--accent-blue); margin: 16px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-blue);">Solved Case Study: Standard I(A) Strictest-Law Rule &amp; Dissociation</h4>
+    <p><strong>Facts</strong>: Maya Lin, CFA, works in Country X where insider trading by non-officers is not illegal, and local privacy statutes forbid disclosing client tax IDs. Her supervisor asks her to trade on a tipped earnings release before publication and sign a marketing brochure claiming guaranteed 12% annual returns.</p><p><strong>Ruling</strong>: (1) Maya must <strong>refuse to trade</strong> because Standard II(A) is stricter than Country X's permissive insider trading law (Standard I(A) Strictest Rule). (2) She must refuse to sign the brochure (Standard I(C) prohibits guaranteeing equity/risky returns) and escalate to compliance; if the firm proceeds anyway, she must <strong>dissociate</strong> in writing from the brochure and team.</p>
+  </div>
+  <div class="exercise-toolbar" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin: 18px 0 10px 0; padding:10px 14px; background:var(--bg-secondary); border:1px solid var(--border-color); border-radius:6px;">
+    <span style="font-weight:700; font-size:13.5px; color:var(--accent-amber);">Module 02 Chapter Exercises (Standard I — 6 Drills)</span>
+    <div style="display:flex; gap:8px;">
+      <button type="button" class="filter-btn" onclick="toggleChapterExercises('eth-m2-std1', false)">Hide All (Unsolved Mode)</button>
+      <button type="button" class="filter-btn" onclick="toggleChapterExercises('eth-m2-std1', true)">Reveal All (Solved Mode)</button>
+    </div>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-6" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 2.1 (Solved): Luxury Helicopter Travel Paid by Issuer</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">Std I(B)</span>
+        <span class="badge-diff-easy" style="font-size:10px;">SOLVED WALKTHROUGH</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: A mining CEO invites equity analyst Priya Nair to inspect a remote mine in Chile and pays for her commercial airfare, 5-star hotel, and helicopter transfer because commercial transit to the site does not exist. Has Priya violated Standard I(B)?</p></div>
+    <details class="exercise-solution-details" open style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Solution &amp; Step-by-Step Ruling (Expanded — Click to Collapse)</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Ruling: Violates I(B) regarding the 5-star luxury hotel and airfare if commercial options existed, though strictly necessary remote site transport (helicopter) where no commercial option exists is permitted if modest.</strong></p><p><strong>Compliance Rule</strong>: Best practice per CFA Guidance is for Priya's <em>firm</em> to pay commercial airfare and standard lodging; accepting luxury travel or hospitality from a covered issuer compromises independence.</p></div>
+    </details>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-7" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 2.2 (Unsolved): Attributing a Retired Colleague's Quantitative Model</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">Std I(C)</span>
+        <span class="badge-diff-moderate" style="font-size:10px;">UNSOLVED SELF-TEST</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: After a senior quant leaves the firm, analyst David inherits her proprietary factor model, updates the backtest window with 2025 data, and publishes a client whitepaper listing only himself as creator without mentioning the model's origin. Is David compliant with Standard I(C)?</p></div>
+    <details class="exercise-solution-details" style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Click to Reveal Answer, Derivation &amp; Exam Ruling</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Ruling: Violation of Standard I(C) Misrepresentation (Plagiarism).</strong></p><p><strong>Reasoning</strong>: Even within the same firm, if a named author is credited on external or client-facing work, failing to acknowledge the original creator of the proprietary model constitutes plagiarism. (Factual statistical data from government agencies/standard exchanges does not require individual citation, but models and analytical conclusions do.)</p></div>
+    </details>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-8" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 2.3 (Solved): Issuer-Paid Research with Stock Warrants</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">Std I(B)</span>
+        <span class="badge-diff-easy" style="font-size:10px;">SOLVED WALKTHROUGH</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: Small-cap biotech firm NovaGene hires independent analyst firm AlphaScope for paid research coverage. AlphaScope accepts a 25,000 USD flat cash retainer plus 10,000 out-of-the-money call warrants on NovaGene stock. How should CFA Institute evaluate this arrangement?</p></div>
+    <details class="exercise-solution-details" open style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Solution &amp; Step-by-Step Ruling (Expanded — Click to Collapse)</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Ruling: Violates Standard I(B) Independence and Objectivity.</strong></p><p><strong>Reasoning</strong>: Flat-fee cash retainers for issuer-paid research are permissible with full disclosure, because compensation does not depend on bullish recommendations or share price rises. Accepting equity warrants ties analyst compensation directly to upward stock price movement, creating an unacceptable incentive to issue biased bullish reports.</p></div>
+    </details>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-9" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 2.4 (Unsolved): Whistleblowing vs. Resignation Under I(A)</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">Std I(A)</span>
+        <span class="badge-diff-moderate" style="font-size:10px;">UNSOLVED SELF-TEST</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: Analyst Carlos discovers his portfolio manager is fabricating municipal bond valuations. Carlos reports the issue to the Chief Compliance Officer, who tells him to ignore it. Local securities law does not require junior employees to notify regulators. Under Standard I(A), what is Carlos's minimum required action?</p></div>
+    <details class="exercise-solution-details" style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Click to Reveal Answer, Derivation &amp; Exam Ruling</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Ruling: Dissociate from the activity immediately (and consider leaving the firm if the systemic violation continues).</strong></p><p><strong>Reasoning</strong>: Standard I(A) requires dissociation from ongoing violations when internal escalation fails. Reporting to external regulators is encouraged when legal and protective of clients, or required only if local law mandates reporting, whereas dissociation is always mandatory.</p></div>
+    </details>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-10" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 2.5 (Solved): Guaranteed Returns on Bank Certificates vs. Fixed-Income Funds</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">Std I(C)</span>
+        <span class="badge-diff-easy" style="font-size:10px;">SOLVED WALKTHROUGH</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: Advisor Ben tells a prospective client: 'Our Sovereign Treasury Money Market Fund guarantees a minimum 4.5% return with zero possibility of principal loss.' Is Ben compliant?</p></div>
+    <details class="exercise-solution-details" open style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Solution &amp; Step-by-Step Ruling (Expanded — Click to Collapse)</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Ruling: Violates Standard I(C) Misrepresentation.</strong></p><p><strong>Reasoning</strong>: While sovereign T-bills backed by government taxing power carry minimal default risk, a mutual/money market fund fluctuates in yield and market price (can theoretically 'break the buck'), so guaranteeing future variable fund returns is a misrepresentation.</p></div>
+    </details>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-11" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 2.6 (Unsolved): Unrelated Personal Misconduct vs. Minor Traffic Violation</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">Std I(D)</span>
+        <span class="badge-diff-moderate" style="font-size:10px;">UNSOLVED SELF-TEST</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: Charterholder A receives two speeding tickets in one year. Charterholder B files a knowingly false personal insurance claim for storm damage. Who violates Standard I(D) Misconduct?</p></div>
+    <details class="exercise-solution-details" style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Click to Reveal Answer, Derivation &amp; Exam Ruling</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Ruling: Only Charterholder B violates Standard I(D).</strong></p><p><strong>Reasoning</strong>: Standard I(D) covers acts of dishonesty, fraud, or deceit reflecting adversely on professional reputation/integrity (insurance fraud qualifies). Minor non-fraudulent traffic infractions do not reflect on honesty or professional competence.</p></div>
+    </details>
+  </div></section>
+<section id="eth-m3-std2" class="notes-chapter">
+  <h2 class="section-heading"><span class="num">03.</span> Standard II: Integrity of Capital Markets (II(A)–II(B))</h2>
+  <ul>
+    <li><strong>II(A) Material Nonpublic Information (MNPI)</strong>: Members and candidates who possess MNPI that could affect the value of an investment must not act or cause others to act on the information.
+      <ul>
+        <li><em>Materiality</em>: Information a reasonable investor would want to know before investing, or likely to significantly affect market price (earnings surprises, M&amp;A, FDA approval, major CEO resignation, or an influential analyst's own unpublished rating change!).</li>
+        <li><em>Nonpublic</em>: Not yet disseminated in a manner making it generally available to the marketplace (a selective conference call for 15 top clients is still nonpublic; a press release on Bloomberg/SEC EDGAR is public).</li>
+        <li><em>Mosaic Theory (Permitted!)</em>: Combining <strong>public information</strong> + <strong>nonmaterial nonpublic information</strong> (e.g., interviewing store managers, counting trucks in a factory parking lot, surveying suppliers) to reach a perceptive analytical conclusion is <em>legal and encouraged</em>—even if the resulting conclusion is material to your thesis!</li>
+        <li><em>Inadvertent Receipt</em>: If you accidentally receive MNPI (e.g., overhearing executives in an elevator), do NOT trade or tip anyone; report to Compliance to place the security on the Restricted List and encourage public dissemination.</li>
+        <li><em>Firewalls</em>: Separate Investment Banking/Corporate Finance from Research &amp; Trading via Watch Lists, Restricted Lists, physical/IT barriers, and chaperoned wall-crossings.</li>
+      </ul>
+    </li>
+    <li><strong>II(B) Market Manipulation</strong>: Must not engage in practices that distort prices or artificially inflate trading volume with the intent to mislead market participants.
+      <ul>
+        <li><em>Information-Based Manipulation</em>: Spreading false rumors on social media, short-and-distort, pump-and-dump, fake press releases.</li>
+        <li><em>Transaction-Based Manipulation</em>: Wash trades (buying/selling to oneself to fake volume), spoofing/layering (placing limit orders intending to cancel before execution), cornering a market/squeeze, marking the close (window dressing near closing bell).</li>
+        <li><em>Permitted Trading (NOT Manipulation)</em>: Legitimate tax-loss harvesting, executing arbitrage between spot and futures, or liquidating a genuine large position (even if it moves price) when motivated by genuine economic/portfolio objectives rather than intent to deceive.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <div class="card" style="background: rgba(210, 153, 34, 0.06); border-left: 4px solid var(--accent-amber); margin: 16px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-amber);">Solved Case Study: Mosaic Theory vs. Selective Disclosure</h4>
+    <p><strong>Facts</strong>: Retail analyst Elena visits 30 regional warehouses of MegaMart, interviews store clerks about inventory shelves (nonmaterial operational feedback), tracks public satellite parking-lot imagery, and calls MegaMart's CFO. During the call, the CFO slips and tells Elena: 'Between us, Q3 EPS will beat consensus by 0.45 USD and we are acquiring RivalCo next Tuesday.'</p><p><strong>Ruling</strong>: Up until the CFO's call, Elena was executing valid <strong>Mosaic Theory</strong>. However, once the CFO disclosed upcoming earnings beat and an unannounced M&amp;A deal, Elena possesses <strong>MNPI</strong>. Trading or publishing her report prior to public announcement violates <strong>Standard II(A)</strong>. She must immediately notify Compliance, place MegaMart on the Restricted List, and encourage MegaMart to issue a public press release.</p>
+  </div>
+  <div class="exercise-toolbar" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin: 18px 0 10px 0; padding:10px 14px; background:var(--bg-secondary); border:1px solid var(--border-color); border-radius:6px;">
+    <span style="font-weight:700; font-size:13.5px; color:var(--accent-amber);">Module 03 Chapter Exercises (Standard II — 6 Drills)</span>
+    <div style="display:flex; gap:8px;">
+      <button type="button" class="filter-btn" onclick="toggleChapterExercises('eth-m3-std2', false)">Hide All (Unsolved Mode)</button>
+      <button type="button" class="filter-btn" onclick="toggleChapterExercises('eth-m3-std2', true)">Reveal All (Solved Mode)</button>
+    </div>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-12" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 3.1 (Solved): Trading on a Colleague's Forthcoming Upgrade</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">Std II(A) / VI(B)</span>
+        <span class="badge-diff-easy" style="font-size:10px;">SOLVED WALKTHROUGH</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: Trader Tom sees Star Analyst Sarah walking toward the morning meeting carrying a draft report upgrading TechCorp from Hold to Strong Buy. Before the firm releases the report to clients, Tom buys TechCorp shares for the firm's proprietary desk and his own personal account. Did Tom violate Standard II(A), II(B), or VI(B)?</p></div>
+    <details class="exercise-solution-details" open style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Solution &amp; Step-by-Step Ruling (Expanded — Click to Collapse)</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Ruling: Violates Standard II(A) (and VI(B) Priority of Transactions &amp; IV(A) Loyalty).</strong></p><p><strong>Reasoning</strong>: An influential firm's forthcoming rating change is considered <em>material nonpublic market-moving information</em> until disseminated to clients. Trading ahead of client distribution violates both MNPI rules (or at minimum Priority of Transactions VI(B) and Fiduciary Duty III(A)).</p></div>
+    </details>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-13" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 3.2 (Unsolved): Legitimate Arbitrage vs. Transaction Manipulation</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">Std II(B)</span>
+        <span class="badge-diff-moderate" style="font-size:10px;">UNSOLVED SELF-TEST</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: Quantitative hedge fund QuantEdge detects that an ETF trades 1.8% above its intraday NAV. QuantEdge simultaneously shorts the ETF and buys the underlying constituent basket, moving prices back to parity while generating high trading volume. Does this violate Standard II(B)?</p></div>
+    <details class="exercise-solution-details" style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Click to Reveal Answer, Derivation &amp; Exam Ruling</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Ruling: No violation.</strong></p><p><strong>Reasoning</strong>: Standard II(B) prohibits trading intended to <em>mislead market participants</em> by distorting prices or creating artificial volume. Genuine economic arbitrage exploits mispricing and improves market efficiency, so it is completely compliant.</p></div>
+    </details>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-14" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 3.3 (Solved): Expert Network Supplier Survey</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">Std II(A) Mosaic</span>
+        <span class="badge-diff-easy" style="font-size:10px;">SOLVED WALKTHROUGH</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: Analyst Ken hires an expert network to interview 12 independent smartphone glass suppliers regarding general industry order momentum. None of the suppliers hold confidentiality agreements with Apple or possess aggregate Apple financial figures. Ken infers Apple iPhone unit sales will beat expectations and buys Apple stock for client portfolios. Compliant?</p></div>
+    <details class="exercise-solution-details" open style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Solution &amp; Step-by-Step Ruling (Expanded — Click to Collapse)</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Ruling: Compliant (Valid Mosaic Theory).</strong></p><p><strong>Reasoning</strong>: Each supplier provides nonmaterial, non-confidential observations about its own business. Synthesizing independent industry data points with public market data to form a material investment conclusion is textbook Mosaic Theory—no MNPI breach occurred.</p></div>
+    </details>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-15" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 3.4 (Unsolved): Wash Trading to Qualify for Index Inclusion</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">Std II(B)</span>
+        <span class="badge-diff-moderate" style="font-size:10px;">UNSOLVED SELF-TEST</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: A boutique broker executes simultaneous buy and sell orders between two accounts controlled by the same parent company on a thinly traded small-cap stock solely to boost daily reported volume above the minimum threshold required for Russell index inclusion. Which standard is violated?</p></div>
+    <details class="exercise-solution-details" style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Click to Reveal Answer, Derivation &amp; Exam Ruling</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Ruling: Violates Standard II(B) Market Manipulation (and I(A) Knowledge of the Law / I(D) Misconduct).</strong></p><p><strong>Reasoning</strong>: Executing matched orders / wash trades with no change in beneficial ownership to simulate liquidity and trigger index inclusion is transaction-based market manipulation.</p></div>
+    </details>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-16" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 3.5 (Solved): Selective Social Media Posting as Public Dissemination</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">Std II(A)</span>
+        <span class="badge-diff-easy" style="font-size:10px;">SOLVED WALKTHROUGH</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: A biotech CEO posts preliminary Phase III trial success exclusively in a private Discord server with 200 VIP paid subscribers 3 hours before filing an 8-K press release. A CFA candidate in that Discord server trades on the post immediately. Violation?</p></div>
+    <details class="exercise-solution-details" open style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Solution &amp; Step-by-Step Ruling (Expanded — Click to Collapse)</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Ruling: Violates Standard II(A).</strong></p><p><strong>Reasoning</strong>: Posting inside a private or gated forum (even with 200 members) does not constitute broad public dissemination. Until released via recognized public news/regulatory wires, the information remains nonpublic MNPI.</p></div>
+    </details>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-17" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 3.6 (Unsolved): Liquidity-Driven Block Sale Near Market Close</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">Std II(B)</span>
+        <span class="badge-diff-moderate" style="font-size:10px;">UNSOLVED SELF-TEST</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: A mutual fund faces unexpected daily redemptions of 80M USD at 3:45 PM and sells liquid S&amp;P 500 futures before the 4:00 PM close, pushing prices down 0.6%. Is this Standard II(B) manipulation?</p></div>
+    <details class="exercise-solution-details" style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Click to Reveal Answer, Derivation &amp; Exam Ruling</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Ruling: No violation.</strong></p><p><strong>Reasoning</strong>: The trade was driven by a legitimate liquidity/redemption mandate, not an intent to artificially depress closing prices (marking the close). Intent to mislead is required for a II(B) violation.</p></div>
+    </details>
+  </div></section>
+<section id="eth-m4-std3" class="notes-chapter">
+  <h2 class="section-heading"><span class="num">04.</span> Standard III: Duties to Clients (III(A)–III(E))</h2>
+  <div class="table-container">
+    <table>
+      <thead><tr><th>Sub-Standard</th><th>Governing Standard</th><th>High-Probability Exam Traps</th></tr></thead>
+      <tbody>
+        <tr><td><strong>III(A) Loyalty, Prudence &amp; Care</strong></td><td>Act for the benefit of clients and place clients' interests before employer's or own interests.</td><td><strong>Soft Dollars (Client Brokerage):</strong> Brokerage commissions belong to the <em>client</em>, not the manager. Soft dollars may ONLY purchase research/goods that <strong>directly assist the investment decision-making process</strong> (e.g., Bloomberg research, quant data)—NEVER firm rent, furniture, travel, or marketing! Also vote proxies responsibly on material governance issues and know who the "client" is (for a pension plan, the <em>plan beneficiaries</em>, not corporate management!).</td></tr>
+        <tr><td><strong>III(B) Fair Dealing</strong></td><td>Deal fairly and objectively with all clients when providing investment analysis, recommendations, or taking investment actions.</td><td>"Fairly" means <strong>disseminate recommendations simultaneously</strong>, NOT identically—premium institutional tiers can receive extra customized follow-up calls AFTER broadcast dissemination, provided all clients had fair access to the core trade/recommendation. For oversubscribed IPOs, allocate <strong>pro rata</strong> across all suitable clients (never favor top fee-paying accounts or family accounts!).</td></tr>
+        <tr><td><strong>III(C) Suitability</strong></td><td>Make reasonable inquiry into client's investment experience, risk/return objectives, and financial constraints; update IPS at least annually; judge suitability in <strong>total portfolio context</strong>.</td><td>Unsolicited client trade requests that contradict the IPS: explain why unsuitable, document refusal to modify IPS, execute only if not materially harmful (or ask client to sign off / transfer to non-managed account if severely jeopardizing financial health). When managing a pooled fund (mutual fund/ETF), suitability means adhering strictly to the fund's <strong>stated mandate/prospectus</strong>.</td></tr>
+        <tr><td><strong>III(D) Performance Presentation</strong></td><td>Make reasonable efforts to ensure performance information is fair, accurate, and complete.</td><td>Cannot cherry-pick top-performing accounts, omit terminated accounts (survivorship bias), show simulated/backtested results as actual live track records, or extrapolate short-term returns. Brief presentations are acceptable if full backup disclosures are offered on request.</td></tr>
+        <tr><td><strong>III(E) Preservation of Confidentiality</strong></td><td>Keep information about current, former, and prospective clients confidential unless illegal activity, legal mandate, or client permission applies.</td><td>Notice: Duty extends to <strong>former AND prospective</strong> clients! You MAY share confidential client info with CFA Institute's <strong>Professional Conduct Program (PCP)</strong> during an investigation (PCP keeps it confidential).</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="exercise-toolbar" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin: 18px 0 10px 0; padding:10px 14px; background:var(--bg-secondary); border:1px solid var(--border-color); border-radius:6px;">
+    <span style="font-weight:700; font-size:13.5px; color:var(--accent-amber);">Module 04 Chapter Exercises (Standard III — 6 Drills)</span>
+    <div style="display:flex; gap:8px;">
+      <button type="button" class="filter-btn" onclick="toggleChapterExercises('eth-m4-std3', false)">Hide All (Unsolved Mode)</button>
+      <button type="button" class="filter-btn" onclick="toggleChapterExercises('eth-m4-std3', true)">Reveal All (Solved Mode)</button>
+    </div>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-18" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 4.1 (Solved): Soft Dollars Used for Both Research &amp; Office Rent</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">Std III(A) Soft Dollars</span>
+        <span class="badge-diff-easy" style="font-size:10px;">SOLVED WALKTHROUGH</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: Portfolio manager Lisa directs client trades to Broker Z (charging 0.05 USD/share instead of discount broker 0.02 USD/share) in exchange for a 60% research terminal and 40% conference travel/office rent package. Broker Z offers decent execution. Is Lisa compliant with Standard III(A)?</p></div>
+    <details class="exercise-solution-details" open style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Solution &amp; Step-by-Step Ruling (Expanded — Click to Collapse)</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Ruling: Violates Standard III(A) Loyalty, Prudence, and Care.</strong></p><p><strong>Reasoning</strong>: Client brokerage may only purchase goods/services that directly benefit the client's investment decision-making (the research terminal qualifies for the 60% research portion, provided best execution is maintained). Using client commissions for firm overhead (office rent, conference travel) misappropriates client assets.</p></div>
+    </details>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-19" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 4.2 (Unsolved): Allocating Hot IPO Shares by Fee Revenue</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">Std III(B) & VI(B)</span>
+        <span class="badge-diff-moderate" style="font-size:10px;">UNSOLVED SELF-TEST</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: A wealth firm receives 10,000 shares of a hot oversubscribed tech IPO when clients requested 50,000 shares across 10 growth mandates. Manager Leo allocates 8,000 shares to his two largest fee-paying clients, 2,000 shares to his personal account, and zero to smaller growth accounts. Identify all violations.</p></div>
+    <details class="exercise-solution-details" style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Click to Reveal Answer, Derivation &amp; Exam Ruling</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Ruling: Violates Standard III(B) Fair Dealing AND Standard VI(B) Priority of Transactions.</strong></p><p><strong>Reasoning</strong>: Oversubscribed IPOs must be allocated <em>pro rata</em> (proportionally to order size or AUM) among all suitable participating clients, and personal/family accounts must wait until all client demand is satisfied (VI(B)).</p></div>
+    </details>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-20" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 4.3 (Solved): High-Beta Crypto Derivative in a Conservative Endowment Portfolio</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">Std III(C)</span>
+        <span class="badge-diff-easy" style="font-size:10px;">SOLVED WALKTHROUGH</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: Advisor Sam adds a 3% allocation of a volatile cryptocurrency futures strategy to a conservative university endowment whose standalone volatility is 35%, reducing overall portfolio volatility from 8.2% to 7.9% due to near-zero correlation. Does adding a single high-volatility asset automatically violate Standard III(C) Suitability?</p></div>
+    <details class="exercise-solution-details" open style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Solution &amp; Step-by-Step Ruling (Expanded — Click to Collapse)</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Ruling: Not solely because of standalone volatility — suitability is evaluated in the context of the total portfolio (providing the IPS permits alternatives/crypto).</strong></p><p><strong>Reasoning</strong>: Under Standard III(C), an asset with high standalone risk can still be suitable if its low correlation improves total portfolio risk-return efficiency and conforms to the client's IPS guidelines and liquidity needs.</p></div>
+    </details>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-21" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 4.4 (Unsolved): Disclosing Client Data to CFA PCP Investigators</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">Std III(E)</span>
+        <span class="badge-diff-moderate" style="font-size:10px;">UNSOLVED SELF-TEST</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: CFA Institute's Professional Conduct Program requests confidential portfolio records of former client Mr. Gomez while investigating allegations that analyst Grace front-ran Mr. Gomez's orders. Can Grace's firm share the records with PCP without Mr. Gomez's permission?</p></div>
+    <details class="exercise-solution-details" style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Click to Reveal Answer, Derivation &amp; Exam Ruling</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Ruling: Yes — Standard III(E) explicitly permits disclosure to CFA Institute PCP.</strong></p><p><strong>Reasoning</strong>: Under Standard III(E) Preservation of Confidentiality, sharing client records with PCP during an official ethics investigation is permitted and does not breach confidentiality (nor is client consent required for regulatory/PCP compliance).</p></div>
+    </details>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-22" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 4.5 (Solved): Presenting Model Backtest Alongside Live Performance</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">Std III(D)</span>
+        <span class="badge-diff-easy" style="font-size:10px;">SOLVED WALKTHROUGH</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: Quantitative manager AlphaQuant markets a '5-Year Composite Track Record of +14.2% annualized' in a pitchbook without mentioning that the first 3 years are simulated backtest returns and only the last 2 years are actual client capital. Violation?</p></div>
+    <details class="exercise-solution-details" open style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Solution &amp; Step-by-Step Ruling (Expanded — Click to Collapse)</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Ruling: Violates Standard III(D) Performance Presentation (and I(C) Misrepresentation).</strong></p><p><strong>Reasoning</strong>: Linking hypothetical/backtested returns to live client returns without crystal-clear labeling and disclosure misleads prospective clients regarding real execution performance.</p></div>
+    </details>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-23" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 4.6 (Unsolved): Proxy Voting Default Policy Under Pension ERISA/Fiduciary Duty</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">Std III(A) Proxies</span>
+        <span class="badge-diff-moderate" style="font-size:10px;">UNSOLVED SELF-TEST</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: A corporate pension fund manager automatically votes all proxies in favor of the sponsor corporation's incumbent management slate without evaluating shareholder impact because the CFO asked for support. Which standard is violated?</p></div>
+    <details class="exercise-solution-details" style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Click to Reveal Answer, Derivation &amp; Exam Ruling</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Ruling: Violates Standard III(A) Loyalty, Prudence, and Care.</strong></p><p><strong>Reasoning</strong>: Proxy voting rights are an economic asset of the beneficiaries. For a pension plan, the fiduciary duty is owed to the <em>plan participants/beneficiaries</em>, not to corporate management.</p></div>
+    </details>
+  </div></section>
+<section id="eth-m5-std4" class="notes-chapter">
+  <h2 class="section-heading"><span class="num">05.</span> Standard IV: Duties to Employers (IV(A)–IV(C))</h2>
+  <ul>
+    <li><strong>IV(A) Loyalty</strong>: Act for the benefit of employer; do not deprive employer of skills/abilities, divulge confidential information, or cause harm.
+      <ul>
+        <li><em>Independent Practice</em>: Permitted ONLY if written consent is obtained from the current employer after disclosing services, duration, and compensation. (Preparing to leave—e.g., leasing office space, incorporating an LLC—while on personal time without soliciting clients or taking proprietary files is permitted; soliciting clients BEFORE leaving or taking client lists/spreadsheets violates IV(A)!).</li>
+        <li><em>Post-Departure</em>: Using general knowledge/skills gained in memory is permitted; taking proprietary models, spreadsheets, or contact files without written permission violates IV(A). Contacting former clients via <strong>public directories</strong> after departing is compliant unless barred by a valid non-compete agreement.</li>
+        <li><em>Whistleblowing</em>: Permitted ONLY when aimed at protecting client/market integrity (never for personal gain or revenge).</li>
+      </ul>
+    </li>
+    <li><strong>IV(B) Additional Compensation Arrangements</strong>: Must not accept gifts, benefits, compensation, or consideration that competes with or might reasonably be expected to create a conflict of interest with employer's interest unless <strong>written consent from ALL parties involved</strong> is obtained (both the employer AND the outside compensating party/client!). Notice the exam trap: <em>I(B) allows modest gifts or disclosure for regular incentives, whereas IV(B) requires WRITTEN consent from all parties for extra compensation arrangements (e.g., client offers an analyst a free vacation home or cash bonus for hitting a return hurdle)!</em></li>
+    <li><strong>IV(C) Responsibilities of Supervisors</strong>: Must make reasonable efforts to ensure that anyone subject to their supervision or authority complies with applicable laws, rules, regulations, and the Code and Standards.
+      <ul>
+        <li><em>Inadequate Compliance System</em>: If the firm's compliance procedures are inadequate, a supervisor who accepts supervisory responsibility still violates IV(C)! Must urge adoption of written policies, delegate carefully, monitor regularly, and refuse supervisory responsibility in writing if senior leadership refuses to install proper controls.</li>
+        <li><em>After Detecting a Violation</em>: Simply warning the employee is NOT enough! Must (1) investigate thoroughly, (2) restrict/place employee under heightened supervision pending review, and (3) ensure no repeat occurs.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <div class="exercise-toolbar" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin: 18px 0 10px 0; padding:10px 14px; background:var(--bg-secondary); border:1px solid var(--border-color); border-radius:6px;">
+    <span style="font-weight:700; font-size:13.5px; color:var(--accent-amber);">Module 05 Chapter Exercises (Standard IV — 5 Drills)</span>
+    <div style="display:flex; gap:8px;">
+      <button type="button" class="filter-btn" onclick="toggleChapterExercises('eth-m5-std4', false)">Hide All (Unsolved Mode)</button>
+      <button type="button" class="filter-btn" onclick="toggleChapterExercises('eth-m5-std4', true)">Reveal All (Solved Mode)</button>
+    </div>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-24" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 5.1 (Solved): Reconstructing Client Contacts from Memory vs. Public Search</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">Std IV(A)</span>
+        <span class="badge-diff-easy" style="font-size:10px;">SOLVED WALKTHROUGH</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: After resigning from WealthCo (with no non-compete clause), advisor Elena uses LinkedIn and public phone directories from home to look up 15 former clients she remembers by name and invites them to her new RIA. On her last day at WealthCo, she had deliberately deleted all Excel client files from her personal drive and took zero documents. Compliant?</p></div>
+    <details class="exercise-solution-details" open style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Solution &amp; Step-by-Step Ruling (Expanded — Click to Collapse)</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Ruling: Compliant with Standard IV(A) Loyalty.</strong></p><p><strong>Reasoning</strong>: Solicitations occurred <em>after</em> termination, no firm records/lists were taken, and public sources (LinkedIn) were used to obtain contact details without breaching any non-compete covenant.</p></div>
+    </details>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-25" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 5.2 (Unsolved): Client Gift Contingent on Future Performance vs. Unconditional Gift</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">Std IV(B) & I(B)</span>
+        <span class="badge-diff-moderate" style="font-size:10px;">UNSOLVED SELF-TEST</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: Grateful client Mr. Patel offers portfolio manager Nina: (Case 1) an unsolicited thank-you bottle of vintage wine worth 400 USD for last year's strong returns; (Case 2) an upfront promise of a 10,000 USD cash bonus if Nina beats the S&amp;P 500 by 300 bps next year. What consents are required under I(B) and IV(B)?</p></div>
+    <details class="exercise-solution-details" style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Click to Reveal Answer, Derivation &amp; Exam Ruling</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Ruling: Case 1 requires employer disclosure (and supervisor approval under firm gift limits, I(B)); Case 2 is an additional compensation arrangement requiring WRITTEN consent from BOTH the employer and client prior to accepting (IV(B) and I(B)).</strong></p><p><strong>Reasoning</strong>: Past unsolicited gifts trigger I(B) disclosure/approval; future contingent compensation triggers IV(B) written consent from all parties because it alters incentives across clients.</p></div>
+    </details>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-26" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 5.3 (Solved): Supervisor Issues a Verbal Reprimand After Front-Running</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">Std IV(C)</span>
+        <span class="badge-diff-easy" style="font-size:10px;">SOLVED WALKTHROUGH</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: Head trader Mark catches junior trader Zoe front-running a client block order. Mark immediately reverses Zoe's profit, gives her a stern verbal warning, and adds a note to her HR file without placing her trades under pre-trade compliance review or escalating to the CCO. Has Mark fulfilled Standard IV(C)?</p></div>
+    <details class="exercise-solution-details" open style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Solution &amp; Step-by-Step Ruling (Expanded — Click to Collapse)</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Ruling: No — Mark violated Standard IV(C) Responsibilities of Supervisors.</strong></p><p><strong>Reasoning</strong>: Once misconduct is detected, a supervisor cannot stop at reprimands or restitution; Mark must escalate to compliance, initiate a wider investigation of Zoe's prior trades, and restrict or closely monitor her trading activity pending resolution.</p></div>
+    </details>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-27" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 5.4 (Unsolved): Preparing to Launch a Competing Advisory Firm on Weekends</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">Std IV(A)</span>
+        <span class="badge-diff-moderate" style="font-size:10px;">UNSOLVED SELF-TEST</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: Analyst Maya spends Saturdays filing incorporation paperwork and signing an office lease for a startup RIA she plans to launch after resigning next month. She has told no clients, used no employer computers, and still works 50 focused hours/week for her employer. Violation?</p></div>
+    <details class="exercise-solution-details" style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Click to Reveal Answer, Derivation &amp; Exam Ruling</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Ruling: No violation of Standard IV(A).</strong></p><p><strong>Reasoning</strong>: Preparatory steps to establish a competing business after departure (incorporation, leasing space) on personal time do not violate IV(A) as long as no clients are solicited, no confidential files are misappropriated, and current work duties are unaffected.</p></div>
+    </details>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-28" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 5.5 (Unsolved): Accepting Supervisory Title Without Compliance Infrastructure</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">Std IV(C)</span>
+        <span class="badge-diff-moderate" style="font-size:10px;">UNSOLVED SELF-TEST</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: Newly promoted Compliance Head Victor discovers the firm has zero email archiving or personal trading pre-clearance software, and the CEO refuses budget for both. Victor stays in the supervisory role and hopes no infractions happen. Violation?</p></div>
+    <details class="exercise-solution-details" style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Click to Reveal Answer, Derivation &amp; Exam Ruling</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Ruling: Victor violates Standard IV(C) Responsibilities of Supervisors.</strong></p><p><strong>Reasoning</strong>: A supervisor cannot escape IV(C) liability by blaming senior management's budget refusal. If reasonable compliance procedures cannot be established, Victor must decline supervisory responsibility in writing until adequate controls exist.</p></div>
+    </details>
+  </div></section>
+<section id="eth-m6-std5" class="notes-chapter">
+  <h2 class="section-heading"><span class="num">06.</span> Standard V: Investment Analysis, Recommendations &amp; Actions (V(A)–V(C))</h2>
+  <ul>
+    <li><strong>V(A) Diligence &amp; Reasonable Basis</strong>: Exercise diligence, independence, and thoroughness in analyzing investments, making recommendations, and taking investment actions; have a reasonable and adequate basis supported by appropriate research and investigation.
+      <ul>
+        <li><em>Secondary / Third-Party / Quantitative / AI Research</em>: You may rely on external/colleague/LLM/quant models ONLY after verifying the soundness of assumptions, data quality, stress-testing, and limitation boundaries (must NOT blindly trust a consensus buy rating or black-box AI score!).</li>
+        <li><em>Group Decision Dissent</em>: If a research committee outvotes you, you may allow your name to remain on a consensus report ONLY if you believe the group had a reasonable and adequate basis (even if you disagree with the conclusion). If the process lacked diligence, you must remove your name/dissociate!</li>
+      </ul>
+    </li>
+    <li><strong>V(B) Communication with Clients &amp; Prospective Clients</strong>:
+      <ul>
+        <li>Disclose basic format and general principles of investment processes and promptly disclose any material changes.</li>
+        <li>Disclose significant limitations and risks (liquidity, leverage, model risk, cybersecurity/AI assumptions).</li>
+        <li><strong>Distinguish clearly between Fact and Opinion</strong> in presentation of investment analysis and recommendations (e.g., past EPS is fact; projected next-year EPS and target P/E are opinion!).</li>
+      </ul>
+    </li>
+    <li><strong>V(C) Record Retention</strong>: Develop and maintain appropriate records (hard copy or electronic) to support investment analyses, recommendations, actions, and client communications. <strong>CFA Institute recommends a minimum 7-year retention period</strong> (unless stricter local law applies). Remember: records created at an employer belong to the <strong>employer</strong>, so do NOT take original working files when leaving without consent!</li>
+  </ul>
+
+  <div class="exercise-toolbar" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin: 18px 0 10px 0; padding:10px 14px; background:var(--bg-secondary); border:1px solid var(--border-color); border-radius:6px;">
+    <span style="font-weight:700; font-size:13.5px; color:var(--accent-amber);">Module 06 Chapter Exercises (Standard V — 5 Drills)</span>
+    <div style="display:flex; gap:8px;">
+      <button type="button" class="filter-btn" onclick="toggleChapterExercises('eth-m6-std5', false)">Hide All (Unsolved Mode)</button>
+      <button type="button" class="filter-btn" onclick="toggleChapterExercises('eth-m6-std5', true)">Reveal All (Solved Mode)</button>
+    </div>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-29" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 6.1 (Solved): Consensus Committee Override vs. Inadequate Basis</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">Std V(A)</span>
+        <span class="badge-diff-easy" style="font-size:10px;">SOLVED WALKTHROUGH</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: Three out of five analysts on an investment committee vote 'Buy' on SolarGrid after reviewing audited 10-Ks, DCF sensitivity tables, and supplier risks. Analyst Sarah disagrees on valuation margin-of-safety and prefers 'Hold,' but concedes the majority performed thorough work. Can Sarah leave her name on the committee's Buy report?</p></div>
+    <details class="exercise-solution-details" open style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Solution &amp; Step-by-Step Ruling (Expanded — Click to Collapse)</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Ruling: Yes — compliant with Standard V(A).</strong></p><p><strong>Reasoning</strong>: When a committee reaches a consensus recommendation supported by a reasonable and adequate basis, a dissenting member does not have to withdraw her name merely over an honest difference in analytical judgment (though documenting her dissent internally is prudent).</p></div>
+    </details>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-30" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 6.2 (Unsolved): Using an Unaudited Generative AI Summary in a Client Memo</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">Std V(A) & AI</span>
+        <span class="badge-diff-moderate" style="font-size:10px;">UNSOLVED SELF-TEST</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: Analyst Leo prompts an LLM to extract debt covenants and historical EBITDA from a complex 300-page bond prospectus and pastes the AI output straight into a client recommendation without verifying the numbers against the original indenture. What standards are violated?</p></div>
+    <details class="exercise-solution-details" style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Click to Reveal Answer, Derivation &amp; Exam Ruling</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Ruling: Violates Standard V(A) Diligence &amp; Reasonable Basis (and I(E) Competence / V(B) if AI limitations are undisclosed).</strong></p><p><strong>Reasoning</strong>: Relying on automated/AI outputs without verifying input accuracy, hallucinations, or model assumptions breaches V(A) diligence.</p></div>
+    </details>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-31" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 6.3 (Solved): Dropping Quantitative Risk Factors for Brevity</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">Std V(B)</span>
+        <span class="badge-diff-easy" style="font-size:10px;">SOLVED WALKTHROUGH</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: A structured-credit fund fact sheet fits on one page, so PM Maya deletes the liquidity-gate and counterparty-default risk disclosures to keep the layout clean, noting 'Prospectus available on website.' Violation?</p></div>
+    <details class="exercise-solution-details" open style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Solution &amp; Step-by-Step Ruling (Expanded — Click to Collapse)</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Ruling: Violates Standard V(B) Communication with Clients and Prospective Clients.</strong></p><p><strong>Reasoning</strong>: While summary communications may condense detail, they must never omit significant risks and limitations associated with the investment process (liquidity gates and credit exposure are material risks).</p></div>
+    </details>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-32" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 6.4 (Unsolved): Fact vs. Opinion on Projected Earnings</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">Std V(B)</span>
+        <span class="badge-diff-moderate" style="font-size:10px;">UNSOLVED SELF-TEST</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: A research report states: 'Based on our supply-chain channel checks, Acme Corp will grow EPS by 22% next year and expand EBITDA margins to 31%.' Why does this statement violate Standard V(B)?</p></div>
+    <details class="exercise-solution-details" style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Click to Reveal Answer, Derivation &amp; Exam Ruling</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Ruling: Violates Standard V(B) by presenting future analytical projections (opinion) as certainty/fact.</strong></p><p><strong>Reasoning</strong>: Standard V(B) requires explicitly distinguishing between verified historical facts and forward-looking opinions/estimates ('We project...' or 'In our opinion...').</p></div>
+    </details>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-33" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 6.5 (Unsolved): Taking Research Notebooks Upon Leaving Firm</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">Std V(C) & IV(A)</span>
+        <span class="badge-diff-moderate" style="font-size:10px;">UNSOLVED SELF-TEST</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: Analyst Tara takes her personal Excel valuation models and handwritten research meeting notes created during her 4 years at Alpha Asset Management when moving to Beta Capital, believing she needs them to comply with Standard V(C)'s 7-year retention rule. Violation?</p></div>
+    <details class="exercise-solution-details" style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Click to Reveal Answer, Derivation &amp; Exam Ruling</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Ruling: Violates Standard IV(A) Loyalty (misappropriating employer property).</strong></p><p><strong>Reasoning</strong>: Work-product records created during employment are the property of the employer (Alpha Asset Management maintains the 7-year V(C) archive); Tara must recreate models from public data at Beta Capital unless Alpha grants written permission.</p></div>
+    </details>
+  </div></section>
+<section id="eth-m7-std6" class="notes-chapter">
+  <h2 class="section-heading"><span class="num">07.</span> Standard VI: Conflicts of Interest (VI(A)–VI(C))</h2>
+  <ul>
+    <li><strong>VI(A) Avoid or Disclose Conflicts</strong> <em>(12th Ed. updated wording!)</em>: Avoid conflicts of interest when possible, and make full and fair disclosure of all matters that could reasonably be expected to impair independence and objectivity or interfere with respective duties to clients, prospective clients, and employer.
+      <ul>
+        <li><em>Examples</em>: Material beneficial stock ownership in covered companies, board directorships, investment banking relationships, fee-splitting/revenue-sharing, cross-selling incentives.</li>
+        <li><em>Plain Language</em>: Disclosures must be prominent, specific, and in plain language—not buried in 6-point legal boilerplate!</li>
+      </ul>
+    </li>
+    <li><strong>VI(B) Priority of Transactions</strong>: Investment transactions for <strong>clients and employers</strong> must have priority over investment transactions in which a member or candidate is the <strong>beneficial owner</strong>.
+      <ul>
+        <li><em>Hierarchy</em>: (1) Clients FIRST, (2) Employer SECOND, (3) Personal / Beneficial Family accounts LAST!</li>
+        <li><em>Beneficial Ownership Trap</em>: Includes accounts of spouse, minor children, or shared household relatives where the member has direct/indirect pecuniary benefit! (Exception: If a fee-paying family member account—e.g. parent's regular retail account—pays the same fees and receives no preferential treatment, treat them identically with other clients under III(B), NOT last!).</li>
+        <li><em>Compliance Controls</em>: Pre-clearance, blackout periods (e.g., 5 days before/after research), restricted lists, duplicate broker confirms, minimum holding periods (60 days).</li>
+      </ul>
+    </li>
+    <li><strong>VI(C) Referral Fees</strong>: Disclose to employer, clients, and prospective clients (as appropriate) any compensation, consideration, or benefit received from or paid to others for the recommendation of products or services.
+      <ul>
+        <li>Must disclose <strong>BEFORE</strong> entering into any formal agreement for services!</li>
+        <li>Must specify BOTH the <strong>nature</strong> (cash, trailing fee, reciprocal brokerage, non-monetary perks) and the <strong>estimated dollar/percentage value</strong> of the referral arrangement.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <div class="exercise-toolbar" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin: 18px 0 10px 0; padding:10px 14px; background:var(--bg-secondary); border:1px solid var(--border-color); border-radius:6px;">
+    <span style="font-weight:700; font-size:13.5px; color:var(--accent-amber);">Module 07 Chapter Exercises (Standard VI — 6 Drills)</span>
+    <div style="display:flex; gap:8px;">
+      <button type="button" class="filter-btn" onclick="toggleChapterExercises('eth-m7-std6', false)">Hide All (Unsolved Mode)</button>
+      <button type="button" class="filter-btn" onclick="toggleChapterExercises('eth-m7-std6', true)">Reveal All (Solved Mode)</button>
+    </div>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-34" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 7.1 (Solved): Fee-Paying Mother's Account in an Oversubscribed IPO</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">Std VI(B) vs III(B)</span>
+        <span class="badge-diff-easy" style="font-size:10px;">SOLVED WALKTHROUGH</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: Portfolio manager Arjun manages 40 discretionary client accounts, including his mother's regular fee-paying IRA (Arjun has no beneficial pecuniary interest in his mother's IRA and she pays standard retail management fees). Arjun also has his own personal trading account. During a hot IPO allocation, what is the priority order?</p></div>
+    <details class="exercise-solution-details" open style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Solution &amp; Step-by-Step Ruling (Expanded — Click to Collapse)</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Ruling: Mother's fee-paying account is treated on equal pro-rata footing alongside all other external clients (Standard III(B)); Arjun's personal account must wait until all client and employer orders are filled (Standard VI(B)).</strong></p><p><strong>Reasoning</strong>: Excluding a fee-paying family member from a client allocation solely due to surname violates Fair Dealing III(B); only accounts in which the member holds <em>beneficial ownership</em> are subordinated under VI(B).</p></div>
+    </details>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-35" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 7.2 (Unsolved): Undisclosed Quid-Pro-Quo Referral Arrangement</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">Std VI(C)</span>
+        <span class="badge-diff-moderate" style="font-size:10px;">UNSOLVED SELF-TEST</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: Wealth advisor Dan refers high-net-worth tax planning clients to CPA firm TaxPro at no cash fee. In return, TaxPro refers three wealthy retirees every quarter to Dan's advisory practice under an informal handshake agreement, and neither tells clients about the mutual swap. Violation?</p></div>
+    <details class="exercise-solution-details" style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Click to Reveal Answer, Derivation &amp; Exam Ruling</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Ruling: Violates Standard VI(C) Referral Fees.</strong></p><p><strong>Reasoning</strong>: Non-cash reciprocal referral arrangements constitute 'consideration or benefit' under Standard VI(C). Both parties must disclose the nature and estimated economic value of the reciprocal arrangement to prospective clients before engagement.</p></div>
+    </details>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-36" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 7.3 (Solved): Personal Trading After Client Execution vs. During Blackout</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">Std VI(B)</span>
+        <span class="badge-diff-easy" style="font-size:10px;">SOLVED WALKTHROUGH</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: Analyst Maya publishes a Buy recommendation on CloudCo on Monday morning and all interested clients finish executing their orders by Tuesday afternoon. On Wednesday morning (within the firm's 5-day internal blackout window), Maya buys CloudCo shares for her personal account. Did Maya violate Standard VI(B)?</p></div>
+    <details class="exercise-solution-details" open style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Solution &amp; Step-by-Step Ruling (Expanded — Click to Collapse)</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Ruling: Violates Standard IV(A) / firm policy (if internal 5-day blackout rule applies), and potentially VI(B) if clients haven't had sufficient reasonable opportunity to act.</strong></p><p><strong>Reasoning</strong>: Members must strictly adhere to firm personal trading blackout policies. Even after initial execution, trading during a firm's mandated 5-day research blackout undermines compliance controls protecting client priority.</p></div>
+    </details>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-37" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 7.4 (Unsolved): Board Seat & Stock Options on a Portfolio Holding</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">Std VI(A) & IV(B)</span>
+        <span class="badge-diff-moderate" style="font-size:10px;">UNSOLVED SELF-TEST</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: Endowment CIO Rachel accepts an unpaid board observer seat (carrying 5,000 stock options) at a public micro-cap tech company already held in the endowment's portfolio, without notifying the endowment's investment committee. Violation?</p></div>
+    <details class="exercise-solution-details" style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Click to Reveal Answer, Derivation &amp; Exam Ruling</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Ruling: Violates Standard VI(A) Avoid or Disclose Conflicts (and IV(B) Additional Compensation).</strong></p><p><strong>Reasoning</strong>: Directorships/observer roles with equity options create material conflicts between fiduciary oversight and corporate loyalty and require immediate disclosure and employer approval.</p></div>
+    </details>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-38" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 7.5 (Solved): Disclosure Timing for Referral Fees</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">Std VI(C)</span>
+        <span class="badge-diff-easy" style="font-size:10px;">SOLVED WALKTHROUGH</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: Advisor Sam discloses a 20% revenue-sharing referral fee inside the quarterly fee statement mailed 90 days after the client signs the investment advisory contract. Is Sam compliant with Standard VI(C)?</p></div>
+    <details class="exercise-solution-details" open style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Solution &amp; Step-by-Step Ruling (Expanded — Click to Collapse)</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Ruling: Violation of Standard VI(C).</strong></p><p><strong>Reasoning</strong>: Referral fee disclosures must be made <em>before</em> the client enters into the formal engagement so the prospect can evaluate potential bias prior to committing capital.</p></div>
+    </details>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-39" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 7.6 (Unsolved): Spouse's Self-Directed IRA Holding Covered Stock</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">Std VI(A)</span>
+        <span class="badge-diff-moderate" style="font-size:10px;">UNSOLVED SELF-TEST</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: Equity analyst Clara covers HealthGen and recommends a Strong Buy. Her husband holds 40,000 USD of HealthGen shares inside his personal brokerage account, and Clara omits this from her report because 'my husband makes his own trades.' Violation?</p></div>
+    <details class="exercise-solution-details" style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Click to Reveal Answer, Derivation &amp; Exam Ruling</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Ruling: Violates Standard VI(A) Avoid or Disclose Conflicts.</strong></p><p><strong>Reasoning</strong>: A spouse's holdings in a household generally confer indirect beneficial ownership and create a conflict of interest that must be prominently disclosed in research reports and to the employer.</p></div>
+    </details>
+  </div></section>
+<section id="eth-m8-std7" class="notes-chapter">
+  <h2 class="section-heading"><span class="num">08.</span> Standard VII: Responsibilities as a Member or Candidate (VII(A)–VII(B))</h2>
+  <ul>
+    <li><strong>VII(A) Conduct as Participants in CFA Institute Programs</strong>: Must not engage in any conduct that compromises the reputation or integrity of CFA Institute or the CFA designation or the integrity, validity, or security of CFA Program exams.
+      <ul>
+        <li><em>Prohibited</em>: Discussing <strong>specific exam questions, formulas tested, or topic weights observed</strong> on an exam (even after the testing window closes!), bringing unauthorized items into the exam room, writing during unpermitted intervals, or cheating.</li>
+        <li><em>Permitted</em>: Expressing general opinions about exam difficulty, curriculum length, or personal study experience ("The exam felt challenging" or "I disliked the testing center temperature" is fine; "There were 3 questions on GARCH and a question asking about LIFO liquidation" violates VII(A)!).</li>
+      </ul>
+    </li>
+    <li><strong>VII(B) Reference to CFA Institute, CFA Designation &amp; CFA Program</strong>: Must not misrepresent or exaggerate the meaning or implications of membership, holding the CFA designation, or candidacy.
+      <ul>
+        <li><strong>Adjective Only, NEVER a Noun!</strong>: Correct: "John Doe, CFA" or "John Doe is a CFA charterholder." WRONG: "John Doe is a CFA" or "CFAs outperform the market" or "CFA-certified" or "John Doe, C.F.A."!</li>
+        <li><strong>No Partial Designation</strong>: Cannot write "CFA Level II" or "CFA Level III Candidate" as a title/credential beside a name (e.g., "Jane Smith, CFA L2" is VIOLATION). Correct: "Jane Smith is a candidate in the CFA Program" (only valid if actively registered for an upcoming exam!).</li>
+        <li><strong>Superior Returns Claim</strong>: Cannot imply holding the charter produces superior performance or guarantees better investment returns.</li>
+        <li><strong>Lapsed Membership</strong>: If annual dues or Professional Conduct Statement (PCS) are unpaid/unsubmitted, charterholder status is inactive and you MUST STOP using the CFA designation until reinstated!</li>
+      </ul>
+    </li>
+  </ul>
+
+  <div class="exercise-toolbar" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin: 18px 0 10px 0; padding:10px 14px; background:var(--bg-secondary); border:1px solid var(--border-color); border-radius:6px;">
+    <span style="font-weight:700; font-size:13.5px; color:var(--accent-amber);">Module 08 Chapter Exercises (Standard VII — 6 Drills)</span>
+    <div style="display:flex; gap:8px;">
+      <button type="button" class="filter-btn" onclick="toggleChapterExercises('eth-m8-std7', false)">Hide All (Unsolved Mode)</button>
+      <button type="button" class="filter-btn" onclick="toggleChapterExercises('eth-m8-std7', true)">Reveal All (Solved Mode)</button>
+    </div>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-40" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 8.1 (Solved): Post-Exam Forum Recap on Tested Subtopics</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">Std VII(A)</span>
+        <span class="badge-diff-easy" style="font-size:10px;">SOLVED WALKTHROUGH</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: Three weeks after the CFA Level II exam window closes and results are released, candidate Alex posts on Reddit: 'Hey everyone, just warning future candidates—make sure you study GARCH(1,1) and pension corridor rules because both showed up on my actual May vignette!' Violation?</p></div>
+    <details class="exercise-solution-details" open style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Solution &amp; Step-by-Step Ruling (Expanded — Click to Collapse)</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Ruling: Violates Standard VII(A).</strong></p><p><strong>Reasoning</strong>: CFA Institute's non-disclosure agreement never expires upon exam window closure; disclosing specific topics, formulas, or vignettes tested on an actual exam violates VII(A) permanently.</p></div>
+    </details>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-41" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 8.2 (Unsolved): Passing All Three Exams Without Four Years of Work Experience</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">Std VII(B)</span>
+        <span class="badge-diff-moderate" style="font-size:10px;">UNSOLVED SELF-TEST</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: Priya passes Level I, Level II, and Level III on consecutive first attempts and has 3 years of qualifying investment experience. On her LinkedIn headline she writes: 'Priya Sharma, CFA (Charter Pending).' Violation?</p></div>
+    <details class="exercise-solution-details" style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Click to Reveal Answer, Derivation &amp; Exam Ruling</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Ruling: Violates Standard VII(B).</strong></p><p><strong>Reasoning</strong>: There is no 'CFA (Charter Pending)' designation. Until the required qualifying work experience is approved and the charter is formally awarded, Priya must state: 'Passed all three levels of the CFA Program; eligible for charter upon completion of work experience requirement.'</p></div>
+    </details>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-42" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 8.3 (Solved): Proper Grammar &amp; Firm Name Usage</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">Std VII(B)</span>
+        <span class="badge-diff-easy" style="font-size:10px;">SOLVED WALKTHROUGH</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: Compare three marketing lines: (1) 'Alex Chen, CFA, Portfolio Manager'; (2) 'CFA Capital Advisors — Managed by CFAs'; (3) 'As a CFA charterholder, Alex brings global ethical rigor.' Which line(s) violate Standard VII(B)?</p></div>
+    <details class="exercise-solution-details" open style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Solution &amp; Step-by-Step Ruling (Expanded — Click to Collapse)</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Ruling: Line (2) violates Standard VII(B) twice! Lines (1) and (3) are compliant.</strong></p><p><strong>Reasoning</strong>: Firms cannot hold or embed the CFA mark in the firm name ('CFA Capital Advisors') nor use 'CFAs' as a plural noun. 'CFA' is strictly an adjective ('CFA charterholder') or post-nominal for an active individual charterholder ('Alex Chen, CFA').</p></div>
+    </details>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-43" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 8.4 (Unsolved): Expressing Discontent Over Exam Structure</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">Std VII(A)</span>
+        <span class="badge-diff-moderate" style="font-size:10px;">UNSOLVED SELF-TEST</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: After completing Level I, candidate Omar tweets: 'CFA Level I felt much harder than my mocks, and CFA Institute should shorten the 4.5-hour testing day.' Does Omar violate Standard VII(A)?</p></div>
+    <details class="exercise-solution-details" style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Click to Reveal Answer, Derivation &amp; Exam Ruling</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Ruling: No violation.</strong></p><p><strong>Reasoning</strong>: Expressing general opinions about exam difficulty, curriculum policies, or administrative format without revealing confidential exam questions or tested topics is fully permitted under VII(A).</p></div>
+    </details>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-44" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 8.5 (Solved): Unpaid Dues During Sabbatical</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">Std VII(B)</span>
+        <span class="badge-diff-easy" style="font-size:10px;">SOLVED WALKTHROUGH</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: Charterholder Maria takes an 18-month parental sabbatical, skips paying CFA Institute annual membership dues, yet leaves 'Maria Lopez, CFA' on her consulting website and email signature. Violation?</p></div>
+    <details class="exercise-solution-details" open style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Solution &amp; Step-by-Step Ruling (Expanded — Click to Collapse)</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Ruling: Violates Standard VII(B).</strong></p><p><strong>Reasoning</strong>: Active use of the CFA designation requires active membership (paying dues and submitting the annual Professional Conduct Statement). Inactive members must remove the designation until reinstated.</p></div>
+    </details>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-45" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 8.6 (Unsolved): Claiming 'Passed Level II in Top 10%' vs. Superior Returns</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">Std VII(B)</span>
+        <span class="badge-diff-moderate" style="font-size:10px;">UNSOLVED SELF-TEST</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: Candidate Sam states on his resume: 'Passed CFA Level I and Level II exams on first attempt; enrolled for Level III.' Is this compliant with VII(B)?</p></div>
+    <details class="exercise-solution-details" style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Click to Reveal Answer, Derivation &amp; Exam Ruling</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Ruling: Compliant — provided Sam is actively registered for the upcoming Level III exam.</strong></p><p><strong>Reasoning</strong>: Factual statements of exam completion ('Passed CFA Level I and II on first attempt') are permitted; claiming active candidacy ('CFA Level III Candidate' or 'enrolled for Level III') requires current exam registration.</p></div>
+    </details>
+  </div></section>
+<section id="eth-m9-gips" class="notes-chapter">
+  <h2 class="section-heading"><span class="num">09.</span> GIPS&reg; Standards &amp; Asset Manager Code (CBOK I &amp; XII)</h2>
+  <p><em>2026–2027 Curriculum Note</em>: Standalone GIPS readings were streamlined out of the L1/L2 core sequence for 2027, yet GIPS compliance fundamentals and the <strong>Asset Manager Code of Professional Conduct (AMC)</strong> remain central pillars of the CFA Institute CBOK (Sections I &amp; XII) and Standard III(D) Performance Presentation.</p>
+
+  <h3 class="subheading">Core GIPS&reg; Architecture &amp; Calculation Rules</h3>
+  <ul>
+    <li><strong>Who Can Claim Compliance?</strong> Only an entire <strong>investment firm</strong> defined as a distinct business entity held out to clients (NEVER an individual manager, single composite, or software vendor; NEVER claim "partial compliance").</li>
+    <li><strong>Composites</strong>: Must include <strong>all actual, fee-paying, discretionary portfolios</strong> managed according to a similar investment mandate, objective, or strategy. Non-fee-paying discretionary portfolios <em>may</em> be included if disclosed; non-discretionary portfolios MUST be excluded!</li>
+    <li><strong>Minimum Track Record</strong>: Initially present at least <strong>5 years</strong> of GIPS-compliant performance (or since inception if &lt;5 years), then build up to at least <strong>10 years</strong> of consecutive annual compliant performance.</li>
+    <li><strong>Return Methodology</strong>: Must use <strong>Time-Weighted Return (TWR)</strong> valuing portfolios at fair value (trade-date accounting, accrual accounting for fixed-income interest), asset-weighted across portfolios in the composite using beginning-of-period values (or beginning + cash-flow weights).</li>
+    <li><strong>Verification</strong>: Optional (not mandatory for compliance), must be performed by an independent third party on a <strong>firm-wide</strong> basis (cannot verify a single composite alone!).</li>
+  </ul>
+
+  <div class="formula-card">
+    <div class="formula-title">GIPS Asset-Weighted Composite Return &amp; Modified Dietz Approximation</div>
+    $$R_{\text{Composite}} = \frac{\sum_{i=1}^N BMVE_i \cdot R_i}{\sum_{i=1}^N BMVE_i}, \qquad R_{\text{ModDietz}} = \frac{EMV - BMV - CF}{BMV + \sum_{j=1}^k CF_j \cdot w_j}, \quad w_j = \frac{CD - D_j}{CD}$$
+  </div>
+
+  <h3 class="subheading">Asset Manager Code of Professional Conduct (Firm-Level Standards)</h3>
+  <p>Whereas Standards I–VII bind <em>individual</em> members and candidates, the <strong>Asset Manager Code (AMC)</strong> establishes 6 ethical principles for <em>investment management firms</em>: (1) Loyalty to Clients, (2) Investment Process &amp; Actions, (3) Trading (best execution &amp; soft-dollar limits), (4) Risk Management, Compliance &amp; Support (independent risk officer, business continuity plan), (5) Performance &amp; Valuation (fair market pricing, GIPS-style clarity), and (6) Disclosures (fees, conflicts, soft dollars, proxy policies).</p>
+
+  <div class="card" style="background: rgba(16, 185, 129, 0.05); border-left: 4px solid var(--accent-emerald); margin: 16px 0;">
+    <h4 style="margin: 0 0 10px 0; color: var(--accent-emerald);">Worked Numerical Example: GIPS Asset-Weighted Composite Return</h4>
+    <p><strong>Scenario</strong>: A composite has two fee-paying discretionary accounts in Q1: Account A starts with 12,000,000 USD and earns +4.20%; Account B starts with 8,000,000 USD and earns +6.70% (no external cash flows).</p><p><strong>Calculation</strong>: Total Beginning Assets = $12\text{M} + 8\text{M} = 20\text{M USD}$. Composite Return = $(0.60 \times 4.20\%) + (0.40 \times 6.70\%) = 2.52\% + 2.68\% = 5.20\%$ (note: equal-weighted average would wrongly report 5.45%).</p>
+  </div>
+  <div class="exercise-toolbar" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin: 18px 0 10px 0; padding:10px 14px; background:var(--bg-secondary); border:1px solid var(--border-color); border-radius:6px;">
+    <span style="font-weight:700; font-size:13.5px; color:var(--accent-amber);">Module 09 Chapter Exercises (GIPS & AMC — 5 Drills)</span>
+    <div style="display:flex; gap:8px;">
+      <button type="button" class="filter-btn" onclick="toggleChapterExercises('eth-m9-gips', false)">Hide All (Unsolved Mode)</button>
+      <button type="button" class="filter-btn" onclick="toggleChapterExercises('eth-m9-gips', true)">Reveal All (Solved Mode)</button>
+    </div>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-46" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 9.1 (Solved): Claiming GIPS Compliance for a Single Star Fund</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">GIPS Compliance</span>
+        <span class="badge-diff-easy" style="font-size:10px;">SOLVED WALKTHROUGH</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: Apex Advisors manages 8 institutional strategies. It audits and formats only its flagship Emerging Markets composite under GIPS rules and claims in marketing: 'Our Emerging Markets Composite is 100% GIPS-compliant.' Permitted?</p></div>
+    <details class="exercise-solution-details" open style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Solution &amp; Step-by-Step Ruling (Expanded — Click to Collapse)</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Ruling: Violation of GIPS Fundamentals (and Standard I(C) Misrepresentation).</strong></p><p><strong>Reasoning</strong>: GIPS compliance is strictly <em>firm-wide</em>. A firm cannot selectively claim GIPS compliance for a single product or composite while excluding its other discretionary accounts.</p></div>
+    </details>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-47" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 9.2 (Unsolved): Non-Fee-Paying Seed Account &amp; Non-Discretionary Account</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">GIPS Composites</span>
+        <span class="badge-diff-moderate" style="font-size:10px;">UNSOLVED SELF-TEST</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: A firm manages 4 portfolios under a US Large-Cap Growth strategy: Portfolio 1 (fee-paying, discretionary), Portfolio 2 (fee-paying, non-discretionary—client approves every trade), Portfolio 3 (employee non-fee-paying, discretionary), and Portfolio 4 (terminated mid-year, discretionary). Which MUST be included in the composite?</p></div>
+    <details class="exercise-solution-details" style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Click to Reveal Answer, Derivation &amp; Exam Ruling</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Ruling: Portfolio 1 and Portfolio 4 (up to its last full measurement period before termination) MUST be included; Portfolio 2 MUST be excluded; Portfolio 3 MAY be included if disclosed.</strong></p><p><strong>Reasoning</strong>: All actual fee-paying discretionary portfolios (including terminated ones up to termination to prevent survivorship bias) must be in the composite; non-discretionary portfolios cannot be included.</p></div>
+    </details>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-48" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 9.3 (Solved): Modified Dietz Return Calculation</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">GIPS Math</span>
+        <span class="badge-diff-easy" style="font-size:10px;">SOLVED WALKTHROUGH</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: A portfolio begins a 30-day month at 10,000,000 USD, receives a 2,000,000 USD deposit on Day 15 ($w = (30 - 15)/30 = 0.50$), and ends the month at 12,550,000 USD. Calculate the Modified Dietz return.</p></div>
+    <details class="exercise-solution-details" open style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Solution &amp; Step-by-Step Ruling (Expanded — Click to Collapse)</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Solution: $+5.00\%$</strong>.</p><p><strong>Calculation</strong>: Numerator $= 12,550,000 - 10,000,000 - 2,000,000 = 550,000\text{ USD}$. Weighted capital base $= 10,000,000 + (2,000,000 \times 0.50) = 11,000,000\text{ USD}$. Return $= 550,000 / 11,000,000 = 0.0500 = 5.00\%$.</p></div>
+    </details>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-49" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 9.4 (Unsolved): Third-Party Verification of a Single Composite</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">GIPS Verification</span>
+        <span class="badge-diff-moderate" style="font-size:10px;">UNSOLVED SELF-TEST</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: An independent verifier audits only Horizon Capital's High-Yield Bond composite and issues a report stating 'High-Yield Composite Verified under GIPS.' Valid?</p></div>
+    <details class="exercise-solution-details" style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Click to Reveal Answer, Derivation &amp; Exam Ruling</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Ruling: Invalid.</strong></p><p><strong>Reasoning</strong>: GIPS Verification tests whether firm-wide policies and procedures comply with GIPS; a verifier may issue a Performance Examination report on a specific composite <em>only after</em> the entire firm has passed firm-wide GIPS Verification.</p></div>
+    </details>
+  </div>
+  <div class="chapter-exercise-card card" id="eth-ex-50" style="margin: 14px 0; border-left: 3px solid var(--accent-cyan); background: var(--bg-tertiary);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+      <strong style="color:var(--text-primary); font-size:14px;">Exercise 9.5 (Unsolved): Asset Manager Code vs. Individual Standards</strong>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="nav-badge">Asset Manager Code</span>
+        <span class="badge-diff-moderate" style="font-size:10px;">UNSOLVED SELF-TEST</span>
+      </div>
+    </div>
+    <div style="font-size:13.5px; line-height:1.65; margin-bottom:10px;"><p><strong>Question</strong>: Under the CFA Institute Asset Manager Code, which party is required to adopt independent risk-management oversight, fair valuation policies for illiquid holdings, and business continuity plans?</p></div>
+    <details class="exercise-solution-details" style="border:1px solid var(--border-color); border-radius:6px; padding:8px 12px; background:var(--bg-secondary);">
+      <summary style="cursor:pointer; font-weight:600; color:var(--accent-cyan); font-size:12.5px;">Click to Reveal Answer, Derivation &amp; Exam Ruling</summary>
+      <div style="margin-top:10px; font-size:13px; line-height:1.65;"><p><strong>Ruling: The investment management firm (organization), whereas Standards I–VII bind individual practitioners.</strong></p><p><strong>Reasoning</strong>: AMC establishes firm-level organizational safeguards (Principle D: Risk Management, Compliance, and Support) complementing individual member/candidate duties.</p></div>
+    </details>
+  </div></section>
+<section id="eth-m10-matrix" class="notes-chapter">
+  <h2 class="section-heading"><span class="num">10.</span> Master Ethics Decision Matrix &amp; 500-Question Practice Hub</h2>
+  <p>Exam success in Ethics hinges on spotting <strong>sub-standard boundaries</strong> when multiple rules look plausible simultaneously. Review this rapid-fire boundary table, then drill the full <strong>450-Question Interactive Ethics Bank</strong> (270 Level 1 MCQs + 180 Level 2 Vignette Questions across 30 Institutional Cases) alongside the 50 inline chapter drills above (= <strong>500 Ethics Exercises</strong>).</p>
+
+  <div class="table-container">
+    <table>
+      <thead><tr><th>Common Trap Pair</th><th>How to Distinguish on Exam Day</th></tr></thead>
+      <tbody>
+        <tr><td><strong>I(B) Independence vs. VI(A) Disclosure</strong></td><td><strong>I(B)</strong> governs external pressures/gifts/travel/investment-banking pressure impairing <em>objectivity</em>; <strong>VI(A)</strong> governs structural <em>conflicts</em> (stock ownership, board seats, employer sales incentives) requiring avoidance or prominent disclosure.</td></tr>
+        <tr><td><strong>III(B) Fair Dealing vs. VI(B) Priority</strong></td><td><strong>III(B)</strong> governs fairness <em>among different clients</em> (simultaneous research broadcast, pro-rata IPO); <strong>VI(B)</strong> puts <em>clients &amp; employer ahead of personal/beneficial accounts</em>.</td></tr>
+        <tr><td><strong>IV(A) Loyalty vs. IV(B) Additional Comp</strong></td><td><strong>IV(A)</strong> covers side jobs competing with employer, poaching clients, or taking files upon departure; <strong>IV(B)</strong> covers <em>outside money/gifts</em> offered for work duties, requiring <strong>written consent from ALL parties</strong>.</td></tr>
+        <tr><td><strong>V(A) Diligence vs. I(C) Misrepresentation</strong></td><td><strong>V(A)</strong> is failing to verify research/model assumptions before recommending; <strong>I(C)</strong> is knowingly lying, omitting material facts, guaranteeing returns, or plagiarizing.</td></tr>
+        <tr><td><strong>I(A) Local Law vs. Code</strong></td><td>Always follow the <strong>stricter</strong> requirement. If local law is silent or weaker (e.g., permits front-running or insider trading), the CFA Code prohibits it!</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card" style="margin-top:18px; border-left:4px solid var(--accent-emerald); background:rgba(16,185,129,0.06);">
+    <h3 style="margin:0 0 8px 0; color:var(--accent-emerald);">Ready for the Full 500-Exercise Ethics Workout?</h3>
+    <p style="font-size:13.5px; margin-bottom:12px;">Use our interactive Q-Bank filters (including Unsolved Self-Test Mode vs. Solved Study Mode) to drill every single Standard I–VII, Code of Ethics, GIPS, and Asset Manager Code scenario:</p>
+    <div style="display:flex; gap:10px; flex-wrap:wrap;">
+      <button type="button" class="btn" onclick="jumpToSubjectBank(1, 'Ethical and Professional Standards')">📝 Practice 270 L1 Ethics MCQs</button>
+      <button type="button" class="btn btn-secondary" onclick="jumpToSubjectBank(2, 'Ethical and Professional Standards')">📑 Practice 30 L2 Ethics Vignettes (180 Qs)</button>
+    </div>
+  </div>
+</section>
